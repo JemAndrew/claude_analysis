@@ -32,7 +32,7 @@ async def main():
     
     print("\n" + "="*70)
     print("⚡ INITIALISING CLAUDE OPUS 4.1")
-    print("🎯 Target: Complete Lismore Defence Victory")
+    print("🎯 Target: Complete full Analysis of documents")
     print("="*70)
     
     investigator = ProgressiveLearningInvestigator(

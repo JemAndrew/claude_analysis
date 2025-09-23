@@ -9,11 +9,12 @@ import logging
 from pathlib import Path
 from typing import Dict, List, Any, Optional
 from datetime import datetime
-
+from phases import PhaseExecutor
 # Import all modular components with correct names
 from api_client import AnthropicAPIClient
 from forensics import DocumentWithholdingTracker
 from output_generator import OutputGenerator
+from knowledge_manage import KnowledgeManager
 import utils
 import prompts
 
@@ -32,8 +33,16 @@ class ProgressiveLearningInvestigator:
         # Initialise modular components
         self.api_client = AnthropicAPIClient(api_key)
         self.document_tracker = DocumentWithholdingTracker()
+        
+        # Use KnowledgeManager for centralised knowledge management
+        self.knowledge_manager = KnowledgeManager(project_root)
+        self.knowledge_base = self.knowledge_manager.knowledge_base
+        self.investigation_memory = self.knowledge_manager.investigation_memory
+        self.evidence_map = self.knowledge_manager.evidence_map
+        
+        # Initialise output generator and phase executor
         self.output_generator = OutputGenerator(self)
-        self.phase_findings = {}
+        self.phase_executor = PhaseExecutor(self)
         
         # Load configuration
         self.config = self._load_config()
@@ -50,20 +59,6 @@ class ProgressiveLearningInvestigator:
             'pattern_recognition': 'maximum',
             'metadata_analysis': True
         }
-        
-        # Initialise knowledge base
-        self.knowledge_base = self._initialise_knowledge_base()
-        
-        # Evolving prompts
-        self.phase_prompts = {
-            f'phase_{i}_additions': "" for i in range(1, 7)
-        }
-        
-        # Investigation memory
-        self.investigation_memory = self._initialise_investigation_memory()
-        
-        # Track document references
-        self.evidence_map = {}
         
         # Performance tracking
         self.performance_metrics = {
@@ -205,7 +200,7 @@ class ProgressiveLearningInvestigator:
             return
         
         # Create phase executor and run all phases
-        from phases import PhaseExecutor
+
         self.phase_executor = PhaseExecutor(self)
         await self.phase_executor.run_all_phases(documents)
         

@@ -103,7 +103,7 @@ class OutputGenerator:
         """Collect all findings from the 6 phases of investigation"""
         findings = {}
         
-        # Get findings from knowledge base
+        # Get findings from knowledge base (through KnowledgeManager)
         for phase_num in range(1, 7):
             phase_key = f'phase_{phase_num}'
             phase_data = self.knowledge_base.get(phase_key, [])
@@ -118,13 +118,14 @@ class OutputGenerator:
                 else:
                     findings[phase_key] = str(phase_data)
         
-        # Add phase findings from investigator if available
-        if hasattr(self.investigator, 'phase_findings'):
-            for phase, content in self.investigator.phase_findings.items():
-                if phase not in findings or not findings[phase]:
+        # Get phase findings from PhaseExecutor (this is where the actual findings are)
+        if hasattr(self.investigator, 'phase_executor'):
+            if hasattr(self.investigator.phase_executor, 'phase_findings'):
+                for phase, content in self.investigator.phase_executor.phase_findings.items():
+                    # Prioritise PhaseExecutor findings as they're the primary source
                     findings[phase] = content
         
-        # Add specific findings from knowledge base
+        # Add specific findings categories from knowledge base
         findings['patterns'] = self.knowledge_base.get('patterns', {})
         findings['anomalies'] = self.knowledge_base.get('anomalies', {})
         findings['theories'] = self.knowledge_base.get('theories', {})

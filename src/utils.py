@@ -6,7 +6,7 @@ Supports the Opus 4.1 litigation investigation system
 
 import re
 from pathlib import Path
-from typing import Dict, List, Any, Optional, Tuple
+from typing import Dict, List, Any, Optional, Tuple, Any
 import json
 import logging
 
