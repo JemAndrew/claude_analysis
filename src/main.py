@@ -9,8 +9,6 @@ import asyncio
 from pathlib import Path
 from dotenv import load_dotenv
 import logging
-
-# Run the investigation using the investigator module
 from investigator import ProgressiveLearningInvestigator
 
 load_dotenv()

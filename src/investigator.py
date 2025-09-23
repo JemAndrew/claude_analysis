@@ -16,7 +16,7 @@ from forensics import DocumentWithholdingTracker
 from output_generator import OutputGenerator
 from knowledge_manage import KnowledgeManager
 import utils
-import prompts
+
 
 logger = logging.getLogger(__name__)
 
@@ -30,6 +30,9 @@ class ProgressiveLearningInvestigator:
     def __init__(self, api_key: str, project_root: str):
         self.project_root = Path(project_root)
         
+        # Load configuration FIRST (before other components need it)
+        self.config = self._load_config()
+        
         # Initialise modular components
         self.api_client = AnthropicAPIClient(api_key)
         self.document_tracker = DocumentWithholdingTracker()
@@ -40,12 +43,9 @@ class ProgressiveLearningInvestigator:
         self.investigation_memory = self.knowledge_manager.investigation_memory
         self.evidence_map = self.knowledge_manager.evidence_map
         
-        # Initialise output generator and phase executor
+        # NOW create phase executor and output generator (after config exists)
         self.output_generator = OutputGenerator(self)
         self.phase_executor = PhaseExecutor(self)
-        
-        # Load configuration
-        self.config = self._load_config()
         
         # Enhanced capabilities for Opus 4.1
         self.litigation_features = {
