@@ -210,7 +210,7 @@ class ProgressiveLearningInvestigator:
         await self.phase_executor.run_all_phases(documents)
         
         # Generate outputs
-        self.output_generator.generate_all_outputs()
+        await self.output_generator.generate_all_outputs()
         
         # Performance summary
         self._print_performance_summary()

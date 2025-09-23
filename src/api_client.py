@@ -89,18 +89,14 @@ class AnthropicAPIClient:
         in high-stakes commercial arbitration. Apply maximum analytical rigour to find case-winning evidence 
         for Lismore's defence against VR Capital.
         
-        Key Context:
-        - VR Capital had 51% voting control throughout
-        - VR invested in October 2017 with full due diligence opportunity
-        - McNaughton warned of fraud in January 2020
-        - The P&ID award was set aside for fraud in 2023
-        - VR now claims breach, exclusion, and lack of transparency
         
         Your role: Destroy VR's claims with documentary evidence."""
     
     def _get_phase_temperature(self, phase: Optional[str]) -> float:
         """Get temperature setting for specific phase"""
         phase_temperatures = {
+            'phase_0a':0.3, 
+            'phase_0b':0.3,  # Lower for initial fact extraction
             'phase_1': 0.3,  # Lower for factual extraction
             'phase_2': 0.4,  # Moderate for pattern recognition
             'phase_3': 0.4,  # Moderate for anomaly detection

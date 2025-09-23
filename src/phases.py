@@ -38,7 +38,7 @@ class PhaseExecutor:
         print("\n" + "-"*50)
         print("📚 PHASE 0A: Legal Training (Opus 4.1 Mode)")
         await self.phase_0a_legal_training()
-        
+    
         # PHASE 0B: Case Context Analysis as Lismore's Counsel
         print("\n" + "-"*50)
         print("📖 PHASE 0B: Case Context Learning (Opus 4.1 Analysis)")

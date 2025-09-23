@@ -1,7 +1,7 @@
 # src/output_generator.py
 """
-Output generation module for Opus 4.1 litigation documents
-Generates tribunal-ready reports, forensic analyses, and strategic documents
+Enhanced output generation module for Opus 4.1 litigation documents
+Generates tribunal-ready reports informed by all 6 phases of investigation
 """
 
 from pathlib import Path
@@ -12,9 +12,10 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+
 class OutputGenerator:
     """
-    Generates comprehensive litigation outputs for the investigation
+    Generates comprehensive litigation outputs informed by investigation findings
     """
     
     def __init__(self, investigator):
@@ -25,41 +26,71 @@ class OutputGenerator:
             investigator: ProgressiveLearningInvestigator instance
         """
         self.investigator = investigator
+        self.api_client = investigator.api_client  # Add API access
         self.project_root = investigator.project_root
         self.outputs_dir = self.project_root / "outputs"
         self.outputs_dir.mkdir(parents=True, exist_ok=True)
         
         # Reference to knowledge manager for data access
-        self.knowledge_manager = investigator.knowledge_manager
+        self.knowledge_base = investigator.knowledge_base
         self.document_tracker = investigator.document_tracker
         
-    def generate_all_outputs(self):
-        """Generate all Opus 4.1 litigation documents"""
+        # Storage for gathered findings
+        self.all_findings = {}
+        
+    async def generate_all_outputs(self):
+        """Generate all Opus 4.1 litigation documents with AI assistance"""
         print("\n" + "="*50)
         print("📝 GENERATING OPUS 4.1 LITIGATION DOCUMENTS")
         print("="*50)
         
         try:
+            # First, gather all findings from the 6 phases
+            print("📊 Gathering investigation findings...")
+            self.all_findings = self._gather_all_phase_findings()
+            
             # Core litigation documents
-            self.generate_tribunal_summary()
-            self.generate_kill_shot_strategy()
-            self.generate_cross_exam_script()
-            self.generate_adverse_inference_motion()
+            print("📄 Generating tribunal summary...")
+            await self.generate_tribunal_summary()
+            
+            print("🎯 Generating kill shot strategy...")
+            await self.generate_kill_shot_strategy()
+            
+            print("❓ Generating cross-examination script...")
+            await self.generate_cross_exam_script()
+            
+            print("⚖️ Generating adverse inference motion...")
+            await self.generate_adverse_inference_motion()
             
             # Forensic reports
-            self.generate_ediscovery_report()
-            self.generate_forensics_report()
-            self.generate_privilege_analysis()
+            print("🔍 Generating eDiscovery report...")
+            await self.generate_ediscovery_report()
+            
+            print("🔬 Generating forensics report...")
+            await self.generate_forensics_report()
+            
+            print("🔐 Generating privilege analysis...")
+            await self.generate_privilege_analysis()
             
             # Strategic documents
-            self.generate_opening_statement()
-            self.generate_closing_argument()
-            self.generate_settlement_analysis()
+            print("🎬 Generating opening statement...")
+            await self.generate_opening_statement()
+            
+            print("🎭 Generating closing argument...")
+            await self.generate_closing_argument()
+            
+            print("💰 Generating settlement analysis...")
+            await self.generate_settlement_analysis()
             
             # Supporting analyses
-            self.generate_credibility_matrix()
-            self.generate_deception_timeline()
-            self.generate_witness_plan()
+            print("📊 Generating credibility matrix...")
+            await self.generate_credibility_matrix()
+            
+            print("🕐 Generating deception timeline...")
+            await self.generate_deception_timeline()
+            
+            print("👥 Generating witness plan...")
+            await self.generate_witness_plan()
             
             print("\n✅ All Opus 4.1 litigation documents generated!")
             print(f"📂 Documents saved to: {self.outputs_dir}")
@@ -68,971 +99,979 @@ class OutputGenerator:
             logger.error(f"Error generating outputs: {e}")
             print(f"⚠️ Error generating some outputs: {e}")
     
-    def generate_tribunal_summary(self):
-        """Generate executive summary for tribunal"""
-        summary = [
+    def _gather_all_phase_findings(self) -> Dict:
+        """Collect all findings from the 6 phases of investigation"""
+        findings = {}
+        
+        # Get findings from knowledge base
+        for phase_num in range(1, 7):
+            phase_key = f'phase_{phase_num}'
+            phase_data = self.knowledge_base.get(phase_key, [])
+            
+            if phase_data:
+                # Combine all findings for this phase
+                if isinstance(phase_data, list):
+                    findings[phase_key] = "\n".join([
+                        item.get('findings', '') if isinstance(item, dict) else str(item)
+                        for item in phase_data
+                    ])
+                else:
+                    findings[phase_key] = str(phase_data)
+        
+        # Add phase findings from investigator if available
+        if hasattr(self.investigator, 'phase_findings'):
+            for phase, content in self.investigator.phase_findings.items():
+                if phase not in findings or not findings[phase]:
+                    findings[phase] = content
+        
+        # Add specific findings from knowledge base
+        findings['patterns'] = self.knowledge_base.get('patterns', {})
+        findings['anomalies'] = self.knowledge_base.get('anomalies', {})
+        findings['theories'] = self.knowledge_base.get('theories', {})
+        findings['evidence'] = self.knowledge_base.get('evidence', {})
+        findings['contradictions'] = self.knowledge_base.get('contradictions', {})
+        findings['kill_shots'] = self.knowledge_base.get('kill_shots', {})
+        findings['missing_docs'] = self.knowledge_base.get('missing_docs', {})
+        
+        return findings
+    
+    async def generate_tribunal_summary(self):
+        """Generate executive summary informed by all 6 phases"""
+        
+        summary_prompt = f"""
+        Based on the complete 6-phase forensic investigation of VR Capital's documents, 
+        create an executive tribunal summary for the LCIA arbitration panel.
+        
+        PHASE 1 FINDINGS (Document Landscape & Forensics):
+        {self.all_findings.get('phase_1', 'No findings')[:2000]}
+        
+        PHASE 2 FINDINGS (Pattern Recognition):
+        {self.all_findings.get('phase_2', 'No findings')[:2000]}
+        
+        Control Patterns Found: {len(self.all_findings.get('patterns', {}).get('control_patterns', []))}
+        Deception Indicators: {len(self.all_findings.get('patterns', {}).get('deception_indicators', []))}
+        
+        PHASE 3 FINDINGS (Anomalies):
+        {self.all_findings.get('phase_3', 'No findings')[:2000]}
+        
+        PHASE 4 FINDINGS (Legal Theories):
+        {self.all_findings.get('phase_4', 'No findings')[:2000]}
+        
+        PHASE 5 FINDINGS (Evidence Analysis):
+        {self.all_findings.get('phase_5', 'No findings')[:2000]}
+        
+        PHASE 6 FINDINGS (Kill Shots):
+        {self.all_findings.get('phase_6', 'No findings')[:2000]}
+        
+        Nuclear Kill Shots: {len(self.all_findings.get('kill_shots', {}).get('nuclear', []))}
+        Devastating Evidence: {len(self.all_findings.get('kill_shots', {}).get('devastating', []))}
+        
+        CREATE AN EXECUTIVE TRIBUNAL SUMMARY THAT:
+        1. Opens with the three most case-ending findings
+        2. Lists specific document IDs that prove VR's 51% control
+        3. Highlights patterns showing VR's consciousness of guilt
+        4. Identifies timeline impossibilities and contradictions
+        5. Summarises evidence of document withholding
+        6. Provides clear recommendations for tribunal
+        
+        Structure as:
+        - EXECUTIVE SUMMARY (2 paragraphs)
+        - CASE-ENDING FINDINGS (top 3 with document IDs)
+        - VR'S FATAL FLAWS (based on patterns found)
+        - LISMORE'S UNASSAILABLE POSITION (from evidence analysis)
+        - ADVERSE INFERENCE OPPORTUNITIES (missing documents)
+        - RECOMMENDATION TO TRIBUNAL
+        
+        Be specific. Use actual document IDs. Reference real findings.
+        This is for senior arbitrators - be precise and devastating.
+        """
+        
+        response = await self.api_client.make_api_call(
+            summary_prompt, 
+            phase='output_summary',
+            temperature=0.3  # Lower temperature for factual summary
+        )
+        
+        # Format and save
+        output = [
             "# EXECUTIVE TRIBUNAL SUMMARY",
             "",
             f"**Generated**: {datetime.now().strftime('%Y-%m-%d %H:%M')}",
             "**System**: Claude Opus 4.1 Forensic Analysis",
+            "**Investigation**: 6-Phase Progressive Learning Complete",
             "",
-            "## Executive Summary",
-            "",
-            "This document presents the definitive forensic analysis of VR Capital's claims against Lismore Capital,",
-            "revealing systematic bad faith, document withholding, and retrospective claim manufacturing.",
-            "",
-            "## Case-Ending Findings",
-            "",
+            response
         ]
         
-        # Add kill shots summary
-        kill_shots = self.knowledge_manager.get_kill_shots()
-        if kill_shots['total'] > 0:
-            summary.append(f"### Kill Shots Identified: {kill_shots['total']}")
-            summary.append("")
-            for category, items in kill_shots['details'].items():
-                if items and isinstance(items, list):
-                    summary.append(f"- **{category.upper()}**: {len(items)} findings")
-        
-        summary.extend([
-            "",
-            "## VR's Fatal Flaws",
-            "",
-            "### 1. Control Reality",
-            "VR maintained 51% voting control throughout the relevant period, rendering their exclusion claims impossible.",
-            "",
-            "### 2. Knowledge Timeline",
-            "VR received the McNaughton warning in January 2020 but continued participation, demonstrating acceptance of risks.",
-            "",
-            "### 3. Due Diligence Failure",
-            "As professional investors, VR's October 2017 due diligence was negligent or reckless, barring recovery.",
-            "",
-            "### 4. Document Withholding",
-        ])
-        
-        # Add withholding statistics
-        if hasattr(self.document_tracker, 'get_summary_stats'):
-            stats = self.document_tracker.get_summary_stats()
-            summary.append(f"- Referenced but missing documents: {stats.get('total_referenced_missing', 0)}")
-            summary.append(f"- Sequence gaps identified: {stats.get('total_sequence_gaps', 0)}")
-            summary.append(f"- Missing board resolutions: {stats.get('missing_resolutions', 0)}")
-        
-        summary.extend([
-            "",
-            "## Lismore's Unassailable Position",
-            "",
-            "1. **No Breach**: All actions taken with VR's approval or acquiescence",
-            "2. **No Exclusion**: VR exercised control throughout via 51% shareholding",
-            "3. **Full Transparency**: All material information provided to VR",
-            "4. **Professional Standards**: VR failed their own due diligence obligations",
-            "",
-            "## Recommendation",
-            "",
-            "**VERDICT**: VR's claims should be dismissed with costs on an indemnity basis.",
-            "The evidence demonstrates bad faith litigation following investment losses."
-        ])
-        
-        self._save_output("00_EXECUTIVE_TRIBUNAL_SUMMARY.md", summary)
+        self._save_output("00_EXECUTIVE_TRIBUNAL_SUMMARY.md", output)
     
-    def generate_kill_shot_strategy(self):
-        """Generate kill shot deployment strategy"""
-        strategy = [
+    async def generate_kill_shot_strategy(self):
+        """Generate strategy based on actual kill shots found"""
+        
+        kill_shots = self.all_findings.get('kill_shots', {})
+        phase_6_findings = self.all_findings.get('phase_6', '')
+        
+        strategy_prompt = f"""
+        Create a detailed deployment strategy for the kill shots identified in our investigation.
+        
+        ACTUAL KILL SHOTS FOUND:
+        Nuclear (Case-Ending): {json.dumps(kill_shots.get('nuclear', []), indent=2)[:2000]}
+        Devastating (Claim-Destroying): {json.dumps(kill_shots.get('devastating', []), indent=2)[:2000]}
+        Severe (Credibility-Destroying): {json.dumps(kill_shots.get('severe', []), indent=2)[:2000]}
+        
+        PHASE 6 KILL SHOT ANALYSIS:
+        {phase_6_findings[:3000]}
+        
+        CREATE A DEPLOYMENT STRATEGY THAT INCLUDES:
+        
+        1. OPENING STATEMENT DEPLOYMENT
+           - Which 3 documents to lead with
+           - Exact phrasing for maximum impact
+           - Visual presentation approach
+        
+        2. WITNESS EXAMINATION SEQUENCE
+           - Order of document presentation
+           - Specific questions for each kill shot
+           - Trap sequences using contradictions
+        
+        3. CROSS-EXAMINATION AMBUSHES
+           - When to deploy each kill shot
+           - How to prevent escape routes
+           - Follow-up questions for denials
+        
+        4. CLOSING ARGUMENT CRESCENDO
+           - How to sequence for maximum impact
+           - Connecting kill shots to legal theories
+           - Final devastating summary
+        
+        5. SETTLEMENT LEVERAGE
+           - Which kill shots to preview in negotiations
+           - How to demonstrate strength without revealing all
+        
+        Be specific about document IDs, timing, and sequences.
+        This strategy must be actionable and devastating.
+        """
+        
+        response = await self.api_client.make_api_call(
+            strategy_prompt,
+            phase='kill_shot_strategy',
+            temperature=0.4
+        )
+        
+        output = [
             "# KILL SHOT DEPLOYMENT STRATEGY",
             "",
             f"**Generated**: {datetime.now().strftime('%Y-%m-%d %H:%M')}",
             "**Classification**: HIGHLY CONFIDENTIAL - LITIGATION PRIVILEGE",
             "",
-            "## Strategic Overview",
-            "",
-            "This document outlines the sequential deployment of case-ending evidence to maximise tribunal impact",
-            "and settlement pressure on VR Capital.",
-            "",
-            "## Nuclear Options - Immediate Case Enders",
-            ""
+            response
         ]
         
-        # Add nuclear kill shots if available
-        kill_shots = self.knowledge_manager.knowledge_base.get('kill_shots', {})
-        nuclear = kill_shots.get('nuclear', [])
-        
-        if nuclear:
-            for i, shot in enumerate(nuclear[:3], 1):
-                strategy.extend([
-                    f"### Nuclear Option {i}",
-                    f"**Document**: {shot.get('doc_id', 'TBD')}",
-                    f"**Impact**: {shot.get('impact', 'Case-ending')}",
-                    f"**Deployment**: Opening statement",
-                    ""
-                ])
-        else:
-            strategy.extend([
-                "### Documents to be identified from production",
-                "- Board minutes showing VR's control",
-                "- VR's response to McNaughton warning",
-                "- Contemporary approvals by VR",
-                ""
-            ])
-        
-        strategy.extend([
-            "## Sequential Destruction Plan",
-            "",
-            "### Phase 1: Opening Statement",
-            "- Deploy top 3 nuclear documents",
-            "- Establish VR's 51% control immediately",
-            "- Reference McNaughton warning",
-            "",
-            "### Phase 2: Witness Examination",
-            "- Confront with control documents",
-            "- Extract admissions on knowledge",
-            "- Demonstrate withholding patterns",
-            "",
-            "### Phase 3: Cross-Examination",
-            "- Deploy devastating contradictions",
-            "- Use prior inconsistent statements",
-            "- Force impossible explanations",
-            "",
-            "### Phase 4: Closing Argument",
-            "- Synthesise all kill shots",
-            "- Emphasise systematic bad faith",
-            "- Demand costs on indemnity basis",
-            "",
-            "## Contingency Planning",
-            "",
-            "### If VR Attempts Settlement",
-            "- Minimum acceptance: Full withdrawal with costs",
-            "- No confidentiality on fraud findings",
-            "- Public statement acknowledging baseless claims",
-            "",
-            "### If New Documents Emerge",
-            "- Immediate forensic analysis",
-            "- Update kill shot rankings",
-            "- Prepare supplemental submissions"
-        ])
-        
-        self._save_output("01_KILL_SHOT_STRATEGY.md", strategy)
+        self._save_output("01_KILL_SHOT_STRATEGY.md", output)
     
-    def generate_cross_exam_script(self):
-        """Generate cross-examination script"""
-        script = [
+    async def generate_cross_exam_script(self):
+        """Generate script based on patterns and contradictions found"""
+        
+        patterns = self.all_findings.get('patterns', {})
+        contradictions = self.all_findings.get('contradictions', {})
+        phase_2_findings = self.all_findings.get('phase_2', '')
+        anomalies = self.all_findings.get('anomalies', {})
+        
+        cross_exam_prompt = f"""
+        Create a detailed cross-examination script based on our investigation findings.
+        
+        PATTERNS DISCOVERED (Phase 2):
+        Control Patterns: {json.dumps(patterns.get('control_patterns', []), indent=2)[:1500]}
+        Deception Patterns: {json.dumps(patterns.get('deception_indicators', []), indent=2)[:1500]}
+        
+        CONTRADICTIONS FOUND (Phase 5):
+        {json.dumps(contradictions, indent=2)[:1500]}
+        
+        ANOMALIES DETECTED (Phase 3):
+        {json.dumps(anomalies, indent=2)[:1500]}
+        
+        Pattern Analysis:
+        {phase_2_findings[:2000]}
+        
+        CREATE A CROSS-EXAMINATION SCRIPT WITH:
+        
+        1. CONTROL REALITY SEQUENCE
+           - Questions proving VR's 51% control
+           - Documents to present in order
+           - Anticipated denials and follow-ups
+        
+        2. KNOWLEDGE TIMELINE SEQUENCE
+           - Questions about McNaughton warning
+           - When VR knew about fraud indicators
+           - Documents proving knowledge
+        
+        3. CONTRADICTION CONFRONTATIONS
+           - Prior inconsistent statements
+           - Document vs testimony conflicts
+           - Impossible explanations to force
+        
+        4. PATTERN DEMONSTRATIONS
+           - Questions revealing deception patterns
+           - Document sequences showing consciousness of guilt
+           - Withholding pattern exposure
+        
+        5. CREDIBILITY DESTRUCTION
+           - Final sequence of devastating questions
+           - Documents that cannot be explained
+           - Admissions to extract
+        
+        Format as actual Q&A sequences with specific document references.
+        Include exact questions, expected answers, and follow-ups.
+        Make it impossible for witnesses to escape.
+        """
+        
+        response = await self.api_client.make_api_call(
+            cross_exam_prompt,
+            phase='cross_examination',
+            temperature=0.3
+        )
+        
+        output = [
             "# CROSS-EXAMINATION SCRIPT",
             "",
             f"**Generated**: {datetime.now().strftime('%Y-%m-%d %H:%M')}",
-            "**Witness Target**: VR Capital Representatives",
+            "**Target Witnesses**: VR Capital Representatives",
             "",
-            "## Document Confrontation Sequences",
-            "",
-            "### Sequence 1: Control Reality",
-            "",
-            "**Q1**: You had 51% of the voting shares, correct?",
-            "**Expected**: Yes / Attempt to qualify",
-            "",
-            "**Q2**: 51% gives you control of any shareholder vote?",
-            "**Expected**: Reluctant agreement",
-            "",
-            "**Q3**: Show me one decision you wanted but couldn't implement due to your shareholding.",
-            "**Expected**: Cannot provide",
-            "",
-            "### Sequence 2: McNaughton Warning",
-            "",
-            "**Q1**: You received McNaughton's warning in January 2020?",
-            "**Q2**: You understood it raised fraud concerns?",
-            "**Q3**: You continued participating after this warning?",
-            "**Q4**: You never demanded an investigation?",
-            "**Q5**: You approved subsequent decisions post-warning?",
-            "",
-            "### Sequence 3: Due Diligence",
-            "",
-            "**Q1**: You're professional investors?",
-            "**Q2**: You conducted due diligence before investing $45 million?",
-            "**Q3**: You had lawyers and advisers?",
-            "**Q4**: You understood arbitration award risks?",
-            "**Q5**: Show me where you raised these concerns in 2017.",
-            "",
-            "## Admission Extraction Plans",
-            "",
-            "### Critical Admissions Needed:",
-            "1. VR had majority control",
-            "2. VR could have investigated but didn't",
-            "3. VR approved key decisions",
-            "4. VR knew of fraud risks",
-            "5. VR is withholding documents",
-            "",
-            "## Credibility Destruction Sequences",
-            "",
-            "### If Witness Claims Exclusion:",
-            "- Show board minutes with their participation",
-            "- Show emails with their approvals",
-            "- Show voting records",
-            "",
-            "### If Witness Claims Ignorance:",
-            "- Show McNaughton warning",
-            "- Show publicly available information",
-            "- Show their due diligence scope",
-            "",
-            "### If Witness Claims No Control:",
-            "- Mathematical reality of 51%",
-            "- Corporate law on majority control",
-            "- Their own investment documents",
-            "",
-            "## Document Deployment Timing",
-            "",
-            "1. Start soft - establish basics",
-            "2. Build control narrative",
-            "3. Deploy McNaughton warning",
-            "4. Show contradictions",
-            "5. End with kill shots"
+            response
         ]
         
-        self._save_output("02_CROSS_EXAMINATION_SCRIPT.md", script)
+        self._save_output("02_CROSS_EXAMINATION_SCRIPT.md", output)
     
-    def generate_adverse_inference_motion(self):
-        """Generate adverse inference motion"""
-        motion = [
+    async def generate_adverse_inference_motion(self):
+        """Generate adverse inference motion based on withholding patterns"""
+        
+        # Get adverse inference opportunities from document tracker
+        adverse_docs = []
+        if hasattr(self.document_tracker, 'generate_adverse_inference_report'):
+            adverse_docs = self.document_tracker.generate_adverse_inference_report()
+        
+        missing_docs = self.all_findings.get('missing_docs', {})
+        phase_3_anomalies = self.all_findings.get('phase_3', '')
+        
+        motion_prompt = f"""
+        Draft a formal motion for adverse inference based on VR Capital's document withholding.
+        
+        MISSING DOCUMENTS IDENTIFIED:
+        {json.dumps(adverse_docs[:20], indent=2)[:3000]}
+        
+        WITHHOLDING PATTERNS FOUND:
+        {json.dumps(missing_docs, indent=2)[:2000]}
+        
+        PRODUCTION ANOMALIES (Phase 3):
+        {phase_3_anomalies[:2000]}
+        
+        CREATE A FORMAL MOTION THAT:
+        
+        1. INTRODUCTION
+           - Establish legal basis for adverse inference
+           - Cite relevant arbitration rules
+        
+        2. PATTERN OF WITHHOLDING
+           - Systematic nature of missing documents
+           - Statistical analysis of production gaps
+           - Consciousness of guilt indicators
+        
+        3. SPECIFIC MISSING DOCUMENTS
+           - List top 20 with times referenced
+           - Explain significance of each
+           - Impact on case if produced
+        
+        4. LEGAL ARGUMENT
+           - Burden of production on VR
+           - Failure to explain gaps
+           - Inference requirements met
+        
+        5. REQUESTED INFERENCES
+           - Specific inferences for each category
+           - Impact on VR's claims
+           - Support for Lismore's defences
+        
+        6. RELIEF SOUGHT
+           - Adverse inferences
+           - Cost consequences
+           - Potential claim dismissal
+        
+        Draft in formal legal style for LCIA tribunal.
+        Be precise about document references and legal standards.
+        """
+        
+        response = await self.api_client.make_api_call(
+            motion_prompt,
+            phase='adverse_inference',
+            temperature=0.2  # Very low for formal legal document
+        )
+        
+        output = [
             "# MOTION FOR ADVERSE INFERENCE",
             "",
             f"**Date**: {datetime.now().strftime('%Y-%m-%d')}",
             "**Tribunal**: LCIA Arbitration",
             "**Re**: VR Capital v Lismore Capital",
             "",
-            "## Introduction",
-            "",
-            "Lismore Capital respectfully requests the Tribunal draw adverse inferences from VR Capital's",
-            "systematic failure to produce relevant documents referenced in their disclosure.",
-            "",
-            "## Legal Framework",
-            "",
-            "Under established arbitration principles, adverse inferences may be drawn where:",
-            "1. A party fails to produce relevant documents",
-            "2. Documents are within that party's control",
-            "3. No satisfactory explanation is provided",
-            "4. The inference sought is reasonable",
-            "",
-            "## Documents Warranting Adverse Inference",
-            ""
+            response
         ]
         
-        # Get adverse inference opportunities
-        if hasattr(self.document_tracker, 'generate_adverse_inference_report'):
-            adverse_docs = self.document_tracker.generate_adverse_inference_report()
-            
-            motion.append("### Category A: Critical Missing Documents")
-            motion.append("")
-            
-            for i, doc in enumerate(adverse_docs[:10], 1):
-                motion.extend([
-                    f"**{i}. {doc.get('document', 'Unknown')}**",
-                    f"- Referenced: {doc.get('times_referenced', 0)} times",
-                    f"- Significance: {doc.get('significance', 'Unknown')}",
-                    f"- Impact: {doc.get('tribunal_impact', 'Material')}",
-                    ""
-                ])
-        
-        motion.extend([
-            "## Requested Inferences",
-            "",
-            "The Tribunal should infer that:",
-            "",
-            "1. **Control Documents**: Withheld documents confirm VR's control",
-            "2. **Knowledge Documents**: Missing items prove VR's early knowledge",
-            "3. **Approval Documents**: Absent records show VR's consent",
-            "4. **Due Diligence**: Missing DD documents reveal inadequate investigation",
-            "",
-            "## Conclusion",
-            "",
-            "VR's selective disclosure pattern demonstrates consciousness of guilt and bad faith.",
-            "The Tribunal should draw all requested adverse inferences and dismiss VR's claims.",
-            "",
-            "Respectfully submitted,",
-            "",
-            "**Counsel for Lismore Capital**"
-        ])
-        
-        self._save_output("03_ADVERSE_INFERENCE_MOTION.md", motion)
+        self._save_output("03_ADVERSE_INFERENCE_MOTION.md", output)
     
-    def generate_ediscovery_report(self):
-        """Generate eDiscovery analysis report"""
-        report = [
+    async def generate_ediscovery_report(self):
+        """Generate eDiscovery analysis based on production patterns"""
+        
+        stats = {}
+        if hasattr(self.document_tracker, 'get_summary_stats'):
+            stats = self.document_tracker.get_summary_stats()
+        
+        patterns = self.all_findings.get('patterns', {})
+        phase_1_findings = self.all_findings.get('phase_1', '')
+        
+        report_prompt = f"""
+        Create a comprehensive eDiscovery analysis report based on our document investigation.
+        
+        PRODUCTION STATISTICS:
+        {json.dumps(stats, indent=2)}
+        
+        WITHHOLDING PATTERNS IDENTIFIED:
+        {json.dumps(patterns.get('withholding_patterns', []), indent=2)[:2000]}
+        
+        DOCUMENT LANDSCAPE ANALYSIS (Phase 1):
+        {phase_1_findings[:2000]}
+        
+        CREATE AN eDISCOVERY REPORT COVERING:
+        
+        1. EXECUTIVE SUMMARY
+           - Key findings about VR's production
+           - Systematic deficiencies identified
+           - Impact on case
+        
+        2. PRODUCTION ANALYSIS
+           - Documents produced vs referenced
+           - Date range gaps
+           - Document type analysis
+           - Custodian coverage
+        
+        3. MISSING DOCUMENT FAMILIES
+           - Board documentation gaps
+           - Email chain incompleteness
+           - Attachment analysis
+           - Meeting minutes absence
+        
+        4. FORENSIC RED FLAGS
+           - Metadata inconsistencies
+           - Production timing anomalies
+           - Selective disclosure patterns
+           - Format irregularities
+        
+        5. PRIVILEGE LOG ANALYSIS
+           - Questionable privilege claims
+           - Waiver indicators
+           - Crime-fraud possibilities
+        
+        6. RECOMMENDATIONS
+           - Further production demands
+           - Forensic examination needs
+           - Deposition priorities
+           - Motion practice
+        
+        Make this technical but accessible to arbitrators.
+        Include specific examples and document IDs where available.
+        """
+        
+        response = await self.api_client.make_api_call(
+            report_prompt,
+            phase='ediscovery_report',
+            temperature=0.3
+        )
+        
+        output = [
             "# eDISCOVERY ANALYSIS REPORT",
             "",
             f"**Generated**: {datetime.now().strftime('%Y-%m-%d %H:%M')}",
             "**Analysis Type**: Forensic eDiscovery Review",
             "",
-            "## Executive Summary",
-            "",
-            "Forensic analysis reveals systematic deficiencies in VR Capital's document production,",
-            "suggesting deliberate withholding of adverse materials.",
-            "",
-            "## Production Analysis",
-            "",
-            "### Documents Produced",
-            f"- Total documents analysed: {len(self.knowledge_manager.evidence_map)}",
-            "- Date range: October 2017 - Present",
-            "- Document types: Varied",
-            "",
-            "### Production Gaps Identified",
-            ""
+            response
         ]
         
-        # Add statistics from document tracker
-        if hasattr(self.document_tracker, 'get_summary_stats'):
-            stats = self.document_tracker.get_summary_stats()
-            report.extend([
-                f"- Referenced but missing: {stats.get('total_referenced_missing', 0)} documents",
-                f"- Sequence gaps: {stats.get('total_sequence_gaps', 0)} breaks",
-                f"- Missing meetings: {stats.get('missing_meetings', 0)} minutes absent",
-                f"- Missing resolutions: {stats.get('missing_resolutions', 0)} board decisions",
-                ""
-            ])
-        
-        report.extend([
-            "## Missing Document Families",
-            "",
-            "### Board Documentation",
-            "- Board minutes for critical periods missing",
-            "- Resolutions referenced but not produced",
-            "- Voting records absent",
-            "",
-            "### Communication Chains",
-            "- Email threads incomplete",
-            "- Attachments referenced but missing",
-            "- Internal memoranda gaps",
-            "",
-            "### Due Diligence Materials",
-            "- 2017 investment DD largely absent",
-            "- Risk assessments not produced",
-            "- Legal opinions withheld",
-            "",
-            "## Forensic Red Flags",
-            "",
-            "1. **Selective Date Ranges**: Gaps around critical events",
-            "2. **Missing Attachments**: Systematic absence of referenced documents",
-            "3. **Incomplete Threads**: Email chains start mid-conversation",
-            "4. **Format Inconsistencies**: Suggesting post-production editing",
-            "",
-            "## Recommendations",
-            "",
-            "1. Demand complete production with privilege log",
-            "2. Seek metadata for all documents",
-            "3. Request forensic imaging of systems",
-            "4. Move for adverse inference on gaps"
-        ])
-        
-        self._save_output("04_EDISCOVERY_ANALYSIS.md", report)
+        self._save_output("04_EDISCOVERY_ANALYSIS.md", output)
     
-    def generate_forensics_report(self):
-        """Generate document forensics report"""
-        report = [
+    async def generate_forensics_report(self):
+        """Generate document forensics report based on anomalies"""
+        
+        anomalies = self.all_findings.get('anomalies', {})
+        phase_3_findings = self.all_findings.get('phase_3', '')
+        patterns = self.all_findings.get('patterns', {})
+        
+        forensics_prompt = f"""
+        Create a detailed document forensics report based on our anomaly detection.
+        
+        ANOMALIES DETECTED (Phase 3):
+        {json.dumps(anomalies, indent=2)[:2500]}
+        
+        FORENSIC ANALYSIS:
+        {phase_3_findings[:2000]}
+        
+        DECEPTION PATTERNS:
+        {json.dumps(patterns.get('deception_indicators', []), indent=2)[:1500]}
+        
+        CREATE A FORENSICS REPORT INCLUDING:
+        
+        1. METADATA ANOMALIES
+           - Creation date inconsistencies
+           - Modification patterns
+           - Author field irregularities
+           - System timestamp conflicts
+        
+        2. BACKDATING EVIDENCE
+           - Anachronistic references
+           - Future knowledge indicators
+           - Font/formatting issues
+           - Digital fingerprint mismatches
+        
+        3. PRODUCTION MANIPULATION
+           - Selective redaction patterns
+           - Missing pages indicators
+           - Resolution degradation
+           - OCR vs native format issues
+        
+        4. AUTHENTICATION CHALLENGES
+           - Documents lacking signatures
+           - Email header absence
+           - Chain of custody gaps
+           - Version control issues
+        
+        5. BEHAVIOURAL FORENSICS
+           - Consciousness of guilt language
+           - Sudden formality shifts
+           - Legal counsel involvement timing
+           - Defensive communication patterns
+        
+        6. EXPERT TESTIMONY PREPARATION
+           - Key findings for expert
+           - Demonstrative exhibits needed
+           - Cross-examination of opposing expert
+           - Standards and methodology
+        
+        Write technically but clearly for tribunal understanding.
+        Include specific document examples and forensic markers.
+        """
+        
+        response = await self.api_client.make_api_call(
+            forensics_prompt,
+            phase='forensics_report',
+            temperature=0.3
+        )
+        
+        output = [
             "# DOCUMENT FORENSICS REPORT",
             "",
             f"**Generated**: {datetime.now().strftime('%Y-%m-%d %H:%M')}",
             "**Classification**: Confidential - Litigation Privilege",
             "",
-            "## Forensic Analysis Summary",
-            "",
-            "Document examination reveals multiple indicators of manipulation,",
-            "selective production, and potential backdating.",
-            "",
-            "## Metadata Anomalies",
-            "",
-            "### Suspicious Patterns Detected",
-            "- Creation dates post-dating content dates",
-            "- Modification timestamps clustering around production deadline",
-            "- Author fields inconsistent with signatures",
-            "- System fonts not available at document date",
-            "",
-            "## Backdating Evidence",
-            "",
-            "### High Probability Backdating",
-            "Documents showing anachronistic characteristics:",
-            "",
-            "1. **Future Knowledge Indicators**",
-            "   - References to events not yet occurred",
-            "   - Terminology not in use at purported date",
-            "   - Legal framework citations post-dating document",
-            "",
-            "2. **Digital Fingerprints**",
-            "   - PDF creation dates inconsistent",
-            "   - Embedded objects from future versions",
-            "   - Compression algorithms not available at date",
-            "",
-            "## Authentication Challenges",
-            "",
-            "### Documents Requiring Authentication",
-            "- Board minutes (no signatures)",
-            "- Email printouts (no headers)",
-            "- Memoranda (no metadata)",
-            "",
-            "## Production Anomalies",
-            "",
-            "### Statistical Analysis",
-            "- 73% of adverse documents 'missing'",
-            "- 100% of favourable documents produced",
-            "- Critical date ranges systematically absent",
-            "",
-            "## Conclusions",
-            "",
-            "The forensic evidence strongly suggests:",
-            "1. Deliberate document withholding",
-            "2. Post-hoc document creation",
-            "3. Selective production strategy",
-            "4. Consciousness of guilt patterns",
-            "",
-            "## Expert Testimony Preparation",
-            "",
-            "Recommend engagement of forensic document examiner to testify on:",
-            "- Metadata inconsistencies",
-            "- Backdating indicators",
-            "- Production manipulation patterns"
+            response
         ]
         
-        self._save_output("05_FORENSICS_REPORT.md", report)
+        self._save_output("05_FORENSICS_REPORT.md", output)
     
-    def generate_privilege_analysis(self):
+    async def generate_privilege_analysis(self):
         """Generate privilege log analysis"""
-        analysis = [
+        
+        phase_5_evidence = self.all_findings.get('phase_5', '')
+        patterns = self.all_findings.get('patterns', {})
+        
+        privilege_prompt = f"""
+        Analyse VR Capital's privilege claims based on our document review.
+        
+        EVIDENCE ANALYSIS (Phase 5):
+        {phase_5_evidence[:2000]}
+        
+        WITHHOLDING PATTERNS:
+        {json.dumps(patterns.get('withholding_patterns', []), indent=2)[:1500]}
+        
+        CREATE A PRIVILEGE ANALYSIS COVERING:
+        
+        1. OVERVIEW OF PRIVILEGE CLAIMS
+           - Volume and categories
+           - Temporal patterns
+           - Custodian analysis
+        
+        2. INVALID PRIVILEGE ASSERTIONS
+           - Business communications
+           - Pre-existing documents
+           - Third party communications
+           - Published materials
+        
+        3. WAIVER ANALYSIS
+           - Subject matter waiver
+           - Partial disclosure
+           - At-issue waiver
+           - Implied waiver
+        
+        4. CRIME-FRAUD EXCEPTION
+           - Fraudulent scheme evidence
+           - Legal advice furthering fraud
+           - Consciousness of guilt
+           - Cover-up communications
+        
+        5. STRATEGIC RECOMMENDATIONS
+           - Challenges to specific documents
+           - In camera review requests
+           - Waiver arguments
+           - Motion practice
+        
+        Be precise about legal standards and specific documents.
+        Focus on documents that would damage VR's case.
+        """
+        
+        response = await self.api_client.make_api_call(
+            privilege_prompt,
+            phase='privilege_analysis',
+            temperature=0.3
+        )
+        
+        output = [
             "# PRIVILEGE LOG ANALYSIS",
             "",
             f"**Date**: {datetime.now().strftime('%Y-%m-%d')}",
             "**Matter**: VR Capital v Lismore Capital",
             "",
-            "## Overview",
-            "",
-            "Analysis of VR's privilege claims reveals systematic abuse and waiver.",
-            "",
-            "## Privilege Assertions Challenged",
-            "",
-            "### Category 1: Invalid Legal Advice Privilege",
-            "- Business communications mischaracterised as legal",
-            "- Commercial negotiations not privileged",
-            "- Public information claimed as confidential",
-            "",
-            "### Category 2: Waived Privilege",
-            "- Partial disclosure waiving privilege",
-            "- Subject matter waiver through claims",
-            "- Implied waiver via litigation positions",
-            "",
-            "### Category 3: Crime-Fraud Exception",
-            "- Documents furthering fraudulent scheme",
-            "- Communications concealing wrongdoing",
-            "- Advice on avoiding liability improperly",
-            "",
-            "## Documents Requiring Production",
-            "",
-            "### Immediate Production Required",
-            "1. McNaughton correspondence (waived)",
-            "2. Board advice on fraud allegations (crime-fraud)",
-            "3. Investment committee materials (commercial)",
-            "4. Due diligence reports (non-privileged)",
-            "",
-            "## Strategic Recommendations",
-            "",
-            "1. **Challenge Blanket Assertions**: Demand document-by-document log",
-            "2. **In Camera Review**: Request tribunal inspection",
-            "3. **Waiver Arguments**: Deploy subject matter waiver",
-            "4. **Crime-Fraud Motion**: File if fraud indicators strengthen",
-            "",
-            "## Conclusion",
-            "",
-            "VR's privilege log appears designed to conceal adverse documents rather than",
-            "protect legitimate legal communications. Aggressive challenge recommended."
+            response
         ]
         
-        self._save_output("06_PRIVILEGE_ANALYSIS.md", analysis)
+        self._save_output("06_PRIVILEGE_ANALYSIS.md", output)
     
-    def generate_opening_statement(self):
-        """Generate opening statement"""
-        statement = [
+    async def generate_opening_statement(self):
+        """Generate opening statement based on strongest evidence"""
+        
+        kill_shots = self.all_findings.get('kill_shots', {})
+        theories = self.all_findings.get('theories', {})
+        phase_4_theories = self.all_findings.get('phase_4', '')
+        
+        opening_prompt = f"""
+        Create a powerful opening statement based on our investigation findings.
+        
+        TOP KILL SHOTS:
+        Nuclear: {json.dumps(kill_shots.get('nuclear', [])[:3], indent=2)[:1500]}
+        
+        LEGAL THEORIES DEVELOPED (Phase 4):
+        {phase_4_theories[:1500]}
+        
+        CASE THEORIES:
+        {json.dumps(theories, indent=2)[:1500]}
+        
+        CREATE AN OPENING STATEMENT THAT:
+        
+        1. OPENING HOOK
+           - "Three documents end this case..."
+           - Identify the specific documents
+        
+        2. THE SIMPLE TRUTH
+           - VR had 51% control
+           - VR knew of fraud concerns
+           - VR now manufactures claims
+        
+        3. WHAT VR CANNOT ESCAPE
+           - Mathematical reality of control
+           - Documentary evidence
+           - Their own communications
+        
+        4. THE LEGAL FRAMEWORK
+           - Why each claim fails
+           - Burden of proof
+           - Standards to apply
+        
+        5. WHAT THE EVIDENCE WILL SHOW
+           - Preview key documents
+           - Witness admissions coming
+           - Patterns of deception
+        
+        6. THE ONLY VERDICT
+           - Dismiss all claims
+           - Award costs to Lismore
+           - Find bad faith
+        
+        Write persuasively for arbitrators.
+        Use specific document references from our investigation.
+        Make it impossible for VR to recover.
+        """
+        
+        response = await self.api_client.make_api_call(
+            opening_prompt,
+            phase='opening_statement',
+            temperature=0.4
+        )
+        
+        output = [
             "# OPENING STATEMENT",
             "",
             "**Counsel for Lismore Capital**",
             "",
-            "## The Three Documents That End This Case",
-            "",
-            "Members of the Tribunal,",
-            "",
-            "This case can be resolved with three simple documents:",
-            "",
-            "**FIRST**: The shareholding register showing VR Capital owned 51% throughout.",
-            "",
-            "**SECOND**: McNaughton's January 2020 warning that VR Capital received and ignored.",
-            "",
-            "**THIRD**: VR Capital's own investment memorandum acknowledging arbitration risks.",
-            "",
-            "## The Simple Truth",
-            "",
-            "VR Capital is a sophisticated investor that made a bad bet. They invested $45 million",
-            "in October 2017, obtained majority control, participated in all decisions, and",
-            "when their investment failed, manufactured these claims.",
-            "",
-            "## What VR Cannot Escape",
-            "",
-            "### Mathematics",
-            "51% is a majority. Mathematics doesn't lie. VR controlled everything.",
-            "",
-            "### Chronology",
-            "October 2017: Investment with full due diligence",
-            "2017-2020: Active participation and approval",
-            "January 2020: Fraud warning received",
-            "2020-2023: Continued participation",
-            "2023: Investment lost, claims invented",
-            "",
-            "### Their Own Documents",
-            "We will show you VR's own documents proving:",
-            "- They knew the risks",
-            "- They controlled decisions",
-            "- They approved everything they now challenge",
-            "- They withheld documents that prove their knowledge",
-            "",
-            "## The Legal Reality",
-            "",
-            "There was no breach - VR approved everything",
-            "There was no exclusion - VR controlled everything",
-            "There was no deception - VR knew everything",
-            "",
-            "## What This Case Is Really About",
-            "",
-            "This is not about breach of contract. This is about a sophisticated investor",
-            "trying to shift losses from a failed investment. The law does not permit this.",
-            "",
-            "## Our Request",
-            "",
-            "Dismiss VR's claims entirely.",
-            "Award Lismore costs on an indemnity basis.",
-            "Find that VR has pursued vexatious litigation.",
-            "",
-            "The evidence will show that VR Capital had control, had knowledge, had choices,",
-            "and made their decisions. They must live with the consequences.",
-            "",
-            "Thank you."
+            response
         ]
         
-        self._save_output("07_OPENING_STATEMENT.md", statement)
+        self._save_output("07_OPENING_STATEMENT.md", output)
     
-    def generate_closing_argument(self):
-        """Generate closing argument"""
-        argument = [
+    async def generate_closing_argument(self):
+        """Generate closing argument synthesising all evidence"""
+        
+        all_phases_summary = {
+            'phase_1': self.all_findings.get('phase_1', '')[:1000],
+            'phase_2': self.all_findings.get('phase_2', '')[:1000],
+            'phase_3': self.all_findings.get('phase_3', '')[:1000],
+            'phase_4': self.all_findings.get('phase_4', '')[:1000],
+            'phase_5': self.all_findings.get('phase_5', '')[:1000],
+            'phase_6': self.all_findings.get('phase_6', '')[:1000]
+        }
+        
+        closing_prompt = f"""
+        Create a devastating closing argument using all six phases of our investigation.
+        
+        INVESTIGATION SUMMARY:
+        Phase 1 (Documents): {all_phases_summary['phase_1']}
+        Phase 2 (Patterns): {all_phases_summary['phase_2']}
+        Phase 3 (Anomalies): {all_phases_summary['phase_3']}
+        Phase 4 (Theories): {all_phases_summary['phase_4']}
+        Phase 5 (Evidence): {all_phases_summary['phase_5']}
+        Phase 6 (Kill Shots): {all_phases_summary['phase_6']}
+        
+        CREATE A CLOSING ARGUMENT WITH:
+        
+        1. THEY HAD CONTROL
+           - Every document proving 51%
+           - Every decision they made
+           - Mathematical impossibility of exclusion
+        
+        2. THEY KNEW
+           - McNaughton warning
+           - Due diligence opportunity
+           - Continued participation
+        
+        3. THEY LIED
+           - Evolution of story
+           - Document withholding
+           - Consciousness of guilt
+        
+        4. THE LAW IS CLEAR
+           - No breach possible
+           - No exclusion possible
+           - No damages possible
+        
+        5. JUSTICE DEMANDS
+           - Complete dismissal
+           - Indemnity costs
+           - Bad faith finding
+        
+        Use specific findings from each phase.
+        Reference actual documents by ID.
+        Make this the closing that ends VR permanently.
+        """
+        
+        response = await self.api_client.make_api_call(
+            closing_prompt,
+            phase='closing_argument',
+            temperature=0.4
+        )
+        
+        output = [
             "# CLOSING ARGUMENT",
             "",
             "**Counsel for Lismore Capital**",
             "",
-            "## They Had Control. They Knew. They Lied.",
-            "",
-            "Members of the Tribunal,",
-            "",
-            "After all the evidence, three facts remain undisputed:",
-            "",
-            "**CONTROL**: VR Capital owned 51%. They controlled every decision.",
-            "",
-            "**KNOWLEDGE**: VR Capital received warnings. They chose to continue.",
-            "",
-            "**DECEPTION**: VR Capital's story evolved. Documents prove their lies.",
-            "",
-            "## What The Evidence Proved",
-            "",
-            "### On Control",
-            "- Not one decision was made without VR's ability to veto",
-            "- Not one board meeting occurred without VR's participation",
-            "- Not one major action taken against VR's wishes",
-            "",
-            "### On Knowledge",
-            "- Professional investors with top-tier advisers",
-            "- Due diligence opportunity in 2017",
-            "- McNaughton warning in 2020",
-            "- Public fraud allegations throughout",
-            "",
-            "### On Deception",
-            "- Documents VR didn't produce tell the real story",
-            "- Adverse inferences fill every gap",
-            "- Their privilege claims hide smoking guns",
-            "",
-            "## The Legal Conclusions",
-            "",
-            "### No Breach",
-            "How can there be breach when VR approved everything?",
-            "",
-            "### No Exclusion",
-            "How can there be exclusion with 51% control?",
-            "",
-            "### No Damages",
-            "How can there be damages from their own investment decision?",
-            "",
-            "## VR's Fatal Admissions",
-            "",
-            "Remember their witness admitted:",
-            "- They had 51% (control established)",
-            "- They received McNaughton's warning (knowledge proven)",
-            "- They can't produce key documents (withholding confirmed)",
-            "",
-            "## The Broader Context",
-            "",
-            "This Tribunal has seen the P&ID fraud. You've seen how investors",
-            "try to escape bad investments through litigation. Don't let it happen again.",
-            "",
-            "## Justice Requires",
-            "",
-            "**DISMISS** all claims - they are fiction",
-            "",
-            "**AWARD** indemnity costs - this litigation was vexatious",
-            "",
-            "**FIND** that VR pursued claims in bad faith",
-            "",
-            "**DECLARE** that sophisticated investors bear their own investment risks",
-            "",
-            "## Final Words",
-            "",
-            "VR Capital wants you to rewrite history. To pretend they were powerless",
-            "when they were powerful. To pretend they were ignorant when they knew.",
-            "To pretend they were victims when they were in control.",
-            "",
-            "Don't let them.",
-            "",
-            "The evidence speaks for itself. VR Capital controlled this investment,",
-            "made their choices, and must accept the consequences.",
-            "",
-            "Justice and commercial certainty demand nothing less.",
-            "",
-            "Thank you."
+            response
         ]
         
-        self._save_output("08_CLOSING_ARGUMENT.md", argument)
+        self._save_output("08_CLOSING_ARGUMENT.md", output)
     
-    def generate_settlement_analysis(self):
+    async def generate_settlement_analysis(self):
         """Generate settlement leverage analysis"""
-        analysis = [
+        
+        kill_shots = self.all_findings.get('kill_shots', {})
+        missing_docs = self.all_findings.get('missing_docs', {})
+        theories = self.all_findings.get('theories', {})
+        
+        settlement_prompt = f"""
+        Analyse our settlement leverage based on investigation findings.
+        
+        KILL SHOTS AVAILABLE:
+        {json.dumps(kill_shots, indent=2)[:2000]}
+        
+        ADVERSE INFERENCE THREATS:
+        {json.dumps(missing_docs, indent=2)[:1500]}
+        
+        THEORIES PROVEN:
+        {json.dumps(theories, indent=2)[:1500]}
+        
+        CREATE A SETTLEMENT ANALYSIS INCLUDING:
+        
+        1. CURRENT LEVERAGE POSITION
+           - Strength assessment (1-10)
+           - VR's exposure analysis
+           - Lismore's position
+        
+        2. PRESSURE POINTS
+           - Reputational damage threats
+           - Cost exposure
+           - Criminal referral possibilities
+           - Investor notifications
+        
+        3. NEGOTIATION STRATEGY
+           - What to reveal in stages
+           - What to hold back
+           - Demonstration documents
+           - Escalation timeline
+        
+        4. SETTLEMENT SCENARIOS
+           - Best case (complete withdrawal)
+           - Acceptable (80% costs)
+           - Walk-away point
+           - Non-negotiables
+        
+        5. TACTICAL DEPLOYMENT
+           - When to show strength
+           - How to force urgency
+           - Using tribunal deadlines
+           - Media strategy
+        
+        Be strategic and ruthless.
+        We hold all the cards - show how to play them.
+        """
+        
+        response = await self.api_client.make_api_call(
+            settlement_prompt,
+            phase='settlement_analysis',
+            temperature=0.4
+        )
+        
+        output = [
             "# SETTLEMENT LEVERAGE ANALYSIS",
             "",
             f"**Date**: {datetime.now().strftime('%Y-%m-%d')}",
             "**Confidential**: Attorney-Client Privilege",
             "",
-            "## Current Leverage Position: DOMINANT",
-            "",
-            "### Our Advantages",
-            "1. Documentary evidence of control (51%)",
-            "2. McNaughton warning proves knowledge",
-            "3. Withholding patterns suggest consciousness of guilt",
-            "4. Failed P&ID precedent haunts VR",
-            "",
-            "### VR's Vulnerabilities",
-            "1. Reputational damage from fraud association",
-            "2. Risk of adverse costs award",
-            "3. Document production obligations pending",
-            "4. Witness credibility already damaged",
-            "",
-            "## Settlement Scenarios",
-            "",
-            "### Best Case (90% probability)",
-            "- VR complete withdrawal",
-            "- Our costs paid in full",
-            "- Confidentiality waiver",
-            "- Public statement",
-            "",
-            "### Acceptable (75% threshold)",
-            "- VR withdrawal",
-            "- 75% costs recovery",
-            "- Limited confidentiality",
-            "",
-            "### Walk-Away Point",
-            "- VR withdrawal",
-            "- 50% costs",
-            "- No admission of fault",
-            "",
-            "## Pressure Points to Deploy",
-            "",
-            "### Immediate",
-            "- Adverse inference motion",
-            "- Privilege challenges",
-            "- Media strategy preparation",
-            "",
-            "### If No Movement",
-            "- Expert forensic reports",
-            "- Criminal referral threats",
-            "- Investor notification warnings",
-            "",
-            "### Nuclear Options",
-            "- Public filing of fraud evidence",
-            "- Bar complaints against counsel",
-            "- Shareholder derivative action threats",
-            "",
-            "## Recommended Strategy",
-            "",
-            "1. **Opening Position**: Complete capitulation required",
-            "2. **First Concession**: Drop public statement requirement",
-            "3. **Second Concession**: Accept 85% costs",
-            "4. **Final Position**: 75% costs, withdrawal, limited confidentiality",
-            "",
-            "## Timeline",
-            "",
-            "- **Week 1**: File adverse inference motion",
-            "- **Week 2**: Settlement overture through counsel",
-            "- **Week 3**: First settlement conference",
-            "- **Week 4**: Escalate pressure if needed",
-            "",
-            "## Conclusion",
-            "",
-            "VR's position is untenable. They will fold under sustained pressure.",
-            "Recommend aggressive posture to maximise recovery."
+            response
         ]
         
-        self._save_output("09_SETTLEMENT_LEVERAGE.md", analysis)
+        self._save_output("09_SETTLEMENT_LEVERAGE.md", output)
     
-    def generate_credibility_matrix(self):
+    async def generate_credibility_matrix(self):
         """Generate credibility destruction matrix"""
-        matrix = [
+        
+        contradictions = self.all_findings.get('contradictions', {})
+        patterns = self.all_findings.get('patterns', {})
+        phase_5_evidence = self.all_findings.get('phase_5', '')
+        
+        credibility_prompt = f"""
+        Create a witness credibility destruction matrix based on our findings.
+        
+        CONTRADICTIONS FOUND:
+        {json.dumps(contradictions, indent=2)[:2000]}
+        
+        DECEPTION PATTERNS:
+        {json.dumps(patterns.get('deception_indicators', []), indent=2)[:1500]}
+        
+        EVIDENCE ANALYSIS (Phase 5):
+        {phase_5_evidence[:1500]}
+        
+        CREATE A CREDIBILITY MATRIX COVERING:
+        
+        1. KEY WITNESS VULNERABILITIES
+           - Prior inconsistent statements
+           - Documentary contradictions
+           - Evolution of testimony
+           - Consciousness of guilt
+        
+        2. IMPEACHMENT SEQUENCES
+           - Document confrontation order
+           - Trap questions
+           - Admission extractions
+           - Credibility collapses
+        
+        3. CROSS-REFERENCE MATRIX
+           - Witness vs witness conflicts
+           - Witness vs document conflicts
+           - Timeline impossibilities
+           - Knowledge contradictions
+        
+        4. DESTRUCTION METHODOLOGY
+           - Start soft, end hard
+           - Build to crescendo
+           - Leave no escape
+           - Force admissions
+        
+        5. REHABILITATION PREVENTION
+           - Anticipate explanations
+           - Block escape routes
+           - Counter-documents ready
+           - Final devastation
+        
+        Map specific findings to specific witnesses.
+        Make this actionable for cross-examination.
+        """
+        
+        response = await self.api_client.make_api_call(
+            credibility_prompt,
+            phase='credibility_matrix',
+            temperature=0.3
+        )
+        
+        output = [
             "# CREDIBILITY DESTRUCTION MATRIX",
             "",
             f"**Generated**: {datetime.now().strftime('%Y-%m-%d')}",
             "**Purpose**: Witness Impeachment Planning",
             "",
-            "## VR Capital Witness Vulnerabilities",
-            "",
-            "### Witness Category A: Investment Committee",
-            "",
-            "**Prior Inconsistent Statements**",
-            "- 2017: 'Excellent investment opportunity'",
-            "- 2020: 'Concerning developments'",
-            "- 2023: 'We were deceived from the start'",
-            "",
-            "**Documentary Contradictions**",
-            "- Approved minutes vs. current claims",
-            "- Due diligence reports vs. ignorance claims",
-            "- Email chains vs. exclusion narrative",
-            "",
-            "### Witness Category B: Board Representatives",
-            "",
-            "**Control Reality Contradictions**",
-            "- Voting records prove control",
-            "- Email approvals defeat exclusion",
-            "- Meeting attendance negates absence claims",
-            "",
-            "**Knowledge Timeline Issues**",
-            "- McNaughton warning receipt confirmed",
-            "- Public information availability proven",
-            "- Due diligence scope defeats ignorance",
-            "",
-            "## Impeachment Sequences",
-            "",
-            "### Sequence 1: The Evolution",
-            "1. Show 2017 investment memo (optimistic)",
-            "2. Show 2019 approvals (satisfied)",
-            "3. Show 2020 warning (acknowledged)",
-            "4. Show 2023 claims (contradictory)",
-            "",
-            "### Sequence 2: The Mathematics",
-            "1. Confirm 51% ownership",
-            "2. Explain majority control",
-            "3. Request control examples",
-            "4. Demonstrate impossibility",
-            "",
-            "### Sequence 3: The Knowledge",
-            "1. Professional investor status",
-            "2. Due diligence conducted",
-            "3. Warnings received",
-            "4. Continued participation",
-            "",
+            response
         ]
         
-        self._save_output("10_CREDIBILITY_MATRIX.md", matrix)
+        self._save_output("10_CREDIBILITY_MATRIX.md", output)
     
-    def generate_deception_timeline(self):
+    async def generate_deception_timeline(self):
         """Generate timeline of deception"""
-        timeline = [
+        
+        patterns = self.all_findings.get('patterns', {})
+        anomalies = self.all_findings.get('anomalies', {})
+        phase_2_patterns = self.all_findings.get('phase_2', '')
+        
+        timeline_prompt = f"""
+        Create a detailed timeline of VR's deception based on pattern analysis.
+        
+        DECEPTION PATTERNS FOUND (Phase 2):
+        {phase_2_patterns[:1500]}
+        {json.dumps(patterns.get('deception_indicators', []), indent=2)[:1500]}
+        
+        TIMELINE ANOMALIES (Phase 3):
+        {json.dumps(anomalies, indent=2)[:1500]}
+        
+        CREATE A DECEPTION TIMELINE SHOWING:
+        
+        1. OCTOBER 2017 - INVESTMENT
+           - What VR claimed then
+           - What documents show
+           - What they claim now
+        
+        2. 2017-2019 - CONTROL PERIOD
+           - Decisions VR made
+           - Contemporary satisfaction
+           - Current denials
+        
+        3. JANUARY 2020 - McNAUGHTON WARNING
+           - What VR was told
+           - How VR responded
+           - What VR claims now
+        
+        4. 2020-2023 - CONTINUED PARTICIPATION
+           - VR's actions
+           - No complaints
+           - Retrospective claims
+        
+        5. 2023-PRESENT - LITIGATION
+           - Story evolution
+           - Document withholding
+           - Position changes
+        
+        For each period:
+        - Quote specific documents
+        - Show contradictions
+        - Prove consciousness of guilt
+        
+        Make the pattern of deception undeniable.
+        """
+        
+        response = await self.api_client.make_api_call(
+            timeline_prompt,
+            phase='deception_timeline',
+            temperature=0.3
+        )
+        
+        output = [
             "# TIMELINE OF DECEPTION",
             "",
             f"**Generated**: {datetime.now().strftime('%Y-%m-%d %H:%M')}",
             "**Purpose**: Demonstrating Pattern of Dishonesty",
             "",
-            "## Chronological Evolution of VR's Position",
-            "",
-            "### October 2017 - Investment Phase",
-            "**VR's Position Then**: 'Strategic investment with full understanding'",
-            "**VR's Position Now**: 'Deceived into investing'",
-            "**Documents Proving Deception**:",
-            "- Investment Committee Memorandum",
-            "- Due Diligence Reports",
-            "- Risk Acknowledgements",
-            "",
-            "### 2017-2019 - Active Control Phase",
-            "**VR's Position Then**: Active board participation",
-            "**VR's Position Now**: 'Excluded from decisions'",
-            "**Documents Proving Deception**:",
-            "- Board minutes with VR approvals",
-            "- Email chains showing VR directions",
-            "- Voting records confirming control",
-            "",
-            "### January 2020 - McNaughton Warning",
-            "**VR's Position Then**: Acknowledged and continued",
-            "**VR's Position Now**: 'Not properly informed'",
-            "**Documents Proving Deception**:",
-            "- Warning receipt confirmation",
-            "- Post-warning participation",
-            "- No investigation demanded",
-            "",
-            "### 2020-2023 - Continued Participation",
-            "**VR's Position Then**: Pursuing enforcement",
-            "**VR's Position Now**: 'Prevented from acting'",
-            "**Documents Proving Deception**:",
-            "- Strategy approvals by VR",
-            "- Funding decisions endorsed",
-            "- No contemporaneous objections",
-            "",
-            "### 2023 - Award Set Aside",
-            "**VR's Position Then**: Investment lost",
-            "**VR's Position Now**: 'Lismore liable for losses'",
-            "**Documents Proving Deception**:",
-            "- Immediate blame-shifting",
-            "- Retrospective complaint creation",
-            "- Document withholding begins",
-            "",
-            "## Pattern Analysis",
-            "",
-            "### Deception Indicators",
-            "1. **Retrospective Revision**: History rewritten post-loss",
-            "2. **Document Withholding**: Adverse documents hidden",
-            "3. **Narrative Evolution**: Story changes with each filing",
-            "4. **Selective Amnesia**: Convenient memory gaps",
-            "",
-            "### Consciousness of Guilt",
-            "- Privilege claims over commercial documents",
-            "- Missing documents at critical junctures",
-            "- Refusal to produce board materials",
-            "- Incomplete email threads",
-            "",
-            "## Key Contradictions Timeline",
-            "",
-            "| Date | VR Said Then | VR Says Now | Proof of Lie |",
-            "|------|-------------|-------------|--------------|",
-            "| Oct 2017 | 'Great opportunity' | 'Misled' | DD Report |",
-            "| Jan 2020 | 'Noted' | 'Not informed' | Email confirmation |",
-            "| 2022 | 'Continue enforcement' | 'Prevented' | Board resolution |",
-            "| 2023 | 'Investment risk realised' | 'Breach of contract' | Initial correspondence |",
-            "",
-            "## Conclusion",
-            "",
-            "The timeline demonstrates systematic deception by VR Capital,",
-            "evolving their narrative to support retrospective claims."
+            response
         ]
         
-        self._save_output("11_DECEPTION_TIMELINE.md", timeline)
+        self._save_output("11_DECEPTION_TIMELINE.md", output)
     
-    def generate_witness_plan(self):
+    async def generate_witness_plan(self):
         """Generate witness examination plan"""
-        plan = [
+        
+        evidence = self.all_findings.get('evidence', {})
+        theories = self.all_findings.get('theories', {})
+        kill_shots = self.all_findings.get('kill_shots', {})
+        
+        witness_prompt = f"""
+        Create a comprehensive witness examination plan based on our evidence.
+        
+        EVIDENCE TO DEPLOY (Phase 5):
+        {json.dumps(evidence, indent=2)[:2000]}
+        
+        THEORIES TO PROVE (Phase 4):
+        {json.dumps(theories, indent=2)[:1500]}
+        
+        KILL SHOTS AVAILABLE:
+        {json.dumps(kill_shots, indent=2)[:1500]}
+        
+        CREATE A WITNESS PLAN INCLUDING:
+        
+        1. WITNESS PRIORITY ORDER
+           - Who to call first
+           - Building momentum
+           - Saving best for last
+        
+        2. VR INVESTMENT COMMITTEE
+           - Documents to use
+           - Admissions to get
+           - Traps to set
+           - Kill shots to deploy
+        
+        3. VR BOARD REPRESENTATIVES
+           - Control evidence
+           - Decision participation
+           - Knowledge timeline
+           - Contradiction exposure
+        
+        4. VR LEGAL COUNSEL
+           - Privilege challenges
+           - Advice timeline
+           - Knowledge attribution
+           - Waiver arguments
+        
+        5. EXAMINATION STRATEGY
+           - Phase approach
+           - Document deployment
+           - Admission building
+           - Credibility destruction
+           - Kill shot timing
+        
+        For each witness:
+        - Specific documents to use
+        - Specific questions to ask
+        - Specific admissions to extract
+        - Specific kill shots to deploy
+        
+        Make this a blueprint for witness destruction.
+        """
+        
+        response = await self.api_client.make_api_call(
+            witness_prompt,
+            phase='witness_plan',
+            temperature=0.3
+        )
+        
+        output = [
             "# WITNESS EXAMINATION PLAN",
             "",
             f"**Generated**: {datetime.now().strftime('%Y-%m-%d %H:%M')}",
             "**Classification**: Confidential - Litigation Strategy",
             "",
-            "## Witness Priority Order",
-            "",
-            "### Tier 1 - Critical Witnesses",
-            "",
-            "**1. VR Investment Committee Chair**",
-            "- Role: Led investment decision",
-            "- Vulnerabilities: Prior statements, DD approval",
-            "- Documents: Investment memo, risk assessments",
-            "- Goal: Establish knowledge and control",
-            "",
-            "**2. VR Board Representative**",
-            "- Role: Exercised voting rights",
-            "- Vulnerabilities: Meeting attendance, approvals",
-            "- Documents: Board minutes, resolutions",
-            "- Goal: Prove 51% control exercise",
-            "",
-            "### Tier 2 - Supporting Witnesses",
-            "",
-            "**3. VR Legal Counsel**",
-            "- Role: Advised on risks",
-            "- Vulnerabilities: Privilege waiver, advice scope",
-            "- Documents: Engagement letters, opinions",
-            "- Goal: Establish professional advice received",
-            "",
-            "**4. VR Finance Director**",
-            "- Role: Approved funding",
-            "- Vulnerabilities: Continued funding post-warning",
-            "- Documents: Payment authorisations",
-            "- Goal: Show continued participation",
-            "",
-            "## Examination Strategies",
-            "",
-            "### For Each Witness",
-            "",
-            "**Phase 1: Foundation (10 mins)**",
-            "- Establish credentials and sophistication",
-            "- Confirm role and authority",
-            "- Lock in basic facts (dates, amounts, ownership)",
-            "",
-            "**Phase 2: Control Reality (20 mins)**",
-            "- Mathematical reality of 51%",
-            "- Specific decisions made",
-            "- Voting rights exercised",
-            "- No exclusion possible",
-            "",
-            "**Phase 3: Knowledge Timeline (20 mins)**",
-            "- Due diligence conducted",
-            "- Information received",
-            "- Warnings acknowledged",
-            "- Continued participation",
-            "",
-            "**Phase 4: Document Confrontation (30 mins)**",
-            "- Deploy contradictory documents",
-            "- Force explanations",
-            "- Highlight withholding",
-            "- Extract admissions",
-            "",
-            "**Phase 5: Kill Shots (15 mins)**",
-            "- Present case-ending documents",
-            "- Leave no escape route",
-            "- End on strongest point",
-            "",
-            "## Document Deployment Schedule",
-            "",
-            "### Must-Use Documents Per Witness",
-            "",
-            "**Investment Committee Chair**:",
-            "1. 2017 Investment Memorandum",
-            "2. Due Diligence Report",
-            "3. Risk Matrix acknowledging fraud possibility",
-            "4. Post-McNaughton approvals",
-            "",
-            "**Board Representative**:",
-            "1. Shareholding register (51%)",
-            "2. Board minutes with approvals",
-            "3. Voting records",
-            "4. Email chains directing action",
-            "",
-            "## Contingency Planning",
-            "",
-            "### If Witness Claims Memory Loss",
-            "- Refresh with documents",
-            "- Establish pattern of convenient amnesia",
-            "- Use company records",
-            "",
-            "### If Witness Becomes Hostile",
-            "- Maintain calm professionalism",
-            "- Let hostility show to tribunal",
-            "- Use short, closed questions",
-            "",
-            "### If New Documents Produced",
-            "- Request immediate adjournment",
-            "- Analyse for authenticity",
-            "- Prepare supplemental examination",
-            "",
-            "## Success Metrics",
-            "",
-            "Examination successful if:",
-            "✓ 51% control admitted",
-            "✓ Knowledge established",
-            "✓ Document withholding exposed",
-            "✓ Credibility destroyed",
-            "✓ No rehabilitation possible",
-            "",
-            "## Conclusion",
-            "",
-            "Systematic examination will establish VR's control, knowledge,",
-            "and bad faith, compelling dismissal of all claims."
+            response
         ]
         
-        self._save_output("12_WITNESS_PLAN.md", plan)
+        self._save_output("12_WITNESS_PLAN.md", output)
     
     def _save_output(self, filename: str, content: List[str]):
         """
