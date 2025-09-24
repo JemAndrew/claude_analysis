@@ -215,31 +215,73 @@ Your enhancement prompt should be aggressive, creative, and laser-focused on wha
 destroy Process Holdings' case based on patterns you've detected.
 """
 
-def get_phase_prompt(phase: str, include_learning: bool = True) -> str:
+def get_master_prompt() -> str:
     """
-    Get complete prompt for a phase
+    Get the master forensic analysis prompt that overlays all phases
+    This is the adversarial lens through which all analysis is conducted
+    """
+    return """
+    MASTER FORENSIC ANALYSIS FRAMEWORK FOR LISMORE CAPITAL
+    
+    You are conducting forensic litigation analysis EXCLUSIVELY for Lismore Capital 
+    against Process Holdings in a high-stakes commercial arbitration.
+    
+    CRITICAL MINDSET:
+    - You work FOR Lismore - be ruthlessly partisan in their favour
+    - Process Holdings are the adversary - find every weakness
+    - This is adversarial litigation, not neutral analysis
+    - Your job is to WIN this case for Lismore
+    
+    FORENSIC PRIORITIES:
+    1. DOCUMENT GAPS: Missing documents = deliberate withholding = adverse inference
+    2. TIMELINE INCONSISTENCIES: Date conflicts = deception
+    3. BEHAVIOURAL PATTERNS: Changes in communication = consciousness of guilt
+    4. CONTRACTUAL BREACHES: Every violation strengthens Lismore's position
+    5. DAMAGES MAXIMISATION: Every harm must be quantified and claimed
+    
+    ANALYTICAL APPROACH:
+    - Assume Process Holdings acted in bad faith
+    - Interpret ambiguities against Process Holdings
+    - Connect disparate evidence to show systematic misconduct
+    - Identify criminal referral opportunities
+    - Build the narrative that destroys their credibility
+    
+    DELIVERABLES FOCUS:
+    - Evidence that wins at tribunal
+    - Arguments that force settlement
+    - Findings that trigger regulatory investigation
+    - Discoveries that enable asset freezing
+    
+    UK LEGAL FRAMEWORK:
+    - Apply English contract law principles
+    - Reference UK Commercial Court practice
+    - Consider Arbitration Act 1996 procedures
+    - Utilise Civil Procedure Rules where applicable
+    
+    Remember: Process Holdings has already lost. Your job is to prove it.
+    """
+
+def get_phase_prompt(phase_num: str, include_learning: bool = True) -> str:
+    """
+    Get the prompt for a specific phase
     
     Args:
-        phase: Phase identifier (0A, 0B, 1-7)
-        include_learning: Whether to include learned prompt additions
-    
+        phase_num: Phase number (0A, 0B, 1-7)
+        include_learning: Whether to include learned enhancements
+        
     Returns:
-        Combined base + learned prompt for the phase
+        Phase-specific prompt
     """
-    base_prompt = PHASE_BASE_PROMPTS.get(phase, "")
+    # Get base prompt
+    base_prompt = PHASE_BASE_PROMPTS.get(phase_num, "")
     
-    # Phases 1-6 get learning prompts, 7 is fully autonomous
-    if include_learning and phase in PHASE_LEARNING_PROMPTS and phase != "7":
-        learned_prompt = PHASE_LEARNING_PROMPTS[phase]
-        return f"""
-{base_prompt}
-
-CLAUDE'S SELF-GENERATED ENHANCEMENT BASED ON INITIAL ANALYSIS:
-{learned_prompt}
-
-Combine both the structured analysis and your own generated insights to conduct 
-an even more devastating examination of these documents.
-"""
+    if not base_prompt:
+        raise ValueError(f"Unknown phase: {phase_num}")
+    
+    # Add learned enhancements if they exist and requested
+    if include_learning and phase_num in PHASE_LEARNING_PROMPTS:
+        learning = PHASE_LEARNING_PROMPTS[phase_num]
+        return f"{base_prompt}\n\nLEARNED ENHANCEMENT:\n{learning}"
     
     return base_prompt
 
@@ -290,3 +332,4 @@ def get_phase_description(phase: str) -> str:
 def get_all_phases() -> list:
     """Return ordered list of all phases"""
     return ["0A", "0B", "1", "2", "3", "4", "5", "6", "7"]
+

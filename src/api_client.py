@@ -166,8 +166,36 @@ class ClaudeAPIClient:
         self.client = anthropic.Anthropic(api_key=self.api_key)
         
         # Load settings
-        with open(settings_path, 'r') as f:
-            self.settings = json.load(f)
+        if not settings_path:
+            settings_path = Path("config/settings.json")
+        
+        # Load settings with proper error handling
+        if settings_path.exists():
+            with open(settings_path, 'r') as f:
+                self.settings = json.load(f)
+        else:
+            print("Warning: settings.json not found, using defaults")
+            self.settings = {
+                "investigation": {
+                    "max_tokens": 4000,
+                    "haiku_max_tokens": 2000
+                },
+                "model_config": {
+                    "temperature": {
+                        "phase_0a": 0.3,
+                        "phase_0b": 0.3,
+                        "phase_1": 0.3,
+                        "phase_2": 0.3,
+                        "phase_3": 0.3,
+                        "phase_4": 0.4,
+                        "phase_5": 0.4,
+                        "phase_6": 0.5,
+                        "phase_7": 0.7
+                    },
+                    "haiku_phases": ["phase_0a", "phase_0b", "phase_1"],
+                    "opus_phases": ["phase_2", "phase_3", "phase_4", "phase_5", "phase_6", "phase_7"]
+                }
+            }
         
         # Get configuration
         self.investigation = self.settings['investigation']

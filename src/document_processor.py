@@ -1,327 +1,388 @@
-﻿# document_processor.py - FIXED VERSION
+﻿# document_processor.py - FIXED VERSION WITH INTELLIGENT BATCHING
 """
-Core document processing engine that handles phase-by-phase analysis.
-Now handles PDFs, DOCX, TXT, and other file types properly.
+Document processor with proper batching for Lismore arbitration analysis
+Handles large document volumes without overloading API
 """
 
 import json
-from typing import List, Dict, Optional
-from datetime import datetime
+import time
+from typing import Dict, List, Optional
 from pathlib import Path
-import PyPDF2
-import docx
-import chardet
+from datetime import datetime
 
-from api_client import ClaudeAPIClient
-from master_prompt import get_master_prompt
-from phase_prompts import (
-    get_phase_prompt, 
-    update_learning_prompt, 
-    get_learning_generator_prompt,
-    should_generate_learning,
+from .api_client import ClaudeAPIClient
+from .knowledge_manage import KnowledgeManager
+from .phase_prompts import (
+    get_phase_prompt,
+    get_master_prompt,
     get_phase_description,
-    get_all_phases
+    get_all_phases,
+    should_generate_learning,
+    get_learning_generator_prompt,
+    update_learning_prompt
 )
-from knowledge_manage import KnowledgeManager
+from .utils import load_documents, validate_documents
 
 class DocumentProcessor:
-    """Processes documents through all analysis phases"""
+    """
+    Core document processing engine with intelligent batching
+    """
     
-    def __init__(self):
+    def __init__(self, api_key: Optional[str] = None):
         """Initialise the document processor"""
-        self.api_client = ClaudeAPIClient()
+        self.api_client = ClaudeAPIClient(api_key)
         self.knowledge_manage = KnowledgeManager()
-        self.current_phase = None
         self.documents = []
+        self.current_phase = None
         
-    def extract_text_from_file(self, file_path: str) -> str:
-        """
-        Extract text from any file type
+        # CRITICAL: Batching configuration
+        self.BATCH_SIZES = {
+            "0A": 3,   # Legal framework - small batches for deep analysis
+            "0B": 3,   # Case context - small batches
+            "1": 5,    # Initial landscape - moderate batches
+            "2": 5,    # Chronological - moderate batches
+            "3": 5,    # Behaviour analysis - moderate batches
+            "4": 7,    # Theory construction - larger batches
+            "5": 7,    # Evidence analysis - larger batches
+            "6": 10,   # Smoking guns - largest batches
+            "7": 10    # Autonomous deep dive - largest batches
+        }
         
-        Args:
-            file_path: Path to the file
-            
-        Returns:
-            Extracted text content
-        """
-        path = Path(file_path)
-        extension = path.suffix.lower()
+        # Token limits per batch (conservative to avoid overflow)
+        self.MAX_TOKENS_PER_BATCH = {
+            "0A": 100000,  # ~25k words for legal analysis
+            "0B": 100000,
+            "1": 150000,   # ~37k words
+            "2": 150000,
+            "3": 150000,
+            "4": 200000,   # ~50k words
+            "5": 200000,
+            "6": 250000,   # ~62k words
+            "7": 250000
+        }
         
-        try:
-            # PDF files
-            if extension == '.pdf':
-                return self._extract_from_pdf(file_path)
-            
-            # Word documents
-            elif extension in ['.docx', '.doc']:
-                return self._extract_from_docx(file_path)
-            
-            # Text-based files
-            elif extension in ['.txt', '.md', '.rtf', '.csv', '.log']:
-                return self._extract_from_text(file_path)
-            
-            # JSON files
-            elif extension == '.json':
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    data = json.load(f)
-                    return json.dumps(data, indent=2)
-            
-            # HTML/XML files
-            elif extension in ['.html', '.htm', '.xml']:
-                return self._extract_from_text(file_path)
-            
-            # Default: try to read as text
-            else:
-                print(f"  ⚠️ Unknown file type {extension}, attempting text extraction...")
-                return self._extract_from_text(file_path)
-                
-        except Exception as e:
-            print(f"  ❌ Error extracting from {path.name}: {e}")
-            return f"[Error reading file: {path.name}]"
-    
-    def _extract_from_pdf(self, file_path: str) -> str:
-        """Extract text from PDF file"""
-        text_parts = []
-        
-        try:
-            with open(file_path, 'rb') as file:
-                reader = PyPDF2.PdfReader(file)
-                num_pages = len(reader.pages)
-                
-                print(f"    Extracting {num_pages} pages from PDF...")
-                
-                for page_num in range(num_pages):
-                    try:
-                        page = reader.pages[page_num]
-                        text = page.extract_text()
-                        if text.strip():
-                            text_parts.append(text)
-                    except Exception as e:
-                        print(f"      Warning: Could not extract page {page_num + 1}: {e}")
-                
-                if not text_parts:
-                    print(f"      Warning: No text extracted from PDF, might be scanned/image-based")
-                    return "[PDF appears to be image-based - OCR required]"
-                
-                return "\n\n".join(text_parts)
-                
-        except Exception as e:
-            print(f"    Error reading PDF: {e}")
-            # Try alternative method with PyMuPDF if available
-            try:
-                import fitz  # PyMuPDF
-                doc = fitz.open(file_path)
-                text = ""
-                for page in doc:
-                    text += page.get_text()
-                doc.close()
-                return text
-            except ImportError:
-                return f"[Error reading PDF: {e}]"
-    
-    def _extract_from_docx(self, file_path: str) -> str:
-        """Extract text from DOCX file"""
-        try:
-            doc = docx.Document(file_path)
-            full_text = []
-            
-            for paragraph in doc.paragraphs:
-                if paragraph.text.strip():
-                    full_text.append(paragraph.text)
-            
-            # Also extract from tables
-            for table in doc.tables:
-                for row in table.rows:
-                    row_text = []
-                    for cell in row.cells:
-                        if cell.text.strip():
-                            row_text.append(cell.text)
-                    if row_text:
-                        full_text.append(" | ".join(row_text))
-            
-            return "\n\n".join(full_text)
-            
-        except Exception as e:
-            print(f"    Error reading DOCX: {e}")
-            return f"[Error reading DOCX: {e}]"
-    
-    def _extract_from_text(self, file_path: str) -> str:
-        """Extract text from text-based files with encoding detection"""
-        try:
-            # First, try UTF-8
-            try:
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    return f.read()
-            except UnicodeDecodeError:
-                pass
-            
-            # Detect encoding
-            with open(file_path, 'rb') as f:
-                raw_data = f.read()
-                result = chardet.detect(raw_data)
-                encoding = result['encoding']
-                
-                if encoding:
-                    return raw_data.decode(encoding)
-                else:
-                    # Try common encodings
-                    for enc in ['latin-1', 'cp1252', 'iso-8859-1']:
-                        try:
-                            return raw_data.decode(enc)
-                        except:
-                            continue
-                    
-                    return "[Could not decode file - unknown encoding]"
-                    
-        except Exception as e:
-            print(f"    Error reading text file: {e}")
-            return f"[Error reading file: {e}]"
-    
     def load_documents(self, document_paths: List[str]) -> bool:
         """
-        Load documents from file paths - handles all file types
+        Load and validate documents with proper text extraction
         
         Args:
-            document_paths: List of paths to document files
+            document_paths: List of paths to documents
             
         Returns:
             Success status
         """
         try:
-            self.documents = []
-            successful = 0
-            failed = 0
+            self.documents = load_documents(document_paths)
             
-            for path in document_paths:
-                path_obj = Path(path)
-                
-                if not path_obj.exists():
-                    print(f"  ⚠️ File not found: {path}")
-                    failed += 1
-                    continue
-                
-                print(f"  Loading: {path_obj.name}")
-                
-                # Extract text based on file type
-                content = self.extract_text_from_file(str(path_obj))
-                
-                if content and not content.startswith("[Error"):
-                    self.documents.append({
-                        'path': str(path_obj),
-                        'content': content,
-                        'filename': path_obj.name
-                    })
-                    successful += 1
-                else:
-                    print(f"    ❌ Failed to extract content from {path_obj.name}")
-                    failed += 1
+            if not self.documents:
+                print("❌ No documents loaded")
+                return False
             
-            print(f"\n📊 Loading Summary:")
-            print(f"  ✅ Successfully loaded: {successful} documents")
-            if failed > 0:
-                print(f"  ❌ Failed to load: {failed} documents")
+            # Validate documents
+            valid_docs = validate_documents(self.documents)
             
-            return successful > 0
+            print(f"✅ Loaded {len(valid_docs)} valid documents")
+            self.documents = valid_docs
+            return True
             
         except Exception as e:
-            print(f"Error loading documents: {e}")
+            print(f"❌ Error loading documents: {e}")
             return False
     
     def process_phase(self, phase_num: str, documents: Optional[List[Dict]] = None) -> Dict:
         """
-        Process documents for a specific phase
+        Process a single phase with INTELLIGENT BATCHING
         
         Args:
-            phase_num: Phase identifier (0A, 0B, 1-7)
-            documents: Optional document list (uses self.documents if not provided)
+            phase_num: Phase to process (0A, 0B, 1-7)
+            documents: Optional documents to process
             
         Returns:
-            Analysis results dictionary
+            Phase results
         """
-        print(f"\n{'='*60}")
-        print(f"PROCESSING PHASE {phase_num}: {get_phase_description(phase_num)}")
-        print(f"{'='*60}")
-        
         self.current_phase = phase_num
-        docs_to_process = documents or self.documents
+        
+        # Use provided documents or loaded ones
+        docs_to_process = documents if documents is not None else self.documents
         
         if not docs_to_process:
-            print("ERROR: No documents to process!")
+            print(f"❌ No documents to process for phase {phase_num}")
             return {}
         
-        # Get previous knowledge for context
-        previous_knowledge = self.knowledge_manage.get_previous_knowledge(phase_num)
+        print(f"\n{'='*60}")
+        print(f"PHASE {phase_num}: {get_phase_description(phase_num)}")
+        print(f"{'='*60}")
+        print(f"📊 Documents to analyse: {len(docs_to_process)}")
         
-        # 1. Get the master forensic overlay (always applied)
-        master = get_master_prompt()
+        # CRITICAL: Intelligent batching
+        batches = self._create_intelligent_batches(docs_to_process, phase_num)
+        print(f"📦 Created {len(batches)} batches for processing")
         
-        # 2. Get phase-specific prompt (includes any learned components if re-running)
-        phase_prompt = get_phase_prompt(phase_num)
+        # Process each batch
+        all_batch_results = []
+        batch_knowledge = {}
         
-        # 3. Combine prompts with previous knowledge
-        full_prompt = self._build_full_prompt(master, phase_prompt, previous_knowledge)
-        
-        # 4. Prepare documents for analysis
-        document_texts = []
-        for doc in docs_to_process:
-            text = doc['content']
-            # Truncate very long documents to avoid token limits
-            if len(text) > 50000:
-                text = text[:45000] + "\n\n[...document truncated for length...]\n\n" + text[-5000:]
-            document_texts.append(text)
-        
-        print(f"Sending {len(document_texts)} documents for analysis...")
-        
-        # 5. Send to Claude for initial analysis
-        # Fix the phase format for api_client
-        api_phase = f"phase_{phase_num.lower()}" if phase_num else None
-        
-        response = self.api_client.analyse_documents(
-            documents=document_texts,
-            prompt=full_prompt,
-            phase=api_phase,
-            context=previous_knowledge
-        )
-        
-        if not response:
-            print(f"Error: No response received for phase {phase_num}")
-            return {}
-        
-        # 6. For phases 1-6, generate and apply Claude's learning enhancement
-        if should_generate_learning(phase_num):
-            print(f"Generating autonomous enhancement for phase {phase_num}...")
-            enhanced_response = self._apply_learning_enhancement(
+        for batch_num, batch in enumerate(batches, 1):
+            print(f"\n--- Processing Batch {batch_num}/{len(batches)} ---")
+            print(f"   Documents in batch: {len(batch)}")
+            
+            # Calculate tokens in batch
+            batch_tokens = sum(len(doc['content']) // 4 for doc in batch)
+            print(f"   Estimated tokens: {batch_tokens:,}")
+            
+            # Process this batch
+            batch_result = self._process_single_batch(
                 phase_num, 
-                response, 
-                docs_to_process, 
-                previous_knowledge
+                batch, 
+                batch_num, 
+                len(batches),
+                batch_knowledge
             )
             
-            # Combine both analyses
-            final_response = {
-                'initial_analysis': response,
-                'enhanced_analysis': enhanced_response,
-                'combined_insights': f"{response}\n\nENHANCED ANALYSIS:\n{enhanced_response}"
-            }
-        else:
-            final_response = {
-                'analysis': response
-            }
+            if batch_result:
+                all_batch_results.append(batch_result)
+                # Accumulate knowledge from this batch
+                self._merge_batch_knowledge(batch_knowledge, batch_result)
+            
+            # Rate limit protection
+            if batch_num < len(batches):
+                print("⏱️  Waiting 3 seconds before next batch...")
+                time.sleep(3)
         
-        # 7. Store the knowledge
-        phase_result = {
-            'phase': phase_num,
-            'description': get_phase_description(phase_num),
-            'timestamp': datetime.now().isoformat(),
-            'documents_analysed': len(docs_to_process),
-            'findings': final_response
+        # Synthesise all batch results
+        final_result = self._synthesise_batch_results(phase_num, all_batch_results)
+        
+        # Store the complete phase knowledge
+        self.knowledge_manage.store_phase_knowledge(phase_num, final_result)
+        
+        print(f"\n✅ Phase {phase_num} complete. Processed {len(batches)} batches.")
+        
+        return final_result
+    
+    def _create_intelligent_batches(self, documents: List[Dict], phase_num: str) -> List[List[Dict]]:
+        """
+        Create intelligent document batches based on phase and token limits
+        
+        Args:
+            documents: Documents to batch
+            phase_num: Current phase
+            
+        Returns:
+            List of document batches
+        """
+        batch_size = self.BATCH_SIZES.get(phase_num, 5)
+        max_tokens = self.MAX_TOKENS_PER_BATCH.get(phase_num, 150000)
+        
+        batches = []
+        current_batch = []
+        current_tokens = 0
+        
+        for doc in documents:
+            # Estimate tokens (1 token ≈ 4 characters)
+            doc_tokens = len(doc.get('content', '')) // 4
+            
+            # Check if adding this document would exceed limits
+            if current_batch and (
+                len(current_batch) >= batch_size or 
+                current_tokens + doc_tokens > max_tokens
+            ):
+                # Save current batch and start new one
+                batches.append(current_batch)
+                current_batch = []
+                current_tokens = 0
+            
+            # Add document to current batch
+            current_batch.append(doc)
+            current_tokens += doc_tokens
+        
+        # Don't forget the last batch
+        if current_batch:
+            batches.append(current_batch)
+        
+        return batches
+    
+    def _process_single_batch(
+        self, 
+        phase_num: str, 
+        batch: List[Dict], 
+        batch_num: int, 
+        total_batches: int,
+        accumulated_knowledge: Dict
+    ) -> Dict:
+        """
+        Process a single batch of documents
+        
+        Args:
+            phase_num: Current phase
+            batch: Documents in this batch
+            batch_num: Batch number
+            total_batches: Total number of batches
+            accumulated_knowledge: Knowledge from previous batches
+            
+        Returns:
+            Batch analysis results
+        """
+        # Get previous phase knowledge
+        previous_knowledge = self.knowledge_manage.get_previous_knowledge(phase_num)
+        
+        # Add accumulated knowledge from previous batches
+        if accumulated_knowledge:
+            previous_knowledge['batch_knowledge'] = accumulated_knowledge
+        
+        # Build prompts
+        master = get_master_prompt()
+        phase_prompt = get_phase_prompt(phase_num)
+        
+        # Add batch context
+        batch_context = f"""
+        BATCH CONTEXT:
+        This is batch {batch_num} of {total_batches} for Phase {phase_num}.
+        Focus on extracting key patterns and findings that can be combined with other batches.
+        """
+        
+        full_prompt = self._build_full_prompt(
+            master, 
+            phase_prompt + batch_context, 
+            previous_knowledge
+        )
+        
+        # Prepare documents
+        document_texts = []
+        for doc in batch:
+            text = doc['content']
+            # Truncate if needed
+            if len(text) > 40000:
+                text = text[:35000] + "\n[...truncated...]\n" + text[-5000:]
+            document_texts.append(text)
+        
+        # Send to Claude
+        api_phase = f"phase_{phase_num.lower()}"
+        
+        try:
+            response = self.api_client.analyse_documents(
+                documents=document_texts,
+                prompt=full_prompt,
+                phase=api_phase,
+                context=previous_knowledge
+            )
+            
+            return {
+                'batch_num': batch_num,
+                'documents_analysed': len(batch),
+                'analysis': response,
+                'timestamp': datetime.now().isoformat()
+            }
+            
+        except Exception as e:
+            print(f"❌ Error processing batch {batch_num}: {e}")
+            return None
+    
+    def _merge_batch_knowledge(self, accumulated: Dict, new_batch: Dict):
+        """
+        Merge knowledge from new batch into accumulated knowledge
+        
+        Args:
+            accumulated: Accumulated knowledge dict
+            new_batch: New batch results
+        """
+        if not new_batch:
+            return
+        
+        # Extract key findings from the new batch
+        batch_num = new_batch.get('batch_num', 0)
+        analysis = new_batch.get('analysis', '')
+        
+        # Store batch findings
+        if 'batches' not in accumulated:
+            accumulated['batches'] = {}
+        
+        accumulated['batches'][f'batch_{batch_num}'] = {
+            'summary': analysis[:1000] if analysis else '',  # Keep summary only
+            'doc_count': new_batch.get('documents_analysed', 0)
         }
+    
+    def _synthesise_batch_results(self, phase_num: str, batch_results: List[Dict]) -> Dict:
+        """
+        Synthesise results from all batches into coherent phase findings
         
-        self.knowledge_manage.store_phase_knowledge(phase_num, phase_result)
+        Args:
+            phase_num: Current phase
+            batch_results: All batch results
+            
+        Returns:
+            Synthesised phase results
+        """
+        print(f"\n🔄 Synthesising {len(batch_results)} batch results...")
         
-        print(f"Phase {phase_num} complete. Knowledge stored.")
+        # Combine all analyses
+        combined_analyses = []
+        total_docs = 0
         
-        return phase_result
+        for batch in batch_results:
+            if batch and batch.get('analysis'):
+                combined_analyses.append(f"[Batch {batch['batch_num']}]:\n{batch['analysis']}")
+                total_docs += batch.get('documents_analysed', 0)
+        
+        # Create synthesis prompt
+        synthesis_prompt = f"""
+        SYNTHESIS TASK FOR PHASE {phase_num}:
+        
+        You have analysed {total_docs} documents across {len(batch_results)} batches.
+        Now synthesise all findings into a coherent, comprehensive analysis.
+        
+        BATCH ANALYSES TO SYNTHESISE:
+        {chr(10).join(combined_analyses[:10000])}  # Limit to avoid token overflow
+        
+        SYNTHESIS REQUIREMENTS:
+        1. Identify the most critical patterns across ALL batches
+        2. Highlight the strongest evidence against Process Holdings
+        3. Note any contradictions or gaps discovered
+        4. Provide actionable recommendations for Lismore
+        5. Rank findings by legal/strategic importance
+        
+        Create a unified narrative that captures the essence of all batch findings.
+        """
+        
+        # Get synthesis from Claude
+        api_phase = f"phase_{phase_num.lower()}_synthesis"
+        
+        try:
+            synthesis = self.api_client.analyse_documents(
+                documents=[],
+                prompt=synthesis_prompt,
+                phase=api_phase
+            )
+            
+            return {
+                'phase': phase_num,
+                'description': get_phase_description(phase_num),
+                'timestamp': datetime.now().isoformat(),
+                'total_documents': total_docs,
+                'total_batches': len(batch_results),
+                'batch_results': batch_results,
+                'synthesis': synthesis,
+                'findings': {
+                    'combined_analysis': synthesis,
+                    'batch_count': len(batch_results),
+                    'document_count': total_docs
+                }
+            }
+            
+        except Exception as e:
+            print(f"❌ Error synthesising results: {e}")
+            # Return raw batch results if synthesis fails
+            return {
+                'phase': phase_num,
+                'description': get_phase_description(phase_num),
+                'timestamp': datetime.now().isoformat(),
+                'total_documents': total_docs,
+                'batch_results': batch_results,
+                'findings': {
+                    'combined_analysis': chr(10).join(combined_analyses),
+                    'batch_count': len(batch_results),
+                    'document_count': total_docs
+                }
+            }
     
     def _build_full_prompt(self, master: str, phase_prompt: str, previous_knowledge: Dict) -> str:
         """
@@ -347,117 +408,26 @@ class DocumentProcessor:
                 "You have access to the following insights from previous phases:"
             ])
             
-            for phase, knowledge in previous_knowledge.items():
-                phase_desc = get_phase_description(phase)
-                prompt_parts.append(f"\n[{phase} - {phase_desc}]:")
-                
-                # Summarise key findings to avoid token overflow
-                if isinstance(knowledge, dict) and 'findings' in knowledge:
-                    findings = knowledge['findings']
-                    if isinstance(findings, dict):
-                        # Handle combined insights from enhanced phases
-                        if 'combined_insights' in findings:
-                            prompt_parts.append(findings['combined_insights'][:3000])
-                        elif 'analysis' in findings:
-                            prompt_parts.append(findings['analysis'][:3000])
-                    else:
-                        prompt_parts.append(str(findings)[:3000])
+            # Add knowledge but limit size
+            knowledge_str = json.dumps(previous_knowledge, indent=2)
+            if len(knowledge_str) > 5000:
+                knowledge_str = knowledge_str[:4500] + "\n[...truncated...]"
+            prompt_parts.append(knowledge_str)
         
-        prompt_parts.append("\nAnalyse the provided documents through both the master forensic lens "
-                          "and the specific phase focus. Find what others would miss. "
-                          "Be aggressive in identifying anything that damages Process Holdings' case.")
+        prompt_parts.append("\nBe ruthlessly forensic. Find what destroys Process Holdings.")
         
         return "\n".join(prompt_parts)
     
-    def _apply_learning_enhancement(
-        self, 
-        phase_num: str, 
-        initial_response: str, 
-        documents: List[Dict], 
-        previous_knowledge: Dict
-    ) -> str:
-        """
-        Generate and apply Claude's self-generated enhancement
-        
-        Args:
-            phase_num: Current phase
-            initial_response: Initial analysis response
-            documents: Documents being analysed
-            previous_knowledge: Previous phase knowledge
-            
-        Returns:
-            Enhanced analysis response
-        """
-        # Ask Claude to generate enhancement based on initial findings
-        enhancement_prompt = f"""
-        You just completed Phase {phase_num} analysis with these findings:
-        {initial_response[:3000]}
-        
-        {get_learning_generator_prompt()}
-        
-        Be specific about:
-        - Document references that need deeper investigation
-        - Patterns you've detected that could be significant
-        - Connections to previous phase findings
-        - Areas where Process Holdings seems vulnerable
-        """
-        
-        # Fix phase format for API
-        api_phase = f"phase_{phase_num.lower()}_learning"
-        
-        # Get Claude's self-generated enhancement
-        learning = self.api_client.analyse_documents(
-            documents=[],  # No documents needed for prompt generation
-            prompt=enhancement_prompt,
-            phase=api_phase
-        )
-        
-        # Store the learning for future use
-        update_learning_prompt(phase_num, learning)
-        
-        # Re-run the phase with enhancement
-        master = get_master_prompt()
-        enhanced_phase_prompt = get_phase_prompt(phase_num, include_learning=True)
-        
-        enhanced_full_prompt = f"""
-        {master}
-        
-        ENHANCED PHASE FOCUS:
-        {enhanced_phase_prompt}
-        
-        PREVIOUS PHASE KNOWLEDGE:
-        {json.dumps(previous_knowledge, indent=2)[:5000]}
-        
-        This is your SECOND PASS with your own insights. Go deeper. Be more aggressive.
-        Find the evidence that destroys Process Holdings' case.
-        """
-        
-        # Get document texts
-        document_texts = [doc['content'][:50000] for doc in documents]
-        
-        # Fix phase format
-        api_phase_enhanced = f"phase_{phase_num.lower()}_enhanced"
-        
-        # Second, enhanced analysis
-        enhanced_response = self.api_client.analyse_documents(
-            documents=document_texts,
-            prompt=enhanced_full_prompt,
-            phase=api_phase_enhanced,
-            context=previous_knowledge
-        )
-        
-        return enhanced_response
-    
-    # Keep all your other methods unchanged...
     def run_full_analysis(self) -> Dict:
         """
-        Run all phases in sequence
+        Run all phases in sequence with proper batching
         
         Returns:
             Complete analysis results
         """
         print("\n" + "="*60)
         print("STARTING FULL ANALYSIS FOR LISMORE CAPITAL")
+        print("WITH INTELLIGENT BATCHING")
         print("="*60)
         
         all_phases = get_all_phases()
@@ -467,8 +437,16 @@ class DocumentProcessor:
             phase_result = self.process_phase(phase)
             results[phase] = phase_result
             
-            # Brief pause between phases (optional)
-            print(f"\nPhase {phase} complete. Moving to next phase...")
+            print(f"\n✅ Phase {phase} complete")
+            
+            # Cost check
+            cost_summary = self.api_client.get_cost_summary()
+            print(f"💰 Running total: £{cost_summary['total_cost']:.2f}")
+            
+            # Pause between phases
+            if phase != all_phases[-1]:
+                print("⏱️  Pausing 5 seconds before next phase...")
+                time.sleep(5)
         
         print("\n" + "="*60)
         print("FULL ANALYSIS COMPLETE")
@@ -478,19 +456,10 @@ class DocumentProcessor:
         summary = self.knowledge_manage.generate_summary()
         results['summary'] = summary
         
-        return results
-    
-    def run_single_phase(self, phase_num: str) -> Dict:
-        """
-        Run a single phase
+        # Final cost report
+        self.api_client.get_cost_summary()
         
-        Args:
-            phase_num: Phase to run
-            
-        Returns:
-            Phase results
-        """
-        return self.process_phase(phase_num)
+        return results
     
     def get_status(self) -> Dict:
         """Get current processing status"""
@@ -498,5 +467,7 @@ class DocumentProcessor:
             'current_phase': self.current_phase,
             'documents_loaded': len(self.documents),
             'phases_completed': self.knowledge_manage.get_completed_phases(),
-            'total_phases': len(get_all_phases())
+            'total_phases': len(get_all_phases()),
+            'batching_enabled': True,
+            'batch_sizes': self.BATCH_SIZES
         }
