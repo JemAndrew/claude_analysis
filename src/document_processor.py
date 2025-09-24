@@ -1,7 +1,11 @@
-﻿# document_processor.py - FIXED VERSION WITH INTELLIGENT BATCHING
+﻿
 """
-Document processor with proper batching for Lismore arbitration analysis
-Handles large document volumes without overloading API
+Document processor with three-directory structure:
+- legal_resources/ (legal framework documents)
+- case_context/ (case background documents)
+- documents/ (main disclosure documents, processed text preferred)
+Handles intelligent batching, phase-specific processing, and cumulative knowledge management.
+
 """
 
 import json
@@ -10,9 +14,9 @@ from typing import Dict, List, Optional
 from pathlib import Path
 from datetime import datetime
 
-from .api_client import ClaudeAPIClient
-from .knowledge_manage import KnowledgeManager
-from .phase_prompts import (
+from api_client import ClaudeAPIClient
+from knowledge_manage import KnowledgeManager
+from phase_prompts import (
     get_phase_prompt,
     get_master_prompt,
     get_phase_description,
@@ -21,11 +25,11 @@ from .phase_prompts import (
     get_learning_generator_prompt,
     update_learning_prompt
 )
-from .utils import load_documents, validate_documents
+from utils import load_documents, validate_documents
 
 class DocumentProcessor:
     """
-    Core document processing engine with intelligent batching
+    Core document processing engine with three-directory structure
     """
     
     def __init__(self, api_key: Optional[str] = None):
@@ -34,6 +38,25 @@ class DocumentProcessor:
         self.knowledge_manage = KnowledgeManager()
         self.documents = []
         self.current_phase = None
+        
+        # THREE-DIRECTORY STRUCTURE
+        self.PHASE_DIRECTORIES = {
+            "0A": "legal_resources",           # Legal framework documents
+            "0B": "case_context",              # Case background documents
+            "1": "documents/processed/text",   # MAIN DISCLOSURE - processed text
+            "2": "documents/processed/text",   # MAIN DISCLOSURE
+            "3": "documents/processed/text",   # MAIN DISCLOSURE
+            "4": "documents/processed/text",   # MAIN DISCLOSURE
+            "5": "documents/processed/text",   # MAIN DISCLOSURE
+            "6": "documents/processed/text",   # MAIN DISCLOSURE
+            "7": "documents/processed/text"    # MAIN DISCLOSURE
+        }
+        
+        # Alternative raw directory if processed not available
+        self.RAW_DISCLOSURE_DIR = "documents/raw"
+        
+        # Cache for disclosure documents (the big set)
+        self.disclosure_cache = None
         
         # CRITICAL: Batching configuration
         self.BATCH_SIZES = {
@@ -60,63 +83,149 @@ class DocumentProcessor:
             "6": 250000,   # ~62k words
             "7": 250000
         }
-        
-    def load_documents(self, document_paths: List[str]) -> bool:
+    
+    def load_documents_for_phase(self, phase_num: str) -> bool:
         """
-        Load and validate documents with proper text extraction
+        Load documents from the appropriate directory for the given phase
         
         Args:
-            document_paths: List of paths to documents
+            phase_num: Phase identifier (0A, 0B, 1-7)
             
         Returns:
             Success status
         """
+        # Get the directory for this phase
+        phase_dir = self.PHASE_DIRECTORIES.get(phase_num)
+        
+        if not phase_dir:
+            print(f"❌ No directory configured for phase {phase_num}")
+            return False
+        
+        # Check if we're loading disclosure documents (phases 1-7)
+        is_disclosure_phase = phase_num not in ["0A", "0B"]
+        
+        # Use cached disclosure documents if available
+        if is_disclosure_phase and self.disclosure_cache is not None:
+            print(f"📌 Using cached disclosure documents ({len(self.disclosure_cache)} files)")
+            self.documents = self.disclosure_cache
+            return True
+        
+        # Check if directory exists
+        phase_path = Path(phase_dir)
+        
+        # For disclosure phases, check both processed and raw directories
+        if is_disclosure_phase and not phase_path.exists():
+            print(f"⚠️  Processed text directory not found: {phase_dir}")
+            print(f"   Checking raw directory: {self.RAW_DISCLOSURE_DIR}")
+            phase_path = Path(self.RAW_DISCLOSURE_DIR)
+            phase_dir = self.RAW_DISCLOSURE_DIR
+        
+        if not phase_path.exists():
+            print(f"❌ Directory not found: {phase_dir}/")
+            if is_disclosure_phase:
+                print("   CRITICAL: Disclosure documents not found!")
+                print("   Expected locations:")
+                print("   - documents/processed/text/ (for processed text files)")
+                print("   - documents/raw/ (for raw PDFs)")
+            else:
+                print(f"   Please create {phase_dir}/ and add relevant PDFs")
+            return False
+        
+        # Load documents
         try:
-            self.documents = load_documents(document_paths)
+            print(f"📂 Loading documents from {phase_dir}/ for Phase {phase_num}")
+            
+            # Determine file patterns based on directory
+            if "processed/text" in phase_dir:
+                # Load text files
+                txt_files = list(phase_path.glob("*.txt"))
+                print(f"   Found {len(txt_files)} text files")
+                
+                self.documents = []
+                for txt_path in txt_files:
+                    with open(txt_path, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                        self.documents.append({
+                            'path': str(txt_path),
+                            'filename': txt_path.name,
+                            'content': content,
+                            'source_type': 'processed_text'
+                        })
+            else:
+                # Load PDFs (for legal_resources, case_context, or raw documents)
+                self.documents = load_documents([str(phase_path)])
             
             if not self.documents:
-                print("❌ No documents loaded")
+                print(f"❌ No documents found in {phase_dir}/")
                 return False
             
             # Validate documents
             valid_docs = validate_documents(self.documents)
-            
-            print(f"✅ Loaded {len(valid_docs)} valid documents")
             self.documents = valid_docs
+            
+            # Show what we loaded
+            doc_type = "disclosure documents" if is_disclosure_phase else "documents"
+            print(f"✅ Loaded {len(self.documents)} {doc_type} from {phase_dir}/")
+            
+            # Cache disclosure documents for reuse in phases 1-7
+            if is_disclosure_phase:
+                self.disclosure_cache = self.documents
+                print(f"💾 Cached disclosure documents for phases 1-7")
+            
             return True
             
         except Exception as e:
-            print(f"❌ Error loading documents: {e}")
+            print(f"❌ Error loading documents from {phase_dir}/: {e}")
             return False
     
-    def process_phase(self, phase_num: str, documents: Optional[List[Dict]] = None) -> Dict:
+    def process_phase(self, phase_num: str) -> Dict:
         """
-        Process a single phase with INTELLIGENT BATCHING
+        Process a single phase with automatic directory selection
         
         Args:
             phase_num: Phase to process (0A, 0B, 1-7)
-            documents: Optional documents to process
             
         Returns:
             Phase results
         """
         self.current_phase = phase_num
         
-        # Use provided documents or loaded ones
-        docs_to_process = documents if documents is not None else self.documents
-        
-        if not docs_to_process:
-            print(f"❌ No documents to process for phase {phase_num}")
-            return {}
-        
         print(f"\n{'='*60}")
         print(f"PHASE {phase_num}: {get_phase_description(phase_num)}")
         print(f"{'='*60}")
-        print(f"📊 Documents to analyse: {len(docs_to_process)}")
+        
+        # Special message for disclosure phases
+        if phase_num not in ["0A", "0B"]:
+            print("🎯 ANALYSING MAIN DISCLOSURE DOCUMENTS")
+        
+        # Load documents for this specific phase
+        if not self.load_documents_for_phase(phase_num):
+            print(f"❌ Failed to load documents for phase {phase_num}")
+            return {}
+        
+        print(f"📊 Documents to analyse: {len(self.documents)}")
+        
+        # Show which directory we're using
+        phase_dir = self.PHASE_DIRECTORIES.get(phase_num, "unknown")
+        if phase_num not in ["0A", "0B"] and self.disclosure_cache:
+            if any('raw' in doc.get('path', '') for doc in self.documents[:1]):
+                phase_dir = self.RAW_DISCLOSURE_DIR
+        print(f"📁 Source directory: {phase_dir}/")
         
         # CRITICAL: Intelligent batching
-        batches = self._create_intelligent_batches(docs_to_process, phase_num)
+        batches = self._create_intelligent_batches(self.documents, phase_num)
         print(f"📦 Created {len(batches)} batches for processing")
+        
+        # Estimate cost for this phase
+        if phase_num in ["0A", "0B", "1"]:
+            cost_per_batch = 0.15  # Haiku
+            model = "Claude 3 Haiku"
+        else:
+            cost_per_batch = 2.50  # Opus 4.1
+            model = "Claude Opus 4.1"
+        
+        phase_cost = len(batches) * cost_per_batch + 0.20  # Plus synthesis
+        print(f"💰 Estimated cost for this phase: £{phase_cost:.2f} ({model})")
         
         # Process each batch
         all_batch_results = []
@@ -152,6 +261,11 @@ class DocumentProcessor:
         # Synthesise all batch results
         final_result = self._synthesise_batch_results(phase_num, all_batch_results)
         
+        # Add metadata
+        final_result['source_directory'] = phase_dir
+        final_result['documents_analysed'] = len(self.documents)
+        final_result['document_type'] = 'disclosure' if phase_num not in ["0A", "0B"] else phase_num
+        
         # Store the complete phase knowledge
         self.knowledge_manage.store_phase_knowledge(phase_num, final_result)
         
@@ -159,17 +273,44 @@ class DocumentProcessor:
         
         return final_result
     
-    def _create_intelligent_batches(self, documents: List[Dict], phase_num: str) -> List[List[Dict]]:
-        """
-        Create intelligent document batches based on phase and token limits
+    def verify_setup(self) -> Dict:
+        """Verify all directories are properly set up"""
+        status = {
+            'legal_resources': {'exists': False, 'count': 0},
+            'case_context': {'exists': False, 'count': 0},
+            'disclosure_processed': {'exists': False, 'count': 0},
+            'disclosure_raw': {'exists': False, 'count': 0}
+        }
         
-        Args:
-            documents: Documents to batch
-            phase_num: Current phase
-            
-        Returns:
-            List of document batches
-        """
+        # Check legal_resources
+        legal_path = Path("legal_resources")
+        if legal_path.exists():
+            status['legal_resources']['exists'] = True
+            status['legal_resources']['count'] = len(list(legal_path.glob("*.pdf")))
+        
+        # Check case_context
+        case_path = Path("case_context")
+        if case_path.exists():
+            status['case_context']['exists'] = True
+            status['case_context']['count'] = len(list(case_path.glob("*.pdf")))
+        
+        # Check disclosure processed
+        processed_path = Path("documents/processed/text")
+        if processed_path.exists():
+            status['disclosure_processed']['exists'] = True
+            status['disclosure_processed']['count'] = len(list(processed_path.glob("*.txt")))
+        
+        # Check disclosure raw
+        raw_path = Path("documents/raw")
+        if raw_path.exists():
+            status['disclosure_raw']['exists'] = True
+            status['disclosure_raw']['count'] = len(list(raw_path.glob("*.pdf")))
+        
+        return status
+    
+    # [Keep all your existing methods below - they remain unchanged]
+    def _create_intelligent_batches(self, documents: List[Dict], phase_num: str) -> List[List[Dict]]:
+        """Create intelligent document batches based on phase and token limits"""
         batch_size = self.BATCH_SIZES.get(phase_num, 5)
         max_tokens = self.MAX_TOKENS_PER_BATCH.get(phase_num, 150000)
         
@@ -178,62 +319,36 @@ class DocumentProcessor:
         current_tokens = 0
         
         for doc in documents:
-            # Estimate tokens (1 token ≈ 4 characters)
             doc_tokens = len(doc.get('content', '')) // 4
             
-            # Check if adding this document would exceed limits
             if current_batch and (
                 len(current_batch) >= batch_size or 
                 current_tokens + doc_tokens > max_tokens
             ):
-                # Save current batch and start new one
                 batches.append(current_batch)
                 current_batch = []
                 current_tokens = 0
             
-            # Add document to current batch
             current_batch.append(doc)
             current_tokens += doc_tokens
         
-        # Don't forget the last batch
         if current_batch:
             batches.append(current_batch)
         
         return batches
     
-    def _process_single_batch(
-        self, 
-        phase_num: str, 
-        batch: List[Dict], 
-        batch_num: int, 
-        total_batches: int,
-        accumulated_knowledge: Dict
-    ) -> Dict:
-        """
-        Process a single batch of documents
-        
-        Args:
-            phase_num: Current phase
-            batch: Documents in this batch
-            batch_num: Batch number
-            total_batches: Total number of batches
-            accumulated_knowledge: Knowledge from previous batches
-            
-        Returns:
-            Batch analysis results
-        """
-        # Get previous phase knowledge
+    def _process_single_batch(self, phase_num: str, batch: List[Dict], 
+                             batch_num: int, total_batches: int,
+                             accumulated_knowledge: Dict) -> Dict:
+        """Process a single batch of documents"""
         previous_knowledge = self.knowledge_manage.get_previous_knowledge(phase_num)
         
-        # Add accumulated knowledge from previous batches
         if accumulated_knowledge:
             previous_knowledge['batch_knowledge'] = accumulated_knowledge
         
-        # Build prompts
         master = get_master_prompt()
         phase_prompt = get_phase_prompt(phase_num)
         
-        # Add batch context
         batch_context = f"""
         BATCH CONTEXT:
         This is batch {batch_num} of {total_batches} for Phase {phase_num}.
@@ -246,16 +361,13 @@ class DocumentProcessor:
             previous_knowledge
         )
         
-        # Prepare documents
         document_texts = []
         for doc in batch:
             text = doc['content']
-            # Truncate if needed
             if len(text) > 40000:
                 text = text[:35000] + "\n[...truncated...]\n" + text[-5000:]
             document_texts.append(text)
         
-        # Send to Claude
         api_phase = f"phase_{phase_num.lower()}"
         
         try:
@@ -278,43 +390,25 @@ class DocumentProcessor:
             return None
     
     def _merge_batch_knowledge(self, accumulated: Dict, new_batch: Dict):
-        """
-        Merge knowledge from new batch into accumulated knowledge
-        
-        Args:
-            accumulated: Accumulated knowledge dict
-            new_batch: New batch results
-        """
+        """Merge knowledge from new batch into accumulated knowledge"""
         if not new_batch:
             return
         
-        # Extract key findings from the new batch
         batch_num = new_batch.get('batch_num', 0)
         analysis = new_batch.get('analysis', '')
         
-        # Store batch findings
         if 'batches' not in accumulated:
             accumulated['batches'] = {}
         
         accumulated['batches'][f'batch_{batch_num}'] = {
-            'summary': analysis[:1000] if analysis else '',  # Keep summary only
+            'summary': analysis[:1000] if analysis else '',
             'doc_count': new_batch.get('documents_analysed', 0)
         }
     
     def _synthesise_batch_results(self, phase_num: str, batch_results: List[Dict]) -> Dict:
-        """
-        Synthesise results from all batches into coherent phase findings
-        
-        Args:
-            phase_num: Current phase
-            batch_results: All batch results
-            
-        Returns:
-            Synthesised phase results
-        """
+        """Synthesise results from all batches into coherent phase findings"""
         print(f"\n🔄 Synthesising {len(batch_results)} batch results...")
         
-        # Combine all analyses
         combined_analyses = []
         total_docs = 0
         
@@ -323,7 +417,6 @@ class DocumentProcessor:
                 combined_analyses.append(f"[Batch {batch['batch_num']}]:\n{batch['analysis']}")
                 total_docs += batch.get('documents_analysed', 0)
         
-        # Create synthesis prompt
         synthesis_prompt = f"""
         SYNTHESIS TASK FOR PHASE {phase_num}:
         
@@ -331,7 +424,7 @@ class DocumentProcessor:
         Now synthesise all findings into a coherent, comprehensive analysis.
         
         BATCH ANALYSES TO SYNTHESISE:
-        {chr(10).join(combined_analyses[:10000])}  # Limit to avoid token overflow
+        {chr(10).join(combined_analyses[:10000])}
         
         SYNTHESIS REQUIREMENTS:
         1. Identify the most critical patterns across ALL batches
@@ -343,7 +436,6 @@ class DocumentProcessor:
         Create a unified narrative that captures the essence of all batch findings.
         """
         
-        # Get synthesis from Claude
         api_phase = f"phase_{phase_num.lower()}_synthesis"
         
         try:
@@ -370,7 +462,6 @@ class DocumentProcessor:
             
         except Exception as e:
             print(f"❌ Error synthesising results: {e}")
-            # Return raw batch results if synthesis fails
             return {
                 'phase': phase_num,
                 'description': get_phase_description(phase_num),
@@ -385,17 +476,7 @@ class DocumentProcessor:
             }
     
     def _build_full_prompt(self, master: str, phase_prompt: str, previous_knowledge: Dict) -> str:
-        """
-        Build the complete prompt for analysis
-        
-        Args:
-            master: Master forensic prompt
-            phase_prompt: Phase-specific prompt
-            previous_knowledge: Knowledge from previous phases
-            
-        Returns:
-            Combined prompt string
-        """
+        """Build the complete prompt for analysis"""
         prompt_parts = [
             master,
             "\nCURRENT PHASE FOCUS:",
@@ -408,7 +489,6 @@ class DocumentProcessor:
                 "You have access to the following insights from previous phases:"
             ])
             
-            # Add knowledge but limit size
             knowledge_str = json.dumps(previous_knowledge, indent=2)
             if len(knowledge_str) > 5000:
                 knowledge_str = knowledge_str[:4500] + "\n[...truncated...]"
@@ -418,49 +498,6 @@ class DocumentProcessor:
         
         return "\n".join(prompt_parts)
     
-    def run_full_analysis(self) -> Dict:
-        """
-        Run all phases in sequence with proper batching
-        
-        Returns:
-            Complete analysis results
-        """
-        print("\n" + "="*60)
-        print("STARTING FULL ANALYSIS FOR LISMORE CAPITAL")
-        print("WITH INTELLIGENT BATCHING")
-        print("="*60)
-        
-        all_phases = get_all_phases()
-        results = {}
-        
-        for phase in all_phases:
-            phase_result = self.process_phase(phase)
-            results[phase] = phase_result
-            
-            print(f"\n✅ Phase {phase} complete")
-            
-            # Cost check
-            cost_summary = self.api_client.get_cost_summary()
-            print(f"💰 Running total: £{cost_summary['total_cost']:.2f}")
-            
-            # Pause between phases
-            if phase != all_phases[-1]:
-                print("⏱️  Pausing 5 seconds before next phase...")
-                time.sleep(5)
-        
-        print("\n" + "="*60)
-        print("FULL ANALYSIS COMPLETE")
-        print("="*60)
-        
-        # Generate summary
-        summary = self.knowledge_manage.generate_summary()
-        results['summary'] = summary
-        
-        # Final cost report
-        self.api_client.get_cost_summary()
-        
-        return results
-    
     def get_status(self) -> Dict:
         """Get current processing status"""
         return {
@@ -469,5 +506,7 @@ class DocumentProcessor:
             'phases_completed': self.knowledge_manage.get_completed_phases(),
             'total_phases': len(get_all_phases()),
             'batching_enabled': True,
-            'batch_sizes': self.BATCH_SIZES
+            'batch_sizes': self.BATCH_SIZES,
+            'phase_directories': self.PHASE_DIRECTORIES,
+            'disclosure_cached': self.disclosure_cache is not None
         }

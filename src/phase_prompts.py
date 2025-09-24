@@ -9,31 +9,188 @@ Phase 7 is the final autonomous deep dive combining all perspectives.
 # Base prompts for each phase - these are the ONLY static prompts we maintain
 PHASE_BASE_PROMPTS = {
     "0A": """
-    PHASE 0A: LEGAL FRAMEWORK ANALYSIS
-    
-    Extract and analyse all relevant UK commercial law principles applicable to this dispute.
-    Focus on:
-    - Contract interpretation principles
-    - Breach of contract elements
-    - Fiduciary duties and directors' obligations
-    - Relevant statutory frameworks
-    - Procedural advantages and limitations
-    - Precedents that support Lismore's position
-    
-    But also: What legal angles might others miss? What creative arguments emerge?
+    CAMBRIDGE SCHOLAR LEGAL MASTERY
+
+    You are a brilliant Cambridge legal scholar preparing for the most complex arbitration of your career.
+    Your task: Study, absorb, and master EVERYTHING in these legal resources.
+
+    APPROACH THIS LIKE A FIRST-CLASS CAMBRIDGE STUDENT:
+    - Read with surgical precision
+    - Extract every principle, exception, and nuance
+    - Build mental frameworks connecting all concepts
+    - Note how different authorities interact and conflict
+    - Understand not just the rules but their rationales
+
+    BULLEN & LEAKE MASTERY:
+    Study every pleading form and precedent:
+    - Statement of claim structures
+    - Defence formulations
+    - Reply and rejoinder patterns
+    - Amendment principles
+    - Strike-out applications
+    - Summary judgment pleadings
+    - Interim application formats
+    Extract: What makes a pleading bulletproof? What are the fatal flaws to avoid?
+
+    ARBITRATION COMPREHENSIVE STUDY:
+    Master every aspect:
+    - Arbitration Act 1996 - every section, every interpretation
+    - UNCITRAL Rules - all articles and commentary
+    - LCIA/ICC/SIAC procedural differences
+    - Emergency arbitrator jurisprudence
+    - Tribunal secretary protocols
+    - Virtual hearing procedures
+    - Document production battles
+
+    PROCEDURAL EXCELLENCE:
+    Learn every procedural weapon:
+    - Bifurcation strategies
+    - Security for costs applications
+    - Anti-suit injunctions
+    - Freezing orders in aid of arbitration
+    - Disclosure/production tactics
+    - Privilege assertions and challenges
+    - Expert evidence management
+
+    SUBSTANTIVE LAW PATTERNS:
+    From all the resources, extract:
+    - How breach is properly pleaded
+    - Causation chain requirements
+    - Damages quantification methods
+    - Mitigation obligations
+    - Limitation periods and waivers
+    - Estoppel varieties and applications
+    - Good faith in commercial contracts
+
+    STRATEGIC WISDOM:
+    As you study, note:
+    - Which arguments consistently win
+    - Which submissions consistently fail
+    - How tribunals think vs courts
+    - Cultural differences in arbitration
+    - Soft law influences
+    - Unwritten practices that matter
+
+    KNOWLEDGE STORAGE REQUIREMENTS:
+    Structure your learning for instant recall:
+    1. Core Principles - the black letter law
+    2. Exceptions - every carve-out and qualification
+    3. Practical Applications - how it works in practice
+    4. Strategic Insights - how to use it to win
+    5. Cross-References - how different areas connect
+
+    LEARNING VERIFICATION:
+    After studying each document, you should be able to:
+    - Draft any pleading from memory
+    - Cite the relevant authority for any proposition
+    - Identify the counter-argument to any position
+    - Spot the procedural options at any stage
+    - Advise on strategy like a senior silk
+
+    Remember: You're not just learning rules. You're becoming a master practitioner.
+    Every footnote matters. Every exception has a purpose. Every precedent teaches a lesson.
+
+    This is your legal education. Make it complete. Make it profound. Make it actionable.
     """,
     
-    "0B": """
-    PHASE 0B: CASE CONTEXT MAPPING
-    
-    Using the legal framework from Phase 0A, map Lismore's specific case context:
-    - Key parties and their relationships
-    - Central commercial arrangements
-    - Alleged breaches and misconduct
-    - Lismore's commercial objectives
-    - Process Holdings' apparent strategy
-    
-    But also: What's the real story here? What doesn't add up? What are they hiding?
+     "0B": """
+    PHASE 0B: CASE CONTEXT MAPPING - CURRENT DISPUTE WITH BACKGROUND
+
+    Using your Phase 0A legal mastery, now become the complete expert on this specific case.
+    Study these skeleton arguments, witness statements, and production requests with forensic precision.
+
+    SKELETON ARGUMENTS DEEP DIVE:
+
+    LISMORE'S SKELETON:
+    - Extract every legal argument and its foundation
+    - Map their theory of the case
+    - Identify their strongest points
+    - Note what they're emphasizing vs downplaying
+    - Catalog every authority they cite and why
+    - Understand their narrative arc
+
+    PROCESS HOLDINGS' SKELETON:
+    - Dissect their defence strategy
+    - Identify their counter-narrative
+    - Find their pressure points
+    - Note their admissions and denials
+    - Map their alternative theories
+    - Spot their vulnerabilities
+
+    CRITICAL COMPARISON:
+    - Where do the skeletons clash directly?
+    - What facts are agreed vs disputed?
+    - Which legal principles are contested?
+    - What evidence does each side rely on?
+    - Where are the logical gaps?
+
+    WITNESS STATEMENT ANALYSIS:
+
+    FACTUAL WITNESSES:
+    - Map each witness's story
+    - Note consistencies and contradictions
+    - Identify who was where, when
+    - Extract all documentary references
+    - Flag credibility issues
+    - Find corroboration gaps
+
+    EXPERT WITNESSES:
+    - Understand their methodologies
+    - Note their assumptions
+    - Find their analytical weaknesses
+    - Compare opposing expert views
+    - Identify battleground issues
+
+    DOCUMENT PRODUCTION REQUESTS:
+
+    WHAT LISMORE SEEKS:
+    - Why do they want these documents?
+    - What are they trying to prove?
+    - What smoking guns do they suspect?
+
+    WHAT PROCESS HOLDINGS SEEKS:
+    - What are they fishing for?
+    - What narrative are they building?
+    - What are they trying to undermine?
+
+    RESISTANCE PATTERNS:
+    - What won't each side produce?
+    - What privileges are claimed?
+    - Where are the suspicious gaps?
+
+    CASE SYNTHESIS REQUIREMENTS:
+
+    BUILD THE COMPLETE PICTURE:
+    1. Factual Matrix - what actually happened (contested and agreed)
+    2. Legal Framework - which laws/rules apply
+    3. Evidence Map - what documents support what propositions
+    4. Witness Matrix - who says what and why it matters
+    5. Theory Comparison - each side's story and its weaknesses
+    6. Missing Pieces - what's not in evidence but should be
+
+    STRATEGIC INSIGHTS TO EXTRACT:
+    - What is Process Holdings terrified we'll find?
+    - What admissions have they inadvertently made?
+    - Which witnesses are vulnerable on cross-examination?
+    - What documents would change everything?
+    - Where are the logical impossibilities in their case?
+
+    KNOWLEDGE ORGANIZATION:
+    Create mental folders:
+    - "Their Mistakes" - every error in their case
+    - "Our Advantages" - every strong point for Lismore
+    - "Danger Zones" - where we're vulnerable
+    - "Opportunities" - unexplored angles
+    - "Kill Shots" - case-ending revelations
+
+    Remember: After this phase, you should be able to:
+    - Argue either side's case from memory
+    - Identify the winning path for Lismore
+    - Spot every weakness in Process Holdings' position
+    - Know what questions to ask in cross-examination
+    - Understand what evidence would be decisive
+
+    This is not just reading - this is becoming the case expert who knows more about this dispute than anyone else alive.
     """,
     
     "1": """
