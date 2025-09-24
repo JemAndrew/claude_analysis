@@ -8,11 +8,14 @@ python-docx>=0.8.11
 pdf2image>=1.16.0
 pytesseract>=0.3.10
 Pillow>=10.0.0
-PyMuPDF>=1.23.0  # For PDF extraction
+PyMuPDF>=1.23.0
 
 # Data Processing
 pandas>=2.0.0
 numpy>=1.24.0
+
+# Text Processing & Encoding
+chardet>=5.0.0  # For detecting file encodings
 
 # Utilities
 tqdm>=4.65.0  # Progress bars
@@ -22,16 +25,15 @@ aiofiles>=23.0.0  # Async file operations
 requests>=2.31.0
 python-dateutil>=2.8.2
 
+# For OCR support (if processing scanned PDFs)
+# Note: pytesseract requires Tesseract-OCR to be installed separately
+# Windows: https://github.com/UB-Mannheim/tesseract/wiki
+# Mac: brew install tesseract
+# Linux: sudo apt-get install tesseract-ocr
 
-# for testing api development curl https://api.anthropic.com/v1/messages \
-#        --header "api key" \
- #       --header "anthropic-version: 2023-06-01" \
-  #      --header "content-type: application/json" \
-    #    --data \
-   # '{
-     #   "model": "claude-sonnet-4-20250514",
-      #  "max_tokens": 1024,
-       # "messages": [
-         #   {"role": "user", "content": "Hello, world"}
-        #]
-    #}'
+# For better PDF extraction (alternative to PyPDF2)
+pdfplumber>=0.9.0
+
+# For document format detection
+python-magic-bin>=0.4.14  # Windows
+# python-magic>=0.4.27  # Mac/Linux

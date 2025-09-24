@@ -1,11 +1,17 @@
-﻿# document_processor.py (COMPLETE FILE)
+﻿# document_processor.py - FIXED VERSION
 """
 Core document processing engine that handles phase-by-phase analysis.
+Now handles PDFs, DOCX, TXT, and other file types properly.
 """
 
 import json
 from typing import List, Dict, Optional
 from datetime import datetime
+from pathlib import Path
+import PyPDF2
+import docx
+import chardet
+
 from api_client import ClaudeAPIClient
 from master_prompt import get_master_prompt
 from phase_prompts import (
@@ -28,9 +34,152 @@ class DocumentProcessor:
         self.current_phase = None
         self.documents = []
         
+    def extract_text_from_file(self, file_path: str) -> str:
+        """
+        Extract text from any file type
+        
+        Args:
+            file_path: Path to the file
+            
+        Returns:
+            Extracted text content
+        """
+        path = Path(file_path)
+        extension = path.suffix.lower()
+        
+        try:
+            # PDF files
+            if extension == '.pdf':
+                return self._extract_from_pdf(file_path)
+            
+            # Word documents
+            elif extension in ['.docx', '.doc']:
+                return self._extract_from_docx(file_path)
+            
+            # Text-based files
+            elif extension in ['.txt', '.md', '.rtf', '.csv', '.log']:
+                return self._extract_from_text(file_path)
+            
+            # JSON files
+            elif extension == '.json':
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    return json.dumps(data, indent=2)
+            
+            # HTML/XML files
+            elif extension in ['.html', '.htm', '.xml']:
+                return self._extract_from_text(file_path)
+            
+            # Default: try to read as text
+            else:
+                print(f"  ⚠️ Unknown file type {extension}, attempting text extraction...")
+                return self._extract_from_text(file_path)
+                
+        except Exception as e:
+            print(f"  ❌ Error extracting from {path.name}: {e}")
+            return f"[Error reading file: {path.name}]"
+    
+    def _extract_from_pdf(self, file_path: str) -> str:
+        """Extract text from PDF file"""
+        text_parts = []
+        
+        try:
+            with open(file_path, 'rb') as file:
+                reader = PyPDF2.PdfReader(file)
+                num_pages = len(reader.pages)
+                
+                print(f"    Extracting {num_pages} pages from PDF...")
+                
+                for page_num in range(num_pages):
+                    try:
+                        page = reader.pages[page_num]
+                        text = page.extract_text()
+                        if text.strip():
+                            text_parts.append(text)
+                    except Exception as e:
+                        print(f"      Warning: Could not extract page {page_num + 1}: {e}")
+                
+                if not text_parts:
+                    print(f"      Warning: No text extracted from PDF, might be scanned/image-based")
+                    return "[PDF appears to be image-based - OCR required]"
+                
+                return "\n\n".join(text_parts)
+                
+        except Exception as e:
+            print(f"    Error reading PDF: {e}")
+            # Try alternative method with PyMuPDF if available
+            try:
+                import fitz  # PyMuPDF
+                doc = fitz.open(file_path)
+                text = ""
+                for page in doc:
+                    text += page.get_text()
+                doc.close()
+                return text
+            except ImportError:
+                return f"[Error reading PDF: {e}]"
+    
+    def _extract_from_docx(self, file_path: str) -> str:
+        """Extract text from DOCX file"""
+        try:
+            doc = docx.Document(file_path)
+            full_text = []
+            
+            for paragraph in doc.paragraphs:
+                if paragraph.text.strip():
+                    full_text.append(paragraph.text)
+            
+            # Also extract from tables
+            for table in doc.tables:
+                for row in table.rows:
+                    row_text = []
+                    for cell in row.cells:
+                        if cell.text.strip():
+                            row_text.append(cell.text)
+                    if row_text:
+                        full_text.append(" | ".join(row_text))
+            
+            return "\n\n".join(full_text)
+            
+        except Exception as e:
+            print(f"    Error reading DOCX: {e}")
+            return f"[Error reading DOCX: {e}]"
+    
+    def _extract_from_text(self, file_path: str) -> str:
+        """Extract text from text-based files with encoding detection"""
+        try:
+            # First, try UTF-8
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    return f.read()
+            except UnicodeDecodeError:
+                pass
+            
+            # Detect encoding
+            with open(file_path, 'rb') as f:
+                raw_data = f.read()
+                result = chardet.detect(raw_data)
+                encoding = result['encoding']
+                
+                if encoding:
+                    return raw_data.decode(encoding)
+                else:
+                    # Try common encodings
+                    for enc in ['latin-1', 'cp1252', 'iso-8859-1']:
+                        try:
+                            return raw_data.decode(enc)
+                        except:
+                            continue
+                    
+                    return "[Could not decode file - unknown encoding]"
+                    
+        except Exception as e:
+            print(f"    Error reading text file: {e}")
+            return f"[Error reading file: {e}]"
+    
     def load_documents(self, document_paths: List[str]) -> bool:
         """
-        Load documents from file paths
+        Load documents from file paths - handles all file types
         
         Args:
             document_paths: List of paths to document files
@@ -40,15 +189,40 @@ class DocumentProcessor:
         """
         try:
             self.documents = []
+            successful = 0
+            failed = 0
+            
             for path in document_paths:
-                with open(path, 'r', encoding='utf-8') as f:
+                path_obj = Path(path)
+                
+                if not path_obj.exists():
+                    print(f"  ⚠️ File not found: {path}")
+                    failed += 1
+                    continue
+                
+                print(f"  Loading: {path_obj.name}")
+                
+                # Extract text based on file type
+                content = self.extract_text_from_file(str(path_obj))
+                
+                if content and not content.startswith("[Error"):
                     self.documents.append({
-                        'path': path,
-                        'content': f.read(),
-                        'filename': path.split('/')[-1]
+                        'path': str(path_obj),
+                        'content': content,
+                        'filename': path_obj.name
                     })
-            print(f"Loaded {len(self.documents)} documents successfully")
-            return True
+                    successful += 1
+                else:
+                    print(f"    ❌ Failed to extract content from {path_obj.name}")
+                    failed += 1
+            
+            print(f"\n📊 Loading Summary:")
+            print(f"  ✅ Successfully loaded: {successful} documents")
+            if failed > 0:
+                print(f"  ❌ Failed to load: {failed} documents")
+            
+            return successful > 0
+            
         except Exception as e:
             print(f"Error loading documents: {e}")
             return False
@@ -71,6 +245,10 @@ class DocumentProcessor:
         self.current_phase = phase_num
         docs_to_process = documents or self.documents
         
+        if not docs_to_process:
+            print("ERROR: No documents to process!")
+            return {}
+        
         # Get previous knowledge for context
         previous_knowledge = self.knowledge_manage.get_previous_knowledge(phase_num)
         
@@ -84,15 +262,24 @@ class DocumentProcessor:
         full_prompt = self._build_full_prompt(master, phase_prompt, previous_knowledge)
         
         # 4. Prepare documents for analysis
-        document_texts = [doc['content'] for doc in docs_to_process]
+        document_texts = []
+        for doc in docs_to_process:
+            text = doc['content']
+            # Truncate very long documents to avoid token limits
+            if len(text) > 50000:
+                text = text[:45000] + "\n\n[...document truncated for length...]\n\n" + text[-5000:]
+            document_texts.append(text)
         
         print(f"Sending {len(document_texts)} documents for analysis...")
         
         # 5. Send to Claude for initial analysis
+        # Fix the phase format for api_client
+        api_phase = f"phase_{phase_num.lower()}" if phase_num else None
+        
         response = self.api_client.analyse_documents(
             documents=document_texts,
             prompt=full_prompt,
-            phase=phase_num,
+            phase=api_phase,
             context=previous_knowledge
         )
         
@@ -215,11 +402,14 @@ class DocumentProcessor:
         - Areas where Process Holdings seems vulnerable
         """
         
+        # Fix phase format for API
+        api_phase = f"phase_{phase_num.lower()}_learning"
+        
         # Get Claude's self-generated enhancement
         learning = self.api_client.analyse_documents(
             documents=[],  # No documents needed for prompt generation
             prompt=enhancement_prompt,
-            phase=f"{phase_num}_learning"
+            phase=api_phase
         )
         
         # Store the learning for future use
@@ -243,18 +433,22 @@ class DocumentProcessor:
         """
         
         # Get document texts
-        document_texts = [doc['content'] for doc in documents]
+        document_texts = [doc['content'][:50000] for doc in documents]
+        
+        # Fix phase format
+        api_phase_enhanced = f"phase_{phase_num.lower()}_enhanced"
         
         # Second, enhanced analysis
         enhanced_response = self.api_client.analyse_documents(
             documents=document_texts,
             prompt=enhanced_full_prompt,
-            phase=f"{phase_num}_enhanced",
+            phase=api_phase_enhanced,
             context=previous_knowledge
         )
         
         return enhanced_response
     
+    # Keep all your other methods unchanged...
     def run_full_analysis(self) -> Dict:
         """
         Run all phases in sequence
