@@ -1,399 +1,413 @@
-# src/utils.py
+# utils.py (COMPLETE FILE)
 """
-Utility functions for document processing, batching, and analysis
-Supports the Opus 4.1 litigation investigation system
+Utility functions for document processing, file handling, and analysis support.
 """
 
+import os
 import re
-from pathlib import Path
-from typing import Dict, List, Any, Optional, Tuple, Any
 import json
-import logging
+import hashlib
+from typing import Dict, List, Optional, Tuple, Any
+from datetime import datetime
+import PyPDF2
+import docx
+import chardet
 
-logger = logging.getLogger(__name__)
-
-# In utils.py, update the load_documents function:
-def load_documents(project_root: Path) -> List[Dict]:
-    """
-    Load documents with Opus 4.1 preprocessing
-    Now includes metadata from document processor
-    """
-    documents = []
-    text_dir = project_root / "documents" / "processed" / "text"
-    metadata_dir = project_root / "documents" / "processed" / "metadata"
+class DocumentUtils:
+    """Utilities for document handling and processing"""
     
-    if not text_dir.exists():
-        logger.warning(f"No processed documents found at {text_dir}")
-        return []
-    
-    for text_file in text_dir.glob("*.txt"):
+    @staticmethod
+    def extract_text_from_file(filepath: str) -> Dict[str, Any]:
+        """
+        Extract text from various file formats
+        
+        Args:
+            filepath: Path to the file
+            
+        Returns:
+            Dictionary with content and metadata
+        """
+        file_ext = os.path.splitext(filepath)[1].lower()
+        filename = os.path.basename(filepath)
+        
         try:
-            doc_id = text_file.stem
+            if file_ext == '.pdf':
+                content = DocumentUtils._extract_pdf_text(filepath)
+            elif file_ext in ['.doc', '.docx']:
+                content = DocumentUtils._extract_word_text(filepath)
+            elif file_ext == '.txt':
+                content = DocumentUtils._extract_txt_text(filepath)
+            elif file_ext in ['.eml', '.msg']:
+                content = DocumentUtils._extract_email_text(filepath)
+            else:
+                # Try as text file
+                content = DocumentUtils._extract_txt_text(filepath)
             
-            # Load text content
-            with open(text_file, 'r', encoding='utf-8') as f:
-                content = f.read()
+            return {
+                'filename': filename,
+                'path': filepath,
+                'content': content,
+                'extension': file_ext,
+                'size': os.path.getsize(filepath),
+                'hash': DocumentUtils._generate_file_hash(filepath),
+                'extracted_at': datetime.now().isoformat()
+            }
             
-            # Try to load metadata
-            doc_metadata = {}
-            metadata_file = metadata_dir / f"{doc_id}.json"
-            if metadata_file.exists():
-                with open(metadata_file, 'r', encoding='utf-8') as f:
-                    doc_metadata = json.load(f)
-            
-            documents.append({
-                'doc_id': doc_id,
-                'text': content,
-                'date': extract_date_from_content(content),  # Still extract from content
-                'type': identify_document_type(doc_metadata.get('filename', doc_id)),
-                'length': len(content),
-                'forensic_priority': assess_forensic_priority(content),
-                'extraction_quality': doc_metadata.get('extraction_quality', 1.0),
-                'original_filename': doc_metadata.get('filename', 'unknown'),
-                'page_count': doc_metadata.get('page_count', 0),
-                'extraction_method': doc_metadata.get('extraction_method', 'unknown')
-            })
         except Exception as e:
-            logger.error(f"Error loading document {text_file}: {e}")
+            print(f"Error extracting text from {filepath}: {e}")
+            return {
+                'filename': filename,
+                'path': filepath,
+                'content': '',
+                'error': str(e),
+                'extension': file_ext
+            }
     
-    # Sort by forensic priority
-    documents.sort(key=lambda x: x.get('forensic_priority', 0), reverse=True)
+    @staticmethod
+    def _extract_pdf_text(filepath: str) -> str:
+        """Extract text from PDF file"""
+        text = []
+        try:
+            with open(filepath, 'rb') as file:
+                pdf_reader = PyPDF2.PdfReader(file)
+                for page_num in range(len(pdf_reader.pages)):
+                    page = pdf_reader.pages[page_num]
+                    text.append(f"[Page {page_num + 1}]\n{page.extract_text()}")
+            return '\n'.join(text)
+        except Exception as e:
+            print(f"PDF extraction error: {e}")
+            return ""
     
-    logger.info(f"Loaded {len(documents)} documents from {text_dir}")
-    return documents
+    @staticmethod
+    def _extract_word_text(filepath: str) -> str:
+        """Extract text from Word document"""
+        try:
+            doc = docx.Document(filepath)
+            text = []
+            for paragraph in doc.paragraphs:
+                if paragraph.text.strip():
+                    text.append(paragraph.text)
+            return '\n'.join(text)
+        except Exception as e:
+            print(f"Word extraction error: {e}")
+            return ""
+    
+    @staticmethod
+    def _extract_txt_text(filepath: str) -> str:
+        """Extract text from text file with encoding detection"""
+        try:
+            # Detect encoding
+            with open(filepath, 'rb') as file:
+                raw = file.read()
+                result = chardet.detect(raw)
+                encoding = result['encoding'] or 'utf-8'
+            
+            # Read with detected encoding
+            with open(filepath, 'r', encoding=encoding, errors='ignore') as file:
+                return file.read()
+        except Exception as e:
+            print(f"Text extraction error: {e}")
+            return ""
+    
+    @staticmethod
+    def _extract_email_text(filepath: str) -> str:
+        """Extract text from email file (basic implementation)"""
+        # This would need proper email parsing library for production
+        return DocumentUtils._extract_txt_text(filepath)
+    
+    @staticmethod
+    def _generate_file_hash(filepath: str) -> str:
+        """Generate SHA256 hash of file for integrity checking"""
+        sha256_hash = hashlib.sha256()
+        with open(filepath, "rb") as f:
+            for byte_block in iter(lambda: f.read(4096), b""):
+                sha256_hash.update(byte_block)
+        return sha256_hash.hexdigest()
 
-def batch_documents(documents: List[Dict], batch_size: Optional[int] = None) -> List[List[Dict]]:
-    """
-    Optimised batching for Opus 4.1 processing
+class AnalysisUtils:
+    """Utilities for analysis and data processing"""
     
-    Args:
-        documents: List of document dictionaries
-        batch_size: Maximum documents per batch (default 40)
+    @staticmethod
+    def extract_dates(text: str) -> List[Dict[str, Any]]:
+        """
+        Extract dates from text
         
-    Returns:
-        List of document batches
-    """
-    if batch_size is None:
-        batch_size = 40  # Opus 4.1 optimal
-    
-    batches = []
-    current_batch = []
-    current_size = 0
-    max_batch_chars = 150000  # Character limit per batch
-    
-    for doc in documents:
-        doc_size = len(doc.get('text', ''))
+        Args:
+            text: Text to analyse
+            
+        Returns:
+            List of date occurrences with context
+        """
+        dates = []
         
-        # Check if adding this doc would exceed limits
-        if (current_size + doc_size > max_batch_chars or 
-            len(current_batch) >= batch_size) and current_batch:
-            batches.append(current_batch)
-            current_batch = []
-            current_size = 0
+        # Common date patterns
+        patterns = [
+            (r'\d{1,2}[/-]\d{1,2}[/-]\d{2,4}', 'DD/MM/YYYY or MM/DD/YYYY'),
+            (r'\d{1,2}\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{2,4}', 'DD Month YYYY'),
+            (r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{2,4}', 'Month DD, YYYY'),
+            (r'\d{4}[/-]\d{1,2}[/-]\d{1,2}', 'YYYY-MM-DD'),
+        ]
         
-        current_batch.append(doc)
-        current_size += doc_size
+        for pattern, format_type in patterns:
+            matches = re.finditer(pattern, text, re.IGNORECASE)
+            for match in matches:
+                # Get context (50 chars before and after)
+                start = max(0, match.start() - 50)
+                end = min(len(text), match.end() + 50)
+                context = text[start:end]
+                
+                dates.append({
+                    'date_string': match.group(),
+                    'format': format_type,
+                    'position': match.start(),
+                    'context': context
+                })
+        
+        return dates
     
-    # Add remaining documents
-    if current_batch:
-        batches.append(current_batch)
+    @staticmethod
+    def extract_money_references(text: str) -> List[Dict[str, Any]]:
+        """
+        Extract monetary references from text
+        
+        Args:
+            text: Text to analyse
+            
+        Returns:
+            List of money references with context
+        """
+        money_refs = []
+        
+        # Money patterns (GBP focused but includes others)
+        patterns = [
+            (r'£[\d,]+\.?\d*', 'GBP'),
+            (r'GBP\s*[\d,]+\.?\d*', 'GBP'),
+            (r'\$[\d,]+\.?\d*', 'USD'),
+            (r'€[\d,]+\.?\d*', 'EUR'),
+            (r'[\d,]+\.?\d*\s*(?:pounds?|sterling)', 'GBP'),
+        ]
+        
+        for pattern, currency in patterns:
+            matches = re.finditer(pattern, text, re.IGNORECASE)
+            for match in matches:
+                # Extract context
+                start = max(0, match.start() - 100)
+                end = min(len(text), match.end() + 100)
+                context = text[start:end]
+                
+                money_refs.append({
+                    'amount_string': match.group(),
+                    'currency': currency,
+                    'position': match.start(),
+                    'context': context
+                })
+        
+        return money_refs
     
-    logger.info(f"Created {len(batches)} batches from {len(documents)} documents")
-    return batches
+    @staticmethod
+    def extract_email_addresses(text: str) -> List[str]:
+        """Extract email addresses from text"""
+        pattern = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
+        return list(set(re.findall(pattern, text)))
+    
+    @staticmethod
+    def extract_phone_numbers(text: str) -> List[str]:
+        """Extract UK phone numbers from text"""
+        patterns = [
+            r'\+44\s?\d{2,4}\s?\d{3,4}\s?\d{3,4}',
+            r'0\d{2,4}\s?\d{3,4}\s?\d{3,4}',
+            r'\(\d{2,4}\)\s?\d{3,4}\s?\d{3,4}'
+        ]
+        
+        numbers = []
+        for pattern in patterns:
+            numbers.extend(re.findall(pattern, text))
+        
+        return list(set(numbers))
+    
+    @staticmethod
+    def calculate_document_similarity(doc1: str, doc2: str) -> float:
+        """
+        Calculate similarity between two documents (simple implementation)
+        
+        Args:
+            doc1: First document text
+            doc2: Second document text
+            
+        Returns:
+            Similarity score (0-1)
+        """
+        # Simple word-based similarity (could use more sophisticated methods)
+        words1 = set(doc1.lower().split())
+        words2 = set(doc2.lower().split())
+        
+        if not words1 or not words2:
+            return 0.0
+        
+        intersection = words1.intersection(words2)
+        union = words1.union(words2)
+        
+        return len(intersection) / len(union)
 
-def format_batch_with_metadata(batch: List[Dict]) -> str:
-    """
-    Format document batch with enhanced metadata for Opus 4.1
+class ReportUtils:
+    """Utilities for report formatting and generation"""
     
-    Args:
-        batch: List of document dictionaries
+    @staticmethod
+    def format_header(title: str, width: int = 80) -> str:
+        """Format a report header"""
+        return f"\n{'='*width}\n{title.center(width)}\n{'='*width}\n"
+    
+    @staticmethod
+    def format_section(title: str, width: int = 80) -> str:
+        """Format a section header"""
+        return f"\n{title}\n{'-'*min(len(title), width)}\n"
+    
+    @staticmethod
+    def format_evidence_list(evidence_items: List[Tuple[str, str]]) -> str:
+        """
+        Format a list of evidence items
         
-    Returns:
-        Formatted string for API processing
-    """
-    formatted = []
+        Args:
+            evidence_items: List of (description, reference) tuples
+            
+        Returns:
+            Formatted string
+        """
+        formatted = []
+        for idx, (description, reference) in enumerate(evidence_items, 1):
+            formatted.append(f"{idx}. {description}")
+            formatted.append(f"   Evidence: {reference}")
+        return '\n'.join(formatted)
     
-    for doc in batch:
-        # Truncate content to 3000 chars for processing efficiency
-        content = doc.get('text', '')[:3000]
+    @staticmethod
+    def format_timeline(events: List[Tuple[str, str, str]]) -> str:
+        """
+        Format timeline events
         
-        doc_text = f"""
-[DOCUMENT ID: {doc.get('doc_id', 'unknown')}]
-[DATE: {doc.get('date', 'unknown')}]
-[TYPE: {doc.get('type', 'unknown')}]
-[FORENSIC PRIORITY: {doc.get('forensic_priority', 0)}]
-[LENGTH: {doc.get('length', 0)} chars]
-[FORENSIC NOTES: Check metadata for authenticity]
-[CONTENT START]
-{content}
-[CONTENT END]
-"""
-        formatted.append(doc_text.strip())
+        Args:
+            events: List of (date, event, reference) tuples
+            
+        Returns:
+            Formatted timeline
+        """
+        formatted = []
+        for date, event, reference in sorted(events):
+            formatted.append(f"{date}: {event}")
+            if reference:
+                formatted.append(f"         Ref: {reference}")
+        return '\n'.join(formatted)
     
-    return "\n\n".join(formatted)
+    @staticmethod
+    def generate_table_of_contents(reports: Dict[str, str]) -> str:
+        """Generate table of contents for reports"""
+        toc = ["TABLE OF CONTENTS", "="*40]
+        
+        for phase, phase_reports in reports.items():
+            toc.append(f"\nPhase {phase}:")
+            for report_name, filepath in phase_reports.items():
+                filename = os.path.basename(filepath)
+                toc.append(f"  - {report_name}: {filename}")
+        
+        return '\n'.join(toc)
 
-def extract_date_from_content(content: str) -> str:
-    """
-    Extract date from document content using pattern matching
+class ValidationUtils:
+    """Utilities for validation and error checking"""
     
-    Args:
-        content: Document text
+    @staticmethod
+    def validate_document_structure(doc: Dict) -> Tuple[bool, List[str]]:
+        """
+        Validate document structure
         
-    Returns:
-        Date string or 'unknown'
-    """
-    # Multiple date patterns to try
-    date_patterns = [
-        r'\b(\d{1,2}[-/]\d{1,2}[-/]\d{2,4})\b',  # DD-MM-YYYY or similar
-        r'\b(\d{1,2}\s+(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{2,4})\b',  # DD Month YYYY
-        r'\b((?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{1,2},?\s+\d{2,4})\b',  # Month DD, YYYY
-        r'\b(\d{4}[-/]\d{1,2}[-/]\d{1,2})\b',  # YYYY-MM-DD
-    ]
+        Args:
+            doc: Document dictionary
+            
+        Returns:
+            Tuple of (is_valid, list_of_errors)
+        """
+        errors = []
+        required_fields = ['content', 'filename']
+        
+        for field in required_fields:
+            if field not in doc or not doc[field]:
+                errors.append(f"Missing required field: {field}")
+        
+        if 'content' in doc and len(doc['content']) < 10:
+            errors.append("Content too short (< 10 characters)")
+        
+        return len(errors) == 0, errors
     
-    for pattern in date_patterns:
-        match = re.search(pattern, content, re.IGNORECASE)
-        if match:
-            return match.group(1)
-    
-    return "unknown"
+    @staticmethod
+    def validate_phase_sequence(completed_phases: List[str], 
+                               target_phase: str) -> Tuple[bool, str]:
+        """
+        Validate if target phase can be run
+        
+        Args:
+            completed_phases: List of completed phase IDs
+            target_phase: Phase to validate
+            
+        Returns:
+            Tuple of (is_valid, error_message)
+        """
+        phase_dependencies = {
+            '0A': [],
+            '0B': ['0A'],
+            '1': ['0A', '0B'],
+            '2': ['0A', '0B', '1'],
+            '3': ['0A', '0B', '1', '2'],
+            '4': ['0A', '0B', '1', '2', '3'],
+            '5': ['0A', '0B', '1', '2', '3', '4'],
+            '6': ['0A', '0B', '1', '2', '3', '4', '5'],
+            '7': ['0A', '0B', '1', '2', '3', '4', '5', '6']
+        }
+        
+        if target_phase not in phase_dependencies:
+            return False, f"Unknown phase: {target_phase}"
+        
+        required = phase_dependencies[target_phase]
+        missing = [p for p in required if p not in completed_phases]
+        
+        if missing:
+            return False, f"Missing prerequisite phases: {', '.join(missing)}"
+        
+        return True, ""
 
-def identify_document_type(filename: str) -> str:
-    """
-    Identify document type with litigation categories
+class ConfigUtils:
+    """Configuration and environment utilities"""
     
-    Args:
-        filename: Name of the file
+    @staticmethod
+    def load_config(config_path: str = "./config.json") -> Dict:
+        """Load configuration from file"""
+        default_config = {
+            'output_dir': './outputs',
+            'knowledge_dir': './knowledge_store',
+            'max_documents': 1000,
+            'max_tokens': 4096,
+            'temperature': 0.3,
+            'model': 'claude-3-opus-20240229'
+        }
         
-    Returns:
-        Document type string
-    """
-    filename_lower = filename.lower()
-    
-    # Priority order matters - check most specific first
-    type_patterns = {
-        'board_minutes': ['minutes', 'board meeting'],
-        'board_resolution': ['resolution', 'board resolution'],
-        'email': ['email', 'e-mail', 'mail'],
-        'contract': ['agreement', 'contract', 'deed', 'mou'],
-        'report': ['report', 'analysis', 'assessment'],
-        'correspondence': ['letter', 'memo', 'memorandum'],
-        'legal_advice': ['legal', 'counsel', 'advice', 'opinion'],
-        'financial': ['financial', 'accounts', 'audit', 'balance'],
-        'due_diligence': ['due diligence', 'dd', 'diligence'],
-        'presentation': ['presentation', 'slides', 'deck'],
-    }
-    
-    for doc_type, patterns in type_patterns.items():
-        if any(pattern in filename_lower for pattern in patterns):
-            return doc_type
-    
-    return "general"
-
-def assess_forensic_priority(content: str) -> int:
-    """
-    Assess forensic priority for Opus 4.1 analysis
-    
-    Args:
-        content: Document text
+        if os.path.exists(config_path):
+            try:
+                with open(config_path, 'r') as f:
+                    config = json.load(f)
+                    return {**default_config, **config}
+            except Exception as e:
+                print(f"Error loading config: {e}")
         
-    Returns:
-        Priority score (0-100)
-    """
-    priority = 0
-    content_lower = content.lower()
+        return default_config
     
-    # High priority indicators with weights
-    priority_indicators = {
-        # Critical legal/privilege indicators
-        'privileged': 15,
-        'confidential': 10,
-        'without prejudice': 15,
-        'litigation privilege': 20,
-        'legal advice': 15,
+    @staticmethod
+    def check_environment() -> Dict[str, bool]:
+        """Check environment setup"""
+        checks = {
+            'api_key': bool(os.getenv('ANTHROPIC_API_KEY')),
+            'output_dir': os.path.exists('./outputs'),
+            'knowledge_dir': os.path.exists('./knowledge_store')
+        }
         
-        # Fraud and investigation indicators
-        'fraud': 20,
-        'investigation': 15,
-        'suspicious': 12,
-        'irregular': 10,
-        'manipulat': 15,  # Catches manipulation, manipulated
+        # Create directories if missing
+        os.makedirs('./outputs', exist_ok=True)
+        os.makedirs('./knowledge_store', exist_ok=True)
         
-        # Key parties
-        'mcnaughton': 20,
-        'vr capital': 15,
-        'lismore': 15,
-        'p&id': 15,
-        'nigeria': 10,
-        
-        # Decision-making indicators
-        'board resolution': 12,
-        'board meeting': 10,
-        'voting': 10,
-        '51%': 15,
-        'control': 10,
-        'approval': 8,
-        
-        # Financial indicators
-        'million': 5,
-        'billion': 8,
-        '$45': 10,  # VR's investment amount
-        'payment': 7,
-        
-        # Timing indicators
-        'october 2017': 15,  # VR investment date
-        'january 2020': 15,  # McNaughton warning
-        '2023': 10,  # Award set aside
-        
-        # Communication patterns
-        'concern': 8,
-        'warning': 10,
-        'risk': 8,
-        'issue': 5,
-        'problem': 7,
-    }
-    
-    for indicator, weight in priority_indicators.items():
-        if indicator in content_lower:
-            priority += weight
-    
-    # Cap at 100
-    return min(priority, 100)
-
-def extract_metadata_from_document(doc: Dict) -> Dict:
-    """
-    Extract additional metadata for forensic analysis
-    
-    Args:
-        doc: Document dictionary
-        
-    Returns:
-        Enhanced metadata dictionary
-    """
-    content = doc.get('text', '')
-    
-    metadata = {
-        'doc_id': doc.get('doc_id'),
-        'has_attachments': bool(re.search(r'attach|annex|append', content, re.IGNORECASE)),
-        'references_meetings': bool(re.search(r'meeting|conference|discussion', content, re.IGNORECASE)),
-        'references_board': bool(re.search(r'board|director', content, re.IGNORECASE)),
-        'references_legal': bool(re.search(r'legal|lawyer|counsel|attorney', content, re.IGNORECASE)),
-        'email_count': len(re.findall(r'[\w\.-]+@[\w\.-]+\.\w+', content)),
-        'url_count': len(re.findall(r'https?://[^\s]+', content)),
-        'monetary_references': len(re.findall(r'\$[\d,]+(?:\.\d{2})?(?:\s*(?:million|billion))?', content, re.IGNORECASE)),
-        'word_count': len(content.split()),
-        'paragraph_count': len([p for p in content.split('\n\n') if p.strip()]),
-    }
-    
-    return metadata
-
-def find_document_relationships(documents: List[Dict]) -> Dict[str, List[str]]:
-    """
-    Find relationships between documents based on references
-    
-    Args:
-        documents: List of document dictionaries
-        
-    Returns:
-        Dictionary mapping document IDs to related document IDs
-    """
-    relationships = {}
-    
-    for doc in documents:
-        doc_id = doc.get('doc_id', '')
-        content = doc.get('text', '')
-        related = []
-        
-        # Look for references to other documents
-        for other_doc in documents:
-            other_id = other_doc.get('doc_id', '')
-            if doc_id != other_id and other_id in content:
-                related.append(other_id)
-        
-        if related:
-            relationships[doc_id] = related
-    
-    return relationships
-
-def calculate_document_similarity(doc1: Dict, doc2: Dict) -> float:
-    """
-    Calculate similarity score between two documents
-    
-    Args:
-        doc1: First document
-        doc2: Second document
-        
-    Returns:
-        Similarity score (0-1)
-    """
-    # Simple implementation - could be enhanced with proper NLP
-    text1 = set(doc1.get('text', '').lower().split())
-    text2 = set(doc2.get('text', '').lower().split())
-    
-    if not text1 or not text2:
-        return 0.0
-    
-    intersection = text1 & text2
-    union = text1 | text2
-    
-    return len(intersection) / len(union) if union else 0.0
-
-def extract_key_phrases(content: str, top_n: int = 10) -> List[str]:
-    """
-    Extract key phrases from document content
-    
-    Args:
-        content: Document text
-        top_n: Number of top phrases to return
-        
-    Returns:
-        List of key phrases
-    """
-    # Simple implementation - extracts capitalised phrases
-    phrases = re.findall(r'[A-Z][A-Za-z\s]+(?:[A-Z][a-z]+)?', content)
-    
-    # Filter and count
-    phrase_counts = {}
-    for phrase in phrases:
-        phrase = phrase.strip()
-        if len(phrase) > 3 and len(phrase.split()) <= 5:
-            phrase_counts[phrase] = phrase_counts.get(phrase, 0) + 1
-    
-    # Sort by frequency
-    sorted_phrases = sorted(phrase_counts.items(), key=lambda x: x[1], reverse=True)
-    
-    return [phrase for phrase, count in sorted_phrases[:top_n]]
-
-def save_json_output(data: Any, output_path: Path, indent: int = 2):
-    """
-    Save data as JSON with proper formatting
-    
-    Args:
-        data: Data to save
-        output_path: Path to save file
-        indent: JSON indentation level
-    """
-    try:
-        output_path.parent.mkdir(parents=True, exist_ok=True)
-        with open(output_path, 'w', encoding='utf-8') as f:
-            json.dump(data, f, indent=indent, ensure_ascii=False)
-        logger.info(f"Saved output to {output_path}")
-    except Exception as e:
-        logger.error(f"Failed to save output to {output_path}: {e}")
-
-def load_json_file(file_path: Path) -> Optional[Dict]:
-    """
-    Load JSON file with error handling
-    
-    Args:
-        file_path: Path to JSON file
-        
-    Returns:
-        Dictionary or None if error
-    """
-    try:
-        if file_path.exists():
-            with open(file_path, 'r', encoding='utf-8') as f:
-                return json.load(f)
-    except Exception as e:
-        logger.error(f"Failed to load {file_path}: {e}")
-    return None
+        return checks

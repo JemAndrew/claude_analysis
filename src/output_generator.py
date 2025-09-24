@@ -1,1091 +1,783 @@
-# src/output_generator.py
+# output_generator.py (OPTIMISED VERSION)
 """
-Enhanced output generation module for Opus 4.1 litigation documents
-Generates tribunal-ready reports informed by all 6 phases of investigation
+Generates formatted outputs and reports from analysis results.
+Phases 0A & 0B: Knowledge retention only (no reports)
+Phases 1-7: Multiple strategic reports per phase with full Claude integration
 """
 
-from pathlib import Path
-from datetime import datetime
-from typing import Dict, List, Any, Optional
 import json
-import logging
-
-logger = logging.getLogger(__name__)
-
+from typing import Dict, List, Optional, Tuple
+from datetime import datetime
+import os
+from knowledge_manage import KnowledgeManager
+from api_client import ClaudeAPIClient
 
 class OutputGenerator:
-    """
-    Generates comprehensive litigation outputs informed by investigation findings
-    """
+    """Generates various output formats from analysis results"""
     
-    def __init__(self, investigator):
+    def __init__(self, knowledge_manage: KnowledgeManager):
         """
-        Initialise output generator with investigator reference
+        Initialise output generator
         
         Args:
-            investigator: ProgressiveLearningInvestigator instance
+            knowledge_manage: KnowledgeManager instance with analysis results
         """
-        self.investigator = investigator
-        self.api_client = investigator.api_client  # Add API access
-        self.project_root = investigator.project_root
-        self.outputs_dir = self.project_root / "outputs"
-        self.outputs_dir.mkdir(parents=True, exist_ok=True)
-        
-        # Reference to knowledge manager for data access
-        self.knowledge_base = investigator.knowledge_base
-        self.document_tracker = investigator.document_tracker
-        
-        # Storage for gathered findings
-        self.all_findings = {}
-        
-    async def generate_all_outputs(self):
-        """Generate all Opus 4.1 litigation documents with AI assistance"""
-        print("\n" + "="*50)
-        print("📝 GENERATING OPUS 4.1 LITIGATION DOCUMENTS")
-        print("="*50)
-        
-        try:
-            # First, gather all findings from the 6 phases
-            print("📊 Gathering investigation findings...")
-            self.all_findings = self._gather_all_phase_findings()
-            
-            # Core litigation documents
-            print("📄 Generating tribunal summary...")
-            await self.generate_tribunal_summary()
-            
-            print("🎯 Generating kill shot strategy...")
-            await self.generate_kill_shot_strategy()
-            
-            print("❓ Generating cross-examination script...")
-            await self.generate_cross_exam_script()
-            
-            print("⚖️ Generating adverse inference motion...")
-            await self.generate_adverse_inference_motion()
-            
-            # Forensic reports
-            print("🔍 Generating eDiscovery report...")
-            await self.generate_ediscovery_report()
-            
-            print("🔬 Generating forensics report...")
-            await self.generate_forensics_report()
-            
-            print("🔐 Generating privilege analysis...")
-            await self.generate_privilege_analysis()
-            
-            # Strategic documents
-            print("🎬 Generating opening statement...")
-            await self.generate_opening_statement()
-            
-            print("🎭 Generating closing argument...")
-            await self.generate_closing_argument()
-            
-            print("💰 Generating settlement analysis...")
-            await self.generate_settlement_analysis()
-            
-            # Supporting analyses
-            print("📊 Generating credibility matrix...")
-            await self.generate_credibility_matrix()
-            
-            print("🕐 Generating deception timeline...")
-            await self.generate_deception_timeline()
-            
-            print("👥 Generating witness plan...")
-            await self.generate_witness_plan()
-            
-            print("\n✅ All Opus 4.1 litigation documents generated!")
-            print(f"📂 Documents saved to: {self.outputs_dir}")
-            
-        except Exception as e:
-            logger.error(f"Error generating outputs: {e}")
-            print(f"⚠️ Error generating some outputs: {e}")
+        self.knowledge_manage = knowledge_manage
+        self.api_client = ClaudeAPIClient()  # For Claude-enhanced report generation
+        self.output_dir = "./outputs"
+        self.document_registry = {}
+        os.makedirs(self.output_dir, exist_ok=True)
     
-    def _gather_all_phase_findings(self) -> Dict:
-        """Collect all findings from the 6 phases of investigation"""
-        findings = {}
+    def register_documents(self, documents: List[Dict]):
+        """
+        Register documents with unique IDs for referencing
         
-        # Get findings from knowledge base (through KnowledgeManager)
-        for phase_num in range(1, 7):
-            phase_key = f'phase_{phase_num}'
-            phase_data = self.knowledge_base.get(phase_key, [])
-            
-            if phase_data:
-                # Combine all findings for this phase
-                if isinstance(phase_data, list):
-                    findings[phase_key] = "\n".join([
-                        item.get('findings', '') if isinstance(item, dict) else str(item)
-                        for item in phase_data
-                    ])
-                else:
-                    findings[phase_key] = str(phase_data)
-        
-        # Get phase findings from PhaseExecutor (this is where the actual findings are)
-        if hasattr(self.investigator, 'phase_executor'):
-            if hasattr(self.investigator.phase_executor, 'phase_findings'):
-                for phase, content in self.investigator.phase_executor.phase_findings.items():
-                    # Prioritise PhaseExecutor findings as they're the primary source
-                    findings[phase] = content
-        
-        # Add specific findings categories from knowledge base
-        findings['patterns'] = self.knowledge_base.get('patterns', {})
-        findings['anomalies'] = self.knowledge_base.get('anomalies', {})
-        findings['theories'] = self.knowledge_base.get('theories', {})
-        findings['evidence'] = self.knowledge_base.get('evidence', {})
-        findings['contradictions'] = self.knowledge_base.get('contradictions', {})
-        findings['kill_shots'] = self.knowledge_base.get('kill_shots', {})
-        findings['missing_docs'] = self.knowledge_base.get('missing_docs', {})
-        
-        return findings
+        Args:
+            documents: List of document dictionaries
+        """
+        for idx, doc in enumerate(documents, 1):
+            doc_id = f"DOC_{idx:04d}"
+            self.document_registry[doc_id] = {
+                'filename': doc.get('filename', doc.get('path', 'Unknown').split('/')[-1]),
+                'path': doc.get('path', 'Unknown'),
+                'pages': self._extract_page_count(doc.get('content', '')),
+                'content': doc.get('content', '')  # Store content for Claude analysis
+            }
     
-    async def generate_tribunal_summary(self):
-        """Generate executive summary informed by all 6 phases"""
+    def _extract_page_count(self, content: str) -> int:
+        """Extract approximate page count from content"""
+        return max(1, len(content) // 3000)
+    
+    def _format_evidence_reference(self, doc_id: str, page: Optional[int] = None, 
+                                  paragraph: Optional[int] = None) -> str:
+        """Format evidence reference"""
+        doc_info = self.document_registry.get(doc_id, {})
+        reference = f"[{doc_id}: {doc_info.get('filename', 'Unknown')}"
         
-        summary_prompt = f"""
-        Based on the complete 6-phase forensic investigation of VR Capital's documents, 
-        create an executive tribunal summary for the LCIA arbitration panel.
+        if page:
+            reference += f", p.{page}"
+        if paragraph:
+            reference += f", ¶{paragraph}"
         
-        PHASE 1 FINDINGS (Document Landscape & Forensics):
-        {self.all_findings.get('phase_1', 'No findings')[:2000]}
+        reference += "]"
+        return reference
+    
+    def _get_claude_enhanced_analysis(self, prompt: str, phase_data: Dict) -> str:
+        """
+        Get Claude to enhance report content with deeper analysis
         
-        PHASE 2 FINDINGS (Pattern Recognition):
-        {self.all_findings.get('phase_2', 'No findings')[:2000]}
+        Args:
+            prompt: Specific prompt for Claude
+            phase_data: Phase knowledge to analyse
+            
+        Returns:
+            Claude's enhanced analysis
+        """
+        full_prompt = f"""
+        Based on the following phase analysis, {prompt}
         
-        Control Patterns Found: {len(self.all_findings.get('patterns', {}).get('control_patterns', []))}
-        Deception Indicators: {len(self.all_findings.get('patterns', {}).get('deception_indicators', []))}
+        Phase Data:
+        {json.dumps(phase_data, indent=2)[:5000]}
         
-        PHASE 3 FINDINGS (Anomalies):
-        {self.all_findings.get('phase_3', 'No findings')[:2000]}
+        Document Registry:
+        {json.dumps(list(self.document_registry.keys()), indent=2)}
         
-        PHASE 4 FINDINGS (Legal Theories):
-        {self.all_findings.get('phase_4', 'No findings')[:2000]}
-        
-        PHASE 5 FINDINGS (Evidence Analysis):
-        {self.all_findings.get('phase_5', 'No findings')[:2000]}
-        
-        PHASE 6 FINDINGS (Kill Shots):
-        {self.all_findings.get('phase_6', 'No findings')[:2000]}
-        
-        Nuclear Kill Shots: {len(self.all_findings.get('kill_shots', {}).get('nuclear', []))}
-        Devastating Evidence: {len(self.all_findings.get('kill_shots', {}).get('devastating', []))}
-        
-        CREATE AN EXECUTIVE TRIBUNAL SUMMARY THAT:
-        1. Opens with the three most case-ending findings
-        2. Lists specific document IDs that prove VR's 51% control
-        3. Highlights patterns showing VR's consciousness of guilt
-        4. Identifies timeline impossibilities and contradictions
-        5. Summarises evidence of document withholding
-        6. Provides clear recommendations for tribunal
-        
-        Structure as:
-        - EXECUTIVE SUMMARY (2 paragraphs)
-        - CASE-ENDING FINDINGS (top 3 with document IDs)
-        - VR'S FATAL FLAWS (based on patterns found)
-        - LISMORE'S UNASSAILABLE POSITION (from evidence analysis)
-        - ADVERSE INFERENCE OPPORTUNITIES (missing documents)
-        - RECOMMENDATION TO TRIBUNAL
-        
-        Be specific. Use actual document IDs. Reference real findings.
-        This is for senior arbitrators - be precise and devastating.
+        CRITICAL: Every finding must reference specific documents using format [DOC_XXXX].
+        Be aggressive in identifying evidence that destroys Process Holdings' case.
+        Focus on what wins for Lismore.
         """
         
-        response = await self.api_client.make_api_call(
-            summary_prompt, 
-            phase='output_summary',
-            temperature=0.3  # Lower temperature for factual summary
+        response = self.api_client.analyse_documents(
+            documents=[],
+            prompt=full_prompt,
+            phase="report_generation"
         )
         
-        # Format and save
-        output = [
-            "# EXECUTIVE TRIBUNAL SUMMARY",
-            "",
-            f"**Generated**: {datetime.now().strftime('%Y-%m-%d %H:%M')}",
-            "**System**: Claude Opus 4.1 Forensic Analysis",
-            "**Investigation**: 6-Phase Progressive Learning Complete",
-            "",
-            response
-        ]
-        
-        self._save_output("00_EXECUTIVE_TRIBUNAL_SUMMARY.md", output)
+        return response
     
-    async def generate_kill_shot_strategy(self):
-        """Generate strategy based on actual kill shots found"""
-        
-        kill_shots = self.all_findings.get('kill_shots', {})
-        phase_6_findings = self.all_findings.get('phase_6', '')
-        
-        strategy_prompt = f"""
-        Create a detailed deployment strategy for the kill shots identified in our investigation.
-        
-        ACTUAL KILL SHOTS FOUND:
-        Nuclear (Case-Ending): {json.dumps(kill_shots.get('nuclear', []), indent=2)[:2000]}
-        Devastating (Claim-Destroying): {json.dumps(kill_shots.get('devastating', []), indent=2)[:2000]}
-        Severe (Credibility-Destroying): {json.dumps(kill_shots.get('severe', []), indent=2)[:2000]}
-        
-        PHASE 6 KILL SHOT ANALYSIS:
-        {phase_6_findings[:3000]}
-        
-        CREATE A DEPLOYMENT STRATEGY THAT INCLUDES:
-        
-        1. OPENING STATEMENT DEPLOYMENT
-           - Which 3 documents to lead with
-           - Exact phrasing for maximum impact
-           - Visual presentation approach
-        
-        2. WITNESS EXAMINATION SEQUENCE
-           - Order of document presentation
-           - Specific questions for each kill shot
-           - Trap sequences using contradictions
-        
-        3. CROSS-EXAMINATION AMBUSHES
-           - When to deploy each kill shot
-           - How to prevent escape routes
-           - Follow-up questions for denials
-        
-        4. CLOSING ARGUMENT CRESCENDO
-           - How to sequence for maximum impact
-           - Connecting kill shots to legal theories
-           - Final devastating summary
-        
-        5. SETTLEMENT LEVERAGE
-           - Which kill shots to preview in negotiations
-           - How to demonstrate strength without revealing all
-        
-        Be specific about document IDs, timing, and sequences.
-        This strategy must be actionable and devastating.
+    # ==================== PHASE 1 REPORTS (3 Reports) ====================
+    
+    def generate_phase_1_reports(self, phase_data: Dict) -> Dict[str, str]:
         """
-        
-        response = await self.api_client.make_api_call(
-            strategy_prompt,
-            phase='kill_shot_strategy',
-            temperature=0.4
-        )
-        
-        output = [
-            "# KILL SHOT DEPLOYMENT STRATEGY",
-            "",
-            f"**Generated**: {datetime.now().strftime('%Y-%m-%d %H:%M')}",
-            "**Classification**: HIGHLY CONFIDENTIAL - LITIGATION PRIVILEGE",
-            "",
-            response
-        ]
-        
-        self._save_output("01_KILL_SHOT_STRATEGY.md", output)
-    
-    async def generate_cross_exam_script(self):
-        """Generate script based on patterns and contradictions found"""
-        
-        patterns = self.all_findings.get('patterns', {})
-        contradictions = self.all_findings.get('contradictions', {})
-        phase_2_findings = self.all_findings.get('phase_2', '')
-        anomalies = self.all_findings.get('anomalies', {})
-        
-        cross_exam_prompt = f"""
-        Create a detailed cross-examination script based on our investigation findings.
-        
-        PATTERNS DISCOVERED (Phase 2):
-        Control Patterns: {json.dumps(patterns.get('control_patterns', []), indent=2)[:1500]}
-        Deception Patterns: {json.dumps(patterns.get('deception_indicators', []), indent=2)[:1500]}
-        
-        CONTRADICTIONS FOUND (Phase 5):
-        {json.dumps(contradictions, indent=2)[:1500]}
-        
-        ANOMALIES DETECTED (Phase 3):
-        {json.dumps(anomalies, indent=2)[:1500]}
-        
-        Pattern Analysis:
-        {phase_2_findings[:2000]}
-        
-        CREATE A CROSS-EXAMINATION SCRIPT WITH:
-        
-        1. CONTROL REALITY SEQUENCE
-           - Questions proving VR's 51% control
-           - Documents to present in order
-           - Anticipated denials and follow-ups
-        
-        2. KNOWLEDGE TIMELINE SEQUENCE
-           - Questions about McNaughton warning
-           - When VR knew about fraud indicators
-           - Documents proving knowledge
-        
-        3. CONTRADICTION CONFRONTATIONS
-           - Prior inconsistent statements
-           - Document vs testimony conflicts
-           - Impossible explanations to force
-        
-        4. PATTERN DEMONSTRATIONS
-           - Questions revealing deception patterns
-           - Document sequences showing consciousness of guilt
-           - Withholding pattern exposure
-        
-        5. CREDIBILITY DESTRUCTION
-           - Final sequence of devastating questions
-           - Documents that cannot be explained
-           - Admissions to extract
-        
-        Format as actual Q&A sequences with specific document references.
-        Include exact questions, expected answers, and follow-ups.
-        Make it impossible for witnesses to escape.
+        Generate Phase 1: Initial Document Landscape reports
+        Strategy: Map the battlefield, identify ammunition, spot weaknesses
         """
+        reports = {}
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         
-        response = await self.api_client.make_api_call(
-            cross_exam_prompt,
-            phase='cross_examination',
-            temperature=0.3
-        )
+        print("Generating Phase 1 reports with Claude enhancement...")
         
-        output = [
-            "# CROSS-EXAMINATION SCRIPT",
-            "",
-            f"**Generated**: {datetime.now().strftime('%Y-%m-%d %H:%M')}",
-            "**Target Witnesses**: VR Capital Representatives",
-            "",
-            response
-        ]
+        # 1. Document Classification & Priority Matrix
+        doc_matrix_prompt = """
+        Create a comprehensive document classification matrix that:
+        1. Categorises each document by type (contract, email, financial, board minutes, etc.)
+        2. Assigns priority ratings (Critical/High/Medium/Low) based on litigation value
+        3. Identifies which documents are "hot docs" that could damage Process Holdings
+        4. Flags documents that appear altered, missing pages, or suspicious
+        5. Maps document relationships and dependencies
         
-        self._save_output("02_CROSS_EXAMINATION_SCRIPT.md", output)
-    
-    async def generate_adverse_inference_motion(self):
-        """Generate adverse inference motion based on withholding patterns"""
-        
-        # Get adverse inference opportunities from document tracker
-        adverse_docs = []
-        if hasattr(self.document_tracker, 'generate_adverse_inference_report'):
-            adverse_docs = self.document_tracker.generate_adverse_inference_report()
-        
-        missing_docs = self.all_findings.get('missing_docs', {})
-        phase_3_anomalies = self.all_findings.get('phase_3', '')
-        
-        motion_prompt = f"""
-        Draft a formal motion for adverse inference based on VR Capital's document withholding.
-        
-        MISSING DOCUMENTS IDENTIFIED:
-        {json.dumps(adverse_docs[:20], indent=2)[:3000]}
-        
-        WITHHOLDING PATTERNS FOUND:
-        {json.dumps(missing_docs, indent=2)[:2000]}
-        
-        PRODUCTION ANOMALIES (Phase 3):
-        {phase_3_anomalies[:2000]}
-        
-        CREATE A FORMAL MOTION THAT:
-        
-        1. INTRODUCTION
-           - Establish legal basis for adverse inference
-           - Cite relevant arbitration rules
-        
-        2. PATTERN OF WITHHOLDING
-           - Systematic nature of missing documents
-           - Statistical analysis of production gaps
-           - Consciousness of guilt indicators
-        
-        3. SPECIFIC MISSING DOCUMENTS
-           - List top 20 with times referenced
-           - Explain significance of each
-           - Impact on case if produced
-        
-        4. LEGAL ARGUMENT
-           - Burden of production on VR
-           - Failure to explain gaps
-           - Inference requirements met
-        
-        5. REQUESTED INFERENCES
-           - Specific inferences for each category
-           - Impact on VR's claims
-           - Support for Lismore's defences
-        
-        6. RELIEF SOUGHT
-           - Adverse inferences
-           - Cost consequences
-           - Potential claim dismissal
-        
-        Draft in formal legal style for LCIA tribunal.
-        Be precise about document references and legal standards.
+        Format as a strategic matrix for the legal team.
         """
+        doc_matrix = self._get_claude_enhanced_analysis(doc_matrix_prompt, phase_data)
         
-        response = await self.api_client.make_api_call(
-            motion_prompt,
-            phase='adverse_inference',
-            temperature=0.2  # Very low for formal legal document
-        )
+        doc_matrix_content = f"""
+{'='*80}
+DOCUMENT CLASSIFICATION & PRIORITY MATRIX
+{'='*80}
+Generated: {datetime.now().strftime('%Y-%m-%d %H:%M')}
+Total Documents: {len(self.document_registry)}
+
+CLAUDE'S STRATEGIC CLASSIFICATION:
+{'-'*80}
+{doc_matrix}
+
+PRIORITY ACTIONS:
+1. Immediate review of all "Critical" classified documents
+2. Deep forensic analysis of suspected altered documents
+3. Cross-reference related document chains
+{'='*80}
+"""
         
-        output = [
-            "# MOTION FOR ADVERSE INFERENCE",
-            "",
-            f"**Date**: {datetime.now().strftime('%Y-%m-%d')}",
-            "**Tribunal**: LCIA Arbitration",
-            "**Re**: VR Capital v Lismore Capital",
-            "",
-            response
-        ]
+        matrix_file = f"{self.output_dir}/1_document_priority_matrix_{timestamp}.txt"
+        with open(matrix_file, 'w', encoding='utf-8') as f:
+            f.write(doc_matrix_content)
+        reports['document_matrix'] = matrix_file
         
-        self._save_output("03_ADVERSE_INFERENCE_MOTION.md", output)
-    
-    async def generate_ediscovery_report(self):
-        """Generate eDiscovery analysis based on production patterns"""
+        # 2. Initial Irregularities & Red Flags Report
+        red_flags_prompt = """
+        Identify and analyse ALL irregularities and red flags found, including:
+        1. Missing documents that should logically exist (with specific references to documents mentioning them)
+        2. Chronological gaps or impossibilities
+        3. Metadata anomalies or signs of tampering
+        4. Unusual communication patterns or sudden changes
+        5. Documents that contradict each other
+        6. Any "too perfect" documents that might be fabricated
         
-        stats = {}
-        if hasattr(self.document_tracker, 'get_summary_stats'):
-            stats = self.document_tracker.get_summary_stats()
-        
-        patterns = self.all_findings.get('patterns', {})
-        phase_1_findings = self.all_findings.get('phase_1', '')
-        
-        report_prompt = f"""
-        Create a comprehensive eDiscovery analysis report based on our document investigation.
-        
-        PRODUCTION STATISTICS:
-        {json.dumps(stats, indent=2)}
-        
-        WITHHOLDING PATTERNS IDENTIFIED:
-        {json.dumps(patterns.get('withholding_patterns', []), indent=2)[:2000]}
-        
-        DOCUMENT LANDSCAPE ANALYSIS (Phase 1):
-        {phase_1_findings[:2000]}
-        
-        CREATE AN eDISCOVERY REPORT COVERING:
-        
-        1. EXECUTIVE SUMMARY
-           - Key findings about VR's production
-           - Systematic deficiencies identified
-           - Impact on case
-        
-        2. PRODUCTION ANALYSIS
-           - Documents produced vs referenced
-           - Date range gaps
-           - Document type analysis
-           - Custodian coverage
-        
-        3. MISSING DOCUMENT FAMILIES
-           - Board documentation gaps
-           - Email chain incompleteness
-           - Attachment analysis
-           - Meeting minutes absence
-        
-        4. FORENSIC RED FLAGS
-           - Metadata inconsistencies
-           - Production timing anomalies
-           - Selective disclosure patterns
-           - Format irregularities
-        
-        5. PRIVILEGE LOG ANALYSIS
-           - Questionable privilege claims
-           - Waiver indicators
-           - Crime-fraud possibilities
-        
-        6. RECOMMENDATIONS
-           - Further production demands
-           - Forensic examination needs
-           - Deposition priorities
-           - Motion practice
-        
-        Make this technical but accessible to arbitrators.
-        Include specific examples and document IDs where available.
+        Rank these by potential impact on the case. Be paranoid - assume Process Holdings is hiding something.
         """
+        red_flags = self._get_claude_enhanced_analysis(red_flags_prompt, phase_data)
         
-        response = await self.api_client.make_api_call(
-            report_prompt,
-            phase='ediscovery_report',
-            temperature=0.3
-        )
+        red_flags_content = f"""
+{'='*80}
+INITIAL IRREGULARITIES & RED FLAGS ANALYSIS
+{'='*80}
+⚠️ CRITICAL FINDINGS REQUIRING IMMEDIATE INVESTIGATION ⚠️
+
+{red_flags}
+
+RECOMMENDED IMMEDIATE ACTIONS:
+1. Forensic examination of flagged documents
+2. Deposition questions focused on identified gaps
+3. Discovery requests for missing referenced documents
+{'='*80}
+"""
         
-        output = [
-            "# eDISCOVERY ANALYSIS REPORT",
-            "",
-            f"**Generated**: {datetime.now().strftime('%Y-%m-%d %H:%M')}",
-            "**Analysis Type**: Forensic eDiscovery Review",
-            "",
-            response
-        ]
+        red_flags_file = f"{self.output_dir}/1_red_flags_analysis_{timestamp}.txt"
+        with open(red_flags_file, 'w', encoding='utf-8') as f:
+            f.write(red_flags_content)
+        reports['red_flags'] = red_flags_file
         
-        self._save_output("04_EDISCOVERY_ANALYSIS.md", output)
-    
-    async def generate_forensics_report(self):
-        """Generate document forensics report based on anomalies"""
+        # 3. Key Actor Network Analysis
+        actors_prompt = """
+        Map the complete network of actors and their roles:
+        1. Identify all individuals mentioned in documents with their roles
+        2. Map communication patterns between actors (who talks to whom, frequency, tone)
+        3. Identify power dynamics and decision-making hierarchy
+        4. Flag unusual exclusions/inclusions in communications
+        5. Spot any undisclosed relationships or conflicts
+        6. Identify who appears to be hiding information or acting suspiciously
         
-        anomalies = self.all_findings.get('anomalies', {})
-        phase_3_findings = self.all_findings.get('phase_3', '')
-        patterns = self.all_findings.get('patterns', {})
-        
-        forensics_prompt = f"""
-        Create a detailed document forensics report based on our anomaly detection.
-        
-        ANOMALIES DETECTED (Phase 3):
-        {json.dumps(anomalies, indent=2)[:2500]}
-        
-        FORENSIC ANALYSIS:
-        {phase_3_findings[:2000]}
-        
-        DECEPTION PATTERNS:
-        {json.dumps(patterns.get('deception_indicators', []), indent=2)[:1500]}
-        
-        CREATE A FORENSICS REPORT INCLUDING:
-        
-        1. METADATA ANOMALIES
-           - Creation date inconsistencies
-           - Modification patterns
-           - Author field irregularities
-           - System timestamp conflicts
-        
-        2. BACKDATING EVIDENCE
-           - Anachronistic references
-           - Future knowledge indicators
-           - Font/formatting issues
-           - Digital fingerprint mismatches
-        
-        3. PRODUCTION MANIPULATION
-           - Selective redaction patterns
-           - Missing pages indicators
-           - Resolution degradation
-           - OCR vs native format issues
-        
-        4. AUTHENTICATION CHALLENGES
-           - Documents lacking signatures
-           - Email header absence
-           - Chain of custody gaps
-           - Version control issues
-        
-        5. BEHAVIOURAL FORENSICS
-           - Consciousness of guilt language
-           - Sudden formality shifts
-           - Legal counsel involvement timing
-           - Defensive communication patterns
-        
-        6. EXPERT TESTIMONY PREPARATION
-           - Key findings for expert
-           - Demonstrative exhibits needed
-           - Cross-examination of opposing expert
-           - Standards and methodology
-        
-        Write technically but clearly for tribunal understanding.
-        Include specific document examples and forensic markers.
+        Focus on exposing hidden relationships that could benefit Lismore.
         """
+        actors = self._get_claude_enhanced_analysis(actors_prompt, phase_data)
         
-        response = await self.api_client.make_api_call(
-            forensics_prompt,
-            phase='forensics_report',
-            temperature=0.3
-        )
+        actors_content = f"""
+{'='*80}
+KEY ACTOR NETWORK & COMMUNICATION ANALYSIS
+{'='*80}
+
+{actors}
+
+STRATEGIC IMPLICATIONS:
+- Target depositions based on identified power players
+- Exploit identified conflicts of interest
+- Focus on actors showing suspicious behaviour patterns
+{'='*80}
+"""
         
-        output = [
-            "# DOCUMENT FORENSICS REPORT",
-            "",
-            f"**Generated**: {datetime.now().strftime('%Y-%m-%d %H:%M')}",
-            "**Classification**: Confidential - Litigation Privilege",
-            "",
-            response
-        ]
+        actors_file = f"{self.output_dir}/1_actor_network_analysis_{timestamp}.txt"
+        with open(actors_file, 'w', encoding='utf-8') as f:
+            f.write(actors_content)
+        reports['actor_network'] = actors_file
         
-        self._save_output("05_FORENSICS_REPORT.md", output)
+        print(f"✓ Generated 3 Phase 1 reports")
+        return reports
     
-    async def generate_privilege_analysis(self):
-        """Generate privilege log analysis"""
-        
-        phase_5_evidence = self.all_findings.get('phase_5', '')
-        patterns = self.all_findings.get('patterns', {})
-        
-        privilege_prompt = f"""
-        Analyse VR Capital's privilege claims based on our document review.
-        
-        EVIDENCE ANALYSIS (Phase 5):
-        {phase_5_evidence[:2000]}
-        
-        WITHHOLDING PATTERNS:
-        {json.dumps(patterns.get('withholding_patterns', []), indent=2)[:1500]}
-        
-        CREATE A PRIVILEGE ANALYSIS COVERING:
-        
-        1. OVERVIEW OF PRIVILEGE CLAIMS
-           - Volume and categories
-           - Temporal patterns
-           - Custodian analysis
-        
-        2. INVALID PRIVILEGE ASSERTIONS
-           - Business communications
-           - Pre-existing documents
-           - Third party communications
-           - Published materials
-        
-        3. WAIVER ANALYSIS
-           - Subject matter waiver
-           - Partial disclosure
-           - At-issue waiver
-           - Implied waiver
-        
-        4. CRIME-FRAUD EXCEPTION
-           - Fraudulent scheme evidence
-           - Legal advice furthering fraud
-           - Consciousness of guilt
-           - Cover-up communications
-        
-        5. STRATEGIC RECOMMENDATIONS
-           - Challenges to specific documents
-           - In camera review requests
-           - Waiver arguments
-           - Motion practice
-        
-        Be precise about legal standards and specific documents.
-        Focus on documents that would damage VR's case.
+    # ==================== PHASE 2 REPORTS (3 Reports) ====================
+    
+    def generate_phase_2_reports(self, phase_data: Dict) -> Dict[str, str]:
         """
-        
-        response = await self.api_client.make_api_call(
-            privilege_prompt,
-            phase='privilege_analysis',
-            temperature=0.3
-        )
-        
-        output = [
-            "# PRIVILEGE LOG ANALYSIS",
-            "",
-            f"**Date**: {datetime.now().strftime('%Y-%m-%d')}",
-            "**Matter**: VR Capital v Lismore Capital",
-            "",
-            response
-        ]
-        
-        self._save_output("06_PRIVILEGE_ANALYSIS.md", output)
-    
-    async def generate_opening_statement(self):
-        """Generate opening statement based on strongest evidence"""
-        
-        kill_shots = self.all_findings.get('kill_shots', {})
-        theories = self.all_findings.get('theories', {})
-        phase_4_theories = self.all_findings.get('phase_4', '')
-        
-        opening_prompt = f"""
-        Create a powerful opening statement based on our investigation findings.
-        
-        TOP KILL SHOTS:
-        Nuclear: {json.dumps(kill_shots.get('nuclear', [])[:3], indent=2)[:1500]}
-        
-        LEGAL THEORIES DEVELOPED (Phase 4):
-        {phase_4_theories[:1500]}
-        
-        CASE THEORIES:
-        {json.dumps(theories, indent=2)[:1500]}
-        
-        CREATE AN OPENING STATEMENT THAT:
-        
-        1. OPENING HOOK
-           - "Three documents end this case..."
-           - Identify the specific documents
-        
-        2. THE SIMPLE TRUTH
-           - VR had 51% control
-           - VR knew of fraud concerns
-           - VR now manufactures claims
-        
-        3. WHAT VR CANNOT ESCAPE
-           - Mathematical reality of control
-           - Documentary evidence
-           - Their own communications
-        
-        4. THE LEGAL FRAMEWORK
-           - Why each claim fails
-           - Burden of proof
-           - Standards to apply
-        
-        5. WHAT THE EVIDENCE WILL SHOW
-           - Preview key documents
-           - Witness admissions coming
-           - Patterns of deception
-        
-        6. THE ONLY VERDICT
-           - Dismiss all claims
-           - Award costs to Lismore
-           - Find bad faith
-        
-        Write persuasively for arbitrators.
-        Use specific document references from our investigation.
-        Make it impossible for VR to recover.
+        Generate Phase 2: Chronological Deep Dive reports
+        Strategy: Control the timeline narrative, find temporal impossibilities
         """
+        reports = {}
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         
-        response = await self.api_client.make_api_call(
-            opening_prompt,
-            phase='opening_statement',
-            temperature=0.4
-        )
+        print("Generating Phase 2 reports with Claude enhancement...")
         
-        output = [
-            "# OPENING STATEMENT",
-            "",
-            "**Counsel for Lismore Capital**",
-            "",
-            response
-        ]
+        # 1. Master Timeline with Conflict Analysis
+        timeline_prompt = """
+        Construct a devastating master timeline that:
+        1. Lists EVERY dated event with precise document references
+        2. Identifies timeline conflicts and impossibilities
+        3. Highlights periods of suspicious activity or silence
+        4. Shows how Process Holdings' story doesn't fit the timeline
+        5. Maps parallel tracks of activity that show deception
+        6. Identifies "smoking gun" moments in the chronology
         
-        self._save_output("07_OPENING_STATEMENT.md", output)
+        Format with exact dates and document references. Flag every inconsistency.
+        """
+        timeline = self._get_claude_enhanced_analysis(timeline_prompt, phase_data)
+        
+        timeline_file = f"{self.output_dir}/2_master_timeline_analysis_{timestamp}.txt"
+        with open(timeline_file, 'w', encoding='utf-8') as f:
+            f.write(f"MASTER TIMELINE WITH CONFLICT ANALYSIS\n{'='*80}\n{timeline}")
+        reports['master_timeline'] = timeline_file
+        
+        # 2. Critical Period Deep Analysis
+        periods_prompt = """
+        Identify and analyse critical periods in the dispute:
+        1. The "point of no return" when the relationship broke down
+        2. Periods of intense activity (what were they hiding?)
+        3. Suspicious gaps or silences (what's missing?)
+        4. Periods where Process Holdings' behaviour changed dramatically
+        5. Time periods with the most documentary evidence of wrongdoing
+        
+        For each period, explain what Process Holdings was really doing and why it matters.
+        """
+        periods = self._get_claude_enhanced_analysis(periods_prompt, phase_data)
+        
+        periods_file = f"{self.output_dir}/2_critical_periods_analysis_{timestamp}.txt"
+        with open(periods_file, 'w', encoding='utf-8') as f:
+            f.write(f"CRITICAL PERIOD ANALYSIS\n{'='*80}\n{periods}")
+        reports['critical_periods'] = periods_file
+        
+        # 3. Timeline Demolition Report
+        demolition_prompt = """
+        Demolish Process Holdings' likely chronological narrative by:
+        1. Identifying where their timeline claims are impossible given the documents
+        2. Finding documents that contradict their sequence of events
+        3. Exposing attempts to backdate or alter chronology
+        4. Showing where they've tried to hide critical events
+        5. Proving their timeline is fabricated or misleading
+        
+        This should destroy their credibility on timing claims.
+        """
+        demolition = self._get_claude_enhanced_analysis(demolition_prompt, phase_data)
+        
+        demolition_file = f"{self.output_dir}/2_timeline_demolition_{timestamp}.txt"
+        with open(demolition_file, 'w', encoding='utf-8') as f:
+            f.write(f"PROCESS HOLDINGS TIMELINE DEMOLITION\n{'='*80}\n{demolition}")
+        reports['timeline_demolition'] = demolition_file
+        
+        print(f"✓ Generated 3 Phase 2 reports")
+        return reports
     
-    async def generate_closing_argument(self):
-        """Generate closing argument synthesising all evidence"""
+    # ==================== PHASE 3 REPORTS (3 Reports) ====================
+    
+    def generate_phase_3_reports(self, phase_data: Dict) -> Dict[str, str]:
+        """
+        Generate Phase 3: Party Behaviour Analysis reports
+        Strategy: Expose bad faith, prove malicious intent
+        """
+        reports = {}
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         
-        all_phases_summary = {
-            'phase_1': self.all_findings.get('phase_1', '')[:1000],
-            'phase_2': self.all_findings.get('phase_2', '')[:1000],
-            'phase_3': self.all_findings.get('phase_3', '')[:1000],
-            'phase_4': self.all_findings.get('phase_4', '')[:1000],
-            'phase_5': self.all_findings.get('phase_5', '')[:1000],
-            'phase_6': self.all_findings.get('phase_6', '')[:1000]
+        print("Generating Phase 3 reports with Claude enhancement...")
+        
+        # 1. Bad Faith Behaviour Dossier
+        bad_faith_prompt = """
+        Compile a comprehensive dossier of Process Holdings' bad faith behaviour:
+        1. Deliberate delays and obstruction tactics
+        2. Lies and misrepresentations (with proof)
+        3. Attempts to mislead or deceive Lismore
+        4. Breaches of duties to cooperate or act in good faith
+        5. Evidence of malicious or vindictive conduct
+        6. Patterns showing intentional harm to Lismore
+        
+        Each instance must have specific document evidence. This dossier should make them look terrible.
+        """
+        bad_faith = self._get_claude_enhanced_analysis(bad_faith_prompt, phase_data)
+        
+        bad_faith_file = f"{self.output_dir}/3_bad_faith_dossier_{timestamp}.txt"
+        with open(bad_faith_file, 'w', encoding='utf-8') as f:
+            f.write(f"BAD FAITH BEHAVIOUR DOSSIER\n{'='*80}\n{bad_faith}")
+        reports['bad_faith_dossier'] = bad_faith_file
+        
+        # 2. Behavioural Psychology Analysis
+        psychology_prompt = """
+        Analyse the psychological patterns and motivations revealed:
+        1. What emotional states do their communications reveal (panic, deception, aggression)?
+        2. Identify manipulation tactics and gaslighting attempts
+        3. Spot desperation moves and cover-up behaviours
+        4. Analyse language changes that indicate deception
+        5. Identify when they realised they were in trouble
+        6. What are they most afraid of being discovered?
+        
+        Use this to predict their next moves and identify psychological pressure points.
+        """
+        psychology = self._get_claude_enhanced_analysis(psychology_prompt, phase_data)
+        
+        psychology_file = f"{self.output_dir}/3_behavioural_psychology_{timestamp}.txt"
+        with open(psychology_file, 'w', encoding='utf-8') as f:
+            f.write(f"BEHAVIOURAL PSYCHOLOGY ANALYSIS\n{'='*80}\n{psychology}")
+        reports['behavioural_psychology'] = psychology_file
+        
+        # 3. Communication Forensics Report
+        comms_prompt = """
+        Conduct forensic analysis of all communications:
+        1. Tone shifts that indicate problems or deception
+        2. Missing communications that should exist
+        3. Sudden formality indicating legal awareness
+        4. Off-the-record communications referenced but not provided
+        5. Language patterns suggesting different authors or legal editing
+        6. Admissions or damaging statements in informal communications
+        
+        Find the communications that damn them.
+        """
+        comms = self._get_claude_enhanced_analysis(comms_prompt, phase_data)
+        
+        comms_file = f"{self.output_dir}/3_communication_forensics_{timestamp}.txt"
+        with open(comms_file, 'w', encoding='utf-8') as f:
+            f.write(f"COMMUNICATION FORENSICS REPORT\n{'='*80}\n{comms}")
+        reports['communication_forensics'] = comms_file
+        
+        print(f"✓ Generated 3 Phase 3 reports")
+        return reports
+    
+    # ==================== PHASE 4 REPORTS (2 Strategic Reports) ====================
+    
+    def generate_phase_4_reports(self, phase_data: Dict) -> Dict[str, str]:
+        """
+        Generate Phase 4: Theory Construction reports
+        Strategy: Build unassailable narrative, destroy theirs
+        """
+        reports = {}
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        
+        print("Generating Phase 4 reports with Claude enhancement...")
+        
+        # 1. Lismore's Winning Narrative Construction
+        winning_prompt = """
+        Construct Lismore's complete winning narrative that:
+        1. Tells a compelling, coherent story of Process Holdings' wrongdoing
+        2. Explains every major event and document in our favour
+        3. Makes Process Holdings' conduct appear indefensible
+        4. Addresses and refutes any potential defences
+        5. Creates emotional impact (David vs Goliath, betrayal, injustice)
+        6. Ties every element to specific documentary evidence
+        
+        This narrative should be so compelling that even Process Holdings' lawyers doubt their client.
+        Include specific quotes and document references that prove each element.
+        """
+        winning = self._get_claude_enhanced_analysis(winning_prompt, phase_data)
+        
+        winning_content = f"""
+{'='*80}
+LISMORE'S WINNING NARRATIVE
+{'='*80}
+"The Story That Wins The Case"
+
+{winning}
+
+DEPLOYMENT STRATEGY:
+1. Opening statement framework
+2. Witness examination roadmap  
+3. Closing argument structure
+4. Settlement negotiation positioning
+{'='*80}
+"""
+        
+        winning_file = f"{self.output_dir}/4_winning_narrative_{timestamp}.txt"
+        with open(winning_file, 'w', encoding='utf-8') as f:
+            f.write(winning_content)
+        reports['winning_narrative'] = winning_file
+        
+        # 2. Opposition Theory Destruction Playbook
+        destruction_prompt = """
+        Create a playbook to destroy every possible Process Holdings defence:
+        1. Anticipate their likely theories and excuses
+        2. Identify documents that contradict each defence
+        3. Prepare cross-examination traps using their own documents
+        4. Find the lies they've already told that box them in
+        5. Identify which defences are mutually exclusive (they can't both be true)
+        6. Show how their defences actually prove our case
+        
+        For each potential defence, provide the exact evidence that destroys it.
+        """
+        destruction = self._get_claude_enhanced_analysis(destruction_prompt, phase_data)
+        
+        destruction_file = f"{self.output_dir}/4_defence_destruction_playbook_{timestamp}.txt"
+        with open(destruction_file, 'w', encoding='utf-8') as f:
+            f.write(f"DEFENCE DESTRUCTION PLAYBOOK\n{'='*80}\n{destruction}")
+        reports['defence_destruction'] = destruction_file
+        
+        print(f"✓ Generated 2 Phase 4 reports")
+        return reports
+    
+    # ==================== PHASE 5 REPORTS (3 Reports) ====================
+    
+    def generate_phase_5_reports(self, phase_data: Dict) -> Dict[str, str]:
+        """
+        Generate Phase 5: Evidence Analysis reports
+        Strategy: Weaponise evidence, expose gaps
+        """
+        reports = {}
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        
+        print("Generating Phase 5 reports with Claude enhancement...")
+        
+        # 1. Evidence Power Ranking & Deployment Strategy
+        evidence_ranking_prompt = """
+        Create a strategic evidence ranking that:
+        1. Ranks all evidence by destructive power (S-tier to F-tier)
+        2. Identifies "combo attacks" where evidence works together
+        3. Maps evidence to specific claims and counterclaims
+        4. Identifies evidence Process Holdings can't explain away
+        5. Highlights evidence that triggers cost sanctions or criminal referrals
+        6. Creates optimal evidence deployment sequence for maximum impact
+        
+        Think like a chess grandmaster - how do we deploy evidence for checkmate?
+        """
+        ranking = self._get_claude_enhanced_analysis(evidence_ranking_prompt, phase_data)
+        
+        ranking_file = f"{self.output_dir}/5_evidence_power_ranking_{timestamp}.txt"
+        with open(ranking_file, 'w', encoding='utf-8') as f:
+            f.write(f"EVIDENCE POWER RANKING & DEPLOYMENT STRATEGY\n{'='*80}\n{ranking}")
+        reports['evidence_ranking'] = ranking_file
+        
+        # 2. Missing Evidence & Adverse Inference Report
+        missing_prompt = """
+        Identify all missing evidence and build adverse inference arguments:
+        1. Documents referenced but not produced (with specific references)
+        2. Obvious gaps in document series (missing emails, board minutes, etc.)
+        3. Documents Process Holdings must have but claims don't exist
+        4. Metadata showing deleted/destroyed documents
+        5. Legal obligations to maintain records they haven't produced
+        6. Third party documents they failed to obtain
+        
+        For each gap, explain the adverse inference we should argue and why the missing evidence must be damaging.
+        """
+        missing = self._get_claude_enhanced_analysis(missing_prompt, phase_data)
+        
+        missing_file = f"{self.output_dir}/5_missing_evidence_adverse_inference_{timestamp}.txt"
+        with open(missing_file, 'w', encoding='utf-8') as f:
+            f.write(f"MISSING EVIDENCE & ADVERSE INFERENCE ARGUMENTS\n{'='*80}\n{missing}")
+        reports['missing_evidence'] = missing_file
+        
+        # 3. Cross-Examination Trap Report
+        cross_exam_prompt = """
+        Design cross-examination traps using the evidence:
+        1. Questions where any answer hurts Process Holdings
+        2. Document combinations that prove lies
+        3. Prior inconsistent statements to impeach witnesses
+        4. "Gotcha" moments using their own evidence
+        5. Questions that force admissions or obvious lies
+        6. Setup questions that lead to devastating document reveals
+        
+        Provide exact question sequences with document references for maximum destruction.
+        """
+        cross_exam = self._get_claude_enhanced_analysis(cross_exam_prompt, phase_data)
+        
+        cross_exam_file = f"{self.output_dir}/5_cross_examination_traps_{timestamp}.txt"
+        with open(cross_exam_file, 'w', encoding='utf-8') as f:
+            f.write(f"CROSS-EXAMINATION TRAP PLAYBOOK\n{'='*80}\n{cross_exam}")
+        reports['cross_examination'] = cross_exam_file
+        
+        print(f"✓ Generated 3 Phase 5 reports")
+        return reports
+    
+    # ==================== PHASE 6 REPORTS (3 Critical Reports) ====================
+    
+    def generate_phase_6_reports(self, phase_data: Dict) -> Dict[str, str]:
+        """
+        Generate Phase 6: Smoking Guns & Kill Shots reports
+        Strategy: Identify case-ending evidence
+        """
+        reports = {}
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        
+        print("Generating Phase 6 reports with Claude enhancement...")
+        
+        # 1. Smoking Guns Dossier
+        smoking_guns_prompt = """
+        Identify and rank ALL smoking guns - the evidence that ends their case:
+        1. Direct admissions of wrongdoing
+        2. Proof of intentional misconduct or fraud
+        3. Evidence of cover-ups or destruction
+        4. Documents proving perjury or lies to the court
+        5. Material that triggers criminal liability
+        6. Evidence so damaging they must settle
+        
+        For each smoking gun:
+        - Quote the exact damaging text
+        - Explain why it's case-ending
+        - Provide strategic deployment advice
+        - Identify combination attacks with other evidence
+        """
+        smoking_guns = self._get_claude_enhanced_analysis(smoking_guns_prompt, phase_data)
+        
+        smoking_content = f"""
+{'='*80}
+🔫 SMOKING GUNS DOSSIER - CASE-ENDING EVIDENCE 🔫
+{'='*80}
+⚠️ HIGHEST CLASSIFICATION - LITIGATION PRIVILEGE ⚠️
+
+{smoking_guns}
+
+STRATEGIC DEPLOYMENT:
+- Hold most devastating evidence for maximum impact
+- Consider staged revelation for settlement leverage
+- Prepare media strategy for public pressure
+{'='*80}
+"""
+        
+        smoking_file = f"{self.output_dir}/6_smoking_guns_dossier_{timestamp}.txt"
+        with open(smoking_file, 'w', encoding='utf-8') as f:
+            f.write(smoking_content)
+        reports['smoking_guns'] = smoking_file
+        
+        # 2. Settlement Leverage Maximisation Report
+        settlement_prompt = """
+        Create a settlement leverage maximisation strategy:
+        1. Rank evidence by settlement pressure (what makes them pay?)
+        2. Identify criminal referral threats we can make
+        3. Reputational destruction points for public pressure
+        4. Director disqualification risks for individuals
+        5. Regulatory breach notifications we could make
+        6. Third party claims we could trigger
+        
+        Design a staged revelation strategy that maximises settlement value.
+        What evidence do we reveal when to get maximum payment?
+        """
+        settlement = self._get_claude_enhanced_analysis(settlement_prompt, phase_data)
+        
+        settlement_file = f"{self.output_dir}/6_settlement_leverage_strategy_{timestamp}.txt"
+        with open(settlement_file, 'w', encoding='utf-8') as f:
+            f.write(f"SETTLEMENT LEVERAGE MAXIMISATION STRATEGY\n{'='*80}\n{settlement}")
+        reports['settlement_leverage'] = settlement_file
+        
+        # 3. Summary Judgment Roadmap
+        summary_judgment_prompt = """
+        Build a summary judgment application roadmap:
+        1. Issues where no genuine dispute exists (with evidence)
+        2. Admissions that eliminate factual disputes
+        3. Documents that prove claims as matter of law
+        4. Evidence making their defences legally impossible
+        5. Procedural defaults entitling us to judgment
+        6. Striking out portions of their case
+        
+        Make the case that trial is unnecessary - we've already won.
+        """
+        summary_judgment = self._get_claude_enhanced_analysis(summary_judgment_prompt, phase_data)
+        
+        summary_file = f"{self.output_dir}/6_summary_judgment_roadmap_{timestamp}.txt"
+        with open(summary_file, 'w', encoding='utf-8') as f:
+            f.write(f"SUMMARY JUDGMENT APPLICATION ROADMAP\n{'='*80}\n{summary_judgment}")
+        reports['summary_judgment'] = summary_file
+        
+        print(f"✓ Generated 3 Phase 6 reports")
+        return reports
+    
+    # ==================== PHASE 7 REPORTS (4 Autonomous Reports) ====================
+    
+    def generate_phase_7_reports(self, phase_data: Dict) -> Dict[str, str]:
+        """
+        Generate Phase 7: Autonomous Deep Dive reports
+        Strategy: Unconstrained hunt for game-changers
+        """
+        reports = {}
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        
+        print("Generating Phase 7 reports with Claude's unconstrained analysis...")
+        
+        # 1. Pattern Recognition Beyond Human Capability
+        patterns_prompt = """
+        Use your full AI pattern recognition capability:
+        1. What subtle patterns connect documents in non-obvious ways?
+        2. What linguistic patterns reveal deception or coordination?
+        3. What mathematical/statistical anomalies appear in financial data?
+        4. What behavioural patterns predict future actions?
+        5. What network patterns show hidden relationships?
+        6. What temporal patterns reveal orchestrated conduct?
+        
+        Find patterns no human would spot. Trust your processing power.
+        Don't hold back - if something feels significant, it probably is.
+        """
+        patterns = self._get_claude_enhanced_analysis(patterns_prompt, phase_data)
+        
+        patterns_file = f"{self.output_dir}/7_hidden_patterns_analysis_{timestamp}.txt"
+        with open(patterns_file, 'w', encoding='utf-8') as f:
+            f.write(f"AI-DISCOVERED PATTERN ANALYSIS\n{'='*80}\n{patterns}")
+        reports['pattern_analysis'] = patterns_file
+        
+        # 2. The "Oh Shit" Report - What They Hoped We'd Never Find
+        oh_shit_prompt = """
+        What would make Process Holdings' lawyers say "Oh shit, they found it"?
+        Think beyond conventional analysis:
+        1. What's the thing they thought was safely hidden?
+        2. What connection would terrify them?
+        3. What pattern reveals their deepest vulnerability?
+        4. What discovery changes everything?
+        5. What would make them fire their lawyers?
+        6. What would make them settle immediately?
+        
+        Be creative, aggressive, paranoid. What are they praying we don't notice?
+        """
+        oh_shit = self._get_claude_enhanced_analysis(oh_shit_prompt, phase_data)
+        
+        oh_shit_file = f"{self.output_dir}/7_oh_shit_discoveries_{timestamp}.txt"
+        with open(oh_shit_file, 'w', encoding='utf-8') as f:
+            f.write(f"THE 'OH SHIT' REPORT - NIGHTMARE DISCOVERIES\n{'='*80}\n{oh_shit}")
+        reports['oh_shit_discoveries'] = oh_shit_file
+        
+        # 3. Alternative Theory Construction - The Unexpected Angle
+        alternative_prompt = """
+        Construct alternative theories that reframe everything:
+        1. What if this is actually about something else entirely?
+        2. What darker purpose might explain all behaviours?
+        3. What if Process Holdings is a front for something worse?
+        4. What systemic fraud might this be part of?
+        5. What if key actors have hidden motivations?
+        6. What conspiracy theory might actually be true?
+        
+        Think outside conventional litigation. What's the story nobody expects?
+        """
+        alternative = self._get_claude_enhanced_analysis(alternative_prompt, phase_data)
+        
+        alternative_file = f"{self.output_dir}/7_alternative_theories_{timestamp}.txt"
+        with open(alternative_file, 'w', encoding='utf-8') as f:
+            f.write(f"ALTERNATIVE THEORY CONSTRUCTION\n{'='*80}\n{alternative}")
+        reports['alternative_theories'] = alternative_file
+        
+        # 4. Nuclear Options & Doomsday Scenarios
+        nuclear_prompt = """
+        Identify nuclear options - the most aggressive possible moves:
+        1. Criminal referrals we could make (fraud, forgery, perjury)
+        2. Regulatory complaints that trigger investigations
+        3. Public disclosure that destroys reputations
+        4. Third party notifications that cascade problems
+        5. Asset freezing or urgent injunctions we could seek
+        6. Personal liability attacks on directors/individuals
+        
+        Also identify what Process Holdings might try (so we can pre-empt).
+        What's the most aggressive strategy possible?
+        """
+        nuclear = self._get_claude_enhanced_analysis(nuclear_prompt, phase_data)
+        
+        nuclear_file = f"{self.output_dir}/7_nuclear_options_{timestamp}.txt"
+        with open(nuclear_file, 'w', encoding='utf-8') as f:
+            f.write(f"NUCLEAR OPTIONS & MAXIMUM AGGRESSION STRATEGIES\n{'='*80}\n{nuclear}")
+        reports['nuclear_options'] = nuclear_file
+        
+        print(f"✓ Generated 4 Phase 7 reports")
+        return reports
+    
+    # ==================== MASTER GENERATION FUNCTION ====================
+    
+    def generate_all_phase_reports(self, documents: List[Dict]) -> Dict[str, Dict]:
+        """
+        Generate all reports for phases 1-7 (skipping 0A & 0B)
+        
+        Args:
+            documents: List of analysed documents
+            
+        Returns:
+            Dictionary mapping phases to their generated reports
+        """
+        # Register documents first
+        self.register_documents(documents)
+        
+        all_reports = {}
+        knowledge = self.knowledge_manage.get_all_knowledge()
+        
+        print("\n" + "="*80)
+        print("GENERATING STRATEGIC REPORTS FOR LISMORE CAPITAL")
+        print("="*80)
+        
+        # Phase-specific report generators (excluding 0A and 0B)
+        phase_report_generators = {
+            '1': self.generate_phase_1_reports,  # 3 reports
+            '2': self.generate_phase_2_reports,  # 3 reports
+            '3': self.generate_phase_3_reports,  # 3 reports
+            '4': self.generate_phase_4_reports,  # 2 reports
+            '5': self.generate_phase_5_reports,  # 3 reports
+            '6': self.generate_phase_6_reports,  # 3 reports
+            '7': self.generate_phase_7_reports   # 4 reports
         }
         
-        closing_prompt = f"""
-        Create a devastating closing argument using all six phases of our investigation.
+        # Generate reports for each completed phase
+        for phase, generator in phase_report_generators.items():
+            if phase in knowledge:
+                print(f"\n→ Processing Phase {phase}...")
+                all_reports[phase] = generator(knowledge[phase])
         
-        INVESTIGATION SUMMARY:
-        Phase 1 (Documents): {all_phases_summary['phase_1']}
-        Phase 2 (Patterns): {all_phases_summary['phase_2']}
-        Phase 3 (Anomalies): {all_phases_summary['phase_3']}
-        Phase 4 (Theories): {all_phases_summary['phase_4']}
-        Phase 5 (Evidence): {all_phases_summary['phase_5']}
-        Phase 6 (Kill Shots): {all_phases_summary['phase_6']}
+        # Generate master summary
+        self._generate_master_war_room_summary(all_reports, knowledge)
         
-        CREATE A CLOSING ARGUMENT WITH:
+        print("\n" + "="*80)
+        print("✓ ALL REPORTS GENERATED SUCCESSFULLY")
+        print(f"✓ Total Reports: {sum(len(r) for r in all_reports.values())} strategic documents")
+        print(f"✓ Output directory: {self.output_dir}")
+        print("="*80)
         
-        1. THEY HAD CONTROL
-           - Every document proving 51%
-           - Every decision they made
-           - Mathematical impossibility of exclusion
-        
-        2. THEY KNEW
-           - McNaughton warning
-           - Due diligence opportunity
-           - Continued participation
-        
-        3. THEY LIED
-           - Evolution of story
-           - Document withholding
-           - Consciousness of guilt
-        
-        4. THE LAW IS CLEAR
-           - No breach possible
-           - No exclusion possible
-           - No damages possible
-        
-        5. JUSTICE DEMANDS
-           - Complete dismissal
-           - Indemnity costs
-           - Bad faith finding
-        
-        Use specific findings from each phase.
-        Reference actual documents by ID.
-        Make this the closing that ends VR permanently.
-        """
-        
-        response = await self.api_client.make_api_call(
-            closing_prompt,
-            phase='closing_argument',
-            temperature=0.4
-        )
-        
-        output = [
-            "# CLOSING ARGUMENT",
-            "",
-            "**Counsel for Lismore Capital**",
-            "",
-            response
-        ]
-        
-        self._save_output("08_CLOSING_ARGUMENT.md", output)
+        return all_reports
     
-    async def generate_settlement_analysis(self):
-        """Generate settlement leverage analysis"""
+    def _generate_master_war_room_summary(self, all_reports: Dict, knowledge: Dict):
+        """Generate master war room summary for senior partners"""
         
-        kill_shots = self.all_findings.get('kill_shots', {})
-        missing_docs = self.all_findings.get('missing_docs', {})
-        theories = self.all_findings.get('theories', {})
+        # Use Claude to synthesise everything
+        war_room_prompt = """
+        Create an executive war room summary that:
+        1. Lists the 5 most devastating pieces of evidence (with references)
+        2. Identifies the 3 strongest legal arguments
+        3. Recommends immediate actions (top 5 priorities)
+        4. Estimates settlement value range based on evidence
+        5. Identifies biggest risks to Lismore's case
+        6. Provides a "confidence score" for victory
         
-        settlement_prompt = f"""
-        Analyse our settlement leverage based on investigation findings.
-        
-        KILL SHOTS AVAILABLE:
-        {json.dumps(kill_shots, indent=2)[:2000]}
-        
-        ADVERSE INFERENCE THREATS:
-        {json.dumps(missing_docs, indent=2)[:1500]}
-        
-        THEORIES PROVEN:
-        {json.dumps(theories, indent=2)[:1500]}
-        
-        CREATE A SETTLEMENT ANALYSIS INCLUDING:
-        
-        1. CURRENT LEVERAGE POSITION
-           - Strength assessment (1-10)
-           - VR's exposure analysis
-           - Lismore's position
-        
-        2. PRESSURE POINTS
-           - Reputational damage threats
-           - Cost exposure
-           - Criminal referral possibilities
-           - Investor notifications
-        
-        3. NEGOTIATION STRATEGY
-           - What to reveal in stages
-           - What to hold back
-           - Demonstration documents
-           - Escalation timeline
-        
-        4. SETTLEMENT SCENARIOS
-           - Best case (complete withdrawal)
-           - Acceptable (80% costs)
-           - Walk-away point
-           - Non-negotiables
-        
-        5. TACTICAL DEPLOYMENT
-           - When to show strength
-           - How to force urgency
-           - Using tribunal deadlines
-           - Media strategy
-        
-        Be strategic and ruthless.
-        We hold all the cards - show how to play them.
+        This is for senior partners who need rapid decision-making intelligence.
+        Be direct, aggressive, and focus on what wins.
         """
         
-        response = await self.api_client.make_api_call(
-            settlement_prompt,
-            phase='settlement_analysis',
-            temperature=0.4
-        )
+        # Combine all knowledge for summary
+        combined_knowledge = {
+            'phases_completed': list(knowledge.keys()),
+            'total_documents': len(self.document_registry),
+            'phase_6_findings': knowledge.get('6', {}).get('findings', {}),
+            'phase_7_insights': knowledge.get('7', {}).get('findings', {})
+        }
         
-        output = [
-            "# SETTLEMENT LEVERAGE ANALYSIS",
-            "",
-            f"**Date**: {datetime.now().strftime('%Y-%m-%d')}",
-            "**Confidential**: Attorney-Client Privilege",
-            "",
-            response
-        ]
+        war_room = self._get_claude_enhanced_analysis(war_room_prompt, combined_knowledge)
         
-        self._save_output("09_SETTLEMENT_LEVERAGE.md", output)
-    
-    async def generate_credibility_matrix(self):
-        """Generate credibility destruction matrix"""
+        content = f"""
+{'='*80}
+WAR ROOM EXECUTIVE SUMMARY - PARTNERS ONLY
+{'='*80}
+CASE: LISMORE CAPITAL VS PROCESS HOLDINGS LTD
+Generated: {datetime.now().strftime('%Y-%m-%d %H:%M')}
+Classification: STRICTLY CONFIDENTIAL - LITIGATION PRIVILEGE
+
+{war_room}
+
+{'='*80}
+RECOMMENDED IMMEDIATE ACTION:
+Call emergency partner meeting to approve aggressive litigation strategy.
+{'='*80}
+"""
         
-        contradictions = self.all_findings.get('contradictions', {})
-        patterns = self.all_findings.get('patterns', {})
-        phase_5_evidence = self.all_findings.get('phase_5', '')
+        filename = f"{self.output_dir}/MASTER_WAR_ROOM_SUMMARY_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+        with open(filename, 'w', encoding='utf-8') as f:
+            f.write(content)
         
-        credibility_prompt = f"""
-        Create a witness credibility destruction matrix based on our findings.
-        
-        CONTRADICTIONS FOUND:
-        {json.dumps(contradictions, indent=2)[:2000]}
-        
-        DECEPTION PATTERNS:
-        {json.dumps(patterns.get('deception_indicators', []), indent=2)[:1500]}
-        
-        EVIDENCE ANALYSIS (Phase 5):
-        {phase_5_evidence[:1500]}
-        
-        CREATE A CREDIBILITY MATRIX COVERING:
-        
-        1. KEY WITNESS VULNERABILITIES
-           - Prior inconsistent statements
-           - Documentary contradictions
-           - Evolution of testimony
-           - Consciousness of guilt
-        
-        2. IMPEACHMENT SEQUENCES
-           - Document confrontation order
-           - Trap questions
-           - Admission extractions
-           - Credibility collapses
-        
-        3. CROSS-REFERENCE MATRIX
-           - Witness vs witness conflicts
-           - Witness vs document conflicts
-           - Timeline impossibilities
-           - Knowledge contradictions
-        
-        4. DESTRUCTION METHODOLOGY
-           - Start soft, end hard
-           - Build to crescendo
-           - Leave no escape
-           - Force admissions
-        
-        5. REHABILITATION PREVENTION
-           - Anticipate explanations
-           - Block escape routes
-           - Counter-documents ready
-           - Final devastation
-        
-        Map specific findings to specific witnesses.
-        Make this actionable for cross-examination.
-        """
-        
-        response = await self.api_client.make_api_call(
-            credibility_prompt,
-            phase='credibility_matrix',
-            temperature=0.3
-        )
-        
-        output = [
-            "# CREDIBILITY DESTRUCTION MATRIX",
-            "",
-            f"**Generated**: {datetime.now().strftime('%Y-%m-%d')}",
-            "**Purpose**: Witness Impeachment Planning",
-            "",
-            response
-        ]
-        
-        self._save_output("10_CREDIBILITY_MATRIX.md", output)
-    
-    async def generate_deception_timeline(self):
-        """Generate timeline of deception"""
-        
-        patterns = self.all_findings.get('patterns', {})
-        anomalies = self.all_findings.get('anomalies', {})
-        phase_2_patterns = self.all_findings.get('phase_2', '')
-        
-        timeline_prompt = f"""
-        Create a detailed timeline of VR's deception based on pattern analysis.
-        
-        DECEPTION PATTERNS FOUND (Phase 2):
-        {phase_2_patterns[:1500]}
-        {json.dumps(patterns.get('deception_indicators', []), indent=2)[:1500]}
-        
-        TIMELINE ANOMALIES (Phase 3):
-        {json.dumps(anomalies, indent=2)[:1500]}
-        
-        CREATE A DECEPTION TIMELINE SHOWING:
-        
-        1. OCTOBER 2017 - INVESTMENT
-           - What VR claimed then
-           - What documents show
-           - What they claim now
-        
-        2. 2017-2019 - CONTROL PERIOD
-           - Decisions VR made
-           - Contemporary satisfaction
-           - Current denials
-        
-        3. JANUARY 2020 - McNAUGHTON WARNING
-           - What VR was told
-           - How VR responded
-           - What VR claims now
-        
-        4. 2020-2023 - CONTINUED PARTICIPATION
-           - VR's actions
-           - No complaints
-           - Retrospective claims
-        
-        5. 2023-PRESENT - LITIGATION
-           - Story evolution
-           - Document withholding
-           - Position changes
-        
-        For each period:
-        - Quote specific documents
-        - Show contradictions
-        - Prove consciousness of guilt
-        
-        Make the pattern of deception undeniable.
-        """
-        
-        response = await self.api_client.make_api_call(
-            timeline_prompt,
-            phase='deception_timeline',
-            temperature=0.3
-        )
-        
-        output = [
-            "# TIMELINE OF DECEPTION",
-            "",
-            f"**Generated**: {datetime.now().strftime('%Y-%m-%d %H:%M')}",
-            "**Purpose**: Demonstrating Pattern of Dishonesty",
-            "",
-            response
-        ]
-        
-        self._save_output("11_DECEPTION_TIMELINE.md", output)
-    
-    async def generate_witness_plan(self):
-        """Generate witness examination plan"""
-        
-        evidence = self.all_findings.get('evidence', {})
-        theories = self.all_findings.get('theories', {})
-        kill_shots = self.all_findings.get('kill_shots', {})
-        
-        witness_prompt = f"""
-        Create a comprehensive witness examination plan based on our evidence.
-        
-        EVIDENCE TO DEPLOY (Phase 5):
-        {json.dumps(evidence, indent=2)[:2000]}
-        
-        THEORIES TO PROVE (Phase 4):
-        {json.dumps(theories, indent=2)[:1500]}
-        
-        KILL SHOTS AVAILABLE:
-        {json.dumps(kill_shots, indent=2)[:1500]}
-        
-        CREATE A WITNESS PLAN INCLUDING:
-        
-        1. WITNESS PRIORITY ORDER
-           - Who to call first
-           - Building momentum
-           - Saving best for last
-        
-        2. VR INVESTMENT COMMITTEE
-           - Documents to use
-           - Admissions to get
-           - Traps to set
-           - Kill shots to deploy
-        
-        3. VR BOARD REPRESENTATIVES
-           - Control evidence
-           - Decision participation
-           - Knowledge timeline
-           - Contradiction exposure
-        
-        4. VR LEGAL COUNSEL
-           - Privilege challenges
-           - Advice timeline
-           - Knowledge attribution
-           - Waiver arguments
-        
-        5. EXAMINATION STRATEGY
-           - Phase approach
-           - Document deployment
-           - Admission building
-           - Credibility destruction
-           - Kill shot timing
-        
-        For each witness:
-        - Specific documents to use
-        - Specific questions to ask
-        - Specific admissions to extract
-        - Specific kill shots to deploy
-        
-        Make this a blueprint for witness destruction.
-        """
-        
-        response = await self.api_client.make_api_call(
-            witness_prompt,
-            phase='witness_plan',
-            temperature=0.3
-        )
-        
-        output = [
-            "# WITNESS EXAMINATION PLAN",
-            "",
-            f"**Generated**: {datetime.now().strftime('%Y-%m-%d %H:%M')}",
-            "**Classification**: Confidential - Litigation Strategy",
-            "",
-            response
-        ]
-        
-        self._save_output("12_WITNESS_PLAN.md", output)
-    
-    def _save_output(self, filename: str, content: List[str]):
-        """
-        Save output to file
-        
-        Args:
-            filename: Name of output file
-            content: List of strings to write
-        """
-        try:
-            output_path = self.outputs_dir / filename
-            with open(output_path, 'w', encoding='utf-8') as f:
-                f.write('\n'.join(content))
-            logger.info(f"Saved: {filename}")
-        except Exception as e:
-            logger.error(f"Failed to save {filename}: {e}")
+        print(f"\n⚔️ Master War Room Summary generated: {filename}")

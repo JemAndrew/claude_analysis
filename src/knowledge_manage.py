@@ -1,199 +1,264 @@
-from pathlib import Path
+"""
+Manages cumulative knowledge across all phases of analysis.
+"""
+
 import json
-from typing import Dict, List, Any
+from typing import Dict, List, Optional
 from datetime import datetime
+import os
 
 class KnowledgeManager:
-    """Manages knowledge base and investigation memory"""
+    """Manages and retrieves knowledge accumulated across phases"""
     
-    def __init__(self, project_root: str):
-        self.project_root = Path(project_root)
-        self.evidence_map = {}
+    def __init__(self, storage_path: str = "./knowledge_store"):
+        """
+        Initialise knowledge manager
         
-        # Initialise enhanced knowledge base
-        self.knowledge_base = {
-            'legal_training': {
-                'procedures': {},
-                'precedents': {},
-                'analytical_methods': {},
-                'professional_standards': {},
-                'litigation_strategy': {},
-                'ediscovery_patterns': {},
-                'forensic_indicators': {}
-            },
-            'case_context': {
-                'key_dates': {},
-                'legal_principles': {},
-                'successful_arguments': {},
-                'failed_defences': {},
-                'standards_applied': {},
-                'tribunal_psychology': {},
-                'precedent_strategies': {}
-            },
-            'terminology': {},
-            'players': {},
-            'document_map': {},
-            'patterns': {
-                'control_patterns': [],
-                'knowledge_patterns': [],
-                'financial_patterns': [],
-                'withholding_patterns': [],
-                'communication_patterns': [],
-                'deception_indicators': [],
-                'fraud_markers': []
-            },
-            'anomalies': {},
-            'theories': {},
-            'evidence': {},
-            'contradictions': {},
-            'missing_docs': {},
-            'kill_shots': {
-                'nuclear': [],
-                'devastating': [],
-                'severe': [],
-                'tactical': [],
-                'forensic': []
-            }
-        }
+        Args:
+            storage_path: Directory to store knowledge files
+        """
+        self.storage_path = storage_path
+        self.knowledge_store = {}
+        self.phase_order = ["0A", "0B", "1", "2", "3", "4", "5", "6", "7"]
         
-        # Investigation memory
-        self.investigation_memory = {
-            'discoveries': [],
-            'theories': [],
-            'contradictions': [],
-            'missing_documents': [],
-            'timeline_anomalies': [],
-            'behavioural_patterns': [],
-            'linguistic_analysis': [],
-            'money_trail': [],
-            'power_dynamics': [],
+        # Create storage directory if it doesn't exist
+        os.makedirs(storage_path, exist_ok=True)
+        
+        # Load any existing knowledge
+        self._load_existing_knowledge()
+    
+    def store_phase_knowledge(self, phase: str, knowledge: Dict) -> bool:
+        """
+        Store knowledge from a phase
+        
+        Args:
+            phase: Phase identifier
+            knowledge: Knowledge dictionary to store
+            
+        Returns:
+            Success status
+        """
+        try:
+            # Store in memory
+            self.knowledge_store[phase] = knowledge
+            
+            # Persist to disk
+            filename = f"{self.storage_path}/phase_{phase}_knowledge.json"
+            with open(filename, 'w', encoding='utf-8') as f:
+                json.dump(knowledge, f, indent=2, default=str)
+            
+            print(f"Knowledge for phase {phase} stored successfully")
+            return True
+            
+        except Exception as e:
+            print(f"Error storing knowledge: {e}")
+            return False
+    
+    def get_phase_knowledge(self, phase: str) -> Optional[Dict]:
+        """
+        Retrieve knowledge for a specific phase
+        
+        Args:
+            phase: Phase identifier
+            
+        Returns:
+            Knowledge dictionary or None if not found
+        """
+        return self.knowledge_store.get(phase)
+    
+    def get_previous_knowledge(self, current_phase: str) -> Dict:
+        """
+        Get all knowledge from phases before the current one
+        
+        Args:
+            current_phase: Current phase identifier
+            
+        Returns:
+            Dictionary of previous phase knowledge
+        """
+        previous = {}
+        
+        try:
+            current_index = self.phase_order.index(current_phase)
+            
+            for phase in self.phase_order[:current_index]:
+                if phase in self.knowledge_store:
+                    previous[phase] = self.knowledge_store[phase]
+                    
+        except ValueError:
+            print(f"Warning: Unknown phase {current_phase}")
+        
+        return previous
+    
+    def get_all_knowledge(self) -> Dict:
+        """
+        Get all stored knowledge
+        
+        Returns:
+            Complete knowledge store
+        """
+        return self.knowledge_store
+    
+    def get_completed_phases(self) -> List[str]:
+        """
+        Get list of completed phases
+        
+        Returns:
+            List of phase identifiers that have been completed
+        """
+        return list(self.knowledge_store.keys())
+    
+    def _load_existing_knowledge(self):
+        """Load any existing knowledge from disk"""
+        try:
+            for phase in self.phase_order:
+                filename = f"{self.storage_path}/phase_{phase}_knowledge.json"
+                if os.path.exists(filename):
+                    with open(filename, 'r', encoding='utf-8') as f:
+                        self.knowledge_store[phase] = json.load(f)
+                    print(f"Loaded existing knowledge for phase {phase}")
+                    
+        except Exception as e:
+            print(f"Error loading existing knowledge: {e}")
+    
+    def clear_knowledge(self, phase: Optional[str] = None):
+        """
+        Clear stored knowledge
+        
+        Args:
+            phase: Specific phase to clear, or None to clear all
+        """
+        if phase:
+            # Clear specific phase
+            if phase in self.knowledge_store:
+                del self.knowledge_store[phase]
+                
+            filename = f"{self.storage_path}/phase_{phase}_knowledge.json"
+            if os.path.exists(filename):
+                os.remove(filename)
+                
+            print(f"Cleared knowledge for phase {phase}")
+        else:
+            # Clear all knowledge
+            self.knowledge_store = {}
+            
+            for file in os.listdir(self.storage_path):
+                if file.endswith('_knowledge.json'):
+                    os.remove(os.path.join(self.storage_path, file))
+                    
+            print("Cleared all knowledge")
+    
+    def generate_summary(self) -> Dict:
+        """
+        Generate a summary of all accumulated knowledge
+        
+        Returns:
+            Summary dictionary
+        """
+        summary = {
+            'timestamp': datetime.now().isoformat(),
+            'phases_completed': self.get_completed_phases(),
+            'key_findings': {},
+            'critical_evidence': [],
             'smoking_guns': [],
-            'kill_shots': [],
-            'questions_for_human': [],
-            'confidence_scores': {},
-            'document_relationships': {},
-            'key_players': {},
-            'critical_dates': {},
-            'vr_vulnerabilities': [],
-            'lismore_advantages': [],
-            'unexpected_findings': [],
-            'claude_strategies': {},
-            'forensic_findings': [],
-            'ediscovery_insights': [],
-            'litigation_strategies': [],
-            'cross_examination_traps': {
-                'control_admissions': [],
-                'knowledge_admissions': [],
-                'document_requests': [],
-                'impossible_denials': [],
-                'credibility_destroyers': []
-            },
-            'tribunal_impact_ranking': {
-                'most_damaging_facts': [],
-                'most_compelling_documents': [],
-                'most_devastating_contradictions': [],
-                'winning_narratives': []
-            }
+            'next_steps': []
         }
         
-        # Phase prompts
-        self.phase_prompts = {
-            'phase_1_additions': "",
-            'phase_2_additions': "",
-            'phase_3_additions': "",
-            'phase_4_additions': "",
-            'phase_5_additions': "",
-            'phase_6_additions': ""
+        # Extract key findings from each phase
+        for phase in self.get_completed_phases():
+            knowledge = self.knowledge_store[phase]
+            
+            if 'findings' in knowledge:
+                findings = knowledge['findings']
+                
+                # Extract key points based on phase
+                if phase == "6":  # Smoking guns phase
+                    summary['smoking_guns'] = self._extract_smoking_guns(findings)
+                elif phase == "7":  # Autonomous phase
+                    summary['next_steps'] = self._extract_next_steps(findings)
+                
+                # General key findings
+                summary['key_findings'][phase] = self._extract_key_points(findings)
+        
+        return summary
+    
+    def _extract_key_points(self, findings: any) -> List[str]:
+        """Extract key points from findings"""
+        key_points = []
+        
+        # Handle different finding structures
+        if isinstance(findings, dict):
+            if 'combined_insights' in findings:
+                # Extract from combined insights
+                text = findings['combined_insights']
+            elif 'analysis' in findings:
+                text = findings['analysis']
+            else:
+                text = str(findings)
+        else:
+            text = str(findings)
+        
+        # Simple extraction of key sentences (you could make this smarter)
+        sentences = text.split('.')[:5]  # First 5 sentences as key points
+        key_points = [s.strip() for s in sentences if len(s.strip()) > 20]
+        
+        return key_points
+    
+    def _extract_smoking_guns(self, findings: any) -> List[str]:
+        """Extract smoking guns from phase 6 findings"""
+        # This would be more sophisticated in production
+        # Looking for specific keywords and patterns
+        guns = []
+        
+        text = str(findings)
+        if "smoking gun" in text.lower():
+            # Extract sentences containing smoking gun references
+            sentences = text.split('.')
+            for sentence in sentences:
+                if "smoking gun" in sentence.lower() or "kill shot" in sentence.lower():
+                    guns.append(sentence.strip())
+        
+        return guns[:5]  # Return top 5
+    
+    def _extract_next_steps(self, findings: any) -> List[str]:
+        """Extract recommended next steps from autonomous phase"""
+        steps = []
+        
+        text = str(findings)
+        # Look for action-oriented language
+        action_keywords = ['investigate', 'examine', 'pursue', 'follow', 'analyse']
+        
+        sentences = text.split('.')
+        for sentence in sentences:
+            if any(keyword in sentence.lower() for keyword in action_keywords):
+                steps.append(sentence.strip())
+        
+        return steps[:5]  # Return top 5
+    
+    def export_knowledge(self, export_path: str = "./exports") -> str:
+        """
+        Export all knowledge to a single file
+        
+        Args:
+            export_path: Directory for export
+            
+        Returns:
+            Path to exported file
+        """
+        os.makedirs(export_path, exist_ok=True)
+        
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        filename = f"{export_path}/lismore_analysis_{timestamp}.json"
+        
+        export_data = {
+            'case': 'Lismore Capital vs Process Holdings Ltd',
+            'export_timestamp': datetime.now().isoformat(),
+            'phases': self.knowledge_store,
+            'summary': self.generate_summary()
         }
         
-        self.load_existing_knowledge()
-    
-    def load_existing_knowledge(self):
-        """Load existing knowledge base from disk"""
-        kb_file = self.project_root / "memory" / "opus_41_knowledge_base.json"
-        if kb_file.exists():
-            with open(kb_file, 'r', encoding='utf-8') as f:
-                stored_kb = json.load(f)
-                self.knowledge_base.update(stored_kb)
-    
-    def save_knowledge_base(self):
-        """Save knowledge base to disk"""
-        kb_file = self.project_root / "memory" / "opus_41_knowledge_base.json"
-        kb_file.parent.mkdir(parents=True, exist_ok=True)
+        with open(filename, 'w', encoding='utf-8') as f:
+            json.dump(export_data, f, indent=2, default=str)
         
-        with open(kb_file, 'w', encoding='utf-8') as f:
-            json.dump(self.knowledge_base, f, indent=2)
-    
-    def update_from_phase(self, phase: str, findings: str):
-        """Update knowledge base with phase findings"""
-        # Implementation of extraction logic
-        # This would call specific extraction methods based on phase
-        self.save_knowledge_base()
-    
-    def build_cumulative_context(self, phase: int) -> str:
-        """Build context with Opus 4.1 enhancements"""
-        context = "OPUS 4.1 ACCUMULATED INTELLIGENCE:\n\n"
-        
-        # Add legal training
-        if self.knowledge_base.get('legal_training'):
-            context += "Legal Framework Mastery:\n"
-            context += f"{json.dumps(self.knowledge_base['legal_training'], indent=2)[:1500]}\n\n"
-        
-        # Add case context
-        if self.knowledge_base.get('case_context'):
-            context += "Case Intelligence:\n"
-            context += f"{json.dumps(self.knowledge_base['case_context'], indent=2)[:1500]}\n\n"
-        
-        # Add phase-specific discoveries
-        context += "Investigation Progress:\n"
-        context += self.summarise_findings(1, phase)
-        
-        return context
-    
-    def summarise_findings(self, start_phase: int, end_phase: int) -> str:
-        """Summarise findings with litigation focus"""
-        summary = ""
-        
-        if end_phase >= 1:
-            summary += f"\nKey Players Identified: {len(self.knowledge_base.get('players', {}))}"
-            summary += f"\nDocuments Analysed: {len(self.evidence_map)}"
-        
-        if end_phase >= 2:
-            patterns = self.knowledge_base.get('patterns', {})
-            summary += f"\nControl Patterns: {len(patterns.get('control_patterns', []))}"
-            summary += f"\nDeception Indicators: {len(patterns.get('deception_indicators', []))}"
-        
-        # ... continue for other phases
-        
-        return summary[:2000]
-    
-    def get_kill_shots(self) -> Dict:
-        """Get kill shots summary"""
-        kill_shots = self.knowledge_base.get('kill_shots', {})
-        total = sum(len(v) for v in kill_shots.values() if isinstance(v, list))
-        return {'total': total, 'details': kill_shots}
-    
-    def get_missing_docs(self) -> Dict:
-        """Get missing documents"""
-        return self.knowledge_base.get('missing_docs', {})
-    
-    def get_theories(self) -> Dict:
-        """Get theories"""
-        return self.knowledge_base.get('theories', {})
-    
-    def store_adverse_inference(self, report: List[Dict]):
-        """Store adverse inference opportunities"""
-        self.knowledge_base['missing_docs']['adverse_inference_opportunities'] = report
-        self.save_knowledge_base()
-    
-    def update_legal_training(self, doc_count: int):
-        """Update legal training status"""
-        self.knowledge_base['legal_training']['documents_studied'] = doc_count
-        self.knowledge_base['legal_training']['training_complete'] = True
-        self.knowledge_base['legal_training']['opus_41_enhanced'] = True
-        self.save_knowledge_base()
-    
-    def update_case_context(self, doc_count: int):
-        """Update case context"""
-        self.knowledge_base['case_context']['documents_studied'] = doc_count
-        self.save_knowledge_base()
+        print(f"Knowledge exported to {filename}")
+        return filename
