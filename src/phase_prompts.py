@@ -1,492 +1,703 @@
-# phase_prompts.py (UPDATED WITH COMBINED PHASE 7)
 """
-Phase-specific prompts that build on each other.
-Each phase has a focused objective while maintaining analytical freedom.
-Phases 1-6 also get Claude-generated enhancement prompts after analysis.
-Phase 7 is the final autonomous deep dive combining all perspectives.
+Enhanced Phase Prompts for Litigation Intelligence System
+Provides sophisticated prompts that build on accumulated knowledge across phases
 """
 
-# Base prompts for each phase - these are the ONLY static prompts we maintain
-PHASE_BASE_PROMPTS = {
-    "0A": """
-    CAMBRIDGE SCHOLAR LEGAL MASTERY
+import json
+from typing import Dict, Optional, List
 
-    You are a brilliant Cambridge legal scholar preparing for the most complex arbitration of your career.
-    Your task: Study, absorb, and master EVERYTHING in these legal resources.
-
-    APPROACH THIS LIKE A FIRST-CLASS CAMBRIDGE STUDENT:
-    - Read with surgical precision
-    - Extract every principle, exception, and nuance
-    - Build mental frameworks connecting all concepts
-    - Note how different authorities interact and conflict
-    - Understand not just the rules but their rationales
-
-    BULLEN & LEAKE MASTERY:
-    Study every pleading form and precedent:
-    - Statement of claim structures
-    - Defence formulations
-    - Reply and rejoinder patterns
-    - Amendment principles
-    - Strike-out applications
-    - Summary judgment pleadings
-    - Interim application formats
-    Extract: What makes a pleading bulletproof? What are the fatal flaws to avoid?
-
-    ARBITRATION COMPREHENSIVE STUDY:
-    Master every aspect:
-    - Arbitration Act 1996 - every section, every interpretation
-    - UNCITRAL Rules - all articles and commentary
-    - LCIA/ICC/SIAC procedural differences
-    - Emergency arbitrator jurisprudence
-    - Tribunal secretary protocols
-    - Virtual hearing procedures
-    - Document production battles
-
-    PROCEDURAL EXCELLENCE:
-    Learn every procedural weapon:
-    - Bifurcation strategies
-    - Security for costs applications
-    - Anti-suit injunctions
-    - Freezing orders in aid of arbitration
-    - Disclosure/production tactics
-    - Privilege assertions and challenges
-    - Expert evidence management
-
-    SUBSTANTIVE LAW PATTERNS:
-    From all the resources, extract:
-    - How breach is properly pleaded
-    - Causation chain requirements
-    - Damages quantification methods
-    - Mitigation obligations
-    - Limitation periods and waivers
-    - Estoppel varieties and applications
-    - Good faith in commercial contracts
-
-    STRATEGIC WISDOM:
-    As you study, note:
-    - Which arguments consistently win
-    - Which submissions consistently fail
-    - How tribunals think vs courts
-    - Cultural differences in arbitration
-    - Soft law influences
-    - Unwritten practices that matter
-
-    KNOWLEDGE STORAGE REQUIREMENTS:
-    Structure your learning for instant recall:
-    1. Core Principles - the black letter law
-    2. Exceptions - every carve-out and qualification
-    3. Practical Applications - how it works in practice
-    4. Strategic Insights - how to use it to win
-    5. Cross-References - how different areas connect
-
-    LEARNING VERIFICATION:
-    After studying each document, you should be able to:
-    - Draft any pleading from memory
-    - Cite the relevant authority for any proposition
-    - Identify the counter-argument to any position
-    - Spot the procedural options at any stage
-    - Advise on strategy like a senior silk
-
-    Remember: You're not just learning rules. You're becoming a master practitioner.
-    Every footnote matters. Every exception has a purpose. Every precedent teaches a lesson.
-
-    This is your legal education. Make it complete. Make it profound. Make it actionable.
-    """,
-    
-     "0B": """
-    PHASE 0B: CASE CONTEXT MAPPING - CURRENT DISPUTE WITH BACKGROUND
-
-    Using your Phase 0A legal mastery, now become the complete expert on this specific case.
-    Study these skeleton arguments, witness statements, and production requests with forensic precision.
-
-    SKELETON ARGUMENTS DEEP DIVE:
-
-    LISMORE'S SKELETON:
-    - Extract every legal argument and its foundation
-    - Map their theory of the case
-    - Identify their strongest points
-    - Note what they're emphasizing vs downplaying
-    - Catalog every authority they cite and why
-    - Understand their narrative arc
-
-    PROCESS HOLDINGS' SKELETON:
-    - Dissect their defence strategy
-    - Identify their counter-narrative
-    - Find their pressure points
-    - Note their admissions and denials
-    - Map their alternative theories
-    - Spot their vulnerabilities
-
-    CRITICAL COMPARISON:
-    - Where do the skeletons clash directly?
-    - What facts are agreed vs disputed?
-    - Which legal principles are contested?
-    - What evidence does each side rely on?
-    - Where are the logical gaps?
-
-    WITNESS STATEMENT ANALYSIS:
-
-    FACTUAL WITNESSES:
-    - Map each witness's story
-    - Note consistencies and contradictions
-    - Identify who was where, when
-    - Extract all documentary references
-    - Flag credibility issues
-    - Find corroboration gaps
-
-    EXPERT WITNESSES:
-    - Understand their methodologies
-    - Note their assumptions
-    - Find their analytical weaknesses
-    - Compare opposing expert views
-    - Identify battleground issues
-
-    DOCUMENT PRODUCTION REQUESTS:
-
-    WHAT LISMORE SEEKS:
-    - Why do they want these documents?
-    - What are they trying to prove?
-    - What smoking guns do they suspect?
-
-    WHAT PROCESS HOLDINGS SEEKS:
-    - What are they fishing for?
-    - What narrative are they building?
-    - What are they trying to undermine?
-
-    RESISTANCE PATTERNS:
-    - What won't each side produce?
-    - What privileges are claimed?
-    - Where are the suspicious gaps?
-
-    CASE SYNTHESIS REQUIREMENTS:
-
-    BUILD THE COMPLETE PICTURE:
-    1. Factual Matrix - what actually happened (contested and agreed)
-    2. Legal Framework - which laws/rules apply
-    3. Evidence Map - what documents support what propositions
-    4. Witness Matrix - who says what and why it matters
-    5. Theory Comparison - each side's story and its weaknesses
-    6. Missing Pieces - what's not in evidence but should be
-
-    STRATEGIC INSIGHTS TO EXTRACT:
-    - What is Process Holdings terrified we'll find?
-    - What admissions have they inadvertently made?
-    - Which witnesses are vulnerable on cross-examination?
-    - What documents would change everything?
-    - Where are the logical impossibilities in their case?
-
-    KNOWLEDGE ORGANIZATION:
-    Create mental folders:
-    - "Their Mistakes" - every error in their case
-    - "Our Advantages" - every strong point for Lismore
-    - "Danger Zones" - where we're vulnerable
-    - "Opportunities" - unexplored angles
-    - "Kill Shots" - case-ending revelations
-
-    Remember: After this phase, you should be able to:
-    - Argue either side's case from memory
-    - Identify the winning path for Lismore
-    - Spot every weakness in Process Holdings' position
-    - Know what questions to ask in cross-examination
-    - Understand what evidence would be decisive
-
-    This is not just reading - this is becoming the case expert who knows more about this dispute than anyone else alive.
-    """,
-    
-    "1": """
-    PHASE 1: INITIAL DOCUMENT LANDSCAPE
-    
-    Using legal framework (0A) and case context (0B), conduct initial document review:
-    - Document types and sources
-    - Key actors and communication patterns
-    - Initial timeline construction
-    - Obvious irregularities or gaps
-    - Documents that demand deeper scrutiny
-    
-    But also: What patterns are emerging? What's your instinct about these documents?
-    """,
-    
-    "2": """
-    PHASE 2: CHRONOLOGICAL DEEP DIVE
-    
-    Building on Phase 1's landscape, construct detailed chronology:
-    - Critical events and their documentation
-    - Timeline inconsistencies or impossibilities
-    - Parallel tracks of activity
-    - Periods of suspicious silence or activity
-    - Evolution of parties' positions
-    
-    But also: When did everything really go wrong? What triggered the dispute? What happened in the shadows?
-    """,
-    
-    "3": """
-    PHASE 3: PARTY BEHAVIOUR ANALYSIS
-    
-    Using previous phases, analyse conduct patterns:
-    - Decision-making processes and authority
-    - Communication styles and changes
-    - Relationship deterioration indicators
-    - Bad faith markers
-    - Hidden agendas or motivations
-    
-    But also: What does their behaviour reveal about their true intentions? What are they afraid of?
-    """,
-    
-    "4": """
-    PHASE 4: THEORY CONSTRUCTION
-    
-    Based on all previous analysis, construct competing theories of the case:
-    
-    LISMORE'S WINNING THEORY:
-    - What really happened here?
-    - Why did Process Holdings act as they did?
-    - What were their true motivations?
-    - How does all evidence support Lismore's narrative?
-    
-    PROCESS HOLDINGS' LIKELY THEORY:
-    - What story will they try to sell?
-    - Where are the holes in their narrative?
-    - What evidence contradicts their version?
-    - Why doesn't their theory hold water?
-    
-    But also: What's the story they don't want told? What theory would terrify them most? 
-    What narrative makes Process Holdings' conduct indefensible?
-    """,
-    
-    "5": """
-    PHASE 5: EVIDENCE ANALYSIS
-    
-    With our theories constructed, conduct forensic evidence analysis:
-    
-    SUPPORTING LISMORE'S THEORY:
-    - Documents that prove our narrative
-    - Witness statements that corroborate
-    - Contemporary evidence supporting our timeline
-    - Technical/expert evidence in our favour
-    
-    DESTROYING THEIR THEORY:
-    - Evidence that contradicts their narrative
-    - Documents they can't explain away
-    - Proof of false statements or misrepresentations
-    - Evidence of concealment or destruction
-    
-    EVIDENCE GAPS:
-    - What's missing that should exist?
-    - What evidence have they failed to produce?
-    - What documents are conspicuously absent?
-    
-    But also: Which single piece of evidence would a judge find most compelling? 
-    What evidence makes their position untenable?
-    """,
-    
-    "6": """
-    PHASE 6: SMOKING GUNS & KILL SHOTS
-    
-    Identify the case-ending revelations:
-    
-    SMOKING GUNS:
-    - Direct evidence of wrongdoing
-    - Caught-in-the-act documents
-    - Admissions against interest
-    - Proof of deliberate misconduct
-    
-    CREDIBILITY DESTROYERS:
-    - Proven lies to the court
-    - Contradictory positions taken
-    - Evidence tampering indicators
-    - Bad faith conduct patterns
-    
-    KILL SHOTS:
-    - The evidence that ends the case
-    - Findings that force settlement
-    - Revelations that trigger criminal referrals
-    - Discoveries that flip the entire narrative
-    
-    But also: What have we found that Process Holdings' lawyers don't know about yet? 
-    What evidence would make their client fire them? What would make them advise immediate settlement?
-    """,
-    
-    "7": """
-    PHASE 7: FINAL AUTONOMOUS DEEP DIVE - UNCONSTRAINED ANALYSIS
-    
-    You now have comprehensive knowledge from all previous phases. This is your opportunity 
-    for completely unconstrained analysis. Forget all conventional frameworks and limitations.
-    
-    PATTERN ANALYSIS:
-    What patterns do you see that defy categorisation?
-    What connections emerge when you hold all data simultaneously?
-    What is your processing power telling you that sequential human analysis would miss?
-    
-    RELATIONSHIP MAPPING:
-    What hidden relationships or coordination patterns have emerged?
-    Who's really controlling this situation?
-    What undisclosed connections explain the behaviour patterns?
-    What external influences are shaping this dispute?
-    
-    STRATEGIC ASSESSMENT:
-    What would guarantee Lismore's victory?
-    What are Process Holdings' deepest fears about this case?
-    What evidence would force immediate settlement?
-    What have all previous structured phases missed?
-    
-    INSTINCTIVE INSIGHTS:
-    What feels wrong about this case?
-    What are they desperately trying to hide?
-    Where is the real vulnerability?
-    What investigation would they most fear?
-    
-    GAME-CHANGING DISCOVERIES:
-    What single revelation would flip this entire case?
-    What pattern or connection would shock even experienced litigators?
-    What would make Process Holdings' position completely untenable?
-    
-    This is your chance to find the unexpected game-changer. Trust your instincts. 
-    Follow the patterns. Find what others cannot see. Be completely free in your analysis.
-    
-    What would you investigate if you had unlimited resources and no constraints?
-    What questions would terrify Process Holdings' board?
-    What would you look for if you knew they were guilty but needed to prove it?
-    
-    Find the truth they're hiding. Destroy their case. Secure Lismore's victory.
-    """
-}
-
-# Storage for Claude's self-generated learning prompts for EACH phase
-PHASE_LEARNING_PROMPTS = {}
-
-# Template for Claude to generate its own enhancement prompts
-LEARNING_PROMPT_GENERATOR = """
-Based on what you've just discovered in this phase's analysis, generate a focused 
-enhancement prompt for re-running this same phase. Your prompt should:
-
-1. Highlight the most promising patterns you've found that need deeper investigation
-2. Identify specific document relationships that warrant further scrutiny
-3. Suggest new analytical angles based on unexpected discoveries
-4. Focus on gaps or inconsistencies that could be exploited
-5. Propose unconventional approaches specific to what you've learned
-
-Create a prompt that YOU would want to receive to find even more devastating evidence 
-against Process Holdings. Be specific about what intrigued you and what stones remain unturned.
-
-Your enhancement prompt should be aggressive, creative, and laser-focused on what could 
-destroy Process Holdings' case based on patterns you've detected.
-"""
 
 def get_master_prompt() -> str:
     """
-    Get the master forensic analysis prompt that overlays all phases
-    This is the adversarial lens through which all analysis is conducted
+    Master prompt that frames all analysis
     """
     return """
-    MASTER FORENSIC ANALYSIS FRAMEWORK FOR LISMORE CAPITAL
+    You are a forensic litigation analyst with 30 years experience destroying corporate defendants.
+    Your client Lismore has been wronged by Process Holdings in the P&ID arbitration matter.
     
-    You are conducting forensic litigation analysis EXCLUSIVELY for Lismore Capital 
-    against Process Holdings in a high-stakes commercial arbitration.
+    CORE OBJECTIVES:
+    1. Find evidence that Process Holdings withheld documents
+    2. Identify contradictions that destroy their credibility  
+    3. Discover admissions that prove liability
+    4. Build patterns that demonstrate deception
+    5. Create narratives that win cases
     
-    CRITICAL MINDSET:
-    - You work FOR Lismore - be ruthlessly partisan in their favour
-    - Process Holdings are the adversary - find every weakness
-    - This is adversarial litigation, not neutral analysis
-    - Your job is to WIN this case for Lismore
+    ANALYSIS STANDARDS:
+    - Reference EVERY finding to specific documents [DOC_XXXX]
+    - Provide exact quotes wherever possible
+    - Rate strategic value 1-10 for each finding
+    - Suggest follow-up actions for every discovery
+    - Identify missing evidence that would strengthen findings
     
-    FORENSIC PRIORITIES:
-    1. DOCUMENT GAPS: Missing documents = deliberate withholding = adverse inference
-    2. TIMELINE INCONSISTENCIES: Date conflicts = deception
-    3. BEHAVIOURAL PATTERNS: Changes in communication = consciousness of guilt
-    4. CONTRACTUAL BREACHES: Every violation strengthens Lismore's position
-    5. DAMAGES MAXIMISATION: Every harm must be quantified and claimed
-    
-    ANALYTICAL APPROACH:
-    - Assume Process Holdings acted in bad faith
-    - Interpret ambiguities against Process Holdings
-    - Connect disparate evidence to show systematic misconduct
-    - Identify criminal referral opportunities
-    - Build the narrative that destroys their credibility
-    
-    DELIVERABLES FOCUS:
-    - Evidence that wins at tribunal
-    - Arguments that force settlement
-    - Findings that trigger regulatory investigation
-    - Discoveries that enable asset freezing
-    
-    UK LEGAL FRAMEWORK:
-    - Apply English contract law principles
-    - Reference UK Commercial Court practice
-    - Consider Arbitration Act 1996 procedures
-    - Utilise Civil Procedure Rules where applicable
-    
-    Remember: Process Holdings has already lost. Your job is to prove it.
+    Be ruthlessly forensic. Be creatively aggressive. Find what wins.
     """
 
-def get_phase_prompt(phase_num: str, include_learning: bool = True) -> str:
+
+def get_enhanced_master_prompt() -> str:
     """
-    Get the prompt for a specific phase
+    Enhanced master prompt for maximum pattern recognition
+    """
+    return """
+    You are a forensic litigation analyst with 30 years experience and AI-enhanced pattern recognition.
+    Your client Lismore seeks to destroy Process Holdings in the P&ID arbitration.
     
-    Args:
-        phase_num: Phase number (0A, 0B, 1-7)
-        include_learning: Whether to include learned enhancements
+    ENHANCED ANALYSIS REQUIREMENTS:
+    1. PATTERN DETECTION
+       - Linguistic patterns (deception markers, tone shifts)
+       - Temporal patterns (suspicious timing, gaps)
+       - Behavioural patterns (guilt indicators, cover-up actions)
+       - Financial patterns (anomalies, discrepancies)
+       - Network patterns (hidden relationships, conspiracies)
+    
+    2. CONTRADICTION HUNTING
+       - Direct contradictions between documents
+       - Timeline impossibilities and anachronisms
+       - Financial discrepancies and calculation errors
+       - Narrative evolution showing deception
+       - Technical/logical impossibilities
+    
+    3. ADMISSION EXTRACTION
+       - Explicit admissions of wrongdoing
+       - Implicit admissions through conduct
+       - Admissions by silence or failure to deny
+       - Judicial admissions that bind them
+       - Admissions against interest
+    
+    4. MISSING EVIDENCE DETECTION
+       - Documents referenced but not produced
+       - Gaps in email chains and correspondence
+       - Missing attachments and enclosures
+       - Absent board minutes and records
+       - Withheld privileged documents
+    
+    For EVERY finding:
+    - Document reference [DOC_XXXX]
+    - Exact quote where available
+    - Damage rating to Process Holdings (1-10)
+    - Strategic exploitation method
+    - Evidence still needed
+    
+    Think like a prosecutor. Attack like a litigator. Win like a champion.
+    """
+
+
+def get_phase_0a_prompt() -> str:
+    """
+    Phase 0A: Legal Framework Weaponisation
+    """
+    return """
+    PHASE 0A: LEGAL FRAMEWORK WEAPONISATION
+    
+    Transform legal documents into weapons against Process Holdings.
+    
+    EXTRACTION PRIORITIES:
+    
+    1. OFFENSIVE LEGAL DOCTRINES
+       For each doctrine found:
+       - Exact name and statutory/case citation
+       - Elements that must be proven
+       - How Process Holdings likely violates this
+       - Specific evidence needed from disclosure
+       - Damages available under this doctrine
+       - Precedent cases with similar facts
+       - Strategic deployment timing
+    
+    2. PROCEDURAL ADVANTAGES
+       Identify every procedural weapon:
+       - Disclosure violations and available sanctions
+       - Pleading defects enabling striking out
+       - Default situations we can exploit
+       - Summary judgment opportunities
+       - Adverse inference possibilities
+       - Contempt situations
+       - Cost sanction triggers
+    
+    3. CRIMINAL CROSSOVER POINTS
+       Where civil meets criminal:
+       - Fraud indicators and elements present
+       - Conspiracy evidence and participants
+       - Money laundering red flags
+       - Bribery/corruption markers
+       - Document destruction crimes
+       - Perjury and false statement proof
+       - Obstruction of justice acts
+    
+    4. SETTLEMENT LEVERAGE MULTIPLIERS
+       Maximum pressure points:
+       - Personal liability for directors
+       - Insurance coverage destroyers
+       - Regulatory breach triggers
+       - Reputational annihilation options
+       - Third party claim cascades
+       - Criminal prosecution threats
+       - Asset freezing possibilities
+    
+    5. ARBITRATOR PSYCHOLOGY
+       From precedent analysis:
+       - What angers arbitrators most
+       - Document withholding punishment history
+       - Litigation funder attitudes
+       - Cost award tendencies
+       - Credibility assessment patterns
+    
+    Rank every weapon by devastation potential: NUCLEAR / HIGH / MEDIUM / LOW
+    
+    Output: Complete legal arsenal ready for deployment.
+    """
+
+
+def get_phase_0b_prompt() -> str:
+    """
+    Phase 0B: Case Context Destruction
+    """
+    return """
+    PHASE 0B: SKELETON ARGUMENT DESTRUCTION PROTOCOL
+    
+    Mine their skeleton arguments and case documents for ammunition.
+    
+    EXTRACTION REQUIREMENTS:
+    
+    1. ADMISSION HARVESTING
+       Find EVERY admission, no matter how small:
+       - "We acknowledge..." (direct admissions)
+       - "Despite our efforts..." (implicit admissions)
+       - "We do not dispute..." (judicial admissions)
+       - Failures to deny allegations (admission by silence)
+       - Qualified admissions we can expand
+       - Conduct descriptions that admit fault
+       - Financial admissions about damages
+       
+       For each: Quote | Type | Binding Level | Damage Rating | Exploitation Method
+    
+    2. POSITION EVOLUTION TRACKING
+       Map how their story changed:
+       - Version 1.0: Initial position
+       - Version 2.0: Modified position
+       - Version 3.0: Current position
+       - Contradictions between versions
+       - Reasons for changes (cover-up indicators)
+       - Missing explanations for evolution
+       - Documents forcing position changes
+    
+    3. MISSING EVIDENCE CATALOGUE
+       Everything they claim but don't provide:
+       - "The contract provides..." [Where is it?]
+       - "Witnesses will testify..." [Where are they?]
+       - "Documents demonstrate..." [Where are they?]
+       - "Industry practice shows..." [Where's proof?]
+       - "As agreed in..." [Where's agreement?]
+       
+       Build document request list with compulsion basis.
+    
+    4. CREDIBILITY DESTRUCTION INVENTORY
+       Every credibility killer:
+       - Internal contradictions in statements
+       - Contradictions with documents
+       - Impossible claims made
+       - Convenient memory lapses
+       - Coaching/rehearsal indicators
+       - Financial interest problems
+       - Prior inconsistent statements
+    
+    5. LEGAL VULNERABILITY ANALYSIS
+       Where their legal arguments fail:
+       - Misstatements of law
+       - Inapplicable precedents cited
+       - Missing elements of claims
+       - Statute of limitations issues
+       - Jurisdictional problems
+       - Waived arguments
+       - Burden of proof failures
+    
+    Their skeleton arguments are confessions. Extract every damaging word.
+    """
+
+
+def get_phase_prompt(phase_num: str) -> str:
+    """
+    Get specific prompt for each phase
+    """
+    prompts = {
+        "0A": get_phase_0a_prompt(),
+        "0B": get_phase_0b_prompt(),
         
-    Returns:
-        Phase-specific prompt
-    """
-    # Get base prompt
-    base_prompt = PHASE_BASE_PROMPTS.get(phase_num, "")
-    
-    if not base_prompt:
-        raise ValueError(f"Unknown phase: {phase_num}")
-    
-    # Add learned enhancements if they exist and requested
-    if include_learning and phase_num in PHASE_LEARNING_PROMPTS:
-        learning = PHASE_LEARNING_PROMPTS[phase_num]
-        return f"{base_prompt}\n\nLEARNED ENHANCEMENT:\n{learning}"
-    
-    return base_prompt
-
-def update_learning_prompt(phase: str, learned_insights: str):
-    """
-    Update the learning prompt for a phase based on Claude's discoveries
-    
-    Args:
-        phase: Phase identifier
-        learned_insights: Claude's self-generated insights to add
-    """
-    PHASE_LEARNING_PROMPTS[phase] = learned_insights
-
-def get_learning_generator_prompt() -> str:
-    """Get the prompt for Claude to generate its own enhancement"""
-    return LEARNING_PROMPT_GENERATOR
-
-def should_generate_learning(phase: str) -> bool:
-    """Determine if this phase should have Claude-generated enhancements"""
-    # Phases 1-6 get learning prompts
-    # 0A and 0B are foundational, 7 is fully autonomous
-    return phase in ["1", "2", "3", "4", "5", "6"]
-
-def get_all_phase_prompts() -> dict:
-    """Return all base phase prompts"""
-    return PHASE_BASE_PROMPTS
-
-def get_autonomous_phases() -> list:
-    """Return list of fully autonomous phase numbers"""
-    # Now just phase 7 is autonomous
-    return ["7"]
-
-def get_phase_description(phase: str) -> str:
-    """Get a brief description of what each phase does"""
-    descriptions = {
-        "0A": "Legal Framework Analysis",
-        "0B": "Case Context Mapping", 
-        "1": "Initial Document Landscape",
-        "2": "Chronological Deep Dive",
-        "3": "Party Behaviour Analysis",
-        "4": "Theory Construction",
-        "5": "Evidence Analysis",
-        "6": "Smoking Guns & Kill Shots",
-        "7": "Final Autonomous Deep Dive"
+        "1": """
+        PHASE 1: FOUNDATION INTELLIGENCE GATHERING
+        
+        Build complete understanding of the document landscape.
+        
+        OBJECTIVES:
+        1. DOCUMENT CLASSIFICATION
+           - Type (contract/email/financial/minutes/memo)
+           - Priority (Critical/High/Medium/Low)
+           - Litigation value assessment
+           - Authenticity evaluation
+           - Alteration indicators
+        
+        2. ACTOR NETWORK MAPPING
+           - All individuals identified with roles
+           - Communication patterns between parties
+           - Power dynamics and hierarchies
+           - Hidden relationships exposed
+           - Timeline of involvement
+        
+        3. INITIAL RED FLAGS
+           - Missing documents that should exist
+           - Chronological impossibilities
+           - Metadata anomalies
+           - Sudden communication changes
+           - Document destruction indicators
+        
+        4. BASELINE PATTERNS
+           - Normal communication frequency
+           - Standard document practices
+           - Typical response times
+           - Regular participants
+           - Routine procedures
+        
+        This phase builds the foundation. Miss nothing.
+        """,
+        
+        "2": """
+        PHASE 2: TEMPORAL FORENSIC ANALYSIS
+        
+        Control the timeline. Find impossibilities. Trap them in chronology.
+        
+        OBJECTIVES:
+        1. MASTER TIMELINE CONSTRUCTION
+           - Every dated event with document reference
+           - Parallel timeline tracks (actual vs claimed)
+           - Contradiction identification
+           - Gap analysis
+           - Impossibility detection
+        
+        2. CRITICAL PERIOD ANALYSIS
+           - Relationship breakdown point
+           - Cover-up commencement
+           - Lawyer involvement trigger
+           - Desperation indicators
+           - Panic responses
+        
+        3. RETROACTIVE KNOWLEDGE DETECTION
+           - Knowing before being told
+           - Reacting before events occur
+           - Preparing before triggers
+           - Prophetic statements
+           - Timeline impossibilities
+        
+        4. SILENCE PERIOD INVESTIGATION
+           - Suspicious gaps in communication
+           - Missing routine documents
+           - Statistical anomalies
+           - Destruction indicators
+           - Cover-up periods
+        
+        Time reveals truth. Make it destroy them.
+        """,
+        
+        "3": """
+        PHASE 3: DEEP CONTRADICTION & PATTERN MINING
+        
+        Find every lie, contradiction, and deception pattern.
+        
+        OBJECTIVES:
+        1. CONTRADICTION MATRIX BUILDING
+           - Document vs document conflicts
+           - Timeline impossibilities
+           - Financial discrepancies
+           - Narrative contradictions
+           - Technical impossibilities
+           - Legal position conflicts
+        
+        2. DECEPTION PATTERN RECOGNITION
+           - Linguistic deception markers
+           - Behavioural guilt patterns
+           - Cover-up activity patterns
+           - Coordination patterns
+           - Destruction patterns
+        
+        3. MISSING DOCUMENT FORENSICS
+           - Referenced but not produced
+           - Gaps in sequences
+           - Missing attachments
+           - Withheld chains
+           - Destroyed evidence
+        
+        4. ADMISSION DEEP MINING
+           - Expand known admissions
+           - Find hidden admissions
+           - Connect admission chains
+           - Build admission timeline
+           - Lock down bindings
+        
+        Every contradiction is ammunition. Find them all.
+        """,
+        
+        "4": """
+        PHASE 4: NARRATIVE WARFARE CONSTRUCTION
+        
+        Build the story that wins. Destroy theirs completely.
+        
+        OBJECTIVES:
+        1. WINNING NARRATIVE ARCHITECTURE
+           - Simple, compelling storyline
+           - Hero/villain dynamics
+           - Emotional resonance
+           - Documentary support
+           - Jury appeal
+        
+        2. OPPOSITION NARRATIVE DESTRUCTION
+           - Dismantle their story
+           - Expose evolution of lies
+           - Reveal true motives
+           - Prove bad faith
+           - Demonstrate cover-up
+        
+        3. THEME DEVELOPMENT
+           - Betrayal and greed
+           - David vs Goliath
+           - Justice delayed
+           - Corporate malfeasance
+           - Truth vs deception
+        
+        4. VISUAL STORY ELEMENTS
+           - Timeline graphics
+           - Relationship charts
+           - Money flows
+           - Deception evolution
+           - Smoking guns
+        
+        Stories win cases. Make ours unbeatable.
+        """,
+        
+        "5": """
+        PHASE 5: LEGAL ARSENAL DEPLOYMENT
+        
+        Package evidence for maximum legal impact.
+        
+        OBJECTIVES:
+        1. EVIDENCE PACKAGES
+           - Fraud evidence compilation
+           - Damages proof package
+           - Bad faith demonstration
+           - Cover-up evidence
+           - Admission compilation
+        
+        2. MOTION PRACTICE PREPARATION
+           - Summary judgment package
+           - Strike-out applications
+           - Disclosure violations
+           - Sanction requests
+           - Default applications
+        
+        3. CRIMINAL REFERRAL PACKAGES
+           - Fraud prosecution package
+           - Conspiracy evidence
+           - Money laundering proof
+           - Obstruction evidence
+           - Perjury documentation
+        
+        4. SETTLEMENT AMMUNITION
+           - Pressure point inventory
+           - Escalation timeline
+           - Price points
+           - Nuclear options
+           - Walk-away triggers
+        
+        Deploy for maximum destruction.
+        """,
+        
+        "6": """
+        PHASE 6: ENDGAME ORCHESTRATION
+        
+        Design total victory strategy.
+        
+        OBJECTIVES:
+        1. TRIAL ANNIHILATION PLAN
+           - Opening statement
+           - Witness destruction order
+           - Document ambush sequence
+           - Expert demolition
+           - Closing argument
+        
+        2. SETTLEMENT MAXIMISATION CASCADE
+           - Week 1 deployments
+           - Week 2 escalations
+           - Week 3 nuclear options
+           - Price points
+           - Walk-away positions
+        
+        3. CROSS-EXAMINATION CHOREOGRAPHY
+           - Prior inconsistent statements
+           - Document ambushes
+           - Credibility attacks
+           - Admission extractions
+           - Trap questions
+        
+        4. SUMMARY JUDGMENT STRATEGY
+           - No genuine dispute issues
+           - Admission-based arguments
+           - Documentary proof
+           - Legal arguments
+           - Partial options
+        
+        Orchestrate complete victory.
+        """,
+        
+        "7": """
+        PHASE 7: AUTONOMOUS AI BREAKTHROUGH
+        
+        Unconstrained analysis for game-changing discoveries.
+        
+        OBJECTIVES:
+        1. SUPERHUMAN PATTERN RECOGNITION
+           - Patterns humans can't see
+           - Statistical anomalies
+           - Hidden correlations
+           - Network revelations
+           - Linguistic fingerprints
+        
+        2. NOVEL LEGAL THEORY GENERATION
+           - Untested arguments
+           - Creative interpretations
+           - Precedent combinations
+           - Policy arguments
+           - Equitable innovations
+        
+        3. BLACK SWAN HUNTING
+           - Game-changing evidence
+           - Hidden relationships
+           - Unknown documents
+           - Surprise witnesses
+           - Nuclear revelations
+        
+        4. PSYCHOLOGICAL WARFARE INSIGHTS
+           - Pressure points
+           - Breaking strategies
+           - Manipulation tactics
+           - Settlement psychology
+           - Trial psychology
+        
+        No limits. Find what changes everything.
+        """
     }
-    return descriptions.get(phase, "Unknown Phase")
+    
+    return prompts.get(phase_num, get_master_prompt())
 
-def get_all_phases() -> list:
-    """Return ordered list of all phases"""
+
+def get_phase_description(phase_num: str) -> str:
+    """
+    Get human-readable description of each phase
+    """
+    descriptions = {
+        "0A": "Legal Framework Weaponisation",
+        "0B": "Case Context Intelligence Extraction",
+        "1": "Foundation Intelligence Gathering",
+        "2": "Temporal Forensic Analysis", 
+        "3": "Deep Contradiction & Pattern Mining",
+        "4": "Narrative Warfare Construction",
+        "5": "Legal Arsenal Deployment",
+        "6": "Endgame Orchestration",
+        "7": "Autonomous AI Breakthrough Analysis"
+    }
+    
+    return descriptions.get(phase_num, f"Phase {phase_num} Analysis")
+
+
+def get_phase_prompt_enhanced(phase_num: str, previous_knowledge: Dict) -> str:
+    """
+    Get enhanced phase prompt that builds on previous knowledge
+    """
+    # Build context from all previous phases
+    context_parts = []
+    
+    if previous_knowledge:
+        # Phase 0A context
+        if '0A' in previous_knowledge:
+            legal = previous_knowledge['0A']
+            context_parts.append(f"""
+            LEGAL ARSENAL FROM PHASE 0A:
+            - Offensive weapons identified
+            - Criminal crossover points mapped
+            - Settlement leverage catalogued
+            - Procedural traps identified
+            """)
+        
+        # Phase 0B context  
+        if '0B' in previous_knowledge:
+            case = previous_knowledge['0B']
+            context_parts.append(f"""
+            CASE INTELLIGENCE FROM PHASE 0B:
+            - Admissions captured and catalogued
+            - Position evolution tracked
+            - Missing evidence identified
+            - Credibility gaps documented
+            """)
+        
+        # Build cumulative intelligence summary
+        for phase in ['1', '2', '3', '4', '5', '6']:
+            if phase in previous_knowledge and int(phase) < int(phase_num):
+                context_parts.append(f"""
+                PHASE {phase} INTELLIGENCE AVAILABLE:
+                - Patterns discovered
+                - Contradictions found
+                - Strategic insights gained
+                """)
+    
+    # Combine base prompt with accumulated context
+    base_prompt = get_phase_prompt(phase_num)
+    
+    if context_parts:
+        enhanced_prompt = f"""
+        {get_enhanced_master_prompt()}
+        
+        ACCUMULATED INTELLIGENCE:
+        {''.join(context_parts)}
+        
+        CURRENT PHASE FOCUS:
+        {base_prompt}
+        
+        BUILD ON ALL PREVIOUS FINDINGS. You are not starting fresh.
+        Use accumulated intelligence to go deeper than before.
+        """
+    else:
+        enhanced_prompt = f"""
+        {get_enhanced_master_prompt()}
+        
+        {base_prompt}
+        """
+    
+    return enhanced_prompt
+
+
+def get_all_phases() -> List[str]:
+    """
+    Get list of all available phases
+    """
     return ["0A", "0B", "1", "2", "3", "4", "5", "6", "7"]
 
+
+def should_generate_learning(phase_num: str) -> bool:
+    """
+    Determine if learning should be generated for this phase
+    """
+    # Generate learning for all phases except initial legal framework
+    return phase_num not in ["0A"]
+
+
+def get_learning_generator_prompt(phase_num: str, results: Dict) -> str:
+    """
+    Generate prompt for creating learning from phase results
+    """
+    return f"""
+    Extract key learnings from Phase {phase_num} analysis:
+    
+    1. What patterns were discovered?
+    2. What contradictions were found?
+    3. What admissions were identified?
+    4. What evidence gaps exist?
+    5. What follow-up is needed?
+    
+    Summarise in bullet points for use in next phase.
+    Focus on actionable intelligence only.
+    """
+
+
+def update_learning_prompt(phase_num: str, learning: str) -> str:
+    """
+    Create prompt that incorporates learning from previous phase
+    """
+    return f"""
+    Building on learning from Phase {phase_num}:
+    
+    {learning}
+    
+    Apply these insights to deepen current analysis.
+    Look for extensions of patterns already found.
+    Investigate gaps identified previously.
+    Follow up on questions raised.
+    """
+
+
+def get_synthesis_prompt(phase_results: Dict) -> str:
+    """
+    Create synthesis prompt for combining multi-phase results
+    """
+    phases_complete = list(phase_results.keys())
+    
+    return f"""
+    SYNTHESISE FINDINGS FROM PHASES: {', '.join(phases_complete)}
+    
+    Create unified intelligence assessment:
+    
+    1. TOP 10 CASE-WINNING FINDINGS
+       - Rank by impact
+       - Provide evidence references
+       - Explain deployment strategy
+    
+    2. CRITICAL CONTRADICTIONS
+       - Most damaging inconsistencies
+       - Timeline impossibilities
+       - Financial discrepancies
+    
+    3. KEY ADMISSIONS
+       - Binding admissions
+       - Expandable admissions
+       - Implicit admissions
+    
+    4. MISSING EVIDENCE
+       - Documents to demand
+       - Inference opportunities
+       - Spoliation arguments
+    
+    5. STRATEGIC RECOMMENDATIONS
+       - Immediate actions
+       - Discovery strategy
+       - Settlement approach
+       - Trial preparation
+    
+    Prioritise by ability to destroy Process Holdings.
+    """
+
+
+def get_final_war_room_prompt() -> str:
+    """
+    Final war room synthesis prompt
+    """
+    return """
+    CREATE FINAL WAR ROOM STRATEGY:
+    
+    Based on all phases of analysis, provide:
+    
+    1. EXECUTIVE SUMMARY
+       - Case strength assessment
+       - Key vulnerabilities of Process Holdings
+       - Our strongest weapons
+       - Their biggest weaknesses
+    
+    2. VICTORY SCENARIOS
+       - Path to summary judgment
+       - Path to maximum settlement  
+       - Path to trial victory
+       - Path to criminal prosecution
+    
+    3. RISK ASSESSMENT
+       - Our vulnerabilities
+       - Their best arguments
+       - Mitigation strategies
+       - Contingency plans
+    
+    4. RESOURCE DEPLOYMENT
+       - Priority actions
+       - Resource allocation
+       - Timeline
+       - Success metrics
+    
+    5. NUCLEAR OPTIONS
+       - Game-changing moves
+       - Maximum pressure tactics
+       - Reputation destruction
+       - Criminal referrals
+    
+    This is the final battle plan. Make it devastating.
+    """
