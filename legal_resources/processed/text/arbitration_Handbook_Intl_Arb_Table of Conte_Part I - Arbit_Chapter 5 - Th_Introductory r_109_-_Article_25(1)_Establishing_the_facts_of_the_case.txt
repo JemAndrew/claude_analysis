@@ -1,0 +1,165 @@
+Article 25(1): Establishing the facts of the case, UKBC-ICCARBN 474407069 (2022)
+© 2025 Thomson Reuters.
+1
+Article 25(1): Establishing the facts of the case
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+Introductory remarks
+Article 25(1): Establishing the facts of the case
+“The arbitral tribunal shall proceed within as short a time as possible to establish the facts of the case by all appropriate
+means.”
+25-10
+Under art.25(1), it is the obligation of the Tribunal to establish the facts of the case. Article 31(1) imposes a further obligation
+on the Tribunal as it states that the Tribunal is to render its final award within six months from the Terms of Reference. This time
+frame is very difficult to follow and is not met in most cases submitted to ICC arbitration. 347  Article 31(1) therefore provides
+for extensions. But the requirement that the Tribunal take the initiative to complete the proceedings within a certain time frame
+is unlike that in most national courts. For arbitrations subject to the Expedited Procedure Provisions under art.30, the Tribunal
+has a further requirement to issue an award within six months after the date of the case management conference.
+25-11
+Management of the proceedings is important at all stages of the arbitration. Arbitral proceedings may have to be adapted to
+changing circumstances, and the parties may perceive ever more diverging interests as the procedure develops. Therefore,
+on each occasion on which the Tribunal changes the procedure, it should ensure that the result is not to derail subsequent
+proceedings. All the same, the authors strongly believe that time is not an objective in itself, and that a sound balance must
+always be found between a party’s right and expectation to fully present its case or defence on the one hand, and the need to
+bring the process to an end in a timely fashion on the other hand. Reconciling these objectives is often difficult and leads to
+tensions that a Tribunal must address in each case by taking all circumstances into consideration. 348
+25-12
+The detailed means for establishing the facts of the case are discussed under the various other subsections of art.25. However,
+establishing the facts of the case in an ICC arbitration depends basically on evidence provided by the parties. It is seldom that
+a Tribunal will take the initiative to collect and review evidence from sources other than the parties, not least because in most
+cases it would not be able to do so, unless the evidence is in the public domain (in particular accessible through the internet).
+Nevertheless, Tribunals may do so at the request of a party or to some extent even through a Tribunal-appointed expert.
+25-13
+In deciding on the appropriate means to establish the facts of the case, the Tribunal will have to take into account the basic
+procedural requirements discussed under arts 19 and 22. It will also have to decide on several basic differences that may arise
+between the parties and the Tribunal.
+25-14
+The first difference is that claimants (or counter-claimants) usually wish to pursue their claims actively. Claimants have the
+initiative as to bringing the proceedings and usually will do so after they have prepared for it. Claimants (or counter-claimants)
+stand to receive a payment if they win. Therefore, their financial incentive is to complete the proceedings rapidly.
+25-15
+
+Article 25(1): Establishing the facts of the case, UKBC-ICCARBN 474407069 (2022)
+© 2025 Thomson Reuters.
+2
+Respondents usually have not chosen the timing of the dispute, although they may well have advance warning of it and have
+had an adequate time to prepare. Respondents without a counterclaim are faced with a financial incentive to delay if there is
+a real risk of loss, although terminating legal proceedings may after all also be in a respondent’s interest from a cost and time
+point of view. However, in many cases, there is at least the perception that respondents may seek to delay matters. Additional
+parties joined pursuant to art.7 may have particular procedural concerns as they may be peripheral or have conditional claims.
+25-16
+The second difference is that ICC arbitration is applicable in a wide range of situations with parties having varying financial
+resources. The parties may be major groups or companies with substantial turnovers and revenue, governments or state
+enterprises. But the parties may also be relatively small distributors, contractors or buyers or sellers (for example, of industrial
+equipment), sometimes acting as individuals, or through small companies, of which these individuals are the sole or main
+shareholders. Funding the costs of an international arbitration, including the legal costs of foreign counsel and the travel of the
+party, its witnesses and experts to a foreign (and sometimes distant) place of arbitration will strain smaller parties and even
+more so when they come from developing countries. The appropriate means to establish the facts of the case for one company
+with large resources may be totally out of reach for smaller companies or individuals. As a result, an important issue in some
+arbitrations is providing dispute resolution that is accessible for smaller companies or individuals. 349
+25-17
+The third difference is that the Tribunal deals in general not directly with the parties but with their counsel. Therefore, issues
+as to timing and expense are affected by the commitments—and preferences—of counsel. If both counsel agree on additional
+time periods, it will be difficult for the Tribunal not to respect that agreement. But if the additional time periods are requested
+by one counsel, the Tribunal must keep in mind its obligation to establish the facts of the case “in as short a time as possible”
+and “to conduct the arbitration in an expeditious … manner …)”, art.22(1).
+25-18
+The fourth difference is that the parties may disagree strongly on whether to separate out legal issues to be decided: whether to
+bifurcate proceedings. 350  The issue of whether the Tribunal holds separate, initial hearings on threshold matters that may make
+further evidence unnecessary is one of the early basic differences that may arise between the parties. But typical issues that are
+decided at the outset include decisions as to the applicable language, the applicable law and the jurisdiction of the Tribunal. 351
+25-19
+The parties and their representatives are under a good faith obligation to cooperate in the arbitration procedure. The duty of party
+representatives has been the subject of a working group of the IBA that has resulted in the IBA Representation Guidelines. 352
+These Guidelines are not binding as such, although they are referred to in the 2021 ICC Note and may be adopted by Tribunals.
+Moreover, the IBA Representation Guidelines deal with very sensitive issues such as the duty of the lawyers involved with
+respect to facts and provide for consequences for a failure to comply. Although it does not appear that they are widely-
+adopted, 353  if at all, it is worth noting some of the principles that the IBA Representation Guidelines set out with respect to
+establishing the facts of the case. They include the following:
+ 
+“9.A Party Representative should not make any knowingly false submission of fact to the Arbitral Tribunal.
+ 
+10.In the event that a Party Representative learns that he or she previously made a false submission of
+fact to the Arbitral Tribunal, the Party Representative should, subject to countervailing considerations of
+confidentiality and privilege, promptly correct such submission.
+ 
+11.A Party Representative should not submit Witness or Expert evidence that he or she knows to be false.
+If a Witness or Expert intends to present or presents evidence that a Party Representative knows or later
+discovers to be false, such Party Representative should promptly advise the Party whom he or she represents
+of the necessity of taking remedial measures and of the consequences of failing to do so. Depending upon
+the circumstances, and subject to countervailing considerations of confidentiality and privilege, the Party
+Representative should promptly take remedial measures, which may include one or more of the following:
+ 
+(a)advise the Witness or Expert to testify truthfully;
+
+Article 25(1): Establishing the facts of the case, UKBC-ICCARBN 474407069 (2022)
+© 2025 Thomson Reuters.
+3
+ 
+(b)take reasonable steps to deter the Witness or Expert from submitting false evidence;
+ 
+(c)urge the Witness or Expert to correct or withdraw the false evidence;
+ 
+(d)correct or withdraw the false evidence;
+ 
+(e)withdraw as Party Representative if the circumstances so warrant.”
+25-20
+Many of these principles are in fact applicable amongst members of national bar associations. And there is no reason why a
+similar standard should not be applicable in international arbitration, although the issue of enforcement is a real one. 354  The
+main sanction for perceived misbehaviour in this respect is most likely to be in costs.
+Footnotes
+347
+In expedited procedures under art.30, the six-month time limit runs from the date of the case management conference,
+there being no need to establish Terms of Reference for so-called small claims proceedings, see art.4(1) of the Expedited
+Procedure Rules.
+348
+In ICC Case No.20707 (a tribunal chaired by one of the co-authors) made the following statements in its procedural
+order no.6 at paras 14–17: “… while the Tribunal considered that it was important to maintain the Hearing dates, that
+was not a goal itself. Under Article 22 of the ICC Rules, the Tribunal after consulting with the Parties, may adopt
+procedural measures that it considers appropriate, while ensuring that each Party has a reasonable opportunity to present
+its case. In light of the Parties’ submissions, the Tribunal has come to the conclusion that it is in the best interest of
+fair proceedings and as such less ‘invasive’ to deal with this unfortunate situation created by Claimants by adopting
+the second option of adjourning the Evidentiary Hearing to a later date. The Tribunal prefers to have a full record, and
+therefore would like to proceed to a thorough verification of admissibility of the New Evidence, followed by a decision
+as to what will be allowed on record. Other than incurring some additional costs, Respondent will not be prejudiced by
+the Tribunal’s decision. As this is ultimately Claimants’ case, they remain responsible for the delay occasioned by this
+later submission, and will foremost suffer the associated consequences. The Tribunal therefore considers that Claimants
+should include and explain their requests concerning the New Evidence in a ‘New Evidence Schedule’, and Respondent
+should be allowed to respond in the same schedule; a model of which is attached to the present PO 6 in the format of
+what some practitioners refer to as the ‘Stern Schedule’.”
+349
+Article 22(1) expressly requires the Tribunal and the parties to make every effort to conduct the arbitration in an
+expeditious and cost-effective manner, having regard to the complexity and value of the dispute.
+350
+For articles discussing the criteria of bifurcation, see Benedettelli, “To Bifurcate or Not To Bifurcate? That is the
+(Ambiguous) Question”, (2013) Arb. Int. Vol.29 No.3, p.493; Greenwood, “Revisiting Bifurcation and Efficiency
+in International Arbitration Proceedings”, (2019) J. Int. Arb. Vol.36 No.4. More generally see Born, International
+Arbitration, 3rd edn (Kluwer Law International, 2021), p.2406 and following.
+351
+Tallerico & Behrendt, “The Use of Bifurcation and Direct Testimony Witness Statements in International Commercial
+Arbitration Proceedings” (2003) J. Int. Arb. Vol.20 No.3, p.295; Greenwood, “Does Bifurcation Really Promote
+Efficiency?” (2011) J. Int. Arb. Vol.28 No.2, p.105.
+352
+Mourre, “About Procedural Soft Law, the IBA Guidelines on Party Representation and the Future of Arbitration”, in
+Shaughnessy & Tung (eds), The Powers and Duties of an Arbitrator: Liber Amicorum Pierre A. Karrer (Kluwer Law
+International, 2017) p.240.
+353
+See para.23-60 fn.326 as to the facts that the IBA Rules on Evidence are not mentioned in the 2021 ICC Note.
+354
+The IBA Representation Guidelines provide in part as follows regarding enforcement: “26. If the Arbitral Tribunal,
+after giving the Parties notice and a reasonable opportunity to be heard, finds that a Party Representative has committed
+Misconduct, the Arbitral Tribunal, as appropriate, may: (a) admonish the Party Representative; (b) draw appropriate
+inferences in assessing the evidence relied upon, or the legal arguments advanced by, the Party Representative; (c)
+consider the Party Representative’s Misconduct in apportioning the costs of the arbitration, indicating, if appropriate,
+how and in what amount the Party Representative’s Misconduct leads the Tribunal to a different apportionment of costs;
+(d) take any other appropriate measure in order to preserve the fairness and integrity of the proceedings.” See in that
+
+Article 25(1): Establishing the facts of the case, UKBC-ICCARBN 474407069 (2022)
+© 2025 Thomson Reuters.
+4
+respect Baizeau, “The IBA Guidelines on Party Representation in International Arbitration: A Plea for Caution”, (2015)
+BCDR International Arbitration Review (Kluwer Law International) Vol.2 No.2, pp.343–356.
+End of Document
+© 2025 SWEET & MAXWELL

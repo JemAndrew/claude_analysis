@@ -1,0 +1,101 @@
+Rule 44.15 - Providing information about funding arrangements, UKBC-WHITEBK...
+© 2025 Thomson Reuters.
+1
+Rule 44.15 - Providing information about funding arrangements
+White Book 2025  | Commentary last updated November 12, 2019
+Volume 2
+Section 7 - Legal Representatives—Costs and Litigation Funding
+Section 7B - CPR 43 to 45 [Before 1 April 2013]
+Part 44 [Before 1 April 2013] General Rules about Costs
+ 
+Related Practice Directions
+Rule 44_15
+44.15— Providing information about funding arrangements 1
+7B-16+
+(1) A party who seeks to recover an additional liability must provide information about the funding arrangement to
+the court and to other parties as required by a rule, practice direction or court order.
+(2) Where the funding arrangement has changed, and the information a party has previously provided in accordance
+with paragraph (1) is no longer accurate, that party must file notice of the change and serve it on all other parties
+within 7 days.
+(3) Where paragraph (2) applies, and a party has already filed—
+(a) an allocation questionnaire; or
+(b) a pre-trial check list (listing questionnaire),
+he must file and serve a new estimate of costs with the notice.
+(The Costs Practice Direction sets out—
+ 
+• the information to be provided when a party issues or responds to a claim form, files an allocation questionnaire,
+a pre-trial check list, and a claim for costs;
+ 
+• the meaning of estimate of costs and the information required in it.)
+(Rule 44.3B sets out situations where a party will not recover a sum representing any additional liability.)
+Effect of rule
+7B-16.
+1+
+Rules 44.15, 44.16 and 44.17 (and also rr.44.3A and 44.3B), were inserted in Pt 44 by the Civil Procedure (Amendment No.3)
+Rules 2000 (SI 2000/1317) when, after the bringing into force of the Access to Justice Act 1999, new funding arrangements
+for legal proceedings became possible (see paras 7B-2.2+ and 7B-10.3+) and, for the purposes of regulating proceedings where
+the new funding arrangements applied, and providing for the assessment of costs in such proceedings, additional rules of court
+were required.
+
+Rule 44.15 - Providing information about funding arrangements, UKBC-WHITEBK...
+© 2025 Thomson Reuters.
+2
+As explained above (para.7B-6+), r.44.15 is a provision “relating to funding arrangements” and applies in relation to “a pre-
+commencement funding arrangement” as it was in force immediately before 1 April 2013. That rule is supplemented by Section
+19 of the Costs Practice Direction (see para.7BPD-5+).
+Rule 44.15 provides that any party who seeks to recover an additional liability must provide certain information about it and
+must also provide information where the funding arrangement changes (note also r.44.3B). The information to be provided in
+the notice of funding, and in the estimate of costs, is limited. Much fuller disclosure of information is required when the final
+assessment of costs takes place. See Section 19 of the Costs Practice Direction (see para.7BPD-5+).
+Rule 44.15 and Section 19 of the Costs Practice Direction came into effect on 3 July 2000. These provisions did not operate
+retrospectively (Inline Logistics Ltd v UCI Logistics Ltd [2002] EWHC 519 (Ch), [2002] 2 Costs L.R. 304 (Ferris J).
+Information about funding arrangement
+7B-16.
+2+
+Provisions requiring a party to provide information about a funding arrangement are explained and amplified in Section 19 of
+the Costs Practice Direction. A claimant who has entered into a CFA is required to file and serve with the claim form “a notice
+containing the information set out in Form N251” (para.19.2(1)).
+Section 32 of the Costs Practice Direction (supplementing r.47.6) contains provisions stipulating the information that be
+provided to the court where a detailed assessment is commenced in respect of additional liability (see para.47PD.34 above). On
+consequences for failure to comply with these directions as to funding arrangements and other relevant directions, see “Failure
+to provide information or to comply with direction etc” para.7B-12.2+.
+This rule, and r.44.3B (Limits on recovery under funding arrangements), and their supplementing practice directions were
+examined in Supperstone v Hurst [2008] EWHC 735 (Ch); [2008] 4 Costs L.R. 572 (Floyd J and assessors), where the decision
+of a Master in detailed assessment proceedings to grant relief from sanction to an applicant who had failed to serve a notice of
+funding within the relevant time limit, was upheld on appeal.
+In Scott v Duncan [2012] EWHC 1792 (QB); [2012] 4 Costs L.R. 787 (Spencer J and assessors), the High Court upheld a
+Master’s decision, made in detailed assessment proceedings, to grant relief from sanction where the claimant’s solicitors had
+failed to serve notice of a change in funding arrangements, necessitated by their practice becoming incorporated.
+In Light on Line Ltd v Zumtobel Lighting Ltd [2012] EWHC 3376 (QB); [2013] 1 Costs L.R. 129. (Slade J & assessors),
+questions arose as to whether the claimants, when commencing detailed assessment proceedings and claiming additional
+liability in the form of an insurance premium, had provided adequate and timely information about an insurance policy as
+required by provisions in Section 32 of the Costs Practice Direction. The court found that, although the receiving party had not
+breached para.32.5(2)(c) by providing a redacted rather than an unredacted insurance certificate, there was a clear breach of the
+requirement under CPR r.47.6, read with para.32.4 of Practice Direction 47 and para.32.5(2), to serve the insurance certificate
+with the bill of costs, but in the event held that it was right that the claimants should be granted relief from sanction for failing
+to serve the certificate on the due date.
+Where a conditional fee agreement had been back-dated and the notice of funding specified the date from which the agreement
+started rather than the date on which the agreement was made, there had been a significant breach of para.19.4 of the Costs
+Practice Direction. The court allowed partial relief from sanctions by reducing the amount of the success fee that would otherwise
+have been recoverable: O’Brien v Shorrock [2015] EWHC 1630 (QB) (Edis J).
+Related Practice Directions
+ 
+Costs Practice Direction (CPR Pt 43) [Before 1 April 2013]
+ 
+Costs Practice Direction (CPR Pt 44) [Before 1 April 2013]
+ 
+Costs Practice Direction (CPR Pt 45) [Before 1 April 2013]
+ 
+Costs Practice Direction (CPR Pt 47)
+
+Rule 44.15 - Providing information about funding arrangements, UKBC-WHITEBK...
+© 2025 Thomson Reuters.
+3
+ 
+Back to top
+Footnotes
+1
+Introduced by the Civil Procedure (Amendment No.3) Rules 2000 (SI 2000/1317) and amended by the Civil Procedure
+(Amendment) Rules 2002 (SI 2002/2058).
+End of Document
+© 2025 SWEET & MAXWELL

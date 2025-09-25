@@ -1,0 +1,133 @@
+Obtaining of documents through local court proceedings, UKBC-ICCARBN 474406970...
+© 2025 Thomson Reuters.
+1
+Obtaining of documents through local court proceedings
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+Obtaining of documents through local court proceedings
+25-76
+Parties may, with or without the consent of the Tribunal, seek to obtain the production of documents through court
+proceedings. 401  The scope of production and manners in which this may be obtained go beyond the scope of this book. However,
+the recent developments with respect to US law should be kept in mind, although the US law in this respect is in a state of flux.
+25-77
+Article 1782 of the US Code provides as follows:
+“Assistance to foreign and international tribunals and to litigants before such tribunals
+ 
+(a)The district court of the district in which a person resides or is found may order him to give his testimony or
+statement or to produce a document or other thing for use in a proceeding in a foreign or international tribunal,
+including criminal investigations conducted before formal accusation. The order may be made pursuant to a
+letter rogatory issued, or request made, by a foreign or international tribunal or upon the application of any
+interested person and may direct that the testimony or statement be given, or the document or other thing be
+produced, before a person appointed by the court. By virtue of his appointment, the person appointed has
+power to administer any necessary oath and take the testimony or statement. The order may prescribe the
+practice and procedure, which may be in whole or part the practice and procedure of the foreign country or
+the international tribunal, for taking the testimony or statement or producing the document or other thing.
+To the extent that the order does not prescribe otherwise, the testimony or statement shall be taken, and the
+document or other thing produced, in accordance with the Federal Rules of Civil Procedure.
+A person may not be compelled to give his testimony or statement or to produce a document or other thing in
+violation of any legally applicable privilege.”
+25-78
+For a number of years, after some hesitation, various US courts of appeal decided that s.1782 did not apply to arbitral
+tribunals. 402  However, in Intel Corp v Advanced Micro Devices, Inc, the US Supreme Court considered the application of
+s.1782 and took a broad view of its scope holding that the EU competition directorate fell within the scope of s.1782. In its
+discussion of the legislative history of the section it stated in part:
+“Moreover, when Congress established the Commission on International Rules of Judicial Procedure in 1958,
+see supra, at 3–4, it instructed the Rules Commission to recommend procedural revisions ‘for the rendering of
+assistance to foreign courts and quasi- judicial agencies.’ para.2, 72 Stat. 1743 (emphasis added). Section 1782
+had previously referred to ‘any judicial proceeding.’ The Rules Commission’s draft, which Congress adopted,
+replaced that term with ‘a proceeding in a foreign or international tribunal.’ See supra, at 4. Congress understood
+that change to ‘provid[e] the possibility of U.S. judicial assistance in connection with [administrative and quasi-
+judicial proceedings abroad].’ S. Rep. No.1580, at 7–8; see Smit, International Litigation 1026–1027, and nn. 71,
+73 (‘[t]he term ‘tribunal’ … includes investigating magistrates, administrative and arbitral tribunals, and quasi-
+judicial agencies, as well as conventional civil, commercial, criminal, and administrative courts’; in addition to
+affording assistance in cases before the European Court of Justice, para.1782, as revised in 1964, ‘permits the
+
+Obtaining of documents through local court proceedings, UKBC-ICCARBN 474406970...
+© 2025 Thomson Reuters.
+2
+rendition of proper aid in proceedings before the [European] Commission in which the Commission exercises
+quasi-judicial powers’).” 403
+25-79
+In the Intel Corp case, the US Supreme Court did not hold that international arbitral tribunals fell within s.1782 but with its broad
+interpretation of the provision and reference to the quotation from Professor Smit’s article, it appeared to give that indication.
+25-80
+In the Oxus Gold case, the District Court of New Jersey referred to the prior cases holding that s.1782 did not apply to Tribunals
+but distinguished them on the basis that the Tribunal in that instance had been set up pursuant to a bilateral investment treaty and
+therefore had a different status. 404  In effect, the court gave a broader reading to s.1782 but without dealing with the pre-Intel
+Corp cases.
+25-81
+In the Roz Trading case, the district court of the Northern District of Georgia held that the “international commercial arbitral
+body located in Austria was a ‘tribunal’ within the meaning of federal statute permitting domestic discovery for use in foreign
+proceedings”. 405  In that decision, the court followed the broad interpretation in Intel Corp and expressly rejected the narrower
+interpretation of s.1782 that had been previously adopted by the Second and Fifth Circuit Courts of Appeal.
+25-82
+If the Roz Trading case is followed, parties will have the opportunity to pursue US discovery in the aid of international arbitration.
+The potential scope is very broad as it could cover documents and witness evidence from parties and third parties to the arbitral
+proceedings, subject to the US courts having personal jurisdiction over the defendants and to discretion of the US court before
+which the application is brought. However, any party considering this course of action should carefully consider the law in the
+relevant circuit court in the US in which the application would be brought. Moreover, it would be important also to consider the
+impact on the arbitral proceedings themselves, as such an application will necessarily result in more time being taken for the
+proceedings. 406  In Re Application of Mesa Power Group, LLC the US District Court for the Southern District of Florida allowed
+the application of s.1782 enabling a party to obtain evidence from a third party for claims brought in a North American Free
+Trade Agreement arbitration. 407  Most recently, the US Supreme Court accepted to hear the case whether s.1782 is available
+to arbitral Tribunals.
+25-83
+In the Abdul Latif Jameel Transp. Co. v Fedex Corp. case, the US Court of Appeals for the Sixth Circuit held that the word
+“tribunal” in the relevant clause of s.1782 includes private arbitrations. 408  Consequently the Court permitted US-style discovery
+for use in a non-US private arbitration.
+25-84
+In the Servotronics, Inc v Boeing Co case, the US Court of Appeals for the Fourth Circuit held that parties to an international
+commercial arbitration are authorized to seek discovery orders under s.1782. 409  Following this decision a petition for certiorari
+was filed, which could lead to the Supreme Court put an end to the Circuit split over the application of s.1782 in the context
+of international commercial arbitration.
+Footnotes
+401
+In practice, it would normally seem wise to first seek a Tribunal’s permission to do so, or at least to inform the Tribunal.
+For a discussion, see Webster, “Obtaining Documents from Adverse Parties in International Arbitration” (2001)
+Arbitration Int. Vol.17 No.1, p.41 at p.42.
+402
+See the decisions in NBC v Bear Stearns & Co, 165 F.3d 184 (2d Cir. 1999); and Republic of Kazakhstan v Biedermann
+Int’l, 168 F.3d 880 (5th Cir. 1999).
+
+Obtaining of documents through local court proceedings, UKBC-ICCARBN 474406970...
+© 2025 Thomson Reuters.
+3
+403
+Intel Corp v Advanced Micro Devices, Inc, 542 US 241 (2004), citing Hans Smit, “International Litigation Under the
+United States Code” 65 Colum. L. Rev. 1015, 1026–27 n.71, 73 (1965).
+404
+See the Re Oxus Gold PLC, Misc:06–82, 2006 US Dist. LEXIS 74118 (D.N.J. Oct. 10, 2006) (“In the case at bar,
+however, Article 8 of the BIT Agreement between the United Kingdom and Kazakhstan specifically mandates that
+disputes between nationals of the two countries would be resolved by arbitration governed by international law. The
+Arbitration at issue in this case, between two admittedly private litigants, is thus being conducted within a framework
+defined by two nations and is governed by the Arbitration Rules of the United Nations Commission on International
+Trade Law (the ‘UNCITRAL rules’). In light of these facts, this Court concludes that the Magistrate Judge’s holding
+that the arbitration panel in the case at bar constituted a ‘foreign tribunal’ for purposes of a 28 U.S.C. s.1782 analysis
+was not clearly erroneous or contrary to law.”).
+405
+See the decision in the Roz Trading Ltd case cited at para.25-24 fn.358. See also the decision in Re Oxus Gold PLC,
+Misc:06–82, also cited at para.25-24, fn.358.
+406
+An illustration of the impact is provided in a Canadian case relating to the use of depositions in international arbitration.
+In that case, the parties had agreed that the procedural rules would be those of the Province of Alberta in Canada. Alberta
+procedural rules are similar to US rules on discovery. The Tribunal ordered depositions of non-parties and the other
+party sought to have the decision annulled. The Alberta Court of Appeals refused to annul the Tribunal’s decision and
+the Canadian Supreme Court refused to hear an appeal from that decision. As a result, the parties to the arbitration were
+in fact permitted to conduct deposition discovery with respect to the arbitration. In addition, the proceedings were stayed
+pending the various appeals. In addition, the proceedings were almost certainly longer than those in other arbitrations
+without discovery. However, it is noteworthy that it was the Tribunal itself that permitted the deposition discovery in
+a matter where the amount in dispute was very substantial; see Jardine Lloyd Thompson Canada Inc Jardine Lloyd
+Thompson Group Plc and JLT Risk Solutions Ltd v Western Oil Sands Inc, Western Oil Sands L.P., In the Matter of the
+International Commercial Arbitration Act, 2005, 2005 A.B.Q.B. 509 (CanLII).
+407
+Re Mesa Power Group, LLC, 878 F. Supp. 2d 1296 (S.D. Fla. 2012). See also Re Ex p. Application of Kleimar NV 220
+F.Supp.3d 517 (third party attempt to quash subpoenas in support of London arbitrations rejected).
+408
+Abdul Latif Jameel Transp. Co. v Fedex Corp. (In re Application to Obtain Discovery for Use in Foreign Proceedings)
+939 F.3d 710 (6th Cir. 2019).
+409
+Servotronics, Inc v Boeing Co 954 F.3d 209 (4th Cir. 2020).
+End of Document
+© 2025 SWEET & MAXWELL

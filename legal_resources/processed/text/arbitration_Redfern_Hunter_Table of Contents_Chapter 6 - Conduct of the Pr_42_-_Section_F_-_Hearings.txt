@@ -1,0 +1,585 @@
+Section F. - Hearings, UKBC-REDFERN 530638641 (2025)
+© 2025 Thomson Reuters.
+1
+Section F. - Hearings
+Redfern and Hunter on International Arbitration 7th Ed.
+Mainwork
+Chapter 6 - Conduct of the Proceedings
+Section F. - Hearings
+(a)Introduction
+6. 162
+It has been said that the only thing wrong with ‘documents only’ arbitrations is that there are not enough of them. Such
+arbitrations are commonplace in certain categories of domestic arbitrations—notably, in relation to small claims cases. In the
+international context, the main examples of ‘documents only’ arbitrations are those conducted under the LMAA Rules in
+connection with disputes arising out of charterparties and related documents.
+6. 163
+However, in mainstream international arbitration, it is unusual for the arbitral proceedings to be concluded without at least a
+brief hearing at which the representatives of the parties have an opportunity to make oral submissions to the arbitral tribunal,
+and at which the arbitral tribunal itself is able to ask for clarification of matters contained in the written submissions and in
+the written evidence of witnesses.
+6. 164
+All of the rules of the major international arbitration institutions provide for a hearing to take place at the request of either party,
+or at the instigation of the arbitral tribunal itself. Whilst an arbitral tribunal must proceed to make its award without a hearing
+if the parties have expressly so agreed, 165  such an agreement is rare in modern international arbitration.
+(b)Organisation of hearings
+6. 165
+Hearings are normally held on a date fixed by the arbitral tribunal, either at the request of one or both of the parties, or on its
+own initiative. The administrative arrangements may be made by one of the parties, often the claimant, with the agreement of
+the other. Alternatively, they may be made by the sole or presiding arbitrator, or by the tribunal secretary (if there is one).
+6. 166
+In fully administered arbitrations, the institution itself (for example, the AAA or the LCIA) sometimes makes the arrangements;
+in others, these matters are left to the arbitral tribunal and the parties. 166
+6. 167
+The task of organising hearings in a major international arbitration should not be under-estimated nor should the cost. In the
+case of a physical hearing, a suitable hearing room must be provided, with ancillary breakout rooms and facilities for the parties
+and the arbitral tribunal. Access to printing facilities, and a Wi-Fi connection, are invariably essential. A live transcript and
+verbatim record of the proceedings are often considered essential. Accommodation is also required for witnesses, experts, and
+the parties’ legal teams. 167  Hearings conducted remotely over video-conference avoid some of these costs. However, the largest
+single element of costs associated with an oral hearing—those relating to the time spent by the arbitral tribunal and counsel
+on both sides—will still be incurred.
+
+Section F. - Hearings, UKBC-REDFERN 530638641 (2025)
+© 2025 Thomson Reuters.
+2
+6. 168
+In short, oral hearings are the most cost-intensive periods of any arbitration and their scheduling often leads to the greatest
+delays, because availability of all essential participants must be coordinated. Efforts should therefore be made by arbitrators
+and counsel to limit their duration. To this end, the following matters should be considered.
+ 
+•Should there be one hearing or several?
+ 
+•Should there be time limits for the presentation of oral arguments?
+ 
+•Should there be a limit on the time allowed for the examination and re-examination of witnesses?
+ 
+•Should there be post-hearing briefs, rather than oral closing submissions? 168
+(i)Location
+6. 169
+In most cases, physical hearings may be held at any location that is convenient for all concerned. Subject to any mandatory
+provisions of law in the seat of the arbitration, there is generally no requirement that all hearings be physically conducted in
+the territory of the seat of the arbitration. 169  As a result, most current rules of arbitration permit oral hearings to be conducted
+at any location (different from the legal place of arbitration) that the tribunal considers appropriate. 170  While it remains usual
+to hold the main physical evidential hearing in the place of arbitration, the option not to do so can, on occasion, bring real
+benefits and savings in convenience and cost (for example, when many of the participants in a hearing are all based in another
+city), and should be considered in appropriate cases.
+(ii)Remote hearings
+6. 170
+Although remote hearings in international arbitration were not unheard of prior to 2020, they were typically restricted to
+hearings on procedural or urgent matters (for example, interim measures). In 2020, the COVID-19 pandemic and associated
+lockdowns and travel restrictions across the world, led to an increasing number of oral hearings being held remotely over
+video-conferencing platforms.
+6. 171
+The shift towards remote hearings during the COVID-19 pandemic was partly facilitated by leading arbitral institutions,
+some of which explicitly stated that remote hearings were permissible under their institutional rules. For example, the LCIA
+Rules provide that ‘a hearing may take place in person, or virtually by conference call, videoconference or using other
+communications technology with participants in one or more geographic places (or in a combined form)’. 171  The ICC has
+made it clear that arbitral tribunals possess ‘broad procedural authority under Article 22(2)’, and that this authority extends
+to conducting ‘any hearing either by physical attendance or by remote means of communication, such as videoconference
+(“virtual hearing”), or both’. 172  Even with the institutions that do not expressly address remote hearings in their rules, there
+is consensus that remote hearings are allowed under the broad procedural discretion allocated to arbitral tribunals under most
+institutional rules. 173
+6. 172
+Although remote hearings offer certain advantages, arbitration counsel should assess carefully whether the particular
+international arbitration with which they are dealing is best suited to a remote hearing. This is because remote hearings are
+not without their drawbacks. Oral advocacy on a video-conference to a generally static, and muted, image may make it more
+difficult for the arbitral tribunal and counsel to engage in the substance of complicated arguments. Indeed, a study of US
+appellate judges found that judges were less likely to interrupt oral arguments with questions during a remote hearing. 174  The
+lack of a courtroom dynamic may also make effective cross-examination more difficult, where it is being conducted remotely
+
+Section F. - Hearings, UKBC-REDFERN 530638641 (2025)
+© 2025 Thomson Reuters.
+3
+and through language interpretation. There are other disadvantages too. Accommodating every participant in a wide variety
+of home bases may involve some difficult time-zone jockeying. It is equally easy to imagine circumstances where different
+participants in an international arbitration have differing access to technology to allow their participation in a remote hearing.
+6. 173
+The ICC has identified certain considerations that should be taken into account before an arbitral tribunal decides to hold a
+remote hearing, which may be helpful.
+The arbitral tribunal must take any decision to hold an evidentiary hearing by remote means of communication
+rather than by physical attendance after careful consideration of all relevant circumstances, including the nature
+of the hearing, the possible existence of travel constraints, the planned duration of the hearing, the number of
+participants and of witnesses and experts to be examined, the size and complexity of the case, the need for
+the parties to properly prepare for the hearing, the costs and the gains of efficiency that may be expected by
+resorting to virtual means of communication, and whether rescheduling the hearing would entail unwarranted
+or excessive delays.
+If an arbitral tribunal determines to proceed with a virtual hearing without party agreement, or over party
+objection, it should carefully consider the relevant circumstances, including those mentioned in [the prior
+paragraph], assess whether the award will be enforceable at law, as provided by Article 42, and provide reasons
+for that determination. In making such a determination, arbitral tribunals may take into account their broad
+procedural authority under Article 22(2), to, after consulting the parties, adopt such procedural measures as
+they consider appropriate, provided that they are not contrary to any agreement of the parties. 175
+6. 174
+As a result, an arbitral tribunal must consider carefully its decision to hold a remote hearing. Such a decision may be
+straightforward in circumstances where both the tribunal and the parties agree on a remote hearing but it is more delicate
+where one party insists on having a physical hearing or where, for example, the arbitral tribunal wants a remote hearing but
+the parties have agreed on a physical hearing. Ultimately, it is important for the arbitral tribunal to ensure that neither party
+has a legitimate ‘due process’ objection to having a remote hearing.
+6. 175
+Once an arbitral tribunal has determined that it will hold a remote hearing instead of a physical hearing, it must take steps
+to ensure equality of arms between the parties. An important consideration to be borne in mind is whether both parties are
+going to appear remotely, or if only one party will do so. In the latter case, the CIArb’s Guidance Note on Remote Dispute
+Resolution Proceedings advises that ‘in the interests of equality, it is preferable that if one party must appear to the tribunal
+remotely, both parties should do so. However, the parties may agree otherwise.’ 176
+(iii)Pre-hearing conference
+6. 176
+In large and complex cases, a properly planned pre-hearing meeting or conference can pay substantial dividends in terms of
+saving time and money at the hearing itself. Such conferences should be organised efficiently, both as to timing and content.
+The timing is extremely important. If a pre-hearing conference takes place too near to the hearing itself, it will be too late for
+the ‘shape’ of the hearing to be influenced. However, if it takes place too early, the arbitral tribunal will almost certainly not
+be sufficiently well informed about both the issues, and the evidence needed to supplement the parties’ written submissions,
+to enable useful decisions to be taken with regard to the structure of the hearing.
+6. 177
+Items to be covered at a pre-hearing conference are likely to include the allocation of time as between the parties, the running
+order, length, and format of opening statements, whether there is to be sequestration of witnesses, the scope and length of
+direct cross-and re-direct examination, whether there are to be oral closing statements and/or post-hearing briefs, arrangement
+for transcripts and possibly interpreters, and the preparation of hearing bundles. These matters may be agreed by the parties
+or if they cannot agree, be decided by the tribunal, but in any event, they should be recorded in a procedural order.
+
+Section F. - Hearings, UKBC-REDFERN 530638641 (2025)
+© 2025 Thomson Reuters.
+4
+6. 178
+For remote hearings, the pre-hearing conference is also an appropriate time for the tribunal and the parties to decide and
+agree on the issues unique to such hearings. To that end, in addition to the agenda items discussed above, the following issues
+might also be raised for discussion during the pre-hearing conference:
+ 
+(1)The hearing platform to be used (Zoom, Microsoft Teams, WebEx, etc.).
+ 
+(2)Service providers who may be retained to provide remote hearing support.
+ 
+(3)Minimum technical requirements for participating in the remote hearing (for example, a private and stable internet
+connection with sufficient bandwidth, camera, microphone, speaker of adequate quality, access to a telephone connection
+in case difficulties are encountered using a computer).
+ 
+(4)Online etiquette, including the identification of lead speakers for each day of the hearing, and the permissibility of
+using virtual backgrounds (or other screen filters!) during the hearing. 177
+ 
+(5)The cyber-security measures to be adopted.
+ 
+(6)Determining whether the hearing shall be recorded, and if so, whether it should be video-recorded or only audio-
+recorded.
+ 
+(7)The dress code for the remote hearing. Although tribunals and courts have made formal attire optional during remote
+hearings, some have been careful to specify that counsel must nonetheless be clothed! 178
+ 
+(8)The protocol for the examination of witnesses/experts, which might include measures to ensure that the witness/
+expert is not communicating with any other person during the examination, whether the witness/expert may be joined in
+the room by an IT assistance, and determining whether a 360o view of the room in which the witness/expert is appearing
+is necessary.
+ 
+(9)The manner in which documents and demonstratives will be displayed.
+ 
+(10)The need for scheduling test sessions prior to the hearing to ensure that the remote hearing proceeds as smoothly
+as possible.
+6. 179
+Pre-hearing conferences are a very effective way of ensuring that the hearing itself runs as smoothly as possible, with as
+few interruptions for discussion of procedural or administrative issues as can reasonably be expected. The value of such
+conferences has been acknowledged by the report of the ICC Commission on Arbitration and ADR Task Force on Reducing
+Time and Costs, which has recommended that parties consider ‘organizing a conference with the arbitral tribunal, which may
+be by telephone, to discuss the arrangements for any hearing. At such a prehearing conference, held a suitable time before the
+hearing itself, the parties and the arbitral tribunal can discuss matters such as time allocation, use of transcripts, translation
+issues, order of witnesses and other practical arrangements that will facilitate the smooth conduct of the hearing.’ 179
+6. 180
+Whether rules provide for oral pre-hearing conferences explicitly or not, 180  they have become common practice in the
+exercise of an arbitral tribunal’s general procedural discretion. Indeed, the most proactive tribunals will use them to go beyond
+a purely organisational agenda and indicate to the parties issues on which it would like them to focus at the hearing. 181
+(c)Procedure at hearings
+6. 181
+
+Section F. - Hearings, UKBC-REDFERN 530638641 (2025)
+© 2025 Thomson Reuters.
+5
+Individual arbitral tribunals approach the determination of the procedure to be followed at the hearing in different ways. Most
+have the common aim of keeping the duration of the hearing to a minimum so far as practicable, in order to assist the busy
+schedules of the arbitrators and parties and to reduce expense.
+6. 182
+Ideas as to what is a reasonable length of time for a hearing differ. Formerly, 182  in English court practice, hearings could last
+for many weeks, causing great inconvenience, expense, and exhaustion to all concerned. 183  By contrast, arbitrators from the
+civil law countries tend to regard any hearing that takes more than three days as a long one. Although we hear of exceptions, the
+general tendency in international arbitration is towards shorter hearings, with greater reliance upon documentary evidence for
+the reasons already discussed. This is a necessary step in the interests of economy of time and costs in cases that often involve
+arbitrators, lawyers, experts, company executives, and other participants operating away from their home bases.
+6. 183
+The procedure at a hearing is not fixed in stone. As the UNCITRAL Notes on Organizing Arbitral Proceedings describe:
+Arbitration rules typically give broad latitude to the arbitral tribunal to determine the order of presentations at
+the hearings. Within that latitude, practices differ, for example, as to whether opening or closing statements are
+heard and if they are, their sequence and duration, and which of the parties has the last word. The broad latitude
+of the arbitral tribunal also applies to the manner and sequence in which witnesses are heard and to other issues
+addressed at any hearing. When several witnesses are to be heard and longer testimony is expected, it is useful to
+determine in advance the order in which they will be called. In certain circumstances, it may be desirable to hear
+collectively several witnesses on the same subject matter. This is likely to reduce costs and facilitate scheduling.
+Each party might be invited to suggest the order in which it proposes to have its own witnesses testify. 184
+6. 184
+Against the backdrop of procedural freedom, a usual practice (or practices) has emerged in international arbitration that is
+described next.
+(i)Opening statements
+6. 185
+The usual practice in international arbitration, given the necessary time limits, is to allocate to each side only a limited opening
+statement, in which the advocates assume that the arbitrators have a full knowledge of the written submissions and evidence
+that is already on the record. This is followed by the main event: the oral testimony of the witnesses for each party. An English
+international arbitrator put it thus:
+Finally, since the arbitrators are likely to be busy professional people and often from different countries, the
+oral hearings will usually be remarkably short by English standards. Their main purpose is to hear the cross-
+examination of the witnesses, bracketed by short opening and closing remarks from both sides, which are often
+supplemented by written post-hearing submissions. 185
+(ii)Examination of witnesses
+6. 186
+Although the examination of witnesses owes much to the common law tradition, it has become a standard feature of evidential
+hearings in international arbitration. For this reason, witness preparation has become a significant part of hearing preparation
+for parties involved in international arbitration and cross-examination has become a key skill for counsel in the conduct of
+a hearing.
+6. 187
+
+Section F. - Hearings, UKBC-REDFERN 530638641 (2025)
+© 2025 Thomson Reuters.
+6
+Of course, there are important limits in the preparation of witnesses. The role of counsel should be to assist witnesses ‘in
+developing the confidence and clarity of thought required to testify truthfully and effectively based upon their own knowledge
+or recollection of the facts’. 186  Counsel should not be instructing witnesses to change their evidence. In this regard, the IBA
+Guidelines on Party Representation contain advice as to the appropriate limits of such preparation, providing that contact
+between counsel and witnesses should not ‘alter the genuineness of the Witness or Expert evidence, which should always
+reflect the Witness’s own account of relevant facts, events or circumstances’. 187  It should be borne in mind that being
+examined in the ‘witness box’ is, for most witnesses, an unfamiliar and sometimes even intimidating experience. 188  Once the
+hearing begins, styles of witness examination vary and tribunals will typically allow counsel some leeway to test the evidence
+in the way that they prefer. As a general matter, however, tribunals do not appreciate overly aggressive or discourteous attacks
+by counsel. Since being examined in the ‘witness box’ is, for most witnesses, an intimidating experience, an aggressive
+comportment by counsel can easily backfire. Experienced arbitrators often discount severe or bullying cross-examinations
+on the basis that they are evidence of the self-importance of the cross-examiner rather than the lack of credibility of the
+witness. 189
+6. 188
+Article 8 of the IBA Rules confirms the current international standard generally adopted by international arbitral tribunals:
+[ … ]
+3.The Arbitral Tribunal shall at all times have complete control over the Evidentiary Hearing. The Arbitral
+Tribunal may limit or exclude any question to, answer by or appearance of a witness, if it considers such
+question, answer or appearance to be irrelevant, immaterial, unreasonably burdensome, duplicative or
+otherwise covered by a reason for objection set forth in Articles 9.2 or 9.3. Questions to a witness during
+direct and re-direct testimony may not be unreasonably leading.
+4.With respect to oral testimony at an Evidentiary Hearing:
+ 
+(a)the Claimant shall ordinarily first present the testimony of its witnesses, followed by the
+Respondent presenting testimony of its witnesses;
+ 
+(b)following direct testimony, any other Party may question such witness, in an order to be
+determined by the Arbitral Tribunal. The Party who initially presented the witness shall
+subsequently have the opportunity to ask additional questions on the matters raised in the
+other Parties’ questioning;
+ 
+(c)thereafter, the Claimant shall ordinarily first present the testimony of its Party-Appointed
+Experts, followed by the Respondent presenting the testimony of its Party-Appointed
+Experts. The Party who initially presented the Party-Appointed Expert shall subsequently
+have the opportunity to ask additional questions on the matters raised in the other Parties’
+questioning;
+ 
+(d)the Arbitral Tribunal may question a Tribunal-Appointed Expert, and he or she may be
+questioned by the Parties or by any Party-Appointed Expert, on issues raised in the Tribunal-
+Appointed Expert Report, in the Parties’ submissions or in the Expert Reports made by the
+Party-Appointed Experts;
+ 
+(e)if the arbitration is organised into separate issues or phases (such as jurisdiction, preliminary
+determinations, liability and damages), the Parties may agree or the Arbitral Tribunal may
+order the scheduling of testimony separately on each issue or phase;
+ 
+(f)the Arbitral Tribunal, upon request of a Party or on its own motion, may vary this order of
+proceeding, including the arrangement of testimony by particular issues or in such a manner
+that witnesses be questioned at the same time and in confrontation with each other (witness
+conferencing);
+ 
+(g)the Arbitral Tribunal may ask questions to a witness at any time.
+5.A witness of fact providing testimony shall first affirm, in a manner determined appropriate by the
+Arbitral Tribunal, that he or she commits to tell the truth or, in the case of an expert witness, his or her
+
+Section F. - Hearings, UKBC-REDFERN 530638641 (2025)
+© 2025 Thomson Reuters.
+7
+genuine belief in the opinions to be expressed at the Evidentiary Hearing. If the witness has submitted
+a Witness Statement or an Expert Report, the witness shall confirm it. The Parties may agree or the
+Arbitral Tribunal may order that the Witness Statement or Expert Report shall serve as that witness’s direct
+testimony.
+6.Subject to the provisions of Articles 9.2 and 9.3, the Arbitral Tribunal may request any person to give
+oral or written evidence on any issue that the Arbitral Tribunal considers to be relevant to the case and
+material to its outcome. Any witness called and questioned by the Arbitral Tribunal may also be questioned
+by the Parties.
+6. 189
+In the courts of common law countries, elaborate rules of evidence are still deployed even though they were designed for use
+in jury trials, which (other than in the United States) are largely used only in criminal cases. Such rules of evidence are not
+necessary in the courts of civil law countries because, in general, fact-finding is the responsibility of the judge based on his
+or her own enquiries and collection of the evidence. In any event, the civil procedure rules applicable in national courts do
+not apply to international arbitrations unless the parties agree otherwise, or the local law at the seat of arbitration provides
+that they do apply to international arbitrations held in that country as the juridical seat.
+6. 190
+Fact `witnesses are usually first ‘examined’ by counsel for the party presenting that witness, then ‘cross-examined’ by counsel
+for the other party, then ‘re-examined’ by the first counsel, if necessary. Additional cross-examination may be introduced,
+with permission of the arbitral tribunal, where the witness has given new ‘direct’ testimony during the re-examination. 190
+6. 191
+Arbitral tribunals may sustain objections to direct or redirect examination questions based on characterising them as ‘leading’,
+or ‘closed’ (that is, questions that prompt the answer that the examining counsel wishes to obtain). 191  This is not because
+there is a binding evidential rule against putting such questions in international arbitration, but because the value of a witness’s
+testimony is reduced if it is given pursuant to a question that has suggested the answer. This constraint does not apply to
+cross-examining counsel, who may ask any type of question as long as it is fair and relevant to the issues in dispute.
+6. 192
+Witnesses are sometimes excluded, or ‘sequestered’, until they have given their testimony, although this practice is often
+dispensed with, particularly if a witness also happens to be a party representative. Much depends on whether or not a party
+is likely to gain an unfair advantage by having a particular witness present while the corresponding witness presented by
+the opposing party gives evidence. Fact witnesses are not allowed to discuss the case with any member of the ‘team’,
+whether lawyers or other witnesses presented by the same party, during overnight or refreshment breaks whilst they are under
+examination. This is an obvious way of ensuring that the witness is not ‘coached’ on how to answer questions during an
+examination or re-examination (‘re-direct’). Sometimes, they are permitted to eat meals together, or drink coffee, on the
+understanding that the case will not be discussed in his presence. In the case of remote hearings, the arbitral tribunal and the
+parties may agree on a set of procedures to ensure that a fact witness is not improperly assisted during a cross-examination. 192
+(iii)‘Witness conferencing’
+6. 193
+An alternative to traditional cross-examination is to put two or more witnesses from each side together to answer questions
+from the tribunal. This technique, which was described in the 1999 edition of the IBA Rules as ‘witness confrontation’, is now
+better known as ‘witness conferencing’. 193  Where fact witnesses are concerned, it is a somewhat adventurous path for an
+arbitral tribunal to take. But, used together with traditional cross-examination, it may provide an effective way of identifying
+areas of agreement and disagreement between witnesses. It also offers an opportunity for an immediate and direct comparison
+between the witness’s earlier testimony, both in writing and at the hearing.
+
+Section F. - Hearings, UKBC-REDFERN 530638641 (2025)
+© 2025 Thomson Reuters.
+8
+6. 194
+In the context of expert witnesses, the practice of ‘witness conferencing’ is much better established. It can be a very effective
+way of highlighting the points of agreement and disagreement between the experts, and it often leads, if not to agreement,
+then at least to a narrowing of the points of difference—that is, the conflicting expert testimony between which the arbitral
+tribunal may have difficulty deciding. 194
+6. 195
+Where a bridge has collapsed into a river, for example, a fact witness will testify as to what he or she saw and the way in
+which the bridge fell, while the expert witness will testify as to what, in his or her opinion, caused the bridge to collapse. Was
+it defective design, or defective workmanship or materials? Where the parties’ respective experts disagree, after submitting
+lengthy and persuasive expert reports, how is the arbitral tribunal to decide which explanation is more persuasive?
+6. 196
+The role of experts in this context is to assist, educate, and advise the arbitral tribunal, in a fair and impartial manner, in
+specialist fields (such as technical, forensic accountancy, or legal) relevant to specific issues in dispute between the parties in
+which (some of) the arbitrators do not themselves have relevant expertise. The result is that arbitral tribunals find themselves
+faced with deciding between the opinions of opposing experts who have provided diametrically opposite opinions to questions
+such as, ‘why did the bridge fall down?’, 195  with little or no unbiased expert advice to guide them.
+6. 197
+In an effort to find a practical solution, a number of experienced international arbitrators 196  developed ‘expert conferencing’
+techniques instead of, or (more typically) in addition to, traditional cross-examination. In this kind of procedure, either before
+or (more commonly) after the experts have drafted their written expert reports, the experts are required to meet and draw up
+lists of (a) matters on which they agree, and (b) matters on which they do not agree, and the reasons for their disagreement. 197
+6. 198
+Based on list (b), the arbitral tribunal prepares an agenda designed to encompass the matters on which the experts are not
+agreed, and presents it to the parties and their advocates in advance of the hearing. Then, after all of the fact witnesses from
+both sides have been heard and often after the experts have been subject to individual cross-examination, the independent
+experts retained by the opposing parties come before the arbitral tribunal, seated alongside each other at the witness table. 198
+6. 199
+The chairman of the arbitral tribunal then takes the experts through the agenda, item by item. The experts are requested to
+explain in their own words the basis for reaching the opinions set out in their written reports and to answer each other’s
+main points. They may also be encouraged to debate these points directly with each other if the arbitral tribunal considers
+that this would be useful.
+(iv)Closing submissions
+6. 200
+As with opening statements, it is relatively rare in modern international arbitration for lengthy oral submissions to be made
+after the witness testimony has been heard. There are two reasons for this. The first relates to time and cost. It has been
+noted already that the most expensive phase of an international arbitration is the time during which all of the players must
+be gathered in a city that will be foreign to most of them. The accommodation costs are high, but these are dwarfed by the
+‘time costs’ of the parties: the tribunal, the parties’ representatives, their counsel, and the witnesses. The second reason is
+that it can be challenging, alongside intensive witness examination, for counsel to review quickly and evaluate the transcripts
+obtained throughout the hearing, and to craft a closing statement that will deal adequately with the tribunal’s concerns.
+6. 201
+It is more usual, in modern international arbitrations, for the closing submissions to be in writing, in the form of post-hearing
+briefs, delivered after the parties have had the opportunity to review (and, where necessary, correct) the transcripts, within
+
+Section F. - Hearings, UKBC-REDFERN 530638641 (2025)
+© 2025 Thomson Reuters.
+9
+a time for delivery to be agreed between the parties or fixed by the arbitral tribunal. These documents will contain footnote
+references to the transcripts of the evidence and are designed to facilitate the drafting of the award.
+6. 202
+However, this does not exclude the possibility of counsel being permitted to present some form of oral closing statement after
+the witness testimony has been heard, if they prefer, or to answer questions from the arbitral tribunal.
+(v)Who has the last word?
+6. 203
+In common law practice, it is the claimant (or ‘plaintiff ’, in some jurisdictions) in a national court that is given the ‘last word’,
+on the basis that the claimant bears the burden of proof. In international arbitrations, however, this practice is rarely followed,
+since arbitrators tend to feel, instinctively, that due process is generally served only if the respondent has the privilege of
+having the last word to balance the claimant’s privilege of going first. Furthermore, the ‘burden of proof ’ point is not wholly
+valid, because, in most international arbitrations, the burden falls on each party to prove the facts on which it relies.
+(d)Default hearings
+6. 204
+An arbitral tribunal may, and indeed should, proceed ex parte if one of the parties (almost invariably the respondent) refuses
+or fails to appear. In such cases, the arbitral tribunal should proceed with the hearing and issue its award, making sure that the
+precise circumstances in which the proceedings have taken place are specified in the award itself. 199
+6. 205
+This is necessary because it is likely that a party who boycotts an international arbitration intends to resist enforcement of any
+award ultimately rendered. Since it is a legitimate ground for refusal of recognition or enforcement of an award, whether under
+the New York Convention or otherwise, that a party has not had a reasonable opportunity to present its case, it is desirable that
+the award should itself show, on its face, the circumstances in which the respondent did not participate. Two main problems
+commonly arise in relation to such ex parte hearings: the first is what constitutes a ‘refusal’ to participate; the second is how
+the arbitral tribunal should proceed in such circumstances.
+(i)Refusal to participate
+6. 206
+In some circumstances, the situation is clear. This was so in the three Libyan oil nationalisation cases 200  in which the Libyan
+government stated at the outset that it refused to take any part in the proceedings, on the grounds that the arbitral tribunals,
+in each case, had no jurisdiction. It will also be clear if a respondent expressly refuses to reply to correspondence from the
+arbitral tribunal, or to comply with any procedural directions as to the submission of written pleadings, and so forth.
+6. 207
+There are two other circumstances in which an arbitral tribunal should proceed ex parte, but these are more difficult to identify.
+The first is where a party does not notify its unwillingness to participate, but creates a delay so unreasonable that the arbitral
+tribunal (on the application of the other party) would be justified if it were to treat the party in default as having abandoned
+its right to present its case. It is impossible to specify precisely when this point arises in any given proceedings and an arbitral
+tribunal must use its best judgement, balancing the various factors involved. However, the arbitral tribunal should bear in
+mind that it may not be doing the claimant any favours if it accedes too early to an application to proceed ex parte, because
+the award may become the subject of a successful challenge when the claimant seeks to enforce it. 201
+
+Section F. - Hearings, UKBC-REDFERN 530638641 (2025)
+© 2025 Thomson Reuters.
+10
+6. 208
+The second situation is where a party so disrupts the hearing that it becomes impossible to conduct it in an orderly manner.
+Experience of such a situation is hard to find, but theoretically it could happen; the arbitral tribunal would then need to treat
+the defaulting party’s conduct as being equivalent to a refusal to participate.
+(ii)Procedure in default hearings
+6. 209
+Unlike a court, an arbitral tribunal has no authority to issue an award akin to a default judgment. Its task is to make a
+determination of the disputes submitted to it. Accordingly, even if a party fails to present its case, the arbitral tribunal must
+consider the merits and make a determination of the substance of the dispute. Where it is clear from the beginning that a
+party (usually the respondent) does not propose to take part, the arbitral tribunal usually ensures that all notifications of
+hearings and correspondence continue to be sent to the defaulting party, and that all of the participating party’s submissions
+and evidence are placed before the defaulting party in written form. The tribunal will then be justified in holding only a brief
+hearing, on an ex parte basis, to review the claims and raise any questions.
+6. 210
+A reliable guideline as to how such a proceeding should take place is that the party who is taking part must prove its case to
+the satisfaction of the arbitral tribunal. The arbitral tribunal has no duty to act as advocate for a party who has elected not to
+appear, but it must examine the merits of the arguments of law and fact put to it by the participating party, so as to satisfy
+itself that these are well founded. It must then make a reasoned determination of the issues.
+6. 211
+The practice of arbitral tribunals varies as regards hearings in such situations. Much will depend on the form in which the
+written stages of the arbitration have taken place. If the written stages have been comprehensive, the arbitral tribunal may feel
+justified in holding a brief and purely formal hearing prior to issuing its award. If, on the other hand, the written pleadings
+have been skeletal, formal documents in which only the issues have been defined and no documentary or witness evidence
+has been submitted in writing, the arbitral tribunal would probably consider it necessary to hear oral evidence before being
+satisfied that the participating party has discharged the burden of proof in relation to its claims (or defences).
+6. 212
+The Model Law contains a provision empowering the arbitral tribunal to continue the proceedings and to make an award where
+a party fails to comply with the requirements of the procedure agreed by the parties or established by the arbitral tribunal. 202
+Similar provisions are to be found in modern laws of arbitration, even if they are not directly based on the Model Law.
+Footnotes
+165
+See, e.g., LCIA Rules, Art. 19.1.
+166
+See UNCITRAL Notes, para. 34. The ICC Secretariat is usually willing to make the necessary arrangements if requested
+to do so by the arbitral tribunal.
+167
+For further discussion of administrative arrangements of an arbitral tribunal, see Chapter 4, paragraphs 4.183 ff.
+168
+See UNCITRAL Notes, Note 17.
+169
+In a decision that was widely criticised, the Swedish Svea Court of Appeal held, in Titan Corporation v Alcatel CIT SA,
+Case No. RH 2005:1 (T 1038-05) YCA XXX (2005), 139, that Titan Corporation could not request the Swedish courts to
+set aside an ICC award in an arbitration in which the seat was Stockholm because the parties had not conducted any of
+the hearings in Stockholm (consistent with the discretion to hold hearings other than in the place of arbitration that exists
+under the ICC Rules). In 2010, the Supreme Court reversed the decision. See ‘Decision by the Svea Court of Appeal in
+Sweden rendered in 2005 Case No. T 1038–05’ (2005) 2 Stockholm Intl Arb Rev 259; Ewerlöf, ‘Chapter 10 application
+
+Section F. - Hearings, UKBC-REDFERN 530638641 (2025)
+© 2025 Thomson Reuters.
+11
+of the New York Convention by Swedish courts’, in Wallin, Regnwaldh, Magnusson, and Franke (eds) International
+Arbitration in Sweden: A Practitioner’s Guide (Kluwer Law International, 2013), p. 267, at pp. 270–271.
+170
+LCIA Rules, Art. 16.3.
+171
+LCIA Rules, Art. 19.2.
+172
+ICC, Note to Parties and Arbitral Tribunals on the Conduct of the Arbitration under the ICC Rules of Arbitration, 1
+January 2021. See also ICC Rules, Art. 26.1. The 2020 IBA Rules also expressly address remote hearings. IBA Rules,
+Art. 8.2.
+173
+See, e.g., Maxi Scherer, ‘Remote hearings in international arbitration: An analytical framework’ (2020) 37(4) J Intl
+Arb 407. See also SIAC Rules, r. 21.2; SCC Rules, Art. 23.1. Although they are not institutional rules, it is worth noting
+that the IBA Rules and the UNCITRAL Notes both expressly recognise that hearings may be held virtually. See IBA
+Rules, Art. 8.2; UNCITRAL Notes, para. 122.
+174
+Dunn and Norwick, ‘Report of a survey of videoconferencing in the courts of appeals’, Federal Judicial Center, 2006,
+p. 13, available online at https://www.fjc.gov/sites/default/files/2012/VidConCA.pdf.
+175
+ICC, Note to Parties and Arbitral Tribunals on the Conduct of the Arbitration under the ICC Rules of Arbitration, 1
+January 2021, paras 99–100.
+176
+CIArb, Guidance Note on Remote Dispute Resolution Proceedings, Section 1.6.
+177
+Although some tribunals may allow counsel to use a plain virtual background during the hearing, they are unlikely to
+allow any participant to use virtual face filters. See Daniel Victor, ‘I’m not a cat,’ says lawyer having Zoom difficulties,
+New York Times, 9 February 2021.
+178
+See Dorothy Atkins, ‘Judge says Zoom formal attire optional, but clothing a must’, Law360, 29 July 2021; ‘Florida
+judge: Get out of bed, get dressed for Zoom hearings’, AP News, 14 April 2020.
+179
+ICC Commission Report, Techniques for Controlling Time and Costs in Arbitration (2nd edn, 2018), paragraph 37.
+180
+Only a few do: see WIPO Rules, Art. 47; CIETAC Rules, Art. 33.5.
+181
+In this regard, see ICC Rules, Appendix IV, para. (g) (‘Case Management Techniques’).
+182
+Under the English Civil Procedure Rules 1998, however, the length of the hearing is restricted according to the value
+or complexity of the case.
+183
+The oral tradition in England owes its origin to the ‘man who is no longer there’—that is, the juror. Jury trials led
+to two inescapable procedural features. First, once started, the oral proceedings had to be completed, because, once
+assembled, there was no real practical possibility of reconvening the same jury many weeks, or even months, later.
+Secondly, although jurors had to be property owners, there was no guarantee that they were literate; hence the need for
+all of the documents to be read aloud at the hearing.
+184
+UNCITRAL Notes, paras 127–128.
+185
+Kerr, ‘Concord and conflict in international arbitration’ (1997) 13 Arb Intl 121, at 126–127.
+186
+Roney, ‘Effective witness preparation for international commercial arbitration: A practical guide for counsel’ (2003)
+20 J Intl Arb 429, at 430. This article provides a useful practical six-step guide for the preparation of witnesses.
+187
+See IBA Guidelines on Party Representation, Guidelines 20–24, and the accompanying commentary.
+188
+Ibid.
+189
+Veeder, ‘The 2001 Goff Lecture: The lawyer’s duty to arbitrate in good faith’ (2002) 18 Arb Intl 431, at 445. See also
+ICCA Guidelines on Standards of Practice in International Arbitration (2021).
+190
+Although witnesses ‘shall’ appear ‘for testimony at the Evidentiary Hearing’, the IBA Rules make clear that an
+‘Evidentiary Hearing’ includes ‘any hearing [ … ] whether in person, by teleconference, videoconference or other
+method’. IBA Rules, Art. 8.1 and Definitions. See also UNCITRAL Rules, Art. 28.4 (‘The arbitral tribunal may direct
+that witnesses, including expert witnesses, be examined through means of telecommunication that do not require their
+physical presence at the hearing (such as videoconference)’).
+191
+See IBA Rules, Art. 8.3.
+192
+See e.g., Seoul Protocol on Video Conferencing in International Arbitration. See also IBA Rules, Art. 8.2 (discussing
+the importance of ‘measures to ensure that witnesses giving oral testimony [during a remote hearing] are not properly
+influenced or distracted’).
+193
+See IBA Rules, Art. 8.4.f. It is also more colloquially referred to as ‘hot tubbing’.
+194
+See Peter, ‘Witness conferencing’ (2002) 18 Arb Intl 47.
+195
+One side’s expert says, with great conviction, ‘faulty design of the bridge’; equally convincingly, the other side’s expert
+says, ‘defective materials used in construction of the bridge’. Cross-examination of experts by counsel is considered
+by many international arbitrators to be an inadequate tool to help them to make a determination between the opposing
+views of such experts.
+
+Section F. - Hearings, UKBC-REDFERN 530638641 (2025)
+© 2025 Thomson Reuters.
+12
+196
+Notably Peter, ‘Witness conferencing’ (2002) 18 Arb Intl 47.
+197
+IBA Rules, Art. 5.4. See also the CIArb Protocol for the Use of Party-Appointed Expert Witnesses in International
+Arbitration, Arts 6 and 7(2).
+198
+IBA Rules, Art. 8.4.f.
+199
+For a discussion of practice under various arbitration rules and national laws, see van den Berg, ‘Preventing delay and
+disruption of arbitration’ (1990) 5 ICCA Congress Series 17. See also ICSID Rules, r. 49; UNICTRAL Rules, Art. 30;
+Swiss Rules, Art. 30; SCC Rules, Art. 35; ICDR Rules, Art. 29; AAA Rules, Art. 31; HKIAC Rules, Art. 26.
+200
+The Texaco, BP, and Liamco arbitrations; see Chapter 3, paragraphs 3.163 ff.
+201
+It is rare, but not unknown, for the respondent to want the proceedings to go ahead, when the claimant has failed to take
+them forward, in order to obtain an award that will put an end to the claim. In such a case, similar considerations will
+apply: the respondent will require a solid award, capable of being recognised by the courts, if this becomes necessary.
+202
+Model Law, Art. 25.
+End of Document
+© NIGEL BLACKABY KC, CONSTANTINE PARTASIDES
+KC, ALAN REDFERN

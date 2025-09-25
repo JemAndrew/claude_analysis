@@ -1,0 +1,32 @@
+Conditional sale, UKBC-BULLENL 459371783 (2022)
+© 2025 Thomson Reuters.
+1
+Conditional sale
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part F - Business Law
+Chapter 20 - Credit, Finance and Leasing
+Conditional sale
+20-07
+Conditional sale is an agreement whereby a seller sells goods to a buyer on terms that the purchase price is paid (normally
+with interest) and property in the goods does not pass until the final instalment is paid. Though very similar in concept to hire-
+purchase, there are two main differences:
+ 
+1.There is no option to purchase: the sale is concluded at the outset and title passes automatically on payment of the
+last instalment. This enables the creditor to provide for acceleration of the balance of the purchase price on default with
+concomitant passing of title on the buyer’s default. 4
+ 
+2.Being a contract of sale, it was subject to the Sale of Goods Act 1979: in particular, the buyer, being in possession of the
+goods with the consent of the owner, can pass a good title to a sub-buyer under s.25(1) of that Act, though this provision
+is now confined to conditional sale agreements not regulated by the Consumer Credit Act.
+As with hire-purchase, conditional sale frequently involves a tripartite relationship between the creditor, the hirer and the
+supplier. Unlike hire-purchase, which is confined to chattels, conditional sale can apply to land and the definition in s.189(1)
+encompasses such sales. Conditional sale of land is very rare and is not covered by this section.
+Again, as a matter of nomenclature, the terms “creditor” (now “lender”) and “seller” are interchangeable but it is probably better
+to use “seller” as this more correctly describes the relationship and reminds one that sale of goods law will apply to the contract.
+Footnotes
+4
+Wadham Stringer Finance Ltd v Meaney [1981] 1 W.L.R. 39.
+End of Document
+© 2025 SWEET & MAXWELL

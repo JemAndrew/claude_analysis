@@ -1,0 +1,529 @@
+Section D. - Deliberations and Decisions of the Tribunal, UKBC-REDFERN 530638659...
+© 2025 Thomson Reuters.
+1
+Section D. - Deliberations and Decisions of the Tribunal
+Redfern and Hunter on International Arbitration 7th Ed.
+Mainwork
+Chapter 9 - Award
+Section D. - Deliberations and Decisions of the Tribunal
+(a) Introduction
+9. 102
+The purpose of an arbitration is to arrive at a binding and enforceable decision. For the parties and their lawyers, it is the
+dispositive section of an award that is most important. Yet there is more to an award, including how a tribunal of arbitrators goes
+about reaching its decision, which has become an increasing feature of the literature concerning international arbitration. 149
+9. 103
+The task that faces arbitral tribunals is not easy. A leading English judge described judicial decision making as follows:
+The judge’s role in determining what happened at some time in the past is not of course peculiar to him. Historians,
+auditors, accident investigators of all kinds, loss adjusters and doctors are among those who, to a greater or lesser
+extent, may be called upon to perform a similar function. But there are three features of the judge’s role which
+will not apply to all these other investigations. First, he is always presented with conflicting versions of the
+events in question: if there is no effective dispute, there is nothing for him to decide. Secondly, his determination
+necessarily takes place subject to formality and restraints (evidential or otherwise) attendant upon proceedings
+in court. Thirdly, his determination has a direct practical effect upon people’s lives in terms of their pockets,
+activities or reputations. 150
+9. 104
+The same task faces an arbitral tribunal, but with a number of important differences.
+9. 105
+First, such an arbitral tribunal is not a permanent court or tribunal (except in special cases such as the Iran–US Claims Tribunal).
+Secondly, the tribunal may be composed of arbitrators of different professions: accountants, engineers, or whatever the case
+may require. Thirdly, even if all of the members of the tribunal are lawyers, they will often be of different nationalities, with
+different languages and different legal backgrounds—common law, civil law, Shari’ah, and so forth.
+9. 106
+How will this disparate, ad hoc group of people set about trying to reach their decision? They will read the parties’ submissions,
+the witness statements, and the (sometimes copious) number of documents filed in support of each party’s case; they will listen
+to evidence and oral argument. After this, although (as the saying goes) they may not be any wiser, they should certainly be
+better informed. As a case proceeds, each arbitrator will no doubt begin to form his or her own view as to how the various issues
+that have arisen ought to be determined, but the tribunal should arrive at a decision together. If the tribunal consists of three
+arbitrators, there must be some exchange of views, some dialogue between them, if they are to do so.
+9. 107
+There are no set rules as to how a decision should be made. Each arbitration is different and each arbitral tribunal is different.
+What works well with one tribunal may not work at all with another. However, the advice written by a former president of the
+LCIA may serve as a useful guideline:
+
+Section D. - Deliberations and Decisions of the Tribunal, UKBC-REDFERN 530638659...
+© 2025 Thomson Reuters.
+2
+While it is important for the chairman not to rush his fellow arbitrators into reaching a definitive decision on all
+outstanding issues—indeed, it is incumbent on the chairman to remind the members of the tribunal that their work
+is only just beginning and that any opinions expressed will be considered to be provisional—it is, however, crucial
+to ascertain whether or not a consensus seems likely to emerge on one or more of the issues to be decided. If there
+is disagreement between the two party-appointed arbitrators, the chairman will begin to earn his extra stipend.
+In the event a consensus on certain issues is clear, the chairman will generally offer to prepare a first draft of an
+eventual award, for discussion at a later date.
+No member of the tribunal must exert any pressure on his colleagues during this first session. This initial session
+should provide an opportunity for all arbitrators to engage in a relaxed dialogue with one another.
+Each arbitrator must feel that he is allowed to ‘think out loud’ in this informal setting. Personally, whether I serve
+as chairman or party-designated arbitrator, I tend to listen at least as much as to speak during such a first encounter.
+I wish my colleagues to know what my initial views are, but I also want to know how my colleagues believe they
+can inform the decision-making process which has begun. 151
+9. 108
+This passage raises an interesting question as to whether there is any difference between, on the one hand, informal discussions
+among members of the tribunal (for example over a meal or during a coffee break) and, on the other, formal deliberations (in
+the French sense). One of the reasons why the issue of deliberations is infrequently addressed is undoubtedly the fact that some
+systems encourage secrecy in the deliberative process. For example, in French law, as in some other civil law countries, the
+deliberations of the arbitrators are indeed ‘secret’. 152  In French law, the interchange of views between arbitrators is formalised
+as a ‘deliberation’. The Civil Code that governs French internal (or domestic) arbitrations requires the arbitrators to fix the
+date at which their deliberations will start (le délibéré sera pronouncé), 153  after which no further submissions by the parties
+are allowed. One distinguished French academician and author considers the rule that there must be a ‘deliberation’ before
+there is any award by the tribunal to be a rule of international public order. 154  Although it does not necessarily follow that the
+deliberations should be secret, for another French commentator the rule that such a ‘deliberation’ should be, and should remain,
+so is a ‘fundamental principle, which constitutes one of the mainsprings of arbitration, as it does of all judicial decisions’. 155
+However, this is not solely a French position. Rule 15 of the ICSID Rules states:
+ 
+(1) The deliberations of the Tribunal shall take place in private and remain secret.
+ 
+(2) Only members of the Tribunal shall take part in its deliberations. No other person shall be
+admitted unless the Tribunal decides otherwise.
+9. 109
+In a well-known case, 156  the Swedish Court of Appeal discussed what is necessary for a proper deliberation when considering
+a request by the Czech Republic to set aside an arbitral award. One of the grounds put forward was that the arbitrator nominated
+by the Czech Republic had, as he alleged in his dissenting opinion, been deliberately excluded by his fellow arbitrators from
+the deliberations of the tribunal. The Court referred to a seemingly conflicting balance of considerations: the equality of the
+arbitrators, balanced against the need for the tribunal to reach a conclusion without undue delay. The Court said, in summary,
+that the arbitrators should be treated equally, but that the procedures adopted should also be cost-effective and flexible. There
+were no formal rules, and so the deliberations might be oral or written, or both; deadlines could be set, but could also be changed
+as required, and so forth. The Swedish Court of Appeal added that whilst due process must be guaranteed:
+[W]hen two arbitrators have agreed upon the outcome of the dispute, the third arbitrator cannot prolong the
+deliberations by demanding continued discussions in an attempt to persuade the others as to the correctness of his
+opinion. The dissenting arbitrator is thus not afforded any opportunity to delay the writing of the award. 157
+9. 110
+
+Section D. - Deliberations and Decisions of the Tribunal, UKBC-REDFERN 530638659...
+© 2025 Thomson Reuters.
+3
+The rule as to the secrecy, or confidentiality, of the tribunal’s discussions has significant consequences. 158  It was considered
+by a former president of the ICJ, in considering a challenge to one of the members of the Iran–United States Claims Tribunal,
+whose impartiality had been questioned on the basis of a dissenting opinion that he had issued. In the course of the decision
+on the challenge, it was held that:
+A rule of the confidentiality of the deliberations must, if it is to be effective, apply generally to the deliberation
+stage of a tribunal’s proceedings and cannot realistically be confined to what is said in a formal meeting of all
+the members in the deliberation room. The form or forms the deliberation takes varies greatly from one tribunal
+to another. Anybody who has had experience of courts and tribunals knows perfectly well that much of the
+deliberation work, even in courts like the ICJ which have formal rules governing the deliberation, is done less
+formally. In particular the task of drafting is better done in small groups rather than by the whole court attempting
+to draft round the table. Revelations of such informal discussion and of suggestions made could be very damaging
+and seriously threaten the whole deliberation process. 159
+9. 111
+As noted, there must obviously be a serious interchange of views between the members of the tribunal as they try to arrive at a
+decision that can be expressed in their award. This interchange of views may be characterised, as it is in the ICSID Rules and
+in the French Civil Code, as a ‘deliberation’, but this does not mean that the members of the tribunal have to sit together in
+solemn conclave, like cardinals electing a new pope, until a decision is reached.
+9. 112
+What is likely to happen in practice is that the arbitrators exchange views informally, as the case progresses—particularly in the
+course of the hearing or immediately upon its conclusion—and then decide how to proceed with the formulation of their award.
+The chairman of the tribunal often prepares a list of the issues that he or she considers critical, then asks the co-arbitrators to
+amend, or add to, this list and perhaps express a preliminary view on the issues raised—either orally or, more commonly, in
+writing—with each arbitrator being given the opportunity to comment upon what the others have written.
+9. 113
+Where the arbitral tribunal consists of a sole arbitrator, the need to consult with other members of the tribunal and to try to
+reconcile possibly differing opinions does not arise. However, the sole arbitrator will still need to consider the evidence and
+arguments of the parties, work through a list of the significant issues, and generally come to a conclusion on the matters in
+dispute as part of the process of drafting an award.
+9. 114
+For a sole arbitrator, it is only his or her decision that counts. But what happens when there is a tribunal of three arbitrators
+and, despite their best efforts, they find themselves unable to agree? Ideally, decisions are made unanimously; but there must
+be a ‘fall-back’ position, and, on this, the international and institutional rules of arbitration differ. Some favour majority voting;
+others give the presiding arbitrator a decisive role.
+(b) Tribunal psychology
+9. 115
+Most international arbitrations are determined by an arbitral tribunal composed of three arbitrators. The aim of their deliberations
+must be to achieve a unanimous award, since this will be seen as both authoritative and conclusive. If unanimity cannot be
+achieved, however, the next best thing is to have a majority award, rather than an award by the chairman alone—or no award at
+all. In one of the Iran–United States arbitrations, a US-appointed arbitrator concurred in a majority award, although he thought
+that the damages awarded were half what they should have been. ‘Why then do I concur in this inadequate award?’ he asked
+rhetorically; ‘Because’, he answered, ‘there are circumstances in which “something is better than nothing”.’ 160
+9. 116
+There may be concern over the way in which arbitrators will conduct themselves in deliberations when they have been directly
+appointed by one of the parties to a dispute. However, parties rarely abuse the arbitral process to the extent of nominating an
+
+Section D. - Deliberations and Decisions of the Tribunal, UKBC-REDFERN 530638659...
+© 2025 Thomson Reuters.
+4
+arbitrator whose specific function is to vote for the party who nominated him or her, although they do appoint arbitrators whom
+they believe are likely to be sympathetic to the case that they wish to advance during the proceedings. As has been said:
+It should not be surprising if party appointed arbitrators tend to view the facts and law in a light similar to their
+appointing parties. After all, the parties are careful to select arbitrators with views similar to theirs. But this does
+not mean that arbitrators will violate their duty of impartiality and independence. 161
+9. 117
+In an international arbitration, each arbitrator, however appointed, is under a duty to act impartially and to reach a determination
+of the issues in a fair and unbiased manner. 162  It follows that it would be entirely improper if a party-nominated arbitrator were
+to hold private discussions with the party who nominated that arbitrator about the substance of the dispute. However, it is not
+improper for a party-nominated arbitrator to ensure that the arbitral tribunal properly understands the case being advanced by
+that party, 163  and a party-nominated arbitrator who is convinced of the merits of the case being put forward by the appointing
+party can have a significant impact on the private deliberations of the arbitral tribunal when the award is discussed. Interestingly,
+the UNCITRAL Rules extend the duty of the arbitrator in relation to disclosing circumstances giving rise to a potential conflict
+of interest so that it is owed not only to the parties, but also to the other members of the tribunal. 164
+9. 118
+The behaviour of the party-appointed arbitrators affects the dynamics of deliberations for the presiding arbitrator, although the
+presiding arbitrator will form his or her own view of the case. If it is difficult to achieve a majority award, inevitably the presiding
+arbitrator leans towards a compromise with a party-nominated arbitrator who follows the proceedings intelligently, asks good
+questions of each party, and puts forward well-reasoned arguments, rather than with someone who shows little interest in the
+proceedings and gives the impression of being there simply as the advocate nominee or mouthpiece of the appointing party.
+(c) Bargaining process
+9. 119
+An award of monetary compensation arrived at by a majority vote is sometimes the result of a bargaining process in the
+deliberations that might be more common in a marketplace than in a judicial, or quasi-judicial, proceeding. To describe it as a
+process of eliminating alternatives by ‘a proper sequence of votes’ is a euphemism. However, particularly when carried out in
+a structured manner and in relation to pre-defined issues, ‘bargaining’ may be a sensible way in which to proceed. Indeed, such
+a procedure is envisaged in the 1966 European Convention providing a Uniform Law on Arbitration (known as the ‘Strasbourg
+Uniform Law’), which provides that:
+Except where otherwise stipulated, if the arbitrators are to award a sum of money, and a majority cannot be
+obtained for any particular sum, the votes for the highest sum shall be counted as votes for the next highest
+sum until a majority is obtained.
+9. 120
+Where there are a number of different issues, it is theoretically possible for the members of the arbitral tribunal to be split on
+some issues and unanimous on others. In such cases, the question arises as to whether all of the issues should be decided by the
+presiding arbitrator alone (if this is permitted under the relevant rules of arbitration) 166  or whether the award may be divided
+into various parts. If there is lack of unanimity in relation to one or two issues out of many issues, the dispositive part of the
+award could reflect this by recording that those issues were decided by a majority of the tribunal, rather than by the tribunal
+as a whole. If there is no majority in relation to a considerable number of issues, the award as a whole may have to be that
+of the presiding arbitrator if the relevant rules permit; otherwise, the arbitrators will have to continue, in one way or another,
+to try to reach a majority decision.
+
+Section D. - Deliberations and Decisions of the Tribunal, UKBC-REDFERN 530638659...
+© 2025 Thomson Reuters.
+5
+(d) Majority voting
+9. 121
+As an example of majority voting, Article 33.1 of the UNCITRAL Rules provides: ‘When there is more than one arbitrator, any
+award or other decision of the arbitral tribunal shall be made by a majority of the arbitrators.’ However, Article 33.2 makes an
+exception to this rule in relation to questions of procedure and allows the presiding arbitrator to decide such questions on his or
+her own, subject to revision by the tribunal. This provision gives rise to two potential problems.
+9. 122
+The first is how to identify procedural issues: for example, is a determination of the place of arbitration under Article 18 of the
+Rules a question of procedure? If it is, then, in the absence of a majority, the presiding arbitrator may decide. However, Professor
+Pieter Sanders, as special consultant to the UNCITRAL Secretariat, played a major role in drafting the original UNCITRAL
+Rules. He expressed the view that the determination of the place of arbitration should not be considered a procedural question;
+and should therefore not be a function of the presiding arbitrator alone. 167
+9. 123
+The second problem is that, in order to achieve an award, a majority must be reached, because there is no fall-back position
+under Article 33.1. Professor Sanders stated that ‘the arbitrators are [ … ] forced to continue their deliberations until a majority,
+and probably a compromise solution, has been reached’. 168
+9. 124
+This is a potentially serious defect in the UNCITRAL Rules, since there may be cases in which it is genuinely impossible to
+achieve a majority. 169  In construction arbitrations, for example, there are often many different issues in relation to separate
+claims and it is possible for each individual arbitrator to have a different view on these different issues. Furthermore, the
+arbitrators may have widely differing views on questions of quantum in such cases, with no real possibility of a compromise
+solution being achieved in order to obtain a majority award. The Model Law, Article 29 of which adopts the same position as
+the UNCITRAL Rules, is open to the same criticism.
+9. 125
+The approach in the ICC Rules is different. These rules provide that where the arbitral tribunal is composed of more than one
+arbitrator, the award, if not unanimous, may be made by a majority of the tribunal; and if there is no majority, the chairman
+of the arbitral tribunal makes the decision alone. 170  The same approach is adopted in the Swiss Private International Law Act
+1987 (Swiss PIL), the Swiss Rules, the English Arbitration Act 1996, and the LCIA Rules. 171
+9. 126
+In contrast to the UNCITRAL Rules, under the ICC Rules, the Swiss Rules, and the LCIA Rules, the pressure is on each of
+the co-arbitrators to join the presiding arbitrator in forming a majority. This is because the presiding arbitrator is entitled to
+make an award alone. However, if this happens, the party-chosen arbitrators will not have participated in the award; 172  instead,
+the award will have been made by a person who may have been chosen for the parties by an arbitral institution or some other
+appointing authority.
+9. 127
+In ICSID arbitrations, majority rule also prevails. The ICSID Convention provides that ‘[t]he Tribunal shall decide questions
+by a majority of the votes of all its members’, 173  and this provision is carried into effect by the ICSID Rules, Rule 16.1 which
+states: ‘Decisions of the Commission shall be taken by a majority of the votes of all its members. Abstention shall count as
+a negative vote.’ In this context, ‘majority rule’ means that at least two of the three members of the arbitral tribunal must be
+prepared to agree with each other, whatever element of bargaining or compromise this might involve. An arbitral tribunal is
+bound to render a decision or to resign. It is not permitted to say that it is undecided and unable to make an award. It may not
+bring in a finding of non liquet (on the ground of silence, or obscurity of the law, or otherwise). 174
+
+Section D. - Deliberations and Decisions of the Tribunal, UKBC-REDFERN 530638659...
+© 2025 Thomson Reuters.
+6
+9. 128
+It may be difficult for individual members of an arbitral tribunal to alter their respective positions so as to achieve the necessary
+majority. The notes to the ICSID Rules record that, when the Rules were originally formulated, consideration was given to
+providing for the possibility of the arbitral tribunal being unable to reach a majority decision. It was concluded, however, that
+no problem would arise with questions that admitted of only a positive or a negative answer. If a positive proposition were to
+fail to achieve a majority, it would automatically fail since, under the ICSID Rules, an abstention is counted as a negative vote.
+Where the question could not be answered by a simple ‘yes’ or ‘no’, as in the determination of the amount of compensation
+to be awarded, it was concluded that ‘a decision can normally be reached by a proper sequence of votes by which alternatives
+are successively eliminated’. 175
+9. 129
+Thus there are various ways in which the awards of three-member arbitral tribunals may be made. They may be made
+unanimously, or by a majority, or by the presiding arbitrator alone if he or she is empowered to decide alone under the rules
+governing the proceedings.
+(e) Concurring and dissenting opinions
+(i) Concurring opinions
+9. 130
+A ‘separate’, or ‘concurring’, opinion is one that is given by an arbitrator who agrees with the result of the arbitration, but
+who either does not agree with the reasoning or does not agree with the way in which the award is formulated. These opinions
+are rarely given in commercial arbitrations. They are more frequently found in investment treaty arbitrations, in which the
+practice of the ICJ tends to be followed. 176
+(ii) Dissenting opinions
+9. 131
+Dissenting opinions pose greater problems and are less frequently delivered. There is a broad division of philosophy and
+practice as to whether the giving of dissenting opinions should be permitted. In arbitrations between states, the right to submit
+a dissenting opinion was asserted as long ago as the middle of the nineteenth century, in the Alabama Claims arbitration 177
+between the United Kingdom and the United States. The Statute of the ICJ expressly entitles judges in the minority to deliver
+dissenting opinions, 178  and this right has been exercised frequently not only in judgments, but also in connection with
+procedural orders, advisory opinions, and interim proceedings.
+9. 132
+When arbitrators dissent in international arbitrations, they often simply refuse to sign the award. Where this is done, the
+dissenting opinion may be annexed to the award if the other arbitrators agree, or it may be delivered to the parties separately.
+In either case, the dissenting opinion does not form part of the award itself: it is not an ‘award’, but an opinion. 179
+(iii) Position in national laws
+9. 133
+While modern arbitration legislation tends not to refer expressly to dissenting opinions, many such laws permit such opinions.
+For example, although there is no mention of dissenting opinions in the Swiss PIL, a commentator states that an arbitrator
+
+Section D. - Deliberations and Decisions of the Tribunal, UKBC-REDFERN 530638659...
+© 2025 Thomson Reuters.
+7
+has the right to give reasons for his dissent. 180  Similarly, section 52(3) of the English Arbitration Act 1996 provides that
+the award shall be signed by all the arbitrators or all those assenting to the award, thus envisaging the possibility that an
+arbitrator might dissent. 181  The Netherlands Arbitration Act 2015 provides that if ‘a minority of the arbitrators refuse to
+sign [the award], the other arbitrators shall make mention thereof in the award signed by them’, similarly envisaging both
+the possibility that an arbitrator may dissent, and confirming that such dissent will not form part of the award. 182  In France,
+it is sometimes said that the principle of the secrecy of the deliberations is such that even to disclose that the decision was
+unanimous is a breach of secrecy. 183  On the face of it, such an approach is not favourable to dissenting opinions, yet such
+opinions are given in international arbitration, even in France. No prohibition against dissenting opinions is known in the
+common law countries. Indeed, it is not unusual for common law arbitrators to consider themselves under a duty to inform
+the tribunal and the parties of their reasons for any dissent.
+(iv) Position under institutional rules
+9. 134
+ICSID is alone amongst the leading arbitral institutions in expressly recognising in its Rules the right of an arbitrator to
+issue an individual opinion and, in particular, a dissenting opinion: ‘Any member of the Tribunal may attach his individual
+opinion to the award, whether he dissents from the majority or not, or a statement of his dissent.’ 184  The LCIA Rules do not
+mention dissenting opinions, although, as already stated, the right of an arbitrator to issue a dissenting opinion is recognised
+in England 185  and it may be assumed that the draftsmen considered that no express provision was necessary. Nor do the
+ICDR or ICC Rules contain any provision relating to dissenting opinions.
+9. 135
+The way in which dissenting opinions are handled in ICC arbitrations is unique because of the provisions of the ICC Rules
+relating to scrutiny of awards. 186  At one time, the ICC discouraged the submission of dissenting opinions, but in 1985 a
+working party was set up to consider dissenting opinions, and its final report was adopted in 1988. 187  The report did not
+rule out dissenting opinions; instead, it suggested that the only circumstances in which a dissenting opinion should not be
+sent to the parties with the award was where it is prohibited by law, or where the validity of the award might be imperilled,
+either in the place of arbitration or (to the extent that this could be foreseen) in the country of enforcement. The ICC has
+issued guidelines to its staff that reflect the conclusions of the working group and, in practice, dissenting opinions are sent out
+by the ICC with the majority award (where applicable). (The ICC regularly issues statistics which, in relation to dissenting
+opinions, usually reveal that almost all dissenting opinions are given by party-appointed arbitrators in favour of the party
+that appointed them.) 188
+(v) Practice at the Iran–United States Claims Tribunal
+9. 136
+Separate and dissenting opinions were submitted by both the Iranian and US arbitrators in many reported cases. In one of
+these, the dissenting arbitrator went too far, when the dissenting judge indicated that the other two arbitrators had agreed with
+one of his views in deliberations. 189  In another case, problems were caused when the dissenting opinion was issued after the
+majority decision was published and contained allegations of procedural misconduct on the part of the majority arbitrators. 190
+The majority arbitrators felt compelled to file an additional opinion, whereupon the dissenting arbitrator continued the process
+by issuing yet another opinion. This was, in turn, followed by a second additional opinion by the chairman, who, whilst
+stating that he would make no further response, indicated that he considered this exceptional procedure to be necessary to
+vindicate the integrity of the tribunal and its staff, and to answer allegations that were factually incorrect. Acrimonious trading
+of allegations and insults could go on indefinitely, and it is clearly desirable that the arbitrators should disclose their concerns
+to each other in an exchange of draft opinions before the formal issue of the majority award and the dissenting opinion.
+
+Section D. - Deliberations and Decisions of the Tribunal, UKBC-REDFERN 530638659...
+© 2025 Thomson Reuters.
+8
+(vi) When and how should dissenting opinions be given in international arbitrations?
+9. 137
+As already indicated, there is no tradition of dissenting opinions in civil law systems. 191  Dissenting opinions have come
+to international arbitration from the common law tradition and it is a disputed question whether they have added value to
+the arbitral process. 192  The traditional justification for dissenting opinions in common law judicial systems is that they may
+contribute to the development of the law. Although rare, there are examples of higher courts adopting dissenting opinions
+rather than the judgment of the majority. It might well be said—particularly by common lawyers—that if dissenting opinions
+can contribute in this way to a national judicial system of justice, why might they not also contribute to the system of
+international arbitration? To this, there are at least three responses.
+9. 138
+First, in most cases, there is no appeal from the award of an arbitral tribunal and, moreover, there exists no system of stare
+decisis in international arbitration. A dissenting opinion cannot therefore inform an appellate arbitral jurisdiction nor will it
+guide future arbitral tribunals searching for the wisdom of precedent. Dissenting opinions therefore have far less to contribute
+to the arbitral process than to a common law judicial system. (An exception to this may arise in investment arbitrations where
+the dissenting opinion may become public and influence later decisions, as sometimes happens with dissents in judgments
+of the law courts.) 193
+9. 139
+Secondly, rather than contribute to the arbitral process, dissenting opinions may endanger its efficacy by threatening the
+validity and enforceability of the award. It might be argued, in response to this concern, that if an award is flawed, then a
+dissenting arbitrator has a right, and perhaps even a duty, to provide ammunition that may assist the losing party in challenging
+the award. However, such an argument ignores the very purpose of an arbitration, which is to arrive at a decision, not a debate.
+It is the decision that matters, and it matters not as a guide to the opinions of a particular arbitrator or as an indication of the
+future development of the law, but because it resolves the particular dispute that divides the parties, in the manner chosen by
+the parties, even if one of the arbitrators believes that decision to be wrong.
+9. 140
+The third and final reason follows from the different way in which arbitrators—as opposed to judges—are appointed. Judges
+are appointed by the state. They do not depend in any way on the parties who appear before them. In an international
+arbitration, by contrast, two of the three members of the tribunal will usually have been appointed (or nominated) by the
+parties. When a dissenting arbitrator disagrees with the majority, and does so in terms that favour the party that appointed
+him or her, it may cause some concern. Does the dissent arise from an honest difference of opinion, or is it influenced by a
+desire to keep favour with the party that appointed the dissenting arbitrator? As one commentator has said:
+Certain arbitrators, so as not to lose the confidence of the company or the state which appointed them, will
+be tempted, if they have not put their point of view successfully in the course of the tribunal’s deliberation,
+systematically to draw up a dissenting opinion and to insist that it be communicated to the parties. 194
+Other authors concur:
+Although party-appointed arbitrators are supposed to be impartial and independent in international arbitrations,
+some believe that with the availability of dissent, arbitrators may feel pressure to support the party that appointed
+them and to disclose that support. 195
+Footnotes
+
+Section D. - Deliberations and Decisions of the Tribunal, UKBC-REDFERN 530638659...
+© 2025 Thomson Reuters.
+9
+149
+See, e.g., Reed, ‘Chapter 6: Arbitral decision-making: Art, science or sport? (Sixth Kaplan Lecture, December 3, 2012)’,
+in Hong Kong International Arbitration Centre (ed) International Arbitration: Issues, Perspectives and Practice: Liber
+Amicorum Neil Kaplan (Kluwer Law International, 2018), pp. 161–174.
+150
+Bingham, The Business of Judging (Oxford University Press, 2000), p. 4.
+151
+Fortier, ‘The tribunal’s deliberations’, in Newman and Hill (eds) The Leading Arbitrators’ Guide to International
+Arbitration (2nd edn, Juris, 2008), pp. 479-480.
+152
+French Civil Code, Art. 1479, states: ‘Les délibérations du tribunal arbitral sont secretes.’
+153
+French Civil Code, Art. 1468, states: ‘Le tribunal arbitral fixe la date à laquelle le délibéré sera prononcé. Au cours du
+délibéré, aucune demande ne peut être formée, aucun moyen soulevé et aucune pièce produite, si ce n’est à la demande
+du tribunal arbitral.’
+154
+Bredin, ‘Le secret du délibéré arbitral’, in Études Offertes à Pierre Bellet (Litec, 1991). See also Savage and Gaillard
+(eds) Fouchard, Gaillard, Goldman on International Commercial Arbitration (Kluwer, 1999), para. 1369 (where proper
+deliberations are considered ‘a requirement of international procedural public policy’).
+155
+De Boisséson, Le Droit Français de l’Arbitrage National et International (Joly, 1990), p. 296. See also the comment in
+Robert, L’Arbitrage: Droit Interne, Droit International Privé (5th edn, Dalloz, 1983), para. 360 (authors’ translation):
+‘Although it is practised according to a certain number of foreign laws, notably Anglo-Saxon, the dissenting opinion
+is prohibited in French domestic law since it violates the secrecy of the tribunal’s deliberation [ … ]. ’ Under German
+law, unless provided otherwise by the arbitration agreement, deliberations are also secret: see Münchener Kommentar
+zur Zivilprozessordnung: ZPO, § 1052 Rn 1-5. In France, there may be limited exceptions to the general rule (e.g., in
+the context of allegations of fraud or corruption). For example, in the Tapie case the French courts did have regard to
+communications between a party, its appointee on the tribunal, and the tribunal president, in order to establish whether the
+deliberative process was free of external influence (see Arrêt No. 842 du 18 mai 2017 (15-2.683, 16-10.339, 16-10.344),
+Cass Comm, 18 May 2017).
+156
+Czech Republic v CME Czech Republic BV, Case No. T 8735-01,Svea Court of Appeal, IIC 63 (2003). An English
+translation of the judgment can be found online at http://italaw.com/sites/default/files/case-documents/ita0182.pdf; a
+case summary is available at [2003] Stockholm Arb Rep 167.
+157
+Czech Republic v CME Czech Republic BV, in the English translation, at 87; in the case summary, at 180.
+158
+See Gaillard and Savage (eds) Fouchard, Gaillard, and Goldman on International Commercial Arbitration (Kluwer Law
+International, 1999), para. 1374.
+159
+Sir Robert Jennings, Decision of 7 May 2001, at 7. A summary of the decision was published at (2001) 16 Mealey’s Int
+Arb Rep 2. The full text is available for purchase from Mealey’s online.
+160
+Economy Forms Corporation v Islamic Republic of Iran, Award, Case No. 55-165-1, 13 June 1983, quoted in Schwebel,
+‘The majority vote of an arbitral tribunal’ (1991) 2 Am Rev Intl Arb 402, at 409.
+161
+Mosk and Ginsburg, Dissenting Opinions in International Arbitration (Liber Amicorum Bengt Broms, 1999), p. 275.
+162
+See Chapter 5, paragraphs 5.77–5.85. In England, a party-appointed arbitrator is expected to come up to the same high
+standards of fairness and impartiality as the person chairing the tribunal (see Halliburton v Chubb [2020] UKSC 48,
+at 63).
+163
+Indeed, this is a material part of the duties of party-nominated arbitrators. A party-nominated arbitrator should do his
+or her best to ensure that he or she understands the case being put forward by the party that nominated him or her
+and should seek to make sure that the arbitral tribunal as a whole is in the same position. It is, of course, necessary
+for party-nominated arbitrators to consider carefully the merits of the arguments on both sides and not to be seen as
+favouring appointing parties. For concerns about partisanship amongst party-appointed arbitrators, see Paulsson, ‘Moral
+hazard in international dispute resolution’ (2010) 25 ICSID Review, Foreign Investment Law Journal 339 and van
+den Berg ‘Dissenting opinions by party-appointed arbitrators in investment arbitration’, in Mahnoush Arsanjani et al.
+(eds) Looking to the Future: Essays on International Law in Honor of W Michael Reisman (Brill Academic, 2010),
+p. 821. In contrast, for a defence of party-appointed arbitrators, see Brower and Rosenberg, ‘The death of the two-
+headed nightingale: Why the Paulsson-van den Berg presumption that party-appointed arbitrators are untrustworthy
+is wrongheaded’ (2013) Arb Intl 29(1) 7–44.
+164
+UNCITRAL Rules, Art. 11.
+166
+See, e.g., LCIA Rules, Art. 26.5.
+167
+(1977) II YBCA 172, at 194.
+168
+Ibid., at 208.
+169
+Parties may of course consider modifying Art. 33(1) in order to remove the majority requirement in the event of a
+deadlock (see UNCITRAL Report of 51st Session, 10 November 2009, UN Doc A/CN.9/684, para. 61 (‘the Working
+Group emphasized that the parties had the ability in such situations to agree to another method of decision-making’)).
+
+Section D. - Deliberations and Decisions of the Tribunal, UKBC-REDFERN 530638659...
+© 2025 Thomson Reuters.
+10
+170
+ICC Rules, Art. 32.1. In such a case, the presiding arbitrator’s role is very similar, but not identical, to that of an umpire.
+The difference is that an umpire is not required to make a decision unless and until the arbitrators appointed by the
+parties disagree. If they disagree, they take no further part in the proceedings and the umpire proceeds as if he or she
+were sole arbitrator.
+171
+LCIA Rules, Art. 26.5; Swiss PIL, Ch. 12, s. 189; English Arbitration Act 1996, s. 20(3)-(4); Swiss Rules, Art. 31.1. In
+the authors’ experience, president-only awards are a rare occurrence. One reported example is the RAKTA case under
+the 1955 ICC Rules (see ICC Case No. 1703/1971, summarised in Craig, Park, and Paulsson, International Chamber of
+Commerce Arbitration (3rd edn, Oceana Publications, 2000), p. 370).
+172
+LCIA Rules, Art. 26.5.
+173
+ICSID Convention, Art. 48(1).
+174
+ICSID Convention, Art. 42(2). If it is not possible to form a majority, the proper course is for the arbitrators to resign
+and for a replacement tribunal to be appointed. For an example in which this occurred, see Tokios Tokeles v Ukraine,
+ICSID Case No. ARB/02/18, Decision on Jurisdiction, 29 April 2004.
+175
+Note D to Arbitration Rule 47 of 1968, (1968) 1 ICSID Reports 108.
+176
+The ICJ Statute, Art. 57 is generally interpreted as permitting the practice of giving separate opinions: see Born,
+International Commercial Arbitration (2nd edn, Kluwer Law International, 2014), pp. 3052-3053.
+177
+Alabama Claims of the United States of America against Great Britain, Award rendered on 14 September 1872 by the
+Tribunal of Arbitration established by Article I of the Treaty of Washington of 8 May 1871. For a discussion of the
+proceedings, see Cushing, The Treaty of Washington: Its Negotiation, Execution, and the Discussions Relating Thereto
+(Harper & Bros, 1873). See also Bingham, Lives of the Law (Oxford University Press, 2011), ‘The Alabama Claims
+and the International Rule of Law’.
+178
+ICJ Statute, Art. 57.
+179
+See, e.g., Redfern, ‘Dissenting opinions in international commercial arbitration: The good, the bad and the ugly’ (2004)
+20 Arb Intl 223, at 236, arguing that dissenting opinions are unwelcome in international commercial arbitration, because:
+‘It is the decision which matters; and it matters not as a guide to the opinions of a particular arbitrator, or as an indication
+of the future development of the law, but because it resolves the particular dispute that divides the parties; and it resolves
+that dispute as part of a private, not public, dispute resolution process that the parties themselves have chosen.’
+180
+Blessing, ‘The new International Arbitration Law in Switzerland’ (1988) 5 J Intl Arb 9, at 66.
+181
+Other laws are more explicit. For example, the Brazilian Arbitration Act provides that ‘[A] dissenting arbitrator may,
+if he so wishes, render a separate decision’ (Art. 24(2)).
+182
+Netherlands Arbitration Act 2015, Art. 1057(3). See also Sanders and van den Berg, The Netherlands Arbitration Act
+1986 (Kluwer Law and Taxation, 1987), p. 33.
+183
+Cass. Soc. 9 November 1945, Gaz. Pal. 1946 1.22. Note, however, Professor Bredin’s comment that legal opinion on this
+point seems to be divided: Bredin, ‘Le secret du délibéré arbitral’, in Études Offertes à Pierre Bellet (Litec, 1991), p. 71.
+184
+ICSID Rules, r. 47(3); ICSID Convention, Art. 48(4).
+185
+See, e.g., Bank Mellat v GAA Development Construction Co. [1988] 2 Lloyd’s Rep 44, per Steyn J, (1990) XV YBCA 521.
+186
+Discussed further in paragraph 9.201. The ICC Rules, Art. 34 provides that no award shall be rendered by the arbitral
+tribunal until it has been approved by the ICC Court.
+187
+ICC, Final Report of the Working Party on Dissenting Opinions (1991) 2 ICC International Court of Arbitration Bulletin
+32.
+188
+For arbitrations involving dissenting opinions, an ICC Court member will generally draft a report with recommendations
+on the draft dissenting opinion during the scrutiny process (see ICC Note to Parties and Arbitral Tribunals, 1 January
+2021, at 163). (For a discussion on dissenting opinions and party-appointed arbitrators, see Chapter 1, paragraphs 1.53–
+1.55 and footnotes.)
+189
+Decision of 7 May 2001, at 7.
+190
+Grainger Associates v Islamic Republic of Iran (1987) 16 Iran–US CTR 317.
+191
+Lévy, ‘Dissenting opinions in international arbitration in Switzerland’ (1989) 5 Arb Intl 35, at 35.
+192
+This question was answered in the negative in Alan Redfern’s 2003 Freshfields Lecture: see Redfern, ‘Dissenting
+opinions in international commercial arbitration: The good, the bad and the ugly’ (2004) 20 Arb Intl 223. It would be
+right to say that the lecture itself gave rise to much dissent, as indicated in paragraphs 1.53–1.55 of this book.
+193
+The ICSID Rules, r. 46, defines an award to include any individual or dissenting opinions, and so make dissent something
+that is expressly permitted.
+194
+De Boisséson, Le Droit Français de l’Arbitrage National et International (Joly, 1990), p. 802 (author’s translation).
+195
+Mosk and Ginsburg, Dissenting Opinions in International Arbitration (Liber Amicorum Bengt Broms, 1999), p. 275. See
+also De Boisséson, Le Droit Français de l’Arbitrage National et International (Joly, 1990), p. 802. For an analysis of the
+
+Section D. - Deliberations and Decisions of the Tribunal, UKBC-REDFERN 530638659...
+© 2025 Thomson Reuters.
+11
+perceived problems with dissenting opinions in the investment treaty context, see Van den Berg, ‘Dissenting opinions by
+party-appointed arbitrators in investment arbitration’, in Mahnoush Arsanjani et al. (eds) Looking to the Future: Essays
+on International Law in Honor of W Michael Reisman (Brill Academic, 2010), p. 821.
+End of Document
+© NIGEL BLACKABY KC, CONSTANTINE PARTASIDES
+KC, ALAN REDFERN

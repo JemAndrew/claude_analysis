@@ -1,0 +1,76 @@
+Case management conference as starting point for..., UKBC-ICCARBN...
+© 2025 Thomson Reuters.
+1
+Case management conference as starting point for time-limit to
+render award
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+Case management conference as starting point for time-limit to render award
+30-58
+Pursuant to art.31(1), the time-limit for rendering the final award for ICC cases in general is six months starting from the signing
+(or approval) of the Terms of Reference. This time-limit has existed for decades in the ICC Rules, although in practice it is
+very rarely met. 673  It is in fact a default time-limit, with the ICC Court fixing a different time-limit based on the procedural
+timetable established pursuant to art.24(2).
+30-59
+Article 4(1) of App.VI has kept the same six-month time limit for rendering the final award, but makes it start from the date
+of the case management conference rather than the date of the signature (or approval) of the Terms of Reference. The case
+management conference is to be held within 15 days following the transmission of the file to the Tribunal. Thus, at first sight,
+there seems to exist very little difference between the expedited and the standard rules. However, for cases under the Expedited
+Procedure Provisions, the ICC Secretariat and ICC Court seek to enforce the six-month time limit strictly, i.e. “to be effectively
+complied with, with no need for extensions.” 674  The 2021 ICC Note expressly states that the “Court considers that compliance
+with such time limit is of essence under the Expedited Procedural Rules”. It even promises an increase of the arbitrator’s fees
+above the amount that it would otherwise consider fixing, when the Tribunal “has conducted the arbitration expeditiously”. 675
+The Court also “expects arbitral tribunals acting under the Expedited Procedure Provisions to conduct the procedure in such
+way as to comply with [the six-month] deadline, with no need for extension”.
+30-60
+It is with this “no need for extensions” philosophy that the Tribunal will have to approach the conduct of the proceedings. In
+other words, its procedural timetable must be compatible with the six-month timeframe. If a hearing date is set for instance two
+weeks after the last written submission, the parties will have to make themselves available, whether it suits them or not, and the
+sole arbitrator will be expected to enforce the date set. But here again, party autonomy will prevail at the end. If both parties
+agree that they require more time, the ICC Court will have no basis to interfere, and the sole arbitrator may be left to express
+regret over the delay, but will have not much difficulty in submitting a reasoned request for extension to the court.
+30-61
+Providing for the usual steps in an ICC arbitration in a six-month time-period has always been a challenge, first and foremost for
+parties and their counsel. If one adds the possibility of procedural difficulties (e.g., disputes over the language of the arbitration,
+jurisdictional challenges, or even challenges of an arbitrator), a party’s request to appoint an expert or to conduct a site inspection
+pursuant to art.25(4) of the ICC Rules, or simply the parties’ lack of cooperation, 676  the six-month time limit may easily be at
+risk. While this risk will materialise whenever an interim or partial award is required, requests for bifurcation of the proceedings
+are unlikely to succeed when the Expedited Procedure Provisions apply, and in any event rare in “small” claim cases, except
+as regards jurisdictional issues.
+30-62
+Finally, the time needed by the Tribunal to draft the award and submit it for scrutiny by the ICC Court, will have to be
+integrated into the timetable. 677  The ICC Court expects the Tribunal “to submit its draft award within five months from the
+case management conference”. This justifies limiting the scope of the award to its truly essential elements. As stated in the
+2021 ICC Note:
+
+Case management conference as starting point for..., UKBC-ICCARBN...
+© 2025 Thomson Reuters.
+2
+“151. Any award under the Expedited Procedure Provisions must be reasoned. In such arbitrations, it is particularly
+appropriate to keep the factual and/or procedural sections of the award to what the arbitral tribunal considers
+necessary for the understanding of the award, and state the reasons of the award in as concise a fashion as possible.”
+30-63
+Thus, realistically speaking, there will be approximately 4–5 months to conduct the proceedings from the time of the first case
+management conference until the proceedings are closed. As mentioned, in some cases, one can expect that there will be only
+one written submission per party following the case management conference. However, in the authors’ experience it is possible
+to organize reply submissions on a reasonably tight time frame.
+Footnotes
+673
+This probably explains why the ICC does not publish statistical data in that respect. The average duration of ICC
+arbitration is said to be 2.4 years, but that figure is not very meaningful, see ICC 2020 Statistics, p.19.
+674
+2021 ICC Note, para.150, Part VII G, Doc.3.1. This is not to say, that efforts have been made by the ICC to become
+much stricter, notably with arbitrators when it comes to the time for handing in their draft award to the ICC Court, but
+also as regards delays in the scrutiny process due to the court itself, see 2021 ICC Note, Doc.3.1.
+675
+2021 ICC Note, para.160.
+676
+This will require, more than ever, that the arbitral tribunal starts preparing the award from early on and integrates the
+parties’ submissions as they are being made, see Rohner, op. cit., at p.63.
+677
+Over the years, the ICC Court has contributed to its awards becoming longer, by imposing requirements as to what
+arbitrators should include in awards.
+End of Document
+© 2025 SWEET & MAXWELL

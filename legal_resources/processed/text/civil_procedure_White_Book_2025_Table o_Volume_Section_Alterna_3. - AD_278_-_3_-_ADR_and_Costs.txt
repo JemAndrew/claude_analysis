@@ -1,0 +1,464 @@
+3. - ADR and Costs, UKBC-WHITEBK 549319338 (2025)
+© 2025 Thomson Reuters.
+1
+3. - ADR and Costs
+White Book 2025  | Commentary last updated May 13, 2025
+Volume 2
+Section 14 - Alternative Dispute Resolution
+Alternative Dispute Resolution
+3. - ADR and Costs
+Cost Sanctions and ADR
+14-13
+This section should be read in the context of para.14-1.
+Numerous reported cases deal with costs sanctions where the issue is unreasonable refusal to mediate (or use some other form of
+ADR process). There will probably be fewer cases in future, following Churchill v Merthyr Tydfil CBC [2023] EWCA Civ 1416;
+[2024] 1 W.L.R. 3827 and the series of post-Churchill amendments to the CPR confirming that the court’s case management
+powers do extend to ordering parties to engage in ADR in appropriate cases (see para.14-1). Parties ordered to attempt ADR are
+likely to comply. Also, a party who is met with an opponent’s failure to engage in ADR now has the opportunity to apply to the
+court for a stay for ADR or an order directing ADR. Further, with reference to costs, r.44.2(5)(e) now provides, with effect from
+1 October 2024, that when considering a party’s conduct in relation to costs, the court will have regard to, among other things,
+whether a party failed to comply with an alternative dispute resolution order or unreasonably failed to engage in alternative
+dispute resolution. Northamber Plc v Genee World Ltd [2024] EWCA Civ 428 and Conway v Conway [2024] EW Misc 19 (CC)
+are examples of post Churchill cases where the court has imposed costs penalties for failure to mediate. It is important to add
+the rider, however, that in matters regarding conduct and costs the court invariably considers all of the circumstances of the
+case. A post Churchill example is Invenia Technical Computing Corp v Hudson [2024] EWHC 1302 (Ch).
+The following cases on costs sanctions should all be read in the context of Churchill and the subsequent changes to the CPR.
+Regardless of the court’s power to order ADR, it is clear that judicial encouragement in the context of the court’s discretion on
+costs has been very powerful in the past. See, for example, Brookfield Construction (UK) Ltd v Mott MacDonald Ltd [2010]
+EWHC 659 (TCC) where Coulson J said (at [55]):
+“In the present case, there is a clear and obvious alternative: ADR. In my view, the parties need to explore that
+option as soon as possible after the service of (… amended pleadings …). I should make it clear that … I will
+make detailed costs orders and that, on the basis of the documents, my perception of one side’s willingness (or
+otherwise) to participate in ADR will be an important element of my deliberations on costs.”
+and Cumbria Zoo Co Ltd v The Zoo Investment Co Ltd [2022] EWHC 3379 (Ch) where HHJ Pearce, having noted the case was
+ideally suited to mediation, invited the parties to consider mediation in light of the “carrot”, represented by the peace of mind and
+cost saving arising from settlement, and the “stick” of an adverse costs order risked by a party unwilling to engage in the process.
+Jackson LJ reviewed costs sanctions in the context of encouraging ADR by costs orders post the CPR reforms in April 2013.
+His view was that such sanctions:
+“... might include (a) reduced costs recovery for a winning party; (b) indemnity costs against a losing
+party, alternatively reduced costs protection for a losing party which has the benefit of qualified one way
+costs shifting.” (See https://www.judiciary.uk/wp-content/uploads/JCO/Documents/Speeches/lj-jackson-speech-
+eleventh-lecture-implementation-programme.pdf.)
+
+3. - ADR and Costs, UKBC-WHITEBK 549319338 (2025)
+© 2025 Thomson Reuters.
+2
+Evidence of cost sanctions forming part of a tougher case management regime can be seen in the following cases. In AP (UK)
+Ltd v West Midland Fire and Civil Defence Authority [2013] EWHC 385 (QB) the court compared a party’s actual conduct with
+that required by “Practice Direction—Pre-Action Conduct” (para.C1-001). It was found that failures to engage in the pre-action
+exchange of information, to seek a stay pending the use of that procedure and to attempt ADR in an attempt to forestall the
+claim proceeding beyond the issue and service stage altogether, should sound in costs. In Rana v Tears of Sutton Bridge [2015]
+EWHC 2597 (QB) the court found failure to engage in the Pre-Action Protocol and to accept a suggestion of alternative dispute
+resolution should be marked by adverse costs consequences. (Also see: Roundstone Nurseries Ltd v Stephenson Holdings Ltd
+[2009] EWHC 1431 (TCC), where costs sanctions were imposed in circumstances where one party unilaterally cancelled an
+imminent pre-action mediation.)
+In Lewicki v Nuneaton and Bedworth BC [2013] UKUT 120 (LC) the court stated, in agreement with the view of Jackson LJ
+immediately above, that in principle, the refusal of a party to participate in mediation might justify an adverse costs order on the
+indemnity basis. Indemnity costs were awarded by way of a sanction in Garritt-Critchley v Ronnan [2014] EWHC 1774 (Ch),
+Reid v Buckinghamshire Healthcare NHS Trust [2015] 10 WLUK 752, and Bristow v Princess Alexandra Hospital NHS Trust
+[2015] 11 WLUK 67, DSN v Blackpool Football Club Ltd [2020] EWHC 670 (QB) and BXB v Watch Tower and Bible Tract
+Society of Pennsylvannia [2020] EWHC 656 (QB). In PGF II SA v OMFS Co [2013] EWCA Civ 1288 the Court of Appeal
+clearly contemplated that an unreasonable refusal to mediate might be met by a range of sanctions. The court suggested that
+the otherwise successful party might be ordered to pay part of the unsuccessful party’s costs, and only in the event of the most
+serious and flagrant failures to engage would it be appropriate to adopt the draconian sanction of depriving it of all of its costs.
+In Lynn v Borneos LLP (t/a Borneo Linnels) [2015] 3 Costs L.R. 439 HHJ Cooke, having found that a party had unreasonably
+refused to mediate, stated that the sanction “ought to be proportionate and proportionate to the degree to which the court can
+realistically infer that there was actually an opportunity to save costs”. As he concluded that it was unlikely that a mediation
+would have resulted in settlement he reduced the successful defendant’s cost by 40%, so that it received 60% of its costs instead
+of 100%. In Rana v Tears of Sutton Bridge [2015] EWHC 2597 (QB) the court also imposed the same costs sanction on a
+successful defendant, namely a costs reduction of 40%. A similar approach was taken in Stoney-Andersen v Abbas [2023]
+EWHC 2964 (Ch) at [56].
+In Laporte v The Commissioner of Police of the Metropolis [2015] EWHC 371 (QB); [2015] 3 Costs L.R. 471 the court, having
+found that the defendant had failed, without adequate justification, to fully and adequately engage in the ADR process, which
+had a reasonable chance of success, imposed a costs sanction. Although the defendant was successful on every substantive issue
+and, although ADR made settlement a sufficiently likely possibility, it would not have been certain, the court ordered that he
+should only receive two thirds of his costs, to be assessed.
+In OMV Petrom SA v Glencore International AG [2017] EWCA Civ 195; [2017] 1 W.L.R. 3465; [2018] 1 All E.R. 703 the costs
+sanction took the form of enhanced interest:
+“As long as the award (of interest) was proportionate to the facts of the case, it could include a non-compensatory
+element to encourage parties to engage in reasonable settlement negotiations and to mark the court’s disapproval
+of unreasonable conduct.”
+See also Hochtief (UK) Construction Ltd v Atkins Ltd [2019] EWHC 3028 (TCC); [2020] Costs L.R. 1 at [16].
+In Moradi v Home Office [2022] EWHC 3125 (KB) the successful claimant suffered a 33% deduction from a portion of her
+costs on the ground that her failure to negotiate for a period of months had been moderately unreasonable. Reference was made
+to there being a costs risk in making unrealistic or inflated offers.
+In Northamber Plc v Genee World Ltd [2024] EWCA Civ 428 the costs penalty was an increase of 5% on the costs the refusing
+party had been ordered to pay and in Conway v Conway [2024] EW Misc 19 (CC) the successful defendants had their recoverable
+costs reduced by 25%.
+Cases where refusal to mediate was found not to be unreasonable
+14-14
+
+3. - ADR and Costs, UKBC-WHITEBK 549319338 (2025)
+© 2025 Thomson Reuters.
+3
+Notwithstanding the above there are a number of authorities which demonstrate that a refusal to mediate will not always be
+visited by a sanction. In Uwug Ltd (In Liquidation) v Ball [2015] EWHC 74 (IPEC) the court considered that
+“... the defendant’s refusal to enter into mediation should not count against him as it would have been likely to
+have been unsuccessful and to have led to a waste of time and expenditure.”
+In a similar vein, in Assensus Ltd v Wirsol Energy [2025] EWHC 503 (KB) Constable J, considered a refusal to mediate by
+the party that succeeded at trial. He found that the refusal was not unreasonable given the gap, ‘the gulf’, between the parties
+such that it was ‘very unlikely indeed that ADR would have been successful. In Butler v Butler [2016] EWHC 1793 (Ch)
+the court said: “Mediation requires a willingness on the part of all parties to compromise; in this case it was not a realistic
+option.” In Gore v Naheed [2017] EWCA Civ 369; [2017] 3 Costs L.R. 509; [2018] 1 P. & C.R. 1, Patten LJ considered PGF
+II SA v OMFS Co 1 Ltd [2013] EWCA Civ 1288; [2014] 1 W.L.R. 1386 in relation to a claimant who declined to mediate
+and said that he had:
+“... some difficulty in accepting that the desire of a party to have his rights determined by a court of law in
+preference to mediation can be said to be unreasonable conduct particularly when, as here, those rights are
+ultimately vindicated.”
+He took into account the view of the claimant’s solicitor that mediation had “no realistic prospect of succeeding” and the trial
+judge’s view that “the case raised quite complex questions of law which made it unsuitable for mediation”.
+In Richards v Speechly Bircham Llp [2022] EWHC 1512 (Comm) HHJ Russen (sitting as a High Court judge) refused an
+application for indemnity costs notwithstanding that the defendants had been unreasonable in failing to mediate. He found
+that, in the circumstances of the case, this was only one aspect of the conduct to be considered in the exercise of the discretion
+under CPR 44.2. and such a such refusal did not automatically lead to costs penalties. Masood Ahmed, University of Leicester,
+has analysed the judgment in a Law Society Gazette article at https://www.lawgazette.co.uk/legal-updates/unreasonable-
+refusal-to-engage-with-adr/5113250.article.
+In Parker Lloyd Capital Ltd v Edwardian Group Ltd (formerly Parker Lloyd Capital Plc) [2017] EWHC 2421 (QB) the court
+concluded that a refusal to mediate was founded on a belief that the offer to mediate was a mere tactic to extract payment and,
+therefore, was not unreasonable. See also Tradeouts Ltd, Re [2018] EWHC 1066 (Ch), where a refusal to mediate was not, in
+the circumstances, visited with a costs sanction. In Ali v Channel 5 Broadcast Ltd [2018] EWHC 840 (Ch); [2018] 2 Costs
+L.R. 373, the court found that, in the circumstances, there had not been refusal to engage in ADR. True, the claimants did not
+embrace the first suggestion of ADR but they did assert that they would keep it under review and in response to the second
+suggestion they maintained that they were fully prepared to engage in ADR at a suitable time. A mediation did ultimately take
+place. In PJSC Aeroflot - Russian Airlines v Leeds [2018] EWHC 1735 (Ch); [2018] 4 Costs L.R. 775 a refusal to mediate
+was not unreasonable in the context of serious allegations of fraud. Per Rose J at para 93: “… where allegations of fraud and
+serious wrongdoing are made, the proceedings are intrinsically unsuitable for mediation”. In Kelly v Kelly [2020] EWHC
+1027 (QB) a refusal to mediate was reasonable in light of the previous conduct of the party offering mediation. In Philip
+Warren & Son Ltd v Lidl Great Britain Ltd [2021] EWHC 2372 (Ch) the defendant was found to be not unreasonable in
+not taking up an invitation to mediate. In Von Westenholz v Gregson [2022] EWHC 3374 (Ch) a failure to mediate on the
+basis that the parties were far apart and there were allegations of malice and potential dishonesty was found to be not so
+unreasonable as to justify an award of indemnity costs.
+In Coldunell Ltd v Hotel Management International Ltd [2022] EWHC 3084 (TCC) a claimant who declined a second
+mediation was not unreasonable, given that the first mediation had failed a few months earlier. It should be noted, however,
+that post Churchill the court may consider ordering a second mediation where a first attempt did not achieve resolution; see:
+Heyes v Holt [2024] EWHC 779 (Ch) (at [50]) and Francis v Pearson [2024] EWHC 605 (KB) (at [87]–[92]).
+In Hotel Portfolio II UK Ltd (In Liquidation) v Ruhan [2022] EWHC 3385 (Comm), it was found that seeking (a) an indication
+that that a suggestion of mediation was genuine and (b) a means of demonstrating that, did not amount to an unreasonable
+refusal.
+See also Benyatov v Credit Suisse Securities (Europe) Ltd [2022] EWHC 528 (QB) (Freedman J, pp.29–34), Huntsworth
+Wine Co Ltd v London City Bond Ltd [2022] EWHC 97 (Comm), Ineos Upstream Ltd v Boyd [2023] EWHC 1756 (Ch),
+
+3. - ADR and Costs, UKBC-WHITEBK 549319338 (2025)
+© 2025 Thomson Reuters.
+4
+Hamon v University College London [2023] EWHC 1812 (KB), Jones v Tracey [2023] EWHC 2256 (Ch), Invenia Technical
+Computing Corp v Hudson [2024] EWHC 1302 (Ch).
+Contrast those findings, however, with the assertion by the Court of Appeal that: “No dispute was too intractable for
+mediation” (N J Rickard Ltd v Holloway [2015] EWCA Civ 1631; [2017] 1 Costs L.R. 1).
+Costs Where ADR Declined
+14-15
+For the reasons mentioned in para.14-9, the following cases on costs sanctions should all be read in the context of Churchill
+and the subsequent changes to the CPR referred to in para.14-1.
+The question as to when the court should impose a costs sanction against a successful litigant on the grounds that he has refused
+to take part in an alternative dispute resolution (ADR), referred to in Dunnett v Railtrack Plc, op cit, was considered by the
+Court of Appeal in Halsey v Milton Keynes General NHS Trust [2004] EWCA Civ 576; [2004] 1 W.L.R. 3002, CA. The court
+said the fundamental principle is that departure from the general rule (that the unsuccessful party should be ordered to pay the
+costs of the successful party) is not justified unless it is shown (the burden being on the unsuccessful party) that the successful
+party acted unreasonably in refusing to agree to ADR. The court gave guidance (see especially para.16) as to the factors that
+should be considered by the court in deciding whether a refusal to agree to ADR is unreasonable. Halsey, however, should
+now be viewed in the light of the more recent Court of Appeal decision of Churchill v Merthyr Tydfil CBC [2023] EWCA Civ
+1416; [2024] 1 W.L.R. 3827. Although the latter was primarily concerned with the power of the court to order ADR, there is
+a considerable overlap between the power of the court to order ADR and the costs issues where ADR is declined. Further, the
+recent decision identifies parts of the Halsey decision which it regarded as non-binding or obiter.
+For cases following Halsey, see Reed Executive Plc v Reed Business Information Ltd [2004] EWCA Civ 887; [2004] 1 W.L.R.
+3026, CA, Wills v Mills & Co Solicitors [2005] EWCA Civ 591, Daniels v Commissioner of Police of the Metropolis [2005]
+EWCA Civ 1312, Hickman v Blake Lapthorn [2006] EWHC 12 (QB) (Jack J) (reviewing the authorities and summarising the
+principles). This matter is dealt with in commentary following r.44.3 (court’s discretion and circumstances to be taken into
+account when exercising discretion as to costs), in particular in para.44.3.13. In a given case it is quite conceivable that, before
+legal proceedings were commenced, the parties may have made a genuine but unsuccessful attempt to reach agreement on an
+ADR procedure or, indeed, may have participated in such a procedure in an unsuccessful (or only partly successful) effort to
+settle their dispute. The failures in these respects should not blind the parties or the court to the possibility that an opportunity
+may arise during the pre-trial process (or even on appeal) when an ADR procedure might yet be used to good effect. See Heyes
+v Holt [2024] EWHC 779 (Ch) (at [50]) and Francis v Pearson [2024] EWHC 605 (KB) (at [87]–[92]).
+In Societe Internationale de Telecommunications Aeronautiques SC (SITA) v Wyatt Co (UK) Ltd [2002] EWHC 2401 (Ch) (Park
+J) it was held that, in the circumstances, it was reasonable for a Pt 20 defendant to refuse to participate in a mediation between
+the claimant and the defendant (which led to a compromise), or a mediation between themselves and the claimant, offered by
+the claimant shortly before trial of the Pt 20 claim at which judgment was given in their favour, and therefore they should not be
+deprived of any part of their costs. Other cases in which the imposing of a costs sanction on a party for their failure to take up
+an offer of mediation was countenanced, and in some instances effected, include: Hurst v Leeming [2002] EWHC 1051 (Ch);
+[2003] 1 Lloyd’s Rep. 379 (Lightman J), R. (Cowl) v Plymouth City Council [2001] EWCA Civ 1935; [2002] 1 W.L.R. 803,
+CA, Leicester Circuits Ltd v Coates Brothers Plc [2003] EWCA Civ 333.
+In Reed Executive Plc v Reed Business Information Ltd [2004] EWCA Civ 159 the Court of Appeal invited submissions on
+the relevance to the question of costs of the defendants’ refusal of a number of offers to go to mediation. After noting that the
+defendants had engaged in serious settlement negotiations, Jacob LJ said (para.167) that such negotiations were not the same
+as mediation as:
+“… a good and tough mediator can bring about a sense of commercial reality to both sides which their own
+lawyers, however good, may not be able to convey.”
+
+3. - ADR and Costs, UKBC-WHITEBK 549319338 (2025)
+© 2025 Thomson Reuters.
+5
+In a similar vein, in Garritt-Critchley v Ronnan and Solarpower PV Ltd [2014] EWHC 1774 (Ch) and Bristow v Princess
+Alexander Hospital NHS Trust [2015] 11 WLUK 67, the court rejected arguments that a refusal to mediate was reasonable
+because the parties were too far apart. In Garritt, HHJ Waksman QC said (para.22) that:
+“Parties don't know whether in truth they are too far apart unless they sit down and explore settlement. If they are
+irreconcilably too far apart, then the mediator will say as much within the first hour of mediation. That happens
+very rarely in my experience.”
+See also TMO Renewables Ltd (In Liquidation) v Yeo [2022] EWCA Civ 1409 where one of the parties dismissed a proposal
+to mediate as “an expensive waste of time”. Males LJ and Asplin LJ, rejecting this, were of the view that the case was ideally
+suited to mediation. “Instead” added Males LJ:
+“… because none of the parties was prepared to be reasonable, they marched on with colours flying to the disaster
+which the trial proved to be for them all” (at paras 38 and 40).
+In contrast, however, in Patel v Barlows Solicitors (A Firm) [2020] EWHC 2795 (Ch), HHJ Mithani QC found that a party
+reasonably refused mediation because its lawyer:
+“... felt that mediation was unlikely to be productive because of how far apart the parties were in terms of what
+they would be prepared to accept. In those circumstances, it is difficult for me to see what else could have been
+achieved by mediation. I cannot see any basis upon which the Claimants can be criticised for refusing to mediate
+when without prejudice communication had been attempted and proved wholly unsuccessful. Either party could
+have improved on the offer which they had made. Neither did so. There was, therefore, no reason to explore
+mediation any further. It was unlikely that either party would have been prepared at any mediation meeting to
+make the sort of concessions which would have resulted in the resolution of the Claim.”
+In Vale of Glamorgan Council v Roberts [2008] EWHC 2911 (Ch) an unsuccessful litigant claimed costs against the successful
+defendant local authority. His application did not succeed. The court noted that the defendant had not positively suggested
+mediation and said that it would be going too far to disallow costs incurred by a local authority because that authority did not
+initiate suggestions for a mediation. Making contact with a mediation provider does not amount to an offer to mediate: Park
+Promotion Ltd v Welsh Rugby Union Ltd [2012] EWHC 2406 (QB).
+In S v Chapman [2008] EWCA Civ 800; [2008] E.L.R. 603; (2008) 152 S.J.L.B. 29 the court found that the defendant was entitled
+to await the outcome of its application to strike out before deciding whether or not it was either necessary or advantageous to
+enter into mediation of the substantive issues with the claimant. There was no reason to depart from the normal principle that
+costs followed the event. See also Mobiqa Ltd v Trinity Mobile Ltd [2010] EWHC 253 (Pat); (2010) 33(4) I.P.D. 33025:
+“... whilst it might be said that a resolute refusal to mediate or to take part in any discussions might attract adverse
+criticism, that certainly does not seem to have happened in the present case. Both of the suggestions of meetings
+were taken up and in relation to the offer of mediation, the defendant’s suggestion was simply that it should
+proceed, once the parties’ expert evidence had been exchanged, so it could be seen whether in fact the claimant
+had any case” (per Floyd J, para.29).
+See also National Museums and Galleries On Merseyside Board of Trustees v AEW Architects and Designers Ltd [2013] EWHC
+3025 (TCC). The court will, however, disregard an offer to mediate which is made subject to an unreasonable pre condition: R
+(Royal Free London NHS Foundation Trust) v Secretary of State for the Home Department [2013] EWHC 4101 (Admin) and
+in Ineos Upstream Ltd v Boyd [2023] EWHC 1756 (Ch) the court found that the circumstances were such that no discernible
+weight could be attached to the offer to mediate.
+For an application, and discussion, of the concept of “unreasonable refusal to mediate” and the principles established in Halsey
+see The Claimants appearing on the Register of the Corby Group Litigation v Corby DC [2009] EWHC 2109 (TCC) where the
+court also considered the approach taken by Lightman J in Hurst v Leeming (see above). See also Gill v Woodall [2009] EWHC
+834 (Ch). In Swain Mason v Mills & Reeve [2012] EWCA Civ 498, Euroption Strategic Fund Ltd v Skandinaviska Enskilda
+Banken AB [2012] EWHC 749 (Comm) and ADS Aerospace Ltd v EMS Global Tracking Ltd [2012] EWHC 2904 (TCC) the
+
+3. - ADR and Costs, UKBC-WHITEBK 549319338 (2025)
+© 2025 Thomson Reuters.
+6
+court found parties who had refused to mediate were not unreasonable. In Swain, it was held, following Halsey, that where a
+party reasonably believed that he had a watertight case, that might well be a sufficient justification for a refusal to mediate, even
+if on some issues the defence did not succeed (see also the discussion about the merits of the case at para.14-6 above).
+In Primeview Developments Ltd v Ahmed [2017] UKUT 57 (LC) the Upper Tribunal (Lands Chamber) decided, by reference to
+Halsey v Milton Keynes General NHS Trust [2004] EWCA Civ 576, that a party’s refusal to mediate was not unreasonable. The
+critical issues were that the prospects of success were slight and the costs of mediation were likely to be disproportionately high.
+A claim that a party has a strong defence, however strong, is not of itself a guarantee that a court will find a refusal to mediate was
+reasonable, as the defendant found in DSN v Blackpool Football Club Ltd [2020] EWHC 670 (QB) where Griffiths J outlined (at
+para.28) the potential benefits that could arise from a mediation notwithstanding the defendants’ views on the merits. In Stoney-
+Andersen v Abbas [2023] EWHC 2964 (Ch) HHJ Paul Matthews (sitting as a Judge of the High Court) said, with reference to
+arguments about the merits of the case when considering ADR:
+“It is a commonplace that both sides are told by their lawyers that they will win. But they cannot both be right.
+Indeed, sometimes, both sides are wrong. The combination of litigation risk and irrecoverable costs almost always
+makes it worthwhile considering mediation and other ADR.”
+It is often the case, where a party has refused mediation, that the court has a number of factors to consider, in relation to
+r.44.3(4)(a) and the parties’ conduct, rather than (as in Halsey) the single issue of whether refusal was unreasonable. The overall
+nature of the court’s discretion on costs can be seen in Multiplex Construction (UK) Ltd v Cleveland Bridge (UK) Ltd [2008]
+EWHC 2280, TCC where Jackson J made a comprehensive review of costs authorities from which he derived (at para.72) eight
+principles. These included:
+“(v) In many cases the judge can and should reflect the relative success of the parties on different issues by making
+a proportionate costs order
+(vi) In considering the circumstances of the case the judge will have regard not only to any part 36 offers made
+but also to each party’s approach to negotiations (insofar as admissible) and general conduct of the litigation.”
+In two cases, Whitecap Leisure Ltd v John H. Rundle Ltd [2008] EWCA Civ 1026 and Shah v Joshi [2008] EWHC 1766 (Ch),
+the court’s overall approach to costs was seen. Features of the parties’ conduct included the following. In Whitecap, the conduct
+of each party was described as having been as bad as the other, although one party’s obdurate attitude was more striking than the
+other’s conduct, and an offer of mediation was rejected as was a very favourable Pt 36 offer. In Shah, mediation was proposed
+but flatly rejected, as was a Calderbank offer. The parties did undertake mediation shortly before trial, but it was unsuccessful.
+On the first day of the trial, the judge emphasised to the parties the extreme desirability of a settlement but despite giving an
+extended adjournment to facilitate a settlement no agreement was reached. In Whitecap the court came to deal with costs and
+ordered that one party should recover only 80% of its costs of the appeal and that the costs of the claim and the costs of the appeal
+should be set off against each other. In Shah an application for indemnity costs in respect of a successful claims and counterclaim
+was only granted in part; the court took into account all the circumstances, including the losing party’s attitude at the time when
+the other party first proposed mediation. These cases perhaps demonstrate that if a party rejects an offer of mediation, or fails to
+give ADR adequate consideration when following a pre-action protocol or completing the directions questionnaire, it will run
+the risk of an adverse costs order when costs are dealt with and the court considers the overall conduct of the litigation.
+This was in fact the approach taken by the Court of Appeal in Bray (t/a Building Co) v Bishop [2009] EWCA Civ 768 when it
+considered conduct in relation to costs and took into account a number of factors, including one party’s rejection of a Pt 36 offer
+and the other’s refusal to engage with a suggestion of mediation. See also Sonmez v Kebabery Wholesale Limited [2009] EWCA
+Civ 1386, Fitzroy Robinson Ltd v Mentmore Towers Ltd [2010] EWHC 98 (TCC), Brookfield Construction (UK) Ltd (formerly
+Multiplex Constructions (UK) Ltd) v Mott MacDonald Ltd [2010] EWHC 659 (TCC), Kayll v Rawlinson [2010] EWHC 1789
+(Ch); [2010] W.T.L.R. 1479, Oliver v Symons [2011] 4 WLUK 427, Camertown Timber Merchants Ltd v Sidhu [2011] EWCA
+Civ 1041, Nelson’s Yard Management Co v Eziefula [2013] EWCA Civ 235, Bristow v Princess Alexander Hospital NHS Trust
+[2015] 11 WLUK 67, 4 November 2015, unrep., Flanagan v Liontrust Investment Partners LLP [2016] EWHC 446 (Ch), Kupeli
+v Kibris Turk Hava Yollari Sirketi (t/a Cyprus Turkish Airlines) [2016] EWHC 1478 (QB), NJ Rickard v Holloway [2015]
+EWCA Civ 1631, Car Giant Ltd v Hammersmith LBC [2017] EWHC 464 (TCC), Inchbald v Inchbald [2017] EWHC 616 (Ch);
+MacInnes v Gross [2017] EWHC 127 (QB), Lloyds Bank PLC v McBains Cooper [2017] EWHC 30 (TCC); [2017] 1 Costs L.O.
+
+3. - ADR and Costs, UKBC-WHITEBK 549319338 (2025)
+© 2025 Thomson Reuters.
+7
+95, and Burgess v Penny [2019] EWHC 2034 (Ch) and Wales (t/a Selective Investment Services) v CBRE Managed Services
+Ltd [2020] EWHC 1050 (Comm) and Geoquip Marine Operations AG v Tower Resources Cameroon SA [2022] EWHC 1408
+(Comm).
+In Marsh v Ministry of Justice [2017] EWHC 1040 (QB) the claimant bettered a Part 36 Offer in
+circumstances where the defendant had refused to engage in mediation notwithstanding an order that the parties
+must consider settlement by ADR, including mediation. (The order was in the form of Standard Directions
+Model Paragraph A03-ADR.doc https://www.justice.gov.uk/courts/procedure-rules/civil/standard-directions/list-of-cases-of-
+common-occurrence/menu-of-sd-paragraphs.) The court ordered the defendant to pay indemnity basis costs and awards under
+CPR r.36.17. The following two cases make no reference to mediation but demonstrate how the court is prepared to award costs
+sanctions where there has been a failure to engage properly in settlement negotiations: Jordon v MGN Ltd [2017] EWHC 1937
+(Ch) and Dickinson v Cassillas [2017] EWCA Civ 1254. As Sir Geoffrey Vos, then Chancellor of the High Court, stated in
+OMV Petrom SA v Glencore International AG [2017] EWCA Civ 195 (para.29): “The parties are obliged to conduct litigation
+collaboratively and to engage constructively in a settlement process.” For a forensic analysis of a challenge about whether a
+party had failed to engage in settlement discussions see Pallett v MGN Ltd [2021] EWHC 76 (Ch). See also TMO Renewables
+Ltd (In Liquidation) v Yeo [2021] EWHC 2773 (Ch) at [65] and Moradi v Home Office [2022] EWHC 3125 (KB).
+In Roundstone Nurseries Ltd v Stephenson Holdings Ltd [2009] EWHC 1431 (TCC) mediation was not declined initially but
+one party unilaterally cancelled an imminent pre-action mediation. The TCC held that this was wrong, that it was an agreed part
+of the pre-action process in which that party was obliged to participate, and that the other party was entitled to its costs thrown
+away by the late cancellation (albeit on a standard, not indemnity, basis). In Gresport Finance Ltd v Battaglia [2015] EWHC
+2709 (Ch) the court found that failure to attend a mediation, having agreed to do so, may be sufficient conduct, of itself, for the
+court to reject an application where that party is asking the court for relief on the ground that it is just to make the order sought.
+In Rolf v De Guerin [2011] EWCA Civ 78 Rix LJ reviewed the authorities (at [42] and [47]) before opining that in this small
+building dispute, on the facts, negotiation and/or mediation would have had reasonable prospects of success. He concluded that:
+“The spurned offers to enter into settlement negotiations or mediation were unreasonable and ought to bear
+materially on the outcome of the court’s discretion (on the question of costs).”
+Rix LJ noted that the party refusing negotiation/mediation wanted his day in court and that such a wish had been cited as a
+reason why the courts have been unwilling to compel parties to mediate rather than litigate. To that he said that did not seem
+to him to be an adequate response to a proper judicial concern that parties should respond reasonably to offers to mediate or
+settle and that their conduct in this respect can be taken into account in awarding costs. See also Seef v Ho [2011] EWCA Civ
+186 and Southern Counties Fresh Foods Ltd, Re [2011] EWHC 1370 (Ch); (2011) 161 N.L.J. 882 for further examples of a
+refusal of mediation influencing the ultimate costs order.
+The issue for Mr Recorder Furst QC in PGF II SA v OMFS Co [2012] EWHC 83 (TCC) was whether a failure to respond to
+an offer to mediate amounted to an unreasonable refusal that should sound in costs. Having considered the factors set out in
+Halsey he decided that it did. In particular he found that that there were reasonable prospects that a mediation would have been
+successful and that the parties, being well-advised commercial parties, with the benefit of lawyers, would have been able to
+reach an accommodation ([42]). The absence of expert evidence was cited as justification for a failure to mediate and to this
+he responded:
+“Experience suggests that many disputes, …are resolved before all material necessary for a trial is available.
+Either parties know or are prepared to assume that certain facts will be established …. The rationale behind the
+Halsey decision is the saving of costs and this is achieved (or at least attempted) by the parties being prepared
+to compromise without necessarily having as complete a picture of the other parties’ case as would be available
+at trial” ([45]).
+The court also made it clear that a party should put reasons for refusing mediation in writing at the time adding:
+“… the court should be wary of arguments only raised in retrospect as why a party refused to mediate or as to
+why it cannot be demonstrated that a mediation would have had a reasonable prospect of success” ([44]).
+
+3. - ADR and Costs, UKBC-WHITEBK 549319338 (2025)
+© 2025 Thomson Reuters.
+8
+This decision was subsequently upheld by the Court of Appeal (PGF II SA v OMFS Co [2013] EWCA Civ 1288). Briggs LJ
+found that silence in the face of an invitation to participate in ADR was, as a general rule, unreasonable and, as such, should
+be visited by a costs sanction. He went on to endorse the ADR Handbook that Jackson LJ had called for in his Costs Review.
+He added that this case sends out an important message to civil litigants, requiring them to engage with a serious invitation to
+participate in ADR, even if they have reasons which might justify a refusal, or the undertaking of some other form of ADR,
+or ADR at some other time in the litigation. He concluded that:
+“The court’s task in encouraging the more proportionate conduct of civil litigation is so important in current
+economic circumstances that it is appropriate to emphasise that message by a sanction which, even if a little more
+vigorous than I would have preferred, nonetheless operates pour encourager les autres.”
+See also Northamber Plc v Genee World Ltd [2024] EWCA Civ 428 where a case management order required the parties to
+consider settling by alternative dispute resolution and provide written reasons for rejecting any ADR proposal. An offer to
+mediate was met with silence. No written reasons were given. The court imposed a proportionate costs penalty (at para.107)
+and also opined that there was no obligation on a party offering ADR to chase the other party for a response (at para.105)
+In Thakkar v Patel [2017] EWCA Civ 117 the Court of Appeal developed PGF. Here the defendants did not ignore or refuse
+an offer to mediate, “but they dragged their feet and delayed until eventually the claimants lost confidence in the whole ADR
+process”. Jackson LJ stated:
+“The message which the court sends out in this case is that in a case where bilateral negotiations fail but mediation
+is obviously appropriate, it behoves both parties to get on with it. If one party frustrates the process by delaying
+and dragging its feet for no good reason, that will merit a costs sanction.”
+The court enumerated the factors that suggested there were good prospects of a successful mediation in this case.
+It is not, however, the case that silence in response to an offer to mediate will always attract a costs sanction: see R. (Crawford)
+v Newcastle Upon Tyne University [2014] EWHC 1197 (Admin) and AL v A [2021] EWHC 1761 (QB) at [43], where Robin
+Knowles J noted a proposal to mediate an interlocutory dispute had met with silence, did not impose a penalty but added “I
+trust this will not happen again”. See also Jones v Tracey [2023] EWHC 2256 (Ch) at [27]. Also, a party that refuses to mediate
+but then changes its mind may escape a costs sanction. It is “not to be fixed with a once stated but changed intention in relation
+to mediation”: Murray v Bernard [2015] EWHC 2395 (Ch); [2015] 5 Costs L.O. 567.
+The Court of Appeal in PGF II SA also made it clear that a party should put reasons for refusing mediation in writing at the
+time and endorsed the view of the court below:
+“… the court should be wary of arguments only raised in retrospect as why a party refused to mediate or as to
+why it cannot be demonstrated that a mediation would have had a reasonable prospect of success” (Briggs LJ,
+paras 33–40).
+When considering the issue of costs sanctions in relation to mediation it should be borne in mind that senior members of the
+judiciary frequently draw attention to the potential of mediation, particularly where costs are out of all proportion to what is
+at stake. See for example the observations by Ward LJ:
+“If the claimants are right in their assessment of their costs, then, even without a success fee, the costs incurred
+by them exceed the sum over which battle has been joined. The great British public must think that something
+has gone wrong somewhere if litigation is conducted in that way. I share that sense of horror. One answer has to
+be to engage in mediation constructively and at the very earliest stage” (Shovelar v Lane [2011] EWCA Civ 802;
+[2012] 1 W.L.R. 637; [2011] 4 All E.R. 669).
+“As I observed at the outset of this judgment, the costs are out of all proportion to what is at stake, particularly
+from (the defendant’s) perspective. The legal process appears to have caused the parties to become entrenched in
+their positions rather than seeking common ground. I suspect that the costs will themselves quickly have become
+an obstacle to settlement ... [I]n future disputes of this nature the possibility of mediation should be explored as
+
+3. - ADR and Costs, UKBC-WHITEBK 549319338 (2025)
+© 2025 Thomson Reuters.
+9
+soon as is practicable” (Samuel Smith Old Brewery (Tadcaster) v Lee (t/a Cropton Brewery) [2011] EWHC 1879
+(Ch); [2012] F.S.R. 7; [2012] Bus. L.R. D97).
+See also Page v Hewetts Solicitors [2013] EWHC 2845 (Ch); [2014] W.T.L.R. 479 (at [61]), Grace v Black Horse Ltd [2014]
+EWCA Civ 1413; [2015] 3 All E.R. 223; [2015] 2 All E.R. (Comm) 465 (at [54]) and Jones v Tracey [2023] EWHC 2256
+(Ch) (at [27]).
+In Garritt-Critchley v Ronnan [2014] EWHC 1774 (Ch); [2015] 3 Costs L.R. 453 HHJ Waksman QC sitting as a Judge of
+the High Court examined and dismissed a series of arguments that a refusal of mediation had been reasonable and awarded
+indemnity costs by way of sanction. A costs sanction for unreasonable refusal to mediate was also imposed in Lakehouse
+Contracts Ltd v UPR Services Ltd [2014] EWHC 1223 (Ch). In Northrop Grumman Mission Systems Europe Ltd v BAE Systems
+(Al Diriyah C4I) Ltd [2014] EWHC 3148 (TCC); [2015] 3 All E.R. 782 Ramsey J decided that an unreasonable refusal to
+mediate should not result in a costs sanction because of other relevant conduct by the refusing party. There was a similar result
+in Courtwell Properties Ltd v Greencore PF (UK) Ltd [2014] EWHC 184 (TCC); [2014] 2 Costs L.O. 289; [2014] C.I.L.L.
+3481 and in Richards v Speechly Bircham LLP [2022] EWHC 1512 (Comm), but contrast these cases with Lakehouse Contracts
+Ltd v UPR Services Ltd [2014] EWHC 1223 (Ch) where again there were conduct issues on both sides. In Lynn v Borneos LLP
+(t/a Borneo Linnels) [2014] 1 WLUK 783, 30 January 2014, unrep. HHJ Cooke found that there was an unreasonable refusal
+to mediate notwithstanding that the action was fiercely contested and that it was unlikely that a mediation would have resulted
+in settlement. The latter factor was taken into account in exercising discretion about the level of the sanction which, in the
+circumstances, was to deny the successful party 40% of its costs.
+Similarly, in Laporte v Commissioner of Police of the Metropolis [2015] EWHC 371 (QB); [2015] 3 Costs L.R. 471 the
+defendant, who was successful on every substantive issue, was awarded only two thirds of his costs. This was the consequence
+of the court’s finding that the defendant had failed, without adequate justification, to fully and adequately engage in the ADR
+process, notwithstanding that the outcome of such process was not certain.
+In Rana v Tears of Sutton Bridge [2015] EWHC 2597 (QB) the court found that the defendant had, in all the circumstances,
+unreasonably failed to engage with ADR. His Honour Judge McKenna added:
+“I am not impressed by their arguments that simply because liability was still in issue and because there was not
+sufficient information as to the quantification of the loss of profits claim, still less that disclosure had not taken
+place, an attempt at alternative dispute resolution should not have taken place.”
+In OMV Petrom SA v Glencore International AG [2017] EWCA Civ 195; [2017] 1 W.L.R. 3465; [2018] 1 All E.R. 703 Vos
+LJ said, at para.41, that a:
+“... blank refusal to engage in any negotiating or mediation process, ... to seek to frustrate a claimant’s attempts
+to reach a compromise solution should be marked by the use of the court’s powers to discourage such conduct.”
+In EAXB v University Hospitals of Leicester NHS Trust (unrep.) the court considered the conduct of a party during
+a joint settlement meeting. The defendant instigated the meeting but then took the position of making no offers. The
+claimant successfully argued that such an approach was entirely inappropriate and this was one of the reasons why
+the claimant secured indemnity costs (See https://www.civillitigationbrief.com/2020/06/03/indemnity-costs-ordered-where-
+defendant-asked-for-jsm-but-made-no-offer-a-waste-of-time-and-money).
+In Webster v WPP Group (UK) Ltd [2021] EWHC 2153 (Comm) the court criticised a party’s conduct in the lead-up to a
+mediation and reflected this in an indemnity costs order.
+Disputes About Costs
+14-16
+
+3. - ADR and Costs, UKBC-WHITEBK 549319338 (2025)
+© 2025 Thomson Reuters.
+10
+ADR is as relevant to disputes about costs as it is to all other types of litigation. This proposition is reinforced by the recent
+cases of Hadley v Przybylo [2023] EWHC 1392 (KB) and Churchill v Merthyr Tydfil CBC [2023] EWCA Civ 1416, in addition
+to those mentioned below.
+In particular an unreasonable refusal to mediate a costs dispute may, and in a number of cases has, resulted in a costs sanction.
+In Lakehouse Contracts Ltd v UPR Services Ltd [2014] EWHC 1223 (Ch) a failure to mediate was taken into account in dealing
+with the costs of a winding-up petition. In Morris v The County Court, 2 February 2015, unrep. (Kingston upon Hull) the
+defendant paying party received two CPR r.47.20 offers prior to a detailed assessment but did not respond to them. The District
+Judge found that the defendant failed to make any offer and/or to actively consider dispute resolution and concluded that this
+was a conduct issue. He said, following Halsey v Milton Keynes General NHS Trust [2004] EWCA Civ 576; [2004] 1 W.L.R.
+3002 and PGF II SA v OMFS Co 1 Ltd [2013] EWCA Civ 1288; [2014] 1 W.L.R. 1386, that the parties were expected to engage
+in alternative dispute resolution. He considered it likely that further mediation could have achieved a far speedier conclusion
+and at less cost and concluded that the defendant’s conduct was also conduct contrary to the overriding objective.
+See also Reid v Buckinghamshire Healthcare NHS Trust [2015] 10 WLUK 752, 28 October 2015, unrep., and Bristow v Princess
+Alexandra Hospital NHS Trust [2015] 11 WLUK 67, 4 November 2015, unrep.
+The fact that disputes about costs are being mediated is demonstrated by Sugar Hut Group Ltd v A J Insurance Service [2016]
+EWCA Civ 46; [2016] C.P. Rep. 19: the Court of Appeal judgment noted that Property Damage costs in the matter were agreed
+at a mediation.
+In Ineos Upstream Ltd v Boyd [2023] EWHC 1756 (Ch) the party refusing to mediate a costs dispute was not penalised because
+of the circumstances in which the offer was made.
+The significance of Hadley v Przybylo [2023] EWHC 1392 (KB)
+14-17
+As mentioned above, Master Victoria McCloud ordered the parties in a personal injury claim to engage in ADR regarding
+a complex disputed costs budget (para.14-10). This bold order was made before Churchill was decided. As reported by the
+Court of Appeal (when there was an appeal on another point in Hadley) “The Master ordered that the parties engage in ADR
+in respect of the future costs. They did so successfully, and leading counsel on both sides stressed the value and economy
+of that exercise.” ([2024] EWCA Civ 250 at [9] (Coulson LJ)).
+Worcester v Hopley [2024] EWHC 2181 (KB) and Jenkins v Thurrock Council [2024] EWHC 2248 give rise to the prospect
+that parties might agree, or be encouraged or ordered, to use an ADR process to explore agreement of costs budgets
+and or directions, rather than wait for a lengthy period until directions and decisions can be given at a Costs and Case
+Management Conference. In both cases the focus was on the appropriate order for costs where the claimants’ costs budgets
+were significantly reduced at Costs Management Hearings following Case Management Hearings. The purpose in arranging
+these hearings separately was to facilitate further discussion and negotiation about budgets. The consequence of the parties
+not doing this to the court’s satisfaction was that the claimant suffered adverse costs orders.
+End of Document
+© 2025 SWEET & MAXWELL

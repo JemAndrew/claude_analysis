@@ -1,0 +1,94 @@
+Section A. - Overview, UKBC-REDFERN 530638615 (2025)
+© 2025 Thomson Reuters.
+1
+Section A. - Overview
+Redfern and Hunter on International Arbitration 7th Ed.
+Mainwork
+Chapter 3 - Applicable Laws
+Section A. - Overview
+(a) Introduction
+3. 01
+Many disputes that are referred to arbitration are determined by arbitral tribunals with no more than a passing reference to the
+law. They turn on matters of fact: what was said and what was not said; what was promised and what was not promised; what
+was done and what was not done.
+3. 02
+It would be wrong to deduce from this, however, that international arbitration exists in a legal vacuum. Billions of contracts
+—most of them made orally, rather than in writing—are made every day throughout the world. They may be as simple as the
+purchase of a bus ticket or the hire of a taxi, or they may be as complex as the purchase of a company with financing. Most
+are made, performed—and forgotten. Yet law governs each of these situations. The apparent simplicity of the purchase of a bus
+ticket or the hire of a taxi is deceptive. They are transactions that involve a contractual relationship and such relationships are
+underpinned by complex rules of law. These rules may not be referred to expressly, but they exist nonetheless:
+It is often said that the parties to a contract make their own law, and it is, of course, true that, subject to the rules
+of public policy and ordre public, the parties are free to agree upon such terms as they may choose. Nevertheless,
+agreements that are intended to have a legal operation (as opposed to a merely social operation) create legal rights
+and duties, and legal rights and duties cannot exist in a vacuum but must have a place within a legal system
+which is available for dealing with such questions as the validity, application and interpretation of contracts, and,
+generally, for supplementing their express provisions. 1
+3. 03
+Like a contract, an arbitration does not exist in a legal vacuum. It is regulated, first, by any specific rules of procedure that have
+been agreed or adopted by the parties and the arbitral tribunal; secondly, it is regulated by the law of the place of arbitration. It
+is important to recognise at the outset (as even distinguished judges and commentators sometimes fail to do)—that this dualism
+exists.
+3. 04
+For the most part, modern laws of arbitration are content to leave parties and arbitrators free to decide upon their own specific
+rules of procedure, so long as the parties are treated equally. Under these modern laws, it is accepted that the courts of law should
+be slow to intervene in an arbitration, if they intervene at all. 2  Nevertheless, those rules need the sanction of law if they are to
+be effective and, in this context, the relevant law is the law of the place or seat of the arbitration. This is referred to as the lex
+arbitri. This is an important—and frequently misunderstood—topic, to which it will be necessary to return later in this chapter.
+(b) A complex interaction of laws
+3. 05
+
+Section A. - Overview, UKBC-REDFERN 530638615 (2025)
+© 2025 Thomson Reuters.
+2
+International arbitration, unlike its domestic counterpart, usually involves more than one system of law or of legal rules. Indeed,
+it is possible, without undue sophistication, to identify at least five different systems of law that, in practice, may have a bearing
+on an international arbitration:
+ 
+i.the law governing the arbitration agreement and the validity, scope, and enforcement of that agreement;
+ 
+ii.the law governing the existence and the proceedings of the arbitral tribunal (the lex arbitri or, as it is sometimes called,
+the curial law);
+ 
+iii.the law, or the relevant legal rules, governing the substantive issues in dispute (generally described as the ‘applicable
+law’, the ‘governing law’, the substantive law’, or ‘the proper law of the contract’);
+ 
+iv.other applicable rules and non-binding guidelines and recommendations; 3  and
+ 
+v.the law governing recognition and enforcement of the award (which may, in practice, prove to be not one law, but two
+or more systems of law, if recognition and enforcement is sought in more than one country in which the losing party has,
+or is thought to have, assets). 4
+3. 06
+This chapter deals with: the law governing the agreement to arbitrate; the law governing the arbitration itself (the lex arbitri); the
+law governing the substantive matters in dispute (the substantive law); the law or rules governing conflicts of law; and certain
+non-national guidelines and rules that are increasingly relied upon in international arbitration. Another relevant law, the law
+governing the parties’ capacity to enter into an arbitration agreement has been dealt with in Chapter 2, and issues relating to the
+laws governing the arbitral award (including challenge, recognition, and enforcement) are dealt with in Chapters 10 and 11.
+Footnotes
+1
+McNair, ‘The general principles of law recognised by civilised nations’ (1957) 33 BYIL 1, at 7.
+2
+The lead is given by the UNCITRAL Model Law on International Commercial Arbitration Model Law on International
+Commercial Arbitration 1985 (as amended in 2006) (the Model Law), which states categorically that, ‘[i]n matters
+governed by this Law, no court shall intervene except where so provided in this Law’. See Model Law, Art. 5. This
+judicial deference to pending arbitrations is generally widely applied in practice. Even states that have not adopted
+the Model Law per se have thought it appropriate to make a similar statement. For instance, Swiss law states that its
+courts will ‘decline jurisdiction’ where there is an agreement to arbitrate, except in limited circumstances; see Swiss
+Private International Law Act 1987 (as amended in 2021) (Swiss PIL), s. 7. The Swedish Arbitration Act 2019 (Swedish
+Arbitration Act) contains a similar provision, at s. 4, although ss. 5 and 6 contain exceptions to this rule. The French
+Code of Civil Procedure provides for the same at Art. 1458 and the Spanish Arbitration Act 2003, which is based on
+the Model Law with significant changes, states unequivocally at Art. 7 that, ‘[i]n matters governed by this Act, no court
+shall intervene except where so provided in this Act’. Similarly, while the primary federal statute governing arbitration
+in the United States, the Federal Arbitration Act of 1925 (FAA), pre-dates and is not modelled on the Model Law, US
+courts have interpreted the FAA’s provisions in a manner that is consistent with the Model Law. Thus, in Stanton v Paine
+Webber Jackson & Curtis, Inc., 685 F.Supp. 1241, 1242 (S.D. Fla. 1988), the US District Court for the Southern District
+of Florida held that ‘[n]othing in the [FAA] contemplates interference by the court in an ongoing arbitration proceeding’.
+3
+Sometimes referred to as the procedural ‘soft law’ of international arbitration: see Park, ‘The procedural soft law of
+international arbitration: Nongovernmental instruments’, in Mistelis and Lew (eds) Pervasive Problems in International
+Arbitration (Kluwer Law International, 2006), pp. 141–154.
+4
+See Chapter 11.
+End of Document
+© NIGEL BLACKABY KC, CONSTANTINE PARTASIDES
+KC, ALAN REDFERN

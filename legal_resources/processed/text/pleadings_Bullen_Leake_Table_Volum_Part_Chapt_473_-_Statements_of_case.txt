@@ -1,0 +1,66 @@
+Statements of case, UKBC-BULLENL 459373406 (2022)
+© 2025 Thomson Reuters.
+1
+Statements of case
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 2
+Part Y - Professional Negligence
+Chapter 85 - Professional Negligence
+Statements of case
+85-09
+It is not sufficient to assert that a duty of care was owed. The basis for the existence of a duty of care must be pleaded (e.g. the
+existence of a retainer or facts showing an assumption of responsibility towards the claimant). It will not always be appropriate
+to allege parallel duties in tort and contract. Where particular facts are relied upon as relevant to the standard of care, these
+should also be pleaded, for example, possession of a particular specialist skill or the fact that the circumstances were such that
+the consequences of a breach would be particularly serious:
+“If the skill that is warranted is a specialist skill, the client is entitled to the standard of work reasonably to be
+expected of a specialist professional possessed of that skill … The standard of care is further to be measured by
+reference to the purpose for which the client required the advice. The magnitude of the loss that the client might
+suffer if the advice given turned out to be wrong is a material factor in setting the standard of professional care
+to be expected”. 29
+Proper particulars need to be given of breach, setting out the respects in which it is said the defendant has fallen short of the
+standard to be expected of a reasonably competent professional in the relevant field of expertise. The onus of proving causation
+is on the claimant. 30  Causation of loss often involves more complex issues in a professional negligence case than in an ordinary
+negligence claim, making it generally necessary to set out the material facts relied upon as connecting the negligence to the
+damage suffered.
+It has been suggested that before settling a professional negligence claim a pleader must have possession of an expert’s written
+opinion supporting the allegation of negligence to be made, 31  but there is no immutable rule of practice to this effect and it
+will not always be necessary. 32  Nevertheless, it will frequently be advisable to seek expert input at an early stage.
+85-10
+For obvious reasons, it is relatively rare for a professional to allege that their client’s damages stand to be reduced under the
+Law Reform (Contributory Negligence) Act 1945. However, there are cases where it will be appropriate to plead contributory
+negligence, for example in a negligent valuation case where the client is an institutional lender which has breached its own
+lending procedures in accepting the property as security. Contributory negligence is available as a plea where a professional’s
+liability in contract is the same as any liability which would have arisen in tort, whether or not the claim is in fact brought in
+tort. 33  It is not available where the duty relied upon arises solely from the contract.
+In a case involving several professionals, for example, a failed tax avoidance scheme, which would typically involve advice
+from both solicitors and accountants and perhaps also counsel, the defendants need to consider whether to bring claims for
+contribution inter se, and if so, whether to do so by way of Pt 20 notices within the existing proceedings or by a separate claim
+for contribution.
+Historically some professionals enjoyed immunity by virtue of their status, but this has now generally been eradicated: in the
+light of the House of Lords’ ruling in Arthur JS Hall & Co v Simons, 34  advocates no longer enjoy immunity from suit for
+
+Statements of case, UKBC-BULLENL 459373406 (2022)
+© 2025 Thomson Reuters.
+2
+negligence in the conduct of civil proceedings or criminal actions, and the immunity has also been removed in relation to expert
+witnesses. 35  Judicial immunity remains unaffected.
+Footnotes
+29
+Nederlandse Reassurantie Groep Holding NV v Bacon & Woodrow [1997] L.R.L.R. 678.
+30
+Wilsher v Essex Area Health Authority [1988] A.C. 1074.
+31
+Pantelli Associates Ltd v Corporate City Developments Number Two Ltd [2010] EWHC 3189 (TCC); [2011] P.N.L.R. 12.
+32
+ACD (Landscape Architects) Ltd v Overall [2012] EWHC 100 (TCC); [2012] P.N.L.R. 19.
+33
+Forsikringsaktieselskapet Vesta v Butcher [1989] A.C. 852.
+34
+Arthur JS Hall & Co v Simons [2002] 1 A.C. 615. Note the immunity remains for counsel to an inquiry constituted
+under the Inquiries Act 2005 (see s.37).
+35
+See Jones v Kaney [2011] UKSC 13; [2011] 2 A.C. 398.
+End of Document
+© 2025 SWEET & MAXWELL

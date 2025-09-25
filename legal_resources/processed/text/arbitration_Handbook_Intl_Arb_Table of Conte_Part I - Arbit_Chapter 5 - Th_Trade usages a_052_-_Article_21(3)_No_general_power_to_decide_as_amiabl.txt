@@ -1,0 +1,83 @@
+Article 21(3): No general power to decide as amiable..., UKBC-ICCARBN...
+© 2025 Thomson Reuters.
+1
+Article 21(3): No general power to decide as amiable compositeur
+or ex aequo et bono
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+Trade usages and burden of proof
+Article 21(3): No general power to decide as amiable compositeur or ex aequo et bono
+“The arbitral tribunal shall assume the powers of an amiable compositeur or decide ex aequo et bono only if the parties
+have agreed to give it such powers.”
+21-72
+Article 21(3) is only applicable if the parties have agreed that the Tribunal shall have the power to act as amiable compositeur
+or to decide ex aequo et bono. Otherwise, the Tribunal is generally required to apply the applicable rule of law. If the parties
+have conferred upon the Tribunal the power to act as amiable compositeur or to decide ex aequo et bono, such power shall be
+mentioned in the Terms of Reference pursuant to art.23(1)g.
+21-73
+The fact that these terms have been left in French and Latin is an indication of the uncertainty of their meaning in English. The
+corresponding provision of the UNCITRAL Model Law is art.28(3). The UNCITRAL Commentary on that provision shows the
+uncertainty that is attached to the terms as also used in art.21(3). 180  The terms which are used in French law, are given roughly
+the same meaning in practice 181  and amiable composition is defined as “the arbitrators’ power not to restrict themselves to
+applying rules of law, thereby allowing them not only to ignore rules of law altogether, but also to depart from them to the
+extent that their conception of equity requires”. 182
+21-74
+The terms have been used in French law and the French courts have set certain requirements on their use. For example, if a
+Tribunal is deciding a case as amiable compositeur, it is required to explain why the solution proposed is, in its eyes, just. As
+noted by the Paris Court of Appeal in the Fotovista case, an arbitrator amiable compositeur deciding according to French law
+must explain to what extent his decision is rendered in conformity with equity, failing which the award will be annulled. 183
+21-75
+Therefore, if the parties agree that the Tribunal may act as amiable compositeur or decide ex aequo et bono they are giving
+the Tribunal the latitude to depart from the strict requirements of applicable law. Even when deciding as amiable compositeur
+or ex aequo et bono the Tribunal may be required to first determine the applicable law if the parties have not chosen a given
+law. 184  The Tribunal cannot act as amiable compositeur or ex aequo et bono unless the Tribunal is permitted to do so under
+the applicable law. 185
+Footnotes
+180
+“7. Arbitration rules often provide that parties may authorise the arbitral tribunal to decide as amiable compositeur
+provided, however, that such arbitration is permitted by the law applicable to the arbitral procedure. Article 28(3) grants
+
+Article 21(3): No general power to decide as amiable..., UKBC-ICCARBN...
+© 2025 Thomson Reuters.
+2
+this permission and, thus, gives effect to an express authorization by the parties that the arbitral tribunal shall decide ex
+aequo et bono, as this arbitration is labelled in some legal systems, or, as labelled in others, as amiable compositeur. 8.
+Although this type of arbitration is not known in all legal systems, its inclusion in the Model Law seems appropriate
+for the following reasons. It is sound policy to accommodate features and practices of arbitration even if familiar
+only to certain legal systems. This is reasonable not merely because it would be contrary to the purpose of the Model
+Law to disregard or even prevent established practices but because it is in harmony with the principle of reducing the
+importance of the place of arbitration by recognizing types of arbitration not normally used or known at that place.
+Finally, such recognition does not entail a risk for any unwary party unfamiliar with this type of arbitration since an
+express authorization by the parties is required. 9. No attempt is made in the UNCITRAL Model Law to define this
+type of arbitration which comes in various and often vague forms. It is submitted, however, that the parties may in their
+authorization provide some certainty, to the extent desired by them, either by referring to the kind of amiable composition
+developed in a particular legal system or by laying down the rules or guidelines and, for example, request a fair and
+equitable solution within the limits of the international public policy of their two States. (A/CN.9/264 English page 63).”
+181
+For a general discussion, see for example, Kiffer, “Amiable Composition and ICC Arbitration” including extracts of
+ICC Arbitral Awards relating to Amiable Composition, [2007] ICC ICArb. Bull. Vol.18 No.1, p.51; Derains & Schwartz,
+op. cit., p.244; Craig, Park & Paulsson, op. cit., p.112; Poudret & Besson, op. cit., para.7.5, p.616; Lalive, Poudret &
+Reymond, Le droit de l’arbitrage interne et international en Suisse (Payot Lausanne, 1989), p.400. More generally, see
+ICC Task Force on amiable composition and ex aequo et bono which was created in September 2005 and was mandated
+to identify the essential features of amiable composition and ex aequo et bono and also to study the role of the arbitrators
+in this respect. A Guideline was published by the ICC Commission in 2008.
+182
+Fouchard, Gaillard & Goldman, op. cit., para.1502, pp.836–837; El Ahdab & Mainguy, op. cit., para.908, p.592 and
+para.1438, p.841.
+183
+Paris, 15 January 2004, Société Centrale Fotovista v Vanoverbeke et autres, (2004) Rev. Arb. No.4 p.907, see
+also Cass Civ 1e, 28 November 2007, M. Yann X et al v M. Jacques y et al, 06–16.835, case No.1363 at http://
+www.courdecassation.fr [accessed 29 October 2021] and Cass. Civ le Arret No.98, 1 February 2012 (11–11, 084).
+184
+Bühler & Jarvin, “L’amiable compositeur: Peut-il laisser la question du droit applicable au fond indéterminée?” in
+Mélanges dédiés à François Knoepfler, Droit international privé, droit de l’arbitrage et droit comparé (Helbing &
+Lichtenhahn, 2005), p.325.
+185
+International Chamber of the Paris Court of Appeal, 3 December 2020. (“78…the Tribunal deliberately and intentionally
+based itself on equity to establish the amount of the variable remuneration to which it had previously held that Company
+Y was entitled and in doing so did not respect its mission.” (authors’ translation)) (https://www.cours-appel.justice.fr/
+paris/decisions-ccip-ca-iccp-ca-judgment [accessed 17 August 2021]).
+End of Document
+© 2025 SWEET & MAXWELL

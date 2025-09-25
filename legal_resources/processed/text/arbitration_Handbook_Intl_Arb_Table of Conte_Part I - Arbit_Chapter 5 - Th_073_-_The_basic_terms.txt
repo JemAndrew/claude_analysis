@@ -1,0 +1,47 @@
+The basic terms, UKBC-ICCARBN 474406959 (2022)
+© 2025 Thomson Reuters.
+1
+The basic terms
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+The basic terms
+22-72
+Article 22(4) must be interpreted based on the words used and the other provisions of the Rules. Article 22(4) requires that the
+Tribunal act fairly and impartially and provide each party with a “reasonable opportunity to present its case”. This provision
+does not require the Tribunal to treat the parties in exactly the same fashion. Nor does it require the Tribunal to provide the
+parties with every opportunity to present their case. That would be inconsistent with art.22(1) and the Tribunal’s requirement
+to conduct the proceedings “in an expeditious and cost effective manner, having regard to the complexity and value of the
+dispute”. Under the Rules, the Tribunal is required simply to ensure that a party has a “reasonable opportunity” to present its
+case, leaving thus the requisite discretion to the Tribunal.
+22-73
+What constitutes a reasonable opportunity to present a case will depend on the nature of the case advanced by both parties and
+the nature of the procedure agreed upon by the parties or adopted by the Tribunal, and the stage of the proceedings. Therefore,
+although the Tribunal is given broad powers under art.25 to establish the facts of the case by “all appropriate means”, one of
+the duties of the Tribunal is to balance the procedural requirements of the parties to ensure that, as the proceedings advance,
+they are provided with a reasonable opportunity to present their case. 256
+22-74
+The terms used in art.22(4) do not go as far as the UNCITRAL Model Law. Article 18 of that Law states that “[t]he parties
+shall be treated with equality and each party shall be given a full opportunity of presenting his case”. 257  However, it is less
+certain that this difference in terminology has resulted in much difference in approach as to what does or does not constitute
+a breach of due process.
+Footnotes
+256
+See below, para.23-93 to 23-95. See also Born, International Arbitration: Law and Practice (Kluwer Law International,
+2015) p.159; Born, International Commercial Arbitration (Kluwer Law International, 2021) p.2481 and following;
+Waincymer op. cit., pp.80–81.
+257
+Section 24(b) of the Singapore International Arbitration Act (Cap 143A) (b), which is based on UNCITRAL Model
+Law, provides one step further besides the grounds for annulment of awards. Under that provision, the final award can
+be set aside if “a breach of the rules of natural justice occurred in connection with the making of the award by which the
+rights of any party have been prejudiced”. See Fairmount Development Pte Ltd v Soh Beng Tee & Co Pte Ltd [2006]
+SGHC 189 of 17 October 2006. The Court of Appeals reversed and determined that arbitrator’s decision to rule on the
+issue related to timing without having been raised by the parties and thus without giving them an opportunity to be
+heard was not a breach of natural justice. The issue of timing was not critical to the final award—Soh Beng Tee & Co
+Pte v Fairmont Development Pre Ltd [2007] SGCA 28. For another example where a Singaporean court refused to set
+aside an award based on the breach of natural justice, see Government of the Republic of the Philippines v Philippine
+International Air Terminals Co Inc [2006] SGHC 206 of 17 November 2006; Dongwoo Mann+Hummel Co Ltd v Mann
++Hummel GmbH [2008] SGHC 67 of 8 May 2008.
+End of Document
+© 2025 SWEET & MAXWELL

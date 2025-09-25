@@ -1,0 +1,34 @@
+Defences of the guarantor, UKBC-BULLENL 459372441 (2022)
+© 2025 Thomson Reuters.
+1
+Defences of the guarantor
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part F - Business Law
+Chapter 27 - Surety
+Defences of the guarantor
+27-12
+In general, a guarantor can raise against the creditor any defence which would have been available to the principal debtor
+including a set-off of damages for breach of the contract guaranteed. A discharge of the principal debtor’s obligations either by
+agreement or by operation of law will relieve the guarantor (though it may not relieve an indemnitor in the same situation).
+A surety who has been induced to execute a guarantee or indemnity by the undue influence or misrepresentation of the
+principal debtor may be entitled to set it aside if the creditor had actual or constructive notice of the undue influence or
+misrepresentation. 17
+As a matter of general law, a variation of the principal contract will operate to discharge the guarantor unless it is so insubstantial
+that it could not prejudice the guarantor but, where the variation involves the giving of time to the debtor, then it is a very old
+rule that such variation (whether prejudicial or not) automatically discharges a surety who has not assented to it. 18  It is open
+to the parties to contract out of this rule and most contracts of guarantee (especially guarantees of liabilities to institutional
+lenders) will provide that a variation of the principal contract or the giving of time to the debtor does not release the guarantor
+from his obligations.
+It should be noted that the cancellation by the consumer of an agreement under the Cancellation of Contracts made in a
+Consumer’s Home or Place of Work etc Regulations 2008 (SI 2008/1816) now under the Consumer Contracts (Information,
+Cancellation and Additional Charges) Regulations 2013 (SI 2013/3134) not only operates automatically to cancel any credit
+agreement linked to the agreement but also cancels any real or personal security.
+Footnotes
+17
+Royal Bank of Scotland v Etridge (No.2) [2001] UKHL 44; [2002] 2 A.C. 773.
+18
+Rees v Berrington (1795) 2 Ves. 540.
+End of Document
+© 2025 SWEET & MAXWELL

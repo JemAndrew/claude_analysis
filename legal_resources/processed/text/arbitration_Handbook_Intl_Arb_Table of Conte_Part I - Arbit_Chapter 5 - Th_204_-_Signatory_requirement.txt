@@ -1,0 +1,61 @@
+Signatory requirement, UKBC-ICCARBN 474406901 (2022)
+© 2025 Thomson Reuters.
+1
+Signatory requirement
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+Signatory requirement
+29-115
+Article 29(5) of the Rules sets a clear and narrow requirement for the Emergency Arbitrator Provisions to be applicable: the
+parties’ covered by the Application must have signed the (ICC) arbitration agreement, upon which the applicant relies in order to
+justify its Application for Emergency Measures. A successor to a party having originally signed the ICC arbitration agreement
+will be bound likewise, provided it can show that it is indeed a successor to the original signatory.
+29-116
+Article 29(5) has a much narrower scope and uses a more stringent test than art.6(3) and (4) of the Rules, which simply requires
+“that the Court is prima facie satisfied that an arbitration agreement under the Rules may exist”, for an ICC arbitration to proceed
+pursuant to art.6(4) first sentence. 615  However, although the President of the ICC Court makes a preliminary determination
+with respect to the scope of jurisdiction, it will be for the Emergency Arbitrator to address the issue substantively in his or her
+Order, insofar as the matter will have been referred to him or her by the President of the ICC Court. 616
+29-117
+In light of the immediate and far-reaching character of the provisional relief, and the harm it could cause to a party, such relief is
+only to be made available against a party that has signed an ICC arbitration agreement. This signature requirement is incumbent
+upon the ICC Court’s President to determine in the first place, 617  and then for the Emergency Arbitrator to confirm in the Order
+as part of his or her jurisdictional analysis. 618  Non-signatories of ICC arbitration agreements are therefore protected against
+the risk of becoming subject to an Order from an ICC Emergency Arbitrator Proceedings in the first place.
+29-118
+As noted above, the test in art.29(5) is quite different from the test in art.6(4) of the Rules. If it would have been enough for
+the ICC Court’s President to carry out a prima facie test prior to appointing an Emergency Arbitrator, this might have put the
+ICC Court in a delicate position when having to make the same test once the Request for Arbitration is filed. The Task Force
+wanted to avoid such a situation, and thereby the risk of conflicting decisions. Such a risk would have been real, since, under
+the Emergency Arbitrator Provisions, the President does not hear the responding party, whereas the ICC Court will normally
+be confronted with “one or more pleas concerning the existence, validity or scope of the arbitration agreement”, art.6(3) of
+the Rules. 619
+29-119
+The issue of non-signatories has arisen in seven of the first 80 Emergency Arbitrator Proceedings. In three cases the President
+decided that the Application for Emergency Measures could not proceed or not proceed against or for one or more parties. In
+at least two cases, the Emergency Arbitrator decided that certain parties were not proper parties to the Emergency Arbitrator
+Proceedings. 620
+Footnotes
+615
+See para.6-35 and following regarding the ICC Court’s prima facie test.
+
+Signatory requirement, UKBC-ICCARBN 474406901 (2022)
+© 2025 Thomson Reuters.
+2
+616
+See Carlevaris & Feris, “Running in the Emergency Arbitration Rules: The First Ten Cases” [2014] ICC ICArb. Bull.
+Vol.25 No.1, p.29, giving an example where the President of the ICC Court determined that the Emergency Arbitrator
+Provisions did not apply to the parent company of the signatory’s successor.
+617
+See para.29-24 and following.
+618
+See para.29-71.
+619
+The situation would be comparable where the respondent does not submit an Answer, and yet the Secretary General
+sees the need to refer the matter to the ICC Court for a decision pursuant to art.6(4).
+620
+Commission Report on Emergency Arbitration, para.88(d).
+End of Document
+© 2025 SWEET & MAXWELL

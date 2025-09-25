@@ -1,0 +1,67 @@
+Ex parte orders, UKBC-ICCARBN 474407022 (2022)
+© 2025 Thomson Reuters.
+1
+Ex parte orders
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+Ex parte orders
+28-9
+There is an issue as to whether a Tribunal has the right to grant interim measures or conservatory relief on an ex parte basis
+either under the Rules or under applicable law. The most controversial part of the modification to the UNCITRAL Model Law
+related to its provision for ex parte orders and there is a debate as to whether a Tribunal should ever have the right to grant
+such measures without hearing the other party. 464
+28-10
+The Rules do not deal with the issue of whether a Tribunal may issue an ex parte order for conservatory or interim measures
+or whether an Emergency Arbitrator may do so under art.29. The laws of France, Switzerland, England and the US also do
+not deal with the issue expressly.
+28-11
+State courts in most instances do have the possibility of issuing ex parte orders or judgments to deal with particularly urgent
+matters, and do so in support of arbitration, for example. 465  Therefore, there is a real issue as to whether international arbitral
+tribunals should not have the same right at least in theory. A main difference between state courts and Tribunals is that the state
+courts that issue ex parte orders have set procedures for doing so and well settled concepts, such as the requirement of “full and
+fair disclosure” as understood in England for example, that provide the basis for such orders.
+28-12
+For the authors, a Tribunal has the right to act ex parte, although the circumstances in which it should do so are exceptionally
+limited. As regards the power, the issue is one of the interpretation of the relevant arbitration agreement within the context of
+the applicable law. Where an arbitration is expressed in general terms, as the ICC model clause for example, then the Tribunal
+has jurisdiction to decide the dispute between the parties. The issue is then whether the parties could reasonably have viewed
+the granting of ex parte interim measures as being within the scope of that power. For the authors, to paraphrase Lord Hoffman’s
+approach in Fiona Trust, 466  a rational businessman entering into an arbitration agreement would take the view that a Tribunal
+would have the right to deal in any way reasonably necessary to the protection of the parties’ interests pending resolution of
+the dispute. That jurisdiction must include the right to issue an order ex parte in exceptional circumstances where such an order
+is required to ensure that the dispute is properly resolved. For example, if the issue is the protection of a trade secret and one
+party is about to divulge the trade secret, then a Tribunal should have the right to prevent that, if necessary on an ex parte basis.
+Perhaps more frequently, if a party is seeking interim relief, then the Tribunal must have jurisdiction to order parties to maintain
+the status quo pending the hearing on interim relief and in some circumstances that order may have to be issued ex parte. 467
+28-13
+However, the circumstances in which a Tribunal should issue an order ex parte are very rare, as issuing an ex parte order
+involves ignoring a party’s general right to be heard. Moreover the effective duration for which the ex parte order should be in
+force should be such as to permit the opposing party to promptly respond. Any ex parte order should be aimed at preventing
+irremediable damage that is likely to occur during the lapse of time necessary to summon both parties—by telephone or other
+instant communications if need be—so that both parties can present their arguments.
+
+Ex parte orders, UKBC-ICCARBN 474407022 (2022)
+© 2025 Thomson Reuters.
+2
+Footnotes
+464
+Van Houtte, “Ten Reasons Against a Proposal for Ex Parte Interim Measures of Protection in Arbitration; Derains,
+L’arbitre et l’octroi de mesures provisoires ex parte”, Les Cahiers de l’Arbitrage 2003/2 1re partie, p.45; Gaffney,
+“Ex Parte Measures in International Arbitration” (2002) Mealey’s IAR Vol.17 No.11 p.39. Graham “Interim Measures:
+Ongoing Regulation and Practices (A view from the UNCITRAL Arbitration Regime)” in van den Berg (ed), 50 Years
+of the New York Convention: ICCA Congress Series, Vol.14, pp.539–569.
+465
+In ICC Case No.20518, the English court issued a freezing order to block the amount in dispute with respect to an oil
+purchase pending the arbitration. (One of the authors was president in the case.) In LCIA Arbitration No.111926, a New
+York court blocked the proceeds of payment for an oil transfer pending arbitration in London. (One of the authors was
+sole arbitrator in the case.)
+466
+See para.16 of Lord Hoffman’s opinion in Fiona Trust & Holding Corp v Privalov [2007] UKHL 40.
+467
+The 2012 Secretariat’s Guide, para.3-1040 takes the view that there is no place for ex parte interim relief under the Rules
+but go on to say that arbitral tribunals have occasionally issued an order to maintain the status quo pending resolution
+of the matter.
+End of Document
+© 2025 SWEET & MAXWELL

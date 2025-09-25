@@ -1,0 +1,35 @@
+Procedure, UKBC-BULLENL 459371949 (2022)
+© 2025 Thomson Reuters.
+1
+Procedure
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part F - Business Law
+Chapter 24 - Set-off
+Procedure
+24-08
+CPR r.16.6 provides:
+“Where a defendant
+ 
+(a)contends he is entitled to money from the claimant; and
+ 
+(b)relies on this as a defence to the whole or part of the claim,
+the contention may be included in the defence and set off against the claim, whether or not it is also a Part 20
+claim.”
+This rule is permissive in that it allows the defendant to include in his defence a claim to money (whether for specific amounts
+or unspecified amounts) but it does not render it obligatory and a defendant is entitled to pursue his cross-claim in a separate
+action. The rule does not, however, alter the existing substantive law in relation to what is capable of amounting to a set-off.
+There are two areas where it is of practical significance whether a cross-claim can be set off against the claimant’s claim.
+Where the claimant is insolvent and the counterclaim lies outside the categories of set-off recognised by s.324 of the Insolvency
+Act 1986, the claimant will be able to enforce his claim in full, leaving the defendant to enforce his counterclaim as best he
+can by proving in the insolvency of the claimant. Where both claimant and defendant remain solvent, the right to set off the
+counterclaim may be relevant as to costs but in practice the wide judicial discretion as to costs normally ensures that a successful
+defendant is not penalised in costs merely because his counterclaim cannot technically be set off against the claim.
+Secondly, where the claim is admitted and the counterclaim cannot be set off, the claimant may be entitled to summary judgment
+on the claim under CPR Pt 24, without a stay of execution. 17
+Footnotes
+17
+AB Contractors v Flaherty Bros Ltd (1978) 16 B.L.R. 10.
+End of Document
+© 2025 SWEET & MAXWELL

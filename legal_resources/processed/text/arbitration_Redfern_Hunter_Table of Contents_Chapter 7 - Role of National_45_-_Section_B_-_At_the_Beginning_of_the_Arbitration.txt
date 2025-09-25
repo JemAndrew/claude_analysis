@@ -1,0 +1,103 @@
+Section B. - At the Beginning of the Arbitration, UKBC-REDFERN 530638645 (2025)
+© 2025 Thomson Reuters.
+1
+Section B. - At the Beginning of the Arbitration
+Redfern and Hunter on International Arbitration 7th Ed.
+Mainwork
+Chapter 7 - Role of National Courts During the Proceedings
+Section B. - At the Beginning of the Arbitration
+7. 09
+There are at least three situations in which the intervention of the court may be necessary at the beginning of the arbitral process:
+ 
+•the enforcement of the arbitration agreement;
+ 
+•the establishment of the tribunal; and
+ 
+•challenges to jurisdiction.
+(a) The enforcement of the arbitration agreement
+7. 10
+An agreement to arbitrate confers two types of obligations: first, a positive obligation to arbitrate disputes that arise between
+the parties cooperatively and in good faith; and second, a negative obligation to refrain from litigating arbitrable disputes. In
+respect of the former, US courts order recalcitrant parties to arbitration agreements to participate in arbitration proceedings. 17
+As one senior arbitrator has observed, the value of such orders lies in foreclosing the ability of the would-be non-participating
+party to ‘decide for tactical reasons, which may assist in resisting enforcement, to refuse to participate in the arbitration despite
+the arbitration agreement’. 18
+7. 11
+It would no doubt have been possible to provide in the New York Convention for such positive enforcement of an agreement to
+arbitrate. Instead, the Convention relies on the negative obligation. If a national court is seized of an action in respect of a claim
+that the parties have agreed to refer to arbitration, the court should order the matter to go to arbitration, unless it finds that the
+agreement to arbitrate was null and void, inoperative, or incapable of being performed. 19  If a party to an arbitration agreement
+decides to issue proceedings in a court of law, rather than to take the dispute to arbitration, and the respondent acquiesces, then
+the arbitration agreement will be deemed to have been waived and the court action will proceed. However, a respondent that has
+entered into an arbitration agreement will usually wish to have the dispute decided by arbitrators rather than by a national court.
+7. 12
+The principal remedy for breach of the negative obligation is almost universally either a mandatory stay or the dismissal for
+lack of jurisdiction of the litigation brought before the national court in breach of the arbitration agreement.
+7. 13
+In addition, where litigation has been brought or is threatened before the courts of another jurisdiction, in breach of an arbitration
+agreement, that litigation may be suspended or prevented by enforcing the negative obligation through an anti-suit injunction,
+viewed as ‘one of the most controversial and contested remedies in the court’s armoury’. 20  Raphael defines an anti-suit
+injunction as:
+an order of the court requiring the injunction defendant not to commence, or to cease to pursue, or not to advance
+particular claims within, or to take steps to terminate or suspend, court or arbitration proceedings in a foreign
+
+Section B. - At the Beginning of the Arbitration, UKBC-REDFERN 530638645 (2025)
+© 2025 Thomson Reuters.
+2
+country [ … ] The order is addressed to, and binds, the actual or potential litigant in the other proceedings, and
+is not addressed to, and has no effect on, the other court. 21
+7. 14
+Anti-suit injunctions are generally available in common law jurisdictions but not in civil law systems, and under certain laws
+may be granted by a tribunal as well as by the courts. 22  But as noted in Chapter 5, following Allianz SpA and anor v West
+Tankers Inc., courts in European Union (EU) member states are not permitted to issue anti-suit injunctions against proceedings
+in other member states, even if those proceedings were brought in violation of a valid arbitration agreement.
+(b) Establishing the arbitral tribunal
+7. 15
+If (i) the parties have failed to make adequate provision for the constitution of an arbitral tribunal, or (ii) the agreed appointment
+procedure is not successfully carried out, and there is no fallback mechanism in the applicable institutional or other rules (such as
+the UNCITRAL Rules), then the assistance of a national court may be required to complete the constitution of the arbitral tribunal
+—for instance, by appointing the presiding arbitrator, if there is no agreement between the parties as to a suitable appointment.
+7. 16
+As discussed in Chapter 4, the national court may also be asked to decide on a challenge to the independence or impartiality
+of an arbitrator, and to remove that arbitrator if the challenge is successful. 23  However, the power of removal is generally
+exercised sparingly by national courts. 24
+(c) Challenges to jurisdiction
+7. 17
+If any issue is raised as to the jurisdiction of the arbitral tribunal, it will generally (although not always) be made at the beginning
+of the arbitration. If the objection is successful, the arbitration will be terminated. The issue of challenges to jurisdiction is one
+of growing importance and is dealt with in Chapter 5. The only point that should be made here, in the context of the relationship
+between national courts and arbitral tribunals, is that it is recognised in the Model Law (and in many national systems of law)
+that whilst any challenge to the jurisdiction of an arbitral tribunal may be dealt with initially by the tribunal itself, the final
+decision on jurisdiction rests with the relevant national court. 25  This is either the court at the seat of the arbitration, or the court
+of the state(s) in which recognition and enforcement of the arbitral award is sought.
+Footnotes
+17
+Pursuant to the Federal Arbitration Act, ss. 4, 206, and 303.
+18
+Lew, ‘Does national court involvement undermine the international arbitration processes?’ (2009) 24(3) Am Uni Intl
+Law Rev 489, at 527.
+19
+New York Convention, Art. II(3).
+20
+Raphael, The Anti-Suit Injunction (Oxford University Press, 2008), para. 1.01.
+21
+Ibid., at para. 1.05.
+22
+See Steamship Mutual Underwriting Association (Bermuda) Ltd v Sulpicio Lines Inc [2008] EWHC 914 (Comm), at
+[33], confirming arbitral tribunals’ competence to issue anti-suit injunctions under English law.
+23
+Paragraphs 4.115ff.
+
+Section B. - At the Beginning of the Arbitration, UKBC-REDFERN 530638645 (2025)
+© 2025 Thomson Reuters.
+3
+24
+Lew, Mistelis, and Kroll, Comparative International Commercial Arbitration (Kluwer Law International, 2003), para.
+15-37.
+25
+Model Law, Art. 16(3). Unusually, English (Arbitration Act 1996, s. 32) and German law (ZPO, s. 1032(2)) both provide
+for an action to be brought before the courts to determine preliminary points of jurisdiction prior to the tribunal’s
+jurisdictional award, subject to narrow limits.
+End of Document
+© NIGEL BLACKABY KC, CONSTANTINE PARTASIDES
+KC, ALAN REDFERN

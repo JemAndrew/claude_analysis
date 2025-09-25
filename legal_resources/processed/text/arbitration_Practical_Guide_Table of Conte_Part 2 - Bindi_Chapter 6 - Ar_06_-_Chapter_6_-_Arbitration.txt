@@ -1,0 +1,1358 @@
+Chapter 6 - Arbitration, UKBC-EFFDIS 549291546 (2025)
+© 2025 Thomson Reuters.
+1
+Chapter 6 - Arbitration
+A Practical Guide to Effective Dispute Resolution: Methods & Clauses 1st Ed.
+Mainwork
+Part 2 - Binding Dispute Resolution Methods and Clauses
+Chapter 6 - Arbitration
+Overview of international arbitration as a method of dispute resolution
+6-001
+Unlike the non-binding methods of alternative dispute resolution (e.g. negotiation or mediation) discussed in this book,
+arbitration provides an out of court mechanism for reaching a binding and legally enforceable resolution of the parties’ dispute.
+It is adversarial in nature and sees an impartial tribunal, appointed pursuant to the parties’ arbitration agreement, render a
+legally enforceable decision, which determines the outcome of the dispute. These decisions are known as awards and, subject to
+limited rights of appeal or challenge, are determinative of the parties’ rights and obligations. In this sense, arbitration is closer
+to litigation before a court, than, for example, to mediation.
+Arbitration is entirely dependent on the parties’ consent and is a matter of contract, without which it cannot take place. Unlike
+a court, which exercises sovereign authority, an arbitral tribunal only has jurisdiction over the parties and their dispute through
+the parties’ express agreement. An agreement to submit to arbitration also comes with a negative promise not to take the dispute
+to any other forum, meaning to courts. 1
+The tribunal’s jurisdiction and powers are defined by the parties’ agreement, in conjunction with any applicable mandatory legal
+rules of arbitration in the chosen seat (or legal place) of arbitration. 2  Typically, parties to a commercial contract who wish to
+include a dispute resolution clause will stipulate that any and all disputes arising between them in relation to the contract shall
+be referred to, and finally resolved by, arbitration. Although it is possible to agree to submit a dispute to arbitration once it has
+arisen, in practice, it can be harder for parties already in dispute to reach agreement on such matters, as each party is likely to
+be manoeuvring for an advantage. At the drafting stage of the agreement, when no dispute exists between the parties, they are
+normally more minded to collaborate to achieve a positive outcome in the form of a deal/contract. After a dispute has arisen,
+positions can quickly become polarised with the relationship becoming antagonistic. This can make any agreement difficult to
+reach even in relation to less important points.
+As arbitration relies on the consent of the parties, they have significant control over the process. This includes deciding on who
+the decision-makers (being arbitrators) are going to be, the number of arbitrators, what law and rules apply to their dispute, and
+what powers the arbitrators will have. This control gives flexibility to the parties as to how their dispute can be resolved but
+also imposes more responsibility on their legal team as to agreeing and prescribing those choices.
+Drafting an effective and operational arbitration clause is critical to the success of any subsequent arbitration proceedings.
+In the extreme case, if something crucial was not agreed in advance and captured in the arbitration agreement, this can lead to the
+failure of the arbitration agreement. If this happens, the dispute can collapse into litigation, or the parties can find themselves at
+a standstill. An example of an arbitration clause that can fail is one that sets out an ambiguous or irrelevant scope (for example,
+because of cutting and pasting from an old agreement) such that it is not clear whether the agreement covers the dispute in
+question. In this scenario, if the parties are in disagreement, the resolution of the dispute by arbitration will be impaired, resulting
+in significant unexpected legal costs and/or ultimately resulting in a different mechanism of resolving the dispute than the one
+originally chosen by the parties (namely, litigation as a default mechanism).
+However, whilst the wording of an effective arbitration clause is critical, the requirements are relatively straightforward, and
+lawyers should not be discouraged from including such a clause. Whatever the source of the wording, it follows that a lawyer
+who bases their clause on a precedent or institutional template must fully understand the implications of their chosen wording.
+
+Chapter 6 - Arbitration, UKBC-EFFDIS 549291546 (2025)
+© 2025 Thomson Reuters.
+2
+What makes international arbitration an effective method of dispute
+resolution?
+6-002
+The primary advantages of arbitration as a method of dispute resolution arise from the characteristic that, once arbitration has
+been chosen, the parties can mutually agree almost any element of the procedures that they want the arbitrator to follow. Hence
+the parties are able to choose the applicable procedural law, arbitration rules, number and choice of arbitrators, confidentiality,
+language and venue.
+In comparison to litigation, the ability of the parties to choose procedure, applicable laws, tribunal, language, venue, etc. enables
+parties to shape the arbitration proceedings in the most effective way. 3  This flexibility means that, even if the parties have not
+made the relevant choices in advance, they can still do that once the dispute arises or even if the proceedings have started. The
+key is that the parties can make changes provided they agree.
+Moreover, in arbitration proceedings, the parties can agree various points of procedure by consent, including the deadlines for
+submission of pleadings and evidence. In this way, arbitration proceedings are much more flexible and agile than litigation
+proceedings, which are often determined by strict procedural rules applicable to a court of a particular jurisdiction. This
+characteristic also allows the parties to tailor the relevant procedures to align with the legal systems that they are most familiar
+with. In this sense, arbitration as a process for dispute resolution can be considered to be truly international.
+The hearings can be held in a particular location that is agreeable to the parties and the tribunal, allowing them to choose a
+flexible in-person venue that best meets their needs. The parties can also make an active choice for the proceedings to be heard
+remotely with a number of institutions now providing useful guidance on conducting remote hearings (see Chapter Nine). This
+flexibility allows the parties to save costs on travel and to choose the most convenient location for the proceedings, as well as to
+choose the time and date depending on preferences and/or convenience to the parties, the tribunal and other hearing participants.
+The parties are also able to choose their tribunal and the number of arbitrators that meets an agreed set of criteria including
+skills, knowledge and experience. This is in complete contrast to the seemingly random assignment of judges in civil courts
+and is a significant advantage of arbitration.
+An important and distinctive advantage of arbitration is the enforceability of an award. This is embedded in the choice of
+arbitration itself and arises from the application of the United Nations Convention on the Recognition and Enforcement of
+Foreign Arbitral Awards (1958) (New York Convention), as well as the certainty that stems from the very limited grounds under
+which an award can be challenged (see further discussion in para.6-032).
+The choices that the parties can make when drafting arbitration clauses are considered in more detail later in this chapter.
+Institutional v ad hoc arbitration
+6-003
+Parties can decide whether to run the arbitration proceedings themselves on an ad hoc basis, or have the arbitration administered
+by an arbitral institution. The structure of the arbitration clause, as well as what needs to be considered in it, will also be
+determined by this choice. There are well-established and long-standing arbitral institutions in operation around the world and
+new centres continue to be set up. The oldest and largest institutions include the London Court of International Arbitration
+(LCIA, 1892); London Chamber of Arbitration and Mediation (previously London Chamber of Arbitration) (LCAM, 1903);
+the International Chamber of Commerce (ICC, 1923); and American Arbitration Association/International Centre for Dispute
+Resolution (AAA/ICDR, 1926). With the growth of global trade, other institutions appeared in the 1960s and have grown
+significantly. 4  More recently, there has also been the emergence of new institutions with a regional focus. 5  As a result, if
+geographical location is important to the parties, there is a high probability that there will be an easily accessible institution
+wherever the parties are located, even though some may be less well established and the administration capabilities may vary.
+
+Chapter 6 - Arbitration, UKBC-EFFDIS 549291546 (2025)
+© 2025 Thomson Reuters.
+3
+All institutions have their own rules, which are largely designed to expand on the applicable procedural laws of the selected
+jurisdiction and the details of the parties’ arbitration agreement. In some senses, these rules may be considered analogous to
+the rules of court, although they are significantly less detailed. However, like rules of court, arbitration rules guide the parties
+and the arbitral tribunal in more detail as to how the proceedings are to be conducted. Although institutional rules can resemble
+the ad hoc UNCITRAL Arbitration Rules (UNCITRAL Rules), 6  care should be taken to make sure that the rules are fully
+understood before selecting an institution.
+Whilst it may be tempting for the parties to agree an ad hoc arbitration, they need to be aware that an arbitral institution typically
+provides an independent administration service, and this can be important if the relations between the parties have broken
+down. In the absence of the involvement of an arbitral institution, if the parties have to resolve disputed administration matters
+themselves, it is not uncommon for the financial and time costs to exceed those of an institutional tribunal.
+It is also possible to provide for a limited role for the selected arbitration institution, for example, for it to act as an appointing
+authority for the tribunal appointment. This can either be because the arbitration agreement provides for such a mechanism, or
+because the mechanism provided did not lead to the parties’ agreement on which arbitrators to appoint and there is a need for
+an independent institution to make such an appointment in the absence of an agreement.
+Some institutions are prepared to provide such a service with a number of institutions expressly offering to administer
+UNCITRAL Rules arising from an arbitration agreement that does not specify that their institutional rules apply. 7  It is always
+good to check with the institution before including such a provision in the arbitration agreement. Otherwise, if the selected
+institution is not prepared to act as such, this could lead to unnecessary delays, disagreements, and further challenges to the
+jurisdiction of the eventually constituted arbitral tribunal, which may only escalate the dispute and costs involved.
+From a practical point of view, there are other benefits to having the arbitration administered by an experienced, competent
+arbitral institution. It may have the benefit of providing confidence to the parties’ stakeholders that the arbitral proceedings will
+be properly conducted. This is particularly important if there is a concern that there could be any natural justice/public policy
+arguments from a losing party at the enforcement stage. At the same time, this could avoid any issues in relation to the process
+and administration of the arbitrations of newly developed institutions.
+On the other hand, a benefit of using a newly developed institution can be a reduction in the fees that some may make to promote
+wider usage of their institution. It could also be that the institution provides for more specific regional cover with arbitrators
+available to accommodate the language requirements of a particular arbitration agreement or having better cultural or legal
+knowledge of the issues in dispute. 8  The question is ultimately whether the institution is known to administer international
+arbitrations in the context of possible disputes in the industry and region involved, and what its track record is. This should be
+considered in the context of its fees and potential value of the disputes at stake.
+Especially for smaller cases, the question of fees is one of the reasons why parties may decide to have an ad hoc arbitration, as
+opposed to an institutional arbitration. This is because the institutional fees that need to be paid on the top of the arbitrator’s fees
+may be high relative to the value of the dispute. To avoid surprises, before specifying a particular institution in an arbitration
+clause, the fee structure should be considered as the fees are often linked to the value of the dispute although, in some cases,
+the fees can adjust to the nature of the dispute.
+Some institutions also have fee structures based on an hourly rate or a combination of hourly rate and total value of the claim.
+One example of this is the Hong Kong International Arbitration Centre (HKIAC) where the administrative fees are determined
+by the value of the claim but the costs of the arbitral tribunal are set out on an hourly basis. 9  The LCIA is a notable exception
+with its administration fees being purely determined according to an hourly rate. 10  Having said that, although the services
+provided by an arbitral institution in administering a case come with a cost, the experience and expertise of the institution can
+be very important, particularly where relations between the parties have broken down.
+However, the question of cost is not the only reason why the parties may decide to choose ad hoc instead of institutional
+arbitrations. Whilst it is especially good for inexperienced parties and arbitrators to delegate the bulk of administration to
+an institution, if all participants in the process are experienced enough and focus on resolving the dispute, rather than on its
+escalation, then ad hoc arbitration can offer some unique opportunities. These include the flexibility and full control over the
+process if an agreement on procedural points can be reached.
+
+Chapter 6 - Arbitration, UKBC-EFFDIS 549291546 (2025)
+© 2025 Thomson Reuters.
+4
+By agreement, parties can also decide on the process within a broad framework provided by, for example, UNCITRAL Rules. As
+quite a lot is left to the discretion of the arbitral tribunal, parties are free to agree on the specifics or put the points of procedural
+disagreement to the arbitral tribunal to decide and for them to specify these in its procedural orders.
+This relies on the parties’ willingness to cooperate with the overall arbitration process and be reasonable in terms of their conduct.
+If the parties are not driven by these considerations, an ad hoc process could become disrupted. Without the additional safeguards
+and administration by the institution, the management of the arbitration process may end up dependent on the experience of
+the tribunal in managing this type of arbitration.
+At the time of drafting the arbitration clause, it may not be apparent how parties will behave at the time of any dispute arising.
+As a result, it can be a safer option to provide for institutional rules to apply and for administration by the selected institution.
+To help in deciding, the parties should consider whether the industry practice for the underlying contract/parties suggests a
+different approach.
+If, however, after a dispute arises, the reality of the dispute or relationship between the parties requires more flexibility in the
+process and a pre-selected institutional arbitration does not satisfy this requirement, with the consent of all parties before the start
+of the process, a different process can be agreed and tailored to the demands of the dispute to be resolved in an effective manner.
+If the choice is in favour of an administered arbitration, drafters should consider the standard or model arbitration clauses
+provided by the institution chosen (examples of clauses from a range of global institutions are given in Appendix Four of this
+book). Arbitral institutions often provide model arbitration clauses that are tailored to the rules of a particular institution and
+can relatively easily be incorporated into contracts by contract drafters. If UNCITRAL Rules are used, there are also standard
+clauses that can be incorporated (see the next section in more detail on this point).
+This would be the starting point. However, drafters should also consider whether the wording of the chosen arbitration clause
+needs to be adjusted or whether the chosen arbitration clause is clear enough and includes all the elements that need to be
+incorporated.
+Characteristics of an effective arbitration clause
+6-004
+There are certain essential characteristics that every arbitration clause requires in order to be effective and operable. An effective
+arbitration clause must be made in writing to facilitate enforcement under the New York Convention. 11  It should include such
+points as a clear and unequivocal agreement between the parties to submit to arbitration, as well as the choice of “seat”.
+In addition, there are other features that, whilst not essential to the enforceability of a clause, are strongly recommended to
+aid its practical operation, such as a choice of arbitration rules, the language of the proceedings, the number of arbitrators, any
+qualifications or restrictions on nationality, and a mechanism for their appointment. The parties can also decide to add other
+elements to their arbitration clause, driven by the particular characteristics of their transaction. The addition of wording can add
+complexity and increase the possibility of subsequent dispute, so needs to be considered very carefully.
+Clear and sufficiently detailed
+6-005
+It is important to be specific and clear when drafting a dispute resolution clause. If the meaning of the words in the clause is
+unclear or ambiguous, this can lead to expensive and time-consuming litigation in national courts or take valuable time of the
+tribunal to resolve this ambiguity. Moreover, ambiguity can also lead to challenges to the award itself. Such challenges can be
+made either by attempting to set the award aside or resisting the enforcement of the award in the relevant national courts.
+At the same time, an overdetailed or overcomplicated arbitration clause can lead to further arguments as to the meaning of
+the clause and its effect. This is particularly so if it is drafted containing internal inconsistencies. In addition, a very lengthy
+
+Chapter 6 - Arbitration, UKBC-EFFDIS 549291546 (2025)
+© 2025 Thomson Reuters.
+5
+and detailed clause may lead to inefficient and expensive procedures if adopted to cover a low-value dispute or one that only
+involves a straightforward consideration of facts. Such a clause may also be too rigid and might not allow parties to deal with
+a specific dispute in the most effective way, possibly adding unnecessary costs and time.
+When drafting an arbitration clause, the right balance needs to be struck between the need to be specific and clear whilst, at
+the same time, avoiding including too much detail. This is to avoid creating discrepancies as to the meaning or unnecessary
+arguments on both sides that might ultimately require a tribunal to resolve. If a dispute over meaning arises, the arbitration
+process allows (and in fact encourages) the parties to resolve the issue and also agree on specifics.
+However, once parties are in a dispute, it should not be forgotten that it will be more challenging for them to agree matters,
+particularly where issues of arbitral process and procedure may be perceived as giving one party or the other some tactical
+advantage.
+If agreement cannot be reached, the tribunal may be asked to rule on the scope of the arbitration agreement, the interpretation of
+the clause, and their jurisdiction or powers in relation to the arbitration. One of the features of arbitration is a doctrine referred
+to as kompetenz-kompetenz, under which the arbitral tribunal has the capacity to decide on its own jurisdiction.
+Examples of effective clauses
+6-006
+Standard or model arbitration clauses are provided by various arbitral institutions and the United Nations Commission on
+International Trade Law (UNCITRAL), which can be found on their websites. 12  The full wording of a selection of institutional
+standard clauses is provided in Appendix Four. Standard arbitration clauses can be used as a starting point to draft an arbitration
+clause in a contract. If the arbitration is being administered by a specific institution, the benefit of using the same institution’s
+standard clause is that it is already tailored to the particular arbitration rules of that institution.
+The precise wording of arbitration clauses may vary from institution to institution with some being more expansive that others.
+Drafters can pick and choose their preferred wording to suit their circumstances, but it is important to ensure that all the main
+elements of the arbitration clause are covered.
+Recording the parties’ choice of arbitration
+6-007
+One of the first requirements when providing for arbitration in a dispute resolution or jurisdiction clause in a contract is to
+consider its scope and whether drafters want it to apply to all disputes or only to certain disputes between the parties.
+It is common for the arbitration clause to apply to all disputes between the parties, including contractual and non-contractual
+claims, and in tort and the general practice is to define the scope broadly so as to capture all disputes related to the contract
+in question.
+What disputes are covered?
+6-008
+For a more general arbitration clause the following are the phrases to be included:
+“Any [dispute], [controversy], [difference] or [claim]”.
+
+Chapter 6 - Arbitration, UKBC-EFFDIS 549291546 (2025)
+© 2025 Thomson Reuters.
+6
+Various standard arbitration clauses use a combination of these words to include a broad scope of issues to be submitted to
+arbitration. Although a “dispute” would be a more specific description of what the parties are to submit to arbitration, in order to
+encompass all the issues between the parties, a combination of all the above should be sufficient to cover them in a broader sense.
+“Arising out of or in connection with [ or relating to] the contract”.
+This wording is used to limit the issues to the ones that are related to the contract in question. It appears broad enough to cover
+a variety of issues related to the contract including non-contractual matters. However, this issue may attract various arguments
+as to what non-contractual disputes are legally related to the contract. One of the key issues is whether the clause is considered
+to be “wide” or “narrow”. Judgments have highlighted that interpretation can be heavily dependent of the facts and/or the views
+of the tribunal/courts with particular attention to the remoteness of the issue in dispute. 13
+In order to avoid unnecessary discussions as to the question of jurisdiction of the constituted tribunal, it would be better to be
+more specific as to whether non-contractual obligations would be covered by adding “any dispute regarding non-contractual
+obligations arising out of or relating to it” (like the standard clause provided by HKIAC) (see Appendix Four).
+Specifying the scope
+6-009
+“Or the breach, termination or validity thereof” (Chartered Institute of Arbitrators (CIArb)) or “including
+any question regarding its existence, validity or termination” (Singapore International Arbitration Centre
+(SIAC); London Court of International Arbitration (LCIA)) or “or the breach, termination or invalidity
+thereof” (Stockholm Chamber of Commerce (SCC)) or “the existence, validity, interpretation, performance,
+breach or termination thereof” (HKIAC) or “arising out of the formation, performance, interpretation,
+nullification, termination or invalidation of this contract or arising therefrom or related thereto in any manner
+whatsoever” (Dubai International Arbitration Centre (DIAC)).
+Some of the arbitration institutions suggest additional detail (highlighted above) in the wording of their standard arbitration
+clauses. They suggest either “or” or “including” and state more precisely what the issues could be concerned about.
+Whilst it may not be strictly necessary to include that, and indeed some of the arbitration institutions do not include any further
+clarification (e.g. ICC), it is still possible to cover potential arguments regarding the validity of the contract and include similar
+wording. This is to avoid any disputes between the parties as to whether the arbitration clause survives if the contract is invalid
+or did not exist at all. Although the principle of separability of the arbitration agreement should be the response for many
+arguments, in order to avoid further discussions, making clear from the start what the arbitration clause covers, could save more
+costs in the future.
+If that is done, it would be better to state “including” and list possible issues that could be involved, as using “or” suggests that
+the previous phrase regarding disputes/differences “arising out of or related to the contract” may not cover breach, termination,
+etc. The word “including” would provide examples of those related issues, which are intended by the parties to be covered.
+Submission to arbitration
+6-010
+
+Chapter 6 - Arbitration, UKBC-EFFDIS 549291546 (2025)
+© 2025 Thomson Reuters.
+7
+“Shall be submitted to” […] “and settled by final and binding arbitration” or “finally resolved by arbitration” or
+“shall be referred to and finally resolved by”.
+This wording aims to clarify that the dispute should be submitted to arbitration and that it will be final and binding. It can also
+indicate the institution which will administer the arbitration (see para.6-011).
+The inclusion of “final and binding” deals with any arguments advanced to suggest that the award may be optional, and that
+the ultimate binding decision has to be made by court. Although it is by no means a normal process and arbitration itself is
+normally final and binding (although there is a possibility to challenge an arbitration award in national courts on very specific
+grounds), it cannot be assumed that in every jurisdiction this would be the case. “Final and binding” would address this risk.
+Specify institution and/or rules
+6-011
+If the parties intend to submit their disputes to a specified institution to be determined according to their rules, or to have the
+dispute administered by the institution applying ad hoc/UNCITRAL Arbitration Rules, then this intent should be specified in
+the arbitration agreement.
+“In accordance with” or “settled under […] Arbitration Rules” (“in force when the Notice of Arbitration is
+submitted”).
+This wording indicates that certain rules will apply to the arbitration. This principle of the arbitration being carried out in the
+way intended (and agreed) by the parties is fundamental to an effective arbitration. As such, even after a dispute has arisen, if
+the parties mutually agree, e.g. to vary the number of arbitrators in the tribunal, then, provided this agreement is recorded (and
+not disputed), the institution (and arbitrators) must abide by what the parties have agreed, unless it is against the law of the seat.
+Even if the rules of that institution are later specified, providing a reference to the institution in an agreement, prevents further
+arguments that the arbitration was meant to be ad hoc but under the rules of a particular institution.
+It is technically possible to “mix and match” institutional rules for ad hoc and non-institutional rules for some institutions, 14
+but this can create further complications and require very careful drafting. The drafters would have to check with the institution
+whether they would allow administration under rules other than their own and how they will fit into the processes that institution
+has when administrating arbitrations. It is also possible to have a situation where an arbitration is administered by an institution
+but is conducted under the UNCITRAL Arbitration Rules, rather than the rules of that institution. Such a possibility is provided
+for in the standard clauses of AAA, HKIAC, SIAC, etc. (see Appendix Four).
+Whilst various institutional rules tend to cover similar provisions on the basis of similar principles, there are various important
+differences among them, in particular in relation to procedures such as appointment mechanisms. These include, for example,
+the LCIA rules do not allow the parties to appoint arbitrators, only to nominate them, subject to confirmation by the LCIA
+court; default provisions if the agreement does not specify the number of arbitrators; multi-party, multi-contract provisions;
+confidentiality provisions; availability of expedited procedure; emergency arbitrators; availability of electronic submissions
+and remote hearings; time limit for making an award; possibility of scrutiny of the award; and perhaps most importantly, the
+costs involved, etc.
+If the parties are unsure of which rules to choose, the easiest option can be to go for tried and tested institutional rules.
+Drafters should bear in mind that the latest version of the arbitration rules will normally apply to a dispute in question. If parties
+prefer for any other version of the arbitration rules to apply, they need to specify the same in the arbitration clause.
+The wording “in force when the Notice of Arbitration is submitted” makes it unambiguous that the most recent rules apply,
+rather than the ones that were in force at the time of the conclusion of the contract. In order to eliminate further arguments, this
+phrase could also be included (as it is done in standard clauses of HKIAC and SIAC).
+
+Chapter 6 - Arbitration, UKBC-EFFDIS 549291546 (2025)
+© 2025 Thomson Reuters.
+8
+Narrowing the scope
+6-012
+Before settling on the general all-encompassing arbitration clause, drafters should consider the circumstances that exist between
+the parties and, given the nature of their business or collaboration, whether other unintended disputes could fall into the scope
+of the arbitration clause and whether they want those disputes to be resolved in arbitration. If the parties do not want them to
+be arbitrated, the arbitration clause should be drafted in a narrower way to exclude those claims and/or to expressly provide
+another method of resolving those disputes, for example, by litigation.
+If a narrower scope is desired, careful consideration should be given to the drafting, as there is a potential risk of arguments as to
+the scope of the arbitration clause itself, which in turn, could lead to a dispute as to the jurisdiction of the arbitral tribunal, parallel
+dispute resolution processes and inconsistent decisions, and/or result ultimately in a challenge to the award or the enforcement
+of the award in national courts.
+Expedited rules
+6-013
+Some parties may seek to introduce a “threshold value” that the dispute has to cross before the clause applies. This should not
+be encouraged, as it gives rise to difficulties in defining or quantifying such a threshold as well as the logical assumption that
+a party would not trigger the use of the procedure for a minor claim. This then raises the potential issue of what happens to a
+“minor” claim and creates the possibility of a potential scenario where a party goes to court for a small claim, but the defendant
+refers to the dispute resolution clause covering all disputes and the court agrees that it has no jurisdiction.
+To try and address this, a number of institutions have developed what are referred to as “expedited rules” to cover smaller
+claims. The UNCITRAL Expedited Rules 15  require express consent by both parties and clearly cover a situation where there
+is mutual agreement that the specific dispute should be covered by an expedited process that should be quicker and cheaper.
+This “opt-in” approach is mirrored in a number of other institutions. 16
+In contrast, the ICC and ICDR Rules automatically apply expedited procedures for disputes falling under a certain amount,
+unless the parties have opted out. 17  Article VI.2(b) of the ICC Expedited Rules sets the threshold at US$3 million. The ICDR
+Rules set a lower threshold (US$500,000) and, within their expedited rules, provide for claims of less than US$100,000 being
+decided on documents only.
+This highlights the need for parties to consider whether they wish to incorporate such a threshold into their own arbitration
+agreement that would allow for bifurcation of claims such that any small claims are dealt with either by expedited institutional
+rules or by litigation.
+Choice of the number and selection of arbitrators
+6-014
+Another important choice is the selection of the tribunal itself and the number of arbitrators. The parties normally choose either
+one or three arbitrators. It is possible to choose an even number of arbitrators, but this would require an umpire to be appointed.
+The parties can also pre-agree the procedure for the selection of arbitrators in advance.
+In order to give the parties equal influence over the choice of arbitrator, it is common for each party to appoint an arbitrator
+and for the appointed arbitrators to select the third arbitrator as the chair. As an alternative, they can also leave the selection of
+arbitrators to an institution or another appointing authority, especially if they cannot agree.
+
+Chapter 6 - Arbitration, UKBC-EFFDIS 549291546 (2025)
+© 2025 Thomson Reuters.
+9
+The fact that those choices are open for the parties helps make arbitration more flexible than litigation where, depending on the
+rules of a particular jurisdiction, it is unlikely that the number and choice of the judges would be open for the parties to choose.
+The number of arbitrators in the tribunal
+6-015
+“The number of arbitrators shall be […]”/“the arbitral tribunal shall be composed of three arbitrators/a sole
+arbitrator”.
+It is important to specify the number of arbitrators in the arbitration clause in order to avoid any further disputes in this regard.
+Different considerations apply as to what number of arbitrators should be chosen. From one side, a single arbitrator tribunal
+will be cheaper and, perhaps, more efficient in terms of agreeing on schedules and procedural orders. In addition, it is likely
+that the award would be rendered quicker, as there is less room for disagreement, unlike when a three-person tribunal is chosen.
+At the same time, many of these factors will depend on the personality of a chosen arbitrator and their way of working and
+managing the proceedings.
+In theory, a three-member tribunal would ensure a more balanced approach to the issues involved and leave less room for
+subjectivity and personal preferences. However, this could lead to more expensive proceedings (the arbitrators fees would triple),
+as well as potential delays. These issues can arise if members of the tribunal disagree on various points or if they work under
+different timetables or time zones or if their personal preferences and approaches affect the smooth running of the proceedings.
+Another consideration is the quantum of the dispute, as the costs of a three-member tribunal, institution fees (if used) and
+lawyers’ fees could exceed what can be reasonably recovered. Unfortunately, it is often not possible to predict the quantum of
+potential disputes at the time of drafting. However, drafters may consider including provisions for using a simplified/expedited
+procedure, together with the number of arbitrators appointed depending on a certain variable, for example the potential quantum
+of the dispute. This has potential benefits if the chosen arbitration rules do not provide for the same by virtue of their application.
+Mechanism of appointment of arbitrators
+6-016
+Another very important point to consider is the mechanism of appointment of one or three member tribunals. This should be
+provided for in the arbitration clause. If this is done later, it could be difficult to agree on it and this could delay the process.
+One needs to bear in mind that an appointment mechanism may be already specified in the arbitration rules chosen. 18  Drafters
+should check the specified rules to avoid any contradiction, especially if the proposed mechanism is very specific.
+Sole arbitrators are commonly appointed by parties exchanging lists of proposed candidates to see if there is common ground,
+or for one party to produce a list that the other party can select from.
+Three-member tribunals are typically appointed by each party appointing their own arbitrator, and the two party-appointed
+arbitrators then appoint a chairperson or president (often in consultation with the parties).
+The more complicated or controversial the mechanism for appointing arbitrators, the more arguments can arise as to following
+the correct procedure. In turn, this could also further delay the proceedings.
+It is important to provide for a default mechanism, for example, for the appointment by a third party, in case the parties do not
+agree on the appointment or fail to respond. The easiest way is to delegate the appointment to an appointing authority, being an
+institution or a court, which can ensure the independence and fairness of the selection/appointment process.
+
+Chapter 6 - Arbitration, UKBC-EFFDIS 549291546 (2025)
+© 2025 Thomson Reuters.
+10
+Some arbitration institutions are willing to act as appointing authorities, even if they do not administer the arbitration. This
+default mechanism would provide a better option for the parties, if they cannot agree, rather than requesting a national court
+to act as an appointing authority, which may be a costly and lengthy process and highly dependent on the jurisdiction of the
+national court in question and its procedural rules and powers.
+An example of the procedure for appointing a sole arbitrator by the parties with the institution being an appointing authority
+in the event of disagreement is provided by the CIArb:
+“A sole arbitrator shall be appointed by agreement of the parties. If the parties have not agreed on the
+appointment of a sole arbitrator within 30 days of the respondent’s receipt of a notice of arbitration, then, at
+the request of one of the parties, a sole arbitrator shall be appointed by the CIArb.”
+If a three-member tribunal is to be selected, the ICC provides for an example of the procedure for appointing the third member
+of the tribunal:
+“The third arbitrator, who shall act as president of the arbitral tribunal, shall be jointly nominated by [the
+other two arbitrators/the parties] within [30] days of the [confirmation/appointment] of the second arbitrator.
+If the president of the arbitral tribunal is not nominated within this time period, the Court shall appoint such
+arbitrator.” 19
+The CIArb also provides for various options of appointing a three-member tribunal varying from dedicating this role exclusively
+to CIArb as appointing authority for all three arbitrators being selected, to CIArb becoming an appointing authority for all three
+only in case the parties fail to agree or appoint arbitrators. It also provides an example of a more complicated procedure, in case
+of the failure to appoint an arbitrator either by one of the parties, or by the selected arbitrators to appoint the third one:
+“Each party shall be entitled to appoint an arbitrator and the two party-appointed arbitrators shall then appoint
+a third arbitrator. If either party fails to appoint an arbitrator within 30 days of receiving notice of the
+appointment of an arbitrator by the other party, the CIArb shall, at the request of either party, appoint an
+arbitrator on behalf of the defaulting party. If the first and second arbitrator appointed fail to agree upon a
+third arbitrator within 30 days of the appointment of the second arbitrator, the third arbitrator shall, at the
+request of either party, be appointed by the CIArb.”
+It is important to understand that the appointment mechanism, particularly in complex multi-party arbitrations, may have an
+impact on the validity and/or enforcement of any award. For example, the French courts have held that an institution requiring
+multiple respondents to jointly appoint a single arbitrator was contrary to the public policy principle of equality between the
+parties. 20
+Which arbitrators to appoint?
+6-017
+The pool of available arbitrators could be reduced, if the parties decide to specify the qualifications of arbitrations in an
+arbitration clause. It is not necessarily required to limit the pool of potential candidates by specifying their qualifications, but it
+might be considered in cases where more technical knowledge and expertise could help to resolve potential disputes.
+
+Chapter 6 - Arbitration, UKBC-EFFDIS 549291546 (2025)
+© 2025 Thomson Reuters.
+11
+At the same time, qualifications requirements that are too restrictive may limit the pool of candidates to the point of making it
+virtually impossible to appoint an arbitrator or arbitrators for a particular arbitration due to their unavailability or inability to
+fulfil all the requirements. This could lead to delays and potential abuse by a party who wants to disrupt the process by insisting
+on strict compliance with the requirements. Drafters need to be careful not to restrict the pool of potential candidates too much,
+especially if other requirements, such as nationality or language of proceedings, are also imposed either by the arbitration clause
+itself or by the applicable arbitration rules.
+Drafters should ensure that any qualifications of arbitrators that are determined to be essential, should be expressed in objectively
+determinable language. For example, the agreement should not require that arbitrators should have “extensive experience in
+English law” but rather provide that arbitrators should be “English-qualified lawyers with a minimum of [10] years’ post-
+qualification experience”. Any ambiguity in the requirements is likely to lead to further arguments.
+Nationality requirements could also impact on the exclusion of arbitrator candidates, who speak the language of the arbitration
+and/or who are familiar with the substantive law of the contract and/or procedural law applicable to arbitration proceedings. It
+might be a great advantage to have an arbitral tribunal who understand and can read the law they are going to decide upon in
+its original language and conduct the proceedings in the language of arbitration, without constantly relying on the translations/
+interpretation. This is because a lot of understanding can be lost in translation, especially when the nuances of wording of the
+applicable law are in issue. Although not strictly required, it might make a material difference in the way how arguments and
+disputes are perceived by each member of the arbitral tribunal.
+Therefore, it can be advantageous for the efficiency and fairness of the dispute resolution, if the arbitrator(s) are familiar with
+the core language of the dispute and the legal tradition in which the dispute belongs. However, this can be difficult to achieve,
+especially if nationality requirements are imposed. To reduce or eliminate the perception of potential bias, the nationality
+requirements are often used to restrict the arbitrators to ones who do not share their nationality with any of the parties to the
+arbitration agreement.
+These nationality restrictions are common in institutional rules, especially for sole arbitrators and chairpersons. 21  This is
+because it is often perceived that this would help to eliminate any bias towards a party sharing the same nationality as a sole/
+presiding arbitrator. This perception may vary from arbitration to arbitration and jurisdiction to jurisdiction, where it may already
+be accepted or assumed that arbitrators have to be independent and impartial irrespective of shared characteristics with the
+parties.
+Choosing and specifying applicable laws
+Introduction
+6-018
+There are three potential choices of law parties can make: substantive governing law of the contract, law of the arbitration
+agreement and procedural law/lex arbitri/law of the seat. These choices are discussed briefly in paras 6-019–6-021.
+Drafters considering including an arbitration clause in a contract, should firstly choose which laws they are going to apply
+to the contract, the arbitration agreement, and to the procedure (namely, which seat they are going to choose). This is an
+important preliminary consideration, as it determines what form the arbitration clause would need to take, as well as what
+formal requirements need to be satisfied for the arbitration clause/agreement to be considered valid, effective and enforceable
+under the national laws they have chosen.
+Governing/substantive law
+6-019
+
+Chapter 6 - Arbitration, UKBC-EFFDIS 549291546 (2025)
+© 2025 Thomson Reuters.
+12
+“This contract shall be governed by the substantive law of […]”.
+A key choice that the parties must make when drafting the contract is the substantive or governing law of the contract. This
+choice is not specifically related to the dispute resolution clause but is normally found in the “law and jurisdiction” clause
+or governing law clause in the contract. This choice is of the law that will apply to the substance of the dispute between the
+parties if the dispute arises out of the contractual provisions.
+It is important to understand that there may be other laws applicable to the dispute between the parties. If, for example,
+the arbitration clause is broad enough to include other disputes arising out of the contract or related to the contract, it is
+possible there may be other contractual or tort related claims that are brought under the same arbitration clause. In this case,
+the arbitral tribunal considering the matter may be required to consider the law applicable to the issues involved in those
+other contractual or tortious relationships between the parties and decide on the application of substantive law separately in
+relation to each of them.
+However, if those relationships are governed by other laws, it may cause some confusion or potential arguments and further
+escalation of the dispute between the parties. It is wise to consider if there are any related contracts to the contract under
+consideration (for the purposes of including governing law) and whether they can all be governed by one system of law.
+This could help to avoid further complications if disputes are ultimately considered in arbitration. This and other
+considerations will be discussed in more detail in Chapter Seven in the section on governing law clauses.
+Law of the arbitration agreement
+6-020
+“The arbitration agreement shall be governed by […]”.
+An arbitration agreement is, under most legal systems, considered to be a separate agreement from the contract it is contained
+in. As such, it will have its own governing law. This may be the same as the governing law of the host contract or it may be
+another law. It is important to consider this, and to make express provision for what law is to govern the arbitration agreement
+because, where this is not stated, different jurisdictions apply different tests to determine the law of the arbitration agreement.
+This can lead to uncertainty and, in some cases, undesired outcomes.
+The debate is primarily focused on the principle of separability of the arbitration agreement from the contract itself, usually
+for the purposes of its validity. This is to ensure that the arbitration agreement remains valid and effective, even where the
+validity of the “host” or “matrix” contract, which contains the arbitration agreement, is impugned.
+Under the principle of separability, when parties conclude a contract containing an arbitration clause, they are in effect treated
+as concluding two agreements. In practice, this means the arbitration clause will usually survive an (alleged) invalidity of the
+matrix contract. As a result, any disputes arising out of or in relation to that agreement can still be resolved through parties’
+chosen dispute resolution mechanism: arbitration. In these circumstances, the arbitration agreement would still provide the
+arbitral tribunal with the jurisdiction to decide on the validity of the contract. Even if the tribunal ultimately considers the
+contract to be invalid, it can still issue an award in this regard and a decision regarding the invalidity of the contract will
+not invalidate the award.
+Given this principle of separability, the question remains as to whether the arbitration clause or agreement (being in essence a
+separate agreement) would be necessarily governed by the same law as the matrix contract. It is especially so if the arbitration
+clause contains a seat of arbitration with applicable procedural law being different from the law governing the matrix contract.
+
+Chapter 6 - Arbitration, UKBC-EFFDIS 549291546 (2025)
+© 2025 Thomson Reuters.
+13
+In the absence of a specific provision in the arbitration clause containing governing law of the arbitration agreement, the
+question is whether it is the governing law of the matrix contract, or the law of the seat, that governs the arbitration agreement.
+This question has not received a consistent answer across different jurisdictions and the controversy still remains. 22
+This controversy developed further in the English courts, where the question of which law, the law of the seat or the governing
+law, applies to the arbitration agreement, was discussed. In a slightly convoluted way, the English Supreme Court by majority
+decided with respect to English law that the law that is applicable to the arbitration agreement will be that chosen, either
+expressly or impliedly, by the parties to govern it. If no such choice is made, but the parties have chosen a governing law for
+the substantive contract, then, unless there is a good reason to conclude otherwise, this law will generally be implied to govern
+the arbitration agreement, which forms part of the contract. If there is no choice of governing law at all, then the arbitration
+agreement will be governed by the law, which it is most closely connected to, which will usually be the law of the seat. 23
+Given the controversy around this topic, the Law Commission carried out a second consultation on reform of the Arbitration
+Act 1996. 24  In its final report, the Law Commission went further with their proposal to change the law, so that the law of
+the arbitration agreement is the law of the seat unless the parties expressly agreed otherwise in the arbitration agreement. 25
+It considered that the law in Enka v Chubb is complex and unpredictable and creates a risk of satellite arguments, which in
+turn could lead to unnecessary cost and delay. 26
+The new proposal was included in the new s.6A to be added to the Arbitration Act 1996 through the Arbitration Bill introduced
+to Parliament in November 2023. This reached its second reading in the House of Lords on 31 July 2024 and is likely to
+become law in 2024. This section provides that the law of the arbitration agreement is either the law that the parties expressly
+agree applies to the arbitration agreement or, in the absence of such agreement, the law of the seat of the arbitration in question.
+A default rule in favour of the law of the seat was considered to bring simplicity and certainty to this controversial issue. 27
+Irrespective of the position that English law adopts, it is important to consider that the question as to the applicable law to
+the arbitration agreement may be resolved differently by courts of other jurisdictions, especially at the enforcement stage.
+This could create additional issues for future litigation and potential difficulties in enforcing the award around the world.
+Moreover, the nature of international arbitration is such that an arbitral tribunal, potentially consisting of arbitrators coming
+from different legal traditions, may decide this question in a different way. This could, again, create more inconsistency,
+uncertainty and controversy around the topic.
+It is therefore important at the drafting stage to be as explicit as possible as to which law applies where and precisely specify
+the law of the arbitration agreement, even if it requires a single additional line of drafting, as this may avoid significant
+disputes down the line.
+It is also worth the parties actively considering whether there is a possibility of choosing the law of the matrix contract to be
+the same as the law of the seat of arbitration. This could avoid unnecessary arguments and uncertainty around the applicable
+law and also would allow the parties to choose arbitrators who are familiar with the law (both of the underlying contract and
+the law of the seat), which could lead to more predictability of the award issued.
+The law of the arbitration agreement can be provided either in the arbitration clause itself or in the substantive law clause of
+the underlying contract referring explicitly to the arbitration clause, that it is also governed by it.
+A few institutions, like CIArb, also provide wording specifying the law of arbitration agreement. As discussed above, in
+order to avoid further arguments as to whether it should be the law of the seat or the substantive law of the contract, it is
+recommended to specify this in the arbitration clause, in addition to the seat and the substantive law of the contract.
+There may be other requirements in national laws of other jurisdictions that need to be satisfied for the arbitration agreement
+to be recognised. As such, this needs to be checked before the decision is made as to which law/seat to include.
+Procedural law/lex arbitri
+6-021
+
+Chapter 6 - Arbitration, UKBC-EFFDIS 549291546 (2025)
+© 2025 Thomson Reuters.
+14
+The other choice of law that the parties need to make when drafting an arbitration clause is what procedural law (or sometime
+called curial law or lex arbitri) will be applied when an arbitral tribunal considers the dispute. This choice of law determines
+the national courts of the jurisdiction that will have supervisory and supporting powers over the arbitration process. Following
+an award, this is usually where challenges to the award take place (not necessarily where the enforcement of the award
+happens). National courts’ supporting powers include issuing interim measures, such as injunctions, preservation of evidence,
+property, assets, as well as securing attendance of witnesses and taking evidence of witnesses. Supervisory national court
+functions include such issues as composition of the tribunal, questions of jurisdiction and challenges to arbitral awards.
+The procedural law normally contains fundamental rules that will apply to arbitrations seated within that jurisdiction (e.g.
+equal treatment of parties, procedure for commencement of arbitral proceedings, statements of case, hearings, experts,
+evidence, awards, etc.), national court powers in support of arbitration proceedings, and their supervisory function over
+arbitral proceedings. Some will be mandatory rules, which apply to all arbitrations seated in that jurisdiction, while others
+may be default or fallback rules that can be modified or ousted by party agreement (including through the parties’ choice and
+incorporation of institutional or ad hoc arbitration rules). Typically, it will have fallback procedures for the key issues where
+the parties have failed to agree these, e.g. for the appointment of the tribunal.
+Other issues will then be left for the tribunal to determine once it is constituted. The specifics would normally be reserved
+for the arbitration rules and their application by the arbitral tribunals, who would also decide on procedural matters issuing
+procedural orders (although procedural law could set minimum procedural standards for the arbitration proceedings).
+Providing for a seat
+6-022
+Procedural or curial law is the law of the seat of arbitration. 28  The “seat” is the place where the arbitration is presumed to
+happen for the purposes of the determination of the applicable laws to it and determines the “nationality” of the award for
+enforcement purposes.
+“The seat of arbitration shall be […]”.
+With respect to whether to say “seat” or “place” of arbitration, different institutions provide for different wording. The problem
+with using the word “place” is that, whilst it was traditionally used to describe the “seat” of arbitration, it could be interpreted
+both as a “seat” and as a “venue”, which could be different from the seat. In order to avoid further confusion, it is preferable
+to indicate “seat”. If is necessary to choose “venue” at the time of drafting, which is different from the seat, the word “venue”
+could be used to contrast it from the “seat”. However, contract drafters should bear in mind that choosing the venue at the time
+of drafting could be too prescriptive or restrictive, as it is impossible to predict the impact of future geopolitical and world
+events in or around a chosen location.
+Choosing a seat does not mean, however, that the arbitrations should be physically conducted at its “seat”. If parties prefer that
+the arbitration is conducted in another place, they can dedicate or specify a “venue” for arbitration to take place. Alternatively,
+the venue could be agreed by parties when/if a dispute arises depending on the convenience for both parties and the tribunal
+to conduct the arbitration.
+There is also a possibility to conduct a hearing remotely, online or in a hybrid format, but still have the seat formally in the
+specific jurisdiction of which laws the parties want to apply for procedural issues involved in the case. This was widely done
+during the COVID-19 pandemic and remains a very convenient format to be used, when it is more efficient to do that. This
+is further discussed in Chapter Nine.
+The possibility of conducting hearings remotely is now reflected in many arbitral rules. 29  Such a provision can also be included
+in the arbitration agreement. If this is not specified in the institutional arbitration rules, it may be better to provide for such a
+possibility in the arbitration clause itself. This is in order to avoid further arguments, as to whether the arbitration rules and the
+law of the seat allow hearings to happen remotely and whether this breaches any rights of the parties.
+
+Chapter 6 - Arbitration, UKBC-EFFDIS 549291546 (2025)
+© 2025 Thomson Reuters.
+15
+A provision for remote hearings will reduce the opportunity to escalate the dispute further on procedural grounds and provide a
+convenient and cost-effective way to conduct arbitration. This could be especially important if it becomes impractical to travel
+to a particular venue for some or all of the participants in the arbitration process.
+Many jurisdictions have adopted the UNCITRAL Model Law on International Commercial Arbitration (UNCITRAL Model
+Law), 30  which contains rules for the states to adopt in their entirety or with some changes. However, not every jurisdiction has
+adopted the UNCITRAL Model Law, 31  and this may impact how arbitration proceedings are conducted. In order to make sure
+that contracting parties understand the procedural requirements, it is advisable before choosing the seat of arbitration to check
+whether the seat has fully adopted the UNCITRAL Model Law or with any changes.
+If the UNCITRAL Model Law has not been adopted, it is important to know what laws are in place in that jurisdiction and how
+they regulate the procedure for arbitration and what role the national courts have in relation to support and intervention into
+the arbitral proceedings. To avoid any challenges, drafters of the arbitration agreement need to make sure that they have a full
+appreciation of the consequences of choosing a seat and the implications of any non-standard arbitration laws that may apply
+there. It follows that, the selection of a less widely used seat may inadvertently reduce the pool of arbitrators if the parties are
+seeking an arbitrator with knowledge of the law of that seat, as well as the nature of the dispute in question.
+Moreover, whether or not the UNCITRAL Model Law has been adopted, drafters should also assess the attitude and experience
+of the local supervisory courts. Some points to consider include whether local courts have sufficient experience in dealing with
+significant commercial matters, whether there is any notable unpredictability in the way they conduct and rule on the matters,
+the length of time it may take to appeal an unfavourable court decision, as well as the risk of state interference in disputes that
+have a state angle (e.g. especially if the counterparty is a state-owned entity).
+Given the supervisory and supporting role that the local courts may be asked to exercise in relation to a particular dispute, these
+factors could substantially impact on the effectiveness of the arbitration process and its outcome. If the matter gets delayed
+in the local courts exercising these powers, the arbitration proceedings could be delayed or end up in vain even if they are
+otherwise conducted efficiently. This concern is compounded if interim measures are not granted/delayed or the challenges
+become subject to unnecessarily delay, bias or influence of the third parties in domestic courts.
+One example of the need to carefully consider the selected law is the application of s.69 of the UK Arbitration Act 1996, which
+allows parties to appeal to the court on a question of law arising out of an award made in the proceedings. Section 69(1) of the
+Arbitration Act 1996 allows parties to opt out and exclude its application but this must be expressly agreed.
+The reverse also applies, e.g. if the LCIA Rules are chosen (which exclude such appeals), then the parties could opt to incorporate
+s.69.
+There are some default rules envisaged in the applicable arbitration rules which provide for determination of the seat of
+arbitration in the absence of a specific reference to it in the arbitration agreement (see, for example, LCIA Rules 2020 art.16.2;
+ICC Rules 2021 art.18; UNCITRAL Rules 2013 art.18). In order to avoid further costs, complications and arguments, it is very
+important for drafters to specify the seat of arbitration from the start in the arbitration clause.
+Finality
+6-023
+Another important consideration relevant to the choice of seat is the possibility of a losing party challenging an award. In court
+litigation, appeals of court judgments in various jurisdictions can take a very long time and this can substantially obstruct the
+recovery of the sums awarded. In arbitration, the finality of arbitration awards is typically greater than that of court judgments.
+This is because there are usually very limited grounds for a challenge to an arbitration award. Examples of challenges can be
+seen in art.34 of the UNCITRAL Model law (see also in relation to English law—ss.67 and 68 of the Arbitration Act 1996).
+The rights to challenge an arbitration award are determined by the law of the seat, as it is only the courts of the seat of arbitration
+that have jurisdiction to hear and determine challenges to an award. However, the grounds for challenge are much narrower
+than standard rights of appeal against court judgments and are typically directed at the integrity of the arbitral process, rather
+than the merits of any decision. The exception to this is challenges that go to the jurisdiction of the tribunal, which are typically
+
+Chapter 6 - Arbitration, UKBC-EFFDIS 549291546 (2025)
+© 2025 Thomson Reuters.
+16
+more substantive challenges. As a result, this makes it more difficult for a losing party to engage in protracted and lengthy
+proceedings, which in turn brings a greater finality to the proceedings.
+In addition to any express provisions of the parties’ arbitration agreement, most institutional arbitration rules provide that the
+parties undertake to comply with any arbitral award rendered and waive all rights of recourse against it, to the extent permissible
+by law (see, for example, art.26.8 of the LCIA Rules 2020). This is sufficient to disapply s.69.
+The Law Commission also considered suggestions for either repealing s.69 or amending it to allow more appeals. However,
+it did not make recommendations for any amendments to s.69 in its final report. Instead, it considered that s.69 in its current
+form strikes a “defensible compromise between promoting the finality of arbitral awards (by limiting appeals) and correcting
+blatant errors of law”. 32
+Specifying language
+6-024
+“The language to be used in the arbitral proceedings shall be […]”.
+Drafters should consider choosing and including the language of the proceedings in the arbitration clause. This is to avoid further
+dispute in this regard. The tribunal can determine the language of arbitration, but in order to avoid further costs on arguing this
+point and to help parties to choose arbitrators and counsel for particular proceedings, it is best to know in advance what the
+language of the arbitration is going to be. If a less common language is used to suit the natural language of the parties, some
+thought needs to be given to the question of whether this could potentially reduce the pool of available arbitrators and/or raise
+the question of the cost of translation.
+When choosing the language of the arbitration proceedings, parties should consider the language of the documents being used,
+the language of the contract, substantive law of the contract, and the seat and the language of the parties. It may be sensible for
+the arbitration to be conducted in the language of the contract.
+If the parties choose a language for the proceedings that is different to the language of the contract, they need to be aware of
+potential complications arising from translation issues and/or critical issues being lost in translation. If the most convenient
+language for the proceedings has not been chosen from the start, the parties may incur substantial costs of translation and
+interpretation. However, it is also understandable that these costs may not be the most important consideration when taking
+into account all other factors.
+Drafters should also think about a potential pool of arbitrators and (if applicable) counsel available. This is particularly important
+if the language of arbitration is not one of the most common languages used and also if the language is from a jurisdiction
+where there are not many suitable arbitrators or lawyers for arbitration proceedings or a technical matter requiring a specialist
+expertise. Whilst arbitrators and counsel could work with translation/interpretation, if it is believed that the pool of available
+arbitrators due to nationality or specialisation requirements will be very limited, it is likely to be better to choose the language
+in such a way that it broadens the availability of arbitrator candidates in case of future arbitrations and reduces reliance on the
+translation/interpretation in the proceedings.
+Judgment on an award
+6-025
+“Judgment on any award issued under this provision may be entered by any court of competent
+jurisdiction”/“any court having jurisdiction thereof”.
+
+Chapter 6 - Arbitration, UKBC-EFFDIS 549291546 (2025)
+© 2025 Thomson Reuters.
+17
+This provision may not be necessary but is provided by AAA and CIArb standard clauses. Essentially, what it means is that
+an award issued under the arbitration clause could be transformed into a judgment as part of the enforcement process and, by
+that, benefit from local enforcement procedures. However, courts of the relevant jurisdiction would still have to follow their
+processes as to the enforcement of the arbitral awards. Given that this provision does not contain mandatory wording (namely
+it uses “may be”) and the fact that, irrespective of this wording being included, it does not add anything to the clause. However,
+in order to deal with an eventuality where a particular jurisdiction may require this wording to be included in the arbitration
+clause, there is no problem in including this wording in the arbitration clause.
+Confidentiality and privacy
+6-026
+Another important benefit of arbitration is that parties are able to agree on the confidentiality of proceedings. Unlike litigation,
+which, in the vast majority of the cases, will entail proceedings conducted in public, arbitrations are often both private (in the
+sense that hearings are conducted behind closed doors) and confidential with the awards themselves not being published.
+In many jurisdictions confidentiality of arbitration proceedings is the default position under the relevant laws. This is typically
+subject to some standard exceptions, namely disclosure required by law; in the interests of justice to protect a party’s interest in
+other proceedings; where the party originally produced the material consented; etc. However, there has been increasing debate
+about the need for transparency of arbitral awards and decision making in order to increase public confidence in the arbitral
+process 33  and to reduce the negative impact of “closed door” decisions on the development of commercial law. 34
+In English law, for example, privacy and confidentiality of the proceedings is preserved in common law. This means that
+the arbitration hearings are private and cannot be attended by third parties without the mutual consent of the parties to the
+proceedings. The confidentiality rule applies not just to the hearing but also to the documents generated or produced during
+the arbitration proceedings, including to the award. 35  Confidentiality is also provided for in the arbitration rules of some
+institutions. 36  However, in contrast, it should be noted that some institutions, including the ICC 37  and HKIAC, 38  have an
+express default policy of publishing awards and advise parties that the awards will be published if their rules are adopted and
+no objection to publication is made or express confidentiality clause is included in the arbitration agreement.
+This issue of confidentiality was reviewed by the Law Commission in their 2022 consultation review of the Arbitration
+Act 1996. 39  One preliminary conclusion was that not all types of arbitration should be confidential by default. 40  The Law
+Commission considered that, although the UK Supreme Court has confirmed there is normally an implied term of confidentiality
+of arbitral proceedings in the agreement, in some areas, such as investor claims against states, the default term is transparency
+rather than confidentiality.
+The Law Commission acknowledged the increasing practice of publishing arbitral awards and noted that, where parties expressly
+agree to confidentiality or transparency, the law gives that weight and takes the agreement as the starting point. As a result,
+in its final report, the Commission did not suggest any amendments in this area to the Arbitration Act 1996. This decision
+took account of the divergence of approaches in this area, the different approaches of arbitration rules and the ability to agree
+confidentiality. 41
+Parties need to be aware that confidentiality obligations may not be imposed by the laws of every jurisdiction or the rules
+of every arbitration institution. Furthermore, the scope of the confidentiality obligation may vary. As such, parties need to
+be careful about assuming that arbitrations are always confidential by default. If confidentiality is important, the parties
+should check with lawyers of the respective jurisdictions, whether this is definitely the case. At any event, in order to avoid
+unnecessary ambiguity and further arguments during arbitration proceedings, the parties should consider expressly providing in
+their arbitration agreement for privacy and confidentiality of arbitration proceedings and any documents generated or disclosed.
+
+Chapter 6 - Arbitration, UKBC-EFFDIS 549291546 (2025)
+© 2025 Thomson Reuters.
+18
+Some arbitration rules deal with confidentiality but not all of them to the same extent. 42  If confidentiality is important for the
+parties, in order not to rely on the law of a particular jurisdiction or on the arbitration rules to preserve confidentiality, it is better
+to include a confidentiality clause in the agreement.
+The scope of such a confidentiality clause should be as wide as possible and not just apply to the award itself but to all the
+documents prepared for, submitted or disclosed in the proceedings. This would then be part of the contract between the parties
+and could be ruled upon if a party is perceived to have breached it.
+As it is a contractual term, if there is a breach of the confidentiality clause, the normal potential remedies could apply, including
+seeking an injunction or pursuing damages. As with a normal civil breach, the challenge would be to prove causation and
+damage but, in the circumstances, depending on the nature of the breach, there may also be the potential to seek remedies within
+the arbitration process itself. The process and outcome would be fact specific but the threat of such a remedy should serve to
+remind parties not to take the duty of confidentiality lightly.
+By way of example, the ICC model clause mentions a potential additional provision to the arbitration agreement, which is
+designed to allow the parties to explicitly protect the confidentiality of the proceedings:
+“The parties agree to keep confidential the existence of the arbitration, the arbitral proceedings, the
+submissions made by the parties and the decisions made by the arbitral tribunal, including its awards, except
+as required by applicable law and to the extent not already in the public domain.”
+At the same time, there are circumstances where applicable laws may require lifting of confidentiality. This could happen in
+case of challenges in national courts of the jurisdiction of the tribunal or of the award. In this case, this provision may not protect
+them fully. This is another important example of the need to check with local lawyers of the laws applied to arbitration before
+deciding on a selection of particular laws and be aware of any potential issues, if later a dispute arises between the parties.
+Other clauses to consider
+6-027
+There may be other procedures or remedies that drafters may decide to consider which could make arbitration process more
+robust and/or effective. These include the power of the tribunal to make provisional awards; 43  for the tribunal to follow strict
+rules of evidence in determining any dispute; 44  providing certain time limits, etc.
+Apart from considering aspects of how the arbitral proceedings should be conducted, other provisions can be used to determine
+aspects of the dispute resolution process that are outside of the scope of the arbitration proceedings themselves. This allows for
+the inclusion of escalation clauses (see Chapter Two) and asymmetric clauses (see Chapter Seven).
+Before considering these possibilities, drafters should familiarise themselves with the requirements of the law of the seat and
+whether the law will support these types of procedures or remedies. This is important if the involvement of the national courts
+in the process is required but runs the risk of overcomplicating matters. It may not be a good idea to be too specific in relation
+to the procedures and remedies but, instead, to leave it for the tribunal to decide depending on the circumstances of the case
+(or the parties agreeing).
+This is especially so if the dispute that arises does not need to have stringent requirements provided or the arbitration clause
+makes the determination of the dispute more costly or sets unrealistic requirements or limits. The existing legal framework, the
+applicable arbitration rules, together with the arbitration clause containing essential elements, may be enough for the constituted
+arbitral tribunal to decide on the application of particular procedures to the dispute in question.
+
+Chapter 6 - Arbitration, UKBC-EFFDIS 549291546 (2025)
+© 2025 Thomson Reuters.
+19
+Multi-party and multi-contract disputes
+6-028
+The complexity of multi-party relationships may require more sophisticated contractual arrangements, where the rights and
+obligations of the various parties may be dependent on the outcome of a particular set of proceedings. At the same time, the
+dispute may be multifaceted and based on various interlinked contractual arrangements.
+In these circumstances, resolution of a dispute between the parties involving arbitration proceedings may be particularly
+problematic. This is especially so where the contract drafters did not envisage provisions dealing with multi-party disputes
+because, unlike litigation, consent from all parties is likely to be required to arbitrate for the parties involved in the proceedings.
+If this consent is not expressed at the point of drafting of the arbitration agreement, gaining the necessary consent may be
+particularly problematic after a dispute arises. In the absence of express agreement, parties may try and use the multiplicity of
+proceedings or lack of prior agreement, to gain a tactical advantage (e.g. by making it difficult to be sued by the same claimant
+or by trying its chances in multiple proceedings).
+The problem with multiple proceedings is that, not only could they lead to completely different outcomes, but also more time
+and cost could be spent on resolving the disputes through arbitration. This is because each set of proceedings would require an
+arbitrators’ involvement, potentially an arbitral institution, and lawyers’ involvement, as well as various submissions, documents
+and evidence.
+An additional problem is that, with multiple contracts or issues involved and interlinked proceedings, there may be various
+findings of fact by different tribunals, and these may be inconsistent. One consequence of this is that awarded remedies may end
+up overcompensating one party at the expense of others with difficulties proving this in separate sets of potentially confidential
+proceedings.
+This can be illustrated by considering a scenario where one party hopes to be awarded separate remedies by trying to sue another
+party under separate contracts containing different arbitration clauses alleging each contract had been breached in separate
+proceedings arising out of the same or similar facts. Where separate tribunals are involved with each dealing with separate
+contracts, and not necessarily concurrently, in the absence of a consolidation provision, the chances of them coming to different
+conclusions, with potentially different or overlapping outcomes, are substantial.
+In these circumstances, in order to avoid protracted arguments involving complex questions of jurisdiction, consent,
+confidentiality and res judicata, a consolidation clause that is entered into before the dispute arose would provide a more
+effective way of dealing with the complexity of the situation.
+At the same time, if more than two parties are involved in the proceedings or there are a number of interconnected contracts
+with more than two parties, a provision for joinder or intervention for a third party before a dispute arises would make it easier
+to avoid additional proceedings with potentially inconsistent outcomes later.
+Whilst multi-party and multi-contract arbitrations are complex, the issues raised are not insurmountable. Looking at the reports
+from some institutions, it is worth noting that the incidence of multi-party arbitrations is not insignificant. LCIA report that
+around 20–25% of their arbitration proceedings include more than two parties with 7–8% arising from more than one agreement.
+Similarly, ICC report that around 30% of their proceedings are multi-party. 45
+Potential mechanisms of addressing multi-party and multi-contract
+disputes
+6-029
+
+Chapter 6 - Arbitration, UKBC-EFFDIS 549291546 (2025)
+© 2025 Thomson Reuters.
+20
+There are various existing mechanisms that provide for addressing the situation of multi-party and multi-contract disputes. These
+include joinder, intervention, consolidation, agreement for a common arbitrator, common hearings and/or common evidence
+between two or more sets of arbitration proceedings.
+Where there is a multi-party contract or dispute, provision for joinder and/or intervention is important. Joinder is where one
+or more parties join a third party to the existing arbitral proceedings. In contrast, intervention is where a third party seeks to
+join the proceedings between the other parties. In these circumstances, after joinder or intervention, all parties will be bound by
+the award of the tribunal under one set of proceedings. This avoids a situation of inconsistent findings by multiple tribunals, as
+well as saving the cost of any additional arbitrations. Costs can be dealt with in one set of proceedings and distributed among
+the parties accordingly by the tribunal.
+Consolidation is when two or more sets of arbitration proceedings under different contracts are consolidated under one reference/
+case number. After consolidation, an award issued in the consolidated proceedings would be binding on all those under that
+one reference. It is also possible for there to be more than two parties involved in these separate contracts. This may make the
+situation more complicated for the contract drafters, as each party needs to have an equal opportunity to appoint arbitrators.
+This can be achieved by either an arbitral institution/appointing authority appointing all arbitrators or the parties appointing
+according to their “sides” (see more explanation on this below).
+Where full consolidation is not possible or not agreeable, parties could provide for the appointment of a common arbitrator for
+two or more sets of proceedings. Although this would not entirely eliminate the possibility of inconsistent findings (given that
+evidence heard by the tribunal may be different), the approach to facts and law is at least likely to be similar. The drawback of
+this approach is that costs will not be saved by consolidation. There will also be separate awards for each reference, including
+in relation to costs, which would only bind the parties in that particular set of proceedings and cannot be passed across to the
+parties of the other set of proceedings.
+Perhaps, closer to consolidation, it is also possible to agree that the common arbitrator hears common evidence at the concurrent
+hearings. This should allow more consistent findings to be made by the common arbitrator, with a saving in the costs of the
+hearings and presentation of evidence. However, there will still be separate awards and the question of the distribution of costs
+between the parties will not be dealt with in the same way as it could be if the proceedings were consolidated.
+If the parties are considering having a common arbitrator and common evidence and concurrent hearings, the provision for
+consolidation of the proceedings would be a more effective option. It is also possible in other circumstances that some parties
+may be more concerned about preserving confidentiality from some other third parties and, therefore, may decide to appoint a
+common arbitrator but not to consolidate the proceedings on this basis.
+Where common evidence and concurrent hearings are envisaged, the confidentiality consideration is no longer relevant. It could
+then be more reasonable to consolidate the proceedings under one reference to save on the costs of having two separate tribunals
+and ensure there are no inconsistent judgments. The costs could then be distributed among the parties accordingly under one
+set of proceedings. This may also be procedurally more straightforward with less risk of satellite arguments about how the
+concurrent hearings/evidence should be conducted.
+When a dispute arises, if there is no provision for consolidation in the contract, one party might be tempted to take advantage
+of the lack of prior consent for consolidation from the other side. They could see it as beneficial to run several arbitrations in
+parallel relying on a possibility of inconsistent findings or being compensated more. A dominant party may also see an option
+to try and drain the financial resources of the other party in an opportunistic attempt to put pressure on them to settle. This
+hypothetically aggressive approach is certainly not something that will make the resolution of a dispute more effective or benefit
+both parties equally, but illustrates the potential problems that can arise if one or both parties are uncooperative after a dispute
+has arisen, where no consolidation provisions were included in the agreement in advance.
+Accordingly, if there are related contracts and multiple sets of proceedings, a better approach would be to provide for a possibility
+of consolidation of multiple sets of proceedings in advance, at the time of drafting the contract and before any disputes arise.
+This is to ensure that this more effective approach is agreed by all possible parties involved and no further argument arises
+about that when they are in dispute later on.
+
+Chapter 6 - Arbitration, UKBC-EFFDIS 549291546 (2025)
+© 2025 Thomson Reuters.
+21
+Considerations for drafting effective multi-party and multi-contract
+clauses
+6-030
+Depending on the number of parties or contracts involved, separate consideration should be given to how to structure the
+arbitration clause/agreement between them. This can be done by drafting a stand-alone or umbrella dispute resolution agreement/
+clause to be signed separately by all parties. As an alternative, the parties could sign each contract incorporating an arbitration
+agreement by reference to another contract containing identical or compatible arbitration clauses allowing for joinder and
+consolidation. The best choice is dependent on the nature of the relationship between the parties involved and the structure of
+their contractual arrangements.
+If contract drafters choose to have an arbitration clause in each contract, it is better to have an identical clause inserted in order
+to avoid any questions of compatibility or their scope and to draft the clause as broadly as possible. Such a clause would then
+more readily accommodate a joinder and/or consolidation.
+Needless to say, if the parties still decide to include different wording for each arbitration clause in each contract, they at least
+need to be compatible in terms of choosing the same governing law, seat of arbitration, and arbitration institution or ad hoc
+arbitration. If this is not done, the parties risk having arguments in the event of joinder or consolidation as to whether consent
+was given to arbitrate under a particular procedure or whether the tribunal has jurisdiction over the related contract.
+It is important to ensure that both the consent of the parties to a particular arbitration procedure, as well as jurisdiction of the
+appointed tribunal, are clearly spelled out. Such consent may either be expressly agreed by parties to the arbitration agreement
+or derived from the agreement to apply the rules of the arbitral institution containing provisions on joinder/consolidation.
+If it is anticipated that disputes may involve more than two parties, or additional contracts, it is better to expressly specify the
+consent for joinder/consolidation in the clause. This should avoid further arguments as to whether the rules chosen provide
+for such consent or require consent to be agreed by the parties separately. These measures are desirable because it is not clear
+whether the parties, if already in dispute, would be amenable to resolving their dispute in one set of proceedings or whether
+they may have tactical considerations not to do that later.
+In order for a tribunal to be able to make an award in relation to all the related contracts the parties intend for it to rule on, the
+agreement must provide for the tribunal to have jurisdiction with respect to those contracts, as well as the issues covered by
+them. This can make it important to including a broader wording for the scope of the arbitration clause.
+If an arbitration institution is chosen to administer the arbitration, they are likely to provide for a joinder/consolidation
+mechanism in their institutional rules. It is better to use the same mechanism provided by the chosen institutional rules to avoid
+further arguments on compatibility of the mechanism provided in the clause with the institution rules chosen.
+If a separate mechanism is provided, it is important to specify that it will apply instead of the one provided in the institutional
+rules. If ad hoc arbitration is chosen, a good starting point is provided by the International Bar Association Guidelines for
+Drafting International Arbitration Clauses (2010) (IBA Guidelines 2010), 46  which also includes samples of consolidation and
+joinder clauses (discussed in para.6-031).
+If a separate or ad hoc mechanism is provided in the arbitration clause, it needs to contain all the details as to the procedure
+of joinder and consolidation, in particular, under which circumstances a party would be joined to the proceedings, when and
+what proceedings can be consolidated, etc. It also needs to ensure that the tribunal has a power to rule on this (in the event of
+controversy) and make a consolidation order. It is also important to specify which tribunal (in the event of consolidation) would
+remain as the tribunal for the consolidated proceedings and which one will cease to act.
+As proceedings may not start all at the same time, in the event of commencement of the proceedings between two parties,
+another point to decide is whether the other party/parties to the contract(s) will be given notice of the proceedings to enable
+them to intervene/request consolidation. Given their confidential nature, it is also possible that parties to the contract will not
+be automatically informed of the proceedings, unless the same is provided for in the arbitration clause.
+
+Chapter 6 - Arbitration, UKBC-EFFDIS 549291546 (2025)
+© 2025 Thomson Reuters.
+22
+Advance notice of the proceedings being commenced, and giving time and opportunity to the parties to join regardless of
+whether they are a named party in the request for arbitration, will be able to provide for a more cost-effective and procedurally
+straightforward way of dealing with multi-party proceedings from the start. This would also allow them to participate in the
+selection of arbitrators and put them on an equal footing with the original parties to the proceedings. For this reason, it is
+important to define the time period for the party to intervene/join and agree that they will not proceed to appoint the tribunal
+until this period expires.
+The mechanism of selection of arbitrators is one of the most controversial issues in multi-party arbitrations. This is because each
+party should have equal opportunity to select arbitrators and, therefore, if there are more than two parties, the normal selection
+process of each party selecting one arbitrator becomes impossible.
+Various arbitral institutions provide for different mechanisms for appointing arbitrators if there are more than two parties in the
+dispute. 47  Similar mechanisms could be provided in a separate arbitration clause for an ad hoc arbitration.
+One option is to agree that all three arbitrators (in case of a three-member tribunal) would be appointed by a designated
+appointing authority. However, in these circumstances, the parties potentially lose one of the advantages of arbitration being the
+ability to select their own tribunal. Another possibility is for the parties to make joint appointments on each “side” and then for
+the arbitrators appointed by each “side” to appoint a presiding arbitrator or for the institution to appoint a presiding arbitrator.
+This option is provided in the IBA guidelines discussed later in para.6-031.
+In the event of parties on each “side” not being able to agree an arbitrator, all the arbitrators would be appointed by the arbitration
+institution or the designated appointing authority, so as to minimise the risk of bias and to ensure equal treatment of the parties.
+Unfortunately, the result of this situation would again be to remove the choice of the tribunal from the parties, although the
+parties on each of the “sides” may then be more inclined to agree an arbitrator between themselves, as they are likely to have
+fewer conflicting interests.
+In order to make an arbitration clause more effective from the start, no matter what mechanism is selected, it is important to
+spell it out in the agreement, including what the default mechanism of appointment would be if the parties are unable to agree.
+Joinder/consolidation clauses—International Bar Association Guidelines
+6-031
+The IBA Guidelines 2010 48  provide examples of joinder and consolidation clauses 49  that could be used in ad hoc arbitration
+or where a separate mechanism for consolidation and joinder is to be agreed.
+The IBA clause starts with the generic wording of an arbitration clause (see more detailed discussion as to what to include in
+the wording in the preceding sections of this chapter).
+“All disputes arising out of or in connection with this agreement, including any question regarding its
+existence, validity, or termination, shall be finally resolved by arbitration under [selected arbitration rules],
+except as they may be modified herein or by mutual agreement of the parties.
+The place of arbitration shall be [city, country]. The language of arbitration shall be […]. There shall be three
+arbitrators, selected as follows.”
+The IBA example of the clause further provides for a procedure for selecting arbitrators where there are only two parties that
+will participate in the arbitral proceedings, including dealing with a default situation where either a party fails to appoint its
+arbitrator or two appointed arbitrators by their respective parties fail to appoint the presiding arbitrator.
+
+Chapter 6 - Arbitration, UKBC-EFFDIS 549291546 (2025)
+© 2025 Thomson Reuters.
+23
+“In the event that the request for arbitration names only one claimant and one respondent, and no party
+has exercised its right to joinder or intervention in accordance with the paragraphs below, the claimant
+and the respondent shall each appoint one arbitrator within [15] days after the expiry of the period during
+which parties can exercise their right to joinder or intervention. If either party fails to appoint an arbitrator
+as provided, then, upon the application of any party, that arbitrator shall be appointed by [the designated
+arbitral institution]. The two arbitrators shall appoint the third arbitrator, who shall act as presiding arbitrator.
+If the two arbitrators fail to appoint the presiding arbitrator within [45] days of the appointment of the
+second arbitrator, the presiding arbitrator shall be appointed by [the designated arbitral institution/appointing
+authority].”
+The clause further deals with the selection of arbitrators in a situation where there will be more than two parties participating
+in the proceedings, either because they originally appeared in the request for arbitration or by virtue of joinder or intervention.
+The provided procedure requires parties to select arbitrators according to their respective “sides”: claimants or respondents.
+“In the event that more than two parties are named in the request for arbitration or at least one contracting
+party exercises its right to joinder or intervention in accordance with the paragraphs below, the claimant(s)
+shall jointly appoint one arbitrator and the respondent(s) shall jointly appoint the other arbitrator, both within
+[15] days after the expiry of the period during which parties can exercise their right to joinder or intervention.
+If the parties fail to appoint an arbitrator as provided above, [the designated arbitral institution/appointing
+authority] shall, upon the request of any party, appoint all three arbitrators and designate one of them to act
+as presiding arbitrator. If the claimant(s) and the respondent(s) appoint the arbitrators as provided above, the
+two arbitrators shall appoint the third arbitrator, who shall act as presiding arbitrator. If the two arbitrators
+fail to appoint the third arbitrator within [45] days of the appointment of the second arbitrator, the presiding
+arbitrator shall be appointed by [the designated arbitral institution/appointing authority].”
+The subsequent paragraphs of the clause deal with the question of notice of arbitration to all the parties of the agreement, as
+well as the period during which parties can be joined or intervene.
+“Any party to this agreement may, either separately or together with any other party to this agreement, initiate
+arbitration proceedings pursuant to this clause by sending a request for arbitration to all other parties to this
+agreement [and to the designated arbitral institution, if any].
+Any party to this agreement may intervene in any arbitration proceedings hereunder by submitting a written
+notice of claim, counterclaim or cross-claim against any party to this agreement, provided that such notice
+is also sent to all other parties to this agreement [and to the designated arbitral institution, if any] within
+[30] days from the receipt by such intervening party of the relevant request for arbitration or notice of claim,
+counterclaim or cross-claim.
+Any party to this agreement named as respondent in a request for arbitration, or a notice of claim,
+counterclaim or cross-claim, may join any other party to this agreement in any arbitration proceedings
+hereunder by submitting a written notice of claim, counterclaim or cross-claim against that party, provided
+that such notice is also sent to all other parties to this agreement [and to the designated arbitral institution,
+if any] within [30] days from the receipt by such respondent of the relevant request for arbitration or notice
+of claim, counterclaim or cross-claim.”
+
+Chapter 6 - Arbitration, UKBC-EFFDIS 549291546 (2025)
+© 2025 Thomson Reuters.
+24
+The next part of the clause confirms the very important point that all the parties under the same proceedings will be bound by the
+award of the tribunal. This applies whether they decide to participate in the proceedings themselves or not. This could happen,
+for example, if after agreeing this clause under the contract, they were joined to the proceedings but decided for whatever reason
+not to take part in them.
+“Any joined or intervening party shall be bound by any award rendered by the arbitral tribunal even if such
+party chooses not to participate in the arbitration proceedings.”
+Dealing with multi-contract situations, it is important to provide for a mechanism for consolidation of two or more sets of
+proceedings in the arbitration clause. The IBA Guidelines 2010 gives an example of such a clause in its para.113.
+The IBA mechanism of consolidation is provided in the clause through an application to the tribunal for a consolidation order.
+“The parties’ consent to the consolidation of arbitrations commenced hereunder and/or under [the related
+agreements] as follows. If two or more arbitrations are commenced hereunder and/or [the related agreements],
+any party named as claimant or respondent in any of these arbitrations may petition any arbitral tribunal
+appointed in these arbitrations for an order that the several arbitrations be consolidated in a single arbitration
+before that arbitral tribunal (a ‘Consolidation Order’). In deciding whether to make such a Consolidation
+Order, that arbitral tribunal shall consider whether the several arbitrations raise common issues of law or
+facts and whether to consolidate the several arbitrations would serve the interests of justice and efficiency.”
+The clause further deals with consequences of termination of the appointment of the tribunal in the arbitration, which was
+consolidated into the first/main arbitration. It is important to provide that the acts of the tribunal, whose functions are going to
+be terminated, will be valid up to the point of the termination of its appointment.
+“If before a Consolidation Order is made by an arbitral tribunal with respect to another arbitration, arbitrators
+have already been appointed in that other arbitration, their appointment terminates upon the making of such
+Consolidation Order and they are deemed to be functus officio. Such termination is without prejudice to:
+(i) the validity of any acts done or orders made by them prior to the termination, (ii) their entitlement to be
+paid their proper fees and disbursements, (iii) the date when any claim or defence was raised for the purpose
+of applying any limitation bar or any like rule or provision, (iv) evidence adduced and admissible before
+termination, which evidence shall be admissible in arbitral proceedings after the Consolidation Order, and
+(v) the parties’ entitlement to legal and other costs incurred before termination.
+In the event of two or more conflicting Consolidation Orders, the Consolidation Order that was made first
+in time shall prevail.”
+Further important wording is provided in para.109 of the IBA Guidelines 2010, which deals with the tribunal’s jurisdiction over
+all the related agreements. This is important to clarify if there is no stand-alone dispute resolution protocol but, instead, each
+related contract contains a separate arbitration clause. This is because the tribunal in the consolidated proceedings will have
+to deal with all the related agreements and will not be able to do that unless its jurisdiction over all of them is confirmed or
+established. In order to avoid any challenges to the jurisdiction of the tribunal, it is important to clarify this from the start in
+the arbitration clause for each related agreement.
+
+Chapter 6 - Arbitration, UKBC-EFFDIS 549291546 (2025)
+© 2025 Thomson Reuters.
+25
+“The parties agree that an arbitral tribunal appointed hereunder or under [the related agreement(s)] may
+exercise jurisdiction with respect to both this agreement and [the related agreement(s)].”
+The consolidation procedure is helpful to deal with multiple arbitration proceedings, especially where there is no national
+court power to consolidate. It deals with the potential issue of parallel proceedings, escalating courts and sometimes even
+irreconcilable awards. However, drafting such clauses in multi-contract situations, especially if multiple parties are also
+involved, is going to be very complicated. It may also give rise in certain jurisdictions to a possibility of class arbitrations,
+which the drafters might want to exclude. In this regard, the contract drafters need to approach the question of inclusion of their
+own consolidation/joinder clauses with caution.
+As an alternative, it may be easier and more effective to rely on the procedure provided by the arbitration rules of the arbitration
+institution selected. 50  An additional benefit is that, in the event of a dispute, parties will also be able to rely on the expertise of
+the arbitration institution or arbitrators to deal with any issues related to the interpretation of those rules. Providing for advanced
+consent of the parties for a joinder, intervention and/or consolidation in the clause itself, in addition to the consolidation/joinder
+mechanism provided in the selected arbitration rules, may be the best way to strike the optimum balance of simplicity and
+caution.
+Enforcement considerations when selecting arbitration for effective
+dispute resolution
+6-032
+When deciding whether to select arbitration or litigation as a binding dispute resolution method, the parties need to consider
+how easy it is going to be to enforce the outcome (meaning judgment or award) in another country. In this regard, one of the
+most important factors in selecting arbitration, in preference to litigation, is that the mechanism of enforcement is simplified
+and streamlined by virtue of the widespread application of the New York Convention. 51
+This powerful instrument has over 170 signatories and brings recognition and power to arbitration processes around the world.
+It provides for recognition and enforcement of international arbitral awards made under a valid arbitration agreement in the
+contracting countries. It also provides simple requirements for applying for the recognition and enforcement of the award (see
+art.IV of the New York Convention). According to this Convention, foreign arbitral awards must be recognised and enforced
+in another contracting state and may be refused only under very limited grounds (see art.V of the New York Convention).
+The grounds of refusal have been split into bullet-points for easy references, as follows:
+ 
+• Incapacity of the parties to the agreement under the law to which they are subject to (art.V(1)(a)).
+ 
+• Invalidity of the agreement under the governing law of the arbitration agreement or if not indicated, under the law of the
+country where the award was made (art.V(1)(a)).
+ 
+• The party against whom the award is invoked was not given proper notice of the appointment of the arbitrator or of the
+arbitration proceedings (art.V(1)(b)).
+ 
+• This party was otherwise unable to present its case (art.V(1)(b)).
+ 
+• The award deals with a difference not contemplated by or not falling within terms of the arbitration agreement (art.V(1)
+(c)).
+ 
+• The award contains decisions on matters beyond scope of the arbitration agreement (art.V(1)(c)).
+ 
+• The composition of tribunal was not in accordance with the parties’ agreement or law of country in which arbitration
+took place (art.V(1)(d)).
+
+Chapter 6 - Arbitration, UKBC-EFFDIS 549291546 (2025)
+© 2025 Thomson Reuters.
+26
+ 
+• The arbitral procedure was not in accordance with parties’ agreement or law of country in which arbitration took place
+(art.V(1)(d)).
+ 
+• The award has not yet become binding (art.V(1)(e)).
+ 
+• The award has been set aside or suspended in the country where or under the law of which it was made (art.V(1)(e)).
+ 
+• The matter is not capable of settlement by arbitration (art.V(2)(a)).
+ 
+• The recognition or enforcement would be contrary to public policy (art.V(2)(b)).
+The above list is exhaustive and, as can be seen, the grounds for refusing recognition are rather limited. For the purpose of
+contract drafters, in order to try to reduce the potential for disputes over the enforceability of the award, the potential grounds
+for resisting the recognition of the awards should be considered at the time when the contract is drafted.
+An obvious example is to make sure that the arbitration agreement, or arbitration clause, is drafted to be valid under the law
+applicable to the arbitration agreement, as well as any other laws (law of the seat/governing law). It is also important to ensure
+that there is no contention between the parties as to what the law of the arbitration agreement is (see para.6-020 for further
+details). It follows that that the contract drafters need to be familiar with the applicable laws or seek advice from local lawyers.
+If there is any doubt about the capacity of the parties to conclude the arbitration agreement, it is also important that this is
+checked against applicable laws. The New York Convention reinforces this point as lack of capacity is a ground for enforcement
+being refused.
+So far as possible, in order to avoid any arguments regarding the respondent not being given a proper notice, the notice provision
+needs to be straightforward and unambiguous. Providing for a number of methods to give this notice can help to avoid technical
+arguments about personal service or postal service in case of disputed delivery.
+As one of the grounds for refusing the recognition or enforcement deals with the scope of the arbitration agreement, it is also
+important to make the scope of the arbitration agreement as broad as possible. This reduces the risk of the other side arguing
+later that the award deals with a dispute that is not covered by the arbitration agreement.
+In order to avoid subsequent arguments as to the composition of the tribunal at the enforcement stage, drafters should make
+sure that they specify the procedure for appointment of the arbitral tribunal as clearly as possible and deal with the question
+of how arbitrators are going to be appointed in default.
+In order to avoid further delays and challenges to the award and its enforcement either at the national courts of the seat or at
+the relevant enforcing court, the law of the seat should be checked for any inconsistencies between the procedure specified in
+the arbitration agreement and the law of the seat.
+Parties should bear in mind the law of the country where they may subsequently need to enforce any award. This is because
+under art.V(2) the dispute has to be capable of settlement by arbitration under the law of that country and can be also challenged
+on the basis of the public policy of that country. Although public policy arguments are normally difficult to run in arbitration-
+friendly jurisdictions, this may not be the case for every country. It is better to check in advance as to whether there are specific
+requirements by the law of this country regarding arbitration awards and their enforcement. In this context, it is important to
+understand that the most relevant country for considering enforcement is the country (or countries) where the assets of the
+relevant party are located.
+If a potential country for enforcement, or of the seat, is not a party to the New York Convention, 52  it may be wise, where possible,
+to try to avoid this jurisdiction as a seat and obtain further legal advice from local lawyers as to the additional requirements for
+the recognition and enforcement of the awards there. This is necessary because the process of enforcement there may not be as
+straightforward as in a state that is a party to the New York Convention.
+
+Chapter 6 - Arbitration, UKBC-EFFDIS 549291546 (2025)
+© 2025 Thomson Reuters.
+27
+International arbitration in the context of other methods of dispute
+resolution
+6-033
+Given that arbitration is a final and binding method of dispute resolution, it is perceived more as an alternative to litigation,
+as opposed to other dispute resolution methods. Moreover, as discussed in para.7-003, it has a better structured framework of
+enforcement of arbitration awards worldwide than court judgments of a particular jurisdiction would have. Therefore, arbitration
+is often chosen for international disputes, as it provides a final resolution to a dispute on a more cross-jurisdictional scale.
+Despite all the advantages that arbitration brings, it should not be “idealised” as providing the only effective solution to problems
+with the dispute resolution process. Even with an international framework for enforcement, the successful party could still find
+itself dragged into a new dispute of trying to enforce an award in another jurisdiction or be on the other side of the award being
+challenged in domestic courts.
+Moreover, the personality and methods of a particular arbitrator or appointed tribunal may not necessarily lead to the most
+efficient and fair process and could, to some extent, be subject to abuse by some. One of the issues is that, whilst they can be
+certified, arbitrators are not regulated unless they belong to a particular organisation or are regulated as lawyers by their national
+authorities. This means that if parties have not done their due diligence on the arbitrator, the consequences of their decision-
+making process can become very unpredictable and may not help either parties or the process. This is not to say that similar
+problems of potential bias and inefficiency never apply to judges in litigation but, if this is the case, there is a potential route
+of appeal that has more options than arbitration.
+These issues with arbitration highlight why it is important not to lose sight of other methods of dispute resolution, used in
+conjunction with arbitration or instead of it. This may be achieved by either attempting to resolve any dispute without initiating
+formal, final and binding dispute resolution processes, or by interrupting/pausing that process in an attempt to resolve the
+dispute, when formal (for example, arbitration) proceedings are already ongoing, or even after those proceedings are completed.
+An example of the above could be Med-Arb. 53  This is where the parties attempt mediation first and then, if unsuccessful,
+they could proceed to arbitration. Nobody prohibits them (and it could even be encouraged in some jurisdictions) to make
+another attempt to mediate even when the arbitration proceedings are ongoing. 54  If the parties manage to settle their dispute
+by mediation or otherwise, they could ask the tribunal to enter an award by consent and treat the arbitration proceedings as
+terminated by consent.
+At the same time, even if the arbitration proceedings concluded and the award has been issued, there may still be a room for the
+parties to have further discussions on the settlement. No matter how paradoxical this sounds, especially given that arbitration
+is considered to bring a final and binding resolution to the dispute, as stated above, this may not be the end of the matter and
+the matter may proceed further to courts for challenges or enforcement proceedings.
+If the winning party envisages complications that could follow from the award in national courts, it may consider whether to
+approach the losing party for further considerations of settlement. It may well be that an immediate (or almost immediate)
+payment of a sum of money at a discounted rate or a reduction/removal of interest due may better suit its interests, rather than
+incurring further delays and costs in national courts in an attempt to enforce the award, if this considered to be a particular
+issue in the case.
+These potential settlement options still remain, even after the award is issued. Due care and consideration should at least be given
+to the two main factors of time and costs. Furthermore, the parties should also consider such additional factors as preserving
+business relationships between the parties; business reputation; risks of the dispute and the award becoming public; and even
+entering into a new deal or contract with the same business partner. If an old dispute is resolved amicably and reasonably, this
+can actually strengthen a partnership and allow the parties to move on with their business relationship.
+All these factors could be considered either before initiating arbitration, during arbitration or even after the award in terms of
+whether some other dispute resolution method, such as mediation or negotiation, should be attempted. What is important is to
+bear all these potential interests in mind from the time when the dispute arises, in order to find the best approach to resolve the
+dispute between the parties in the most effective way.
+
+Chapter 6 - Arbitration, UKBC-EFFDIS 549291546 (2025)
+© 2025 Thomson Reuters.
+28
+Although it can be difficult if one party tries to take fair and considerate steps and the other party does not reciprocate, the mutual
+benefit of a more balanced approach can be significantly higher than simply embarking on prolonged and costly arbitration
+proceedings, whose outcome can rarely, if ever, be predicted due to third parties (arbitrators) being involved in the decision-
+making process.
+Footnotes
+1
+See, for example, the UK Supreme Court’s decision in AES Ust-Kamenogorsk Hydropower Plant LLP v Ust-
+Kamenogorsk Hydropower Plant JSC [2013] UKSC 35; [2013] 1 W.L.R. 1889.
+2
+See para.6-022 for the discussion regarding choosing a seat of arbitration.
+3
+See further discussion on the difference between litigation and arbitration in Chapter Eight.
+4
+Examples of institutions set up during the early phase of globalisation include: London Maritime Arbitrators Association
+(LMAA, 1960); ICSID (International Centre for the Settlement of Investment Disputes, 1966); JAMS (Judicial
+Arbitration and Mediation Services, 1979); HKIAC (Hong Kong International Arbitration Centre, 1985); SIAC
+(Singapore International Arbitration Centre, 1991); AAA/ICDR (American Arbitration Association/International Centre
+for Dispute Resolution); Centro de Arbitraje y Mediación de la Cámara de Comercio de Santiago (CAM Santiago, 1992);
+Câmara de Conciliação, Mediação e Arbitragem CIESP/FIESP (Sao Paolo, 1995).
+5
+More recently established institutions include Vienna International Arbitration Centre (VIAC, 2006); Dubai
+International Arbitration Centre (DIAC, 2008); Shenzhen Court of International Arbitration (SCIA, 2009); Nairobi
+Centre for International Arbitration (NCIA, 2013); and the International Arbitration Centre/Astana International Finance
+Centre (IAC/AIFC, 2001/2015).
+6
+United Nations General Assembly, UNCITRAL Arbitration Rules (UNCITRAL Rules), Resolution adopted by the
+General Assembly on 9 December 2021, A/RES/76/108.
+7
+Examples of institutions prepared to administer UNCITRAL Rules include LCIA, SIAC (under SIAC Practice Note PN
+03/07 (1 July 2007), and HKIAC (under 2015 HKIAC Procedures for the Administration of International Arbitration).
+8
+For example, International Arbitration Centre (IAC) at the Astana International Financial Centre (AIFC).
+9
+HKIAC Administered Arbitration Rules 2015 pursuant to para.2 of Sch.1 to the Rules. Where the amount in dispute
+is not quantified, pursuant to para.2.5 of Sch.1 to the Rules, HKIAC’s administrative fees shall be fixed by HKIAC,
+considering the circumstances of the case. Where, pursuant to art.10 of the Rules, the fees of the arbitral tribunal are to
+be determined in accordance with para.9 of Sch.2: (a) subject to para.9.5 of that Schedule, the maximum agreed hourly
+rate of an arbitrator will be HKD 6,500 per hour.
+10
+LCIA Schedule of Costs (effective 1 October 2020) for arbitrations conducted under the LCIA Arbitration Rules (LCIA
+Rules). This schedule of arbitration costs (Schedule of Costs), as amended from time to time by the LCIA, forms part
+of the LCIA Rules and will apply in all arbitrations commenced after its effective date.
+11
+New York Convention art.II(1) requires Member States to recognise arbitration agreements, if they are made in writing.
+See also the UK Arbitration Act 1996 s.5.
+12
+Examples of institutions providing standard arbitration clauses include: United Nations Commission on International
+Trade Law (UNCITRAL); International Chamber of Commerce (ICC); Chartered Institute of Arbitrators (CIArb);
+(Singapore International Arbitration Centre (SIAC); London Court of International Arbitration (LCIA); Hong Kong
+International Arbitration Centre (HKIAC); International Centre for the Settlement of Investment Disputes (ICSID);
+American Arbitration Association/International Centre for Dispute Resolution (AAA/ICDR).
+13
+Irene Welser and Susanne Molitoris, “The Scope of Arbitration Clauses - Or: ‘All Disputes Arising out of or in connection
+with this Contract…’ ” in C. Klausegger et al., Austrian Yearbook on International Arbitration (Wein, 2012); p.17;
+Premium Nafta Products Ltd v Fili Shipping Co Ltd [2007] UKHL 40; [2007] Bus. L.R. 1719; Fiona Trust & Holding
+Corp v Privalov [2015] EWHC 527 (Comm); Cape Flattery Ltd v Titan Maritime, LLC [2011] 09-15682 (US Court of
+Appeals, 9th Circuit 2011).
+14
+See, for example, HKIAC.
+15
+UNCITRAL Arbitration Rules art.1(5) incorporates the Expedited Rules, which are presented as an appendix to the
+UNCITRAL Arbitration Rules. The phrase “where the parties so agree” in that paragraph emphasises the need for the
+parties’ express consent for the Expedited Rules to apply to the arbitration.
+16
+SCC Expedited Arbitration Rules 2017, HKIAC Administered Arbitration Rules 2018 and the SIAC Rules 2016.
+17
+ICC Rules 2021 art.30, Appendix VI, ICDR Rules 2021.
+
+Chapter 6 - Arbitration, UKBC-EFFDIS 549291546 (2025)
+© 2025 Thomson Reuters.
+29
+18
+See, for example, ICC Rules 2021 art.12(3), (4) and (9); ICDR Rules 2021 art.13; LCIA Rules 2020 art.5(9); SCC Rules
+2023 art.17(3) and (4).
+19
+© International Chamber of Commerce (ICC). Reproduced with kind permission of ICC.
+20
+Dutco Construction v BKMI Industrienlagen GmbH et Siemens AG, Arret de la Cour de Cassation 89-18.708; Siemens
+AG and BKMI Industrieanlangen GmbH v Dutco Construction Co, Ltd, France Court of Cassation Bull. civ. I, No. 2r
+(Fr.), 7 Mealey’s Int’l Arb. Rep. B-3; [1993] 18 Y.B. Comm. Arb. 140 (1992).
+21
+See, for example, ICC Rules 2021 art.13(5) and (6); ICDR Rules 2021 art.13(4); LCIA Rules 2020 art.6(1); SCC Rules
+2023 art.17(6).
+22
+See Kabab-Ji SAL (Lebanon) v Kout Food Group (Kuwait) [2021] UKSC 48; [2021] Bus. L.R. 1717 at [32], that there
+appears to be no consensus among national courts of different jurisdictions and jurists as to “whether or when a choice of
+law for the contract as a whole constitutes a sufficient indication of the law to which the parties subjected the arbitration
+agreement, in particular where it differs from the law of the seat”.
+23
+See Enka Insaat Ve Sanayi AS v OOO Insurance Company Chubb [2020] UKSC 38; [2020] 1 W.L.R. 4117; Kabab-Ji
+SAL (Lebanon) v Kout Food Group (Kuwait) [2021] Bus. L.R. 1717.
+24
+Law Commission, Review of the Arbitration Act 1996, Second Consultation Paper (March 2023), Consultation Paper
+258, Ch.2, para.2.6.
+25
+Law Commission, Review of the Arbitration Act 1996, Summary of final report (September 2023), para.1.142.
+26
+Law Commission, Review of the Arbitration Act 1996, Summary of final report (2023), para.1.138.
+27
+Law Commission, Review of the Arbitration Act 1996, Summary of final report (2023), para.1.143.
+28
+See, for example, Arbitration Act 1996 ss.2(1) and 3.
+29
+See, for example, ICC Rules 2021 art.26(1), LCIA Rules 2020 art.19(2) and SCC Rules 2023 art.32(2).
+30
+Drafters could consider familiarising themselves with the text of the UNCITRAL Model Law on International
+Commercial Arbitration (1985, with amendments as adopted in 2006) (UNCITRAL Model Law), providing a good
+example of the procedures used by the arbitral tribunals (if they seat in the jurisdictions adopted UNCITRAL Model
+Law). If a jurisdiction, which has not adopted it, is chosen, their rules could be compared to the UNCITRAL Model
+Law rules.
+31
+Perhaps, notedly, one of the world’s most popular seats of arbitration, England, has not adopted the UNCITRAL Model
+Law, although many provisions of the Arbitration Act 1996 are based on it.
+32
+Law Commission, Review of the Arbitration Act 1996, Summary of final report (2023), paras 1.133–1.134.
+33
+Lord Neuberger, Keynote Speech, London International Disputes Week, (16 May 2023).
+34
+The Right Hon. The Lord Thomas of Cwmgiedd, Lord Chief Justice of England and Wales, “Developing commercial
+law through the courts: rebalancing the relationship between the courts and arbitration”, The Bailii Lecture 2016 (9
+March 2016).
+35
+See, for instance, Ali Shipping Corp v Shipyard Trogir [1999] 1 W.L.R. 314; [1998] 1 Lloyd’s Rep. 643 CA, holding that
+confidentiality is implied in the arbitration agreement.
+36
+See, for example, art.30 of the LCIA Rules 1998, 2014 and 2020; art.22.3 of the ICC Rules 2012, 2017 and 2021;
+art.28(3) of the UNCITRAL Rules 2010, 2013 and 2021.
+37
+ICC, Note to parties and arbitral tribunals on the conduct of the arbitration under the ICC Rules of Arbitration (December
+2018), paras 40–46.
+38
+HKIAC Administered Arbitration Rules 2018 para.45.5.
+39
+Law Commission, Review of the Arbitration Act 1996, Summary of consultation paper (September 2022), https://
+www.lawcom.gov.uk/project/review-of-the-arbitration-act-1996/.
+40
+Law commission, Review of the Arbitration Act 1996, Summary of consultation paper (2022), paras 1.19–1.20.
+41
+Law commission, Review of the Arbitration Act 1996, Summary of final report (2023), paras 1.16–1.23.
+42
+See, for example, UNCITRAL Rules 2013 art.28.3; LCIA Rules 2020 arts 19.4 and 30; ICC Rules 2021 art.22.3;
+UNCITRAL Rules 2010 r.34.5 (in relation to the awards).
+43
+See, for example, Arbitration Act 1996 s.39.
+44
+See, for example, Arbitration Act 1996 s.34(2)(f).
+45
+ICC, ICC Dispute Resolution 2020: Statistics (August 2021), p.9.
+46
+Adopted by a resolution of the International Bar Association (IBA) Council 7 October 2010.
+47
+See, for example, LCIA Rules 2020 art.8; SCC Rules 2023 art.17(5); ICC Rules 2021 art.12(8); ICDR Rules 2021
+art.13(5).
+48
+IBA, IBA Guidelines for Drafting International Arbitration Clauses (IBA Guidelines) (October 2010).
+
+Chapter 6 - Arbitration, UKBC-EFFDIS 549291546 (2025)
+© 2025 Thomson Reuters.
+30
+49
+An example of an arbitration clause providing for an intervention and a joinder by a party to the same agreement can
+be found at para.105 of the IBA Guidelines 2010.
+50
+See, for example, LCIA Rules 2020 art.22.7; SCC Rules 2023 art.15; ICC Rules 2021 art.10; ICDR Rules 2021 art.9.
+51
+Convention on the Recognition and Enforcement of Foreign Arbitral Awards (New York, 1958) (the “New York
+Convention”), https://uncitral.un.org/en/texts/arbitration/conventions/foreign_arbitral_awards/.
+52
+United Nations, “Status: Convention on the Recognition and Enforcement of Foreign Arbitral Awards (New York, 1958)
+(the ‘New York Convention’)”, https://uncitral.un.org/en/texts/arbitration/conventions/foreign_arbitral_awards/status2.
+53
+See Chapter Eight for more details.
+54
+An example is SIAC, which provides for an Arb-Med-Arb process.
+End of Document
+© 2025 SWEET & MAXWELL

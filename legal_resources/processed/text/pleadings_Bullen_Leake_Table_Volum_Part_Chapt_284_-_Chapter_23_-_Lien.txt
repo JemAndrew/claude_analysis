@@ -1,0 +1,32 @@
+Chapter 23 - Lien, UKBC-BULLENL 459371933 (2022)
+© 2025 Thomson Reuters.
+1
+Chapter 23 - Lien
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part F - Business Law
+Chapter 23 - Lien
+23-01
+At common law, a lien refers to the right of one person, rightfully and continuously in possession of property belonging to
+another, to retain that property so long as an existing claim against the owner remains unsatisfied or to retain specific goods
+in relation to which charges have been incurred until the charges have been paid. General liens are not favoured by the courts
+because of the priority they afford as against other creditors and can exist only upon proof of a general usage or by express
+agreement.
+On the other hand, an equitable lien is not dependent upon possession and is in the nature of a charge, giving rise to a right of
+sale albeit only by order of the court. As such, it falls within the definition of a mortgage for the purpose of s.205 of the Law
+of Property Act 1925 and, in order to rank ahead of a purchaser, should be registered as a land charge.
+A legal lien affords a defence to an action by the owner for possession of the goods. It does not itself confer a right of action. A
+person exercising a lien has sufficient interest in retaining possession of the property that is the subject of the lien to maintain
+a cause of action in conversion or trespass. Being dependent on possession, a legal lien is not required to be registered under
+statutory rules relating to bills of sale or under the Companies Act 1985. Unlike an equitable lien, a lien at common law does
+not confer a power of sale. In notable examples, however, statute has intervened to provide an express power of sale, such as
+in ss.12 and 13 of the Torts (Interference with Goods) Act 1977 and ss.39, 41–42 of the Sale of Goods Act 1979.
+The term “lien” may also be applied to a right held by a person who does not possess the relevant property but nevertheless
+enjoys a right against the owner. For example, a solicitor, in addition to his legal lien over a client’s documents within his
+possession, has a statutory right to ask the court to direct that property recovered is to stand as security for his costs. 1
+Footnotes
+1
+Re Fuld (No.4) [1968] P. 727.
+End of Document
+© 2025 SWEET & MAXWELL

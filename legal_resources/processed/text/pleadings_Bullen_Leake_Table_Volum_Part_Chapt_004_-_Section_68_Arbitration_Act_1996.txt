@@ -1,0 +1,181 @@
+Section 68 Arbitration Act 1996, UKBC-BULLENL 459370706 (2022)
+© 2025 Thomson Reuters.
+1
+Section 68 Arbitration Act 1996
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part A - Arbitration
+Chapter 2 - Jurisdiction and Serious Irregularity
+Section 68 Arbitration Act 1996
+Introduction
+2-11
+Section 68 of the 1996 Act provides a further ground on which a party can challenge all or part of an award rendered by an
+arbitral tribunal seated in England and Wales. Thus, as with s.67, intervention under s.68 is only permissible after an award
+is made. 21  In an appropriate case, it can also be combined with a challenge under s.67. Section 68 entitles a party to arbitral
+proceedings to apply to the court for relief on the ground that a “serious irregularity” affecting the tribunal, the proceedings or
+the award has occurred. As with s.67, s.68 is a mandatory provision in the 1996 Act and cannot be contracted out of by the
+parties. As with an application under s.67, the claimant must first exhaust any available arbitral process of appeal or review
+and any available recourse under s.57. 22
+Serious irregularity
+2-12
+The concept of “serious irregularity” was introduced by the 1996 Act and was a new feature of English arbitration law. 23
+In order to establish that a “serious irregularity” has occurred, the applicant must demonstrate two things. First, the applicant
+must show that one or more of the closed list of irregularities set out in s.68(2) has occurred. 24  Secondly, the applicant must
+show that the alleged irregularity has caused or will cause it “substantial injustice”. 25  Since the introduction of the 1996 Act,
+a considerable body of law has developed in relation to the categories of irregularity set out in s.68(2)(a) to (i). For detailed
+consideration of these categories reference should be made to the relevant textbooks and authorities.
+A high threshold
+2-13
+The courts have repeatedly emphasised that a high threshold must be satisfied before the court will intervene under s.68. 26
+Indeed, the present approach is to view that threshold as having been set deliberately high so as to reduce drastically the extent
+of court intervention in the arbitral process. Recent authorities suggest that only an “extreme case” will justify the court’s
+intervention. 27  It has recently been suggested that fresh evidence might provide grounds for a s.68 application, at least in the
+context of an application made on the grounds that the award was contrary to public policy. 28  Further, when considering a
+s.68 challenge, the focus of the inquiry is on due process and not on the correctness of the tribunal’s decision and the court
+is alive to applications which in truth seek to challenge the merits or the application of the law, rather than complain about a
+genuine serious irregularity. 29
+
+Section 68 Arbitration Act 1996, UKBC-BULLENL 459370706 (2022)
+© 2025 Thomson Reuters.
+2
+Approach to relief under s.68
+2-14
+An important feature of s.68 is the presumption in s.68(3) that the appropriate relief on a serious irregularity is for the court
+to remit the matters in question to the tribunal for reconsideration. For some cases, this will be appropriate. However, if the
+applicant wants the award set aside or declared to be of no effect (in whole or in part), it will need to persuade the court that it
+is inappropriate to remit the matters in question to the tribunal. For some cases (such as bias) this will be straightforward but
+in other cases it will be far less so. The precedent therefore leaves the desired relief sought in brackets. It appears that, if the
+claimant seeks removal of an arbitrator, an application must be made under s.24. 30
+Timing of challenge
+2-15
+The challenge must be brought within 28 days of the date of the award, unless there is an available arbitral process of appeal
+or review or—provided any corrections are material to the challenge in question—the available recourse under s.57. 31  In that
+case, the application must be brought within 28 days of the date when the applicant is notified of the result of that process
+of appeal/review or the result of the recourse under s.57. It is possible for an applicant to seek an extension of time to file a
+challenge pursuant to s.80(5) of the 1996 Act. 32
+Procedure
+2-16
+The procedure for bringing a s.68 claim is the same as that for a s.67 claim. It requires the claimant to file an Arbitration Claim
+Form together with a witness statement which supplies the evidence supporting its claim that the tribunal lacked substantive
+jurisdiction.
+In a run-of-the mill case, there is no pleadings phase. Instead, the CPR provides a set of automatic directions which apply once
+the claimant has filed its Arbitration Claim Form together with its evidence. Thereafter, the defendant is obliged to respond by
+way of a witness statement within 21 days of the date on which it was required to acknowledge service or, if no acknowledgement
+of service was required, within 21 days from service of the Arbitration Claim Form. The claimant is then provided with only
+seven days to respond by way of reply evidence. 33  The claim form should stand as a sufficiently detailed and particularised
+statement of case to enable, in the first place, the defendant to the challenge and then, ultimately, the judge dealing with the
+matter to see precisely the nature of the challenge, the grounds upon which it is said to arise and, as a result, the particular
+questions that will need, or may need, to be dealt with at any hearing. As in all contexts, supporting witness statements should
+contain evidence, not comment or argument. 34
+If the case is more complicated, and in particular if it raises issues of fact or foreign law which would benefit from the precise
+identification of issues through further statements of case, it is possible either (a) for the parties to agree to this approach or
+(b) for the claimant (or even the defendant, if it considers it appropriate) to seek non-standard directions from the court. 35  A
+suggested formulation for such a case is included in the precedent.
+
+Section 68 Arbitration Act 1996, UKBC-BULLENL 459370706 (2022)
+© 2025 Thomson Reuters.
+3
+Service
+2-17
+An important feature of an application using an Arbitration Claim Form is that, unlike a Part 7 Claim Form, the Arbitration
+Claim Form must be served on the defendant within one month from the date of issue. 36  Where it is anticipated that service
+will take considerably longer (e.g. if the defendant is a sovereign state) it is advisable to apply for an extension of time for
+service at the same time as the s.68 application is issued.
+Finally, one useful provision to note is para.3.1 of PD 62. Where the defendant to the s.68 application was represented by
+English solicitors in the arbitration, it is standard practice for the court to give the claimant permission pursuant to CPR r.6.15
+to serve the Arbitration Claim Form on the defendant by way of service on the defendant’s English solicitors.
+Early intervention in the Commercial Court
+2-18
+The Admiralty and Commercial Court Guide contains an important procedural device which is relevant to s.68 applications.
+Paragraph O8.5 sets out a procedure by which a respondent to a s.68 application can apply to the court to dismiss the application,
+without a hearing, if the “nature of the challenge itself or the evidence filed in support of it leads the court to consider that
+the claim has no real prospect of success”. Where the court makes an order dismissing the application without a hearing, the
+applicant will have the right to apply to the court to set aside the order and to seek directions for the hearing of the application. 37
+If such an application is made and dismissed after a hearing, the court may consider whether it is appropriate to award costs
+on an indemnity basis.
+Appeals
+2-19
+The permission of the court is required under s.68(4) for an appeal. As with s.67, a number of Court of Appeal decisions have
+made it clear that, subject to one very narrow exception, permission to appeal can only be granted by the first instance judge and
+not by the Court of Appeal. 38  In the context of s.67, the Court of Appeal has held that it has no jurisdiction to hear an appeal
+on grounds that were not raised in the application to the first-instance judge; the same presumably applies under s.68. 39  If a
+judge makes a decision that he or she has no jurisdiction to make and then refuses permission to appeal, the Court of Appeal
+has jurisdiction to declare that the judge acted without jurisdiction. 40
+Footnotes
+21
+See para.2-01, fn.1.
+22
+Section 70(2). See para.2-02, fn.4. For examples of the application of s.70(2), see X v Y [2018] EWHC 741 (Comm);
+Gracie v Rose [2019] EWHC 1176 (Ch).
+23
+See Lesotho Highlands Development v Impregilo SpA [2005] UKHL 43; [2006] 1 A.C. 221 at [28].
+24
+The list in s.68(2) is exhaustive of the types of irregularity that qualify for court intervention: see Lesotho at [28].
+25
+As with the concept of “serious irregularity”, the concept of “substantial injustice” was itself a new requirement in
+English arbitration law: see Lesotho at [28].
+26
+See e.g. Lesotho at [28].
+
+Section 68 Arbitration Act 1996, UKBC-BULLENL 459370706 (2022)
+© 2025 Thomson Reuters.
+4
+27
+See e.g. Terna Bahrain [2013] 1 Lloyd’s Rep. 86 at [85]. Potential instances of such “extreme cases” are where one
+party commits a fraud on the tribunal causing it to reach the wrong decision (Celtic Bioenergy Ltd v Knowles Ltd [2017]
+EWHC 472 (TCC); [2017] 1 Lloyd’s Rep. 495); where the tribunal grants relief not sought by either party (RJ v HB
+[2018] EWHC 2833 (Comm); [2019] Bus L.R. 175); where the tribunal reaches a conclusion contrary to the common
+ground between the parties without giving the parties an opportunity to make appropriate submissions (S v A [2016]
+EWHC 846 (Comm); [2016] 1 Lloyd’s Rep. 604) or cross-examine an important witness (P v D [2019] EWHC 1277
+(Comm); [2019] 2 Lloyd’s Rep. 150); where the tribunal makes its own enquiries on a material point without notifying the
+parties (Fleetwood Wanderers Ltd v AFC Fylde Ltd [2018] EWHC 3318 (Comm); [2019] 1 Lloyd’s Rep. 247); or where
+there is “inordinate” delay in releasing the award (The Celtic Explorer [2015] EWHC 1810 (Comm); [2015] 2 Lloyd’s
+Rep. 351). As discussed above, the applicant must always demonstrate that it has suffered “substantial injustice” as a
+result. The court will assess the seriousness of any irregularity itself; guidelines such as the International Bar Association
+Guidelines on Conflicts of Interest in International Arbitration 2014 are potentially helpful but not binding on the court
+as they address in part a test different to that set out in the Arbitration Act. Thus, even where an arbitrator was found
+to have come within those Guidelines’ “non-waivable Red List” of conflicts, the court nonetheless dismissed the s.68
+application by reference to the test for bias applied under the Arbitration Act (W Ltd v M Sdn Bhd [2016] EWHC 422
+(Comm); [2016] 1 Lloyd’s Rep. 552). On bias generally see Halliburton Co v Chubb Bermuda Insurance Ltd [2018]
+EWCA Civ 817; [2018] 1 W.L.R. 3361 (currently on appeal to the Supreme Court).
+28
+National Iranian Oil Co v Crescent Petroleum Co International Ltd [2016] EWHC 510 (Comm); [2016] 2 Lloyd’s Rep.
+146, where there was evidence that the underlying contract was procured by bribery.
+29
+Note in this regard that para.O8.3 of the Admiralty and Commercial Court Guide itself notes the two requirements that
+must be met under s.68 and goes on to say, at O8.6(b) that, “An application challenging an award on the ground of serious
+irregularity should therefore not be regarded as an alternative to, or a means of supporting, an application for permission
+to appeal,” i.e. an appeal on a point of law under s.69. See also The Celtic Explorer [2015] 2 Lloyd’s Rep. 351.
+30
+RJ v HB [2019] Bus L.R. 175.
+31
+Daewoo Shipbuilding [2018] 1 Lloyd’s Rep. 443.
+32
+The factors which the court will consider when determining an extension application were set out by Popplewell J in
+Terna Bahrain [2013] 1 Lloyd’s Rep. 86, and have been considered in a number of subsequent cases. See also Merkin
+at para.9.13 onwards. For a detailed discussion of the operation of s.80(5), see Merkin at para.20.40 onwards.
+33
+This default timetable is set out PD 62 para.6.1 onwards.
+34
+Orascom TNT Investments SARL v VEON Ltd [2018] EWHC 985 (Comm); [2018] Bus L.R. 1787 at [4]–[5].
+35
+See e.g. Sterling v Rand [2019] EWHC 1034 (Ch).
+36
+CPR r.62.4(2).
+37
+Such a hearing will ordinarily be granted unless the application is effectively vexatious: Asset Management Corp. of
+Nigeria v Qatar National Bank [2018] EWHC 2218 (Comm) at [41]. See Midnight Marine Ltd v Thomas Miller Speciality
+Underwriting Agency Ltd [2018] EWHC 3431 (Comm); [2019] 1 Lloyd’s Rep. 399 at [34]–[39] for guidance as to how
+such hearings ought to be conducted.
+38
+See Athletic Union of Constantinople [2002] 1 W.L.R. 2863 and the cases discussed in Merkin at para.9.20. The narrow
+exception is if the judge considering the application for permission to appeal has acted so unfairly or in such a manner
+that his or her decision cannot properly be considered a valid decision at all. Unsurprisingly, this narrow exception will
+only conceivably apply in the most exceptional of cases.
+39
+Yegiazaryan [2017] 1 Lloyd’s Rep. 102.
+40
+Integral Petroleum [2016] 2 Lloyd’s Rep. 141.
+End of Document
+© 2025 SWEET & MAXWELL

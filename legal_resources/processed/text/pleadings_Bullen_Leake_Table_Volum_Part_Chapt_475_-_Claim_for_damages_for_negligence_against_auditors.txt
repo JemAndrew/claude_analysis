@@ -1,0 +1,176 @@
+Claim for damages for negligence against auditors, UKBC-BULLENL 459373403 (2022)
+© 2025 Thomson Reuters.
+1
+Claim for damages for negligence against auditors
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 2
+Part Y - Professional Negligence
+Chapter 85 - Professional Negligence
+Claim for damages for negligence against auditors
+1.
+85-Y1
+At all material times:
+ 
+(a)the Claimant carried on business as a manufacturer of widgets;
+ 
+(b)the Defendants were a firm of Chartered Accountants.
+2.
+By an agreement made between the Claimant and the Defendants contained or evidenced in an engagement letter dated
+[date] [or as the case may be] the Defendants agreed to act as auditors to the Claimant in consideration of the payment
+of their fees (“the Agreement”).
+3.
+It was an implied term of the Agreement that the Defendants would discharge their engagement as auditors of the Claimant
+with reasonable skill and care, and in particular with that degree of skill, care and diligence to be expected of reasonably
+competent and prudent auditors.
+4.
+Without prejudice to the generality of the term pleaded in paragraph 3 above, in pursuance of their obligation to act with
+reasonable skill and care, and/or as incidents of that obligation and/or of their role as auditors and/or by way of further
+implied terms of the Agreement, the Defendants owed the following specific duties to the Claimant:
+ 
+(a)To report to the members of the Claimant on the accounts examined by them, and on every balance sheet and profit
+and loss account laid before the members in general meeting.
+ 
+(b)To state in their report:
+ 
+(i)whether, in their opinion, the balance sheet and profit and loss account had been properly prepared in
+accordance with the Companies Act 2006 (“the Act”); and
+ 
+(ii)whether, in their opinion, a true and fair view was given, in the balance sheet, of the state of the Claimant’s
+affairs, and in the profit and loss account, of the Claimant’s profit or loss for the financial year;
+ 
+(c)To take reasonable care to satisfy themselves that the balance sheet gave a true and fair view of the state of the
+Claimant’s affairs at the end of the financial year and that the profit and loss account gave a true and fair view of the
+profit or loss of the Claimant for the financial year.
+
+Claim for damages for negligence against auditors, UKBC-BULLENL 459373403 (2022)
+© 2025 Thomson Reuters.
+2
+ 
+(d)To take reasonable care to satisfy themselves that the balance sheet and profit and loss account had been prepared
+in accordance with, and conformed to:
+ 
+(i)the provisions of the Act; and
+ 
+(ii)generally accepted accounting policies, principles and practice applicable in the United Kingdom, including,
+in particular, the provisions of SSAPs and FRSs; the Claimant will refer to the relevant SSAPs and FRSs at trial
+herein for their full terms, meaning and effect;
+ 
+(e)In conducting the audit and in preparing the audit report, to act in accordance with the Act and the Auditing
+Standards in force at the time; the Claimant will refer to the relevant Auditing Standards and Guidelines at trial herein
+for their full terms, meaning and effect.
+ 
+(f)In preparing the audit report, to carry out such investigations as would enable them to form an opinion as to whether,
+inter alia, proper accounting records were kept by the Claimant and whether its balance sheet and profit and loss
+account were in agreement with its accounting records.
+ 
+(g)If they were of the view that proper accounting records had not been kept, or that the balance sheet and profit and
+loss account were not in agreement with the accounting records, to state that fact in their report.
+ 
+(h)If they could not obtain all the information and explanations which, to the best of their knowledge and belief were
+necessary for the purposes of their audit, to state that fact in their report.
+ 
+(i)To consider whether the information given in the Directors’ report for the financial year for which the accounts
+were prepared was consistent with those accounts, and if not, to state that fact in their report.
+5.
+Further, or in the alternative, the Defendants owed to the Claimant duties of care in tort of like content and to like effect
+as the duties and obligations set out in paragraphs 3 and 4 above (“the Duties of Care”).
+6.
+In purported pursuance of their obligations as auditors to the Claimant, the Defendants audited the Claimant’s accounts
+for the year ended [date] (“the Accounts”).
+7.
+On or about [date], the Accounts were signed by [name] on behalf of the Directors of the Claimant, and the audit report
+thereon was signed by the Defendants as auditors who stated as follows:
+“We have audited the accounts at pages [..........] to [..........] in accordance with approved Auditing Standards.
+In our opinion the accounts give a true and fair view of the state of the Company’s affairs at [date] and of
+its profit and source and application of funds for the year then ended and have been properly prepared in
+accordance with the Companies Act 2006.”
+8.
+In fact, the Accounts were materially misstated and in particular, the balance sheet did not give a true and fair view of the
+state of affairs of the Claimant as at [date], and the profit and loss account did not give a true and fair view of the profit
+or loss of the Claimant for the financial year ended [date].
+Particulars of Misstatement
+ 
+(a)No provision at all was made for any of the potential liabilities of the Claimant in relation to warranties given by
+the Claimant to all purchasers of widgets.
+
+Claim for damages for negligence against auditors, UKBC-BULLENL 459373403 (2022)
+© 2025 Thomson Reuters.
+3
+ 
+(b)No provision was made for the following debts of the Claimant which should have been regarded as bad debts:
+[specify].
+ 
+(c)The following assets of the Claimant were overvalued: [specify].
+ 
+(d)The Claimant’s net profit was overstated by [specify] as a result of the following expenses not being taken into
+account: [specify].
+9.
+Had the Accounts not been misstated as set out in paragraph 8 above, the balance sheet and profit and loss account would
+have appeared as set out in Schedule 1 hereto (“the Restated Accounts”). In particular:
+ 
+(a)instead of there being net profits of £[..........] as shown in the Accounts, there would have been net losses of
+£[..........]; and
+ 
+(b)instead of there being net assets of £[..........] as shown in the Accounts, there would have been net liabilities of
+£[..........].
+10.
+In planning and/or preparing and/or conducting the audit of the Accounts and/or in the making of the audit report thereon,
+the Defendants acted in breach of the Agreement and/or in breach of the Duties of Care.
+Particulars of Breach of Duty
+ 
+(a)In relation to the Claimant’s warranty liabilities:
+ 
+(i)the Defendants failed to obtain any or any sufficient relevant and reliable audit evidence to enable them to draw
+reasonable conclusions therefrom as to the existence and/or true nature and/or extent of such warranty liabilities;
+ 
+(ii)further or alternatively, the Defendants failed to take any or any adequate steps to understand the nature of the
+business carried on by the Claimant and in particular, its method of operation and/or the type of customers it had
+and/or the risks involved in that business and/or the industry in which it was involved.
+ 
+(b)In relation to the Claimant’s bad debts, the Defendants failed to make any or any proper investigation into or
+consideration or evaluation of the status and creditworthiness of the Claimant’s customers and of the likelihood and
+extent of any bad debts on the part of such customers, and/or of the Claimant’s assessment or system of assessment
+of the creditworthiness of its customers.
+ 
+(c)In relation to the overvaluation of certain assets, the Defendants failed to obtain any or any sufficient relevant and
+reliable audit evidence to enable them to draw reasonable conclusions therefrom as to the value of the assets concerned
+and in particular they failed to obtain any or any proper valuation thereof.
+ 
+(d)In relation to the expenses which were not taken into account, the Defendants failed to obtain any or any sufficient
+relevant and reliable audit evidence; in particular they failed to make any or any proper investigation of the Claimant’s
+records or any or any proper inquiries of the Claimant in order to ascertain whether there might not be such expenses.
+ 
+(e)Generally, the Defendants failed to take reasonable care in preparing the audit and reporting on the Accounts; the
+Claimant will say that had the Defendants acted prudently and competently they would not have stated that in their
+opinion, the Accounts showed a true and fair view and/or otherwise approved the same as auditors.
+11.
+Accordingly, and by reason of the matters aforesaid, the Claimant has suffered loss and damage.
+Particulars of Loss and Damage
+ 
+(a)In reliance upon the Accounts, the Claimant paid:
+
+Claim for damages for negligence against auditors, UKBC-BULLENL 459373403 (2022)
+© 2025 Thomson Reuters.
+4
+ 
+(i)£[..........] by way of dividends to its shareholders; and
+ 
+(ii)£[..........] by way of bonuses to the following directors: [specify].
+ 
+(b)Had the Claimant been aware of its true financial position, as shown in the Restated Accounts, none of the payments
+referred to in subparagraph (a) would have been made.
+ 
+(c)Accordingly, the Claimant has lost the total sum of £[..........].
+12.
+Further, the Claimant claims interest upon all sums recovered pursuant to s.35A of the Senior Courts Act 1981 at such rate
+and for such period as the Court shall deem appropriate.
+AND the Claimant claims:
+ 
+(1)Damages pursuant to paragraph 11 above.
+ 
+(2)Interest thereon pursuant to s.35A of the Senior Courts Act 1981 at such rate and for such period as the Court shall
+deem appropriate pursuant to paragraph 12 above, to be assessed.
+[Statement of truth]
+End of Document
+© 2025 SWEET & MAXWELL

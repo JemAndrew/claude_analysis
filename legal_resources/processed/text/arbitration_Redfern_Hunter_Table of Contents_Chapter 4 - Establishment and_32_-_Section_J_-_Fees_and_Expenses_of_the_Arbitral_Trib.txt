@@ -1,0 +1,272 @@
+Section J. - Fees and Expenses of the Arbitral Tribunal, UKBC-REDFERN 530638627...
+© 2025 Thomson Reuters.
+1
+Section J. - Fees and Expenses of the Arbitral Tribunal
+Redfern and Hunter on International Arbitration 7th Ed.
+Mainwork
+Chapter 4 - Establishment and Organisation of an Arbitral Tribunal
+Section J. - Fees and Expenses of the Arbitral Tribunal
+(a) Introduction
+4. 219
+The cost of bringing or defending a claim before an international arbitral tribunal is likely to be considerably higher than that
+of bringing or defending the same claim before a national court. This is because, in addition to the usual expenses of litigation,
+it is necessary for the parties to pay the fees and expenses of the arbitral tribunal (including international travel) and the cost of
+hiring suitable accommodation for physical hearings. In addition, where the arbitration is administered by an arbitral institution,
+the fees and expenses of that institution must be paid and these are not insignificant. This contrasts sharply with proceedings
+before a national court, in which the court rooms, the attendants, and the judges themselves are provided and paid for by the
+state. The parties often make no more than a nominal contribution to the state by way of a registration fee or other levy. 335  The
+fact that arbitration before a private arbitral tribunal attracts these additional charges makes it more desirable that arbitrations
+should not be conducted with the time-consuming formalities of proceedings in a national court. The aim should be to make
+use of the informality and flexibility of the arbitral process, so as to reduce time and costs. Thus, the financial burden on the
+parties is alleviated, to some extent.
+(b) Who fixes the fees?
+4. 220
+Where an arbitration is conducted under the auspices of an arbitral institution, it is not necessary for the parties to engage in
+any direct negotiations with the tribunal concerning the basis of its fees. These are generally fixed by the institution, sometimes
+independently, sometimes after consultation with the sole or presiding arbitrator. The parties have no say in the matter. In an
+ad hoc arbitration, however, it is necessary for the parties to make their own arrangements. The arbitrators should do this at an
+early stage in the proceedings to avoid misunderstandings later. The usual practice is for counsel for each party to take part in
+any discussion with the arbitrators about their fees and expenses, so as to avoid any suggestion of impropriety.
+(c) Methods of assessing fees
+4. 221
+No universally established method exists for assessing the fees payable to an arbitrator. At least three methods are usually used:
+ 
+• the ad valorem method, whereby the fee is calculated as a proportion of the amounts in dispute;
+ 
+• the ‘time spent’ method, which establishes an hourly or daily rate; and
+ 
+• the ‘fixed fee’ method, whereby the sum payable to the arbitrator by way of remuneration is fixed at the outset, without
+direct reference either to the amounts in dispute or to the time that the arbitrator spends on the case.
+
+Section J. - Fees and Expenses of the Arbitral Tribunal, UKBC-REDFERN 530638627...
+© 2025 Thomson Reuters.
+2
+(i) Ad valorem method
+4. 222
+The ad valorem method entails assessing the arbitrators’ fees as a percentage of the total amount in dispute (including any
+counterclaim). It has the merit of being easy to use and capable of uniform application. It is necessary to know only (a) the total
+amount in dispute, and (b) the percentage figure to be applied. With this information, the parties can work out for themselves
+what fees they are likely to have to pay, if they take their dispute to arbitration. The ICC is the most prominent amongst the
+institutions that adopt this method. The ICC Rules contain a ‘scale of administrative costs and fees’, which shows how the
+administrative charges of the ICC Secretariat are calculated by applying a different percentage to each successive slice of
+the sum in dispute. 336  The fees payable to the arbitrators may be calculated on a similar basis, except that the percentages
+are different and, for each successive slice of the sum in dispute, minimum and maximum percentages are given, to establish
+a ‘range’. 337  In practice, the ICC Court fixes the fees of the arbitrators within the overall range, taking into account the
+diligence and efficiency of the arbitrators, the time spent, the rapidity of the proceedings, the complexity of the dispute, and
+the timeliness of the submission of the draft award. 338
+(ii) ‘Time spent’ method
+4. 223
+The usual method of assessing fees is to establish a rate at which the arbitrators will be paid for the time spent working on
+the case. This rate is intended to cover not only work done at the hearing, but also any work done outside the hearing. It is
+usual to establish an hourly or daily rate, or sometimes a combination of both. A lower daily or hourly rate is usually fixed
+for travelling time, although an arbitrator who works on a train or a flight, for instance, would be justified in charging for the
+hours actually worked, rather than treating the whole journey as time spent travelling.
+4. 224
+The success of a method of payment based on a time-cost rate depends on the arbitrators keeping an accurate record of the
+time that they do actually spend on the case. It also depends on the parties being prepared to trust this record, since (apart
+from time spent at meetings with the parties and at the hearing) it is not something that can easily be checked. It may be
+that the presiding arbitrator should consider it to be one of his or her functions to monitor the fee invoices submitted by the
+co-arbitrators. In an UNCITRAL arbitration, this is inevitable, since Article 40 of the UNCITRAL Rules provides that the
+arbitrators’ fees shall be ‘reasonable in amount’ and shall be stated separately as to each arbitrator in the award. In general,
+the hourly and/or daily rate payable is likely to vary according to the status of the arbitrator and to the size, importance,
+and complexity of the arbitration. It is in this context that the amount in dispute will be taken into account when the time
+cost method is used. 339  It is right to mention, however, that most international arbitrators with recognised reputations are
+prepared to accept that smaller cases should be undertaken at a rate lower than their ‘normal’ rate.
+(iii) ‘Fixed fee’ method
+4. 225
+There are cases in which arbitrators ask to be paid on a fixed fee basis. These cases are usually cases of major importance,
+involving arbitrators of high international standing. Where remuneration is to be paid to the arbitrators on a fixed fee basis,
+the sum agreed is intended to cover all of the work done by the arbitrators on the case, including time spent at the hearing,
+however long it may last. The problem is that it is difficult to know at the outset how the case will develop, whether or not
+it will be settled before it reaches a hearing, and if it is not settled, how long the hearing itself is likely to take. The best that
+can be done, in such circumstances, is to make an intelligent assessment of the total number of days likely to be spent by the
+arbitrators on the case, assuming that it runs its full course, and then to multiply this total by an appropriate daily rate, so as to
+arrive at a figure for the fixed fee. The arbitrators may have done a similar calculation; alternatively, they may have applied
+a percentage to the total amount in dispute to calculate the fee to which they consider themselves entitled! It may then be
+necessary for a certain amount of bargaining to take place between the arbitrators, on the one hand, and the parties, on the
+
+Section J. - Fees and Expenses of the Arbitral Tribunal, UKBC-REDFERN 530638627...
+© 2025 Thomson Reuters.
+3
+other, in order to arrive at an agreed figure. In general terms, fixed fees are increasingly rare and most prestigious arbitrators
+are prepared to work on one of the other two, more reasonable, bases.
+(d) Negotiating arbitrators’ fees
+4. 226
+In an ad hoc arbitration, parties and their legal advisers may find themselves obliged to negotiate with arbitrators concerning
+their fees and expenses, if they think that the arbitrators are asking for too much. However, no party wants to risk antagonising
+the arbitrators by criticising their fees, since each party will have it clearly in mind that the same arbitrators will be sitting in
+judgment on its case.
+4. 227
+It may seem foolish to bargain over a few hundred dollars a day if, by doing so, a claim worth many millions of dollars may be
+put in jeopardy. However, arbitrators of the right calibre should not take offence if it is suggested to them that they are proposing
+to charge rather more than the ‘going rate’ for the job, as long as the suggestion is made with proper courtesy. However, if such
+a suggestion is necessary, it should be made by all the parties. Often, a reference to the fee rates paid by the leading arbitral
+institutions can provide a helpful anchor on which to base any discussion.
+(e) Commitment or cancellation fees
+4. 228
+A complex international arbitration may involve protracted proceedings in several separate stages. Arbitrators are invariably
+asked to reserve weeks for hearings in complicated cases. Substantial blocks of time are carved out of the arbitrators’ diaries
+and they must refuse other remunerative work during the reserved period. Three factors may lead to this time being lost to the
+arbitrator: first, the parties may settle their dispute; second, the parties may terminate the mandate of an arbitrator for some other
+reason; and third—and most commonly—a procedural schedule may have been fixed that turns out to have been too ambitious,
+with the result that hearings have to be postponed.
+4. 229
+Courts in England have held that the right to a commitment fee is not an implied term of the contract created when an appointment
+is accepted, and that it would be misconduct if an arbitrator were to require a commitment fee as a condition of continuing to
+perform his or her services if the appointment had been accepted without such a reservation. 340  Where the arbitrators were
+asked to hold available a sixty-day period some two years in the future, it was not improper for the arbitrators to request a
+commitment fee, although ‘it did not accord happily with their status to become involved in negotiations about fees’ after their
+appointment. 341  Further, it would be inappropriate if an arbitrator were to conclude an agreement for a commitment fee with
+one of the parties when the other party had refused to participate in the negotiations. In any event, once the appointment is
+accepted, the parties are under no obligation to agree to any commitment or cancellation fees.
+4. 230
+It is therefore important for the arbitrators to discuss any commitment or cancellation fee with the parties at the time of accepting
+the appointment. It is also important to understand that commitment and/or cancellation fees are acceptable in some cultural
+environments, but so unusual as to be unacceptable in others. It is common for such fees not to represent the full-time cost of
+the days not used, on the assumption that the arbitrator will be able to undertake some remunerative work during that period;
+commitment fees ranging between 50 and 75 per cent of blocked time are usual.
+
+Section J. - Fees and Expenses of the Arbitral Tribunal, UKBC-REDFERN 530638627...
+© 2025 Thomson Reuters.
+4
+(f) Expenses of the arbitral tribunal
+4. 231
+The question of the expenses incurred by the arbitrators will also have to be settled, unless the arbitration is being conducted
+under the auspices of an arbitral institution, which will collect money from the parties and reimburse the arbitrators. This is
+usually dealt with at the same time as the question of the arbitrators’ fees. The costs of air or train travel are invariably simply
+reimbursed on an ‘as incurred’ basis. Two points must be clarified between the arbitral tribunal and the parties: the first concerns
+the class of travel, 342  which, in order to avoid embarrassment later, should be established at the beginning; the second is whether
+the arbitrators may claim immediate reimbursement of their travel expenses, rather than wait for the end of the case, or for the
+next-stage payment date for fees. There is no justification for asking the arbitrators to fund the cash flow for the arbitral process
+and prompt reimbursement of expenses is reasonable.
+4. 232
+On the question of subsistence expenses whilst attending hearings, there are two methods of dealing with arbitrators’ subsistence
+expenses: the first may be described as the ‘reimbursement method’; the second, as the ‘per diem method’.
+(i) Reimbursement method
+4. 233
+If the reimbursement method is adopted, the arbitrators must keep a detailed note of their expenditure, including air fares,
+hotel expenses, and so on. Then, from time to time, they will arrange to have these expenses reimbursed, by submitting details
+to the relevant arbitral institution, to a designated member of the arbitral tribunal, to the administrative secretary, or to the
+parties directly. Sometimes, a limit may be imposed on the amount for which an arbitrator is reimbursed (for example in
+respect of hotel expenses), and any expenditure over this limit is then for the account of the arbitrator personally.
+(ii) Per diem method
+4. 234
+The alternative method is for the parties to pay an amount fixed at a daily rate. This daily, or per diem, rate is fixed at a level
+sufficient to cover the costs of living away from home at a hotel of good standard in the city where the hearing takes place.
+It will also cover incidental expenses such as meals, taxis, printing, and so on. It is paid to the arbitrator as a fixed amount of
+money, calculated on a per diem basis by reference to the number of days spent on the case. It is then for the arbitrator to meet
+the actual expenses out of this fixed allowance and to pay any excess personally. The ICC, for instance, operates a per diem
+rate for reimbursement of subsistence expenses. 343  Of the two methods discussed, this method is preferable as it avoids the
+detailed clerical work of checking payments against receipts; it also avoids prying into an arbitrator’s style of living, so as to
+decide whether a particular expense was or was not necessary in the interests of the proper conduct of the arbitration.
+(iii) ICSID system
+4. 235
+Although these methods are the most common in practice for the payment of arbitrators’ expenses, variations on these basic
+themes may be found. For instance, ICSID offers arbitrators some choice in the method of claiming their expenses. An
+arbitrator in an ICSID arbitration is entitled to the following allowances for attending meetings or hearings in connection
+with the case:
+ 
+• the actual cost of travel at ‘one class above coach’, by air, or other means of transport (‘coach’ being economy class);
+ 
+• an ‘in–out’ allowance of a fixed sum, to cover the costs of porterage, taxis, tips, and other expenses of travelling;
+
+Section J. - Fees and Expenses of the Arbitral Tribunal, UKBC-REDFERN 530638627...
+© 2025 Thomson Reuters.
+5
+ 
+• the actual cost of transport within the city where the hearing takes place; and
+ 
+• a per diem allowance, either at the full rate or at the so-called mixed rate. 344
+4. 236
+The last item on this list merits particular comment. Under the ICSID system, the full per diem rate varies from place to
+place, with different rates being established for different cities, according to whether or not they are ‘high-cost cities’. As
+an alternative to claiming the full per diem rate, arbitrators may claim reimbursement under the ‘mixed rate’. On this basis,
+reimbursement may be claimed for the actual cost of a hotel room (plus tax and service charge), together with an allowance
+of one half of the applicable full per diem rate to cover meals, tips, and other expenses. In practice, arbitrators taking part in
+an ICSID arbitration tend to choose reimbursement on the mixed rate basis unless otherwise agreed, since this comes nearest
+to covering the expenses likely to be incurred in staying, for instance, at a hotel in Washington, DC, where arbitrations under
+the ICSID Rules usually take place.
+(g) Securing payment of the fees and expenses of the arbitral tribunal
+4. 237
+The question of establishing effective arrangements regarding fees and expenses is as important for the arbitrators as it is for the
+parties. The fact that arbitrators may become functus officio instantly at the joint will of the parties emphasises the importance
+for the arbitrators of obtaining adequate security for payment of their fees and expenses. The acceptance by the arbitrators of
+the functions bestowed upon them creates a legal relationship between the parties and the members of the arbitral tribunal. This
+relationship carries with it an implied undertaking by the parties to compensate the members of the arbitral tribunal fairly in
+respect of their work and expenses, whether or not an award is issued. However, even under those national systems of law in
+which this is clear, 345  arbitrators do not usually wish to go to the trouble and cost of suing the parties for their fees and expenses.
+4. 238
+Where the arbitration is being administered by an established arbitral institution, the arbitral tribunal need not concern itself with
+the collection of payments on account of its fees and expenses. This is handled by the arbitral institution, usually by requesting
+an advance on costs for the entire proceedings or for every phase of them. In any other case, however, the tribunal should arrange
+for the parties to make sufficient advance deposits in respect of its fees and expenses. 346  There are two reasons for this: first, it
+helps the parties to keep a check on expenses as the case proceeds; and second, it is easier to collect payments from the parties
+whilst the arbitration is in progress than when the proceedings are over. In ICSID administered proceedings, when one of the
+parties fails to make the advance payments, the proceedings may be stayed and even discontinued unless the non-defaulting
+party pays the other party’s share in order to continue with the proceedings. 347
+4. 239
+Where there is no arbitral institution involved to take care of fees and expenses, a bank account should be established for
+receipt of the deposits made by the parties. This account may then also be used for paying fees and expenses to the members
+of the arbitral tribunal as and when payments fall due. Any interest earned on the account should be credited to the account
+(and, accordingly, be accrued for the benefit of the parties). The account is usually opened in the name of the arbitral tribunal,
+with the sole arbitrator or the presiding arbitrator as signatory on the account. If an administrative secretary or administrative
+authority has been appointed, the maintenance and operation of the account will usually fall under their responsibilities. As
+noted, however, some institutions offer this fundholding service irrespective of whether the arbitration is taking place under
+their rules. 348  This is to be recommended in large cases, since the arbitral institutions are far better equipped to undertake this
+kind of service than arbitrators and usually do so based on an hourly cost basis far lower than that of the arbitrator. 349
+Footnotes
+
+Section J. - Fees and Expenses of the Arbitral Tribunal, UKBC-REDFERN 530638627...
+© 2025 Thomson Reuters.
+6
+335
+Although, in some countries, the court fees are calculated on an ad valorem basis and may become substantial when
+large sums of money are in dispute.
+336
+ICC Rules, Appendix III, Art. 3.
+337
+Where the case is submitted to more than one arbitrator, the ICC Court has discretion to increase the fee up to a maximum
+of three times the fee payable to a single arbitrator.
+338
+ICC Rules, Appendix III, Art. 2.2.
+339
+The LCIA’s schedule of costs provided, as of 1 October 2020, that hourly rates of tribunal’s fees shall not exceed £500
+per hour, covering both hearings and preparatory work. The ICSID fee scale provides for US$3,000 per day or per eight-
+hour period of work. The ICDR simply asks individual arbitrators to propose rates in the biographical notes kept by
+the institution, on the basis that market forces will provide adequate checks and balances. The ICC operates a scale fee
+system, in which time spent is only one of several factors taken into account when fees are fixed by its Court. Most of
+the other major arbitral institutions operate a scale based on the amount in dispute.
+340
+K/S Norjarl A/S v Hyundai Heavy Industries Co. Ltd [1991] 1 Lloyd’s Rep 260; appeal dismissed, [1992] QB 863,
+[1991] 1 Lloyd’s Rep 524.
+341
+Ibid., at [268].
+342
+The ICC states that the reimbursement of travel expenses is subject to an airfare equivalent to the applicable standard
+business-class airfare for air travel and the applicable first-class train fare for rail travel. See ICC, ‘Note to Parties and
+Arbitral Tribunals on the Conduct of Arbitration’, para. 237. ICSID authorises arbitrators to travel at one class above
+economy.
+343
+The standard ICC per diem allowance at time of writing (March 2021) remains US$1,200 for an overnight stay and
+$400 for a day’s expenses if no overnight stay in hotel accommodation is involved.
+344
+The standard ICSID per diem allowance for subsistence expenses (that is, meals, taxis, etc.) still in effect in 2021 is
+US$115; however, special per diem allowances of $135, $170, or $185 apply for certain high-cost cities (e.g. $170 for
+Washington, DC, which is in the second highest cost category).
+345
+See, e.g., English Arbitration Act 1996, s. 28.
+346
+The UNCITRAL Rules make provision for this in Art. 43.
+347
+ICSID Administrative and Financial Regulations, reg. 14.
+348
+The LCIA provides a fundholding service for arbitrations conducted under the UNCITRAL Rules and also for ad hoc
+arbitrations. Where acting as fundholder, the LCIA sets up a dedicated bank account in either dollars, sterling, or euro,
+into which advances on costs and other administrative costs should be lodged by the parties. The LCIA will then monitor
+the account to ensure that it has enough funds to cover the arbitration costs and will make disbursement as determined
+by the tribunal.
+349
+In 2021, the costs of the LCIA fundholding service were £150 per hour.
+End of Document
+© NIGEL BLACKABY KC, CONSTANTINE PARTASIDES
+KC, ALAN REDFERN

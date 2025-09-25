@@ -1,0 +1,547 @@
+Section F. - Confidentiality, UKBC-REDFERN 530638605 (2025)
+© 2025 Thomson Reuters.
+1
+Section F. - Confidentiality
+Redfern and Hunter on International Arbitration 7th Ed.
+Mainwork
+Chapter 2 - Agreement to Arbitrate
+Section F. - Confidentiality
+2. 179
+The confidentiality of arbitral proceedings has traditionally been considered to be one of the important advantages of arbitration.
+Unlike proceedings in a court of law, where press and public are generally entitled to be present, an international arbitration is
+not a public proceeding. It is essentially a private process and therefore has the potential for remaining confidential. Increasingly,
+however, confidentiality cannot generally be relied upon as a clear duty of parties to arbitral proceedings. Parties concerned to
+ensure the confidentiality of their proceedings would therefore do well to include confidentiality provisions in their agreement
+to arbitrate, or in a separate confidentiality agreement concluded at the outset of the arbitration.
+2. 180
+In this section, the following issues will be addressed:
+ 
+• the distinction between privacy and confidentiality;
+ 
+• the classical position and current trend as far as confidentiality is concerned;
+ 
+• the confidentiality of the award;
+ 
+• confidentiality in investor–state arbitrations; and
+ 
+• institutional arbitral rules on confidentiality.
+(a) Privacy and confidentiality
+2. 181
+As far as the hearing is concerned, the major institutional rules are in agreement: the hearing is private. Article 26.3 of the ICC
+Rules states: The arbitral tribunal shall be in full charge of the hearings, at which all the parties shall be entitled to be present.
+Save with the approval of the arbitral tribunal and the parties, persons not involved in the proceedings shall not be admitted. The
+rules of the ICDR, LCIA, SIAC, International Centre for the Settlement of Investment Disputes (ICSID), and World Intellectual
+Property Organization (WIPO) contain similar provisions, as do the rules of commercial arbitration organisations such as the
+Austrian Federal Economic Chamber, the Swiss Chambers’ Arbitration Institution, the China International Economic and Trade
+Arbitration Commission (CIETAC), and the Japanese Commercial Arbitration Association (JCAA). 274
+2. 182
+Article 28.3 of the UNCITRAL Rules spells out the position in similar terms:
+Hearings shall be held in camera unless the parties agree otherwise. The arbitral tribunal may require the retirement
+of any witness or witnesses, including expert witnesses, during the testimony of such other witnesses, except that
+a witness, including an expert witness, who is a party to the arbitration shall not, in principle, be asked to retire.
+The ‘privacy’ of arbitration hearings is therefore uncontroversial. And if the hearing is to be held in private, it would seem to
+follow that the documents disclosed and the evidence given at that hearing should also be—and should remain—private. In
+principle, there would seem to be no point in excluding non-participants from an arbitration hearing if they can later read all
+
+Section F. - Confidentiality, UKBC-REDFERN 530638605 (2025)
+© 2025 Thomson Reuters.
+2
+about it in printed articles or on an authorised website. However, a broader duty of confidentiality in international arbitration
+is now far from clear.
+(b) Confidentiality—classical position
+2. 183
+The classical view of confidentiality is based on the existence of an implied duty of confidentiality as a natural extension of the
+privacy of the hearing in an international commercial arbitration. For example, in Hassneh Insurance Co of Israel v Mew, 275
+the English High Court recognised:
+If it be correct that there is at least an implied term in every agreement to arbitrate that the hearing shall be held in
+private, the requirement of privacy must in principle extend to documents which are created for the purpose of that
+hearing. The most obvious example is a note or transcript of the evidence. The disclosure to a third party of such
+documents would be almost equivalent to opening the door of the arbitration room to that third party. Similarly
+witness statements, being so closely related to the hearing, must be within the obligation of confidentiality. So also
+must outline submissions tendered to the arbitrator. If outline submissions, then so must pleadings be included. 276
+2. 184
+This position was reaffirmed in Ali Shipping Corporation v ‘Shipyard Trogir’, 277  where the Court of Appeal stated that the
+confidentiality rule was founded on the privacy of arbitral proceedings and that an implied term as to the confidentiality of
+arbitration was a term that ‘arises as the nature of the contract itself implicitly requires’. 278  The Court acknowledged, however,
+that ‘the boundaries of the obligations of confidence which thereby arise have yet to be delineated’. 279
+2. 185
+In the case of John Forster Emmott v Michael Wilson & Partners Ltd, 280  the Court of Appeal nevertheless noted that the duty
+of confidentiality in arbitration proceedings was not absolute and noted as follows:
+[T]he content of the obligation may depend on the context in which it arises and on the nature of the information or
+documents at issue. The limits of that obligation are still in the process of development on a case-by-case basis. On
+the authorities as they now stand, the principal cases in which disclosure will be permissible are these: the first is
+where there is consent, express or implied; second, where there is an order, or leave of the court (but that does not
+mean that the court has a general discretion to lift the obligation of confidentiality); third, where it is reasonably
+necessary for the protection of the legitimate interests of an arbitrating party; fourth, where the interests of justice
+require disclosure, and also (perhaps) where the public interest requires disclosure. 281
+2. 186
+The Singapore courts have adopted a similar approach, accepting the existence of an implied duty of confidentiality, but
+stipulating that they will impose such a duty ‘only to the extent that it is reasonable to do so’. 282
+(c) Confidentiality—the current trend
+2. 187
+In recent years the general trend has been against the assumption of confidentiality for international arbitral proceedings as
+a whole. This trend seems to have been influenced by arbitrations in which the public interest was at play. For example, in
+Esso Australia Resources Ltd v The Honourable Sidney James Plowman and Ors, 283  the High Court of Australia concluded
+that whilst the privacy of the hearing should be respected, confidentiality was not an essential attribute of a private arbitration.
+
+Section F. - Confidentiality, UKBC-REDFERN 530638605 (2025)
+© 2025 Thomson Reuters.
+3
+Specifically, the court found that a requirement to conduct proceedings in camera did not translate into an obligation prohibiting
+disclosure of documents and information provided in, and for the purpose of, the arbitration. The court then concluded that
+although a certain degree of confidentiality might arise in certain situations, it was not absolute. In the particular case before
+the court, ‘the public’s legitimate interest in obtaining information about the affairs of public authorities’ prevailed. 284
+2. 188
+In another Australian case, 285  the appellate court decided that an arbitrator had no power to make a procedural direction
+imposing an obligation of confidentiality that would have had the effect of preventing the government from disclosing to a state
+agency, or to the public, information and documents generated in the course of the arbitration that ought to be made known to
+that authority or to the public. It was said that public health and environmental issues were involved:
+Whilst private arbitration will often have the advantage of securing for the parties a high level of confidentiality
+for their dealing, where one of those parties is a government, or an organ of government, neither the arbitral
+agreement nor the general procedural powers of the arbitrator will extend so far as to stamp on the governmental
+litigant a regime of confidentiality or secrecy which effectively destroys or limits the general governmental duty
+to pursue the public interest. 286
+2. 189
+Notwithstanding the suggestion by the Australian courts that confidentiality is not an essential feature of arbitration, in recent
+years Australia has enacted legislative amendments replacing its confidentiality ‘opt-in’ system with an ‘opt-out’ system (that
+is, the arbitration is confidential unless the parties agree otherwise) in respect of contractual arbitrations. 287
+2. 190
+In the United States, neither the Federal Arbitration Act nor the Uniform Arbitration Act contain a provision requiring the
+parties or the arbitrators to keep secret arbitration proceedings in which they are involved. As a consequence, unless the parties’
+agreement or applicable arbitration rules provide otherwise, the parties are not required by US law to treat as confidential the
+arbitration proceedings and what transpires in them. 288
+2. 191
+In United States v Panhandle Eastern Corporation, 289  Panhandle brought a motion before a US federal district court for
+a protective order, preventing the disclosure of documents relating to arbitration proceedings between it and Sonatrach, the
+Algerian national oil and gas company. In support of its motion, Panhandle argued that disclosure to third parties of documents
+related to the arbitration would severely prejudice Panhandle’s ongoing business relationship with both Sonatrach and the
+Algerian government.
+2. 192
+The court denied the motion on the grounds that Panhandle had failed to satisfy the ‘good cause’ requirements of rule 26(c) of
+the Federal Rules of Civil Procedure and that the filing was untimely, but it proceeded to address the question of confidentiality
+and, having rejected the existence of an express confidentiality agreement between the parties, gave no credence to the existence
+of an implied obligation. 290  This decision has been followed in subsequent US cases in which the courts have refused to find a
+duty of confidentiality in the absence of an express contractual provision or the adoption of a set of arbitration rules containing
+such a provision. 291
+2. 193
+Indeed, the existence of an implied duty of confidentiality is becoming increasingly rare. 292  In Sweden, the Supreme Court
+has rejected the idea of a general implied duty of confidentiality in arbitration proceedings. 293  The same position prevails in
+Norway (that is, an ‘opt-in’ system prevails, in contrast to the Australian approach described above), 294  and France. 295  By
+contrast, in England, a duty of confidentiality is implied by law (that is, not on the basis that such a term must have been intended
+by the parties because it is necessary for their arbitration agreement). 296  In Germany, Austria, and Bulgaria, commentators and
+courts are divided as to whether a duty of confidentiality may be implied into an arbitration agreement. 297
+
+Section F. - Confidentiality, UKBC-REDFERN 530638605 (2025)
+© 2025 Thomson Reuters.
+4
+2. 194
+The tension between the confidential nature of arbitration and the desirability of transparency where matters of public interest
+arise was explored by the English courts in the case of Manchester City Football Club Ltd v The Football Association Premier
+League & Ors. 298  In October 2019, the Premier League commenced arbitration against Manchester City Football Club under the
+Premier League Rules, in relation to Manchester City’s alleged failure to provide documents and information in the course of a
+disciplinary investigation conducted by the Premier League. Manchester City applied to the English High Court to challenge the
+arbitral tribunal’s jurisdiction, but its application was unsuccessful. Moreover, the High Court decided to publish its judgment,
+even though both Manchester City and Premier League opposed publication. 299
+2. 195
+Subsequently, the English Court of Appeal upheld the High Court’s decision to publish the judgment in question. Having
+weighed the confidential nature of arbitration against the public interest in publication, the Court of Appeal determined that
+the balance was in favour of the latter. In the Court of Appeal’s view, the judgment in question did not contain ‘significant
+confidential information’, and disclosure of the existence of the arbitration would not give rise to any prejudice or detriment to
+the parties in circumstances where the dispute was already widely covered in the press. 300
+(d) Award
+2. 196
+Some institutional rules of arbitration provide that the award may be made public only with the consent of the parties. 301
+2. 197
+It has always been recognised, however, that there are circumstances in which an award may need to be made public, for
+example for the purpose of enforcement by a national court. In Hassneh Insurance Co of Israel v Mew 302  the judge concluded
+that an award and the reasons contained in that award were different in character from the other elements of the arbitration
+proceedings (such as notes and transcripts of evidence, witness statements, submissions, and pleadings, all of which were, in
+his view, covered by the principle of privacy stemming from the fact that arbitration hearings were held in private). He found
+that the award was potentially a public document for the purposes of supervision by the courts or enforcement in them, and
+therefore could be disclosed without the consent of the other party or the permission of the court if—but only if—the party
+seeking disclosure needed to do so in order to assert or protect its legal rights vis-à-vis a third party. 303  This position is now
+reflected in many of the institutional arbitration rules.
+2. 198
+In addition to the disclosure of awards where required by law, disclosure of a kind takes place when an arbitral institution—such
+as the ICC—publishes ‘edited and redacted’ copies of arbitral awards as a guide for the benefit of lawyers and arbitrators. 304
+The ICC has also recently published guidance confirming that any award made from 1 January 2019 ‘may be published in its
+entirety no less than two years after the date of [ … ] notification’, subject to any objection by the parties. 305
+2. 199
+Article 30.3 of the ICDR Rules provides that an award may be made public ‘only with the consent of all parties or as required
+by law’. 306  These Rules further provide that, unless otherwise agreed by the parties, selected awards may be made publicly
+available, with the names of the parties and other identifying features removed. 307  If the award has become publicly available
+through enforcement proceedings or otherwise, then the names need not be removed.
+2. 200
+In England, the Privy Council had to consider in Aegis v European Re 308  whether an arbitration award in one arbitration under
+a reinsurance agreement could be relied upon, by the winning party, in another arbitration under the same agreement, despite an
+express confidentiality agreement in respect of the first arbitration. The case came to the Privy Council on appeal from the Court
+of Appeal of Bermuda and disclosure of the award was allowed. The Privy Council said that the legitimate use of an earlier
+
+Section F. - Confidentiality, UKBC-REDFERN 530638605 (2025)
+© 2025 Thomson Reuters.
+5
+award in a later, also private, arbitration between the same parties was not the kind of mischief against which the confidentiality
+agreement was directed. This decision has been rightly described as:
+[ … ] eminently sensible in the circumstances of the case. The private and, in theory, confidential nature of
+arbitration should not mean that the parties can go on arbitrating the same point ad infinitum until they get the
+result they prefer. 309
+2. 201
+In France, the Paris Court of Appeal ruled, in Aita v Ojjeh, 310  that the mere bringing of court proceedings to challenge
+an arbitration award violated the principle of confidentiality in that it caused ‘a public debate of facts which should remain
+confidential’. The judgment also contains dicta to the effect that it is in ‘the very nature of arbitral proceeding that they ensure
+the highest degree of discretion in the resolution of private disputes, as the two parties had agreed’. 311  More recently, however,
+and in line with the modern trend, the Paris Court of Appeal in Nafimco 312  found that the claimant failed to ‘show the existence
+and foundation of such a duty in French international arbitration law’.
+(e) Confidentiality in investor–state arbitrations
+2. 202
+In the Cockatoo Dockyard case, 313  the Australian court concluded that whilst there was a ‘high level of confidentiality’ in
+arbitral proceedings, this should not prevent disclosure where the public interest was concerned. It is this concern for the
+public interest—and for the public’s ‘right to know’—that has led to the erosion of the principle of confidentiality in arbitral
+proceedings. The need to balance the private interest in confidentiality against the possible public interest in disclosure may be
+seen in arbitrations that have taken place under the treaty that established the North American Free Trade Agreement (NAFTA).
+2. 203
+In the early 1980s, an international arbitral tribunal applying the ICSID Rules in Amco v Republic of Indonesia 314  held that
+‘as to the “spirit of confidentiality” of the arbitral procedure, it is right to say that the Convention and the Rules do not prevent
+the parties from revealing their case’. Balanced against this finding, the Amco tribunal nonetheless referred to a general duty
+existing under international law not to exacerbate an ongoing international dispute, and relied on the existence of this duty to
+recommend to the parties that they should ensure that their public statements about cases in which they were involved were
+both short and accurate.
+2. 204
+In the years since Amco, tribunals applying the ICSID Rules, including NAFTA tribunals, have striven to achieve the same
+balance. For example, in Metalclad Corporation v United Mexican States, 315  Mexico made an application for a confidentiality
+order, pursuant to Article 1134 of NAFTA (‘Interim measures of protection’) and Article 28 of the (then) ICSID Additional
+Facility Rules (‘Procedural orders’). The tribunal dismissed the application, finding that:
+There remains nonetheless a question as to whether there exists any general principle of confidentiality that would
+operate to prohibit discussion of the arbitration proceedings by either party. Neither the NAFTA nor the ICSID
+(Additional Facility) Rules contain any express restriction on the freedom of the parties in this respect. Though
+it is frequently said that one of the reasons for recourse to arbitration is to avoid publicity, unless the agreement
+between the parties incorporates such a limitation, each of them is still free to speak publicly of the arbitration
+[ … ] Indeed, as has been pointed out by the Claimant in its comments, under US security laws, the Claimant,
+as a public company traded on a public stock exchange in the US, is under a positive duty to provide certain
+information about its activities to its shareholders, especially regarding its involvement in a process the outcome
+of which could perhaps significantly affect its share value.
+The above having been said, it still appears to the Arbitral Tribunal that it would be of advantage to the orderly
+unfolding of the arbitral process and conducive to the maintenance of working relationships between the Parties
+
+Section F. - Confidentiality, UKBC-REDFERN 530638605 (2025)
+© 2025 Thomson Reuters.
+6
+if during the proceedings they were both to limit public discussion of the case to a minimum, subject only to any
+externally imposed obligation by which either of them may be legally bound. 316
+2. 205
+In another NAFTA arbitration, R Loewen and Loewen Corporation v United States of America, 317  the US government requested
+that all filings, as well as the minutes of oral proceedings, be treated as open and available to the public. Loewen did not oppose
+public disclosure, but requested that the disclosure take place only after the conclusion of the arbitration. The tribunal rejected
+the US government’s request, referring to Article 44.2 of the then ICSID Additional Facility Rules, which provide that minutes
+of hearings should not be published without the consent of the parties. 318
+2. 206
+Although the tribunal rejected the US government’s request, it did not recognise any general duty of confidentiality; rather,
+it rejected Loewen’s submission that each party is under an obligation of confidentiality in relation to the proceedings. In its
+award on jurisdiction, the tribunal summarised its conclusions as follows:
+In its Decision the Tribunal rejected the Claimants’ submission that each party is under a general obligation of
+confidentiality in relation to the proceedings. The Tribunal stated that in an arbitration under NAFTA, it is not
+to be supposed that, in the absence of express provision, the Convention or the Rules and Regulations impose a
+general obligation on the parties, the effect of which would be to preclude a Government (or the other party) from
+discussing the case in public, thereby depriving the public of knowledge and information concerning government
+and public affairs. The decision concluded by repeating the comment made by the Metalclad Tribunal, namely
+that it would be of advantage to the orderly unfolding of the arbitral process if during the proceedings, the parties
+were to limit public discussion to what is considered necessary. 319
+2. 207
+The trend towards greater transparency in investor–state arbitration has emerged more clearly in recent years. In Biwater Gauff
+(Tanzania) Ltd v United Republic of Tanzania, 320  the tribunal recognised that the 2006 ICSID Rules reflected this overall
+trend towards transparency. The tribunal considered the balance between transparency and what it referred to as the integrity of
+the arbitral process, and concluded that some confidentiality controls were warranted, but ought to be ‘carefully and narrowly
+delimited’. 321  Ultimately, the tribunal did not prevent the parties from discussing the case in public, or from publishing awards
+and other decisions by the tribunal, but restricted the disclosure of records of hearings, submissions, and witness statements.
+2. 208
+Reflecting this trend towards transparency, UNCITRAL has published the UNCITRAL Transparency Rules already referred to
+in Chapter 1. 322  The rules provide for the publication of all documents, including the notice of arbitration, written pleadings,
+and lists of exhibits (and expert reports and witness statements, if any person so requests). Public access to hearings is
+guaranteed and interested third parties are entitled to make submissions. However, tribunals have discretion to order that certain
+documents should remain confidential if they contain protected information or if their disclosure would undermine the integrity
+of the arbitral process. With the entry into force of the Mauritius Convention on Transparency in Treaty-based Investor–State
+Arbitration, in October 2017, the application of the UNCITRAL Transparency Rules has been extended significantly to all
+arbitrations arising from an investment treaty concluded before 1 April 2014 where both the host state and investor’s home
+state are parties thereto. 323
+2. 209
+Under the SIAC Investment Rules, the parties are deemed to have given their consent to SIAC to publish certain information
+regarding a case, including redacted excerpts of the reasoning of the tribunal. 324
+2. 210
+Under the Stockholm Chamber of Commerce (SCC) Arbitration Rules (2017), third parties may apply to the tribunal to make
+written submissions in treaty-based investor–state arbitrations. 325  In considering such applications, a tribunal ‘shall have regard
+to: the nature and significance of the interest of the Third Person in the arbitration; (ii) whether the submission would assist
+
+Section F. - Confidentiality, UKBC-REDFERN 530638605 (2025)
+© 2025 Thomson Reuters.
+7
+the Arbitral Tribunal in determining a material factual or legal issue in the arbitration by bringing a perspective, particular
+knowledge or insight that is distinct from or broader than that of the disputing parties; and (iii) any other relevant circumstances’.
+(f) Revisions to rules of arbitration
+2. 211
+The increasing number of arbitrations in which there is a legitimate public interest, such as the investor–state arbitrations
+discussed in this chapter and in Chapter 11, has led to an erosion of the concept of confidentiality, with pleadings and awards
+being publicly available on the Internet and elsewhere. Some arbitration institutions have therefore amended their rules to impose
+an express duty of confidentiality upon the parties, but this may be overridden if it is judged that the public interest so requires.
+2. 212
+Article 30 of the LCIA Rules imposes an express duty of confidentiality on the parties to the arbitration as follows:
+ 
+30.1The parties undertake as a general principle to keep confidential all awards in the arbitration, together with all materials
+in the arbitration created for the purpose of the arbitration and all other documents produced by another party in the
+proceedings not otherwise in the public domain, save and to the extent that disclosure may be required of a party by legal
+duty, to protect or pursue a legal right, or to enforce or challenge an award in legal proceedings before a state court or
+other legal authority. The parties shall seek the same undertaking of confidentiality from all those that it involves in the
+arbitration, including but not limited to any authorised representative, witness of fact, expert or service provider.
+ 
+30.2Article 30.1 of the LCIA Rules shall also apply, with necessary changes, to the Arbitral Tribunal, any tribunal secretary
+and any expert to the Arbitral Tribunal. Notwithstanding any other provision of the LCIA Rules, the deliberations of the
+Arbitral Tribunal shall remain confidential to its members and if appropriate any tribunal secretary, save as required by
+any applicable law and to the extent that disclosure of an arbitrator’s refusal to participate in the arbitration is required of
+the other members of the Arbitral Tribunal under Articles 10, 12, 26.6 and 27.5.
+ 
+30.3The LCIA does not publish any award or any part of an award without the prior written consent of all parties and
+the Arbitral Tribunal.
+2. 213
+Similar restrictions are imposed under some other major institutional rules. 326  However, such express confidentiality provisions
+are no longer widespread. By way of notable example, the ICC Rules only provide that a tribunal ‘may make orders concerning
+the confidentiality of the arbitration proceedings or of any other matters in connection with the arbitration and may take measures
+for protecting trade secrets and confidential information’. 327  As noted above, once an award has been issued, the ICC may
+publish the award in a redacted form after two years unless a party objects and will publish such awards for consultation.
+2. 214
+The WIPO Rules carry the protection of ‘trade secrets’ much further, as might be expected from an organisation concerned with
+the protection of intellectual property rights. Article 54 of the WIPO Rules defines ‘confidential information’ as any information,
+regardless of the medium in which it is expressed:
+ 
+(a)[ … ] which is:
+ 
+(i)in the possession of a party;
+ 
+(ii)not accessible to the public;
+ 
+(iii)of commercial, financial or industrial significance; and
+ 
+(iv)treated as confidential by the person possessing it.
+[ … ]
+2. 215
+
+Section F. - Confidentiality, UKBC-REDFERN 530638605 (2025)
+© 2025 Thomson Reuters.
+8
+On application by the relevant party, the tribunal may classify such information as ‘confidential’, 328  effectively restricting its
+disclosure to the tribunal and the parties. In exceptional circumstances, the tribunal may delegate this duty to a ‘confidentiality
+adviser’ who will determine whether the information is to be so classified, and if so, to whom it may be disclosed, in whole or
+in part. 329  As an additional safeguard, the tribunal may appoint the ‘confidentiality adviser’ as an expert to report on specific
+issues on the basis of the confidential information, without disclosing that information either to the other party or to the tribunal
+itself. 330
+2. 216
+For completeness, it should be noted that the WIPO Rules extend the protection of confidentiality to the very existence of the
+arbitration, 331  to disclosures made during the arbitration, 332  and to the award. 333  The duty of confidentiality is also, of course,
+imposed upon the tribunal and the WIPO centre itself. 334
+(g) Summary
+2. 217
+One of the traditional advantages of arbitration was that it is a private proceeding, in which the parties may air their differences
+and grievances, and discuss their financial circumstances, their proprietary ‘know-how’, and so forth, without exposure to the
+gaze of the public and the reporting of the media. That arbitral hearings are held in private still remains a constant feature of
+arbitration, and this creates the potential for confidentiality. However, many modern laws and rules of arbitration no longer
+provide that—absent the parties’ express agreement—proceedings will be confidential. To ensure the confidentiality of the entire
+proceedings, it is increasingly necessary to agree this expressly, either by selecting one of those remaining sets of arbitration
+rules that contain an express provision of the relevant rules (for example those of the LCIA or of WIPO), or to enter into a
+specific confidentiality agreement as part of the agreement to arbitrate, or at the outset of proceedings. 335
+Footnotes
+274
+For research that points towards confidentiality as one of the reasons for choosing arbitration, see the references in
+Pryles, ‘Confidentiality’, in Hille and Newman (eds) The Leading Arbitrators’ Guide to International Arbitration (Juris,
+2004), p. 415.
+275
+Hassneh Insurance Co of Israel v Mew [1993] 2 Lloyd’s Rep 243.
+276
+Ibid., at 247 per Colman J.
+277
+Ali Shipping Corporation v ‘Shipyard Trogir’ [1998] 1 Lloyd’s Rep 643.
+278
+Ibid., at 651.
+279
+Ibid.
+280
+John Forster Emmott v Michael Wilson & Partners Ltd [2008] EWCA Civ 184.
+281
+Ibid., at [107].
+282
+AAY and ors v AAZ (AAY) [2011] 1 SLR 1093, 1120. The court found that the defendant had legitimate grounds to disclose
+certain materials to the relevant public authorities because ‘there was reasonable cause to suspect criminal conduct’ (at
+1131). See also Myanma Taung Chi Oo Co. Ltd v Win Nu [2003] 2 SLR 945. In the same way, in New Zealand, every
+arbitration agreement entails a duty of confidentiality unless the parties expressly agree otherwise. An implied duty of
+confidentiality also applies by default in Scotland and Spain.
+283
+Esso Australia Resources Ltd v The Honourable Sidney James Plowman and Ors (1995) 193 CLR 10. The case is also
+set out in (1995) 11 Arb Intl, 3, 235.
+284
+Ibid., at 249.
+285
+Commonwealth of Australia v Cockatoo Dockyard Pty Ltd [1995] 36 NSWLR 662.
+286
+Ibid., at 682 per Kirby P. See also Adesa Corporation v Bob Dickenson Auction Service Ltd 73 OR (3d) 787, [56] (2004),
+in which the Canadian courts acknowledged that the ‘confidentiality of arbitration proceedings should be fostered to
+
+Section F. - Confidentiality, UKBC-REDFERN 530638605 (2025)
+© 2025 Thomson Reuters.
+9
+maintain the integrity of the arbitration process’, but stated that this should be balanced against any wider public interest
+in disclosure.
+287
+Amendments made to the International Arbitration Act 1974 (Cth) by the Civil Law and Justice (Omnibus Amendments)
+Act 2015 (Cth).
+288
+See Industrotech Constructors Inc. v Duke University 67 NC App. 741, 314 S.E.2d 272 (1984); Giacobassi Grandi Vini
+SpA v Renfield Corporation US Dist. LEXIS 1783 (1987).
+289
+United States v Panhandle Eastern Corporation 118 FRD 346 (D. Del. 1988).
+290
+It would seem that the decision of the Court was obiter. Moreover, it has been suggested that too much should not be read
+into this decision. Panhandle was seeking a ‘protective order’ to shield the arbitration documents from disclosure and
+the onus of establishing ‘good cause’ is a heavy one: see Neill, ‘Confidentiality in arbitration’ (1996) 12 Arb Intl 303.
+291
+See, e.g., Contship Containerlines Ltd v PPG Industries Inc., 17 April 2003, 2003 US Dist. 6857.
+292
+For a discussion of the implied duty of confidentiality in commercial arbitration, including its historical rationale,
+costs, and prospects for the future, see Partasides, ‘What has been the “spillover” effect of the transparency debate on
+commercial arbitrations?’, in Kalicki and Raouf (eds) Evolution and Adaptation: The Future of International Arbitration,
+ICCA Congress Series, Vol. 20 (Kluwer Law International, 2019), pp. 699–705.
+293
+See AI Trade Finance Inc. v Bulgarian Foreign Trade Bank Ltd, Supreme Court of Sweden, 27 October 2000, (2000)
+15 Mealey’s Intl Arb Rep A1.
+294
+Norwegian Arbitration Act 2004, s. 5.
+295
+Pursuant to Decree No. 2011-48 of 13 January 2011, no express obligation of confidentiality exists in France in relation
+to international arbitration (in contrast to domestic arbitration).
+296
+Emmott v Michael Wilson Partnership [2008] EWCA Civ 184.
+297
+In Switzerland, arbitrators are bound by an implicit duty of confidentiality with respect to the proceedings, but this does
+not apply to the parties themselves or to third parties involved in the arbitration. It is, therefore, for the parties to provide
+for confidentiality in their agreement with third parties or to agree on the general confidentiality of the arbitration, either
+expressly or by reference to arbitration rules containing confidentiality obligations.
+298
+Manchester City Football Club Ltd v The Football Association Premier League & Ors [2021] EWHC 628 (Comm).
+299
+Manchester City Football Club Ltd v The Football Association Premier League & Ors [2021] EWHC 711 (Comm).
+300
+Manchester City Football Club Ltd v The Football Association Premier League & Ors [2021] EWCA Civ 1110, at [54],
+[65], and [66].
+301
+See, e.g., AAA Rules, Art. 27.4; SIAC Rules, r. 39.2. See also the UNCITRAL Rules 2010, Art. 34.5.
+302
+Hassneh Insurance Co of Israel v Mew [1993] 2 Lloyd’s Rep 243.
+303
+The LCIA Rules, Art. 30 mirrors this position, as pointed out by Rawding and Seeger, ‘Aegis v European Re and the
+confidentiality of arbitration awards’ (2003) 19 Arb Intl 484. See also City of Moscow v International Industrial Bank
+[2004] 2 Lloyd’s Rep 179, which concerned the publication of a court judgment dismissing a challenge to an arbitral
+award under the Arbitration Act 1996, s. 68. The court stated that a public judgment was particularly desirable where it
+involved a point of law that may offer future guidance to practitioners, but emphasised that this must be balanced against
+the parties’ expectations of privacy and confidentiality in arbitration. Ultimately, the court concluded that the judgment
+should remain private because the party ‘had, objectively, no good reason for insisting on [its] publication’.
+304
+The ICC has no specific rule as to the confidentiality of awards, although an ICC arbitral tribunal now has an express
+power under the ICC Rules, Art. 22.3 to make confidentiality orders in relation to arbitration proceedings or other
+matters in connection with the arbitration. Similarly, the ICSID Arbitration Rules provide that, with the parties’ consent,
+ICSID ‘shall publish every Award, supplementary decision on an Award, rectification, interpretation, and revision of an
+Award’ and that, for this purpose, ‘the parties may consent to publication of the full text or to a jointly redacted text’:
+see ICSID Rules, r. 62(1) and (2). If, however, the parties ‘object to publication’ or ‘disagree on redaction’, the ICSID
+Secretary-General shall ‘consider any comments received’ from the parties and then proceed to publish ‘excerpts’ of
+the award: see ICSID Rules, r. 62(4).
+305
+ICC Note to Parties and Arbitral Tribunals on the Conduct of the Arbitration under the ICC Rules of Arbitration, 1
+January 2019, at paras 42–43.
+306
+Similarly, the SIAC Rules, r. 32(12) states that SIAC may publish, with the consent of the parties and the tribunal, any
+award with the names of the parties and other identifying information redacted.
+307
+The Vienna Rules similarly provide that the VIAC may publish anonymised summaries or extracts of awards, subject
+to any objection by the parties: Art. 41.
+308
+Associated Electric and Gas Insurance Services Ltd v European Reinsurance Co. of Zurich [2003] UKPC 11.
+309
+Rawding and Seeger, ‘Aegis v European Re and the confidentiality of arbitration awards’ (2003) 19 Arb Intl 484, at
+488–489.
+
+Section F. - Confidentiality, UKBC-REDFERN 530638605 (2025)
+© 2025 Thomson Reuters.
+10
+310
+Aita v Ojjeh [1986] Rev Arb 583, 583.
+311
+Ibid., at 584. Some commentators argue that the reasoning of the French court is unsatisfactory, and that the extreme
+position advanced must be seen in the context of the court’s determination to punish what it evidently viewed as a
+hopeless and tactically motivated attempt to set aside an English award in the French courts: see Paulsson and Rawding,
+‘The trouble with confidentiality’ (1994) 5 ICC International Court of Arbitration Bulletin 48.
+312
+Nafimco, Paris cour d’appel, 22 January 2004. Under France’s new Decree No. 2011-48, confidentiality obligations
+apply by default in domestic arbitration proceedings. However, the Decree does not provide for confidentiality in
+international arbitration proceedings. Accordingly, where parties agree to refer disputes to international arbitration, they
+should make express provision for confidentiality in the contract. See Code of Civil Procedure, Arts 1464(4) and 1506.
+313
+Commonwealth of Australia v Cockatoo Dockyard Pty Ltd [1995] 36 NSWLR 662.
+314
+Amco Corporation and ors v Republic of Indonesia, Decision on Request for Provisional Measures, 9 December 1983,
+(1983) 1 ICSID Rep 410, at 412.
+315
+Metalclad Corporation v United Mexican States Award, Ad hoc—ICSID Additional Facility Rules; ICSID Case No.
+ARB (AF)/97/1; IIC 161 (2000).
+316
+Ibid., at [13].
+317
+R Loewen and Loewen Corporation v United States of America, Decision on Hearing of Respondent’s Objection to
+Competence and Jurisdiction, ICSID Case No. ARB(AF)/98/3, IIC 253 (2001), 7 ICSID Rep 425, 128 ILR 339.
+318
+Ibid., at [25]. (The current Additional Facility Rules provide that ‘[u]pon request of a party, the Centre shall publish
+recordings or transcripts of hearings, unless the other party objects’: see r. 75(3).)
+319
+Ibid., at [26].
+320
+Biwater Gauff (Tanzania) Ltd v United Republic of Tanzania, ICSID Case No. ARB/05/22, Procedural Order No. 3,
+29 September 2006.
+321
+Ibid.
+322
+The Rules apply to UNCITRAL arbitrations under investment treaties concluded after 1 April 2014. They apply to
+disputes under existing treaties only if the parties so agree. They do not affect commercial or state-to-state arbitrations.
+Pro-transparency provisions are now also contained in the US and Canada model BITs, and the EU trade spokesperson
+has indicated that the Rules ‘set a benchmark for all future EU investment treaties’: see European Commission, ‘EU
+backs new transparency standards for investor-state dispute settlement’, Press release (11 February 2013), available
+online at http://trade.ec.europa.eu/doclib/press/index.cfm?id=868
+323
+United Nations Convention on Transparency in Treaty-based Investor–State Arbitration (New York, 2014) (entry into
+force 18 October 2017), Arts 1 and 2.
+324
+Art. 38.
+325
+Appendix III, Art. 3.
+326
+See, e.g., Swiss Rules, Art. 44; HKIAC Rules, Art. 45. Rule 39.3 of the SIAC Rules specifies that the duty of
+confidentiality extends to pleadings, evidence, and other materials in the arbitration proceedings, all documents produced
+by another party, the award, and the very existence of the proceedings.
+327
+ICC Rules, Art. 22.3.
+328
+WIPO Rules, Art. 54.c.
+329
+WIPO Rules, Art. 54.d.
+330
+WIPO Rules, Art. 54.e.
+331
+WIPO Rules, Art. 75.
+332
+WIPO Rules, Art. 76.
+333
+WIPO Rules, Art. 77.
+334
+WIPO Rules, Art. 78.
+335
+See the concluding comments, which continue to be pertinent, of Rawding and Seeger, ‘Aegis v European Re and the
+confidentiality of arbitration awards’ (2003) 19 Arb Intl 484. The UNCITRAL Notes, paras 31–32, make the very
+same recommendation. When drafting confidentiality clauses, parties may be aided by the Model Procedural Order
+on Confidentiality. See also Hwang and Thio, ‘A proposed model procedural order on confidentiality in international
+arbitration: A comprehensive and self-governing code’ (2012) 29 J Intl Arb 137.
+End of Document
+© NIGEL BLACKABY KC, CONSTANTINE PARTASIDES
+KC, ALAN REDFERN

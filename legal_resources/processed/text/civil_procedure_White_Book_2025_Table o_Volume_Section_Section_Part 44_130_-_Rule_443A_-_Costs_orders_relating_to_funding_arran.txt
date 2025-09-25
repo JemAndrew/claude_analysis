@@ -1,0 +1,80 @@
+Rule 44.3A - Costs orders relating to funding arrangements, UKBC-WHITEBK 458569356...
+© 2025 Thomson Reuters.
+1
+Rule 44.3A - Costs orders relating to funding arrangements
+White Book 2025  | Commentary last updated November 11, 2019
+Volume 2
+Section 7 - Legal Representatives—Costs and Litigation Funding
+Section 7B - CPR 43 to 45 [Before 1 April 2013]
+Part 44 [Before 1 April 2013] General Rules about Costs
+ 
+Related Practice Directions
+Rule 44_3a
+44.3A— Costs orders relating to funding arrangements 1
+7B-11+
+(1) The court will not assess any additional liability until the conclusion of the proceedings, or the part of the
+proceedings, to which the funding arrangement relates.
+(“Funding arrangement” and “additional liability” are defined in rule 43.2.)
+(2) At the conclusion of the proceedings, or the part of the proceedings, to which the funding arrangement relates
+the court may—
+(a) make a summary assessment of all the costs, including any additional liability;
+(b) make an order for detailed assessment of the additional liability but make a summary assessment of the other
+costs; or
+(c) make an order for detailed assessment of all the costs.
+(Part 47 sets out the procedure for the detailed assessment of costs)
+Effect of rule
+7B-11.
+1+
+This rule and rr.44.3B, 44.15, 44.16 and 44.17, were inserted in Part 44 by the Civil Procedure (Amendment No.3) Rules
+2000 (SI 2000/1317) when, after the bringing into force of the Access to Justice Act 1999, new funding arrangements for
+legal proceedings became possible (see para.7B-6+) and, for the purposes of regulating proceedings where the new funding
+arrangements applied, and providing for the assessment of costs in such proceedings, additional rules of court were required.
+SI 2000/1317 came into effect on 3 July 2000, subject to transitional provisions.
+For meaning of “summary assessment” and “detailed assessment”, see r.43.3 (at para.7B-10+) and r.44.4 (at para.7B-13+).
+As explained above (para.7B-6+), r.44.3A is a provision “relating to funding arrangements” and applies in relation to “a pre-
+commencement funding arrangement” as it was in force immediately before 1 April 2013. That rule is supplemented by Section
+9 of the Costs Practice Direction (see para.7BPD-3+).
+
+Rule 44.3A - Costs orders relating to funding arrangements, UKBC-WHITEBK 458569356...
+© 2025 Thomson Reuters.
+2
+“any additional liability”
+7B-11.
+2+
+The additional liability may consist of any “percentage increase” (for calculation of a “success fee”) and any “insurance
+premium” (as defined, respectively in paras (l) and (m) in r.43.2(1)) to which a funding arrangement relates; see paras 7B-2+,
+7B-10.3+ and 7B-55+.
+Summary or detailed assessment
+7B-11.
+3+
+Because it was felt that disclosure of full details of funding arrangements, particularly the percentage success fee in a conditional
+fee agreement, was prejudicial, the rules provide for limited information to be given to opposing parties until the final assessment
+(summary or detailed) is made (see r.44.15 and Section 19 of the Costs Practice Direction (see para.7BPD-5+; note also Practice
+Direction (Pre-Action Conduct) para.9.3). As to disclosure on detailed assessment, see commentary following r.47.14 (Detailed
+assessment hearing)). Rule 44.3A(1) states that the court will not assess any additional liability until the conclusion of the
+relevant part of the proceedings. At that point the court may carry out a summary assessment of all the costs, make a summary
+assessment of the base costs only and order a detailed assessment of the additional liability, or make an order for detailed
+assessment of all the costs (r.44.3A(2)). In Burton v Kingsley [2005] EWHC 1034 (QB), [2005] P.I.Q.R. P2 (Richards J) the
+judge summarily assessed the additional liability (a success fee under a CFA) and ordered detailed assessment of the claimant’s
+costs in relation to liability.
+When the court makes a summary assessment during the course of the proceedings the judge should state separately the amount
+allowed in respect of solicitors’ charges, counsels’ fees and other disbursements. This is so even though any additional liability
+is not at that stage assessed. The reason for this is that when the final assessment takes place it will be necessary to identify
+the total figures allowed to solicitors and counsel in order that any percentage increase (which may be different for solicitors
+and counsel) can be applied.
+Related Practice Directions
+ 
+Costs Practice Direction (CPR Pt 43) [Before 1 April 2013]
+ 
+Costs Practice Direction (CPR Pt 44) [Before 1 April 2013]
+ 
+Costs Practice Direction (CPR Pt 45) [Before 1 April 2013]
+ 
+Costs Practice Direction (CPR Pt 47)
+ 
+Back to top
+Footnotes
+1
+Introduced by the Civil Procedure (Amendment No.3) Rules 2000 (SI 2000/1317).
+End of Document
+© 2025 SWEET & MAXWELL

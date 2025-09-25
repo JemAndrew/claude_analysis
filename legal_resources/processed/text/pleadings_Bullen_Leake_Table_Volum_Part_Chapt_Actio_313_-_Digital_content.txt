@@ -1,0 +1,24 @@
+Digital content, UKBC-BULLENL 459372230 (2022)
+© 2025 Thomson Reuters.
+1
+Digital content
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part F - Business Law
+Chapter 25 - Supply of Goods and Digital Content
+Action for breach of condition or warranty
+Digital content
+25-32
+The SGA makes no provision for digital content but it is given an entire chapter (Pt 1 Ch.3) of the CRA. The Act covers both
+contracts to supply digital content for a price and contracts where the supply of the content is free, but it can only be obtained
+by purchasing goods or services—CRA s.33(2). The contents of Ch.3 are in line with those of Ch.2 (goods). The digital content
+must be of satisfactory quality—CRA s.34—and reasonably fit for purpose—s.35. It must match its description—CRA s.36—
+and pre-contract information given under the 2013 Regulations (see para.20-15) is incorporated into the contract—s.37. There
+is an obligatory term that the supplier has the right to supply the content to the consumer—s.41. The terms imported by CRA
+ss.34 to 37 and 41 cannot be excluded—CRA s.47. Note also in relation to goods that goods which include digital content do not
+conform to the contract if the digital content does not conform even if, in all other respects, the goods do conform—CRA s.16
+(not excludable). Thus if a computer is provided with an application that does not work properly, the entire goods (computer
+plus software) fail to conform with the contract.
+End of Document
+© 2025 SWEET & MAXWELL

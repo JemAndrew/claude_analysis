@@ -1,0 +1,199 @@
+Unauthorised payments, UKBC-BULLENL 459370996 (2022)
+© 2025 Thomson Reuters.
+1
+Unauthorised payments
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part E - Banking and Financial Services
+Chapter 9 - Banking
+Unauthorised payments
+Breach of mandate
+9-09
+The primary duty of a paying bank is to honour its customer’s instructions and make the payment 36  in accordance with the
+mandate. 37  The payment instruction can take a number of forms, including a cheque, an order to pay by direct debit, a standard
+order, or an electronic funds transfer instruction 38  (e.g. transfers effected by online banking, or withdrawals via an ATM). In
+all such cases, however, the fundamental principle is the same: where a bank makes a payment in the absence of authority from
+its customer, it has no right of indemnity against its customer, and hence no entitlement to debit the customer’s account with
+the amount of the payment. 39
+However, a bank is only obliged to honour a cheque or other payment order if there are sufficient funds in the customer’s account
+to meet the cheque or order, or if the bank has agreed to provide the customer with overdraft facilities to meet the cheque or
+order. In drawing a cheque or otherwise requesting a payment against inadequate funds, a customer impliedly requests the bank
+to grant an overdraft (or an increased overdraft facility, as the case may be). The bank then has an option whether or not to accede
+to that request and hence honour the cheque or payment order. 40  If the bank elects to honour the cheque, bringing the account
+into overdraft, it does so (in the absence of an agreement to the contrary) upon its standard terms as to interest and charges. 41
+Where the payment instructions received by the bank are ambiguous, the bank must at least adopt a reasonable interpretation
+of its instructions, although the prudent course is for the bank to seek clarification from its customer. 42  If it fails to do so,
+the bank may find that it has acted in the absence of, or contrary, to its instructions (as properly interpreted), and hence face
+a claim for breach of mandate. 43
+A sum standing to the credit of a joint account is a debt owed by the bank to the account holders jointly. Where the mandate in
+respect of the joint account requires that the paying bank will only make payments out of the account on the joint signatures of
+both of the account holders, there is a separate agreement between the bank and each of the account holders that the bank will
+not honour drawings unless both account holders have signed for them. In an action for breach of mandate where the bank has
+wrongfully honoured an instruction by a single account holder it is not necessary to join all the account holders as parties to
+the proceedings. 44  The innocent joint account holder must be able to establish that the funds wrongfully transferred out of the
+account were his property. Where such facts cannot be proved, the innocent holder is entitled only to recover a moiety of the
+amounts paid out. 45  Where a bank is found liable in these circumstances it may be able to claim contribution from the recipient
+of the funds wrongfully paid out for moneys had and received and/or for breach of warranty of authority.
+A particular form of breach of mandate arises where a paying bank purports to honour a cheque or other bill of exchange bearing
+a forged signature. In such circumstances, the payment is, by s.24 of the Bills of Exchange Act 1882, a nullity, so the bank is
+not entitled to debit the customer’s account.
+
+Unauthorised payments, UKBC-BULLENL 459370996 (2022)
+© 2025 Thomson Reuters.
+2
+Defences
+9-10
+The principal defences available to a paying bank which has made a payment in breach of mandate are as follows:
+ 
+(1)The loss was caused by the customer’s breach of its duty to the bank to refrain from drawing the cheque in such a
+manner as to facilitate fraud or forgery (the “Macmillan duty”). 46  The paradigm example is where the customer signs a
+blank cheque. Beyond that, whether a failure by the customer to take ordinary precautions amounts to a breach of this
+duty is a question of degree. 47
+ 
+(2)The customer is estopped from asserting the forgery by reason of the breach of its duty to the bank in failing to inform
+the bank of any forgery on the account as soon as the customer became aware of it (the “Greenwood duty”). 48
+ 
+(3)The customer is estopped from asserting the forgery by reason of an express representation that the cheque or payment
+order was genuine. 49
+ 
+(4)The bank is in any event entitled to be indemnified since the payment discharged a debt owed by the customer to the
+beneficiary of the payment (the “Liggett defence”). 50  However, the “mere fact” of the payment, if unauthorised, will not
+usually have the effect of discharging the debt. 51  Generally, the debt will only be discharged if the payment is authorised
+or subsequently ratified. 52  There may, however, be other circumstances not amounting to ratification in which allowing
+the customer to recover for breach of mandate would give rise to an unjust enrichment, in which case the defence would
+operate. 53
+ 
+(5)The payment was ratified. For ratification to apply, the customer must have (a) expressly or impliedly manifested an
+unequivocal intention to adopt the unauthorised payment, and (b) done so in full knowledge that the payment was without
+authority. 54  Ratification will only be implied where one cannot logically analyse the act of the customer without imputing
+his approval of the payment. 55  This defence is not available where the bank has paid a cheque bearing a forged signature. 56
+There is, however, no general defence of contributory negligence available to the paying bank. In Tai Hing Cotton Mill Ltd v
+Liu Cong Hing Bank Ltd it was argued that the relationship of banker and customer gives rise to a duty owed by the customer
+to the bank to exercise such precautions as a reasonable customer in his position would take to prevent forged cheques being
+presented to the bank, or at the very least to check his monthly statements so as to be able to notify the bank of any items which
+were not, or indeed not have been, authorised by him. However, this argument was rejected by the Privy Council, which held
+that the implied obligations upon the customer were limited to the Macmillan and Greenwood duties referred to above.
+Payments where the bank is on notice of fraud
+9-11
+Where a bank is on notice that an agent acting on behalf of a customer is misusing his authority in order to misappropriate his
+principal’s money, the bank faces two conflicting obligations. On the one hand, a bank is under a duty to its customer to honour
+payment instructions given in accordance with the customer’s mandate, whilst on the other hand there is an implied duty in the
+contract between bank and customer that the bank will exercise reasonable care in executing its customer’s orders. 57  Hence, a
+bank may incur liability in honouring its customer’s cheques even if such cheques are drawn in accordance with the mandate.
+The balance between these conflicting duties was considered in Barclays Bank Plc v Quincecare and Lipkin Gorman v Karpnale
+Ltd. In Quincecare, Steyn J held that the fair balance was that a banker must refrain from executing an order if and for so
+long as he is put on inquiry in the sense that he has reasonable grounds (although not necessarily proof) for believing that the
+order is an attempt to misappropriate the funds of the company. In Lipkin Gorman, May LJ said 58  that “it is in my opinion
+only when the circumstances are such that any reasonable cashier would hesitate to pay a cheque at once and refer it to his
+
+Unauthorised payments, UKBC-BULLENL 459370996 (2022)
+© 2025 Thomson Reuters.
+3
+or her superior, and when any reasonable superior would hesitate to authorise payment without enquiry, that a cheque should
+not be paid immediately upon presentation and such enquiry made”. May LJ emphasised that this would only arise in rare
+circumstances. The standard of care was formulated by Parker LJ as follows 59 :
+“The question must be whether if a reasonable and honest banker knew of the relevant facts he would have
+considered that there was a serious or real possibility albeit not amounting to a probability that his customer might
+be being defrauded.”
+Quincecare was applied in Singularis Holdings Ltd v Daiwa Capital Markets Europe Ltd, 60  the first case in which the court has
+found that a financial institution acted in breach of the Quincecare duty. At first instance, Rose J held that the Quincecare duty
+“require[s] a bank to do something more than accept at face value whatever strange documents and implausible explanations are
+proffered by the officers of a company facing serious financial difficulties” and found on the facts that there had been “obvious”
+and “glaring” signs that the director was perpetrating a fraud on the company. 61
+A refusal to make a payment may be justified under money laundering or related legislation. Section 238 of the Proceeds
+of Crime Act 2002 creates an offence of becoming concerned in an arrangement which the defendant “knows or suspects”
+facilitates (by whatever means) the acquisition, retention, use or control of criminal property by or on behalf of another person.
+Where a bank suspects that a money laundering offence may be committed by complying with a payment instruction it must,
+in order to avoid committing an offence itself, make an authorised disclosure under s.338 and seek consent under s.335 from
+the National Crime Agency. That obligation would appear to conflict with the bank’s obligation to comply with instructions
+in compliance with its mandate. The solution is found in Shah v HSBC Private Bank (UK) Ltd, 62  where it was held that there
+is an implied term in the contract between the bank and the customer such that the bank is permitted to refuse to execute a
+payment instruction where it suspected that the transaction constituted money laundering and was awaiting consent under s.335
+to perform the transaction.
+Footnotes
+36
+As from 1 January 2012, all banking payments became subject to the Payment Services Regulations 2009 (SI 2009/209);
+these were replaced by the Payment Services Regulations 2017 (SI 2017/752) with effect from January 2018. A
+discussion of these Regulations is beyond the scope of this text, and reference should be made to one of the practitioner
+texts (e.g. Paget’s Law of Banking, 15th edn (2018), Ch.24).
+37
+Joachimson v Swiss Bank Corporation [1921] 3 K.B. 110.
+38
+See Paget’s Law of Banking, 15th edn (2018), Ch.25.
+39
+The bank will not be liable to the customer if the customer did in fact authorise the payment, even if the payment
+instruction was not formally compliant with the mandate: London Intercontinental Trust Ltd v Barclays Bank Ltd [1980]
+1 Lloyd’s Rep. 24; followed in Symons (HJ) v Barclays Bank [2003] EWHC 1249 (Comm) at [22]-[24], [65].
+40
+Verjee v CICB Bank and Trust Co (Channel Islands) Ltd [2001] Lloyd’s Rep. Bank. 279 at 282.
+41
+Lloyds Bank Plc v Voller [2000] 2 All E.R. (Comm) 978; [2001] Lloyd’s Rep. Bank. 67.
+42
+European Asian Bank AG v Punjab & Sind Bank (No.2) [1983] 1 W.L.R. 642 at 656; Patel v Standard Chartered Bank
+[2001] Lloyd’s Rep. Bank 229 at 234; cf. Midland Bank Ltd v Seymour [1955] 2 Lloyd’s Rep. 147 at 153 (approved by
+the Court of Appeal in Credit Agricole Indosuez v Muslim Commercial Bank Ltd [2000] 1 Lloyd’s Rep. 275).
+43
+European Asian Bank AG v Punjab & Sind Bank (No.2) [1983] 1 W.L.R. 642 at 656; Patel v Standard Chartered Bank
+[2001] Lloyd’s Rep. Bank 229. See also Royal Bank of Canada v Stangl (1992) 32 ACWS (3d) 17, Ontario Court,
+General Division.
+44
+Catlin v Cyprus Finance Corp (London) Ltd [1983] Q.B. 759.
+45
+Twibell v London Suburban Bank [1869] W.N. 127; see also Ardern v Bank of New South Wales [1956] V.L.R. 569.
+46
+London Joint Stock Bank v Macmillan [1918] A.C. 777.
+47
+See e.g. Société Générale v Metropolitan Bank Ltd (1873) 27 LT 849.
+
+Unauthorised payments, UKBC-BULLENL 459370996 (2022)
+© 2025 Thomson Reuters.
+4
+48
+Greenwood v Martins Bank Ltd [1933] A.C. 51. For the scope of this doctrine, see Price Meats Ltd v Barclays Bank Plc
+[2000] 2 All E.R. (Comm) 346; Patel v Standard Chartered Bank [2001] Lloyd’s Rep. Bank. 229 (constructive knowledge
+on the part of the customer is not sufficient to found an estoppel).
+49
+Bank of England v Vagliano Bros [1891] A.C. 107; Brown v Westminster Bank [1964] 2 Lloyd’s Rep. 187.
+50
+B Liggett (Liverpool) Ltd v Barclays Bank Ltd [1928] 1 K.B. 48.
+51
+Cantrave Ltd v Lloyds Bank plc [2000] Q.B. 917, at 923 per Pill LJ. Hence, the actual decision in Liggett seems
+anomalous, and the majority of the Court of Appeal in Re Cleadon Trust Ltd [1939] Ch. 286 found that it could only
+be explained on the basis that the underlying payment had been authorised even though the person giving the payment
+instruction to the bank had not been authorised to do so. See also Swotbooks.com v Royal Bank of Scotland [2011]
+EWHC 2025 (QB) at [49]-[56].
+52
+Crantrave Ltd v Lloyds Bank Plc [2000] Q.B. 917.
+53
+Crantrave Ltd v Lloyds Bank Plc [2000] Q.B. 917, at 924; Oyston v Royal Bank of Scotland unreported 8 December
+2003 Manchester Mercantile Court, HHJ Hegarty QC.
+54
+Swotbooks.com v Royal Bank of Scotland [2011] EWHC 2025 (QB).
+55
+Harrison & Crossfield Ltd v London and North-Western Railway Company [1917] 2 K.B. 755, at 758 per Rowlatt J.
+56
+Bills of Exchange Act 1882 s.24.
+57
+Barclays Bank Plc v Quincecare Ltd [1992] 4 All E.R. 363 (judgment delivered on 24 February 1988). Lipkin Gorman v
+Karpnale Ltd [1989] 1 W.L.R. 1340; reversed [1991] 2 A.C. 548 (however, there was no appeal of the Court of Appeal’s
+findings as to the duties of the paying bank). See also Royal Products Ltd v Midland Bank Ltd [1981] 2 Lloyd’s Rep.
+194 at 198.
+58
+Lipkin Gorman v Karpnale Ltd [1989] 1 W.L.R. 1340 at 1356E.
+59
+Lipkin Gorman v Karpnale Ltd [1989] 1 W.L.R. 1340 at 1376A–1376G ; cf. Verjee v CICB Bank and Trust Co (Channel
+Islands) Ltd [2001] Lloyd’s Rep. Bank. 279: the bank is unlikely to be put on notice of the possibility of fraud where
+the signatory to the account is the account-holder himself.
+60
+Singularis Holdings Ltd v Daiwa Capital Markets Europe Ltd [2019] UKSC 50. Cf Patel v Standard Chartered Bank
+[2001] Lloyd’s Rep. Bank 229, where Toulson J found that a customer did not owe the bank an implied contractual
+duty to report fraud of which the customer does not know, but which a putative reasonable person, possessing the same
+information as the customer, would have discovered (decision applied in Cooper v National Westminster Bank Plc
+[2010] 1 Lloyd’s Rep. 490).
+61
+However, the judge reduced the damages payable by the defendant by 25% on the grounds of contributory negligence.
+62
+Shah v HSBC Private Bank (UK) Ltd [2012] EWHC 1855 (QB).
+End of Document
+© 2025 SWEET & MAXWELL

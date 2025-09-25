@@ -1,0 +1,283 @@
+Regulated Activity, UKBC-BULLENL 459371075 (2022)
+© 2025 Thomson Reuters.
+1
+Regulated Activity
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part E - Banking and Financial Services
+Chapter 12 - Financial Services
+Regulated Activity
+12-03
+Under FSMA s.22, an activity is a regulated activity if it is an activity of a specified kind which is carried on by way of business
+(or in the case of (iii), carried on by way of business in Great Britain) and:
+ 
+(i)relates to investment of a specified kind (or in specified cases, is carried on in relation to property of any kind) 11 ; or
+ 
+(ii)relates to information about a person’s financial standing, the setting of a specified benchmark or administering a
+benchmark 12 ; or
+ 
+(iii)is, or relates to, claims management services. 13
+The 2012 Act s.7 expanded the scope of s.22 to cover activities to be specified which are carried on by way of business and which
+relate to the financial standing of a person (i.e. credit-rating agencies) and the setting of a specified benchmark (e.g. the fixing of
+the London Interbank Offered Rate (LIBOR)). The Financial Services and Markets Act 2000 (Benchmarks) Regulations 2018
+(SI 2018/135) reg.38 further amended FSMA s.22 to add “administering a benchmark.” FSMA s.22 was further extended by
+the Financial Guidance and Claims Act 2018 s.27 to cover activities which are or relate to claims management services.
+An activity is of a “specified kind” if it is specified by an order made by Treasury. Sch.2 to FSMA supplements s.22. Parts I,
+IA, IIA and IIB of the schedule contain an indicative list of “regulated activities”, described in general terms. However, FSMA
+s.22(3) makes clear that nothing in Sch.2 limits the power of the Treasury to specify activities.
+The order by which the Treasury specifies regulated activities is the Financial Services and Markets Act 2000 (Regulated
+Activities) Order 2001 (SI 2001/544) (the RAO). Since it first came into force on 1 December 2001, the RAO has been the subject
+of many amendments and will continue to be amended as necessary. Some of the amendments have been for the purpose of giving
+effect to EU legislation which required the regulation of certain financial services activities (for example, Directive 2004/39/
+EC 14  on markets in financial instruments [2004] OJ L145/1, which was subsequently repealed and replaced by Directive
+2014/65/EU on markets in financial instruments [2014] OJ L173/349). Other amendments reflect UK domestic developments
+which result in the introduction of new regulated activities (for example, the decision to transfer responsibility for the regulation
+of consumer credit from the Office of Fair Trading to the FCA resulted in new credit activities, such as entering into regulated
+credit agreements and credit broking, being specified 15 ). The activities specified in the RAO at the time of writing are listed
+in summary form below. Reference should be made to the RAO 16  for the precise and detailed description of the regulated
+activities and exclusions.
+ 
+(i)accepting deposits 17 ;
+ 
+(ii)issuing electronic money 18 ;
+ 
+(iii)investment activities which are dealing in investments as principal 19  or agent, 20  arranging deals in investments, 21
+managing investments, 22  advising on investments, 23  safeguarding and administering investments, 24  operating a
+multilateral trading facility 25  or an organised trading facility, 26  sending dematerialised instructions, 27  managing 28  or
+acting as a trustee or depository 29  of a UCITS, 30  managing 31  or acting as a trustee or depository 32  of an alternative
+investment fund, establishing, operating or winding up a collective investment scheme 33 ;
+
+Regulated Activity, UKBC-BULLENL 459371075 (2022)
+© 2025 Thomson Reuters.
+2
+ 
+(iv)insurance activities which are effecting or carrying out contracts of insurance as principal, 34  insurance risk
+transformation (carried on by “transformer vehicles”) 35 ;
+ 
+(v)insurance distribution activities, namely, dealing in rights under a contract of insurance as agent, 36  arranging deals in
+rights under a contract of insurance, 37  assisting in the administration and performance of a contract of insurance 38  and
+advising on buying or selling rights under a contract of insurance. 39
+ 
+(vi)bidding in emissions auctions 40 ;
+ 
+(vii)mortgage-related activities which are entering into a regulated mortgage contract as lender, 41  administering a regulated
+mortgage contract, 42  arranging (bringing about) regulated mortgage contracts, 43  making arrangements with a view to
+regulated mortgage contracts, 44  making arrangements to enter into a regulated mortgage contract with a borrower on
+behalf of a lender, 45  and advising on regulated mortgage contracts 46 ;
+ 
+(viii)other home finance activities which are entering into, administering, arranging (bringing about), making arrangements
+with a view to, and advising on, regulated home reversion plans, 47  regulated home purchase plans 48  and regulated rent
+and sale back agreements 49 ;
+ 
+(ix)consumer credit related activities, which are credit broking, 50  debt adjusting, 51  debt counselling, 52  debt collecting, 53
+debt administration, 54  operating an electronic system in relation to lending, 55  entering into a regulated credit agreement
+as lender, 56  entering into a regulated consumer hire agreement as owner, 57  providing credit information services 58  and
+providing credit references 59 ;
+ 
+(x)establishing, operating or winding up a stakeholder pension scheme or a personal pension scheme 60 ;
+ 
+(xi)providing basic advice on stakeholder products 61 ;
+ 
+(xii)advising on regulated credit agreements for the acquisition of land 62 ;
+ 
+(xiii)advising on conversion or transfer of pension benefits 63 ;
+ 
+(xiv)entering into a funeral plan contract as provider 64 ;
+ 
+(xv)Lloyd’s related activities ,which are advising on syndicate participation at Lloyd’s, 65  managing the underwriting
+capacity of a Lloyd’s syndicate as a managing agent 66  and arranging deals in contracts of insurance written at Lloyd’s 67 ;
+ 
+(xvi)the meeting of repayment claims by a reclaim fund and the management of dormant account funds by a reclaim fund 68 ;
+ 
+(xvii)providing information in relation to a specified benchmark, administering a specified benchmark and administering
+a benchmark 69 ;
+ 
+(xviii)Claims management activities which are seeking out, referrals and identification of claims or potential claims 70 ;
+advice, investigation or representation in relation to a personal injury claim 71 ; advice, investigation or representation
+in relation to a financial services or financial product claim 72 ; advice, investigation or representation in relation to a
+housing disrepair claim 73 ; advice, investigation or representation in relation to a claim for a specified benefit 74 ; advice,
+investigation or representation in relation to a criminal injury claim 75 ; and advice, investigation or representation in relation
+to an employment related claim 76 ; and
+ 
+(xix)agreeing to carry on specified regulated activities. 77  For example, agreeing to carry on any of the insurance
+distribution activities is a regulated activity.
+
+Regulated Activity, UKBC-BULLENL 459371075 (2022)
+© 2025 Thomson Reuters.
+3
+12-04
+Pursuant to FSMA s.22A, the Treasury has designated certain of the above regulated activities as PRA-regulated activities. 78
+The designated activities include accepting deposits and effecting or carrying out a contract of insurance as principal. Firms
+with permission to carry on a PRA-regulated activity (PRA-authorised firms) will be regulated by both the PRA and the FCA.
+All other firms (FCA-authorised firms) are regulated by the FCA only. The distinction between PRA-authorised firms and FCA-
+authorised firms is not important for the purposes of the proceedings covered in this title.
+For an activity to be a regulated activity, it must be “carried on by way of business” (FSMA s.22). This is referred to in this title
+as the “business element”. The business element is not defined in FSMA or in the RAO. The FCA has given guidance in Ch.2.3
+of its Perimeter Guidance Manual (PERG). The guidance states that whether or not an activity is carried on by way of business
+is ultimately a question of judgement that takes account of several factors (none of which is likely to be conclusive). The factors
+include the degree of continuity, the existence of a commercial element, the scale of the activity and the proportion which the
+activity bears to other activities carried on by the same person but which are not regulated. The nature of the particular regulated
+activity that is carried on will also be relevant to the factual analysis. 79
+The Treasury has power under FSMA s.419 to change the meaning of the business element by including or excluding certain
+activities. The Treasury has exercised this power through the Financial Services and Markets Act 2000 (Carrying on Regulated
+Activities by Way of Business) Order 2001 (SI 2001/1177), as amended, from time to time. The effect is that the business
+element differs depending on the regulated activity in question.
+Footnotes
+11
+FSMA s.22(1).
+12
+FSMA s.22(1A). From 1 May 2020, the reference to “the setting of a specified benchmark” is repealed by SI 2018/135
+reg.39(b).
+13
+FSMA s.222(1B).
+14
+Directive 2004/39/EC of the European Parliament and of the Council of 21 April 2004 on markets in financial
+instruments amending Council Directives 85/611/EEC and 93/6/EEC and Directive 2000/12/EC of the European
+Parliament and of the Council and repealing Council Directive 93/22/EEC [2004] OJ L145/1.
+15
+Financial Services and Markets Act 2000 (Regulated Activities) (Amendment) (No.2) Order (SI 2013/1881).
+16
+Financial Services and Markets Act 2000 (Regulated Activities) Order 2001 (SI 2001/544).
+17
+RAO art.5.
+18
+RAO art.9B.
+19
+RAO art.14.
+20
+RAO art.21.
+21
+RAO art.25.
+22
+RAO art.37.
+23
+RAO art.53.
+24
+RAO art.40.
+25
+RAO art.25D.
+26
+RAO art.25DA.
+27
+RAO art.45.
+28
+RAO art.51ZA.
+29
+RAO art.51ZB.
+30
+As defined in Article 1(2) of Directive 2009/65/EC of the European Parliament and of the Council of 13 July 2009 on
+the coordination of laws, regulations and administrative provisions relating to undertakings for collective investment
+in transferable securities (UCITS).
+31
+RAO art.51ZC.
+32
+RAO art.51ZD.
+33
+RAO art.51ZE.
+
+Regulated Activity, UKBC-BULLENL 459371075 (2022)
+© 2025 Thomson Reuters.
+4
+34
+RAO art.10.
+35
+RAO art.13A.
+36
+RAO art.21.
+37
+RAO art.25.
+38
+RAO art.39A.
+39
+RAO art.53. It also includes agreeing to carry on any of the other activities (see point (xix)).
+40
+RAO art.24A.
+41
+RAO art.61(1).
+42
+RAO art.61(2).
+43
+RAO art.25A(1).
+44
+RAO art.25A(2).
+45
+RAO art.25A(2A).
+46
+RAO art.53A. From 21 March 2016, the scope of the FCA’s regulatory remit was extended further by the Mortgage
+Credit Directive Order 2015 (SI 2015/910), which implements the EU Mortgage Credit Directive and which reclassifies
+second charge mortgage agreements as regulated mortgage contracts.
+47
+RAO arts 25B, 53B and 63B.
+48
+RAO arts 25C, 53C and 63F.
+49
+RAO arts 25E, 53D and 63J.
+50
+RAO art.36A.
+51
+RAO art.36D.
+52
+RAO art.36E.
+53
+RAO art.36F.
+54
+RAO art.36G.
+55
+RAO art.36H.
+56
+RAO art.60B.
+57
+RAO art.60N.
+58
+RAO art.89A.
+59
+RAO art.89B.
+60
+RAO art.52.
+61
+RAO art.52B. Stakeholder product means an account which qualifies as a stakeholder child trust fund within the meaning
+given by the Child Trust Funds Regulations 2004, rights under a stakeholder pension scheme or an investment of a kind
+specified in regulations made by the Treasury (RAO art.52B(3)).
+62
+RAO art.53DA.
+63
+RAO art.53E.
+64
+RAO art.59.
+65
+RAO art.56.
+66
+RAO art.57.
+67
+RAO art.58.
+68
+RAO art.63N.
+69
+RAO art.63O and art.63S.
+70
+RAO art.89G.
+71
+RAO art.89H.
+72
+RAO art.89I.
+73
+RAO art.89J.
+74
+RAO art.89K.
+75
+RAO art.89L.
+76
+RAO art.89M.
+77
+RAO art.64.
+78
+Financial Services and Markets Act 2000 (PRA-regulated Activities) Order 2013 (SI 2013/556).
+
+Regulated Activity, UKBC-BULLENL 459371075 (2022)
+© 2025 Thomson Reuters.
+5
+79
+PERG 2.3.3G.
+End of Document
+© 2025 SWEET & MAXWELL

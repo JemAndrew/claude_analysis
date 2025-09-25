@@ -1,0 +1,97 @@
+Financial promotion, UKBC-BULLENL 459371078 (2022)
+© 2025 Thomson Reuters.
+1
+Financial promotion
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part E - Banking and Financial Services
+Chapter 12 - Financial Services
+Financial promotion
+12-06
+FSMA prohibits the communication of an invitation or inducement to engage in investment activity or in claims management
+activity in the course of a business unless:
+ 
+(i)the person making the communication is an authorised person; or
+ 
+(ii)the content of the communication has been approved by an authorised person. 106
+Engaging in investment activity means entering or offering to enter into an agreement the making or performance of which
+by either party constitutes a controlled activity, or exercising any rights conferred by a controlled investment to dispose of,
+underwrite or convert a controlled investment. 107  Controlled activities and controlled investments are specified by the Treasury
+in delegated legislation 108 ; this concept is not co-terminous with the concept of “regulated activity”. 109
+Engaging in claims management activity means entering into or offering to enter into an agreement the making or performance
+of which by either party constitutes a controlled claims management activity. 110  Controlled claims management activities are
+specified by the Treasury in delegated legislation. 111
+Where a communication is made or approved by an authorised person, the act of communication must comply with the
+regulations made under FSMA. Communications are divided into “real time” (i.e. communications in the course of a personal
+visit, telephone conversation or other interactive dialogue) and all other communications, which are termed “non-real time”.
+Certain communications are exempted. 112  This includes:
+ 
+(i)A communication received by a person outside the UK or directed (whether from inside or outside the UK) only
+at persons outside the UK. An unsolicited real time communication which emanates from the UK or is made for the
+purpose of a business carried on inside the UK is not exempt. This exemption does not apply to an electronic commerce
+communication 113  made from an establishment in the UK to a person in an EEA State other than the UK. It also does not
+apply to any communication in respect of a controlled claims management activity. 114
+ 
+(iii)SI 2005/1529 art.12(4) set out conditions which, if met, will result in a communication being regarded as directed only
+at persons outside the UK. However, a communication may be determined to be directed only at persons outside the UK
+even if none of the conditions set out are met. 115
+ 
+(iv)Communications may be made to persons whom the communicator believes on reasonable grounds to be “certified high
+net worth individuals”. 116  These communications must be solicited, if they are real time communications and are subject
+to requirements as to the content of the communication. Principally, the communication must contain or be followed by a
+warning: “The content of this promotion has not been approved by an authorised person within the meaning of the Financial
+Services and Markets Act 2000. Reliance on this promotion for the purpose of engaging in any investment activity may
+expose an individual to a significant risk of losing all of the property or other assets invested.”
+ 
+(v)Communications may also be made to high net worth companies, unincorporated associations, partnerships and high
+value trusts. Generally, a company or unincorporated association or partnership must have called-up share capital or net
+
+Financial promotion, UKBC-BULLENL 459371078 (2022)
+© 2025 Thomson Reuters.
+2
+assets of £5 million or more. High value trusts must have assets in excess of £10 million before deduction of its liabilities.
+This exemption does not apply to any communication in respect of a controlled claims management activity. 117
+ 
+(vi)Communications may also be made to “certified sophisticated investors” i.e. a person who has a current certificate in
+writing or other legible form signed by an authorised person to the effect that he is sufficiently knowledgeable to understand
+the risks associated with that description of investment and who has signed a statement in the statutory form. 118
+ 
+(vii)A communication concerning controlled activities or controlled claims management activities may be made to a person
+who carries on a business of publishing material relating to controlled activities or controlled claims management activities.
+This potentially exempts communications with the investment press and other news media. 119
+Footnotes
+106
+FSMA s.21(1), (2).
+107
+FSMA s.21(8).
+108
+Financial Services and Markets Act 2000 (Financial Promotion) Order 2005 (SI 2005/1529) amended SI 2005/3392, SI
+2007/1083, SI 2007/2615, SI 2010/905 (communications by employers to employees concerning pensions and work-
+related insurance).
+109
+Defined by FSMA s.22.
+110
+FSMA s.21(10A).
+111
+Financial Services and Markets Act 2000 (Financial Promotion) Order 2005 (SI 2005/1529) as amended by the Financial
+Services and Markets Act 2000 (Claims Management Activity) Order 2018, SI 2018/1253, art.4.
+112
+See Pt III onwards of SI 2005/1529.
+113
+A communication delivered by an “information society service”—regulatory jargon for service providers on the world
+wide web.
+114
+SI 2005/1529 art.12
+115
+SI 2005/1529 art.12(3), (4).
+116
+Defined in SI 2005/1529, art.48(2).
+117
+SI 2005/1529 art.49(8).
+118
+SI 2005/1529 art.50.
+119
+SI 2005/1529 art.47.
+End of Document
+© 2025 SWEET & MAXWELL

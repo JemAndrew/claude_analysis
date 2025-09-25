@@ -1,0 +1,301 @@
+Chapter 6 - Assignment of Contractual Rights, UKBC-BULLENL 459370897 (2022)
+© 2025 Thomson Reuters.
+1
+Chapter 6 - Assignment of Contractual Rights
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part C - Assignment of Contractual Rights
+Chapter 6 - Assignment of Contractual Rights
+Contractual rights as choses in action
+6-01
+The law of assignment is concerned with the transfer of things, or choses, in action. A chose in action “describes all personal
+rights of property which can only be claimed or enforced by action and not be taking physical possession”. 1  Because the rights
+in a chose cannot be enforced by taking physical possession, the essence of a chose in action is that it is a right or interest in an
+intangible. Choses in action stand in contra-distinction to choses in possession: rights in a chose in possession can be enforced
+by taking physical possession. 2
+6-02
+The English law understanding of what is a chose in action is wide and diverse. Thus, it includes (for example) intellectual
+property and shares. 3  In a number of cases, the manner in which these rights are enforced and transferred is very specific to the
+chose, and their discussion lies beyond the scope of this work. 4  This chapter considers the transfer of rights under a contract,
+including debts. 5
+6-03
+Choses in action can be either legal or equitable. Legal choses in action are those which, before the Supreme Court of the
+Judicature Act 1873 came into operation, could be recovered or enforced by an action at law. Equitable choses are those which
+were enforceable only by what was formerly called a suit in equity. 6  Rights under a contract, including debts, are instances
+of legal choses in action. 7  Although the practical significance of the distinction between legal and equitable choses is much
+reduced since the enactment of the Supreme Court of the Judicature Act 1873, the distinction does—unfortunately—still matter,
+and (to the extent necessary for precedents of pleadings) is considered further below.
+Methods of transfer of contractual rights
+6-04
+Contractual rights (including debts) can be transferred in a number of ways:
+ 
+(a)By way of an equitable assignment.
+ 
+(b)By way of an assignment under s.136 of the Law of Property Act 1925.
+ 
+(c)By way of a promise to assign. 8
+An interest in a contractual right can also be held or transferred by a declaration of trust. In such a case, a trustee holds the
+contractual right and enforces it on behalf of the beneficiary. 9  Trusts are not considered further in this chapter. 10
+
+Chapter 6 - Assignment of Contractual Rights, UKBC-BULLENL 459370897 (2022)
+© 2025 Thomson Reuters.
+2
+Equitable assignments
+6-05
+In order to effect an assignment of a chose in action in equity:
+ 
+(1)The assignor must have manifested an intention to transfer the chose.
+ 
+(2)The thing being assigned must be a chose in action, in present existence, certain or capable of being ascertained.
+ 
+(3)The identity of the assignee must be clear.
+ 
+(4)The identity of the assignee must be clear. 11
+6-06
+One crucial question is whether the assignor must be a party to any action enforcing the chose and—if so—whether the assignor
+ought to be claimant or defendant. Where an assignor transfers his interest in an equitable chose to an assignee, the assignee
+can sue in his own name, and there is no substantive reason for joining the assignor, whether as claimant or defendant. 12
+6-07
+However, the outright transfer of a chose from assignor to assignee can only occur in the case of equitable choses. So far as
+legal choses in action are concerned, like debts and rights under a contract, there is a barrier to the outright transfer of the chose,
+because a legal chose in action cannot be transferred at common law (the common law does not recognise assignments) and
+equity (following law) cannot effect such a transfer. As Meagher, Gummow & Lehane note, it is impossible to see how a person
+not the legal owner of a chose can prosecute an action at common law seeking to enforce an equitable chose. 13  Indeed, if this
+were not the case, it is difficult to see what purpose is served by s.136 of the Law of Property Act 1925.
+6-08
+More recent authorities are much more equivocal on the question of joinder of the assignor in the case of assignment of legal
+choses, suggesting that this is generally desirable for procedural reasons and not for substantive reasons. 14  Whilst the more
+recent authorities appear to suggest, albeit without analysing the question, 15  that the assignee alone can claim to enforce a
+legal chose, undoubtedly the safest approach, as a matter of pleading practice, is to ensure that the assignor is joined (with the
+assignee) as claimant in the action. 16  A less satisfactory alternative is to join the assignor as a defendant. See Precedent 6-C1.
+Assignments under s.136 of the Law of Property Act 1925
+6-09
+Section 136 of the Law of Property Act 1925 entitles the assignee of a debt or other legal chose in action to recover it by
+way of proceedings brought in his own name, provided the conditions of the action are met. 17  The purpose of s.136, and its
+predecessor, s.25(6) of the Judicature Act 1873, was to dispense, in those cases where it served no purpose, with the equitable
+rule which requires an assignee to join the assignor as a party when seeking to enforce his rights. 18
+6-10
+For an assignment to fall within s.136, the following conditions must be met:
+ 
+(1)The assignment must be of a debt or other legal chose in action.
+ 
+(2)The assignment must be absolute and not purport to be by way of charge only. An assignment will not be absolute where
+it is conditional; where it is part of a debt; or where it is given by way of legal charge. 19
+ 
+(3)The assignment must be in writing under the hand of the assignor.
+
+Chapter 6 - Assignment of Contractual Rights, UKBC-BULLENL 459370897 (2022)
+© 2025 Thomson Reuters.
+3
+ 
+(4)The debtor must be given express notice in writing of the assignment. 20  See Precedent 6-C2.
+6-11
+It is possible—rather than to assign a chose—to promise to assign a chose. At common law, such an agreement has no proprietary
+implications. According to the common law, a contract operates in personam, and breach of a contractual promise to assign will
+give rise only to the remedy of damages. In equity, however, the effect of such a contract is very different, for equity looks on
+that as done which ought to be done. Thus, an agreement to assign is treated by equity as though it has been performed at the
+time when it ought to have been performed, with the same consequences as if it had then been completely performed. 21
+6-12
+There are two cases where a promise to assign will come to the rescue of an assignment that would otherwise fail:
+ 
+(1)A future chose in action is not existing property, and for that reason cannot be assigned. Any purported assignment of
+the “chose” would have no subject-matter. But, provided there is an enforceable contract, equity will give effect to the
+“assignment” of a future chose, causing it to vest in the assignee the moment it is received by the assignor. Equity treats
+a purported assignment made for valuable consideration as a contract to assign in the future if and when the chose comes
+into existence. 22
+ 
+(2)An assignment may fail because the necessary requirements for the assignment have not been met and the “assignment”
+is ineffective. In such a case, provided again there is an agreement to transfer, equity will step in to assist. 23  See Precedent
+6-C1. 24
+Defences to a claim brought by an assignee
+6-13
+The defences that a debtor may plead in response to a claim brought by an assignee may be considered under a number of heads:
+ 
+(1)Defences arising because the assignee takes subject to equities.
+ 
+(2)Defences arising because the assignment is ineffective due to the fact that the chose in question is incapable of
+assignment.
+ 
+(3)Defences arising due to deficiencies in the assignment itself.
+The assignee takes subject to equities
+6-14
+Whether an assignment is an equitable one or by way of s.136, the assignee takes subject to equities. Equities fall into two
+classes. First, there are equities which serve as defences to the assignee’s claim against the debtor and which relate directly to
+the chose being assigned. Thus, were an assignee to make a claim for breach of contract against the debtor in respect of a right
+assigned to him, the debtor would be able to take advantage of any defence that he could have advanced against the assignor. 25
+6-15
+Secondly, there are equities that are cross-claims between the debtor and the assignor, which the debtor is entitled to advance
+as against the assignee in diminution or extinction of any claim that the assignee may have as against the debtor. Such cross-
+claims relate not to the chose in action itself, but to the state of an account between the debtor and the assignor, which becomes
+relevant as a defence by the debtor to the claim advanced against him by the assignee. 26
+6-16
+
+Chapter 6 - Assignment of Contractual Rights, UKBC-BULLENL 459370897 (2022)
+© 2025 Thomson Reuters.
+4
+Such defences on the part of the debtor are pleaded in the debtor’s defence as if the claim were being brought by the assignor.
+They are defences that the assignee takes subject to: they do not arise specifically because of the assignment.
+Ineffective assignment because the chose in question is incapable of
+assignment
+6-17
+The debtor may contend that the assignment is ineffective because the chose is incapable of assignment. This may be for a
+variety reasons:
+ 
+(1)The chose in action may be a “burden”, rather than a “benefit”. Burdens are generally not assignable, the limited
+exception—so far as contractual rights are concerned—being that “conditional benefits”, i.e. benefits with “strings”
+attached can be assigned. 27
+ 
+(2)The chose may be unassignable on the grounds of public policy. For instance, social security benefits are unassignable,
+as are the salaries and pensions of public officers payable to them for the purpose of keeping the dignity of their office
+or to ensure the due discharge of their duties. 28
+ 
+(3)Assignments of bare rights to litigate are contrary to public policy and prohibited by the rules against champerty and
+maintenance. 29  What amounts to a “bare” right to litigate is a difficult question. It is clear that equity considers a debt to be a
+form of property, and regards any action at law necessary to reduce the property into possession as merely an incident which
+follows on from the assignment of the debt. 30  Such claims and assignments are unaffected by the rules against champerty
+and maintenance. 31  Other rights under a contract can be affected by the rules against champerty and maintenance. The
+assignment of a right under a contract will be regarded as a “bare” right to litigate—and, hence, unenforceable—where the
+assignee has no “genuine commercial interest” in the transfer of the chose. 32
+ 
+(4)The obligation may be a personal one, which for this reason cannot be assigned. 33
+ 
+(5)A contractual prohibition of assignment may render a chose unassignable. 34  See Precedent 6-C3.
+Deficient assignments
+6-18
+The debtor may contend that the assignment itself was deficient, and was thus ineffective to transfer the chose from assignor
+to assignee. Here it is necessary to distinguish between the three different types of assignment considered in para.6-02, for the
+necessary requirements for validity vary from type to type. Thus:
+ 
+(1)Where the assignee is relying upon a promise to assign, unless that promise is supported by what equity regards as
+consideration, equity will not lend its assistance. 35  Consideration is not, however, required for either an equitable or a
+s.136 assignment.
+ 
+(2)In the case of a s.136 assignment, the assignment will have to be by writing under the hand of the assignor and express
+notice of the assignment will have to be given to the debtor. If these requirements are not met, then there can be no effective
+s.136 assignment, although there may be an equitable assignment (or a promise to assign).
+ 
+(3)It may be that the assignment insufficiently identifies the chose in question, in which case the assignment will fail
+whatever its type. See Precedent 6-C3.
+
+Chapter 6 - Assignment of Contractual Rights, UKBC-BULLENL 459370897 (2022)
+© 2025 Thomson Reuters.
+5
+Footnotes
+1
+Per Channell J in Torkington v Magee [1902] 2 K.B. 427.
+2
+As to the nature of choses in action, see further Smith & Leslie, The Law of Assignment, 3rd edn (Oxford University
+Press, 2018), Ch.2 (on intangibles generally) Ch.4 (on debts) and Ch.5 (on rights under a contract).
+3
+For a discussion of the full range of choses in action see Smith & Leslie, The Law of Assignment (2018) Chs 3 to 9.
+4
+Thus, for instance, many intellectual property rights and shares involve consideration of the registers by which the
+interests in such rights are recorded.
+5
+See further, Smith & Leslie, The Law of Assignment (2018), Ch.4.
+6
+See Smith & Leslie, The Law of Assignment (2018), para.2.95.
+7
+See Smith & Leslie, The Law of Assignment (2018), para.4.27 (debts) and para.5.118 (rights under a contract).
+8
+Apart from statute, assignments (even of legal choses in action) operate in equity. The common law, from an early stage,
+set its face against allowing the transfer of choses in action: Smith & Leslie, The Law of Assignment (2018), paras
+10.04 to 10.10.
+9
+In exceptional circumstances, the beneficiary of a trust can sue in his own name and without necessarily joining the
+trustee as a defendant. See Vandepitte v Preferred Accident Insurance Corp of New York [1933] A.C. 70 at 77 and 78–
+80; Re Field [1971] 1 W.L.R. 555; Hayim v Citibank NA [1987] A.C. 730 at 747–749; Bradstock Trustee Services Ltd
+v Nabarro Nathanson [1995] 1 W.L.R. 1405 at 1411–1412; Barbados Trust Co Ltd v Bank of Zambia [2007] EWCA
+Civ 148; [2007] 2 All E.R. (Comm) 445 at [35]–[48], [98]–[119] and [139]–[143]. This last case is noted at (2008) 124
+L.Q.R. 517. On the ability of a beneficiary of a trust to sue in his own name see Bexhill UK Ltd v Razzaq [2012] EWCA
+Civ 1376 at [58] per Aikens LJ. See also: Smith & Leslie, The Law of Assignment (2018), Ch.11 Section B, especially
+paras 1175; A. Trukhtanov, “Trust of a Non-Assignable Contractual Benefit: Barbados Trust v Bank of Zambia” (2007)
+70 M.L.R. 837; M.A. Smith, “Locus Standi and the Enforcement of Legal Claims by Cestuis Que Trust” (2008) T.L.I. 140.
+10
+As to assignments and trusts, see Smith & Leslie, The Law of Assignment (2018), Ch.14.
+11
+These requirements are considered in detail in Smith & Leslie, The Law of Assignment (2018), Ch.13.
+12
+See Cator v Croydon Canal Co (1843) 4 Y. & C. Ex. 593 at 593–4; Smith & Leslie, The Law of Assignment (2018), paras
+11.08 to 11.09. Plainly, there may be procedural reasons for having the assignor before the court. Where, for instance,
+the assignor has assigned only a part of his interest, or where the assignment is disputed, the assignor ought to be joined
+as a party, so as to ensure that all interested persons are bound by the outcome.
+13
+See Meagher, Gummow & Lehane, Equity: Doctrines and Remedies, 4th edn (LexisNexis Australia, 2002), para.6–520.
+There is considerable, but older, authority in support of this proposition: Gibson v Winter (1833) 5 B. & A. 96 at 102;
+Durham Brothers v Robertson [1898] 1 Q.B. 765 at 769–70; Williams v Atlantic Assurance Co Ltd (1932) 43 Ll. L.
+Rep. 177 at 186 and 188–9; Warner Bros Records Ltd v Rollgreen Ltd [1976] Q.B. 430 at 445; Long Leys Co Pty Ltd
+v Silkdale Pty Ltd (1991) 5 B.P.R. 11, 512 at 11,518.
+14
+See William Brandt’s Sons & Co v Dunlop Rubber Co Ltd [1905] A.C. 454; Performing Right Society Ltd v London
+Theatre of Varieties Ltd [1924] A.C. 1; Re Steel Wing Co Ltd [1921] 1 Ch. 349 at 356; Central Insurance Co Ltd v
+Seacalf Shipping Corp (The Aiolos) [1983] 2 Lloyd’s L.R. 25 at 32 and 34; Weddell v JA Pearce & Major [1988] 1 Ch.26
+at 40–1; Three Rivers DC v Bank of England [1996] Q.B. 292.
+15
+For a detailed consideration of these cases, see Smith & Leslie, The Law of Assignment (2018), Ch.11 Section B.
+16
+And equity will compel the assignor to lend his name for this purpose.
+17
+See Bexhill Ltd v Razzaq [2012] EWCA Civ 1376 on the importance of suing for possession in the correct name. In this
+case a company had assigned all rights to sue for possession and therefore the company could not do it in its own name
+but had to have the bank joined to the action.
+18
+See, further, Smith & Leslie, The Law of Assignment (2018), paras 16.05 to 16.06.
+19
+Assignments by way of mortgage can, however, be effected by s.136 because a mortgage is perfectly capable of
+being absolute: Tancred v Delagoa Bay and East Africa Railway (1889) 23 Q.B.D. 239; Smith & Leslie, The Law of
+Assignment (2018), paras 16.31 to 16.32.
+20
+These requirements are considered in detail in Smith & Leslie, The Law of Assignment (2018), Ch.16.
+21
+At to the general equitable rule, see Parker v Taswell (1858) 2 De G. & J. 559 at 570–1; Walsh v Lonsdale (1882)
+21 Ch. D. 9. In the context of assignments in particular, see Holroyd v Marshall (1862) 10 H.L.C. 191; Tailby v The
+Official Receiver (1888) 13 App. Cas. 523; Re Casey’s Patents, Stewart v Casey [1892] 1 Ch. 104; Baxter International
+
+Chapter 6 - Assignment of Contractual Rights, UKBC-BULLENL 459370897 (2022)
+© 2025 Thomson Reuters.
+6
+NV v Nederlands Produkielabartorium voor Bloedtransfusiapparatuur BV [1998] R.P.C. 250. See generally, Smith &
+Leslie, The Law of Assignment (2018), Ch.15. Care should be taken in relying on the general equitable rules. Of some
+interest may be the case of Mexfield Housing Co-operative Ltd v Berrisford [2010] EWCA Civ 811; [2011] Ch. 244
+it was held that a tenancy agreement which was void for uncertainty of term could not be enforced as a contract by
+the equitable remedy of specific performance. However the Supreme Court reversed this decision, by holding that the
+tenancy agreement was to be treated as a tenancy for life at common law.
+22
+See Holroyd v Marshall (1862) 10 H.L.C. 191; Tailby v The Official Receiver (1888) 13 App. Cas. 523; Smith & Leslie,
+The Law of Assignment (2018), para.15.02.
+23
+See Smith & Leslie, The Law of Assignment (2018), para.15.02.
+24
+The precedent will have to be adapted to plead the contract. In particular, it must be noted that for the equitable
+jurisdiction to operate, the agreement must be supported by what equity regards as valuable consideration. A specialty
+(i.e. a deed) is not supported by consideration in equity’s eyes; but marriage consideration is valuable consideration in
+equity, albeit not at common law. See Smith & Leslie, The Law of Assignment (2018), paras 15.10 to 15.17.
+25
+See Smith & Leslie, The Law of Assignment (2018), Ch.26 Section D.
+26
+See Smith & Leslie, The Law of Assignment (2018), Ch.26 Section D.
+27
+See Smith & Leslie, The Law of Assignment (2018), Ch.21.
+28
+See Smith & Leslie, The Law of Assignment (2018), Ch.22.
+29
+See generally, Smith & Leslie, The Law of Assignment (2018), Ch.23.
+30
+See Smith & Leslie, The Law of Assignment (2018), paras 23.39ff.
+31
+See, in particular, Camdex International Ltd v Bank of Zambia [1998] Q.B. 22. See also Zabihi v Janzemini [2009]
+EWHC 3471 (Ch).
+32
+Trendtex Trading Corp v Credit Suisse [1982] A.C. 679; Brownton Ltd v Edward Moore Inbucon Ltd [1985] 3 All E.R.
+499. For a criticism of the present law, see A. Tettenborn, “Assignment of Rights to Compensation” [2007] L.M.C.L.Q.
+392.
+33
+See Smith & Leslie, The Law of Assignment (2018), Ch.24.
+34
+See Smith & Leslie, The Law of Assignment (2018), Ch.25.
+35
+See Smith & Leslie, The Law of Assignment (2018), paras 15.10 to 15.17.
+End of Document
+© 2025 SWEET & MAXWELL

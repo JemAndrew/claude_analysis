@@ -1,0 +1,144 @@
+Chapter 11 - Bonds, UKBC-BULLENL 459371065 (2022)
+© 2025 Thomson Reuters.
+1
+Chapter 11 - Bonds
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part E - Banking and Financial Services
+Chapter 11 - Bonds
+Introduction
+11-01
+A bond is an instrument by which one person (the obligor) binds himself to pay another person (the obligee) a specified sum
+of sum of money immediately or at a fixed future date. Bonds may be divided into two principal categories:
+ 
+(1)“simple” or “single” bonds 1  (creating no more than an obligation to pay a specified sum, without any condition);
+ 
+(2)“double” or “conditional” bonds, which may be subdivided into “common money bonds” (given solely to secure the
+payment of money) and “bonds with special conditions” (conditional other than upon the payment of money).
+However, in modern times, the term “bond” has become used to encompass any form of instrument which embodies a promise to
+pay money. For example, in commercial and building transactions, use is frequently made of documents which provide security
+for the satisfactory performance of the relevant contract (usually referred to as “performance bonds”). In fact, such bonds are
+often in the form of a conditional guarantee, rather than a bond in its true sense. 2
+The traditional structure of a conditional bond is to set out the obligatory part (the promise to pay a sum of money), then the
+recitals (for example setting out the contracts the performance of which is to be secured) and finally the conditions (which
+contain the underlying nature of the transaction). A claim on a bond will generally set out the essential nature of the bond, the
+breaches or non-performance of the condition giving rise to liability, and the sum claimed.
+It should be emphasised that the use of conditional bonds has been strongly discouraged by both conveyancers and the courts,
+the criticism being that the form of the bond serves to obfuscate the true purpose of the document and the true nature of the
+underlying obligations. 3  In most situations, it is now preferable for parties simply to enter into a guarantee or other contractual
+arrangement whereby the true nature, extent and terms of the obligation undertaken by the obligor to the obligee are clearly
+set out.
+Bonds are to be construed in accordance with commercial common sense, and in particular in accordance with the commercial
+purpose of the instrument (e.g. to protect the payer against the insolvency of the payee). 4
+Actions on common money bonds
+11-02
+A common money bond is a bond given to secure the payment of a sum of money under penalty (typically twice the sum
+advanced). Thus, if A borrows £5,000 from B to be secured by A’s bond, A would, on the face of the bond, acknowledge that
+he owed B £10,000; but a condition would be added that if A paid £5,000 on a specified day, together with interest, the bond
+should be void. At common law, the whole penalty was recoverable. The courts of equity, however, granted relief upon the
+payment of the amount really due. The power to grant relief in certain cases was subsequently given to the courts of law by
+the Administration of Justice Act 1705. By s.12 of that Act it is a good defence to an action on the bond that the obligor has,
+before the action, paid to the obligee the principal and interest due by the condition together with costs. It is proper, then, to
+
+Chapter 11 - Bonds, UKBC-BULLENL 459371065 (2022)
+© 2025 Thomson Reuters.
+2
+claim not the penalty but the amount outstanding according to the terms of the condition. The penalty provides the upper limit
+of the liability of the obligor. 5  However, interest under s.35A of the Senior Courts Act 1981 may be awarded even if further
+contractual interest would not accrue since that would take the overall liability beyond the limit set by the penalty; accordingly,
+statutory interest should be claimed in the alternative.
+Actions on bonds with special conditions
+11-03
+Where a bond is conditioned for the performance of an act other than the payment of money, the question is whether the sum
+named in the obligatory part of the bond is deemed to be a penalty (which is irrecoverable) or liquidated damages (which are
+recoverable). The law on penalties was revised in ParkingEye Ltd v Beavis: 6  the modern test is whether the obligee had a
+legitimate interest in ensuring performance by the obligor and the sum named in the obligatory part of the bond is not extravagant
+or unconscionable in comparison to that interest. 7
+Payment and discharge of a bond
+11-04
+The clearest defence to a claim on a bond is that the sum owed by the obligor under the bond has been paid. Where the defendant
+has, prior to the claim, offered to pay the sum due, the defence of “tender before claim” should be pleaded; where this defence
+is relied upon the defendant must make a payment into court of the amount he says was tendered 8  (and the usual restriction
+upon the disclosure of a Part 36 payment does not apply 9 ).
+A bond may be discharged by agreement, repudiatory breach on the part of the claimant, frustration, material alteration, 10
+or cancellation. Both a material alteration 11  and a cancellation 12  must be intentional, although in the case of the former the
+alteration need not have been made by the obligor: the bond is discharged even if the alteration is made by a stranger whilst
+the bill is in the custody of the obligee. 13
+Restraining payment on a performance bond
+11-05
+In certain limited circumstances, the applicant for a performance bond may apply for an injunction restraining the beneficiary
+from making a claim upon or (if such a claim has already been made) restraining the obligor (i.e. the paying bank) from making
+payment under the bond. 14
+The most common situation is where the applicant seeks to invoke the so-called “fraud exception”. In this situation, the applicant
+must establish a clear case of fraud to the knowledge of the party he is seeking to injunct: this will involve establishing that (i)
+the beneficiary has no right to payment under the bond; (ii) the beneficiary has no genuine belief in such right 15 ; and (iii) (in
+the case of an injunction against the bank) the bank must have notice of the fraud. These are very difficult hurdles to overcome
+and cases where such injunction applications have succeeded are rare. Where the application is being made against a bank the
+applicant faces a further difficulty, since in such a case damages will almost always be an adequate remedy for any breach of
+duty by the bank. 16
+In addition to the fraud exception, there may occasionally be situations in which the contractual provisions between the applicant
+and beneficiary impose restrictions or prevent calls being made on the bond. It has been held that the autonomy principle is not
+undermined in the very special case where a party has expressly agreed not to draw down unless certain conditions were met:
+
+Chapter 11 - Bonds, UKBC-BULLENL 459371065 (2022)
+© 2025 Thomson Reuters.
+3
+to seek to draw down in breach of those terms would be a breach of an express negative covenant which could be restrained
+by injunction. 17  This is sometimes referred to as the “Sirius exception”.
+The only other situation in which a beneficiary can be restrained from making a claim (or the bank restrained from making
+payment) under a performance bond is where there has not been strict compliance with the terms of the instrument. For example,
+the bond may stipulate that any demand upon it must be made within a specified period of time, or must be preceded by a
+letter requiring the applicant to remedy a breach of an underlying sale contract. If such formalities have not been adhered to,
+then payment will not be due under the bond according to its own terms, and hence a threatened claim or payment could be
+restrained by the court.
+Footnotes
+1
+Morrant v Gough (1827) 7 B.&C. 206. Such bonds are practically obsolete.
+2
+As to the distinction between a guarantee and a performance bond see: Meritz Fire & Marine Insurance Co Ltd v Jan
+de Nul NV [2011] 1 Lloyd’s Rep. 379; Wuhan Guoyu Logistics Group Co Ltd v Emporiki Bank of Greece SA [2012]
+EWHC 1715 (Comm); [2012] 2 All E.R. (Comm) 685.
+3
+Trafalgar House Construction (Regions) Ltd v General Surety and Guarantee Co Ltd [1995] 3 All E.R. 737 at 745, per
+Lord Scarman; Tins’ Industrial Co Ltd v Kono Insurance Ltd [1988] 42 B.L.R. 110 at 120; Workington Harbour & Dock
+Board v Trade Indemnity Co Ltd [1937] A.C. 1 at 17.
+4
+Rainy Sky SA v Kookmin Bank [2011] UKSC 50; [2011] 1 W.L.R. 2900.
+5
+Hatton v Harris [1892] A.C. 547.
+6
+ParkingEye Ltd v Beavis [2015] UKSC 67; [2016] A.C. 1172.
+7
+This supersedes previous decisions suggesting that a clause providing for the payment of an additional sum may be
+enforceable if it was “commercially justifiable, provided always that its dominant purpose was not to deter the other
+party from the breach” (Lordsvale Finance Plc v Bank of Zambia [1996] Q.B. 752, 762-764).
+8
+CPR r.37.2.
+9
+CPR r.36.13(3)(a).
+10
+See Chitty on Contracts, 33rd edn (London: Sweet & Maxwell, 2018), para.25-020; Raiffeisen Zentralbank Osterreich
+AG v Crossseas Shipping Ltd [2000] 1 W.L.R. 1135 at 1143.
+11
+Hong Kong and Shanghai Bank v Lo Lee Shi [1928] A.C. 181.
+12
+Bamberger v Commercial Credit Co (1855) 15 C.B. 676 at 693.
+13
+Pigot’s Case (1614) 11 Co. Rep. 26b; Crookewit v Fletcher (1857) 1 H.&N. 893 at 912.
+14
+Injunctions of this nature were upheld in Themehelp Ltd v West [1996] Q.B. 84 and Kvaerner John Brown Ltd v Midland
+Bank Plc [1998] C.L.C. 446; but see the criticisms of these decisions in Czarnikow-Rionda v Standard Bank [1999]
+2 Lloyd’s Rep. 187 at 190. For the Court of Appeal’s general guidance as to the granting of without notice injunctions
+in this context see Bolivinter Oil SA v Chase Manhattan Bank [1984] 1 Lloyd’s Rep. 251. See also TTI Team Telecom
+International v Hutchison 3G UK [2003] EWHC 762 (TCC); [2003] 1 All E.R. (Comm) 914.
+15
+Lack of honest belief is fraud: State Trading Corp of India Ltd v ED&F Man (Sugar) Ltd [1981] Com. L.R. 235.
+16
+Harbottle (Mercantile) Ltd v National Westminster Bank [1978] Q.B. 146 at 155, cited with approval in United Trading
+Corp SA v Allied Arab Bank Ltd [1985] 2 Lloyd’s Rep. 554 (Note) at 565.
+17
+Sirius International Insurance Corp (Publ) v FAI General Insurance Co Ltd [2003] 1 W.L.R. 2214; Simon Carves v
+Ensus UK Ltd [2011] EWHC 657 (TCC); 135 Con. L.R. 96.
+End of Document
+© 2025 SWEET & MAXWELL

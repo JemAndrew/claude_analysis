@@ -1,0 +1,51 @@
+Duration of Binding Effect of Order, UKBC-ICCARBN 474406964 (2022)
+© 2025 Thomson Reuters.
+1
+Duration of Binding Effect of Order
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+Duration of Binding Effect of Order
+29-96
+In its sub-paras (a)–(d), art.6(6) of the Emergency Arbitrator Rules lists four situations when the Order shall cease to be binding
+upon the parties:
+ 
+(a) “the President’s termination of the emergency arbitrator proceedings pursuant to Article 1(6) of this
+Appendix”—
+An applicant advances US$ 40,000 and bound to lose at least US$ 5,000 in the event the proceedings are terminated by
+the ICC Court’s President. Therefore, the applicant will presumably seek to file the Request for Arbitration with 10 days
+or any longer period set by the Emergency Arbitrator.
+ 
+(b) “the acceptance by the Court of a challenge against the emergency arbitrator pursuant to Article 3 of this
+Appendix”—
+As stated above, as long as the ICC Court has not decided upon the challenge, the Emergency Arbitrator Proceedings
+will continue their course. Thus, the Emergency Arbitrator may even render an Order before the ICC Court has made its
+decision. If the ICC Court accepts a challenge against an Emergency Arbitrator, the Order would automatically lose its
+effect. It would appear appropriate for the Secretariat to mention this effect in the notification letter to the parties with
+reference to art.6(6)(b) Emergency Arbitrator Rules.
+ 
+(c) “the arbitral Tribunal’s final award, unless the arbitral Tribunal expressly decides otherwise”—
+The Order being interim in nature, it is the Tribunal’s award which will ultimately decide, one way or the other, but in any
+event in a final manner, on the relief covered by the Order. Thus, normally, the Order of the Emergency Arbitrator ceases
+to have binding effect upon the parties at the latest once an award is rendered by the Tribunal provided either that it is a
+final award or that it deals with the interim relief that was the subject of the Emergency Arbitrator’s Order.
+ 
+(d) “the withdrawal of all claims or the termination of the arbitration before the rendering of a final award”—
+If a party withdraws its claims that were the subject of, or the basis for the Order, or if the arbitration is terminated for
+whatever reason, the Order will automatically lose its effect. The termination may be due to non-payment of the advance
+on cost, and may thus have been triggered by the Secretariat. It may also have been the result of a settlement agreement
+by the parties.
+29-97
+There are at least two other situations when the Order ceases to have binding effect: first, the Emergency Arbitrator him or
+herself may terminate or annul the Order pursuant to art.6(8) of the Emergency Arbitrator Rules. 606  Secondly, the Tribunal has
+the same right to do so pursuant to art.29(3) of the Rules.
+Footnotes
+
+Duration of Binding Effect of Order, UKBC-ICCARBN 474406964 (2022)
+© 2025 Thomson Reuters.
+2
+606
+See para.29-110.
+End of Document
+© 2025 SWEET & MAXWELL

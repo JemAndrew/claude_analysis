@@ -12,9 +12,9 @@ import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 
-from document_processor import DocumentProcessor
-from knowledge_manage import KnowledgeManager
-from output_generator import OutputGenerator
+from interface.document_processor import DocumentProcessor
+from knowledge.knowledge_manage import OptimisedKnowledgeManager
+from outputs.output_generator import OptimisedOutputGenerator
 
 def verify_directories():
     """Verify all three document directories"""

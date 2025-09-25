@@ -1,0 +1,69 @@
+Confidentiality orders, UKBC-ICCARBN 474406873 (2022)
+© 2025 Thomson Reuters.
+1
+Confidentiality orders
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+Confidentiality orders
+22-61
+As mentioned above, there is no need for a Tribunal generally to issue a confidentiality order with respect to attendance at
+the hearings, as this is covered by art.26(3). Tribunals may be called upon to issue confidentiality orders: (i) with respect to
+the existence of the arbitration itself; (ii) with respect to submissions made in the arbitration; (iii) with respect to documents
+produced during the proceedings; or (iv) with respect to opinions expressed in the arbitration. A Tribunal may do so at its own
+initiative, but is more likely to do so at the request of a party.
+22-62
+In considering whether and to what extent to issue a confidentiality order with respect to any of these issues, the Tribunal
+must keep in mind the parties’ agreements, the law applicable to the arbitration itself and the law applicable to the parties.
+For example, in the case of publicly-traded companies, those companies may be required to provide certain information with
+respect to the arbitration to meet their disclosure obligations. These are issues that are resolved on a case-by-case basis usually
+by seeking to work out a solution that meets such disclosure requirements but also protects to the extent possible the interests
+of other parties as to confidentiality.
+22-63
+For the authors, however, the starting point is the parties’ agreement (if any) as to confidentiality. If there is an agreement as to
+confidentiality, that should generally be enforced as should any provision of the contract, by a procedural order if necessary. If
+there is no agreement as to confidentiality, then the issue is whether there is an express or implied obligation of confidentiality
+under the law of the place of arbitration. The law governing the arbitration agreement if it is not the same as the law of the
+place of arbitration has no relevance except to the extent that it may relate to interpretation of the parties’ alleged agreement
+(express or implied) as to confidentiality.
+22-64
+In addition, in considering requests for confidentiality, to the extent that there is a government or state entity involved, the
+Tribunal should consider the issues of transparency to which those entities may be subject. This is particularly the case where
+the arbitration relates to an investment in a country as there is a growing trend to expect transparency in such situations.
+22-65
+As regards documentary disclosure, the IBA Rules on Evidence provide an indication of what most practitioners view as an
+acceptable general principle, providing in s.3(13) that:
+“13. Any Document submitted or produced by a Party or non-Party in the arbitration and not otherwise in the
+public domain shall be kept confidential by the Arbitral Tribunal and the other Parties, and shall be used only
+in connection with the arbitration. This requirement shall apply except and to the extent that disclosure may be
+required of a Party to fulfil a legal duty, protect or pursue a legal right, or enforce or challenge an award in bona
+fide legal proceedings before a state court or other judicial authority. The Arbitral Tribunal may issue orders to
+set forth the terms of this confidentiality. This requirement shall be without prejudice to all other obligations of
+confidentiality in the arbitration.”
+22-66
+
+Confidentiality orders, UKBC-ICCARBN 474406873 (2022)
+© 2025 Thomson Reuters.
+2
+However, even this general principle may be subject to some modification—and need for clarification—where issues arise as
+to parallel proceedings with related parties. For example, this type of provision does not deal with the use of a related party to
+pursue a right in such parallel proceedings. Nevertheless, it is frequent that obligations along the lines of s.3(13) of the IBA
+Rules on Evidence are imposed with respect to documents disclosed during the arbitration in particular.
+22-67
+Confidentiality orders under art.22(3) are directed at the parties but are generally applicable through the parties to the various
+persons involved in the arbitration, such as the employees, lawyers and experts engaged by the parties. In some instances, the
+Tribunal will at the request of a party require that such persons sign a confidentiality obligation so that the persons assume
+obligations of confidentiality to the other parties in the arbitration directly.
+22-68
+For Tribunal-appointed experts, one would normally expect that a confidentiality obligation be inserted in the terms of reference
+for the expert him or herself. A Tribunal may set out the fact that it will impose such an obligation or incorporate the terms
+of reference with that obligation in a procedural order relating to the appointment of the Tribunal-appointed expert as well.
+Nevertheless, a Tribunal-appointed expert is not a party and is retained pursuant to a contract.
+22-69
+It is generally acknowledged that the enforcement of confidentiality agreements or orders is sometimes difficult due to the
+problems in assessing the damages for breach of those obligations. In the case of procedural orders issued by a Tribunal, this
+concern is somewhat reduced due to the concern that most parties have as to adverse inferences, whether official or unofficial,
+that a Tribunal may draw if a party chooses to breach a confidentiality order.
+End of Document
+© 2025 SWEET & MAXWELL

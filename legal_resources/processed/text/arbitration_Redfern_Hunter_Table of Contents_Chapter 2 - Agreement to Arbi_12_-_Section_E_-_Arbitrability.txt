@@ -1,0 +1,834 @@
+Section E. - Arbitrability, UKBC-REDFERN 530638612 (2025)
+© 2025 Thomson Reuters.
+1
+Section E. - Arbitrability
+Redfern and Hunter on International Arbitration 7th Ed.
+Mainwork
+Chapter 2 - Agreement to Arbitrate
+Section E. - Arbitrability
+(a) Introduction
+2. 125
+As already stated, arbitrability, in the sense in which it is used in this book, 182  involves determining which types of dispute
+may be resolved by arbitration and which belong exclusively to the domain of the courts. Both the New York Convention and
+the Model Law are limited to disputes that are ‘capable of settlement by arbitration’. 183  What the authors propose to do in
+this section is to look at the way in which courts in different jurisdictions apply the concept; and then to look at the various
+categories of disputes in which the concept may arise.
+2. 126
+In principle, any dispute should be just as capable of being resolved by a private arbitral tribunal as by the judge of a national
+court. Article 2059 of the French Civil Code, for example, provides that ‘all persons may enter into arbitration agreements
+relating to the rights that they may freely dispose of’. Although Article 2060 further provides that parties may not agree to
+arbitrate disputes in a series of particular fields (such as family law) and ‘more generally in all matters that have a public interest
+[plus généralement dans toutes les matières qui intéressent l’ordre public]’, this limitation has been construed restrictively by
+French courts. Similarly, section 1 of the Brazilian Arbitration Act of 1996 (Law No. 9.307) states that parties may settle disputes
+through arbitration as long as the subject matter relates to freely transferable rights. 184
+2. 127
+However, it is precisely because arbitration is a private proceeding with public consequences 185  that some types of dispute
+are reserved for national courts, the proceedings of which are generally in the public domain. It is in this sense that they are
+not ‘capable of settlement by arbitration’.
+2. 128
+National laws establish the domain of arbitration, as opposed to that of the local courts. Each state decides which matters may
+or may not be resolved by arbitration in accordance with its own political, social, and economic policy. In some Arab states,
+for example, contracts between a foreign corporation and its local agent are given special protection by law, and, to reinforce
+this protection, any disputes arising out of such contracts may be resolved only by the local courts. 186  In the United States, the
+arbitration of certain types of dispute that engage public policy appears to be under legislative attack. At the time of writing,
+the Forced Arbitration Repeal Act of 2019, which has yet to be voted on in the Senate, proposes to invalidate any pre-dispute
+arbitration clause in relation to employment, consumer, antitrust, and civil rights disputes on the grounds that the weaker of
+the parties in reality has little or no meaningful choice as to whether to select arbitration. 187  The legislators and courts in each
+country must balance the domestic importance of reserving certain matters of public interest to the courts against the more
+general public interest in allowing people the freedom to arrange their private affairs as they see fit. 188  In the international
+sphere, the interests of promoting international trade, as well as international comity, have proven important factors in persuading
+the courts to treat certain types of dispute as arbitrable. 189
+2. 129
+If the issue of arbitrability arises, it is necessary to have regard to the relevant laws of the different states that are, or may be,
+concerned. These are likely to include: the law governing the party involved, where the agreement is with a state or state entity;
+
+Section E. - Arbitrability, UKBC-REDFERN 530638612 (2025)
+© 2025 Thomson Reuters.
+2
+the law governing the arbitration agreement; the law of the seat of arbitration; and the law of the ultimate place of enforcement
+of the award.
+2. 130
+Whether or not a particular type of dispute is ‘arbitrable’ under a given law is, in essence, a matter of public policy for that law
+to determine. Public policy varies from one country to the next, and indeed changes over time. 190  The most that can be done
+here is to indicate the categories of dispute that may fall outside the domain of arbitration.
+2. 131
+Reference has already been made in passing to contracts of agency, for which special provision may be made in some states as
+a matter of public policy. More generally, criminal matters and those that affect the status of an individual or a corporate entity
+(such as bankruptcy or insolvency) are usually considered to be non-arbitrable. In addition, disputes over the grant or validity
+of patents and trademarks may not be arbitrable under the applicable law. These various categories of dispute are considered
+in greater detail next.
+(b) Categories of dispute for which questions of arbitrability arise
+(i) Patents, trademarks, and copyright
+2. 132
+The grant of a patent or trademark is plainly a matter for the public authorities of the state concerned, these being monopoly
+rights that only the state can grant. From this it has traditionally followed that any dispute as to their validity was outside the
+domain of arbitration. While this remains the case in many jurisdictions, 191  in recent years there appears to be a growing
+acceptance that such disputes are arbitrable. In the United States and in Hong Kong, by way of example, disputes regarding the
+validity of patents are arbitrable, and such determinations are binding as between the parties to the arbitration agreement. 192
+2. 133
+In addition to disputes as to the validity of a patent or trademark, disputes pertaining to the rights and obligations contained
+in a licence issued by the owner of such intellectual property rights to one or more corporations or individuals are commonly
+referred to international arbitration. The advantages offered in this regard are threefold: first, arbitration affords the parties
+an opportunity to select for themselves a tribunal of arbitrators experienced in such matters; secondly (and perhaps more
+importantly), such proceedings are confidential, which helps to provide a safeguard for trade secrets; and thirdly, arbitration
+avoids the difficulties that often arise in connection with the enforcement of judgments resulting from separate litigation
+proceedings commenced in multiple jurisdictions. 193
+2. 134
+Unlike patents or trademarks, copyright is an intellectual property right that exists independently of any national or
+international registration and may be freely disposed of by parties. There is therefore generally no doubt that disputes relating
+to such private rights may be referred to international arbitration. 194
+(ii) Antitrust and competition laws
+2. 135
+Adam Smith, writing in the eighteenth century, said: ‘People of the same trade seldom meet together, even for merriment and
+diversion, but the conversation ends in a conspiracy against the public, or in some contrivance to raise prices.’ 195  This early
+distrust of monopolies and cartels finds its modern echo in increasingly wide-ranging antitrust (or competition) legislation
+across the world. Amongst national legislators, the United States has been prominent, beginning with the celebrated Shearman
+
+Section E. - Arbitrability, UKBC-REDFERN 530638612 (2025)
+© 2025 Thomson Reuters.
+3
+Act in 1890. Similarly, in 1958, the (then) European Community adopted rules of law that were to be directly applicable in all
+member states, and which prohibit agreements and arrangements having as their object or effect the prevention, restriction, or
+distortion of competition, 196  as well as any abuse of a dominant position, 197  within what is now the European Union. Articles
+101 and 102 of the Treaty on the Functioning of the European Union (TFEU) have historically been enforced primarily by the
+European Commission, which has the power to investigate, to prohibit behaviours, to impose heavy fines, and also to grant
+exemptions pursuant to Article 101(3) TFEU where appropriate in light of the wider benefits of the activity or agreement
+that infringes Article 101. 198
+2. 136
+What can an arbitral tribunal do when confronted with an allegation that the contract under which the arbitration is brought
+is itself an illegal restraint of trade, or in some other way a breach of antitrust law? For example, in disputes between the
+licensor of a patent and the licensee, it has become almost standard practice for the licensor to allege (amongst a series of
+defences) that, in any event, the licence agreement is void for illegality. In general, an allegation of illegality should not
+prevent an arbitral tribunal from adjudicating on the dispute even if its finding is that the agreement in question is indeed
+void for illegality. This is because, under the doctrine of separability, 199  the arbitration clause in a contract constitutes a
+separate agreement and survives the contract of which it forms part. More specifically, it is now widely accepted that antitrust
+issues are arbitrable. In France, the arbitrability of competition law issues is well established, having been acknowledged
+in the Mors/Labinal case in 1993 200  and reaffirmed by the Court of Cassation in 1999. 201  Likewise, in Switzerland, the
+arbitrability of EU competition law was recognised by a decision of the Federal Tribunal in 1992, 202  in which the Tribunal
+found that ‘[n]either Article 85 of the [EU] Treaty nor Regulation 17 on its application forbids a national court or an arbitral
+tribunal to examine the validity of that contract’.
+2. 137
+The US Supreme Court had already adopted this approach in the well-known Mitsubishi case. 203  At one time, it was held in
+the United States that claims under the antitrust laws were not capable of being resolved by arbitration, but had to be referred
+to the courts. In the American Safety case, 204  the reaction of the court was that:
+A claim under the antitrust laws is not merely a private matter [ … ] Antitrust violation can affect hundreds of
+thousands, perhaps millions, of people and inflict staggering economic damage. We do not believe Congress
+intended such claims to be resolved elsewhere than the Courts. 205
+2. 138
+However, in Mitsubishi, the US Supreme Court decided, by a majority of five to three, that antitrust issues arising out of
+international contracts were arbitrable under the Federal Arbitration Act. This was so despite the public importance of the
+antitrust laws, the significance of private parties seeking treble damages as a disincentive to violation of those laws, and the
+complexity of such cases. In its judgment, the Court stated:
+[W]e conclude that concerns of international comity, respect for the capacities of foreign and transnational
+tribunals and sensitivity to the need of the international commercial system for predictability in the resolution
+of disputes require that we enforce the parties’ agreement, even assuming that a contrary result would be
+forthcoming in a domestic context. 206
+The Court went on to point out that the public interest in the enforcement of antitrust legislation could be asserted, if necessary,
+when it came to enforcement of any award made by the arbitral tribunal. It stated that:
+Having permitted the arbitration to go forward, the national courts of the United States will have the opportunity
+at the award enforcement stage to ensure that the legitimate interest in the enforcement of the antitrust laws has
+been addressed. The [New York Convention] reserves to each signatory country the right to refuse enforcement
+of an award where the ‘recognition or enforcement of the award would be contrary to a public policy of that
+country’. 207
+
+Section E. - Arbitrability, UKBC-REDFERN 530638612 (2025)
+© 2025 Thomson Reuters.
+4
+2. 139
+In this way, rather than question whether antitrust issues are arbitrable, later decisions tend to focus—at least in the European
+Union and United States—on the extent of a state court’s power to review arbitral awards in relation to disputes that raise
+competition issues. In its landmark decision in Eco Swiss China Time Ltd v Benetton International NV, 208  the European
+Court of Justice (ECJ) identified Article 81 of the EU Treaty (now Article 101 TFEU) as a matter of public policy that would
+justify the annulment or refusal of enforcement of an award that ignores it. In the context of a challenge to an award that
+gave effect to a licence agreement that was alleged, only after the award had been rendered, to violate Article 81 of the EU
+Treaty, the ECJ ruled that:
+[A] national court to which application is made for annulment of an arbitration award must grant that application
+if it considers that the award in question is in fact contrary to Article 85 of the Treaty [now Article 81 TEU],
+where its domestic rules of procedure require it to grant an application for annulment founded on failure to
+observe national rules of public policy. 209
+2. 140
+Although, in Eco Swiss, the ECJ did not explicitly rule on whether arbitrators have a duty to apply Article 81 EC ex officio if
+the parties themselves made no reference to it, this decision is generally seen—at the very least—as implying that arbitrators
+should do so or risk the annulment of their award on grounds of a violation of public policy. 210  However, some uncertainty
+remains as to how serious the alleged violation of competition law must be in order to justify the annulment of an award.
+The view that has historically prevailed is that a ‘minimalist’ standard of review—under which only a ‘flagrant, effective
+and concrete’ violation of public policy justifies the annulment of an award—is appropriate, 211  although recent cases have
+shown a willingness to depart from this approach. 212
+(iii) Securities transactions
+2. 141
+Prior to its landmark decision in Mitsubishi, the US Supreme Court had held in 1953 that disputes under the Securities Act
+were not arbitrable. 213  In 1974, however, the Court held that such disputes were arbitrable in an international commercial
+arbitration. The case was Scherk v Alberto-Culver, 214  in which the Supreme Court said that a ‘parochial refusal by the courts
+of one country to enforce an international arbitration agreement’ would not only frustrate the purpose of the agreement, but
+also ‘damage the fabric of international commerce and trade and imperil the willingness and ability of businessmen to enter
+into international commercial agreements’. 215  In subsequent cases, the Court went on to accept the arbitrability of securities
+disputes in US domestic arbitration. 216
+2. 142
+Some other national securities laws, existing as they do to protect vulnerable consumers, still restrict the resolution of some
+disputes thereunder to the national courts. By way of example, German securities legislation expressly restricts the availability
+of arbitration for such disputes to commercial cases in which both parties are established businesses or companies. 217
+(iv) Insolvency
+2. 143
+Issues of arbitrability arise in respect of insolvency law as a result of the conflict between the private nature of arbitration
+and the public-policy-driven collective procedures provided for under national insolvency laws. 218  Courts and tribunals in
+various countries have sought to identify where the boundary of arbitrability should lie, and which insolvency issues are
+only suitable for resolution by a court. A distinction can be made between ‘core’, or ‘pure’ insolvency issues, which may
+be inherently non-arbitrable (for example matters relating to the adjudication of the insolvency itself or the verification of
+
+Section E. - Arbitrability, UKBC-REDFERN 530638612 (2025)
+© 2025 Thomson Reuters.
+5
+creditors’ claims), 219  and related circumstances that are capable of private dispute resolution between contracting parties.
+The precise location of this dividing line varies between countries and will depend in part on national insolvency laws.
+2. 144
+In the United States, the national bankruptcy courts were traditionally reluctant to defer their jurisdiction to arbitrators except
+in exceptional circumstances. 220  The approach now is for the courts to look at the type of dispute before them and to determine
+whether there are any core insolvency issues in play that deprive an arbitral tribunal of jurisdiction. 221
+2. 145
+In the European Union, 222  Regulation (EU) 2015/848 establishes a common framework for insolvency proceedings. 223  The
+Regulation provides, inter alia, that the law of the country in which insolvency proceedings are commenced shall determine
+the effect of those insolvency proceedings on other proceedings brought by individual creditors, including arbitration
+proceedings, with the exception of proceedings that are pending, which shall be determined by the law of the member state
+in which the lawsuit is pending or in which the arbitral tribunal has its seat. 224
+2. 146
+In Switzerland, the insolvency of one of the parties will not generally affect the arbitration agreement and arbitrators retain
+a wide jurisdiction to decide disputes relating to insolvency issues, including claims made on behalf of the estate itself. 225
+German law adopts a similarly liberal approach to arbitrability in this context, with arbitrators generally having jurisdiction
+to determine disputes relating to bankruptcy proceedings other than ‘pure’ insolvency issues, such as the appointment of
+an administrator, the collection and distribution of assets, and the reorganisation of a business. 226  If a liquidator, however,
+exercises statutory rights to invalidate contracts entered into by the debtor prior to insolvency, the related arbitration
+agreements will not bind the liquidator. 227
+2. 147
+In Argentina, any arbitration agreement to which an insolvent company is party will automatically terminate upon the court
+entering a bankruptcy decree, unless the arbitral tribunal has already been constituted. 228  In Brazil, bankruptcy procedures are
+considered to be non-arbitrable. 229  However, a company’s bankruptcy will not affect the validity of an arbitration agreement
+to which the company is party. 230
+2. 148
+Under English law, it is difficult to enforce an arbitration agreement against an insolvent party in circumstances under
+which the trustee in bankruptcy does not consent. The Arbitration Act 1996 introduced a specific procedure into the English
+Insolvency Act 1986, which allows a trustee in bankruptcy to adopt or reject an arbitration agreement. If it elects to reject
+the arbitration agreement, then arbitral proceedings can be brought only with the consent of the company’s creditors and
+the court, which will look at all of the circumstances of the case to determine whether the dispute in question ought to be
+referred to arbitration. 231  This apparently reflects the more general rule under English law that allows a trustee to refuse
+to acknowledge ‘unprofitable’ contracts. Should the trustee elect to confirm the arbitration agreement in a particular case, it
+becomes binding and enforceable both by and against the trustee.
+(v) Bribery and corruption
+2. 149
+Issues of bribery or corruption in the procurement or performance of a contract raise important questions of public policy. In
+its final report on public policy as a bar to the enforcement of international arbitral awards, the Committee on International
+Arbitration of the International Law Association (ILA) reviewed the development of the concept of public policy during the
+latter part of the twentieth century, and concluded that there was an international consensus that corruption and bribery are
+contrary to international public policy. 232
+2. 150
+
+Section E. - Arbitrability, UKBC-REDFERN 530638612 (2025)
+© 2025 Thomson Reuters.
+6
+What is an arbitral tribunal to do if there is a dispute as to the performance of an international commercial agreement and it
+is said, as an excuse for non-performance, that the agreement was tainted by the payment of bribes or some other fraudulent
+inducement? This issue is first known to have been raised in 1963 before a distinguished Swedish jurist, Judge Lagergren,
+who was acting as sole arbitrator in ICC Arbitration No. 1110. 233
+2. 151
+This landmark arbitration involved a dispute as to whether an agreement entered into in 1950 for the payment to Mr X of a
+10 per cent commission on the value of industrial equipment then required for a particular public energy project in Argentina
+also covered the sale of equipment in 1958 for another similar project. Testifying before Judge Lagergren, Mr X stated that
+he ceded certain ‘participations’ to ‘influential personalities’ amongst a ‘clique of people which had a controlling influence
+upon the Government’s economic policy’.
+2. 152
+Finding the contract to be ‘condemned by public decency and morality’ because it ‘contemplated the bribing of Argentine
+officials for the purpose of obtaining the hoped-for business’, Judge Lagergren declined to continue with the arbitration,
+finding that such a dispute was not arbitrable and stating that the parties to such a contract had ‘forfeited the right to ask for
+assistance of the machinery of justice’. 234
+2. 153
+The modern approach (based on the concept of separability, 235  which has now received widespread acceptance both
+nationally and internationally) is that an allegation of illegality does not in itself deprive the arbitral tribunal of jurisdiction. 236
+On the contrary, it is generally held that the arbitral tribunal is entitled to hear the arguments and receive evidence, and to
+determine for itself the question of illegality. 237  Thus, in Switzerland, in a case involving a consultancy agreement, the Swiss
+Federal Tribunal decided that even if a consultancy agreement were, in effect, an agreement to pay a bribe (and this was not
+alleged, still less proven), the arbitration agreement would survive. 238
+2. 154
+Rather than raising questions of arbitrability, allegations of corruption made in an arbitration now raise the rather more
+substantive (and difficult) questions of proof and, if proven, the consequences of such impropriety under the relevant law. 239
+2. 155
+In relation to the former, accepting without question the arbitrability of allegations of impropriety, an ad hoc arbitral tribunal
+acting under the UNCITRAL Rules addressed allegations of corruption put before it thus:
+The members of the Arbitral Tribunal do not live in an ivory tower. Nor do they view the arbitral process as
+one which operates in a vacuum divorced from reality. The arbitrators are well aware of the allegations that
+commitments by public sector entities have been made with respect to major projects in Indonesia without
+adequate heed to their economic contribution to public welfare, simply because they benefited a few influential
+people. The arbitrators believe that cronyism and other forms of abuse of public trust do indeed exist in many
+countries, causing great harm to untold millions of ordinary people in a myriad of insidious ways. They would
+rigorously oppose any attempt to use the arbitral process to give effect to contracts contaminated by corruption.
+But such grave accusations must be proven [ … ] Rumours or innuendo will not do. 240
+2. 156
+More recently, some tribunals and courts, recognising the inherent difficulties involved in proving allegations of corruption,
+have found such allegations to be made out where a party has adduced evidence of a number of indicators of corruption, or ‘red
+flags’—such as a refusal or inability to explain or produce evidence regarding any legitimate activity or services performed
+under the impugned contract; a lack of qualifications to perform the services called upon by the contract; a contract’s short
+duration; or an unusually high success fee or commission awarded by the contract. 241
+2. 157
+
+Section E. - Arbitrability, UKBC-REDFERN 530638612 (2025)
+© 2025 Thomson Reuters.
+7
+As to the consequences of a finding of corruption, this will depend on the governing law of the contract. Many laws recognise
+a difference between a finding that a contract had as its object the performance of an illegality (this will often lead to the
+contract being void ab initio), and a finding that a contract did not have such an illegal object but was concluded by reason of
+an illegality (which will only be voidable, and require some positive step to avoid by a party that has not already affirmed the
+contract with relevant knowledge). 242  A finding that a contract is void, or has been effectively avoided, will not necessarily
+exclude the possibility of a non-contractual restitutionary claim related to the contract, where a party that has successfully
+claimed avoidance has nevertheless taken a benefit from contractual performance. 243
+2. 158
+A further issue that can arise is the extent to which a tribunal is obliged to pursue, on its own initiative, an investigation into
+possible corruption. If an allegation of corruption is made in plain language in the course of the arbitration proceedings, the
+arbitral tribunal is clearly under a duty to consider the allegation and to decide whether or not it is proven. 244  It remains less
+clear, however, whether an arbitral tribunal has a duty to assume an inquisitorial role and to address the question of corruption
+on its own initiative where none is alleged. Initiating its own investigation and rendering a decision on the outcome of such a
+self-initiated investigation might leave a tribunal open to charges of straying into territory that is ultra petita. 245  Conversely,
+a failure to address the existence of such illegality may threaten the enforceability of an award and thus may sit uncomfortably
+with an arbitral tribunal’s duty under some modern rules of arbitration to use its best endeavours to ensure that its award is
+enforceable. 246  Striking the right balance between these competing considerations may not be easy, and different national
+courts have adopted different approaches. 247
+2. 159
+For example, in relation to the Alexander Brothers v Alstom arbitration, the Swiss, French, and English courts arrived at
+different views as to their respective roles (and thus, implicitly, an arbitral tribunal) in considering allegations of corruption.
+In annulment proceedings in Switzerland, 248  the Swiss Federal Supreme Court limited itself to an analysis of the facts as
+found by the arbitral tribunal in the award, observing that, while corruption was indeed prohibited by Swiss public policy, the
+Court’s role was neither to complete nor question the facts as presented by the arbitral tribunal. By contrast, in enforcement
+proceedings in France, 249  the Court of Appeal observed that its review of the facts was not limited to those established by
+the arbitral tribunal, and thus the Court could accept new evidence regarding allegations of corruption. The Court found that
+there were ‘serious, precise and consistent indicia’ (that is, red flags) that payments made by Alstom had been used to bribe
+government officials, and on that basis refused to enforce the award. By way of further contrast, in enforcement proceedings
+in London, 250  the Commercial Court found that Alstom had not ‘run an overt and positive case of bribery’ in the underlying
+arbitration, but rather had made a ‘tacit’ case relying on alleged indicia of bribery. Finding that ‘conclusive evidence’ of
+corruption must be adduced to establish such an allegation, the Court concluded that Alstom had not met the required standard
+of proof. On this basis, the Court did not consider that it was appropriate to probe matters of illegality itself, and described
+Alstom’s raising of this issue only during the enforcement phase as an abuse of process. 251
+(vi) Fraud
+2. 160
+Where there are allegations of fraud in the procurement or performance of a contract, there appears to be no reason for the
+arbitral tribunal to decline jurisdiction. 252  Indeed, in the heat of battle, such allegations are frequently made, although much
+less frequently proven. Where a claim put forward in the course of an arbitration is found to be fraudulent, it will be for the
+arbitral tribunal to dismiss it. However, problems may arise if the alleged fraud is not discovered until an award has been
+made. In the Fougerolle case, 253  an ICC tribunal rejected a claim by the subcontractor under a turnkey contract, to the effect
+that it had encountered unexpected ground conditions and in a partial award, the arbitrators ordered Fougerolle to repay
+monies to its main contractor. Some months later, the main contractor relied on the same grounds as had been unsuccessfully
+advanced by Fougerolle (which the main contractor had denied and which the tribunal arbitrators had rejected) in support of
+its own claims against the engineer. The arbitral tribunal refused to review its award, on the basis that it had been made and
+could not be reversed at that stage, the award having been approved by the ICC Court. The Paris Court of Appeal stated that
+the award could be annulled if fraud was proved—but, in the event, it was decided that there had been no fraud. 254
+
+Section E. - Arbitrability, UKBC-REDFERN 530638612 (2025)
+© 2025 Thomson Reuters.
+8
+2. 161
+Another example is L’affaire Tapie case, which became a ‘cause célèbre’ in France and cast a shadow over the reputation of
+arbitration in that country. 255  In 1992, Bernard Tapie, a high-profile French businessman, a former minister in the French
+government, a football club owner, and a television celebrity, decided to sell his majority shareholding in Adidas AG to
+repay several outstanding loans. He instructed his bank, Crédit Lyonnais (which was at that time the largest state-owned
+French bank), to carry out the transaction. On 12 February 1993, Crédit Lyonnais and an affiliate sold the shareholding for
+approximately 218 million euros to a group of investors, who then sold it for considerably more in a pre-arranged transaction
+completed in December 1994. 256
+2. 162
+Bernard Tapie and most of his group of companies subsequently went into liquidation, and in 1995 the liquidators began
+proceedings in the French courts against Crédit Lyonnais and an affiliate, alleging fraudulent concealment of the pre-arranged
+transaction and breach of the mandate it had been given to sell the shares at their proper value. There followed a series of
+cases in the French courts, with the Paris Court of Appeal giving a judgment in favour of the liquidators for 135 million
+euros, and the Court of Cassation reversing this judgment in part and referring the case back to the Paris Court of Appeal
+with a different bench of judges.
+2. 163
+In order to bring an end to the various court cases in which they had been involved for more than a decade, the parties entered
+into a submission agreement (or compromis) in 2007 in which they agreed to submit all the disputes between them to an ad
+hoc tribunal of three arbitrators, whose mission was to decide all disputes between the parties under French law, with the
+seat of the arbitration in Paris.
+2. 164
+In view of the French government’s majority shareholding in Crédit Lyonnais, the parties’ proposal to enter into the
+compromis, and so refer the disputes to arbitration in order to put an end to the various court cases, was approved by Christine
+Lagarde, who was at that time the Minister of the Economy and of Finance, Industry and Employment.
+2. 165
+The arbitral tribunal issued its award in July 2008. The award represented a considerable success for the claimants, including
+an order for the payment of 45 million euros to Bernard Tapie and his wife for ‘moral damages’. 257  The award was paid in
+full, but the Paris Court of Appeal was subsequently asked to review the case, in what through media reports had become
+something of a state scandal.
+2. 166
+The arbitrator nominated by the claimants, who was alleged to have been very influential in the drafting of the award, was
+found to have had a long-term business relationship with Tapie and a member of his legal team. This relationship had not
+been disclosed as it should have been; and in consequence, the award was annulled by the Paris Court of Appeal, a decision
+that was confirmed by the French Court of Cassation.
+2. 167
+L’affaire Tapie underlines the importance that courts rightly attach to the requirement for arbitrators to be strictly independent
+and impartial, and for them to disclose any relationships that might throw doubt on this. The case was followed, however, by
+an unexpected and, it might be thought, unfortunate development. Lagarde herself, who presumably acted upon the advice of
+her officials, was accused of culpable negligence first, by approving the decision to take the case to arbitration and secondly,
+by agreeing to payment of the amount awarded by the arbitral tribunal. The case against Lagarde was heard by the Court of
+Justice of the French Republic, which concluded that she had not been negligent in agreeing to the arbitration but had been
+so in agreeing to payment of the award, rather than challenging it. However, no punishment was imposed upon her. 258
+
+Section E. - Arbitrability, UKBC-REDFERN 530638612 (2025)
+© 2025 Thomson Reuters.
+9
+(vii) Corporate governance disputes
+2. 168
+In most jurisdictions, parties are free to submit corporate governance disputes to arbitration. By way of example, the German
+courts have held that disputes concerning the validity of shareholders’ resolutions are in principle arbitrable. 259  In England,
+the courts have reaffirmed that arbitral tribunals have wide powers to rule on corporate governance matters. In Fulham
+Football Club, 260  shareholder disputes were described as ‘essentially internal disputes about alleged breaches of the terms
+or understandings upon which the parties were intended to co-exist as members of the company’. 261  The Court held that
+there was no reason why an ‘unfair prejudice’ claim should be ‘inherently unsuitable’ for determination by arbitration. The
+applicable test in each case is whether:
+[ … ] the matters in dispute [ … ] engage third party rights or represent an attempt to delegate to the arbitrators
+what is a matter of public interest which cannot be determined within the limitations of a private contractual
+process. 262
+2. 169
+Similarly, the Singapore courts have affirmed that so-called ‘oppression’ claims, and claims involving allegations of
+misconduct by large financial institutions, are arbitrable. In Tomolugen, the Singapore Court of Appeal considered a claim
+brought by a shareholder under section 216 of the Companies Act 1967 alleging that the affairs of the company in which
+it held a minority interest were conducted in a manner that was oppressive or unfairly prejudicial towards it. The Court
+of Appeal distinguished the types of claims that engage public policy issues (for example, related to the liquidation of an
+insolvent company or avoidance claims arising from insolvency) from statutory oppression claims. 263
+2. 170
+In Australia, the Federal Court in WDR Delaware stayed a winding up application of a joint venture company and referred the
+underlying dispute to arbitration, despite the argument that the winding up of a company is a matter subject to government
+authority, and therefore non-arbitrable. The Court considered that the winding up dispute in fact related to breaches of
+contract and wrongful conduct in a corporate governance sense, and ruled that such matters were capable of decision by
+arbitration. In particular, the Court distinguished the case before it from cases involving insolvency, ruling that the corporate
+governance dispute was essentially between shareholders, with no substantial public interest element in the determination
+of the dispute. 264
+2. 171
+But an acceptance of the arbitrability of corporate governance disputes is not universal. In Russia, a series of decisions by the
+courts cast doubt on the arbitrability of corporate disputes under Russian law. In Maximov v Novolipetsky Metallurgicheskiy
+Kombinat, 265  both the lower courts and the Supreme Arbitrazh Court found that ‘corporate’ disputes are under the special
+jurisdiction of the arbitrazh courts pursuant to Articles 33 and 225(1) of the Arbitrazh Procedural Code, and are therefore
+non-arbitrable. 266  In 2016 and 2019, Russia enacted legislation aimed at reforming certain aspects of its arbitration law, in
+order to align it more closely with the Model Law. One notable feature of these reforms is that certain corporate disputes
+involving shareholders should now, in principle, be arbitrable, subject to meeting certain requirements. 267
+(viii) Trusts
+2. 172
+It is well established that disputes between a trust and a third party do not raise issues of arbitrability. However, in the context
+of disputes arising under a trust between a trustee and a beneficiary, questions of arbitrability may arise.
+2. 173
+
+Section E. - Arbitrability, UKBC-REDFERN 530638612 (2025)
+© 2025 Thomson Reuters.
+10
+One potential constraint on arbitrability, viewed from a common-law perspective, is that a state’s courts maintain an inherent
+supervisory jurisdiction over the administration of trusts and the conduct of trustees, both of which require close public
+scrutiny. 268  So, for example, the grant to an arbitrator of the power to remove a trustee, which is traditionally within the
+purview of the courts, could be considered an impermissible encroachment on the courts’ jurisdiction, and therefore a matter
+incapable of settlement by arbitration.
+2. 174
+Some courts have nevertheless acknowledged that there may be valid policy reasons to allow parties to resolve privately such
+disputes, and that doing so does not necessarily preclude the courts from exercising their inherent supervisory jurisdiction. In
+Australia, for example, the Court of Appeal of New South Wales concluded that there is nothing inherently contrary to public
+policy for a trustee and a beneficiary to resolve their disputes by arbitration, provided that the private settlement does not oust
+entirely the supervisory jurisdiction of the courts. 269  Thus, even if an arbitrator does not possess the same statutory powers
+as a court, such as the power to remove a trustee, an arbitrator may nevertheless grant relief in relation to a beneficiary’s
+request to remove a trustee—for example by ordering the trustee to resign, to appoint a new trustee, and to convey the trust
+property to a new person—and such an award will be enforceable.
+(ix) Public law disputes
+2. 175
+Questions of arbitrability can also sometimes arise in relation to arbitration agreements entered into by, on the one side, a
+private entity and, on the other, a state entity. The traditional concern is that, having been endowed with a public function, a
+state entity should not be shielded from public scrutiny in respect of its exercise of that function, including in relation to the
+resolution of disputes arising from contracts that the public entity has entered into with private parties.
+2. 176
+Today, such concerns are increasingly rare. By way of example, in 2015 Brazil amended its arbitration legislation so as to
+permit expressly entities of the public administration to arbitrate disputes. 270  In 2019, Brazil’s President issued Decree No.
+10.025, which provides that disputes regarding ‘property rights’ (for example, including contractual rights and obligations)
+arising from contracts entered into by the government in relation to the port, road, rail, waterway, and airport sectors, are
+arbitrable, subject to certain requirements being met. 271
+2. 177
+Other jurisdictions that were slow to recognise the general arbitrability of disputes arising under contracts with state entities
+have been changing their laws in a similar way, 272  and this modern reality is likely to continue.
+(c) Summary
+2. 178
+The significance of ‘arbitrability’ should not be exaggerated. It is important to be aware that it may be an issue, but in broad
+terms most commercial disputes are now arbitrable under the laws of most countries. 273
+Footnotes
+182
+In the United States and some other jurisdictions, there is sometimes discussion by judges and others as to whether a
+particular dispute is ‘arbitrable’, in the sense that it falls within the scope of the arbitration agreement. The concern in
+such cases is with the court’s jurisdiction over a particular dispute rather than a more general enquiry as to whether the
+
+Section E. - Arbitrability, UKBC-REDFERN 530638612 (2025)
+© 2025 Thomson Reuters.
+11
+dispute is of the type that comes within the domain of arbitration. See Zekos, ‘Courts’ intervention in commercial and
+maritime arbitration under US law’ (1997) 14 J Intl Arb 99. For a general discussion of ‘arbitrability’ in the sense of
+‘legally capable of settlement by arbitration’, see Sanders, ‘The domain of arbitration’, in Cappelletti (ed.) Encyclopedia
+of International and Comparative Law, Vol. XVI (Brill, 1987), ch. 12, pp. 113ff; see also Hanotiau, ‘The law applicable
+to arbitrability’ (1998) 9 ICCA Congress Series 146.
+183
+New York Convention, Arts II(1) and V(2)(a); Model Law, Arts 34(2)(b)(i) and 36(1)(b)(i).
+184
+See also the German Code of Civil Procedure, Art. 1030(1) and (2) which provides that any claim involving an economic
+interest (Vermögensrechtlicher Anspruch) may be the subject of arbitration, as may claims involving a non-economic
+interest of which the parties may freely dispose.
+185
+For instance, in the recognition and enforcement of the award.
+186
+See also Mexico, where disputes concerning the administrative rescission of contracts entered into by a state entity
+are within the exclusive competence of the administrative courts. For a general discussion of restrictions on the
+arbitrability of disputes involving Mexican state companies, see Wöss, ‘El orden público, derecho público, cosa juzgada
+e inarbitrabilidad en contratos públicos en México’ (2012) 14 Spain Arb Rev 111.
+187
+Other jurisdictions have grappled with consumer arbitration as well. Pursuant to the English Arbitration Act 1996, s.
+91(1) an arbitration agreement in a consumer contract is deemed unfair under the Unfair Terms in Consumer Contracts
+Regulations 1999 if it relates to a claim for a pecuniary remedy that does not exceed £5,000. An arbitration agreement
+with a consumer may also be unenforceable under English law pursuant to the Unfair Terms in Consumer Contracts
+Regulations 1999. See, e.g., Mylcrist Builders Ltd v Buck [2008] EWHC 2172 (TCC), in which the English High Court
+held that an arbitration clause in a building contract was unenforceable on the basis that it caused a significant imbalance
+between the parties by denying the consumer access to the courts.
+188
+See Paulsson, The Idea of Arbitration (Oxford University Press, 2013), in particular ch. 1 on ‘The impulse to arbitrate’.
+189
+See Mitsubishi Motors Corporation v Soler Chrysler Plymouth Inc., 473 US 614, 105 S.Ct. 3346 (1985), discussed
+at paragraphs 2.137–2.138. However, the opposite is often argued in the context of less-developed countries. In that
+situation, it is suggested that the state should impose very strict limits on arbitrability, especially in respect of disputes
+involving state entities. The reason for such a policy is that this is the only way in which these states can retain
+control over foreign trade and investment where more economically powerful traders may have an unfair advantage.
+See Sornarajah, ‘The UNCITRAL Model Law: A third world viewpoint’ (1989) 6 J Intl Arb 7, at 16.
+190
+The concept of so-called international public policy, which may impose limits on the arbitrability of certain agreements
+such as an agreement to pay bribes (see paragraphs 2.149–2.153) is considered in Chapter 11, in the context of
+challenging the recognition and enforcement of arbitral awards.
+191
+In China, by way of example, the validity of patents and trademarks is a matter determined exclusively by administrative
+state organs and courts: see the People’s Republic of China Patent Act, Art. 45; the People’s Republic of China Trade
+Mark Act, Arts 41 and 42. See also, in respect of the EU, EC Regulation 44/2001, Art. 22(4); EC Regulation 1215/2012,
+Art. 24(4).
+192
+United States Code, Title 35: Patents, Section 294: Voluntary Arbitration (35 U.S.C. § 294); Hong Kong Arbitration
+(Amendment) Ordinance 2017. See also, e.g., the Swiss Federal Office for Industrial Property Ruling of 15 December
+1975, which stated that the Federal Office will execute awards dealing with intellectual property validity issues. See
+also AJA Registrars Limited, Holding Socotec SAS v AJA Europe Limited [2020] EWHC 883 (Ch), in which the High
+Court considered that an intellectual property claim could be referred to arbitration even if certain relief sought could
+only be granted by the Court or the UK Intellectual Property Office, on the basis that the arbitrator could direct the party
+to make the necessary application as part of the award, and the court would lend its assistance, if necessary. The Paris
+Court of Appeal has similarly ruled that an arbitral tribunal may rule on the existence of an intellectual property right,
+provided that this issue is incidental to the dispute and the tribunal’s determination will have effect only as between the
+parties: see Liv Hidravlika v Diebolt, Paris cour d’appel, 28 February 2008, Case No. 05-10577.
+193
+See generally Lew, Intellectual Property Disputes and Arbitration: Final Report of the Commission on International
+Arbitration (ICC, 1997), esp. pp. 7–15; De Werra ‘Arbitrating international intellectual property disputes: Time to think
+beyond the issue of (non-)arbitrability’ (2012) 3 International Business Law Journal 299. For a comparative overview
+of states’ approaches to intellectual property-related arbitration, see Hanotiau, ‘L’arbitrabilité des litiges de propriété
+intellectuelle’, in de Werra and Pauwelyn (eds) La Resolution de Litiges de Propriété Intellectuelle (Schulthess, 2010).
+194
+In Desputeaux v Éditions Chouette (1987) Inc. [2003] 1 SCR 178, the Supreme Court of Canada confirmed that disputes
+over copyright ownership are arbitrable. The Court stated that although a creative work is a manifestation of the
+personality of the author, ‘this issue is very far removed from questions relating to the status and capacity of persons
+and to family matters’: ibid., at 181.
+195
+Smith, The Wealth of Nations (Methuen, 1776), Bk 1, ch. 10, pt. 2.
+196
+Article 101 TFEU.
+
+Section E. - Arbitrability, UKBC-REDFERN 530638612 (2025)
+© 2025 Thomson Reuters.
+12
+197
+Article 102 TFEU.
+198
+Agreements that offend against Art. 101 are void under Art. 101(2), unless an exemption is granted under Art. 101(3).
+Until 1 May 2004, the power to grant exemptions fell to the European Commission alone. Since then, pursuant to Council
+Regulation (EC) No. 1/2003 of 16 December 2002 on the implementation of the rules on competition laid down in Arts
+81 and 82 of the Treaty, OJ L 1/4, 4 January 2003, the power has been extended to national courts and competition
+authorities. Although the Regulation does not mention arbitral tribunals specifically, it changed the landscape of EU
+competition law and opened the door to arbitration as an arena for the private enforcement of EU competition rules. In
+this regard, see Dempegiotis, ‘EC competition law and international arbitration in the light of EC Regulation 1/2003:
+Conceptual conflicts, common ground and corresponding legal issues’ (2008) 25 J Intl Arb 365.
+199
+Under this doctrine, the arbitration clause in a contract is regarded as separate from, and independent of, the contract
+of which it forms part: see paragraph 2.107.
+200
+See the decision of the Paris Court of Appeal of 19 May 1993, [1993] Rev Arb 645, n. Jarrosson.
+201
+See the decision of the cour de cassation of 5 January 1999.
+202
+Decision of the Tribunal Fédéral, 28 April 1992, [1992] ASA Bulletin 368. The same court reaffirmed this position in
+its decision of 13 November 1998, [1999] ASA Bulletin 529 and 455. The English courts have also held that ‘there is
+no realistic doubt that such “competition” and “antitrust” claims are arbitrable’: see ET Plus SA v Jean Paul Welter &
+The Channel Tunnel Group [2005] EWHC 2115 (Comm). However, merger control and state aid issues are within the
+exclusive competence of the European Commission and parties cannot agree to settle such issues by arbitration: see
+Blanke, ‘The application of EU law to arbitration in England’, in Lew, Bor, Fullelove, and Greenaway (eds) Arbitration
+in England, with Chapters on Scotland and Ireland (Kluwer Law International, 2013), p. 249.
+203
+Mitsubishi Motors Corporation v Soler Chrysler Plymouth Inc., 473 US 614, 105 S.Ct. 3346 (1985). And see generally
+Institute of International Business Law and Practice, Competition and Arbitration (ICC, 1993).
+204
+American Safety Equipment Corporation v JP Maguire Co., 391 F.2d 821 (2d Cir. 1968).
+205
+Ibid., at 826.
+206
+Mitsubishi Motors, at 629.
+207
+Mitsubishi Motors, at 628. However, see Baxter International v Abbott Laboratories, 315 F.3d 163 (2d Cir. 2004), in
+which the US Court’s ‘second look’ was very limited in scope. In that case, the US Supreme Court limited its review to
+ensuring only that ‘the tribunal took cognizance of antitrust claims and actually decided them’.
+208
+Eco Swiss China Time Ltd v Benetton International NV, Case C-126/97 [1999] ECR I–3079, (1999) XXIV YBCA 629.
+209
+Ibid., at [41]. The decision arose from a preliminary reference made to the ECJ under Art. 234 TEU (ex Art. 177 EC)
+by the Supreme Court of the Netherlands.
+210
+See Pinsolle, ‘Note on Cass. Civ. 1ere, 6 July 2005’ (2005) 4 Rev Arb 8; Dempegiotis, ‘EC competition law and
+international arbitration in the light of EC Regulation 1/2003: Conceptual conflicts, common ground and corresponding
+legal issues’ (2008) 25 J Intl Arb 365, at 380–386. The Organisation for Economic Co-operation and Development
+(OECD) has also adopted this view: see OECD, Hearing Report on Arbitration and Competition (13 December 2011),
+p. 12.
+211
+Thalès Air Défence v Euromissile, Case No. 2002/60932, 18 November 2004. This so-called minimalist approach has also
+been adopted by courts in Switzerland, in Tensacciai SpA v Freyssinet Terra Armata Srl, Case No. 4P_278/2005, Swiss
+Federal Tribunal, 8 March 2006; in New Zealand, in Attorney-General v Mobil Oil NZ Ltd, High Court, Wellington, 1
+July 1987; in the United States, in American Central Eastern Texas Gas Co. v Union Pacific Resources Group, 2004
+US App LEXIS 1216; and in Sweden, in Republic of Latvia v Latvijas Gaze, Svea Court of Appeal, 4 May 2005.
+212
+In the Genentech case, the Advocate General of the CJEU observed that the minimalist approach was ‘contrary to the
+principle of effectiveness of EU law’: Genentech Inc v Hoechst GmbH, Case C-567/14, Opinion of Advocate General
+Wathelet, 17 March 2016. See also, e.g., Marketing Displays International Inc v VR Van Raalte Reclame BV, Court
+of Appeal, The Hague, Netherlands, 24 March 2005, XXXI Y.B. COM. ARB. 808 (2006); Blanke, ‘The minimalist and
+maximalist approach to reviewing competition law awards: A neverending saga’ (2007) 2 SIAR 51.
+213
+Wilko v Swan 346 US 427 (1953). See generally McCormack, ‘Recent US legal decisions on arbitration law’(1994)
+11 J Intl Arb 73.
+214
+Scherk v Alberto-Culver, 417 US 506 (1974).
+215
+Ibid., at 516–517.
+216
+See, e.g., Shearson v McMahon, 482 US 220, 107 S.Ct. 2332 (1987); Lipcon v Underwriters at Lloyd’s, 148 F.3d 1285
+(11th Cir. 1998). See also McCormack, ‘Recent US legal decisions on arbitration law’ (1994) 11 J Intl Arb 73; Ebenroth
+and Dillon, ‘Arbitration clauses in international finance agreements’ (1993) 10 J Intl Arb 5. In recent years, there has
+been a significant increase in the use of arbitration as a means of resolving disputes in this sector. In September 2013,
+
+Section E. - Arbitrability, UKBC-REDFERN 530638612 (2025)
+© 2025 Thomson Reuters.
+13
+the International Swaps and Derivatives Association, Inc. (ISDA) released its Arbitration Guide, which offers guidance
+on the use of arbitration clauses in the ISDA Master Agreement.
+217
+German Securities Trading Act (WpHG), s. 37h.
+218
+See generally Lazic, Insolvency Proceedings and Commercial Arbitration (Wolters Kluwer, 1998), esp. pp. 154–177.
+219
+See ibid., at pp. 154–157, and see also p. 155. See also Mantilla-Serrano, ‘International arbitration and insolvency
+proceedings’ (1995) 11 Arb Intl 69; Levy, ‘Insolvency in arbitration (Swiss Law)’ (2005) 23 Intl Arb L Rev 28.
+220
+See, e.g., Zimmerman v Continental Airlines, Inc., 712 F.2d 55 (3d Cir. 1983). For a discussion of the development of the
+relationship between arbitration and insolvency in the United States, see Lazic, Insolvency Proceedings and Commercial
+Arbitration (Wolters Kluwer, 1998), pp. 165–175.
+221
+In Sonatrach (Algeria) v Distrigas Corp (US District Court) Massachusetts (1995) XX YBCA 795 the Bankruptcy Court
+of Massachusetts held that the claim of damages before it did not implicate any major bankruptcy issue and therefore the
+dispute was arbitrable. However, in United States Lines, Inc. et al. (US) v American Steamship Owners Mutual Protection
+and Indemnity Association, Inc. et al. (US) (2000) XXV YBCA 1057, 1065 (2d Cir., 1 November 1999), the Court of
+Appeal for the Second Circuit denied the arbitrability of the dispute, which it stated was ‘integral to the bankruptcy
+court’s ability to preserve and equitably distribute the Trust’s assets’. See also Larsen Oil and Gas Pte Ltd v Petroprod
+Ltd [2010] 4 SLR 501, 501, in which the Singapore High Court stated, in relation to claims of unfair preference and
+transactions at an undervalue, ‘the policy underlying the avoidance provisions [ … ] would be compromised if their
+enforcement is [sic] subject to private arrangements’.
+222
+With the exception of Denmark, which opted out of the Regulation.
+223
+Its predecessor, EC Council Regulation 1346/2000, continues to apply to insolvencies that commenced before 26 June
+2017.
+224
+Articles 7 and 18 of the Regulation.
+225
+See the Swiss Federal Tribunal Decision No. 4A_50/2012 of 16 October 2012, in which the Tribunal revisited its
+decision in Vivendi v Elektrim, Decision No. 4A_428_2008, 31 March 2009, and held that as long as the insolvent entity
+had legal personality according to the law of the place of incorporation, it was capable of being a party to foreign
+arbitral proceedings. See also generally Levy, ‘Insolvency in arbitration (Swiss Law)’ (2005) 8 Intl Arb L Rev 23. For a
+more general discussion on insolvency in international arbitration from a Swiss law perspective, see Kohler and Levy,
+‘Insolvency and international arbitration’, in Peter and Jeandin (eds) The Challenges of Insolvency Law Reform in the
+21st Century (Schulthess, 2006), pp. 257–284.
+226
+Lazic, Insolvency Proceedings and Commercial Arbitration (Wolters Kluwer, 1998), pp. 163–164.
+227
+See also H. Raeschke-Kessler, The Arbitrator Nominated by an Insolvency Receiver or Liquidator and Conflicts of
+Interest, 34 ASA Bulletin 4/2016 (December), pp. 867–870.
+228
+Argentina’s Bankruptcy Law, Art. 134. See also Bear Service SA v Cervecería Modelo SA de CV, Argentine Federal
+Supreme Court, 5 April 2005.
+229
+See Jutaí 661 Equipamentos Eletrônicos Ltda v PSI Comércio e Prestação de Serviços em Telefones Celulares Ltda,
+Superior Court of Justice, 12 March 2013.
+230
+See KwikasairCargasExpressas SA—Bankrupt Estate v AIG Venture Holdings Ltd, Special Appeal No. 1.355.831,
+Superior Court of Justice, 19 March 2013.
+231
+See Arbitration Act 1996, s. 107 and Sch. 3; Insolvency Act 1986, s. 349A. For a discussion of issues of insolvency and
+arbitration in English law, see Burn and Grubb, ‘Insolvency and arbitration in English law’ (2005) 8 Intl Arb L Rev 124.
+232
+ILA Committee on International Commercial Arbitration, Final Report on Public Policy as a Bar to Enforcement of
+International Arbitral Awards (ILA, 2002). More generally on this topic, see Sayed, Corruption in International Trade
+and Commercial Arbitration (Kluwer Law International, 2004).
+233
+Wetter, ‘Issues of corruption before international tribunals: The authentic text and true meaning of Judge Gunnar
+Lagergren’s 1963 Award in ICC Case No. 1110’ (1994) 10 Arb Intl 277.
+234
+Ibid. Early commentators on this award criticised this approach as failing to give effect to the principle of the autonomy
+of the arbitration clause. However, as Wetter’s publication of the award thirty years later revealed, there was no such
+contractual arbitration clause. The dispute had been the subject of a manifestly autonomous submission agreement. Judge
+Lagergren’s decision was founded simply on the grounds of non-arbitrability. For further discussion on this decision,
+see Sayed, Corruption in International Trade and Commercial Arbitration (Kluwer Law International, 2004), pp. 59–65.
+235
+See paragraphs 2.89ff.
+236
+See Kreindler, ‘Aspects of illegality in the formation and performance of contracts’, Presented at the 16th ICCA
+Congress, London, May 2002. For a more recent review by the same author, see Kreindler, ‘Public policy and
+corruption in international arbitration: A perspective for Russian related disputes’ (2006) 72 Arbitration 236. See
+also Kosheri and Leboulanger, ‘L’arbitrage face à la corruption et aux trafics d’influence’ [1984] Rev Arb 3; Lalive,
+‘Ordre public transnational et arbitrage international’ [1986] Rev Arb 329; Oppetit, ‘Le paradoxe de la corruption à
+
+Section E. - Arbitrability, UKBC-REDFERN 530638612 (2025)
+© 2025 Thomson Reuters.
+14
+l’épreuve du droit de commerce international’ (1987) 114 J du Droit Intl 5, at 5–21. See also Knoepfler, ‘Corruption et
+arbitrage international’, in Cherpilled (ed.) Les Contrats de distribution: Contributions offertesau Professor Dessemontet
+(CEDIDAC, 1998), p. 371; Derains, Les Commissions Illicites (ICC, 1992), pp. 65–68.
+237
+For example, see Fiona Trust & Holding Corporation v Yuri Privalov [2007] EWCA Civ 20, in which the English courts
+confirmed that a claim that a disputed contract was induced by bribery should be decided by the arbitrator, not the courts,
+unless the allegation of illegality relates to the arbitration clause itself. See also Snodgrass, ‘Fiona Trust v Privalov:
+The Arbitration Act 1996 Comes of Age’ [2007] Intl Arb L Rev 27. For a contrary view, see Hub Power Co. v Pakistan
+WAPDA, Supreme Court of Pakistan, 14 June 2000, in which the Court held that allegations of corruption were not
+arbitrable, notwithstanding that the allegations did not impeach the arbitration agreement.
+238
+Decision of the Tribunal Fédéral, National Power Corporation (Philippines) v Westinghouse (USA), ATF 119 II 380,
+2 September 1993.
+239
+For an overview of how arbitral tribunals have dealt with allegations of corruption, see ICC, ‘Tackling corruption in
+arbitration’ (2013) 24 ICC International Court of Arbitration Bulletin, Supplement. The supplement contains extracts
+from awards rendered between 2001 and 2009 in ICC cases that involved corruption issues, along with a series of articles
+on the subject.
+240
+Himpurna California Energy Ltd v PT (Persero) Perusahaan Listruik Negara, Final Award dated 4 May 1999, extracts
+of which are published in (2000) XXV YBCA 13. See also Partasides, ‘Proving corruption in international arbitration:
+A balanced standard for the real world’ (2010) 25 ICSID Rev 47.
+241
+Gaillard, ‘The emergence of transnational responses to corruption in international arbitration’ (2019) 35 Arb Intl 1–19.
+242
+See, e.g., World Duty Free Co. Ltd. v Republic of Kenya, ICSID Case No. ARB/00/7, Award, 4 October 2006, at [164],
+[183].
+243
+Gaillard, ‘The emergence of transnational responses to corruption in international arbitration’ (2019) 35 Arb Intl 1–
+19. See, however, the 2010 UNIDROIT Principles, Art. 3.3.2 which provides that the parties to a partially performed
+contract that infringes a ‘mandatory rule’ may recover what they have rendered in performing the contract ‘where this
+would be reasonable in the circumstances’. The Official Commentary to the UNIDROIT Principles makes clear that
+Art. 3.3.2 was drafted with instances of corruption in mind. See also Patel v Mirza [2016] UKSC 42.
+244
+For a notable example of an award in which an international arbitral tribunal discusses the consequences of a finding
+of bribery, see World Duty Free v Republic of Kenya, Award, ICSID Case No. ARB/00/07, IIC 277 (2006), signed 25
+September 2006, dispatched 4 October 2006. In that case, the bribery was clearly established and the tribunal held that,
+as a matter of international public policy, the claims under a contract that had been procured by the payment of a cash
+bribe to the head of state, President Daniel arap Moi, should be dismissed immediately and in their entirety: see Anon,
+‘ICSID arbitrators: $2m payment to President Moi was a bribe’ (2006) 21 Mealey’s Intl Arb Rep 4.
+245
+See Kreindler, ‘Aspects of illegality in the formation and performance of contracts’, Presented at the 16th ICCA
+Congress, London, May 2002, at fn. 75.
+246
+See, e.g., ICC Rules, Art. 42; LCIA Rules, Art. 32.2.
+247
+See Kreindler, ‘Public policy and corruption in international arbitration: A perspective for Russian related
+disputes’ (2006) 72 Arbitration 236, esp. at 242–245. See also Sayed, Corruption in International Trade and Commercial
+Arbitration (Kluwer Law International, 2004), pp. 33–36, for discussion on an arbitrator’s initiative in raising the non-
+arbitrability of public procurement-related matters in relation to suspected bribery.
+248
+Swiss Federal Tribunal, 3 November 2016, No. 4A 136/2016.
+249
+Alstom Transport v Alexander Brothers, cour d’appel, 28 May 2019.
+250
+Alexander Brothers v Alstom Transport [2020] EWHC 1584 (Comm).
+251
+Ibid, at [135].
+252
+In Ayyasamy v Paramasivam (2016) 10 SCC 386, the Supreme Court of India ruled that a mere allegation of fraud
+simpliciter is insufficient to find a dispute non-arbitrable; such disputes are non-arbitrable only if they relate to ‘very
+serious allegations of fraud’, such as criminal offences, complex fraud, forgery or fabrication of documents, fraud
+relating to the arbitration agreement itself, or allegations of fraud that permeate the entire contract (at [20]). See also the
+decision of the Nigerian Court of Appeal in BJ Export & Chemical Processing Co. v Kaduna Refining and Petrochemical
+Co., 31 October 2002, (2003) 24 WRN 74.
+253
+Fougerolle v Procoface, Cass. Civ. 1ere, 25 May 1992.
+254
+For a fuller account of this case, see de Boissésson, ‘L’arbitrage et la fraude’ [1993] Rev Arb 3. In the same article,
+de Boisséson also reviews the unpublished Beltronic case, which came before a French court of appeal. This was a
+somewhat unusual case, in that the arbitral process itself was fraudulent. A fake arbitration centre was set up, with the
+arbitrator and the fake centre sharing the damages awarded by the arbitrator against the unfortunate Canadian defendant!
+
+Section E. - Arbitrability, UKBC-REDFERN 530638612 (2025)
+© 2025 Thomson Reuters.
+15
+255
+Following the judgment of the French cour de cassation annulling the arbitral tribunal’s award in Tapie’s favour, an
+article in the Global Arbitration Review referred to ‘L’affaire Tapie’, which it said ‘has scandalised the French population
+and threatened the reputation of the Paris arbitration bar because of the allegations of fraud and case-rigging’: see ‘Tapie:
+the end of the affair?’ Global Arbitration Review, 20 May 2017.
+256
+For a more detailed account of the background to the case, and of the decision of the French cour de cassation,
+see Cameron Diver, ‘The Adidas arbitration: A cautionary tale on independence and impartiality in the arbitral
+process’ (2016) 5 Intl Arb L Rev 9.
+257
+Usually, an award for moral damages under French law would be for a fairly nominal amount.
+258
+The Court of Justice of the French Republic is a special court established to try Ministers and former Ministers accused
+of dereliction of duty in public office. For a fuller account of the charges against Lagarde, see Redfern, ‘The importance
+of being independent: Laws of arbitration, rules, guidelines—and a disastrous award’ (2017) 6(1) Indian Journal of
+Arbitration Law.
+259
+Case No. II ZR 255/08 of 6 April 2009, in which the German Federal Court of Justice held that disputes over the validity
+of shareholders’ resolutions in German limited liability companies are arbitrable, provided that the arbitration agreement
+complies with the criteria set out in the judgment. However, see Groenselect Management NV v Van der Boogaard,
+Dutch Supreme Court, NJ 2007, 561, 10 November 2006, in which the Dutch courts held that a dispute concerning the
+validity of a shareholders’ meeting or resolutions is not arbitrable.
+260
+Fulham Football Club (1987) Ltd v Sir David Richards [2011] EWCA Civ 855.
+261
+Ibid., at [58].
+262
+Ibid., at [107]. For further discussion of this case, see Lew and Marsden, ‘Arbitrability’, in Lew, Bor, Fullelove, and
+Greenaway (eds) Arbitration in England, with Chapters on Scotland and Ireland (Kluwer Law International, 2013), p.
+410.
+263
+Tomolugen Holdings Ltd and another v Silica Investors Ltd and other appeals [2015] SGCA 57. See also TMT Co Ltd v
+The Royal Bank of Scotland plc (trading as RBS Greenwich Futures) and ors [2017] SGHC 21, in which the Singapore
+High Court held that ‘[t]he mere allegation of abuse or conduct involving a financial institution, even a large one, cannot
+be grounds to deny arbitration if that is what the parties agreed’.
+264
+WDR Delaware Corporation v Hydrox Holdings Pty Ltd [2016] FCA 1164, at [161]–[163].
+265
+Maximov v Novolipetsky Metallurgicheskiy Kombinat Ruling of the Supreme Arbitrazh Court, VAS-15384/11, 30 January
+2012.
+266
+The Constitutional Court rejected Mr Maximov’s challenge to Art. 33 on the basis that it was unconstitutional later that
+year. The Court stated that the legislature had the right to establish specific procedures for hearing certain categories
+of disputes, although it did not address the arbitrability of corporate governance disputes as such: see Ruling of the
+Constitutional Court No. 1488-O, 17 July 2012.
+267
+Other requirements include that the arbitration agreement was concluded after 1 February 2017, and that the arbitration
+is seated in Russia and administered by a ‘registered’ arbitral institution. Some have suggested that the legislative
+amendments introduced additional, more burdensome requirements for foreign arbitral institutions seeking to be
+registered (e.g. if a foreign arbitration institution wishes to administer a wide range of corporate disputes, including,
+e.g., disputes relating to the creation of Russian legal entities or disputes brought by shareholders to recover damages
+caused to a legal entity, it must deposit special rules for the arbitration of corporate disputes at the time of its registration
+application). At the time of the 2019 legislative enactment, four institutions were ‘registered’ (each of which is Russian).
+HKIAC has since also registered.
+268
+Rinehart v Welker [2012] NSWCA 95, at [173].
+269
+Rinehart v Welker [2012] NSWCA 95, at [177]. See also Fitzpatrick v Emerald Grain Pty Ltd [2017] WASC 206.
+270
+Law no. 13.129/15 (amending the Brazilian Arbitration Act, Art. 1).
+271
+Such arbitrations must apply Brazilian law, be public, be seated in Brazil, and in general should be institutional (with
+such institutions to be approved by the Federal Attorney’s office).
+272
+For example, the Dominican Republic and Mexico.
+273
+See Kirry, ‘Arbitrability: Current trends in Europe’ (1996) 12 Arb Intl 373; van den Berg, ‘Arbitrability’ (1996) XXI
+YBCA 450.
+End of Document
+© NIGEL BLACKABY KC, CONSTANTINE PARTASIDES
+KC, ALAN REDFERN

@@ -1,0 +1,76 @@
+General Note, UKBC-BULLENL 459371077 (2022)
+© 2025 Thomson Reuters.
+1
+General Note
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part E - Banking and Financial Services
+Chapter 12 - Financial Services
+General Note
+12-01
+This title covers proceedings under the Financial Services and Markets Act 2000 as amended (FSMA), the legislation which
+governs the regulation of financial services. Detailed treatment of this legislation is outside the scope of this work (see Kirk &
+Kingham, Encyclopedia of Financial Services Law). 1  FSMA received Royal Assent on 14 June 2000 and for the most part,
+was brought into force on 1 December 2000. There have since been substantial additions and amendments.
+FSMA set up a single regulatory system for financial sectors and activities (including banking, insurance and investment
+business), under the supervision of a single regulator—the Financial Services Authority (FSA). The FSA replaced sector
+regulators including the Securities and Investments Board, the Supervision and Surveillance Division of the Bank of England
+and the Insurance Directorate of the Treasury.
+The financial crisis of 2007–2008, involving the collapse of major banking and ancillary financial services companies,
+together with the associated global recession, led to a major reform of the financial regulatory system in the UK. The reform
+included the abolition of the FSA and its replacement with two regulators—the Financial Conduct Authority (FCA) and the
+Prudential Regulation Authority (PRA). This had the effect of separating the conduct (FCA) and prudential (PRA) regulation of
+systemically important financial institutions. These changes were brought about by the Financial Services Act 2012 (the 2012
+Act), which made substantial amendments to FSMA. In particular, ss.1 to 18 of FSMA were replaced with new ss.1A to 3S. The
+2012 Act came into force on 24 January 2013 (but with limited effect in respect of the replacement of ss.1 to 18 of FSMA) and
+on 19 February 2013 for the purpose of making appointments to new or existing bodies. 2  Sections 17 and 18 came into force
+for the purpose of making rules on 19 March 2013. 3  Generally the balance of the 2012 Act came into force on 1 April 2013. 4
+The scheme of the 2012 Act is to define the objectives and functions of the FCA (which was created by renaming the FSA), 5
+and to allot certain objectives and functions to the PRA by the deletion of Pt I of FSMA and the insertion of a new Pt 1A. The
+PRA was established as a subsidiary of the Bank of England but has since (from 1 March 2017) been absorbed into the Bank
+of England. 6  The PRA is responsible for the prudential regulation and supervision of banks, building societies, credit unions,
+insurers and major investment firms. Those functions which are allotted to the PRA are generally not relevant to this title.
+12-02
+The FCA is responsible for the conduct regulation of all financial services firms and the prudential regulation of those firms
+not regulated by the PRA (including all other investment firms, insurance brokers and financial advisors). The FCA has the
+“strategic objective” of “ensuring that the relevant markets function well” (FSMA s.1B(2)). The “relevant markets” are defined
+in s.1F and include the financial markets and the markets for regulated financial services. 7  In addition to its strategic objective,
+the FCA has the “operational objectives” of securing an appropriate degree of protection for consumers (FSMA s.1C), protecting
+and enhancing the integrity of the UK financial system (FSMA s.1D) and promoting effective competition in the interests of
+consumers in the markets for regulated financial services or certain services provided by recognised investment exchanges
+(FSMA s.1E). The FCA’s “general functions” 8  include making rules, issuing codes and giving general guidance under FSMA. 9
+The FCA’s rules and guidance are contained in its Handbook of Rules and Guidance (the FCA Handbook).
+As regards the carrying on of financial services business in the UK, the primary enactment in FSMA is contained in s.19. It
+provides that “no person may carry on a regulated activity in the United Kingdom, or purport to do so, unless he is (a) an
+authorised person; or (b) an exempt person”. This is called “the general prohibition”. It came into force on 1 December 2001 10
+
+General Note, UKBC-BULLENL 459371077 (2022)
+© 2025 Thomson Reuters.
+2
+and has remained unchanged. FSMA contains high level provisions which define “regulated activity”, “authorised person”
+and “exempt person”. However, these are supplemented by detailed provisions contained in statutory instruments made by the
+Treasury.
+Footnotes
+1
+Kirk & Kingham, Encyclopedia of Financial Services Law (London: Sweet & Maxwell).
+2
+Financial Services Act 2012 (Commencement No.1) Order 2013 (SI 2013/113).
+3
+Financial Services Act 2012 (Commencement No. 3) Order 2013 (SI 2013/651).
+4
+Financial Services Act 2012 (Commencement No. 2) Order 2013(SI 2013/423.
+5
+FSMA s.1A(1).
+6
+As a result of changes introduced by the Bank of England and Financial Services Act 2016 s.12.
+7
+Which is itself defined in FSMA s.1H.
+8
+FSMA s.1B(6).
+9
+The PRA similarly has “general functions” which include making rules and issuing codes.
+10
+Financial Services and Markets Act 2000 (Commencement No.7) Order 2001 (SI 2001/3538).
+End of Document
+© 2025 SWEET & MAXWELL

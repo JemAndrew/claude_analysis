@@ -1,0 +1,85 @@
+Procedure, UKBC-BULLENL 459371687 (2022)
+© 2025 Thomson Reuters.
+1
+Procedure
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part F - Business Law
+Chapter 20 - Credit, Finance and Leasing
+Procedure
+20-35
+Procedure was always tricky before the Civil Procedure Rules came into force. When the CPR first took effect, the procedure
+for credit and leasing cases was a hopeless mess, with contradictory provisions between the various parts of the CPR itself
+and the preservation of a whole set of provisions from the old County Court Rules which were inconsistent with any of the
+provisions in the CPR. Though the problems have now been sorted out, the procedure still remains difficult and complex.
+Some CCA claims have a special procedure “the Consumer Credit Act Procedure” with its own practice direction. This “is
+found in PD7B” the main practice direction being 7A.
+Which court?
+20-36
+Jurisdiction primarily depends on whether the agreement sued upon is regulated by the CCA:
+ 
+1.If the agreement is unregulated, the action can be started in either the High Court or the county court, in accordance with
+the rules governing other actions (CPR Pt 7 PD7A.2).
+ 
+2.An action by a creditor or owner to enforce a regulated agreement or any security relating to it or to enforce any “linked
+transaction” must be brought in the County Court: s.141(1).
+ 
+3.Although this is not spelt out in terms, cases to which the “Consumer Credit Act Procedure” apply (see para.20-40)
+should be brought in the county court.
+ 
+4.A claim to recover goods subject to a regulated hire-purchase or conditional sale agreement may only be started in the
+county court for the district in which the debtor (or one of the debtors) resides or carries on business (or did when the last
+payment was made): CPR Pt 7 PD7B.4.1.
+ 
+5.Other claims to recover goods must be started in the court for the district where the defendant (or one of the defendants)
+resides or carries on business or where the goods are situated: CPR Pt 7 PD7B.4.2.
+ 
+6.An application by a debtor or hirer for a time order under CCA s.129(1)(b) or 129(1)(ba) must be brought in the court
+for the district where the claimant resides or carries on business: CPR, Pt 7 PD7B.4.3.
+General
+20-37
+
+Procedure, UKBC-BULLENL 459371687 (2022)
+© 2025 Thomson Reuters.
+2
+As set out above, procedure, though improved greatly from the initial provisions of the CPR, is still hugely and unnecessarily
+complicated and it is vital to get it right. In common with the general scheme of the CPR that litigation is, as far as possible, to
+be crammed into the strait-jacket of inflexible forms, where the rules and practice directions require a pleading in the category
+of credit or hire to contain specified information, that information has to be included (whether relevant or irrelevant) and also
+(this is very important) included in the correct order. Pleadings which do not comply risk being rejected, particularly by county
+court staff under the eye of a martinet district judge.
+Pre-action protocol
+20-38
+Actions must now be preceded by a pre-action protocol, Protocol XIII (see paras 19-09).
+10 categories of case
+20-39
+10 categories of case may be discerned:
+ 
+1.Claims by creditors or owners for delivery of goods supplied under unregulated hire-purchase and conditional sale
+agreements where the debtor or hirer is not a corporation.
+ 
+2.Other claims by creditors or owners under unregulated hire-purchase and conditional sale agreements irrespective of the
+status of the debtor or hirer.
+ 
+3.Claims by creditors or owners for delivery of goods supplied under regulated hire-purchase and conditional sale
+agreements.
+ 
+4.Other claims by creditors or owners under regulated hire-purchase and conditional sale agreements.
+ 
+5.Claims by debtors or hirers for time orders under s.129.
+ 
+6.Claims by creditors or owners for enforcement orders.
+ 
+7.Re-opening extortionate credit bargains or agreements where there has been an “unfair relationship”.
+ 
+8.Sureties, assignees and personal representatives.
+ 
+9.Other cases governed by the “Consumer Credit Act Procedure”.
+ 
+10.Other credit and hire cases including cases brought on the statutory cause of action created by FSMA s.150 (now
+s.138D).
+Mortgages where the debt secured arises under a regulated agreement would constitute an eleventh (or possibly an eleventh and
+a twelfth) category but they are dealt with elsewhere in this work.
+End of Document
+© 2025 SWEET & MAXWELL

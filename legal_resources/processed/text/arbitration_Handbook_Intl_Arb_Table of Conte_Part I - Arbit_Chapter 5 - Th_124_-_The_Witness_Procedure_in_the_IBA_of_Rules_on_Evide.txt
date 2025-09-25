@@ -1,0 +1,192 @@
+The Witness Procedure in the IBA of Rules on Evidence, UKBC-ICCARBN 474407006...
+© 2025 Thomson Reuters.
+1
+The Witness Procedure in the IBA of Rules on Evidence
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+The Witness Procedure in the IBA of Rules on Evidence
+26-31
+The IBA Rules on Evidence set out a procedure for taking evidence at hearings. 421  Although not usually adopted by Tribunals
+as such, art.8 of the IBA Rules on Evidence helps in identifying the issues and potential solutions. It provides as follows:
+ 
+“1.Within the time ordered by the Arbitral Tribunal, each Party shall inform the Arbitral Tribunal and the other
+Parties of the witnesses whose appearance it requests. Each witness (which term includes, for the purposes
+of this Article, witnesses of fact and any experts) shall, subject to Article 8.3, appear for testimony at the
+Evidentiary Hearing if such person’s appearance has been requested by any Party or by the Arbitral Tribunal.
+ 
+2.At the request of a Party or on its own motion, the Arbitral Tribunal may, after consultation with the Parties,
+order that the Evidentiary Hearing be conducted as a Remote Hearing. In that event, the Arbitral Tribunal
+shall consult with the Parties with a view to establishing a Remote Hearing protocol to conduct the Remote
+Hearing efficiently, fairly and, to the extent possible, without unintended interruptions. The protocol may
+address:
+ 
+(a)the technology to be used;
+ 
+(b)advance testing of the technology or training in use of the technology;
+ 
+(c)the starting and ending times considering, in particular, the time zones in which participants will be
+located;
+ 
+(d)how Documents may be placed before a witness or the Arbitral Tribunal; and
+ 
+(e)measures to ensure that witnesses giving oral testimony are not improperly influenced or distracted.
+ 
+3.The Arbitral Tribunal shall at all times have complete control over the Evidentiary Hearing. The Arbitral
+Tribunal may limit or exclude any question to, answer by or appearance of a witness, if it considers
+such question, answer or appearance to be irrelevant, immaterial, unreasonably burdensome, duplicative or
+otherwise covered by a reason for objection set forth in Articles 9.2 or 9.3. Questions to a witness during
+direct and re-direct testimony may not be unreasonably leading.
+ 
+4.With respect to oral testimony at an Evidentiary Hearing:
+ 
+(a)the Claimant shall ordinarily first present the testimony of its witnesses, followed by the Respondent
+presenting the testimony of its witnesses;
+ 
+(b)following direct testimony, any other Party may question such witness, in an order to be determined
+by the Arbitral Tribunal. The Party who initially presented the witness shall subsequently have the
+opportunity to ask additional questions on the matters raised in the other Parties’ questioning;
+ 
+(c)thereafter, the Claimant shall ordinarily first present the testimony of its Party-Appointed Experts,
+followed by the Respondent presenting the testimony of its Party-Appointed Experts. The Party who
+
+The Witness Procedure in the IBA of Rules on Evidence, UKBC-ICCARBN 474407006...
+© 2025 Thomson Reuters.
+2
+initially presented the Party- Appointed Expert shall subsequently have the opportunity to ask additional
+questions on the matters raised in the other Parties’ questioning;
+ 
+(d)the Arbitral Tribunal may question a Tribunal-Appointed Expert, and he or she may be questioned by
+the Parties or by any Party-Appointed Expert, on issues raised in the Tribunal-Appointed Expert Report,
+in the Parties’ submissions or in the Expert Reports made by the Party-Appointed Experts;
+ 
+(e)if the arbitration is organised into separate issues or phases (such as jurisdiction, preliminary
+determinations, liability and damages), the Parties may agree or the Arbitral Tribunal may order the
+scheduling of testimony separately for each issue or phase;
+ 
+(f)the Arbitral Tribunal, upon request of a Party or on its own motion, may vary this order of proceeding,
+including the arrangement of testimony by particular issues or in such a manner that witnesses be
+questioned at the same time and in confrontation with each other (witness conferencing);
+ 
+(g)the Arbitral Tribunal may ask questions to a witness at any time.
+ 
+5.A witness of fact providing testimony shall first affirm, in a manner determined appropriate by the Arbitral
+Tribunal, that he or she commits to tell the truth or, in the case of an expert witness, his or her genuine belief
+in the opinions to be expressed at the Evidentiary Hearing. If the witness has submitted a Witness Statement
+or an Expert Report, the witness shall confirm it. The Parties may agree or the Arbitral Tribunal may order
+that the Witness Statement or Expert Report shall serve as that witness’s direct testimony, in which event the
+Arbitral Tribunal may nevertheless permit further oral direct testimony.
+ 
+6.Subject to the provisions of Articles 9.2 and 9.3, the Arbitral Tribunal may request any person to give oral or
+written evidence on any issue that the Arbitral Tribunal considers to be relevant to the case and material to its
+outcome. Any witness called and questioned by the Arbitral Tribunal may also be questioned by the Parties.”
+26-32
+The above procedure is adopted in many international arbitrations, as it provides the lawyers of the parties with the flexibility of
+testing the evidence while allowing for questioning by the Tribunal. It has become less common to have the Tribunal begin the
+questioning, although this can arise particularly in the case of witness conferencing discussed below. However, early questioning
+by the Tribunal may well, in many instances, be in the interest of an efficient and focused evidentiary hearing provided that the
+Tribunal ensures that the parties have an adequate opportunity to question the witnesses. This is not only a matter of culture
+and preferences, but also of the circumstances in each case.
+26-33
+At evidentiary hearings, one of the first issues to be clarified is whether witnesses, whether of fact or expert witnesses, are
+allowed to be in the hearing room, and if so as of what moment. The difference of treatment between fact and expert witnesses is
+due to the consideration that an expert should be opining on the basis of all relevant facts, and should therefore not be deprived
+of a fact witness’ oral testimony. Although not mentioned in the IBA Rules on Evidence, usually a witness of fact, unlike an
+expert witness, will not attend the evidentiary hearings prior to providing his or her testimony. Therefore after a brief welcome
+by the Tribunal of the parties’ and the persons attending on their behalf, witnesses are excluded from the hearing room, until
+their turn has come to testify. 422  Thus, if the parties are to make opening statements at the beginning of the hearing, none of
+the fact witnesses will normally be present in the hearing room. In some instances, an exception to that rule can be made if one
+of the witnesses is at the same time a party representative (discussed under art.26(4)).
+26-34
+In medium and larger arbitrations, there is frequently a daily transcript of the witness evidence. The transcript may also be
+prepared on a real-time basis subject to rectification of errors in the evening. In smaller arbitrations, the Tribunal may simply
+make a tape recording of the proceedings, which the Tribunal and the parties can consult, if need be, after the hearings. 423
+Although court reporters will add to the costs of arbitration (albeit often only marginally), whenever a party expects significant
+witness testimony, the most convenient, most efficient and safest approach over tape recording is a verbatim transcript. 424
+
+The Witness Procedure in the IBA of Rules on Evidence, UKBC-ICCARBN 474407006...
+© 2025 Thomson Reuters.
+3
+26-35
+Certain basic principles applicable to cross examination in American litigation, for example, are normally not found in ICC
+arbitrations. For example, although a factual foundation should be present for questioning of a witness to make the cross-
+examination more effective, a Tribunal would infrequently permit a party to object to questions on that basis. Similarly, although
+there is reference in the IBA Rules on Evidence to certain questions not being “unreasonably leading”, it is generally not possible
+to object to a question on that basis, although it is possible to comment in argument on the nature of the questioning. In addition,
+cross-examination of witnesses in ICC arbitrations is usually based on the documents that have been filed in the proceedings
+and it is rare that the Tribunal permits cross-examination on documents that have not previously been submitted. Likewise, it
+is uncommon in an ICC arbitration to object to the testimony of a witness on the basis of hearsay. The strict evidentiary rules
+of court proceedings are normally not applicable in an ICC arbitration, and will often only distract, and sometimes annoy the
+Tribunal. 425
+26-36
+Witnesses frequently testify in a language that is not their native language. Therefore, there is in some (but certainly not all)
+cases somewhat less precision as to what exactly is meant under questioning. If the witness is unable to speak the language of
+the arbitration fluently, then an interpreter will be required. With a professional interpreter the questioning of the witness can
+usually be conducted with no great difficulty. Generally, parties are not permitted to use their own employees as interpreters
+for their witnesses.
+26-37
+There is a continuing difference in approach as to the time allowed for questioning of witnesses. Common law lawyers tend to
+expect to be able to question witnesses for much longer than civil law lawyers. As a result, witness hearings that one side may
+expect to take two weeks, may well be held in half that time.
+26-38
+This difference in approach may give rise to due process issues. In Generica Ltd v Pharmaceutical Basics Inc, 426  the arbitrator
+refused to permit further cross examination of a third party when it became apparent that the questioning involved his liability and
+when the arbitrator held that the issue was not determinative. The US Seventh Circuit Court of Appeals permitted enforcement
+of the award on the basis that “The arbitrator’s curtailment of cross-examination of [the witness] was not such a fundamental
+procedural defect that it violated our due process jurisprudence and therefore the New York Convention”.
+26-39
+In Tempo Shain Corp v Bertek Inc, 427  the Tribunal was faced with a witness who had become unavailable for an undetermined
+period due to serious illness in the family. The Tribunal proceeded without the testimony on the basis that the evidence was
+reflected in letters. The court vacated the arbitral award stating:
+“Because [the potential witness] as sole negotiator for Bertek was the only person who could have testified
+in rebuttal of appellees’ fraudulent inducement claim, and in support of Bertek’s fraudulent inducement claim,
+and the documentary evidence did not adequately address such testimony, there was no reasonable basis for the
+arbitrators to conclude that [the witness’s] testimony would have been cumulative with respect to those issues.
+The record showed that the witness would have testified to facts that only he could have known, making his
+testimony essential.”
+26-40
+These cases highlight the potential impact of exclusion of witness evidence as a due process issue at the place of arbitration
+and the place of enforcement. Therefore, prior to taking a decision as to the exclusion of witnesses, the Tribunal and the parties
+would be well advised to consider the case law in these countries on the issue.
+26-41
+Lawyers also have different approaches with regard to electronic presentations. In larger, complex cases, the use of electronic
+presentations can be very helpful for the Tribunal, particularly where it focuses on the documents being presented to the witness.
+However, it should not have the effect of taking the other party by surprise and therefore there should be some coordination as
+
+The Witness Procedure in the IBA of Rules on Evidence, UKBC-ICCARBN 474407006...
+© 2025 Thomson Reuters.
+4
+regards electronic presentation prior to the hearings. Usually, this can be dealt with in the pre-hearing (telephone) conference
+in which the parties confirm whether or not they will be using presentation media. In addition, the electronic means should
+not be a way of presenting new evidence, but rather of presenting evidence that has already been submitted to the Tribunal
+(and the other party).
+26-42
+Other aspects of due process are discussed under art.22. One of the basic points made by the courts is that it is up to the Tribunal
+to weigh the evidence, but that the lawyers should have an opportunity to present their case, subject to the overall management
+of the proceedings by the Tribunal.
+Footnotes
+421
+Part III, App.4.
+422
+See Bühler/Dorgan, “Witness Testimony Pursuant to the 1999 IBA Rules of Evidence in International Commercial—
+Novel or Tested Standards?”, op. cit., at p.27; Fouchard, Gaillard & Goldman, op. cit., para.1287, pp.702–703; El Ahdab
+& Mainguy, op. cit., paras 1233–1245, pp.729–736. Dissenting: Oetiker, “Witness before the International Arbitral
+Tribunal”, op. cit., at p.270; (“Many arbitration rules provide that the decision in this regard lies with the arbitral
+tribunal. In practice, arbitral tribunals often permit the presence of witnesses who will be called later, even if they must
+subsequently testify on the facts that are the subject matter of the hearing.”)
+423
+In the event of remote hearings by videoconference, it is customary to record same, and to provide the parties with a
+copy of the audio and/or video recording for their files.
+424
+Unless the hearing would be limited strictly to legal argument, a tape recording should be the very minimum parties
+should be insisting on at any hearing, in order to avoid a subsequent dispute over what was said and agreed.
+425
+More generally, see Newman & Klieman, Take the Witness: The Experts Speak on Cross-Examination (New York:
+Jurispublishing Inc, 2006), in particular, Newman, “Cross-examination in International Arbitration” at p.55.
+426
+Generica Ltd v Pharmaceutical Basics Inc, 125 F.3d 1123 (7th Cir., 1997).
+427
+Tempo Shain Corp v Bertek Inc, 120 F.3d 16 (2d Cir., 1997).
+End of Document
+© 2025 SWEET & MAXWELL

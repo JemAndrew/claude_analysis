@@ -1,0 +1,782 @@
+Section C. - During the Arbitral Proceedings, UKBC-REDFERN 530638648 (2025)
+© 2025 Thomson Reuters.
+1
+Section C. - During the Arbitral Proceedings
+Redfern and Hunter on International Arbitration 7th Ed.
+Mainwork
+Chapter 7 - Role of National Courts During the Proceedings
+Section C. - During the Arbitral Proceedings
+7. 18
+What happens in the most important phase of an arbitration, when the arbitrators begin their task? The baton has been passed to
+them. Is there any need for national courts to be involved in the arbitral process? The answer in almost every case is ‘no’, and
+the recent changes to major arbitration rules which provide for Emergency Arbitrators or the expedited formation of arbitral
+tribunals have made that ‘no’ more emphatic. 26  Once an arbitral tribunal has been constituted, most arbitrations are conducted
+without any need to refer to a national court, even if one of the parties fails or refuses to take part in the proceedings. There
+may be times, however, when the involvement of a national court is necessary in order to ensure the proper conduct of the
+arbitration. It may become necessary, for instance, to ask the competent court to assist in taking evidence or to make an order
+for the preservation of property that is the subject of the dispute or to enforce tribunal-ordered interim measures. The question
+that then arises is whether a national court may (or indeed should) become involved in a dispute that is subject to arbitration,
+and if so, how far this involvement should extend.
+(a) Interim measures—powers of the arbitral tribunal
+7. 19
+As discussed in Chapter 5, it may become necessary during the course of an arbitration for the arbitral tribunal or a national
+court to issue orders intended to preserve evidence, to protect assets, or in some other way to maintain the status quo pending the
+outcome of the arbitration. The purpose of interim measures has been described by the EU’s former Advocate General Tesauro
+as being ‘to achieve that fundamental objective of every legal system, the effectiveness of judicial protection’, by ensuring
+‘that the time needed to establish the existence of the right does not in the end have the effect of irremediably depriving the
+right of substance’. 27
+7. 20
+Such measures of protection take different forms and go under different names. In the Model Law 28  and in the UNCITRAL
+Rules, 29  they are known as ‘interim measures’. In the English version of the ICC Rules, they are known as ‘interim or
+conservatory measures and in the French version, as ‘mesures conservatoires ou provisoires’. 30  In the Swiss law governing
+international arbitration, they are referred to as ‘provisional or conservatory measures’. 31  Whatever their designation, however,
+they are intended in principle to operate as holding orders and to apply only pending the issue of the final arbitral award.
+7. 21
+In many cases in which interim measures of protection are required, the arbitral tribunal itself has the power to issue them,
+as considered in Chapter 5. There are, however, five situations in which a party seeking interim relief will need to refer to a
+national court.
+(i) No powers
+7. 22
+
+Section C. - During the Arbitral Proceedings, UKBC-REDFERN 530638648 (2025)
+© 2025 Thomson Reuters.
+2
+First, the arbitral tribunal may not have the necessary powers. This is usually a result of antique domestic legislation, going
+back to a time when, for reasons of public policy, the power to grant such measures was considered to be a prerogative of the
+national courts. Such limitations are today very rarely encountered in practice. 32
+(ii) Inability to act prior to the formation of the tribunal
+7. 23
+Second, it is evident that an arbitral tribunal cannot issue interim measures until it has been established. 33  The point may
+seem obvious, yet it is frequently overlooked until a crisis arises. The problem is that it takes time to establish an arbitral
+tribunal and, during that time, vital evidence or assets may disappear.
+7. 24
+Most international institutional rules have sought to address this problem through rules allowing for the appointment of
+so-called Emergency Arbitrators. 34  The idea is that so-called ‘Emergency Arbitrators’ may be appointed at short notice
+by the institution to resolve problems (such as the threatened transfer of assets by the respondent) that may arise prior
+to the constitution of the formal tribunal. Once appointed, the Emergency Arbitrators will do their job and then take no
+further part in the proceedings. However, in circumstances of great urgency, it may happen that, even if there is provision
+for the appointment of Emergency Arbitrators, they would not be appointed quickly enough, so that the applicant would
+be obliged to resort to the national courts to obtain interim measures within the required timeframe. 35  For example, the
+LCIA Rules permit the Emergency Arbitrator a maximum of fourteen days from the date of appointment to determine the
+application, 36  while the ICC Rules permit a maximum of fifteen days from the date on which the file was transmitted to
+the Emergency Arbitrator. 37  Certain courts may determine applications for interim measures even more quickly than the
+‘Emergency Arbitrator’ mechanism allows. This is often because courts are ready to hear applications on an ex parte basis,
+which (as addressed below) Emergency Arbitrators are generally prohibited from doing.
+(iii) An order can affect only the parties to the arbitration
+7. 25
+The third factor that may make the assistance of a national court necessary is that the powers of an arbitral tribunal are
+generally limited to the parties to the arbitration. The Model Law makes it plain that an arbitral tribunal may order interim
+measures only against ‘a party’. 38  A third-party order, for example, addressed to a bank holding deposits of a party would
+not be enforceable against the bank, and multiparty or multi-contract disputes may also pose similar problems, requiring
+national court assistance.
+(iv) Enforcement difficulties
+7. 26
+Fourth, as discussed below, 39  enforcement of interim measures ordered by an arbitral tribunal is not always straightforward,
+because it is uncertain where such orders may rank under the enforcement regime of the New York Convention. That regime
+applies only to ‘awards’, 40  for which finality is considered an essential characteristic in many jurisdictions, and the New York
+Convention is silent as to whether it applies to interim awards by an arbitral tribunal. Consequently, in circumstances where
+there may be a need for international enforcement of an interim measure in a jurisdiction that lacks an available mechanism
+for such enforcement, 41  parties should consider the possibility of applying for such measures before the courts of the place
+of execution.
+
+Section C. - During the Arbitral Proceedings, UKBC-REDFERN 530638648 (2025)
+© 2025 Thomson Reuters.
+3
+(v) No ex parte application
+7. 27
+Fifth, a party may need to make an application ex parte (that is, without notice to the party against whom the measure
+is directed) for example, to freeze the opposing party’s bank account in order to prevent the transfer of funds abroad.
+As discussed in Chapter 5, the revised Model Law offers the possibility of limited ex parte applications to the arbitral
+tribunal. 42  However, ‘preliminary orders’ for interim measures obtained from tribunals through ex parte applications are
+not enforceable, 43  which considerably reduces their effectiveness, and the rules of the leading institutions do not currently
+expressly envisage giving such powers to arbitrators. As a consequence, in most cases in which ex parte relief is important,
+such as where there is a risk of dissipation of assets or of important evidence being destroyed, the only option is to apply
+to the competent court.
+(b) Interim measures—powers of the competent court
+7. 28
+For these reasons, it is important that the competent court should have the power to issue interim measures in support of the
+arbitral process. In situations of extreme urgency, in which third parties need to be involved or in which there is a strong
+possibility that a party will not voluntarily execute the tribunal’s order, there may be little option but to identify the appropriate
+state court and to make the application to that court. The measures requested may include the granting of an injunction to
+preserve the status quo or to prevent the disappearance of assets; or the issue of an order to assist in the taking of evidence from
+witnesses or to ensure the preservation of property or evidence.
+7. 29
+An application to a court for interim measures may give rise to at least two problems. First, if a party to an arbitration agreement
+makes an application for interim measures to the court rather than to the arbitral tribunal, will this be regarded as a breach of
+the agreement to arbitrate? Second, if the choice between seeking interim measures from the courts or from the arbitral tribunal
+is truly an open choice, should the application be made to the courts or to the arbitral tribunal?
+(i) Incompatibility with the arbitration agreement?
+7. 30
+The risk that resort to interim measures before a court might operate as a waiver of the arbitration agreement, or that any
+order so obtained might be dissolved in the face of a valid arbitration clause, appears now to be negligible. Most arbitration
+rules are explicit in confirming that an application for interim relief from a court is not incompatible with an arbitration
+agreement. 44  For example, Article 9 of the Model Law states categorically that: ‘It is not incompatible with an arbitration
+agreement for a party to request, before or during arbitral proceedings, from a court an interim measure of protection and
+for a court to grant such measure.’
+(ii) Should an application be made to a national court or to the arbitrators?
+7. 31
+On the question of whether to seek interim relief from the relevant court or the arbitral tribunal, much depends on the relevant
+law, the applicable institutional rules, and the nature of the relief sought. The relevant law may make it clear, for instance,
+that any application should be made first to the arbitral tribunal, and only then to the court of the seat of arbitration. This is
+the position taken by Swiss law, which empowers the arbitral tribunal to take ‘provisional’, or conservatory, measures (unless
+
+Section C. - During the Arbitral Proceedings, UKBC-REDFERN 530638648 (2025)
+© 2025 Thomson Reuters.
+4
+the parties otherwise agree), then states that if the party against whom the order is made fails to comply, the arbitral tribunal
+may request assistance from the competent court. 45
+7. 32
+English law is equally careful to spell out the position. It does so in three provisos to the court’s ‘powers exercisable in
+support of arbitral proceedings’, including the preservation of evidence, the inspection of property, the granting of an interim
+injunction, and the appointment of a receiver. These three provisos are set out at section 44(3)-(5) of the English Arbitration
+Act 1996:
+Section 44
+(3) If the case is one of urgency, the court may, on the application of a party or proposed party to the arbitral
+proceedings, make such order as it thinks necessary for the purpose of preserving evidence or assets.
+(4) If the case is not one of urgency, the court shall act only on the application of a party to the arbitral
+proceedings [ … ] made with the permission of the tribunal or with the agreement in writing of the other
+parties.
+(5) In any case the court shall act only if or to the extent that the arbitral tribunal [ … ] has no power or
+is unable for the time being to act effectively.
+7. 33
+Similarly, various institutional rules set additional hurdles which must be cleared before an application to court for interim
+measures is permissible. For example, such applications may only be made pursuant to Article 25.3 of the LCIA Rules,
+‘after the formation of the Arbitral Tribunal, in exceptional cases and with the tribunal’s authorisation’. Similarly, pursuant
+to Rule 30.3 of the SIAC Rules, a court application for interim relief can only be made ‘in exceptional circumstances’ after
+the tribunal’s constitution. The ICC Rules are somewhat more permissive, providing at Article 28.1 that court applications
+may be made ‘in appropriate circumstances’ after the case file has been transmitted to the arbitral tribunal.
+7. 34
+Where the position is not spelled out clearly by the national law or by institutional rules, the answer to the question of whether
+to seek interim relief from the court or from the arbitral tribunal is likely to depend upon the particular circumstances of each
+case. If, for example, the tribunal has not been constituted, the matter is one of urgency, and there is a concern that an order
+by an emergency arbitrator may not be voluntarily executed, the only possibility is to apply to the relevant national court for
+interim measures. At the same time, the party seeking such an order should take steps to advance the arbitration, so as to
+show that there is every intention of respecting the agreement to arbitrate. 46  Where the arbitral tribunal is in existence, or
+where the appointment of an emergency arbitrator is possible and likely to be effective, it would be appropriate to apply first
+to that tribunal or emergency arbitrator unless international enforcement may be required.
+7. 35
+This is not simply a question of division of labour. Although an arbitral tribunal or an emergency arbitrator lacks the coercive
+powers of a court of law, and although there are questions concerning the international enforceability of an order for interim
+measures, parties should not forget that any order is binding as between the parties themselves. It is a brave (or foolish) party
+who deliberately chooses to ignore interim measures ordered by the tribunal that is charged with deciding the merits of its
+dispute. As one experienced commentator has asserted:
+Ultimately, of course, the arbitrators’ greatest source of coercive power lies in their position as arbiters of the
+merits of the dispute between the parties. Parties seeking to appear before arbitrators as good citizens who have
+been wronged by their adversary would generally not wish to defy instructions given to them by those whom
+they wished to convince of the justice of their claims. 47
+7. 36
+
+Section C. - During the Arbitral Proceedings, UKBC-REDFERN 530638648 (2025)
+© 2025 Thomson Reuters.
+5
+There are other logistical problems inherent in applying to a court for interim measures. 48  Often, the merits of the dispute
+will fall to be determined under a foreign law, which the local court would be ill-prepared to consider at an interim stage.
+In addition, the language of the dispute and the contract may be different from that of the foreign court. Finally, the chosen
+court is likely to be at the place of execution of the order to avoid concerns as to enforceability. This may give rise to a
+difficulty in persuading the court that the measures are necessary, if they are being sought against a state or local entity, in
+favour of a foreign corporation. 49
+7. 37
+The nature of the relief sought is also likely to have an important bearing on the question of whether to go to a national
+court or to the arbitral tribunal. Interim measures of relief take many forms and differ from state to state. In addition, new
+and important forms of relief may be crafted by the courts or set out in legislation, so that it would be unwise to regard the
+categories of interim measures as being in any sense closed. 50  The following classification may, however, be helpful:
+ 
+•measures relating to the attendance of witnesses;
+ 
+•measures related to preservation of evidence;
+ 
+•measures related to documentary disclosure;
+ 
+•measures aimed at preserving the status quo; and
+ 
+•measures aimed at relief in respect of parallel proceedings.
+(c) Measures relating to the attendance of witnesses
+7. 38
+The first category of interim measures, directed towards the taking of witness evidence, is one of obvious concern. Since an
+arbitral tribunal does not generally possess the power to compel the attendance of relevant witnesses, it may be necessary
+to resort to the courts, particularly if the witness whose presence is required is not in any employment or other dependent
+relationship to the parties to the arbitration and so cannot be persuaded to attend voluntarily. This need for the assistance of the
+court is recognised by Article 27 of the Model Law:
+The arbitral tribunal or a party with the approval of the arbitral tribunal may request from a competent court of
+this State assistance in taking evidence. The court may execute the request within its competence and according
+to its rules on taking evidence.
+7. 39
+Some national arbitration laws, including those of countries such as Switzerland, which have not adopted the Model Law as
+it stands, nevertheless follow this form of wording very closely. 51  In other arbitration laws, the position may be set out more
+fully. For example, section 43 of the English Arbitration Act 1996 provides that:
+Section 43
+(1) A party to arbitral proceedings may use the same court procedures as are available in relation to legal
+proceedings to secure the attendance before the tribunal of a witness in order to give oral testimony or to
+produce documents or other material evidence.
+(2) This may only be done with the permission of the tribunal or the agreement of the other parties.
+(3) The court procedures may only be used if—
+(a) the witness is in the United Kingdom, and
+
+Section C. - During the Arbitral Proceedings, UKBC-REDFERN 530638648 (2025)
+© 2025 Thomson Reuters.
+6
+(b) the arbitral proceedings are being conducted in England and Wales or, as the case may be, Northern
+Ireland.
+(4) A person shall not be compelled by virtue of this section to produce any document or other material
+evidence which he could not be compelled to produce in legal proceedings.
+7. 40
+In an arbitration seated in the United States, section 7 FAA grants arbitrators the power to subpoena witnesses within the
+jurisdiction either to appear to give oral evidence or to disclose relevant documentary evidence in their possession. 53
+7. 41
+Practically, a subpoena can be issued by tribunals only in respect of witnesses present in the jurisdiction, and there appear to
+be few instances of the power having been exercised in the context of international arbitrations. 54  In one unreported ICC case,
+a tribunal refused to exercise its power to issue a subpoena to produce documents against a foreign national present in New
+York only for the arbitration hearing. The tribunal considered that the parties would not have contemplated the exercise of such
+power when selecting New York as a seat for a dispute that otherwise had no connection with the United States.
+7. 42
+The ‘any person’ wording of section 7 of the FAA expressly authorises tribunals to subpoena parties and non-parties to the
+arbitration agreement to attend hearings. However, there is conflicting authority at the Circuit level regarding whether this
+power extends to ordering pre-hearing discovery from non-parties (for example, in the form of interrogatories and depositions).
+The Sixth and Eighth Circuits have held that section 7 applies to pre-hearing discovery of documents in the possession of third
+parties, 55  while the Fourth Circuit permits pre-hearing discovery of non-parties where a party demonstrates a ‘special need or
+hardship’, such as where the information sought is otherwise unavailable. 56  Conversely, the Second, Third, Ninth, and Eleventh
+Circuits have all taken the opposite stance. 57  The Second Circuit has distinguished between depositions of non-parties and
+testimony of non-parties at preliminary hearings, finding only the latter permissible under section 7. 58  The key difference is
+that preliminary hearings are conducted before the arbitrators, unlike depositions.
+(d) Measures related to the preservation of evidence
+7. 43
+As far as the preservation of evidence is concerned, it is obviously important that evidence should not be destroyed before a
+proper record can be made of it. 59  If, for example, the dispute is over the quality of a consignment of coffee or cocoa beans,
+then some assessment of that quality must be made before the consignment is either sold or perishes. Or again for example, if
+the dispute is over the number or quality of reinforcing bars used in the concrete foundations of a road, bridge, or dam, some
+record must be preserved, preferably by independent experts, before those foundations are covered over. Moreover, given that
+the preservation of evidence is a matter of particular concern right at the beginning of the case, and probably well before the
+formation of the arbitral tribunal, this is an area in which parties are likely to rely heavily either on assistance from the competent
+national court or from an Emergency Arbitrator.
+7. 44
+Arbitration laws may grant specific powers to national courts to support arbitration by means of the granting of interim
+injunctions to preserve evidence. For example, section 44 of the English Arbitration Act 1996 grants to the courts in cases of
+urgency the same powers in arbitration to order the preservation of evidence, or the inspection, photographing, or preservation
+of property, as in court proceedings. 60  In one case, pending initiation of an arbitration, the Court of Appeal granted a freezing
+order preventing a respondent from disposing or otherwise dealing with shares in order to protect a disputed right to purchase
+under a share purchase agreement. 61  The Court considered that property could include contractual rights and that there was
+
+Section C. - During the Arbitral Proceedings, UKBC-REDFERN 530638648 (2025)
+© 2025 Thomson Reuters.
+7
+no bar to the issuing of a mandatory injunction. The key issue was the need to protect the rights that would be the subject of
+the arbitration.
+(e) Measures related to documentary disclosure
+7. 45
+As observed in Chapter 6, the arbitral tribunal’s power to order disclosure of documents is generally limited to the parties to
+the arbitration. Yet, in certain circumstances, relevant documents may be in the hands of a third party. Whilst the courts of the
+seat of the arbitration may offer some assistance, 62  that seat has usually been chosen for its neutrality, and so the relevant third
+party is unlikely to be within its jurisdiction. The usual result is that third-party documents remain outside the scope of the
+arbitral process. Prior to the US Supreme Court’s June 2022 judgment in the joined cases of ZF Automotive US, Inc. v Luxshare,
+Ltd. and AlixPartners LLP v Fund for Protection Investors’ Rights in Foreign States, there were states in the United States
+where an application to obtain disclosure of documents in support of a foreign arbitration was possible. The importance of this
+tool was magnified by, the expansiveness of US discovery processes, which could yield access to forms of disclosure (such as
+depositions) from third parties that would not be normally available in an international arbitration from the parties themselves.
+7. 46
+It was argued that this contested power arose from section 1782(a) of Title 28 of the US Code, which permits a district court
+to order a person who ‘resides or is found’ in the district to give testimony or produce documents ‘for use in a foreign or
+international tribunal [ … ] upon the application of any interested person’. In 2004, contrary to the prevailing view until then that
+this power was limited to judicial courts and thus did not extend to arbitration proceedings, 63  the US Supreme Court remarked
+obiter in Intel Corporation v Advanced Micro Devices, Inc that this power does in fact extend to foreign arbitral tribunals,
+subject to the following four discretionary factors:
+ 
+a)whether the material sought is accessible to the foreign tribunal absent section 1782;
+ 
+b)the nature of the tribunal, the character of the proceedings, and the receptivity of the tribunal to US assistance;
+ 
+c)whether the request conceals an attempt to circumvent foreign proof-gathering restrictions or other policies; and
+ 
+d)whether the request is unduly intrusive or burdensome. 64
+7. 47
+Following Intel and prior to ZF Automotive, a consistent line of case law supported the view that section 1782 was applicable in
+relation to investor–state arbitration. 65  Much of this jurisprudence flowed from the Chevron-Ecuador dispute, in which section
+1782 was deployed repeatedly by both parties to the dispute. 66
+7. 48
+By contrast, no unanimous approach emerged in respect of the provision’s applicability to international commercial arbitration.
+Instead, the ensuing inter-Circuit (and even intra-Circuit) splits caused this jurisprudence to take on what one author has
+described as a ‘wheel-of-fortune like nature’. 67  The Fourth and Sixth Circuits, for instance, took the position that it was
+applicable, 68  whilst other circuits, including the Second, Fifth, and Seventh, adopted either contrary or inconsistent views. 69
+7. 49
+This legal uncertainty was clearly unsatisfactory, particularly in light of the increasing use of section 1782 applications by
+parties to foreign-seated international arbitrations. The US Supreme Court’s intervention now resolves (at least much of)
+that uncertainty. In its unanimous judgment, the Court held that section 1782 required a ‘foreign or international tribunal’
+to be ‘governmental or intergovernmental’ to fall within its scope, rather than also encompassing ‘[p]rivate adjudicatory
+bodies’. 70  It based this determination on a contextual and purposive interpretation of the statute. 71  The Court found it to be a
+‘straightforward’ matter that the commercial arbitral tribunal in question in the former of the joined appeals could not qualify
+as governmental. 72  And although the Court considered that the investment tribunal at issue in the latter of the appeals (an
+ad hoc UNCITRAL tribunal constituted pursuant to a bilateral investment treaty) posed ‘a harder question’, it nevertheless
+
+Section C. - During the Arbitral Proceedings, UKBC-REDFERN 530638648 (2025)
+© 2025 Thomson Reuters.
+8
+again rejected the argument that this tribunal qualified as governmental. 73  In both determinations, the Court dispensed with
+any recourse to the discretionary factors previously considered in Intel. It did, however, reserve judgment on ‘the possibility
+that sovereigns might imbue an ad hoc arbitration panel with official authority’. 74  The Court thereby preserved some room for
+continued jurisprudential and scholarly debate as to whether other investment tribunals—notably, those constituted pursuant to
+the ICSID Convention, or under the auspices of an often mooted multilateral investment court—might be deemed to qualify as
+governmental, and therefore fall within section 1782’s scope. However, that room appears to be limited.
+7. 50
+Therefore, section 1782’s application to international arbitration appears now in large part to have run its course.
+(f) Measures aimed at preserving the status quo
+7. 51
+There are many cases in which an award of damages, however substantial, does not adequately compensate the injured party
+for the loss that it has suffered. This may include damage to reputation, loss of business opportunities, and similar heads of
+claim, which are real enough, but difficult to prove and to quantify, even if they are considered to be legally admissible. For
+example, a manufacturer may refuse to continue supplies under a distribution agreement, alleging breach of contract. If the
+distributor does not receive the supplies for which it has contracted, it may not be able to fulfil the contracts that it, in turn, has
+made. This may damage the distributor’s reputation. In such a case, the distributor would no doubt wish to argue that the status
+quo should be maintained and that the manufacturer should continue to supply, pending resolution of the dispute by arbitration.
+Similarly, a pharmaceutical company may produce a particular drug under licence, then decide to manufacture and market a
+competing product under its own name, claiming that there is nothing in the licence agreement to prevent it doing so. In such
+a case, the licensor probably wishes to argue that, until the dispute is resolved by arbitration, the licensee should be restrained
+from manufacturing and marketing the competing product.
+7. 52
+A key consideration which governs applications for this category of interim measures is not only whether they should be made
+to a national court or to an arbitral tribunal, but also whether ordering such interim relief ‘would be equivalent to pre-judging
+the merits of the case’. 75  An application is likely to fail if it is found that granting the interim measures sought would have
+this effect. This consideration confronted the English courts in the Channel Tunnel case. This was a case that went on appeal
+from the court of first instance to the Court of Appeal and then to the (then) highest English court, the House of Lords. Each
+court gave a different answer to the two questions posed.
+7. 53
+The contract for the construction of the Channel Tunnel was between Eurotunnel (the owner and intended operator of the tunnel)
+and Trans-Manche Link (TML), a consortium of five French and five British construction companies that had agreed to construct
+the land terminals, bore and equip the tunnels, and provide the necessary rolling stock. One serious dispute that arose between
+the parties was about payment for the Tunnel’s cooling system. This was not part of the original specification, but was added by
+a variation order. TML claimed that the monthly payments it received for the cooling system were insufficient. By the end of
+September 1991, the gap between what Eurotunnel had paid and what TML claimed had grown to approximately £17 million.
+In October 1991, TML wrote to Eurotunnel, threatening to suspend work on the cooling system unless its claim was met in full
+and pointing out the ‘very serious’ consequences that this would have for completion of the project, with subcontractors and
+other workers having to be laid off, equipment orders being delayed or cancelled, and so forth. In reply, Eurotunnel applied to
+the English court for an interim injunction to restrain TML from carrying out its threat. TML argued that the English courts had
+no power to intervene by granting the injunction that was sought; instead, it said, the court should stay the litigation and refer
+the parties to arbitration, in accordance with the then governing statute. 76
+7. 54
+The judge who heard the case at first instance decided that he did have the power to grant an injunction and would have done so,
+but for an undertaking by TML to continue working pending further court proceedings. 77  The Court of Appeal considered that
+it was an appropriate case for an injunction, but that it had no power to grant one, because of the arbitration agreement. 78  The
+
+Section C. - During the Arbitral Proceedings, UKBC-REDFERN 530638648 (2025)
+© 2025 Thomson Reuters.
+9
+House of Lords considered that it did have power to grant an injunction, but thought it inappropriate to do so. In giving the House
+of Lords’ judgment, Lord Mustill highlighted the problem to which this kind of application for interim relief may give rise:
+It is true that mandatory interlocutory relief may be granted even where it substantially over-laps the final relief
+claimed in the action; and I also accept that it is possible for the court at the pre-trial stage of the dispute arising
+under a construction contract to order the defendant to continue with a performance of the works. But the court
+should approach the making of such an order with the utmost caution and should be prepared to act only when
+the balance of advantage plainly favours the grant of relief. In the combination of circumstances which we find
+in the present case, I would have hesitated long before proposing that such an order should be made, even if the
+action had been destined to remain in the High Court. 79
+7. 55
+That in the Channel Tunnel case, three different courts gave different answers to the questions of whether or not there was power
+to issue an injunction, and if so, whether it would be appropriate to do so, underlines the difficulties posed by such questions. 80
+It is no comfort to the practitioner to say so, but there is no clear rule as to whether or not an injunction will be issued in particular
+circumstances. 81  Each case has to be assessed individually.
+(g) Interim relief in respect of parallel proceedings
+7. 56
+Whilst an uneasy truce may have been signed between the courts and arbitral tribunals in developed arbitral jurisdictions, 82
+a ‘turf war’ continues in other parts of the world, where there is an uncomfortable trend towards the issue of ‘anti-arbitration’
+injunctions, either by the courts of the seat or by the courts of the place of eventual enforcement. The fact pattern is often
+similar: a dispute arises between a foreign party and a state, or state-owned entity, which has signed an arbitration agreement.
+The state entity wishes to sabotage the arbitral proceedings and to have the case remitted for judicial determination in its own
+courts. It therefore seeks an injunction before those courts, seeking to challenge the jurisdiction of the tribunal, and an order
+requiring the arbitrators and adverse party to suspend or abandon the arbitral proceedings on pain of daily fines (or worse).
+This problem has raised serious challenges for the modern arbitrator: should such orders be obeyed, even where they are the
+product of improper intervention at the local or state level, or should the arbitrator seek to ensure justice in the individual case,
+often at risk of monetary penalties (or worse)?
+7. 57
+In one such case, a subsidiary of a US corporation, Himpurna, had entered into a contract with the Indonesian state electricity
+corporation, PLN, to explore and develop geothermal resources in Indonesia and subsequently to sell the power to PLN. In the
+wake of the Asian economic crisis, PLN failed to purchase the electricity supplied. Himpurna relied on the arbitration clause
+in the contract to commence an arbitration under the UNCITRAL Rules against PLN. A final award was made in favour of
+Himpurna, which PLN refused to pay. Himpurna subsequently commenced a second arbitration proceeding against Indonesia,
+based on Indonesia’s pledge to secure PLN’s performance. Shortly after serving the statement of claim, proceedings were
+commenced by both PLN and Indonesia in the Indonesian courts, which resulted in interim injunctions ordering the suspension
+of the arbitral proceedings pending a court decision on the merits, with an attached fine of US$1 million per day for breach
+of the order.
+7. 58
+The tribunal considered that the injunction was a transparent attempt to avoid the consequences of a freely signed arbitration
+agreement and refused to abandon the arbitration. To avoid the risk of breaching the Indonesian court order, the tribunal moved
+the place of the hearing to The Hague and convened witnesses. Indonesia tried to stop such hearings from proceeding by seeking
+an injunction from the Dutch courts. This attempt failed, and the hearings were held (albeit in truncated form without the
+presence of the Indonesian arbitrator) and a final award issued.
+7. 59
+The colourful facts of this case raise important questions as to how an arbitral tribunal can seek to avoid injunctions of
+national courts in extreme circumstances. First, hearings in an UNCITRAL case can be held ‘at any place [the tribunal] deems
+
+Section C. - During the Arbitral Proceedings, UKBC-REDFERN 530638648 (2025)
+© 2025 Thomson Reuters.
+10
+appropriate’, and so the physical transfer of the hearings to The Hague was permitted by the Rules. In connection with the
+injunction itself, Article 28 of the UNCITRAL Rules allows a tribunal to proceed with the arbitration notwithstanding one
+party’s default whenever the defaulting party has failed to show ‘sufficient cause’ for its default. In this regard, the arbitral
+tribunal found that the Indonesian injunction did not constitute ‘sufficient cause’, because (a) it was sought and obtained by a
+state agency that was under the de jure control of the government of Indonesia, and (b) the government of Indonesia had de facto
+made no attempt to rein in those actions that were inconsistent with its obligations under the parties’ arbitration agreement.
+7. 60
+As a second ground, the arbitral tribunal held that the very existence of an arbitration agreement, and the involvement of a state
+party, entitled the tribunal to apply international law. As a matter of international law, the actions of the Indonesian courts were
+attributable to the Republic of Indonesia. In Benteler v Belgium, 83  an international tribunal had held that ‘a state which has
+signed an arbitration clause or agreement would be acting contrary to international public policy if it subsequently relied on
+the incompatibility of such an obligation with its internal legal system’. 84  The arbitral tribunal held that it would constitute ‘a
+denial of justice for the courts of a State to prevent a foreign party from pursuing its remedies before a forum to the authority of
+which the State consented’. 85  Thirdly, the tribunal held that an international arbitral tribunal is not ‘unconditionally subject’ to
+the jurisdiction of the courts at the seat of the arbitration. Specifically, the ‘adjudicatory authority’ of an international tribunal
+‘does not emanate from a discrete sovereign but rather from an international order’. 86
+7. 61
+There are also examples of national courts with no supervisory jurisdiction that have sought to stay foreign arbitral proceedings.
+In National Grid v Argentina, 87  the claimant had instituted proceedings under the UNCITRAL Rules against Argentina,
+pursuant to the United Kingdom–Argentina BIT. The parties agreed to a juridical seat of Washington, DC, and the ICC was
+designated as appointing authority. In the course of proceedings, Argentina unsuccessfully challenged the president of the
+tribunal before the ICC and then brought a claim against the ICC before its own courts in Buenos Aires. Less than a week before
+the final hearing, Argentina obtained an interim injunction in its domestic proceedings against the ICC to stay the arbitration
+in Washington, DC. The tribunal refused to suspend the proceedings, noting that the procedure for the challenge of arbitrators
+was a self-contained procedure under the UNCITRAL Rules, agreed by the parties, and further that the supervisory courts were
+those of the agreed seat, being Washington, DC, and not Argentina. Similarly, in SGS v Pakistan, 88  the Pakistan Supreme Court
+issued an order against SGS restraining it from taking any action to pursue arbitration proceedings that it had commenced under
+the Arbitration Rules of the International Centre for the Settlement of Investment Disputes (ICSID) on the basis of a BIT. SGS
+nevertheless pursued its case, considering that the Pakistani courts had no supervisory jurisdiction over an ICSID claim.
+7. 62
+Such cases nevertheless remain rare. The vast majority of arbitrations are pursued without interference from domestic courts.
+Nevertheless, the evolution of an international law principle by which tribunals must abide, even if in conflict with the dictates
+of the courts of the seat, may cause such courts to curtail their partisan zeal and conform to accepted international norms.
+(h) Court enforcement of tribunal-ordered interim measures
+7. 63
+As discussed above, 89  when a party is subject to interim measures ordered by an arbitral tribunal, it has a powerful incentive
+to comply with the order voluntarily to avoid prejudicing its standing in the eyes of the tribunal that will adjudicate upon the
+merits of its dispute. However, in the absence of such voluntary compliance, an arbitral tribunal lacks the authority directly to
+enforce its orders of interim measures (just as tribunals also lack the authority to directly enforce their own final awards). In
+such circumstances, it is therefore necessary for the applicant party to apply to the national courts to compel compliance.
+7. 64
+As already mentioned, there have been difficulties in enforcing arbitral interim measures internationally as a consequence of
+the uncertainty that remains as to whether they come within the enforcement regime of the New York Convention. 90  The
+Convention is silent on this point, 91  a by-product of its adoption in 1958, a time when arbitral interim measures were far rarer
+
+Section C. - During the Arbitral Proceedings, UKBC-REDFERN 530638648 (2025)
+© 2025 Thomson Reuters.
+11
+than they are today. The ongoing debate has centred upon whether such interim measures possess the necessary characteristic
+of finality to qualify as ‘awards’ enforceable under the Convention, a question on which commentators have expressed varied
+positions. 92
+7. 65
+To address this uncertainty, the Model Law and numerous other national arbitration statutes provide for a sui generis enforcement
+mechanism for arbitral interim measures. Pursuant to Article 17 H(1), the Model Law’s regime applies irrespective of the seat of
+the tribunal that ordered the interim measures in question, and regardless of whether the interim measure is styled as an award,
+an order, or a decision. Interim measures are required to be enforced subject to certain limited grounds for non-enforcement
+set forth in Article 17 I, which includes the standard grounds for non-enforcement of awards on the merits under Article 36
+and further grounds relevant specifically to interim measures, for example a party having not fulfilled a tribunal’s order to post
+security for the interim measure.
+7. 66
+An enforcement mechanism for arbitral interim measures is also enshrined, for instance, in English law, although it does not
+apply to interim measures ordered by foreign-seated arbitral tribunals. 93  English law provides a two-stage process. First, under
+section 41(5) of the English Arbitration Act 1996, a tribunal may grant a peremptory order against a party that is in default of
+any order or directions (including interim measures); secondly, the peremptory order may be enforced by the courts pursuant
+to section 42(1) of the 1996 Act. Pearl Petroleum & Others v The Kurdistan Regional Government provides a high-profile
+example of this process in action, in which the English High Court enforced a US$100 million peremptory order issued in an
+LCIA arbitration against the respondent state, after confirming that the court has discretion to review the order and was not
+obliged to ‘act as a rubber stamp on orders made by the tribunal’. 94
+7. 67
+A further approach to enforcement that some states have taken is to label certain interim measures ordered by tribunals as
+‘awards’, at least as far as their own legislation is concerned. This is the case in Israel and Malaysia, which define ‘award’
+to include an interim award, 95  and New Zealand, 96  which makes the provisions on enforcement of awards applicable to an
+interim measures order (unless the tribunal provides otherwise). Institutional rules typically leave the form in which arbitral
+interim measures are granted at the discretion of the tribunal. 97  In the context of an ICC arbitration, granting such measures in
+the form of an order rather than an award may add considerably to the speed of the process, because an order, unlike an award,
+will not need to be scrutinised by the ICC Court before issuance. 98
+Footnotes
+26
+For data on the relative (in) frequency of different types of national court involvement in arbitration cases, see Korzun
+and Lee, ‘An empirical survey of international commercial arbitration cases in the US District Court for the Southern
+District of New York, 1970–2014’ (2016) 39(2) Fordham Intl Law J 307.
+27
+Opinion of Advocate General Tesauro, R. v Secretary of State for Transport, ex parte Factortame Ltd, Case No. 2-13/89,
+[1990] ECR I-02433, at [18] (ECJ).
+28
+Model Law, Art. 17.
+29
+UNCITRAL Rules, Art. 26.
+30
+ICC Rules, Art. 28.
+31
+Swiss PIL, art. 183.
+32
+Argentina was one of the last jurisdictions to remove this restriction, codified in Art. 753 of the Argentine Code of
+Civil Procedure, which states: ‘Arbitrators may not issue binding measures, but shall request them from the judge, who
+shall provide its jurisdictional assistance for the fastest and most effective conduct of the arbitration proceedings.’ This
+provision, though still technically in force, is overridden in respect of international arbitration by Law No. 27,449 on
+International Commercial Arbitration (2018), which incorporates the Model Law’s interim measures regime, and in
+respect of domestic arbitration by Art. 1655 of the National Joint Civil and Commercial Code (2015).
+
+Section C. - During the Arbitral Proceedings, UKBC-REDFERN 530638648 (2025)
+© 2025 Thomson Reuters.
+12
+33
+Indeed, in the case of ICC arbitrations, interim measures cannot be issued by the tribunal until the file has been
+transmitted to it: see ICC Rules, Art. 28.
+34
+SCC Rules, Art. 37.4 and Appendix II; ICC Rules, Art. 29.1 and Appendix V; SIAC Rules, Art. 30.2 and Sch. 1; HKIAC
+Rules, Art. 23.1 and Sch. 4, Art. 1; ICDR Rules, Art. 6; LCIA Rules, Art. 9B; JAMS Rules, r. 2(c); AAA Rules, R-38;
+NAI Rules, Art. 36.4.
+35
+See, e.g., Gerald Metals S.A v Timis & Ors [2016] EWHC 2327 (CH), at [53]: ‘It is common ground that there can
+be situations where the need for relief, for example in the form of a freezing injunction, is so urgent that the power to
+appoint an emergency arbitrator is insufficient and the court may properly act under section 44 of the Arbitration Act—
+for example if the application is one that needs to be made without notice.’
+36
+LCIA Rules, Art. 9.8.
+37
+ICC Rules, Appendix V, Art. 6.4.
+38
+Model Law, Art. 17(2).
+39
+Paragraphs 7.63ff.
+40
+Pursuant to Art. III of the New York Convention.
+41
+As examples of such jurisdictions, Castello and Chahine list the following: ‘although the Korean Arbitration Act was
+revised in 2016 and largely incorporated provisions on interim measures from the 2006 Model Law, it nevertheless
+limits enforcement of interim measures to those issued by tribunals seated in Korea. In 2010, the Chilean Supreme Court
+rejected the exequatur of arbitral interim measures granted abroad regarding assets located in Chile. Similarly, in Russia,
+the Presidium of the Highest Arbitrazh Court reaffirmed in 2010 its position that only awards finally deciding (part
+of) the merits of a dispute can be enforced in the Russian Federation’: Castello and Chahine, ‘Enforcement of interim
+measures’, in Rowley KC, Gaillard, and Kaiser (eds) The Guide to Challenging and Enforcing Arbitration Awards
+(Global Arbitration Review, 2019), p. 111.
+42
+Model Law, Art. 17B(1): ‘Unless otherwise agreed by the parties, a party may, without notice to any other party, make
+a request for an interim measure together with an application for a preliminary order directing a party not to frustrate
+the purpose of the interim measure requested.’ Jurisdictions that have adopted legislation based on the revised Model
+Law allowing for ex parte preliminary orders include Australia, Colombia, Costa Rica, Hong Kong, Ireland, Lithuania,
+Panama, Peru, and Rwanda.
+43
+Model Law, Art. 17 C(5).
+44
+For example, ICC Rules, Art. 28.2; UNCITRAL Rules, Art. 26.9; ICDR Rules, Art. 24.3; SCC Rules, Art. 37.5; ICC
+Rules, Art. 28.2; SIAC Rules, Art. 30.3; HKIAC Rules, Art. 23.9; LCIA Rules, Art. 25.3; Swiss Rules, Art. 26.5; JAMS
+Rules, r. 24(e); AAA Rules, R-37.c.
+45
+Swiss PIL, Ch. 12, s. 183(1) and (2). In France, in a 2012 decision, the Reims cour d’appel held that, after the tribunal has
+been constituted, applications for provisional or conservatory measures or measures relating to the taking of evidence
+can no longer be made to domestic courts: see SA Clinique de Champagne v Enrico Ambrosini, Reims cour d’appel,
+1ere Ch. Civ., 3 July 2012, [2012] Rev Arb 681.
+46
+In circumstances where national courts effectively ‘step into the shoes’ of the as yet un-constituted arbitral tribunal
+by granting interim measures, English law requires that the applicant undertake to have the tribunal formed as soon
+as possible thereafter: Econet Wireless Ltd v Vee Networks and Ors [2006] EWHC 1568 (Comm), at [14]. Similarly,
+Brazilian law requires a party seeking interim measures prior to the commencement of arbitration to undertake to initiate
+proceedings within 30 days: São Paulo Court of Appeals, Interlocutory Appeal 614.006-4/4/00.
+47
+Schwartz, ‘The practices and experience of the ICC Court’, in ICC (ed.) Conservatory and Provisional Measures in
+International Arbitration, ICC Publication No. 519 (ICC, 1993), p. 59. The Analytical Commentary to the Model Law
+expressly stipulates that ‘if a party does not take the interim measure of protection as ordered by the arbitral tribunal,
+such failure may be taken into account in the final decision, in particular in any assessment of damages’: UNCITRAL,
+Analytical Commentary on Draft Text of a Model Law on International Commercial Arbitration, Report of the Secretary-
+General, 25 March 1985, Art. 18, para. 5, p. 43. However, Binder criticises this guidance on the basis that ‘it implies
+that the tribunal could act in a prejudiced way towards the party which did not obey the tribunal’s orders’, suggesting
+that such an approach ‘could cause a tribunal to be challenged due to misconduct’: Binder, International Commercial
+Arbitration and Mediation in UNCITRAL Model Law Jurisdictions (4th edn, Kluwer Law International, 2019), p. 281.
+48
+See Voser, ‘Interim relief in international arbitration: the tendency towards a more business-oriented approach’ (2007)
+1(2) Disp Res Intl 171, at 173.
+49
+In an ICC arbitration in which one of the authors was involved (ICC Case No. 11681), the parties had to consider whether
+to apply to the tribunal or to the local courts of the respondent for an interim measure. Given that the applicable law
+and language were foreign to the local court, and that the measure sought to stop an important commercial transaction
+of an entity local to the court, a decision was taken to apply to the arbitral tribunal. The measure was awarded and the
+respondent complied voluntarily.
+
+Section C. - During the Arbitral Proceedings, UKBC-REDFERN 530638648 (2025)
+© 2025 Thomson Reuters.
+13
+50
+This is confirmed by Art. 17J of the Model Law, pursuant to which the nature of interim measures that can be granted by
+national courts in support of arbitration mirrors the types of interim measures each court may grant in relation to court
+proceedings. English law also follows this approach: Arbitration Act 1996, s. 44(1).
+51
+Swiss PIL, s. 184(2).
+53
+The section reads: ‘The arbitrators selected either as prescribed in this title or otherwise, or a majority of them, may
+summon in writing any person to attend before them or any of them as a witness and in a proper case to bring with him or
+them any book, record, document, or paper which may be deemed material as evidence in the case. [ … ] Said summons
+shall issue in the name of the arbitrator or arbitrators, or a majority of them, and shall be signed by the arbitrators, or
+a majority of them, and shall be directed to the said person and shall be served in the same manner as subpoenas to
+appear and testify before the court; if any person or persons so summoned to testify shall refuse or neglect to obey
+said summons, upon petition the United States district court for the district in which such arbitrators, or a majority of
+them are sitting may compel the attendance of such person or persons before said arbitrator or arbitrators, or punish said
+person or persons for contempt in the same manner provided by law for securing the attendance of witnesses or their
+punishment for neglect or refusal to attend in the courts of the United States.’
+54
+In the United States, r. 45(b)(2) of the Federal Rules of Civil Procedure (FRCP) originally provided that a subpoena
+‘may be served at any place within the district of the court by which it is issued, or at any place without the district that
+is within 100 miles of the place of the deposition, hearing, trial, production, or inspection specified in the subpoena’.
+Finding that the FRCP was incorporated by FAA, s. 7, the Second Circuit concluded that arbitrators could not issue
+subpoenas beyond the territorial limit in r. 45(b)(2). Dynegy Midstream Services v Trammochem, 451 F.3d 89, 96 (2d
+Cir. 2006). On the other hand, the Eighth Circuit chose not to apply the territorial limit in r. 45(b)(2) to arbitral subpoenas
+to produce documents, since ‘the burden of producing documents need not increase appreciably with an increase in
+the distance those documents must travel’. In 2013, r. 45(b)(2) FRCP was amended to eliminate the territorial limit on
+the service of subpoenas, permitting service ‘at any place within the United States’. Relying on this amendment, the
+Eleventh Circuit held that nationwide service of arbitral summonses was appropriate. Managed Care Advisory Grp.,
+LLC v CIGNA Healthcare, Inc., 939 F.3d 1145, 1157 (11th Cir. 2019).
+55
+Am. Fed. Of Television & Radio Artists, 164 F.3d 1004, 1009 (6th Cir. 1999); In re Sec. Life Ins. Co. of Am., 228 F.3d
+865, 870-871 (8th Cir. 2000). Later decisions by district courts in the Eighth Circuit have limited the application of
+this holding to document production, reasoning that ‘the production of documents is less onerous and imposes a lesser
+burden than does a witness deposition’. SchlumbergerSema, Inc. v Xcel Energy, Inc., No. CIV. 02-4304PAMJSM, 2004
+WL 67647, at *2 (D. Minn. 2004).
+56
+See COMSAT Corporation v NSF, 190 F.3d 269, 276 (4th Cir. 1999); Application of Deiulemar Compagnia Di
+Navigazione S.p.A. v M/V Allegra, 198 F.3d 473, 479-481 (4th Cir. 1999). The same test has also been applied by New
+York State courts. Imclone Systems, Inc. v Waksal, 22 A.D.3d 387, 388 (NY App Div 2005); Matter of Roche Molecular
+Sys. Inc. (Gutry), 76 NYS.3d 752, 758 (NY Sup Ct 2018).
+57
+Life Receivables Tr. v Syndicate 102 at Lloyd’s of London, 549 F.3d 210, 216 (2d Cir. 2008); Hay Group, Inc. v E.B.S.
+Acquisition Corp., 360 F.3d 404 (3d Cir. 2008); CVS Health Corporation v Vividus, LLC, 878 F.3d 703, 706 (9th Cir.
+2017); Managed Care Advisory Grp. v CIGNA Healthcare, 939 F.3d 1145, 1161 (11th Cir. 2019).
+58
+Stolt-Nielsen Transp. Grp., Inc. v Celanese AG, 430 F.3d 567, 578 (2d Cir. 2005); Life Receivables Tr. v Syndicate 102
+at Lloyd’s of London, 549 F.3d 210, 217-218 (2d Cir. 2008); Washington Nat’l Ins. Co. v OBEX Grp. LLC, 958 F.3d
+126, 136 (2d Cir. 2020).
+59
+This is not least because counsel is likely to be bound under national rules of professional conduct to ensure document
+retention or at least to prevent the destruction of evidence, whilst Guideline 12 of the IBA Guidelines on Party
+Representation imposes a duty on counsel to inform clients about the necessity of document preservation.
+60
+English Arbitration Act 1996, s. 44(3).
+61
+Cetelem SA v Roust Holdings Ltd [2005] EWCA Civ 618.
+62
+See Dupeyon, ‘Shall national courts assist arbitral tribunals in gathering evidence?’ (2016) ICCA Mauritius, Section
+III.2.a.
+63
+National Broadcasting Co., Inc. v Bear Stearns & Co., Inc., 165 F.3d 184 (2d Cir. 1999); Republic of Kazakhstan v
+Biedermann International 168 F.3d 880 (5th Cir. 1999).
+64
+Intel Corporation v Advanced Micro Devices, Inc., 542 US 241, 124 S.Ct. 2466, 159 L.Ed.2d 355 (2004).
+65
+See, e.g., In re Petition of the Republic of Turkey for an Order Directing Discovery From Hamit Çiçek Pursuant to 28
+U.S.C. § 1782, 2020 WL 4035499, at *3 (DNJ 17 July 2020); Pakistan v Arnold & Porter Kaye Scholer LLP, 2019 WL
+1559433, at *7 (DDC); Stute, ‘28 USC § 1782—looking for consensus’ (2019) 35 Arb Intl 331, at 336.
+66
+Strong, ‘Discovery under 28 U.S.C. §1782: Distinguishing international commercial arbitration and international
+investment arbitration’ (2013) University of Missouri School of Law Scholarship Repository, p. 20 et seq.
+67
+Stute, ‘28 USC § 1782—looking for consensus’ (2019) 35 Arb Intl 331, at 342.
+
+Section C. - During the Arbitral Proceedings, UKBC-REDFERN 530638648 (2025)
+© 2025 Thomson Reuters.
+14
+68
+Servotronics, Inc. v Boeing Co., 2020 WL 1501954 (4th Cir. 2020); Abdul Latif Jameel Trans. Co. Ltd. v FedEx Corp.,
+2019 WL 4509287 (6th Cir. Case No. 19-5315).
+69
+See, e.g., Servotronics Inc. v Rolls-Royce PLC, 975 F.3d 689 (7th Cir. 2020); In re Application and Petition of Hanwei
+Guo for an Order to take Discovery for Use in a Foreign Proceeding Pursuant to 28 U.S.C., 1782, 965 F.3d 96 (2d
+Cir. 2020); El Paso Corporation v La Comision Ejecutiva Hidroelectrica Del Rio Lempa, 341 Fed.Appx 31 (5th Cir.
+2009); Kleimar N.V., US Dist Court, SD New York, Nov 16, 2016, 220 F.Supp. 3d 517 (SDNY 2016); In re Children’s
+Investment Fund Foundation (UK), 363 F.Supp.3d 361 (SDNY, 30 January 2019); In re Hanwei Guo, 2019 WL 917076
+(SDNY, 25 February 2019).
+70
+ZF Automotive US, Inc. v Luxshare, Ltd. and AlixPartners LLP v Fund for Protection Investors’ Rights in Foreign
+States 596 US (2022), p. 11.
+71
+Ibid., pp. 6–11.
+72
+Ibid., p. 12.
+73
+Ibid., pp. 12–16.
+74
+Ibid., p. 15.
+75
+Yesilirmak, ‘Interim and conservatory measures in ICC arbitral practice, 1999– 2008’ (2011) Special Supplements of
+the ICC Bulletin: Interim, Conservatory and Emergency Measures in ICC Arbitration 6.
+76
+English Arbitration Act 1975.
+77
+Channel Tunnel Group v Balfour Beatty Ltd, Commercial Court, 27 November 1991, at [367].
+78
+Channel Tunnel Group v Balfour Beatty Ltd, Court of Appeal, 22 January 1992.
+79
+Channel Tunnel Group v Balfour Beatty Ltd [1993] AC 334, at 367.
+80
+The former English arbitration legislation was amended to take account, inter alia, of some of the difficulties that the
+courts faced in the Channel Tunnel case. The Court of Appeal, which would have been prepared to grant an injunction,
+considered that it had no power to do so, because the arbitration agreement provided for arbitration in Brussels. The
+English Arbitration Act 1996, s. 44(2)(e), provides that the powers of the court that are ‘exercisable in support of arbitral
+proceedings’ include the granting of an interim injunction, and this section of the Act applies even if the seat of the
+arbitration is outside England (s. 2(3)). There may be resort to the courts if, or to the extent that, the arbitral tribunal
+or any other person empowered by the parties to decide the case ‘has no power or is unable for the time being to act
+effectively’ (s. 44(5)).
+81
+For different approaches to the granting of court injunctions pending arbitration, see Judgment of 14 October 2016, Civil
+Procedure Preservation Ruling Regarding Ocean Eleven Shipping Corp. v Lao Kaiyuan Mining Sole Co. Ltd, E72 Cai
+Bao No. 427 (Wuhan Maritime Ct.); Chen Hongqing v Mi Jingtian and another [2017] HKCFI 1148 (Hong Kong High
+Court); Petrobras v Tractebel Energia & MSGAS, Case No. AgRg MC 19.226-MS (2012/0080171-0), Superior Court
+of Justice of Brazil, 29 June 2012; Discovery Geo Corporation v STP Energy Pte Ltd, High Court of New Zealand,
+19 December 2013.
+82
+For example, in a 2010 decision, a Paris court held that French courts cannot interfere with arbitral proceedings: SA
+Elf Aquitaine and Total v Mattei, Lai. Kamara and Reiner, Paris Court of First Instance, 6 January 2010. While in
+less categorical terms, US and English courts have expressed great reluctance to issue anti-arbitration injunctions: see
+Reisman and Iravani, ‘The changing relation of national courts and international commercial arbitration’ (2010) 21
+Am Rev Intl Arb 33; see also Sabbagh v Khoury [2019] EWCA Civ. 1219, at [110]ff emphasising the exceptional nature
+of the grant of an anti-arbitration injunction.
+83
+Benteler v Belgium (1985) 8 European Commercial Cases 101.
+84
+Quoted in Himpurna California Energy Ltd (Bermuda) v Republic of Indonesia (2000) XXV YBCA 11, at [169].
+85
+Ibid., at [184].
+86
+Ibid., at [181].
+87
+National Grid v Argentina, Decision of the Fourth Chamber of the Camera Contencioso-Administrativo Federal, 2 July
+2007.
+88
+Société Générale de Surveillance SA (SGS) v Islamic Republic of Pakistan, Pakistan Supreme Court, 3 July 2002. For
+a detailed analysis of the case, see Lau, ‘Note on Société Générale de Surveillance v Pakistan ’ (2003) 19 Arb Intl 179.
+89
+Paragraph 7.35.
+90
+These complications appear to be decreasing over time, due to the ‘trend toward broader recognition and enforcement
+of arbitral interim measures, even in the absence of an express statutory provision to that effect’: Castello and Chahine,
+‘Enforcement of interim measures’, in Rowley KC, Gaillard, and Kaiser (eds) The Guide to Challenging and Enforcing
+Arbitration Awards (Global Arbitration Review, 2019), p. 108.
+
+Section C. - During the Arbitral Proceedings, UKBC-REDFERN 530638648 (2025)
+© 2025 Thomson Reuters.
+15
+91
+New York Convention, Art. III: ‘Each Contracting State shall recognize arbitral awards as binding and enforce them in
+accordance with the rules of procedure of the territory where the award is relied upon, under the conditions laid down
+in the following articles.’ Crucially, this provision does not define an ‘award’.
+92
+Against this proposition, see V. V. Veeder: ‘the better view of [the New York Convention’s] application excludes
+any provisional order for interim measures from enforcement abroad as a Convention award’. Castello and Chahine,
+‘Enforcement of interim measures’, in Rowley KC, Gaillard, and Kaiser (eds) The Guide to Challenging and Enforcing
+Arbitration Awards (Global Arbitration Review, 2019), p. 101, fn. 2. In favour, see Born: ‘The better view is that
+provisional measures should be and are enforceable as arbitral awards under generally-applicable provisions for the
+recognition and enforcement of awards in the Convention and most national arbitration regimes. Provisional measures
+are “final” in the sense that they dispose of a request for relief pending the conclusion of the arbitration [ … ] T]here is
+no reason that the term “award” should not include reasoned, signed decisions by arbitrators on requests for provisional
+measures when Contracting States have (almost universally) recognized the authority of arbitrators to grant such relief.’
+Born, International Commercial Arbitration (3rd edn, Kluwer Law International, 2021), pp. 2703–2704. Agnostic,
+see van den Berg: ‘there does not seem to be a “prevailing view” on this question’. Cited in Castello and Chahine,
+‘Enforcement of interim measures’, in Rowley KC, Gaillard, and Kaiser (eds) The Guide to Challenging and Enforcing
+Arbitration Awards (Global Arbitration Review, 2019), pp. 101, 104.
+93
+English Arbitration Act, s. 42(1); see also Sutton et al., Russell on Arbitration (24th edn, Sweet & Maxwell, 2015),
+para. 7-208.
+94
+(1) Pearl Petroleum Company Limited (2) Dana Gas PJSC (3) Crescent Petroleum Company Limited v The Kurdistan
+Regional Government of Iraq [2015] EWHC 3361 (Comm), at [16].
+95
+Israel Arbitration Law of 1968, s. 1; Malaysia Arbitration Act 2005, s. 2.
+96
+New Zealand Arbitration Act 1996, Sch. 1, Art. 17L.
+97
+Swiss Rules, Art. 26.2; SIAC, Art. 30.1; SCC, Art. 37.3; NAI, Art. 35.4; JAMS, r. 24(e); ICDR, Art. 24.2; ICC, Art. 28.1;
+HKIAC Administered Rules, Art. 23.3; AAA, R-37.b; LCIA Rules, Art. 25 (silent as to the form of interim measures).
+98
+ICC Rules, Art. 33.
+End of Document
+© NIGEL BLACKABY KC, CONSTANTINE PARTASIDES
+KC, ALAN REDFERN

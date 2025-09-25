@@ -1,0 +1,493 @@
+Section A. - Background, UKBC-REDFERN 530638674 (2025)
+© 2025 Thomson Reuters.
+1
+Section A. - Background
+Redfern and Hunter on International Arbitration 7th Ed.
+Mainwork
+Chapter 11 - Recognition and Enforcement of Arbitral Awards
+Section A. - Background
+(a) Introduction
+11. 01
+The successful party in an international arbitration expects the award to be performed without delay. This is a reasonable
+expectation. Unlike mediation and most other methods of alternative dispute resolution (ADR), the purpose of international
+arbitration is to arrive at a binding decision on the dispute. Once this decision has been made, in the form of a written award, it
+is an intrinsic element of every arbitration agreement that the parties will carry it out. 1  To put this beyond doubt, it is expressly
+set out in many of the leading international rules of arbitration. The UNCITRAL Rules provide that the award ‘shall be final
+and binding on the parties’, and that ‘the parties shall carry out all awards without delay’. 2  The ICC Rules provide that ‘the
+parties undertake to carry out any award without delay’. 3  The LCIA Rules similarly provide that ‘every award (including
+reasons for such award) shall be final and binding on the parties. The parties undertake to carry out any award immediately
+and without any delay.’ 4
+11. 02
+Such statistics as are available suggest that most arbitral awards in most parts of the world are in fact carried out voluntarily
+—that is, without the need for enforcement proceedings in national courts. 5  However, in recent years, there is an increasing
+number of press reports about attempts to attack arbitral awards, or to resist their enforcement. 6  Up-to-date, comprehensive, and
+reliable statistics about arbitration are not readily available to confirm the state of voluntary compliance with arbitral awards, for
+two main reasons: first, success stories that do not result in further legal enforcement battles usually do not make the arbitration
+news; and secondly there is no particular reason why an arbitral tribunal, or indeed an arbitral institution, should ever know
+whether or not an award has been carried out. Unlike a national court, an arbitral tribunal has no role to play in the enforcement
+of its decision. When an arbitral tribunal has made a final award, its work is usually done and the tribunal is functus officio.
+As for arbitral institutions, while some of them routinely ask the parties to complete post-proceeding questionnaires that may
+touch on whether awards have been performed or challenged, few parties go to the trouble of doing so. The most, therefore,
+that can be said confidently about the rate of voluntary enforcement is that there appear to be relatively few arbitrations that
+are followed by known enforcement proceedings.
+11. 03
+Although voluntary enforcement therefore appears to be more common than not, it cannot always be relied on. Arbitrations will
+usually result in a ‘winner’ and a ‘loser’, and at least one party to an arbitration is likely to be dissatisfied with the result. In
+those circumstances, in addition to seeking the annulment of the award (usually in the place of arbitration), the losing party may
+also resist any attempt by the winning party to obtain recognition or enforcement of the award, in whatever jurisdiction this is
+sought. The purpose of this chapter is to examine the process by which awards may or may not be recognised and enforced.
+However, it is appropriate to start by discussing the carrying out, or performance, of awards from a wider perspective, so as to
+place recognition and enforcement in their proper contexts.
+(b) Performance of awards
+11. 04
+
+Section A. - Background, UKBC-REDFERN 530638674 (2025)
+© 2025 Thomson Reuters.
+2
+As already stated, the majority of awards appear to be performed voluntarily. However, if the losing party fails to carry out an
+award, the winning party needs to take steps to enforce performance of it. Effectively, only two steps may be taken. The first is
+to exert some form of pressure, commercial or otherwise, in order to show the losing party that it is in its interests to perform
+the award voluntarily. The second is to invoke the powers of the state, exercised through its national courts, in order to obtain
+a hold on the losing party’s assets, or in some other way to compel performance of the award. 7
+(i) Commercial and other pressures
+11. 05
+A successful party may be in a position to exert commercial pressure on a party who fails or refuses to perform an award.
+For example, if a continuing trade relationship exists between the parties, it may well be in the interests of the loser to
+perform the award, since failure to do so might entail the loss of further profitable business. If a government or state agency
+is concerned, other pressures may be brought to bear by the diplomatic services of the successful party. It may be pointed
+out, for instance, that further development loans depend upon the carrying out of existing awards, or that foreign companies
+may be discouraged from making further investments if outstanding obligations are not honoured.
+11. 06
+Pressure may also be exerted by the threat of adverse publicity. This method is sometimes adopted by trade associations and
+has the effect of discouraging other traders in the market from dealing with the defaulting party. The Arbitration Rules of the
+Grain and Feed Trade Association (GAFTA), for example, contain the following provision:
+24. Defaulters
+24.1 In the event of any party to an arbitration or an appeal held under these Rules neglecting or
+refusing to carry out or abide by a final award of the tribunal or board of appeal made under these
+Rules, the Council of GAFTA may post on the GAFTA Notice Board, Web-site, and/or circulate
+amongst Members in any way thought fit notification to that effect. The parties to any such arbitration
+or appeal shall be deemed to have consented to the Council taking such action as aforesaid. 8
+Before ‘posting’, GAFTA communicates with the defaulter and asks whether there is anything to be said, for example whether
+there is an outstanding balance due to him or her from the successful party. However, where GAFTA is satisfied that there
+is a default, its members are informed. This will naturally make them reluctant to deal with the defaulter unless and until
+the award has been carried out.
+11. 07
+Similarly, but less explicitly, debtor states that end up as losing parties in arbitrations under the rules of the International
+Centre for the Settlement of Investment Disputes (ICSID) may feel (rightly or wrongly) that refusal to perform an award
+voluntarily may adversely affect their creditworthiness at the World Bank. It may therefore be no coincidence that, to date, the
+overwhelming majority of ICSID awards have been voluntarily performed. 9  In addition, the successful party may be able to
+‘monetise’ the award without enforcement proceedings, for example, by selling it (potentially at a discount) to a third-party
+investor, who would then seek to enforce or negotiate with the losing party for payment (or partial payment) of the award. 10
+(ii) Arbitrator’s duty to render an enforceable award
+11. 08
+Many modern rules of arbitration contain an express provision that the arbitrator shall ‘make every effort’ to ensure that the
+award is enforceable. 11  This is an obligation to use best endeavours, rather than an obligation to secure a result. It is difficult
+
+Section A. - Background, UKBC-REDFERN 530638674 (2025)
+© 2025 Thomson Reuters.
+3
+to see how it could be otherwise. Even the most conscientious of arbitrators cannot guarantee that the tribunal’s award will
+be enforceable in whatever country enforcement may be sought. The most that can be expected is that the tribunal will do its
+best to ensure that the appropriate procedure is followed and, above all, that each party is given a fair hearing.
+(iii) Enforcement by court proceedings
+11. 09
+The ultimate sanction for non-performance of an award is enforcement by proceedings in a national court. This is something
+that should be borne in mind from the outset of an arbitration. Sometimes, one of the parties (usually the claimant) urges the
+arbitral tribunal to run through the proceedings as quickly as possible, so as to obtain a speedy decision. This is understandable
+—but it is in the interests of the party that stands to gain most from the arbitration (whether by way of claim or counterclaim) to
+ensure that the proper procedures are followed, in case it should become necessary to apply to a national court for enforcement
+of the award.
+11. 10
+Enforcement of a monetary award usually takes place against assets. This means that as a first step, it is necessary to trace the
+assets of the losing party (money in a bank account, an aircraft, or a ship, a cargo of oil in transit, or whatever it may be) before
+applying to the relevant national court for an order against those assets, or, less constructively, for an order that the trade or
+business of the losing party should be liquidated, if payment of the award continues to be refused. 12  In some jurisdictions, it
+is possible to enforce against assets held by third parties that are owed to the award debtor. For example, in an enforcement
+case before the English courts, the successful party in an arbitration sought enforcement against a ‘letter of credit’ issued by
+a bank in favour of the losing party in the arbitration. The UK Supreme Court ordered that the funds due under the letter of
+credit be directed to the award creditor (by way of appointment of a receiver) for satisfaction of the arbitral award. 13
+11. 11
+There are four ways in which a national legal system might provide for the enforcement of arbitral awards. The first arises
+when the award is deposited, or registered, with a court or other authority, 14  following which it may be enforced as if it
+is a judgment of that court. The second arises when the laws of the country of enforcement provide that, with the leave
+of the court, the award of an arbitral tribunal may be enforced directly without any need for deposit or registration. 15  The
+third arises when it is necessary to apply to the court for some form of recognition, or exequatur, as a preliminary step to
+enforcement. 16  The fourth is to sue on the award as evidence of a debt, on the basis that the arbitration agreement constitutes
+a contractual obligation to perform the award. This last method is cumbersome and frequently leaves it open to the losing
+party to reopen, by way of defence, the issues already determined by the arbitral tribunal. It is therefore to be avoided, unless
+no other method is available.
+11. 12
+The procedures to be followed in any given case vary from country to country and from court to court. It is not possible to
+lay down detailed procedural guidelines here nor would it be particularly helpful to do so, since if action has to be taken
+to enforce an award in a particular jurisdiction, it is necessary to obtain competent advice from experienced lawyers who
+practise in that jurisdiction.
+11. 13
+In 2019, in response to the increasing number of arbitrations (and particularly investor–state arbitrations) in which an award
+was either challenged or simply not carried out, a practical survey to challenging and enforcing international arbitral awards
+was published. 17
+11. 14
+The survey is in two parts. The first part contains a series of articles by lawyers in law firms around the world on the issues
+that are likely to be involved in seeking recognition or enforcement of international arbitral awards. The second part, which
+is likely to be of particular interest to lawyers faced with challenging or enforcing such awards, addresses a series of practical
+questions to practising lawyers in twenty-nine different states, including Argentina, Austria, Belgium, Canada, England,
+France, the Czech Republic, Japan, Russia, Singapore, Switzerland, Russia, and elsewhere. 18  These lawyers respond to the
+
+Section A. - Background, UKBC-REDFERN 530638674 (2025)
+© 2025 Thomson Reuters.
+4
+questions with practical guidance on, for example, any special local requirements as to the documentation to be filed in
+support of a request for challenge or enforcement, the local procedural rules that need to be followed, the fees payable, any
+applicable time limits, the possibilities that exist for making searches as to the existence of assets against which enforcement
+may be levied, and so forth. Even where recognition or enforcement of an award is sought in a country that is not covered
+by the survey, it gives a useful indication of the type of questions that will need to be raised with local lawyers when seeking
+recognition or enforcement of a foreign arbitral award in their jurisdiction.
+11. 15
+As already stated, we do not propose to lay down any such procedural guidelines. What follows, therefore, is a review of
+the general principles underlying recognition and enforcement, including the choice of the appropriate forum (and ‘forum
+shopping’); the role of the international conventions (in particular the New York and ICSID Conventions) in assisting
+recognition and enforcement; and the defences that may be raised, including that of state immunity.
+(c) General principles governing recognition and enforcement
+11. 16
+The challenge of an arbitral award, discussed in Chapter 10, is concerned with attacking an award at its source, in the hope of
+having it modified or set aside in whole or in part. Recognition and enforcement, by contrast, are concerned with giving effect
+to the award, either in the state in which it was made or in some other state(s).
+11. 17
+A distinction may be drawn at the outset between (a) the enforcement of an award in the state that is the ‘seat’ of the arbitration,
+and (b) the enforcement of an award that is regarded as a ‘foreign’, or ‘international’, award because it was made outside the
+territory of the state in which recognition or enforcement is sought. Enforcement of an award in the country that is the seat of
+the arbitration is usually a relatively easy process. It generally involves the same processes as are required for the enforcement
+of an award in a domestic arbitration. 19  Enforcement of an award that is regarded by the place of enforcement as a ‘foreign’,
+or ‘international’, award is a more complex matter. This chapter is mainly concerned with the recognition and enforcement of
+such ‘foreign’ awards. 20
+(d) Difference between recognition and enforcement
+11. 18
+It is necessary to distinguish recognition from enforcement. The terms are sometimes used as though they are inextricably
+linked. For example, the New York Convention itself speaks of ‘recognition and enforcement’ of foreign arbitral awards. 21
+The terms are, however, distinct. On this point, the 1927 Geneva Convention was more precise when it spoke of ‘recognition
+or enforcement’. 22  An award may be recognised without being enforced. 23  However, if it is enforced, then it is necessarily
+recognised by the court that orders its enforcement. The precise distinction, in other words, is between ‘recognition’ and
+‘recognition and enforcement’.
+(i) Recognition
+11. 19
+Recognition on its own is generally a defensive process. 24  It will usually arise when a court is asked to grant a remedy in
+respect of a dispute that has been the subject of previous arbitral proceedings. The party in whose favour the award was made
+will object that the dispute has already been determined. To prove this, it will seek to produce the award to the court, and
+will ask the court to recognise it as valid and binding upon the parties in respect of the issues with which it dealt. The award
+may have disposed of all of the issues raised in the new court proceedings and so put an end to those new proceedings as res
+
+Section A. - Background, UKBC-REDFERN 530638674 (2025)
+© 2025 Thomson Reuters.
+5
+judicata—that is, as recognising that the matters in issue between the parties have already been decided. If the award does
+not dispose of all of the claims or issues raised in the new proceedings, but only some of them, it will need to be recognised
+for the purposes of ‘claim’ (or in some jurisdictions, ‘issue’ estoppel), so as to prevent those claims (or issues) with which
+it does deal from being raised again.
+11. 20
+The use of recognition on its own may be illustrated by considering the example of a company that is made a defendant in
+court proceedings by a foreign supplier for goods sold and delivered, but allegedly not paid for. Suppose that the dispute
+between the company and the foreign supplier has already been submitted to arbitration, and that an award has been made,
+in which the foreign supplier’s claim was dismissed. In these circumstances, the company will ask the court to recognise
+the award as a valid defence to the foreign supplier’s new claim. If the court is prepared to do this, the claim is dismissed.
+The legal force and effect of the foreign award will have been recognised, but the award itself will not have been enforced.
+In other circumstances, it may be useful to seek recognition of an award, for example to aid enforcement attempts in other
+jurisdictions, or because converting an award into a court judgment by recognition may have persuasive value in attempts
+at post-award settlement.
+(ii) Enforcement
+11. 21
+By contrast, where a court is asked to enforce an award, it is asked not merely to recognise the legal force and effect of the
+award, but also to ensure that it is carried out, by using such legal sanctions as are available. Enforcement goes a step further
+than recognition. A court that is prepared to grant enforcement of an award will do so because it recognises the award as
+validly made and binding upon the parties to it, and therefore suitable for enforcement. In this context, the terms ‘recognition’
+and ‘enforcement’ do run together: one is a necessary part of the other.
+(iii) A shield and a sword
+11. 22
+The purpose of recognition on its own is generally to act as a shield. Recognition is used to block any attempt to raise in
+fresh proceedings issues that have already been decided in the arbitration that gave rise to the award of which recognition
+is sought. 25  By contrast, the purpose of enforcement is to act as a sword. Enforcement of an award means applying legal
+sanctions to compel the party against whom the award was made to carry it out. Such legal sanctions may take many forms.
+When the defaulting party is an individual, sanctions may include seizure of property and other assets, forfeiture of bank
+accounts, and even, in extreme cases, imprisonment. Where the defaulting party is a body corporate, enforcement is usually
+directed primarily against the property and other assets of the corporation, such as its stock-in-trade, bank accounts, trading
+accounts, and so forth. In certain situations, however, the directors of the company may be held personally liable (for instance
+on a guarantee). In such cases, the sanctions may be directed against them personally.
+(e) Place of recognition and enforcement
+11. 23
+A party who simply seeks recognition of an award will generally do so because it needs to rely on the award by way of defence, or
+set-off, or in some other fashion, in court proceedings to which it is the defendant. For this purpose, the party seeking recognition
+asks the court concerned to recognise the award as binding on the parties between whom it was made; and the court concerned
+is not one that is chosen by the party seeking recognition. It must be a court of the place where the proceedings against that
+party are brought. This fact of itself emphasises how important it is that international arbitral awards should be accepted by
+courts across the world as truly ‘international’ in their validity and effect.
+11. 24
+
+Section A. - Background, UKBC-REDFERN 530638674 (2025)
+© 2025 Thomson Reuters.
+6
+Where the successful party in an arbitration is seeking to enforce an award, the position is different. The first step is to determine
+in which country, or countries, enforcement is to be sought. To reach this decision, it is necessary to locate the state or states
+in which the losing party has, or is likely to have, assets available to satisfy the award. This usually calls for careful (and
+possibly difficult) investigative work. If enquiries suggest that assets are likely to be available in only one state, the party seeking
+enforcement of the award has no choice: for better or worse, he or she must seek enforcement in that state. Where there is a
+choice, the party seeking enforcement is able to proceed in one or more places as seems appropriate.
+11. 25
+Another factor to be taken into account in selecting a forum for the enforcement of an award is whether, under the New York
+Convention or some other relevant international convention, the prospective forum recognises and enforces awards rendered at
+the place of arbitration. A further factor is the attitude of the local courts to requests for recognition and enforcement of foreign
+awards, and notably whether their outlook is likely to be internationalist or parochial. The attitude that the prospective forum
+adopts on the question of state immunity 26  is yet another relevant factor if enforcement is being sought against a state or a
+governmental agency. 27
+(i) Forum shopping
+11. 26
+The need to locate the place(s) in which a defaulting party has assets is not confined to international arbitration. In domestic
+court proceedings, it may also be necessary to locate the defaulting party’s assets in order to enforce a court’s judgment or
+an arbitral tribunal’s award. However, in a domestic dispute, the assets of the losing party are usually situated within the
+country in which the proceedings take place, since this is normally the country of that party’s residence or place of business.
+In international arbitration, the contrary is likely to be the case. The place of arbitration 28  will usually have been chosen, by
+or on behalf of the parties, precisely because (inter alia) it is a place with which they have no connection. In other words, the
+place of arbitration has been chosen as a neutral forum. It would be purely fortuitous if the parties happened to have assets
+situated within this neutral country. When an award has to be enforced, it must generally be enforced in a country other than
+that in which it was made. As will be further explained later in this chapter, 29  this is why it is important that international
+awards should be recognised and enforced internationally, and not merely in the country in which they are made.
+11. 27
+If, as often happens in international commerce, assets are located in different parts of the world, the party seeking enforcement
+of the award has a choice of country in which to proceed—a chance to go ‘forum shopping’, as it is sometimes expressed. 30
+In looking for the appropriate forum, not merely the location of assets but also the other factors mentioned (such as the attitude
+of the local courts, the adherence of the target country to the New York Convention, and so on), must be taken into account.
+(f) Methods of recognition and enforcement
+11. 28
+Internationally, it is generally much easier to obtain recognition and enforcement of an international award than of a foreign
+court judgment. This is because the network of international and regional treaties providing for the recognition and enforcement
+of international awards is more widespread and better developed than corresponding provisions for the recognition and
+enforcement of foreign judgments.
+11. 29
+For example, within the European Union (EU), Council Regulation (EC) No. 44/2001 of 22 December 2000 on Jurisdiction
+and the Recognition and Enforcement of Judgments in Civil and Commercial Matters provides only for the enforcement of
+European national court judgments solely within Europe. 31  In the global arena, the Hague Conference on Private International
+Law has been struggling to agree the text of a convention dealing with the recognition and enforcement of foreign judgments in
+civil and commercial matters. In 2005, the delegates only agreed on the mutual recognition and enforcement of judgments that
+were rendered pursuant to exclusive choice of court agreements: the Hague Convention on Choice of Court Agreements of 30
+
+Section A. - Background, UKBC-REDFERN 530638674 (2025)
+© 2025 Thomson Reuters.
+7
+June 2005. Even so, at the time of writing, seventeen years after the 2005 Hague Convention was concluded, it has been ratified
+only in the EU, Mexico, Montenegro, and Singapore. The text of the Hague Convention on the Recognition and Enforcement
+of Foreign Judgments in Civil or Commercial Matters of 2 July 2019 (which is aimed at providing mutual recognition and
+enforcement of foreign judgments on broader civil and commercial matters) has been agreed, but at the time of writing that
+Convention has not been ratified by any country. It was only signed by Uruguay and Ukraine and it is therefore unlikely to
+change the enforcement landscape in the near future. These conventions contrast dramatically with the ubiquity of the New
+York Convention. Indeed, as we have said previously, the widespread recognition and enforceability of arbitral awards is one
+of the principal advantages of arbitration as a method of resolving international commercial disputes. 32
+11. 30
+The method of recognition and enforcement to be adopted in any particular case depends on the place where the award was
+made (that is, whether it qualifies, for example, as a New York Convention award). It also depends on the relevant provisions of
+the law at the place of intended enforcement (the ‘forum state’). On this aspect, it is usually essential (as previously indicated)
+to obtain advice from experienced lawyers in the forum state. 33
+11. 31
+Local formalities are bound to be involved, whether or not one of the international conventions is applicable. For example, the
+original or certified copies of the arbitration agreement and award are usually required. The language of the award may well be
+different from the language of the court of the forum state, so that a translation is required—and it may be necessary for this to
+be undertaken with considerable formality (for example by consular attestation in the country of origin).
+(g) Time limits
+11. 32
+Time limits for the commencement of proceedings for the recognition and enforcement of an arbitral award are usually laid
+down in national legislation. Careful attention must be paid to such time limits (and to any other time limits contained in the
+rules of court of the forum state). In this respect, it would be foolhardy not to consult an experienced local practitioner—and
+this applies as much to the party seeking recognition or enforcement of an award as it does to the party wishing to challenge an
+award. In the United States, for instance, time limits vary from state to state and, when it comes to recognition or enforcement
+of an award, the relevant period may be anything from one year to three years. 34
+(h) Consequences of refusal of recognition or enforcement
+11. 33
+The immediate consequence of a refusal to enforce an award is that the winning party fails to get what it wants—namely, payment
+of what it is owed by seizure of the loser’s assets in the place in which enforcement was sought. Although this is a disheartening
+result for the party seeking enforcement, it should be borne in mind that it will still have an award that may be enforced in
+another state in which the losing party has assets. Much depends upon the reason for which enforcement was refused. If, for
+example, enforcement was refused for local public policy considerations, it may be possible to find another country in which
+the same considerations do not apply. However, if enforcement was refused (for example) because of a fundamental failure
+by the arbitral tribunal to give the losing party an opportunity to present its case, it may not be possible to enforce the award
+elsewhere, since other courts may refuse enforcement for the same reason. 35  In such an event, the party seeking enforcement
+may have no option but to recommence arbitral proceedings, assuming that the right to do so has not been lost by lapse of time.
+(i) Role of the international conventions
+11. 34
+
+Section A. - Background, UKBC-REDFERN 530638674 (2025)
+© 2025 Thomson Reuters.
+8
+The dependence of the international arbitral process upon national systems of law is most clearly seen in the context of the
+recognition and enforcement of international awards. An arbitral tribunal is limited in the powers that it can exercise—and
+these powers, although usually adequate for resolving a particular dispute, fall short of the coercive powers possessed by
+national courts. Indeed, a state is generally reluctant to confer on a private arbitral tribunal the sanctioning powers that it
+confers on the judges in its own courts. The power to enforce an award against a reluctant party by such summary methods
+as the attachment of bank accounts or the sequestration of assets is a power that forms part of the prerogative of the state. In
+consequence, the enforcement of awards must take place via the national court at the place of enforcement, operating under
+its own procedural rules. The detailed procedures adopted in these courts will vary from country to country. However, the
+effect of the international conventions, culminating in the New York Convention, has been to secure a considerable degree
+of uniformity in the recognition and enforcement of awards in most of the important trading countries of the world.
+11. 35
+The main international treaties that apply to the recognition and enforcement of international awards are reviewed in the next
+section. In particular, this chapter includes a discussion of the New York Convention, the ICSID Convention, and a number
+of regional conventions.
+11. 36
+The New York Convention has the widest scope of application. Subject to two reservations that may restrict its application, the
+New York Convention facilitates the recognition and enforcement of foreign arbitral awards in the territories of any of its more
+than 167 signatory states, irrespective of the arbitration rules under which the proceedings were conducted. 36  Enshrining as
+it does a strong pro-enforcement policy, the New York Convention provides for the recognition and enforcement of foreign
+arbitral awards by national courts, subject to a handful of procedural and substantive grounds for objecting to enforcement
+that are intended to be limited in scope.
+11. 37
+Similarly, the ICSID Convention (formally described as the ‘Washington Convention’) provides for the enforcement of those
+arbitral awards that were rendered in proceedings involving a national of one contracting state and another contracting state.
+Awards falling under the scope of the ICSID Convention are directly enforceable within the territories of all states parties to
+ICSID. 37  Like the New York Convention, the ICSID Convention has the vast number of 155 contracting states.
+11. 38
+In this chapter, we also briefly discuss a number of regional conventions. The application of these regional conventions is
+far more limited than the application of the New York and ICSID Conventions, not least because the New York Convention
+will apply to almost all disputes, thus superseding those regional conventions.
+Footnotes
+1
+For classic statements of this fundamental element of the agreement to arbitrate see, e.g., Mustill and Boyd, Commercial
+Arbitration (2nd edn, Butterworths, 1989), p. 47; see Esso/BHP v Plowman (1995) 11 Arb Intl 282, 283.
+2
+UNCITRAL Rules, Art. 34.2. The final and binding nature of the award is further underlined by the optional waiver
+language contained in the Annex to the UNCITRAL Rules, which states: ‘The parties hereby waive their right to any
+form of recourse against an award to any court or other competent authority, insofar as such waiver can validly be made
+under the applicable law.’
+3
+ICC Rules, Art. 35.6.
+4
+LCIA Rules, Art. 26.8.
+5
+See Queen Mary University of London, School of International Arbitration, and White & Case LLP, 2018 International
+Arbitration Survey: The Evolution of International Arbitration, available online at http://www.arbitration.qmul.ac.uk/
+media/arbitration/docs/2018-International-Arbitration-Survey-report.pdf, p. 7, which found that 64 per cent of
+arbitration users consider that ‘enforceability of awards’ is the most valuable characteristic of arbitration. See also
+Queen Mary University of London, School of International Arbitration, and Pricewaterhouse Coopers LLP, International
+Arbitration: Corporate Attitudes and Practices 2008, available online at http://www.pwc.co.uk/en_UK/uk/assets/pdf/
+
+Section A. - Background, UKBC-REDFERN 530638674 (2025)
+© 2025 Thomson Reuters.
+9
+pwc-international-arbitration-2008.pdf, pp. 8 and 10, which suggested that in only 11 per cent of cases did participants
+need to proceed to enforce an award and, in those cases, in less than 20 per cent did enforcing parties encounter difficulties
+in enforcement.
+6
+See, e.g., ‘The Guide to Challenging and Enforcing Arbitration Awards’, (2nd edn, 2021) General Editor J. William
+Rowley Q.C., Law Business Research Ltd., observing at p. xiv that ‘in the first three months of 2021, there has not
+been a day when the news reports have not headlined the attack on, survival of, or a successful or failed attempt to
+enforce an arbitral award’.
+7
+For instance, by the winding up of a company.
+8
+GAFTA Form 125, Arbitration Rules (effective for contracts dated from 1 September 2018 onwards), Art. 24.1.
+9
+In recent years, the record of overwhelming voluntary performance has been eroded somewhat. Nevertheless, voluntary
+performance remains the norm. For a description of the voluntary performance of ICSID awards, see Chapter 8.
+10
+For other examples of monetising an arbitral award, see ‘The Guide to Challenging and Enforcing Arbitration Awards’,
+2nd edn, General Editor J. William Rowley Q.C., Law Business Research Ltd., pp. 8-10.
+11
+See, e.g., ICC Rules, Art. 42 (‘the Court and the arbitral tribunal shall act in the spirit of the Rules and shall make every
+effort to make sure that the award is enforceable at law’); LCIA Rules, Art. 32.2 (providing that the tribunal ‘shall make
+every reasonable effort to ensure that any award is legally recognised and enforceable at the arbitral seat’); SIAC Rules,
+Art. 41.2 (providing that the tribunal ‘shall make every reasonable effort to ensure the fair, expeditious and economical
+conclusion of the arbitration and the enforceability of any Award’); WIPO Rules Arbitration Rules, Art. 64.e (providing
+that the ‘Tribunal may consult the Center with regard to matters of form, particularly to ensure the enforceability of
+the award’).
+12
+The successful party may sometimes seek recognition and enforcement of an award in a country in which the losing
+party may have no assets in order (so to speak) to obtain the imprimatur of a respected court upon the award.
+13
+Taurus Petroleum Ltd v State Oil Marketing Co. of the Ministry of Oil, Iraq [2017] UKSC 64.
+14
+As, e.g., under the Swiss Private International Law Act 1987 (Swiss PIL) (as amended in 2021), Ch. 12, s. 193. See
+also the Egyptian Ministerial Decree, made under s. 47 of the Egyptian Arbitration Law No. 27 of 1994 (as amended
+in 2017). Further, see also the Italian Code of Civil Procedure (Book 4, Title VIII, ‘Arbitration’), art. 825—as amended
+by Legislative Decree No. 40, 2 February 2006.
+15
+As, e.g., in England, under the English Arbitration Act 1996, s. 66. See also s. 35(2) of the Australian International
+Arbitration Act 1974, as amended. Further, see also s. 19 of the Singaporean International Arbitration Act 1994, as
+amended in 2020.
+16
+As, e.g., in France, under art. 1487 of the Code of Civil Procedure, as modified by Decree No. 2011-48 of 13 January
+2011. See also art. 66(d) of Law No. 30 of 1999 Concerning Arbitration and Alternative Dispute Resolution. Further,
+see also art. 518 of the Argentinian National Code of Civil and Commercial Procedure (Further Articles).
+17
+See ‘The Guide to Challenging and Enforcing Arbitration Awards’, General Editor J. William Rowley Q.C. (Global
+Arbitration Review, 2019) Law Business Research Ltd.
+18
+The second edition of the Guide includes a useful note on state immunity and responses to questions from lawyers in
+additional jurisdictions, including China.
+19
+Enforcement provisions in China, similarly, differentiate between purely domestic awards and those awards that have
+been made in the People’s Republic of China (PRC), but have a foreign element, such as (a) a foreign party, (b) the
+relevant relationship was formed, changed, or terminated in a foreign country, or (c) the subject matter of the dispute
+is situated outside the PRC.
+20
+The New York Convention, the full title of which is the ‘Convention on the Recognition and Enforcement of Foreign
+Arbitral Awards’ (emphasis added), also applies to arbitral awards that are ‘not considered as domestic awards in the
+State where their recognition and enforcement is sought’ (Art. 1(1)). This may lead to an award made in one state being
+enforced in that same state under the New York Convention, on the basis that it is not regarded as a domestic award.
+21
+In Arts I, IV, and V—but Art. V also speaks of ‘recognition or enforcement’ (emphasis added).
+22
+The usage is followed in the English Arbitration Act 1996, which distinguishes between the ‘recognition’ of a New
+York Convention award (s. 101(1)) and its ‘enforcement’ (s. 101(2)). The statute also makes this distinction in other
+relevant sections.
+23
+As happened, e.g., in Dallal v Bank Mellat [1986] QB 441, in which the English judge held that an award of the
+Iran–United States Claims Tribunal was not enforceable under the New York Convention, but should nevertheless be
+recognised as the valid judgment of a competent tribunal. The case is also reported in (1986) XI YBCA 547, at 553.
+24
+Although, in some countries, it may be a necessary step along the way to enforcement.
+25
+As expressed in the English Arbitration Act 1996, s. 101(1), the award is recognised ‘as binding on the persons as
+between whom it was made’, so that it may accordingly be used by these persons ‘by way of defence, set-off or otherwise’
+in any legal proceedings in England and Wales or Northern Ireland.
+
+Section A. - Background, UKBC-REDFERN 530638674 (2025)
+© 2025 Thomson Reuters.
+10
+26
+For a discussion of state immunity, see paragraphs 11.152ff.
+27
+Local law advice is also necessary to establish whether the local courts will have the necessary jurisdiction over the
+persons and assets against which enforcement is sought.
+28
+The chosen place of arbitration is a geographical location in a given country, or more usually, in a given town or city. The
+arbitration agreement may state e.g. that any arbitration is to take place in Paris, or that it is to take place in New York,
+or wherever it may be. But, as has been seen in Chapter 3, once chosen, the physical ‘place’ of arbitration becomes the
+juridical ‘seat’ of the arbitration—an event that may have important legal consequences, depending on the lex arbitri.
+29
+See paragraphs 11.34ff.
+30
+While the existence of assets within a particular jurisdiction is most commonly used as a basis for enforcement in
+that jurisdiction, jurisdiction ratione personae over a party can sometimes also be used to seize assets outside the
+jurisdiction in which enforcement is sought. The New York Court of Appeals has held, in Koehler v Bank of Bermuda
+Ltd, 12 NY.3d 533 (2009), that assets located outside New York can be ordered to be brought within the jurisdiction for
+enforcement purposes, as long as a New York court has jurisdiction over the owner or custodian of those assets: see
+Friedman, ‘Enforcement of international arbitration awards in New York: If you take them there, you can collect from
+anywhere’ (2011) 27 Arb Intl 575.
+31
+This Regulation replaces the Brussels Convention of 1968.
+32
+See Chapter 1.
+33
+Recognition and enforcement is likely to be easiest to obtain under an international convention where the forum state
+is bound by such a convention, but other methods of recognition and enforcement may be available, as discussed at
+paragraphs 11.139ff. The Guide to Challenging and Enforcing Arbitration Awards, referenced in paragraph 11.13, notes
+any applicable Conventions in the jurisdictions covered in Part II of the Guide.
+34
+See also English Limitation Act 1980, s. 7: ‘An action to enforce an award, where the submission is not by an instrument
+under seal, shall not be brought after the expiration of six years from the date on which the cause of action accrued.’ For
+India, the equivalent period is three years under the Limitation Act 1963, Sch. 1, para. 101. The Canadian Supreme Court
+has concluded that domestic limitation periods are applicable to enforcing awards under the New York Convention:
+Yugraneft Corporation v Rexx Management Corporation [2010] SCC 19.
+35
+See New York Convention, Art. V(1)(b); Model Law (as amended in 2006), Art. 36(1)(a)(ii).
+36
+For example, the ICC Rules, the LCIA Rules, UNCITRAL Rules, or ICSID Additional Facility Rules.
+37
+See ICSID Convention, Art. 54.
+End of Document
+© NIGEL BLACKABY KC, CONSTANTINE PARTASIDES
+KC, ALAN REDFERN

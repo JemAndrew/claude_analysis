@@ -1,0 +1,701 @@
+Section D. - Analysis of an Arbitration Agreement, UKBC-REDFERN 530638609 (2025)
+© 2025 Thomson Reuters.
+1
+Section D. - Analysis of an Arbitration Agreement
+Redfern and Hunter on International Arbitration 7th Ed.
+Mainwork
+Chapter 2 - Agreement to Arbitrate
+Section D. - Analysis of an Arbitration Agreement
+2. 70
+An arbitration agreement confers a mandate upon an arbitral tribunal to decide any and all of the disputes that come within the
+ambit of that agreement. It is important that an arbitral tribunal should not go beyond this mandate. 117  If that happens, there
+is a risk that the award will be refused recognition and enforcement under the provisions of the New York Convention. Article
+V(1)(c) provides that recognition and enforcement may be refused: ‘If the award deals with a difference not contemplated by
+or not falling within the terms of the submission to arbitration, or if it contains decisions on matters beyond the scope of the
+submission to arbitration [ … ].’ The Model Law contains an almost identical provision to the effect that an award may be
+set aside by the competent court, as well as refused recognition and enforcement, if it ‘deals with a dispute not contemplated
+by or not falling within the terms of the submission to arbitration or contains decisions on matters beyond the scope of the
+submission to arbitration’. 118
+2. 71
+There are, in general, three categories of claim that are potentially within the scope of an arbitration agreement. These are:
+ 
+• contractual claims (including claims incidental to the contract, such as quantum meruit);
+ 
+• claims in tort; and
+ 
+• statutory claims.
+2. 72
+The first two are self-explanatory. The third relates to those claims that arise out of legislation that might bind the parties, such
+as securities and antitrust legislation. In all three categories of claim, it is necessary to determine whether a particular claim or
+defence has a sufficient connection with the contract to be covered by the arbitration agreement on its terms. 119  Likewise, in
+relation to statutory claims, the arbitral tribunal or a judge may need to examine a claim or defence in relation to the wording
+of the arbitration agreement in order to decide whether there is a sufficiently close connection. In all such cases, the form of
+words used in the arbitration agreement will be important.
+2. 73
+It is important to ensure that the wording adopted in an arbitration agreement is adequate to fulfil the intentions of the parties.
+Usually, when parties agree to resolve any disputes between them by arbitration, they intend such recourse to arbitration to be
+mandatory, rather than optional. Accordingly, the arbitration agreement should be drafted so as to make clear that resolving
+disputes by arbitration is not only the parties’ right, but also their obligation. 120  Similarly, where parties include an arbitration
+agreement in their contract, they usually intend to resolve all disputes between them by this method (unless a specific exception
+is made). Accordingly, the arbitration agreement should be drafted in broad, inclusionary terms, rather than referring only certain
+categories of dispute to arbitration and leaving others to the jurisdiction of national courts.
+2. 74
+Fortunately, most national courts now regard arbitration as an appropriate way of resolving international commercial disputes
+and, accordingly, seek to give effect to arbitration agreements wherever possible, 121  rather than seek to narrow the scope of
+the agreement so as to preserve the court’s jurisdiction. Thus the English Court of Appeal referred to a ‘presumption of one-
+stop arbitration’ in the interpretation of the arbitration agreement and this approach is increasingly reflected in law and practice
+around the world. 122  Similarly, the Swiss Federal Tribunal tends to interpret arbitration clauses broadly: a general reference
+to ‘disputes related to the agreement’ may extend to claims arising out of ancillary or connected contracts, provided that those
+contracts do not contain different dispute resolution clauses. 123
+
+Section D. - Analysis of an Arbitration Agreement, UKBC-REDFERN 530638609 (2025)
+© 2025 Thomson Reuters.
+2
+2. 75
+General words such as ‘claims’, ‘differences’, and ‘disputes’ have been held by the English courts to encompass a wide
+jurisdiction in the context of the particular agreement in question. 124  In the United States, the words ‘controversies or claims’
+have similarly been held to have a wide meaning, and if other words are used, it may be considered that the parties intended
+some limitation on the kind of disputes referred to arbitration. 125
+2. 76
+Linking words such as ‘in connection with’, ‘in relation to’, ‘in respect of’, ‘with regard to’, ‘under’, 126  and ‘arising out of’ 127
+may also be important in any dispute as to the scope of an arbitration agreement. However, in Fiona Trust, 128  the English
+courts drew a line under this debate as a matter of English law. Arriving at a broad interpretation of the arbitration clause in
+question, the Court of Appeal held as follows:
+For our part we consider that the time has now come for a line of some sort to be drawn and a fresh start made
+at any rate for cases arising in an international commercial context. Ordinary businessmen would be surprised at
+the nice distinctions drawn in the cases and the time taken up by argument in debating whether a particular case
+falls within one set of words or another very similar set of words [ … ] If any businessman did want to exclude
+disputes about the validity of a contract, it would be comparatively simple to say so. 129
+2. 77
+Finally, when considering the scope of the arbitration agreement and in addition to the form of words used, the parties, by their
+conduct in referring a matter to arbitration, may be taken as impliedly agreeing to confer on the arbitrator jurisdiction beyond
+that which would have existed pursuant to the terms of the arbitration clause alone. Accordingly, a claim in tort that may not
+be within the scope of the arbitration clause may nevertheless come within an arbitrator’s jurisdiction where the parties address
+that claim in the arbitral proceedings, without reservation as to jurisdiction. 130
+2. 78
+There is no shortage of learned commentaries on the drafting of an arbitration agreement. 131  However, most international
+commercial arbitrations usually take place pursuant to a standard form arbitration clause, recommended either by the arbitral
+institution to which they refer, such as the ICC, the LCIA and the SIAC, or by UNCITRAL. Any subsequent arbitration will
+then take place according to the rules of the institution concerned or of UNCITRAL, and these rules will generally be adequate
+to guide the arbitral process from beginning to end, including (if necessary) the constitution of the arbitral tribunal, the filling
+of any vacancies, the exchange of written submissions, and the holding of hearings. Where the parties wish to provide for ad
+hoc arbitration, but not to make use of the UNCITRAL Rules, it will generally be sufficient to adopt a clause that makes it clear
+that all disputes are to be referred to arbitration. Also, the clause should specify that the arbitration will have a seat in a state
+that has a modern law of arbitration, which, if necessary, will provide the necessary support for the arbitral tribunal. In France,
+for example, a simple clause such as ‘Resolution of disputes: arbitration, Paris’, whilst not recommended, would be held to be
+a valid submission to arbitration in an international commercial contract. 132  The French law on international arbitration would
+then give such support to the arbitral process as required, including appointment of the arbitral tribunal under Articles 1452
+and 1453 of the French Code of Civil Procedure.
+2. 79
+Arbitration clauses are usually drawn in wide terms, to ensure that all disputes that arise out of or in connection with a particular
+contract or contractual relationship are referred to arbitration. The UNCITRAL model refers to ‘[a]ny dispute, controversy or
+claim arising out of or relating to this contract, or the breach, termination or invalidity thereof’. Similar language is used in
+the ICC, SIAC, and LCIA model forms.
+2. 80
+Where a model clause is used, it is sensible to supplement it including by reference to the number of arbitrators, the legal place
+or seat of arbitration, and the language of the arbitration. Otherwise any problems that arise in these respects and on which the
+parties cannot agree will have to be resolved by the relevant arbitral institution or by the arbitral tribunal itself.
+
+Section D. - Analysis of an Arbitration Agreement, UKBC-REDFERN 530638609 (2025)
+© 2025 Thomson Reuters.
+3
+(a) Key elements
+2. 81
+There follows a note of the key elements of an arbitration clause, including those that may usefully supplement a model clause.
+Since these key elements have already been discussed, either in this or the preceding chapter, the note is brief.
+(i) A valid arbitration agreement
+2. 82
+First, there must be a valid arbitration agreement. In particular, it must be made clear, as it is in the model clauses, that the
+parties intend that any and all disputes between them shall be finally resolved by arbitration. Examples of defective clauses
+in which such an intention was not made clear are given later in this chapter.
+(ii) Number of arbitrators
+2. 83
+In an international arbitration, there should be an uneven number of arbitrators, and it is suggested that, in general, a choice
+should be made between one or three. 133  The dated system of appointing only two arbitrators, with an ‘umpire’ or ‘referee’
+to adjudicate between them if they cannot agree, may be appropriate for arbitrations within a defined trade or commodity
+association, but is almost unheard of in mainstream international arbitration today.
+(iii) Constitution of the arbitral tribunal
+2. 84
+This important subject is dealt with in Chapter 4.
+(iv) Ad hoc or institutional arbitration
+2. 85
+Whether the tribunal will be ad hoc or institutional is one of the most important decisions that has to be taken; and ironically,
+it is one that has to be taken at the wrong time. In an ideal world, it would be possible to wait until any disputes had arisen
+and then decide, according to their importance and complexity, how they should best be handled. But by that stage the parties
+may not be talking to each other—or, at best, will be doing so only through their lawyers. Accordingly, good sense dictates
+that the agreement to arbitrate should be negotiated and concluded at the same time as the contract to which it relates. As one
+commentator has expressed it: ‘The primary objective, in inserting an arbitration clause in a contract, is to ensure that when
+the time comes—that is, when a dispute parts the parties—neither one will be able to escape arbitration [ … ].’ 134
+2. 86
+The choice between ad hoc and institutional arbitration has already been considered in Chapter 1, 135  and need not be repeated
+here. The criteria by which an arbitral institution should be judged are also considered in that chapter. 136
+
+Section D. - Analysis of an Arbitration Agreement, UKBC-REDFERN 530638609 (2025)
+© 2025 Thomson Reuters.
+4
+(v) Filling vacancies in the tribunal
+2. 87
+During the course of an arbitration, it sometimes becomes necessary to replace an arbitrator, whether because his or her
+appointment has been successfully challenged, or because he or she has died, has resigned, or become incapacitated. The
+rules of the established arbitral institutions contain comprehensive provisions to cover such contingencies, 137  as do modern
+laws of arbitration. 138  Where there is a submission agreement that is intended, as far as possible, to be self-contained, 139
+provisions for filling any vacancies in the tribunal must be spelled out in some detail.
+(vi) Place of arbitration
+2. 88
+The place (or legal seat) of arbitration is another decision of major importance. It is the law of that place which governs the
+arbitral proceedings (and any challenge to the ultimate award). This is fully considered in Chapter 3. It is advisable for the
+parties themselves to choose a suitable place of arbitration, rather than to leave the choice to others. In doing so, as discussed
+in Chapter 3, they should locate their arbitration in a state the laws of which are adapted to the needs of modern international
+commercial arbitration and which is a party to the New York Convention. Insofar as they may be likely to privilege the
+holding of any physical hearings in the jurisdiction, they should also take account of practical matters, such as distance,
+availability of adequate hearing rooms, backup services, and so on.
+(vii) Governing law
+2. 89
+The parties’ contract should contain a choice of law clause and they should also consider making express provision for the
+governing law of the arbitration agreement.
+2. 90
+In most jurisdictions, where parties have not expressly agreed on a governing law for their arbitration agreement, their choice
+of law for the main contract would be taken as a strong indication that they wished to adopt the same law for the arbitration
+agreement. Where the contract did not contain a ‘choice of law’ clause (or where the arbitration agreement was not part of
+that contract), the court would be likely to turn to the parties’ choice of seat, in order to determine the law with which the
+arbitration agreement had its ‘closest and most real connection’. This was the approach adopted, for example, by the English
+Court of Appeal in Sulamérica. 140
+2. 91
+In the recent case of Enka Insaat ve Sanayi AS, the UK Supreme Court revisited this issue and held (by majority) that there
+were good reasons—namely legal certainty, consistency, coherence, and the avoidance of complexity and artificiality—to
+favour a rule whereby an agreement on a choice of law to govern the main contract should be construed as applying also to
+the arbitration agreement, even if a different country or national system of laws has been nominated as the seat. 141  However,
+where parties have made no express or implied decision as to the law that is to govern their contract, the arbitration agreement
+will be governed by the law with which it is most closely connected, which typically will be the law of the seat. 142
+2. 92
+In the light of the complexity that may arise from the absence of an explicit designation, it is advisable for parties to agree
+expressly a governing law not only in relation to the main contract but also in relation to the arbitration agreement itself.
+This topic is discussed in full in Chapter 3. 143
+
+Section D. - Analysis of an Arbitration Agreement, UKBC-REDFERN 530638609 (2025)
+© 2025 Thomson Reuters.
+5
+(viii) Default clauses
+2. 93
+It is important that the failure or refusal of one of the parties to take part should not frustrate an arbitration. The defaulting party
+is usually the respondent, who sees that it has nothing to win and may have much to lose by taking part in proceedings that
+may lead to an award against it. Exceptionally, however, a claimant may lose heart in the face of a substantial counterclaim.
+It may then be the respondent who wishes to proceed. The rules of the arbitral institutions usually contain adequate default
+provisions; so too does Article 30 of the UNCITRAL Rules, which provides:
+1. If, within the period of time fixed by these Rules or the arbitral tribunal, without showing sufficient
+cause:
+ 
+(a) The claimant has failed to communicate its statement of claim, the arbitral tribunal shall
+issue an order for the termination of the arbitral proceedings, unless there are remaining
+matters that may need to be decided and the arbitral tribunal considers it appropriate to do so;
+ 
+(b) The respondent has failed to communicate its response to the notice of arbitration or its
+statement of defence, the arbitral tribunal shall order that the proceedings continue, without
+treating such failure in itself as an admission of the claimant’s allegations; the provisions of
+this subparagraph also apply to a claimant’s failure to submit a defence to a counterclaim or
+to a claim for the purpose of a set-off.
+2. If a party, duly notified under these Rules, fails to appear at a hearing, without showing sufficient cause
+for such failure, the arbitral tribunal may proceed with the arbitration.
+3. If a party, duly invited by the arbitral tribunal to produce documents, exhibits or other evidence, fails to
+do so within the established period of time, without showing sufficient cause for such failure, the arbitral
+tribunal may make the award on the evidence before it.
+Where there is no default clause in the relevant rules of arbitration, it is sensible to include one in the arbitration clause.
+(ix) Language
+2. 94
+It is both customary and logical for the language of the arbitration to be the language of the contract. This will be the usual
+position in an institutional arbitration, although the arbitral tribunal usually has discretion to direct that other languages may be
+used or that documents may be admitted in their original language without the need for a translation. Thus, by way of notable
+example, Article 20 of the ICC Rules expressly provides that, ‘[i]n the absence of an agreement by the parties, the arbitral
+tribunal shall determine the language or languages of the arbitration, due regard being given to all relevant circumstances,
+including the language of the contract’.
+2. 95
+Sometimes, a contract is made in two languages, each to be of equal authenticity. In such cases, an attempt should be made
+to agree a single language for the arbitration as simultaneous interpretation at the hearing and bilingual transcripts greatly
+increase costs. However, it is often the case that the very reason the contract is in two languages is because the parties speak
+different languages and have each required a version in their own language. As such, they are unlikely to renounce their right
+to proceed in their own language. 144
+
+Section D. - Analysis of an Arbitration Agreement, UKBC-REDFERN 530638609 (2025)
+© 2025 Thomson Reuters.
+6
+(x) Multi-tier clauses
+2. 96
+Multi-tier dispute resolution clauses have already been described in Chapter 1. The evidence suggests that they are
+increasingly used, particularly in long-term contracts, such as construction contracts, where it is important that any disputes
+should be resolved as quickly as possible and without holding up work under the contract. 145  In pursuance of this objective,
+procedures have been developed which often produce more tiers than can be found on a modest wedding cake. There may,
+for instance, be a provision for ‘mandatory discussions’ which obliges the parties’ senior management to talk to each other in
+order to try to reach a settlement of their dispute. In case this fails, there will then be a provision for some form of Alternative
+Dispute Resolution (ADR). This may involve, for example, ‘early neutral evaluation’, whereby an expert is appointed to give
+an opinion on the dispute which may lead to a settlement. Additionally, or alternatively, there may be provision for the dispute
+to be referred to mediation, in which a skilled mediator will consider the parties’ arguments, discuss the position with them,
+and endeavour to persuade them to agree to settle their dispute. If this fails, there is generally a provision for the dispute to
+be referred to arbitration which, unlike mediation, will result in a binding decision.
+2. 97
+This is the key point. Parties are rightly being encouraged to insert dispute resolution procedures into their commercial
+agreements, particularly for those involving large construction and engineering projects. These will almost inevitably involve
+some form of ADR, whether it is expert evaluation, mediation, or an interim decision by a Dispute Resolution Board or a
+Panel of Experts (as in the contract for the construction of the Channel Tunnel between France and England). However, in
+case a mediation does not succeed, or a party is dissatisfied with the decision of a Dispute Resolution Board, a Panel of
+Experts, or some other interim adjudicator, there should be provision for final recourse to arbitration. This means that, if
+necessary, the parties will be able to obtain a final and binding decision on their dispute or disputes by a tribunal that will
+not be operating under the constraint of being obliged to issue a rapid, interim decision in order to enable work or the flow
+of supplies to continue.
+2. 98
+To be enforceable, a contractual clause must be reasonably certain. Some ADR clauses have failed this test. In Tang Chung
+Wah, 146  for example, the English High Court refused to enforce a multi-tier clause on the basis that it was ‘too equivocal’
+and ‘too nebulous’, and contained no ‘guidance as to the quality or nature of the attempts to be made to resolve a dispute’. 147
+The Swiss courts adopted a similar approach in X GmbH, 148  in which the multi-tier clause did not provide any procedural
+framework for negotiations and did not prescribe a time limit for the initiation of conciliation proceedings.
+2. 99
+Courts in other jurisdictions are more readily prepared to give effect to an agreement to engage in a non-binding ADR process.
+The Australian courts, for instance, consider that an agreement to negotiate in good faith entails an undertaking to behave
+in a particular manner and is therefore more than a mere ‘agreement to agree’. 149  Similarly, the Singapore High Court has
+held that a bare agreement to mediate is valid and enforceable, referring to the traditional Asian value of promoting friendly
+negotiations and settlement whenever possible. 150
+2. 100
+Irrespective of the applicable law, care should always be taken when drafting multi-tier clauses to define the ADR procedure
+clearly (for example stipulating a specific time period, such as thirty days, for negotiations between senior management),
+along with the parties’ respective obligations. 151
+(xi) Sole option clauses
+2. 101
+
+Section D. - Analysis of an Arbitration Agreement, UKBC-REDFERN 530638609 (2025)
+© 2025 Thomson Reuters.
+7
+Under ‘sole option’, or ‘unilateral option’ clauses, one party has a choice as to whether to bring a claim in a specified forum
+other than the dispute resolution forum that binds the other party.
+2. 102
+The English courts have consistently ruled that sole option clauses are valid and enforceable under English law. In Law
+Debenture Trust, 152  the relevant legal instruments provided that disputes would be resolved by the English courts but the
+bondholders would have the right to refer a claim to arbitration if they so wished. The court said that it was not correct to
+argue that the provisions of such a clause ‘are somehow less than even handed in any relevant way. They give an additional
+advantage to one party, but so do many contractual provisions.’ 153  It may be thought that when a clause in a contract is
+concerned with access to justice, whether that of a court or of an arbitral tribunal, it should not give an additional advantage
+to one party: access to justice would seem to merit a level playing field. Nevertheless, courts in other jurisdictions have ruled
+that sole option clauses are valid and enforceable under their domestic laws. 154
+2. 103
+In France, for example, a sole option clause is valid and enforceable so long as it either identifies the additional forum to which
+one party may refer a dispute or, in the alternative, specifies criteria by which such forum can be objectively determined. 155
+2. 104
+In Russia, however, sole option clauses have been held to be unenforceable. In Russian Telephone Co. 156  and Emerging
+Markets Structured Products, 157  the Presidium of the Supreme Arbitrazh Court held that arbitration agreements that gave
+one party the sole option to refer disputes to the courts instead of arbitration violated the principle of procedural equality
+between litigating parties. Different consequences, however, followed in each case. In the former case, the Court construed
+the clause so that both parties had the choice to either arbitrate or litigate. 158  In the latter case, the Court held that the
+dispute resolution clause in its entirety was invalid. In the light of these contrasting approaches, the Presidium of the Supreme
+Arbitrazh Court took the opportunity to clarify the issue in 2018, determining that sole option clauses violate the principle of
+procedural equality, and as a consequence each party should be deemed to have the same rights to choose the forum agreed
+in such a clause. 159
+(xii) Other procedural matters
+2. 105
+In general, other procedural matters only need to be covered in a clause providing for ad hoc arbitration, or where the parties
+wish to deviate in certain respects from the rules that they have adopted in their arbitration clause. An example is where the
+parties adopt the UNCITRAL Rules, but wish the presiding arbitrator to make an award as if he or she were sole arbitrator
+in the event that a majority award is not possible. 160
+2. 106
+The parties may also wish to confer special powers on the arbitral tribunal that do not normally exist under the law governing
+the arbitration or under the rules of the relevant arbitral institution, if any. 161  These additional powers may enable the arbitral
+tribunal to grant remedies that otherwise might not be available under the applicable law. For example, power may be given
+to order a party to provide security in relation to an amount in dispute, either by paying it into a special account established
+in the name of the arbitral tribunal or into some other blocked escrow account. 162
+(b) Separability
+2. 107
+The concept of the separability of the arbitration clause 163  is a convenient fiction, which is both interesting in theory and useful
+in practice. 164  It means that the arbitration clause in a contract (unlike any other clause) is treated as being independent of
+
+Section D. - Analysis of an Arbitration Agreement, UKBC-REDFERN 530638609 (2025)
+© 2025 Thomson Reuters.
+8
+the main contract of which (like the other clauses) it forms part and so it survives the termination of that contract. Indeed, it
+would be self-defeating if a breach of the main contract or a claim that it was void or voidable was sufficient to terminate the
+arbitration clause as well. This is the type of situation in which the arbitration clause is most needed.
+2. 108
+The concept of the ‘separability’ of an arbitration clause thus ensures that if, for example, one party claims that there has been
+a total breach of contract by the other, that contract is not destroyed for all purposes. Instead, in the words of a classic authority
+on the subject:
+It survives for the purpose of measuring the claims arising out of the breach, and the arbitration clause survives
+for determining the mode of their settlement. The purposes of the contract have failed, but the arbitration clause
+is not one of the purposes of the contract. 165
+2. 109
+A better (and non-fictitious) way of analysing the position is that there are, in fact, two separate contracts. There is the primary,
+or main contract, which sets out the financial or commercial obligations of the parties; and there is a secondary, or collateral,
+contract which contains the obligation to resolve by arbitration any disputes arising from that commercial relationship. This
+secondary contract may never come into operation but if it does, it will form the basis for the appointment of an arbitral tribunal
+and for the resolution of any dispute arising out of the main contract.
+2. 110
+The doctrine of separability is endorsed by institutional and international rules of arbitration, such as those of UNCITRAL,
+which state in the context of pleas as to the jurisdiction of an arbitral tribunal that ‘an arbitration clause that forms part of a
+contract shall be treated as an agreement independent of the other terms of the contract’. 166  Following the provisions of the
+UNCITRAL Rules, Article 16(1) of the Model Law provides that:
+The arbitral tribunal may rule on its own jurisdiction, including any objections with respect to the existence or
+validity of the arbitration agreement. For that purpose, an arbitration clause which forms part of a contract shall
+be treated as an agreement independent of the other terms of the contract. A decision by the arbitral tribunal that
+the contract is null and void shall not entail ipso jure the invalidity of the arbitration clause.
+2. 111
+Similarly, Article 23.2 of the LCIA Rules stipulates that, for the purpose of a ruling on jurisdiction:
+[A]n arbitration clause which forms or was intended to form part of another agreement shall be treated as
+an arbitration agreement independent of that other agreement. A decision by the Arbitral Tribunal that such
+other agreement is non-existent, invalid or ineffective shall not entail (of itself) the non-existence, invalidity or
+ineffectiveness of the arbitration clause. 167
+2. 112
+In the Gosset case, 168  the French Court of Cassation recognised the doctrine of separability in very broad terms, as follows:
+In international arbitration, the agreement to arbitrate, whether concluded separately or included in the contract to
+which it relates, is always save in exceptional circumstances [ … ] completely autonomous in law, which excludes
+the possibility of it being affected by the possible invalidity of the main contract.
+2. 113
+Five years later, the US Supreme Court also recognised the separability of the arbitration clause in the Prima Paint case, 169  and
+modern laws on arbitration confirm the concept. Swiss law, for example, provides that ‘[t]he validity of an arbitration agreement
+cannot be contested on the ground that the main contract may not be valid’. 170
+
+Section D. - Analysis of an Arbitration Agreement, UKBC-REDFERN 530638609 (2025)
+© 2025 Thomson Reuters.
+9
+2. 114
+More recently, the Chinese courts have also accepted that:
+Where the main contract is not concluded (null) or does not come into effect after conclusion (void), it will not
+influence the effect of the arbitration clause agreed by the parties, as the arbitration clause is completely separable
+from the main contract. 171
+2. 115
+An increasing number of countries 172  have made their position clear by making the separability of the arbitration clause part
+of their laws on arbitration. 173  Inversely, the number of states in which the concept has not yet been accepted is now much
+diminished. 174
+2. 116
+An independent (or autonomous) arbitration clause thus gives the arbitral tribunal a basis on which to decide on its own
+jurisdiction, even if it is alleged that the main contract has been terminated by performance or by some intervening event. Some
+laws and rules go further, to establish that the arbitration clause will survive even if the main contract that contains it proves to
+be null and void. 175  However, this must depend on the reason for which the contract is found to be null and void (that is, is it
+a reason that will also affect the ‘separate’ arbitration agreement?), and whether it is void ab initio.
+2. 117
+While the doctrine of separability is now accepted in principle in all developed arbitral jurisdictions, application of the doctrine
+continues to vary (even within jurisdictions) in circumstances in which the main contract is argued never to have come into
+existence at all.
+2. 118
+By way of example, section 7 of the English Arbitration Act 1996 provides that an arbitration agreement contained in another
+agreement ‘shall not be regarded as invalid, non-existent or ineffective because that other agreement [ … ] did not come
+into existence’. 176  The doctrine received approval and confirmation by the English courts in Fiona Trust, 177  in which the
+House of Lords (now the UK Supreme Court), confirming the decision of the Court of Appeal, held that the arbitrators, not
+the courts, should determine whether the underlying contract was void for illegality, unless the illegality was directed at the
+arbitration clause in particular. 178  By way of comparison, the courts in China also regularly apply the principle in accordance
+with international practice. 179
+2. 119
+It will be appreciated from what has been said that there is a direct connection between the autonomy of the arbitration clause
+and the power (or competence) of an arbitral tribunal to decide upon its own jurisdiction (or competence). This power (that of
+‘competence/competence’, as it is sometimes known) is discussed in Chapter 5, which deals with jurisdiction and other issues.
+(c) Summary
+2. 120
+As already stated, most arbitrations take place pursuant to an arbitration clause in a ‘contract’. Where the parties include the
+model clause recommended by a particular arbitral institution, any dispute between them will be submitted to arbitration under
+the rules of that institution. Where the parties decide that the services of an arbitral institution are unlikely to be required, but that
+they would nevertheless like to adopt an existing set of rules, they should incorporate the recommended UNCITRAL arbitration
+clause into the contract.
+2. 121
+
+Section D. - Analysis of an Arbitration Agreement, UKBC-REDFERN 530638609 (2025)
+© 2025 Thomson Reuters.
+10
+Where such arbitration clauses are adopted, most national courts will recognise and give effect to the parties’ wishes to arbitrate
+any disputes between them. These model clauses bring with them a set of rules that are self-sufficient, and which should be
+enough to guide the arbitral tribunal and the parties from the beginning to the end of the arbitral process.
+2. 122
+Nonetheless, it would be advisable to add to the model clause at least three of the basic elements of an arbitration agreement
+discussed—namely, the number of arbitrators, the place of arbitration, and the governing law of the contract. It may also be, or
+may become, necessary to identify the law governing the arbitration agreement. 180
+2. 123
+If the parties do not require the services of an arbitral institution and do not wish to adopt the UNCITRAL Rules, a simple
+submission to arbitration—adapted from one of the model clauses—would be sufficient in theory. In practice, however, it is
+sensible not only to provide for the number of arbitrators, the place of arbitration, and the governing law, but also to consider
+such provisions as those relating to the establishment of the arbitral tribunal, the filling of vacancies, and the failure or refusal
+of a party to take part in the arbitration.
+2. 124
+That the parties have agreed in their arbitration clause to an arbitration under institutional rules does not prevent them from
+agreeing, when a dispute has arisen, to a different method of resolving the dispute. Thus they may switch from, say, an ICC
+arbitration to an ad hoc arbitration or vice versa—but if they do so, a new arbitration agreement should be made, submitting
+the existing dispute (by way of submission agreement) to arbitration. 181
+Footnotes
+117
+The poet’s reflection that ‘a man’s reach should exceed his grasp, or what’s a heaven for?’ seems not to be apposite for
+an international arbitrator: Browning, ‘Andrea del Sarto’ (1855), line 97.
+118
+Model Law, Arts 34(2)(iii) and 36(i)(a)(iii). The reference to a ‘submission to arbitration’ would include an arbitration
+clause and, e.g., the terms of reference in an ICC arbitration (as to which, see Chapter 1). There is a saving provision
+under both the Convention and the Model Law to the effect that if it is possible to separate the matters that were submitted
+to arbitration from those that were not, the award may be saved in respect of the matters that were submitted.
+119
+For example, the Austrian Supreme Court held that ‘disputes resulting from the agreement’ does not cover non-
+contractual claims based on competition law that are connected to the underlying contract in no more than a ‘functionally
+illustrative’ way: Decision of the Supreme Court (Oberster Gerichtshof) No. 4 Ob. 80/08f, 26 August 2008, discussed
+in (2009) 12 Intl Arb L Rev 40 (emphasis added).
+120
+As a matter of Indian case law, arbitration clauses that stated that ‘parties may refer disputes to arbitration’ have been
+held in the past to be optional rather than mandatory, thereby requiring the parties to agree afresh (by way of a submission
+agreement) to refer a particular dispute to arbitration: see the judgment of the Indian Supreme Court in Wellington
+Associates Ltd v Mr Kirit Mehta (2000) 4 SCC 272. See also the judgment of the Punjab and Haryana High Court in
+Sudarshan Chopra and ors v Company Law Board and ors (2004) 2 Arb LR 241.
+121
+A striking illustration of this policy can be seen in the decision of the US Federal District Court in Warnes SA v Harvic
+International Ltd, 3 December 1993, summarised in [1994] ADRLJ 65. The arbitration clause referred to the ‘New
+York Commercial Arbitration Association’, a non-existent association. The court held that it was clear that the parties
+intended to arbitrate and that an agreement on a non-existent forum was the equivalent of an agreement to arbitrate that
+does not specify a forum. Accordingly, the parties were directed to arbitrate in the AAA system. See also KVC Rice
+Intertrade Co Ltd v Asian Mineral Resources Pte and another suit [2017] SGHC 32, in which the Singapore High Court
+found that two arbitration clauses, in two contracts, evinced a clear intention to settle any disputes ‘by arbitration’ and
+were thus valid and binding, notwithstanding the fact that they designated neither the seat nor the governing law nor
+the rules for the arbitration.
+122
+See Fiona Trust & Holding Corporation v Yuri Privalov [2007] EWCA Civ 20, at [19]. This pro-arbitration approach was
+endorsed by the House of Lords: Premium Nafta Products Ltd (20th Defendant) and ors v Fili Shipping Co. Ltd and ors
+[2007] UKHL 40. Recent English cases confirm that, in circumstances where a dispute involves multiple, inter-related
+contracts, each containing a different dispute resolution clause, the presumption articulated in Fiona Trust provides a
+
+Section D. - Analysis of an Arbitration Agreement, UKBC-REDFERN 530638609 (2025)
+© 2025 Thomson Reuters.
+11
+useful starting point, but is not decisive. In such circumstances, the English courts will consider which of the contracts
+pertains to the ‘centre of gravity’ of the dispute and, similarly, which dispute resolution clause is ‘closer to the claim’,
+in order to decide: Trust Risk Group SpA v Am Trust Europe Ltd [2015] EWCA Civ 437, at [48], followed in Costain
+Ltd v Tarmac Holdings Ltd [2017] 1 CLC 491 (QB), at [30] and [39]. See also Deutsche Bank AG v Comune di Savona
+[2018] EWCA Civ 1740, at [3].
+123
+See, e.g., Decision No. 4A-103/2011, 20 September 2011, in which an arbitration clause contained in a licence agreement
+was held to be wide enough to cover a dispute arising out of a connected sale-and-purchase agreement.
+124
+See, e.g., Woolf v Collis Removal Service [1948] 1 KB 11, 18; F & G Sykes (Wessex) Ltd v Fine Fare Ltd [1967] 1
+Lloyd’s Rep 53; The Angelic Grace [1995] 1 Lloyd’s Rep 87 (CA).
+125
+In the case of Prima Paint Corporation v Conklin Mfg Co., 388 US 395, 87 S.Ct. 1801, 18 L.Ed.2d 1270 (1967), the
+words ‘any controversy or claim arising out of or relating to this agreement’ were described as a broad arbitration clause;
+in Scherk v Alberto-Culver, 417 US 506 (1974), ‘any controversy or claim’ was held to include statutory claims under
+the Securities Exchange Act of 1934.
+126
+For example, in Onex Corporation v Ball Corporation, 24 January 1994, summarised in [1996] ADRLJ 193 and (1995)
+XX YBCA 275, the Ontario Court of Justice held that a claim for rectification was a dispute arising ‘under’ the contract.
+127
+See The Angelic Grace [1995] 1 Lloyd’s Rep 87 (CA). In the United States, a decision of the Fifth Circuit Court of
+Appeals on 13 May 1998 evidenced an equally broad approach to the construction of a clause that referred to arbitration
+‘any dispute, controversy or claim arising out of or in relation to or in connection with “the agreement”’: Pennzoil
+Exploration and Production Co. v Ramco Energy Ltd 139 F.3d 1061, 1068 (5th Cir. 1998). The approach of the German
+courts appears to be much the same: see Oberlandesgericht, Frankfurt, 24 September 1985, summarised in (1990) XV
+YBCA 666, concerning the expression ‘arising out of’. A similarly wide interpretation was given to the term ‘concerning’
+in Fletamentos Maritimos SA v Effjohn International BV [1996] 2 Lloyd’s Rep 304.
+128
+Fiona Trust & Holding Corporation v Yuri Privalov [2007] EWCA Civ 20.
+129
+Ibid., at [17]. This was expressly endorsed by the House of Lords in its rejection of the appeal: Premium Nafta Products
+Ltd (20th Defendant) and ors v Fili Shipping Co. Ltd and ors [2007] UKHL 40, at [13]. The English courts have followed
+this approach in subsequent cases: see, e.g., Skype Technologies SA v Joltid Ltd [2009] EWHC 2783 (Ch); Starlight
+Shipping Co. v Allianz Marine & Aviation Versicherungs AG [2011] EWHC 3381 (Comm); Black Diamond Offshore
+Ltd v Fomento DE Construcciones Y Contratas SA [2015] EWHC 1035 (Ch), at [19] (holding that jurisdiction clauses
+must be construed ‘widely and generously’ with a presumption in favour of ‘one-stop shopping’ for dispute resolution);
+Dreymoor Fertilisers Overseas PTE Ltd v Eurochem Trading GmbH [2018] EWHC 909 (Comm), at [53] (holding that a
+clause referring to ‘any dispute or claim arising out of this Contract’ can refer to disputes which relate to non-contractual
+claims, such as pre-contractual misrepresentation or bribery inducing the contract).
+130
+See, e.g., The Almare Prima [1989] 2 Lloyd’s Rep 376.
+131
+See, in particular, Gélinas, ‘Arbitration clauses: Achieving effectiveness’ (1998) 9 ICCA Congress Series 47. See also
+Paulsson, Rawding, and Reed (eds) The Freshfields Guide to Arbitration (Kluwer Law International, 2010); Park, ‘When
+and why arbitration matters’, in Hartswell (ed.) The Commercial Way to Justice (Kluwer Law International, 1997), pp.
+73–99, at p. 96; Derains, ‘Rédaction de la clause d’arbitrage’, in Desbois (ed.) Le Droites Affaires Propriété Intellectuelle
+(Librairies Techniques, 1987), p. 15. Also worth mentioning is Bernadini, ‘The arbitration clause of an international
+contract’ (1992) 9 J Intl Arb 45; Ball, ‘Just do it: Drafting the arbitration clause in an international agreement’ (1993)
+10 J Intl Arb 29; Debevoise and Plimpton, Annotated Model Arbitration Clauses for International Contracts (Debevoise
+& Plimpton, 1996).
+132
+Gaillard and Savage (eds) Fouchard Gaillard Goldman on International Commercial Arbitration (Kluwer Law
+International, 1999), para. 486; cf. the decision to similar effect in Arab African Energy Corporation Ltd v Olieprodukten
+Nederland BV [1983] 2 Lloyd’s Rep 419.
+133
+See Chapter 4, paragraph 4.22.
+134
+Gélinas, ‘Arbitration clauses: Achieving effectiveness’ (1998) 9 ICCA Congress Series 47, at 51.
+135
+See paragraphs 1.150ff.
+136
+See paragraphs 1.162ff.
+137
+See, e.g., the ICC Rules, Art. 15; LCIA Rules, Arts 10 and 11; SIAC Rules, r. 17.
+138
+See, e.g., the English Arbitration Act 1996, s. 27.
+139
+In the sense that it will not need to be supplemented by the applicable law.
+140
+Sulamérica CIA Nacional de Seguros SA v Enesa Engenharia SA [2012] EWCA Civ 638. The Court of Appeal’s decision
+in Sulamérica was followed by the High Court in Habas Sinai Ve Tibbi Gazlar Istihsal Endustrisi AS v VSC Steel Co.
+Ltd [2013] EWHC 4071 (Comm).
+141
+Enka Insaat Ve Sanayi AS v OOO Insurance Company Chubb [2020] UKSC 38, at [54].
+
+Section D. - Analysis of an Arbitration Agreement, UKBC-REDFERN 530638609 (2025)
+© 2025 Thomson Reuters.
+12
+142
+Enka Insaat Ve Sanayi AS v OOO Insurance Company Chubb [2020] UKSC 38, at [53]. The appeal was dismissed on
+the facts. See also Kabib-Ji SAL v Kout Food Group [2020] EWCA Civ 6. In that case, the parties had expressly chosen
+English law as the law governing their contract, but had not specified the law governing the arbitration agreement. The
+English Court of Appeal held that, on a proper interpretation of the parties’ governing law clause, the parties had made
+an express choice that their entire contract, including the arbitration agreement, would be governed by English law,
+notwithstanding that the seat of the arbitration was Paris. By way of contrast, see the decision by the Paris Court of
+Appeal pertaining to the same arbitration, in which the Court held that, absent an express choice of English law to govern
+the arbitration clause, the law of the seat (that is, French law), applied to the arbitration agreement: Société Kout Food
+Group v Société Kabib-Ji Sal, Paris cour d’appel, 23 June 2020, Case No. RG 17/22943.
+143
+See paragraphs 3.07ff.
+144
+This is particularly the case with sovereign states or state entities who may be required to operate in the official language
+of the state when engaging in international proceedings as far as permitted by the applicable rules.
+145
+For an expert discussion on multi-tier clauses in international arbitration, see Jenkins, International Construction
+Arbitration Law (3rd edn, Wolters Kluwer, 2021), particularly chs 3 and 5.
+146
+Tang Chung Wah v Grant Thornton International Ltd [2013] All ER (Comm) 1226. In contrast, in the recent case of
+Emirates Trading Agency LLC v Prime Mineral Exports Private Ltd [2014] EWHC 2104, the English High Court upheld
+a multi-tier clause that required the parties to seek to resolve any dispute by ‘friendly discussion’ before referring such
+dispute to arbitration. The Court’s rationale was that the clause was sufficiently certain and complete to be enforceable
+in that the obligation in question was time-limited, and there was an implied and well-defined standard of good faith by
+which to judge compliance with it (that is, fair, honest, and genuine discussions).
+147
+Tang Chung Wah, at [72].
+148
+See the decision of the Swiss Federal Tribunal in X GmbH v Y Sàrl, Decision No. 4A_46/2011, 16 May 2011.
+149
+See, e.g., Hooper Bailie Associated v Natcon Group Pty (1992) 28 NSWLR 206, in which the Supreme Court of New
+South Wales stated that what was enforced was not cooperation and consent, but participation in a process from which
+cooperation and consent might come. See also United Group Rail Services v Rail Corporation New South Wales [2002]
+CLC 1324.
+150
+International Research Corporation Plc v Lufthansa Systems Asia Pacific Pte Ltd [2012] SGHC 226. See also the
+Model Law on International Commercial Conciliation, Art. 13 which states that courts and tribunals must give effect
+to agreements to attempt conciliation pre-arbitration.
+151
+See, e.g., International Research Corp PLC v Lufthansa Systems Asia Pacific Pte Ltd and anor [2013] SGCA 55, in
+which the Singapore Court of Appeal held that the requirements of a multi-tiered dispute resolution mechanism had not
+been complied with, because the parties held only ‘random meetings’ that did not involve ‘the precise persons required’.
+See also Asghar v Legal Services Commission [2004] EWHC 1803, [2004] Arb LR 43; Stockholm Institute, Interim
+Award of 17 July 1992 (1997) XXII YBCA 197, 201; Swiss Federal Tribunal decision of 6 June 2007 (2008) 1 ASA
+Bulletin 87, discussed in Boog, ‘How to deal with multi-tiered dispute resolution clauses: Note on the Swiss Federal
+Supreme Court’s Decision 4A_18/2007 of 6 June 2007’ (2008) 26 ASA Bulletin 103.
+152
+Law Debenture Trust Corporation plc v Elektrim Finance BV [2005] EWHC 1412 (Ch). See also NB Three Shipping
+Ltd v Harebell Shipping Ltd [2005] 1 Lloyd’s Rep 205.
+153
+Law Debenture Trust, at [44].
+154
+In the United States, see, e.g., DiMercurio v Sphere Drake Insurance plc 202 F.3d 71 (1st Cir. 2000); in Italy, see Astengo
+v Comune di Genova, Judgment No. 2096, Corte di Cassazione, 22 October 1970; in Singapore, see Wilson Taylor Asia
+Pacific Pte Ltd v Dyna-Jet Pte Ltd [2017] SGCA 32; in Australia, see PMT Partners Pty Ltd v Australian National Parks
+& Wildlife Service (1995) 184 CLR 302; in Egypt, see the Court of Cassation Judgment dated 19 April 2017, Docket
+No. 15530 of Judicial Year 85.
+155
+In eBizcuss.com v Apple Sales international, Apple Inc. and Apple Retail France (Cass. Civ. (1ere Ch. Civ.), 7 October
+2015, Case No. 14-16.898), the parties’ dispute resolution clause provided that ‘the parties shall submit to the jurisdiction
+of the courts of the Republic of Ireland’ subject to Apple’s ‘right to institute proceedings against [eBizcuss] in the courts
+having jurisdiction in the place where [eBizcuss] has its seat or any jurisdiction where a harm to Apple is occurring’.
+The cour de cassation held that the clause was valid and enforceable, on the basis that it satisfied the principle of legal
+predictability given that the courts which ultimately could be seised of a dispute could be identified. See, by contrast,
+SCI Saint-Joseph v Dexia banque international (Cass. Civ. (1ere Ch. Civ.), 3 October 2018, Case No. 17-21.309), in
+which a dispute resolution clause provided that disputes would be referred to the courts of Luxembourg, subject to the
+right of Dexia to choose another forum. The cour de cassation held that the clause was invalid, on the basis that the
+clause did not specify the alternative fora or provide specific, objective criteria by which such potential alternative fora
+could be ascertained.
+
+Section D. - Analysis of an Arbitration Agreement, UKBC-REDFERN 530638609 (2025)
+© 2025 Thomson Reuters.
+13
+156
+Russian Telephone Company CJSC v Sony Ericsson Mobile Communications Rus, Case No. 40-49223/11-112-401, 19
+June 2012.
+157
+Emerging Markets Structured Products B.V. v Zhilindustriya LLC and others, Case No. 40-125181/2013, 14 March 2016.
+158
+The Court did not address the validity of the arbitration agreement as such, but instead based its decision on the
+jurisprudence of the Russian Constitutional Court and the European Court of Human Rights (ECtHR) concerning the
+right to a fair trial and the opportunity to present one’s case.
+159
+Digest of Cases Related to the Functions of Assistance and Control in Relation to Arbitration and International
+Commercial Arbitration (Обзор практики рассмотрения судами дел, связанных с выполнением функций
+содействия и контроля в отношении третейских судов и международных коммерческих арбитражей), 26
+December 2018, p. 13. The Digest does not formally have precedential value in the Russian system, but nevertheless is
+considered to provide useful guidance as to the approach Russian courts may take.
+160
+See the UNCITRAL Rules, Art. 33; only in relation to questions of procedure may the presiding arbitrator decide on
+his or her own in the absence of a majority.
+161
+For the powers of an arbitral tribunal, see Chapter 5.
+162
+Such an express power is contained, e.g., in the LCIA Rules, Art. 25.1.i.
+163
+This concept is known in some systems of law as the autonomy of the arbitration clause (l’autonomie de la clause
+compromissoire).
+164
+See Paulsson, ‘Separability demystified’, in The Idea of Arbitration (Oxford University Press, 2013), ch. 3, sec. 1(c).
+165
+Heyman v Darwins Ltd [1942] AC 356, at 374 per Lord MacMillan.
+166
+UNCITRAL Rules, Art. 23.1.
+167
+See also ICC Rules, Art. 6.9 (emphasis added).
+168
+Cass. Civ. 1ere, 7 May 1963 (Dalloz, 1963), 545.
+169
+Prima Paint Co. v Flood Conklin Manufacturing Corporation 388 US 395, 402 (1967). In Buckeye Check Cashing
+Inc. v John Cardegna et al., 126 S.Ct. 1204 (2006), the US Supreme Court confirmed that the Prima Paint separability
+rule applies equally in state and federal courts. For discussion of the doctrine in the United States, see McDougall and
+Ioannou, ‘Separability saved: U.S. Supreme Court eliminates threat to international arbitration’ (2006) 21 Mealey’s
+Intl Arb Rep 15; Samuel, ‘Separability and the U.S. Supreme Court decision in Buckeye v Cardegna’ (2006) 22 Arb Intl
+477. See also Preston v Ferrer 552 US 346 (2008); Nitro-Lift Technologies v Howard 568 US 17 (2012). See also the
+Forced Arbitration Injustice Repeal Act of 2019, which was referred to the US Senate in September 2019 after passage
+in the House of Representatives. At the time of writing, it is before the Senate Judiciary Committee. The Act proposes
+to abolish the presumption of separability in the case of employment, consumer, antitrust, and civil rights disputes.
+170
+Swiss Private International Law Act, s. 178(3).
+171
+Interpretation on Certain Issues Relating to the Application of the PRC Arbitration Law, Supreme People’s Court,
+23 August 2006; Jiangsu Materials Group Light Industry and Weaving Co. v Hong Kong Top-Capital Holdings Ltd
+(Canada) & Prince Development Ltd (the Yuyi case), Supreme People’s Court, 1998. The courts of the Dominican
+Republic and the United Arab Emirates have also upheld the doctrine of separability: see Bratex Dominicana, C por A
+v Vanity Fair Inc., Supreme Court of Justice of the Dominican Republic, 31 May 2005; Petition No. 353 of 2011, Abu
+Dhabi Court of Cassation, 24 August 2011.
+172
+For instance, the Netherlands, in the Arbitration Act 1986, s. 1053; England, in the Arbitration Act 1996, s. 7; India, in
+the Arbitration and Conciliation Act 1996, s. 16; Brazil, in the Brazilian Arbitration Act of 1996, s. 8; and states that
+either adopt the Model Law or adapt their legislation to it.
+173
+See Marrella, ‘International business law and international commercial arbitration: The Italian approach’ [1997]
+ADRLJ 25; Rogers and Launders, ‘Separability: The indestructible arbitration clause’ (1994) 10 Arb Intl 71; Svernlou,
+‘What isn’t, ain’t: The current status of the doctrine of separability’ (1991) 8 J Intl Arb 37.
+174
+Even by the late 1980s, this number had already grown small. See Sanders, ‘Arbitration’, in Cappelletti (ed.)
+Encyclopedia of International and Comparative Law, Vol. XVI (Brill, 1987), ch. 12, paras 106–112.
+175
+The UNCITRAL Rules, Art. 23.1 states that a decision by the arbitral tribunal that the contract is null and void ‘shall
+not entail automatically the invalidity of the arbitration clause’ and, as has been seen, the Model Law itself adopts this
+terminology, in Art. 16(1).
+176
+Emphasis added. The doctrine was not recognised by the English courts until 1993, in Harbour Assurance Co. Ltd v
+Kansa General International Insurance Co. Ltd [1993] 1 Lloyd’s Rep 455.
+177
+Fiona Trust & Holding Corporation v Yuri Privalov [2007] UKHL 40.
+178
+See Altras, ‘Bribery and separability: Who decides, the tribunal or the courts? Fiona Trust & Holding Corp v Yuri
+Privalov’ (2007) 73 Arbitration 2; Merkin, ‘Separability and illegality in arbitration’ (2007) 17 Arb LM 1; Pengelley,
+‘Separability revisited: Arbitration clauses and bribery—Fiona Trust & Holding Corp v Privalov’ (2007) 24 J Intl Arb
+
+Section D. - Analysis of an Arbitration Agreement, UKBC-REDFERN 530638609 (2025)
+© 2025 Thomson Reuters.
+14
+445; Lesotho Highlands Development Authority v Impregilo SpA [2005] UKHL 43, [2005] Arb LR 557, in particular the
+judgment of Lord Steyn. See also Beijing Jianlong Heavy Industry Group v Golden Ocean Group Ltd [2013] EWHC
+1063 (Comm), in which the English High Court discussed the relevance of public policy considerations when examining
+the validity of an arbitration agreement.
+179
+Arbitration Law of the People’s Republic of China, s. 19; CIETAC Rules, Art. 5.4. See Wexia, ‘China’s search for
+complete separability of the arbitral agreement’ (2007) 3 Asian Intl Arb J 163; Yeoh and Fu, ‘The people’s courts and
+arbitration: A snapshot of recent and judicial attitudes on arbitrability and enforcement’ (2007) 24 J Intl Arb 635, at 638.
+180
+See the discussion in Chapter 3, paragraphs 3.07ff.
+181
+See paragraphs 2.05–2.07, above, regarding submission agreements.
+End of Document
+© NIGEL BLACKABY KC, CONSTANTINE PARTASIDES
+KC, ALAN REDFERN

@@ -1,0 +1,264 @@
+Costs Practice Direction (CPR Pt 44) [Before 1 April 2013], UKBC-WHITEBK 459545365...
+© 2025 Thomson Reuters.
+1
+Costs Practice Direction (CPR Pt 44) [Before 1 April 2013]
+White Book 2025
+Volume 2
+Section 7 - Legal Representatives—Costs and Litigation Funding
+Section 7B - CPR 43 to 45 [Before 1 April 2013]
+Costs Practice Direction (CPR Pt 44) [Before 1 April 2013]
+ 
+Related Practice Directions
+General Rules About Costs
+Section 9 Costs Orders Relating to Funding Arrangements: Rule 44.3A
+9.1
+7BPD-3+
+Under an order for payment of “costs” the costs payable will include an additional liability incurred under a funding
+arrangement.
+9.2—
+ 
+(1)If before the conclusion of the proceedings the court carries out a summary assessment of the base costs it may
+identify separately the amount allowed in respect of: solicitors’ charges; counsels’ fees; other disbursements; and any
+value added tax (VAT). (Sections 13 and 14 of this Practice Direction deal with summary assessment.)
+ 
+(2)If an order for the base costs of a previous application or hearing did not identify separately the amounts allowed for
+solicitor’s charges, counsel’s fees and other disbursements, a court which later makes an assessment of an additional
+liability may apportion the base costs previously ordered.
+Section 10 Limits on Recovery Under Funding Arrangements: Rule 44.3B
+10.1
+7BPD-4+
+In a case to which rule 44.3B(1)(c) or (d) applies the party in default may apply for relief from the sanction. He should do
+so as quickly as possible after he becomes aware of the default. An application, supported by evidence, should be made
+under Part 23 to a costs judge or district judge of the court which is dealing with the case. (Attention is drawn to rules 3.8
+and 3.9 which deal with sanctions and relief from sanctions.)
+
+Costs Practice Direction (CPR Pt 44) [Before 1 April 2013], UKBC-WHITEBK 459545365...
+© 2025 Thomson Reuters.
+2
+10.2
+Where the amount of any percentage increase recoverable by counsel may be affected by the outcome of the application,
+the solicitor issuing the application must serve on counsel a copy of the application notice and notice of the hearing as soon
+as practicable and in any event at least 2 days before the hearing. Counsel may make written submissions or may attend
+and make oral submissions at the hearing. (Paragraph 1.4 contains definitions of the terms “counsel” and “solicitor”.)
+Section 19 Providing Information About Funding Arrangements: Rule 44.15
+19.1—
+ 
+7BPD-5+
+(1)A party who wishes to claim an additional liability in respect of a funding arrangement must give any other party
+information about that claim if he is to recover the additional liability. There is no requirement to specify the amount of
+the additional liability separately nor to state how it is calculated until it falls to be assessed. That principle is reflected
+in rules 44.3A and 44.15, in the following paragraphs and in Sections 6, 13, 14 and 31 of this Practice Direction.
+Section 6 deals with estimates of costs, Sections 13 and 14 deal with summary assessment and Section 31 deals with
+detailed assessment.
+ 
+(2)In the following paragraphs a party who has entered into a funding arrangement is treated as a person who intends
+to recover a sum representing an additional liability by way of costs.
+ 
+(3)Attention is drawn to paragraph 57.9 of this Practice Direction which sets out time limits for the provision of
+information where a funding arrangement is entered into between March 31 and July 2, 2000 and proceedings relevant
+to that arrangement are commenced before July 3, 2000.
+Method of giving information
+19.2—
+ 
+(1)In this paragraph, claim form includes petition and application notice, and the notice of funding to be filed or served
+is a notice containing the information set out in Form N251.
+ 
+(a)A claimant who has entered into a funding arrangement before starting the proceedings to which it relates
+must provide information to the court by filing the notice when he issues the claim form.
+ 
+(b)He must provide information to every other party by serving the notice. If he serves the claim form himself
+he must serve the notice with the claim form. If the court is to serve the claim form, the court will also serve the
+notice if the claimant provides it with sufficient copies for service.
+ 
+(3)A defendant who has entered into a funding arrangement before filing any document
+ 
+(a)must provide information to the court by filing notice with his first document. A “first document” may be
+an acknowledgement of service, a defence, or any other document, such as an application to set aside a default
+judgment.
+ 
+(b)must provide information to every party by serving notice. If he serves his first document himself he must
+serve the notice with that document. If the court is to serve his first document the court will also serve the notice
+if the defendant provides it with sufficient copies for service.
+ 
+(4)In all other circumstances a party must file and serve notice within 7 days of entering into the funding arrangement
+concerned.
+
+Costs Practice Direction (CPR Pt 44) [Before 1 April 2013], UKBC-WHITEBK 459545365...
+© 2025 Thomson Reuters.
+3
+(Practice Direction (Pre-Action Conduct) provides that a party must inform any other party as soon as possible about a
+funding arrangement entered into prior to the start of proceedings.)
+Notice of change of information
+19.3—
+ 
+(1)Rule 44.15 imposes a duty on a party to give notice of change if the information he has previously provided is
+no longer accurate. To comply he must file and serve notice containing the information set out in Form N251. Rule
+44.15(3) may impose other duties in relation to new estimates of costs.
+ 
+(2)Further notification need not be provided where a party has already given notice:
+ 
+(a)that he has entered into a conditional fee agreement with a legal representative and during the currency of that
+agreement either of them enters into another such agreement with an additional legal representative; or
+ 
+(b)of some insurance cover, unless that cover is cancelled or unless new cover is taken out with a different insurer.
+ 
+(3)Part 6 applies to the service of notices.
+ 
+(4)The notice must be signed by the party or by his legal representative.
+Information which must be provided
+19.4—
+ 
+(1)Unless the court otherwise orders, a party who is required to supply information about a funding arrangement must
+state whether he has—
+ 
+entered into a conditional fee agreement which provides for a success fee within the meaning of section 58(2)
+of the Courts and Legal Services Act 1990;
+ 
+taken out an insurance policy to which section 29 of the Access to Justice Act 1999 applies;
+ 
+made an arrangement with a body which is prescribed for the purpose of section 30 of that Act;
+or more than one of these.
+ 
+(2)Where the funding arrangement is a conditional fee agreement, the party must state the date of the agreement and
+identify the claim or claims to which it relates (including Part 20 claims if any).
+ 
+(3)Where the funding arrangement is an insurance policy, the party must—
+ 
+(a)state the name and address of the insurer, the policy number and the date of the policy and identify the claim
+or claims to which it relates (including Part 20 claims if any);
+ 
+(b)state the level of cover provided by the insurance; and
+ 
+(c)state whether the insurance premiums are staged and, if so, the points at which an increased premium is
+payable.
+ 
+(4)Where the funding arrangement is by way of an arrangement with a relevant body the party must state the name
+of the body and set out the date and terms of the undertaking it has given and must identify the claim or claims to
+which it relates (including Part 20 claims if any).
+ 
+(5)Where a party has entered into more than one funding arrangement in respect of a claim, for example a conditional
+fee agreement and an insurance policy, a single notice containing the information set out in Form N251 may contain
+the required information about both or all of them.
+
+Costs Practice Direction (CPR Pt 44) [Before 1 April 2013], UKBC-WHITEBK 459545365...
+© 2025 Thomson Reuters.
+4
+19.5
+Where the court makes a Group Litigation Order, the court may give directions as to the extent to which individual parties
+should provide information in accordance with rule 44.15. (Part 19 deals with Group Litigation Orders.)
+Transitional Provision
+19.6
+The amendments to the parenthesis below paragraph 19.2 and to paragraph 19.4(3) do not apply where the funding
+arrangement was entered into before 1st October 2009 and the parenthesis below paragraph 19.2 and paragraph 19.4(3)
+in force immediately before that date will continue to apply to that funding arrangement as if those amendments had not
+been made.
+Section 20 Procedure Where Legal Representative Wishes to Recover From His Client
+an Agreed Percentage Increase Which has Been Disallowed or Reduced on Assessment:
+Rule 44.16
+20.1—
+ 
+7BPD-6+
+(1)Attention is drawn to Regulation 3(2)(b) of the Conditional Fee Agreements Regulations 2000 and to Regulation
+5(2)(b) of the Collective Conditional Fee Agreements Regulations 2000, which provide that some or all of a success
+fee ceases to be payable in certain circumstances. [Both sets of regulations were revoked by the Conditional Fee
+Agreements (Revocation) Regulations 2005 but continue to have effect in relation to conditional fee agreements and
+collective conditional fee agreements entered into before 1st November 2005.]
+ 
+(2)Rule 44.16 allows the court to adjourn a hearing at which the legal representative acting for the receiving party
+applies for an order that a disallowed amount should continue to be payable under the agreement.
+20.2
+In the following paragraphs counsel means counsel who has acted in the case under a conditional fee agreement which
+provides for a success fee. A reference to counsel includes a reference to any person who appeared as an advocate in the
+case and who is not a partner or employee of the solicitor or firm which is conducting the claim or defence (as the case
+may be) on behalf of the receiving party.
+Procedure following Summary Assessment
+20.3—
+ 
+(1)If the court disallows any amount of a legal representative’s percentage increase, the court will, unless subparagraph
+(2) applies, give directions to enable an application to be made by the legal representative for the disallowed amount
+to be payable by his client, including, if appropriate, a direction that the application will be determined by a costs
+judge or district judge of the court dealing with the case.
+ 
+(2)The court that has made the summary assessment may then and there decide the issue whether the disallowed
+amount should continue to be payable, if:
+
+Costs Practice Direction (CPR Pt 44) [Before 1 April 2013], UKBC-WHITEBK 459545365...
+© 2025 Thomson Reuters.
+5
+ 
+(a)the receiving party and all parties to the relevant agreement consent to the court doing so;
+ 
+(b)the receiving party (or, if corporate, an officer) is present in court; and
+ 
+(c)the court is satisfied that the issue can be fairly decided then and there.
+Procedure following Detailed Assessment
+20.4—
+ 
+(1)Where detailed assessment proceedings have been commenced, and the paying party serves points of dispute (as to
+which see Section 34 of this Practice Direction), which show that he is seeking a reduction in any percentage increase
+charged by counsel on his fees, the solicitor acting for the receiving party must within 3 days of service deliver to
+counsel a copy of the relevant points of dispute and the bill of costs or the relevant parts of the bill.
+ 
+(2)Counsel must within 10 days thereafter inform the solicitor in writing whether or not he will accept the reduction
+sought or some other reduction. Counsel may state any points he wishes to have made in a reply to the points of
+dispute, and the solicitor must serve them on the paying party as or as part of a reply.
+ 
+(3)Counsel who fails to inform the solicitor within the time limits set out above will be taken to accept the reduction
+unless the court otherwise orders.
+20.5
+Where the paying party serves points of dispute seeking a reduction in any percentage increase charged by a legal
+representative acting for the receiving party, and that legal representative intends, if necessary, to apply for an order that
+any amount of the percentage disallowed as against the paying party shall continue to be payable by his client, the solicitor
+acting for the receiving party must, within 14 days of service of the points of dispute, give to his client a clear written
+explanation of the nature of the relevant point of dispute and the effect it will have if it is upheld in whole or in part by the
+court, and of the client’s right to attend any subsequent hearings at court when the matter is raised.
+20.6
+Where the solicitor acting for a receiving party files a request for a detailed assessment hearing it must if appropriate, be
+accompanied by a certificate signed by him stating:
+ 
+(1)that the amount of the percentage increase in respect of counsel’s fees or solicitor’s charges is disputed;
+ 
+(2)whether an application will be made for an order that any amount of that increase which is disallowed should
+continue to be payable by his client;
+ 
+(3)that he has given his client an explanation in accordance with paragraph 20.5; and,
+ 
+(4)whether his client wishes to attend court when the amount of any relevant percentage increase may be decided.
+20.7—
+ 
+(1)The solicitor acting for the receiving party must within 7 days of receiving from the court notice of the date of the
+assessment hearing, notify his client, and if appropriate, counsel in writing of the date, time and place of the hearing.
+ 
+(2)Counsel may attend or be represented at the detailed assessment hearing and may make oral or written submissions.
+
+Costs Practice Direction (CPR Pt 44) [Before 1 April 2013], UKBC-WHITEBK 459545365...
+© 2025 Thomson Reuters.
+6
+20.8—
+ 
+(1)At the detailed assessment hearing, the court will deal with the assessment of the costs payable by one party to
+another, including the amount of the percentage increase, and give a certificate accordingly.
+ 
+(2)The court may decide the issue whether the disallowed amount should continue to be payable under the relevant
+conditional fee agreement without an adjournment if:
+ 
+(a)the receiving party and all parties to the relevant agreement consent to the court deciding the issue without
+an adjournment,
+ 
+(b)the receiving party (or, if corporate, an officer or employee who has authority to consent on behalf of the
+receiving party) is present in court, and
+ 
+(c)the court is satisfied that the issue can be fairly decided without an adjournment.
+ 
+(3)In any other case the court will give directions and fix a date for the hearing of the application.
+Related Practice Directions
+ 
+Costs Practice Direction (CPR Pt 43) [Before 1 April 2013]
+ 
+Costs Practice Direction (CPR Pt 45) [Before 1 April 2013]
+ 
+Costs Practice Direction (CPR Pt 47)
+ 
+Back to top
+End of Document
+© 2025 SWEET & MAXWELL

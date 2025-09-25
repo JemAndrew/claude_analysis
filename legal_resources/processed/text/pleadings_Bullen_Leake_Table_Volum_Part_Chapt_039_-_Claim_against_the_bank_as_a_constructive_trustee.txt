@@ -1,0 +1,56 @@
+Claim against the bank as a constructive trustee, UKBC-BULLENL 459370995 (2022)
+© 2025 Thomson Reuters.
+1
+Claim against the bank as a constructive trustee
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part E - Banking and Financial Services
+Chapter 9 - Banking
+Claim against the bank as a constructive trustee
+1.
+9-E12
+The Defendant is a bank.
+2.
+The Claimant is a company. The Claimant held an account with the XY Bank (“the Company Account”).
+3.
+AB is a director of the Claimant. AB held an account with the Defendant (“the Director’s Account”). [At all material times
+the Director’s Account was overdrawn, with a debit balance of at least £[..........].] 131
+4.
+Between [dates], AB withdrew a total of £[..........] from the Company Account without the authority of the Claimant, by
+drawing cheques on the Company Account made payable to himself, and paid these cheques into the Director’s Account.
+5.
+In so doing, AB was acting in breach of the fiduciary duties he owed to the Claimant as director. [Set out particulars.]
+6.
+The Defendant thereby received this sum of £[..........] [in partial discharge of the overdraft on the Director’s Account and
+for its own benefit].
+7.
+The Defendant knew that the £[..........] received by the Defendant was or represented property which was the subject
+of fiduciary duties owed by AB to the Claimant, and knew that in effecting the withdrawals referred to above, AB was
+acting in breach of those fiduciary duties, [set out particulars of knowledge], such that it would be unconscionable for the
+Defendant to retain the benefit of the receipt.
+8.
+Further or alternatively, the Defendant assisted AB’s breach of fiduciary duty in honouring the Cheques in circumstances
+where the Defendant’s conduct was dishonest by the ordinary standards of reasonable and honest bankers [Set out
+particulars of dishonesty].
+
+Claim against the bank as a constructive trustee, UKBC-BULLENL 459370995 (2022)
+© 2025 Thomson Reuters.
+2
+AND the Claimant claims:
+ 
+(1)A declaration that the Defendant is liable as constructive trustee for the knowing receipt of property subject to
+fiduciary duties and is liable to account to the Claimant in respect of such receipt;
+ 
+(2)Further or alternatively, a declaration that the Defendant is liable as constructive trustee for having dishonestly
+assisted in a breach of fiduciary duty and is liable to account to the Claimant in respect of such assistance;
+ 
+(3)£[..........] or such other sums as the Court shall determine are payable by the Defendant to the Claimant;
+ 
+(4)Interest on such sums at such rate for such period as the Court shall determine pursuant to s.35A of the Senior
+Courts Act 1981 and/or the equitable jurisdiction of the Court.
+Footnotes
+131
+If the account is in credit, there can be no knowing receipt claim: see the commentary at the start of this section.
+End of Document
+© 2025 SWEET & MAXWELL

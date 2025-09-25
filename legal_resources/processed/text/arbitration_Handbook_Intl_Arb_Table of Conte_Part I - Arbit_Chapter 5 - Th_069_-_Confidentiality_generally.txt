@@ -1,0 +1,39 @@
+Confidentiality generally, UKBC-ICCARBN 474407018 (2022)
+© 2025 Thomson Reuters.
+1
+Confidentiality generally
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+Confidentiality generally
+22-50
+The Rules do not contain a provision requiring an ICC arbitration, or the information shared during the course of the proceedings
+or the documents produced in connection with it, to be treated as confidential. This is in contrast to some other arbitration
+rules, such as the LCIA Rules, that expressly provide for confidentiality. 235  Article 22(3) provides for confidentiality orders “in
+connection with the arbitration”. Therefore, the Tribunal has clear authority under the Rules to issue orders relating to all matters
+not only relating to trade secrets and underlying confidential information but also relating to the arbitration in and of itself. 236
+22-51
+Article 22(3) deals with confidentiality orders issued by the Tribunal. Issues of confidentiality as regards the ICC Court and the
+Secretariat are dealt with and discussed pursuant to art.1. In addition, art.26(3) deals with the privacy of the hearings themselves.
+Article 22(3) does not deal with obligations of confidentiality of the arbitrators themselves. However, due to their quasi-judicial
+role, arbitrators are widely viewed as subject to an obligation of confidentiality.
+22-52
+As regards the parties and the other participants in an arbitration (such as experts and counsel), the confidentiality will depend
+on the terms of the arbitration agreement (and underlying contract) itself, the rules of law governing the arbitration, the law of
+the place of arbitration as well as the measures taken by the Tribunal under art.22(3). The lack of a confidentiality provision
+in the ICC Rules may appear surprising, as typically parties to an arbitration expect confidentiality, which is usually cited as
+one of the advantages of arbitration over litigation in the courts. However, in revising the ICC Rules both in 1998 and 2012,
+it was decided that it was not necessary or desirable to include a confidentiality provision due to the wide variance in national
+law and the practical difficulties with such a provision.
+Footnotes
+235
+See art.30 of the LCIA Rules (2020). For a detailed general discussion of confidentiality in arbitration see “Dimolitsa,
+Special Supplement 2009: Confidentiality in Arbitration: Commentaries on Rules, Statutes, Case Law and Practice”, p.5.
+236
+In the authors’ experience, Tribunals regularly use such powers. See for example, Procedural Order of 11 July 2003 in
+ICC Case 12242 (Extract), and Procedural Order of 31 July 2003 in ICC Case 12279 (Extract) in Special Supplement
+2010: Decisions on ICC Arbitration Procedure: A Selection of Procedural Orders issued by Arbitral Tribunal acting
+under the ICC Rules of Arbitration (2003-2004).
+End of Document
+© 2025 SWEET & MAXWELL

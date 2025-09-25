@@ -1,0 +1,110 @@
+Introductory remarks, UKBC-ICCARBN 474406876 (2022)
+© 2025 Thomson Reuters.
+1
+Introductory remarks
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+Introductory remarks
+23-1
+Article 23 deals with the Terms of Reference. 292  The Terms of Reference have been and still are one of the hallmarks of ICC
+arbitration. Until the 2017 Rules were issued, Terms of Reference were required in each ICC arbitration. That is no longer the
+case. With the introduction of art.30 and the Expedited Procedure Provisions in the 2017 Rules, the requirement to have Terms
+of Reference was abandoned for arbitrations that are conducted under the Expedited Procedure Provisions. In the 2017 Rules,
+the Expedited Procedure Provisions were applicable subject to certain limitations with respect to claims with a value of up to
+US$2 million. As discussed under art.30, that threshold has been increased to US$3 million in the 2021 Rules. The 2017 Rules
+also reduced the time to prepare the Terms of Reference for all other ICC arbitrations from two months to one month. Some
+might have seen the exclusion of Terms of Reference from Expedited Procedures in the 2017 Rules as a signal that the ICC
+might abandon use of Terms of Reference altogether. Nevertheless, the 2021 Rules maintain the use of the Terms of Reference,
+and in the authors’ view, rightly so.
+23-2
+As discussed in the Introduction and under art.19, one of the basic principles for an ICC arbitration is the autonomy of the
+parties. The parties are free to set the procedure that they wish within the overall framework of the ICC Rules and the law of the
+place of arbitration, taking into consideration, where appropriate and possible, the law of the probable place of enforcement.
+In an ICC arbitration, arbitrators will set out some details of the procedure in the Terms of Reference and even more so in
+procedural orders, in particular in the first procedural order that typically follows the first case management conference of the
+Tribunal with the parties. 293
+23-3
+The Terms of Reference are to be signed by the parties and the Tribunal to indicate their agreement with the information set out
+therein. The Terms of Reference are intended to provide an “agreed framework” for the arbitration. If, and only if, signed by all
+parties, the Terms of Reference constitute a further agreement relating to the arbitration and will be enforceable as such. The
+Terms of Reference can take the form of a “compromis” (or submission agreement), unless one party objects to the jurisdiction
+of the Tribunal, although it signed the Terms of Reference. 294  In order to comply with the requirements of arts II and IV(1) of
+the New York Convention, parties may consider including a special provision in the Terms of Reference providing that the Terms
+of Reference confirm the arbitration clause in the contract concluded by the parties, and that each original copy of the Terms of
+Reference shall form an original arbitration agreement for the purposes of arts II and IV(1) of the New York Convention.
+23-4
+Since the Terms of Reference are intended to provide an agreed framework, a party is not required to accept provisions that
+go beyond the scope of the arbitration agreement. For example, a party may, but is not required to, agree to a provision on
+confidentiality in the Terms of Reference, as the ICC Rules themselves contain no general confidentiality undertaking of the
+parties. At the same time, as discussed later, a party should not object to inclusion of statements regarding the other party’s case
+provided that it is clear that those statements are not accepted as such.
+23-5
+Tribunals may and usually do set out the detailed procedure for an arbitration in procedural orders rather than in the Terms of
+Reference. Procedural orders are issued by the Tribunal and signed by the Tribunal or by the president of the Tribunal, if so
+provided in the Terms of Reference, but not by the parties.
+
+Introductory remarks, UKBC-ICCARBN 474406876 (2022)
+© 2025 Thomson Reuters.
+2
+23-6
+The Terms of Reference are aimed in particular at setting out the undisputed facts relating to the arbitration, the claims of the
+parties and the issues to be decided at an early stage in the proceedings. More generally, the Terms of Reference are intended
+to define the scope of the Tribunal’s mandate or mission so as to ensure that the award will not be rendered either ultra or infra
+petita. The Terms of Reference are also linked to the provisional timetable for the proceedings. Generally, that timetable is
+issued within a short time after the signing of the Terms of Reference.
+23-7
+As part of the administered and supervised arbitration, the ICC not only monitors the progress of cases but also scrutinises
+awards under art.34. This monitoring and scrutiny is carried out by reference to the Terms of Reference as well as to the
+correspondence between the Tribunal and the parties and to the procedural orders. When an award comes before the ICC Court
+for scrutiny, the court is systematically provided with the Terms of Reference.
+23-8
+National courts refer to the Terms of Reference in deciding on annulment of awards. Especially if all parties sign them, the
+Terms of Reference are seen as one of the best indications of the issues that the Tribunal was intended to deal with. The Terms
+of Reference are frequently signed at the case-management conference discussed under art.24 or immediately thereafter if the
+case management conference is conducted virtually. Usually, a copy of the Terms of Reference is signed for each party, for each
+member of the Tribunal and for the Secretariat.
+23-9
+The reluctance to use the Terms of Reference for details of the procedure is mainly because any amendment of signed Terms of
+Reference requires, unlike procedural orders, the consent of the parties. To avoid a subsequent debate with the parties whether
+procedural rules contained in the Terms of Reference can unilaterally be amended and modified by the Tribunal, or whether the
+parties’ agreement is required, it is best to leave any detailed procedural rules outside the Terms of Reference. If one were to
+presume that they can only be amended by a further agreement between the parties, 295  this would give each party a veto over
+changes to the procedural rules set out in the Terms of Reference. 296  This situation is to be contrasted with procedural orders
+that are issued by the Tribunal and do not require the consent of the parties to be amended. Therefore, it will normally be much
+more practical to have aspects of the procedure decided by the Tribunal rather than agreed to by the parties. 297  Nonetheless,
+a Tribunal will almost always seek to consult the parties and try to obtain their consent on as many aspects of the procedure
+as possible. 298
+Footnotes
+292
+The 2021 Rules have left art.23 unchanged from the 2017 Rules except for a minor drafting change in art.23(2).
+293
+As to the latter, see art.24(1).
+294
+Cass Civ 1e, 6 January 1987, Southern Pacific Properties Ltd And Southern Pacific Properties (Middle East) Ltd v The
+Arab Republic of Egypt (1988) YBCA Vol. XIII p.152: “… the Court of Appeal, thus deciding on the assertions, decided
+correctly, on the one hand, that the arbitration agreement could only be constituted by the arbitration clause inserted
+in the contract of 12 December 1974 and not by the Terms of Reference, the object of which was only to define the
+issues and, on the other hand, that the Terms of Reference, in which the Republic of Egypt maintained that there was
+no arbitration agreement, could not replace such an agreement …”; see also Arnaldez, “L’acte déterminant la mission
+de l’arbitre”, in Etudes offertes ,à Pierre Bellet, op. cit., at p.20.
+295
+Pursuant to arts 19 and 22, the Tribunal’s right to establish procedural rules is subject to an agreement of the parties,
+and arguably signed terms of Reference constitute such agreement between the parties within the meaning of arts 19
+and 22(2).
+296
+In the Bombardier Transportation case referred to at para.20-24, the party seeking annulment sought to argue that the
+Tribunal had failed to respect a provision of the Terms of Reference requiring that documents be submitted in English
+or French. The Paris Court of Appeal rejected the argument based in part on the flexibility that the Tribunal had retained
+for itself in the Terms of Reference.
+
+Introductory remarks, UKBC-ICCARBN 474406876 (2022)
+© 2025 Thomson Reuters.
+3
+297
+For a discussion of the issue of control of arbitration, see Webster, Party Control in International Arbitration, p.133.
+298
+See the discussion under art.22(2) at para.22-14 and following.
+End of Document
+© 2025 SWEET & MAXWELL

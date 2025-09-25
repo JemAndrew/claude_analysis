@@ -1,0 +1,101 @@
+Section 66. - Assessments with respect to contentious business, UKBC-WHITEBK...
+© 2025 Thomson Reuters.
+1
+Section 66. - Assessments with respect to contentious business
+White Book 2025  | Commentary last updated January 23, 2017
+Volume 2
+Section 7 - Legal Representatives—Costs and Litigation Funding
+Section 7C - The Solicitors Act 1974
+Solicitors Act 1974
+Section 66
+Part III Remuneration of Solicitors
+Contentious business
+66. Assessments with respect to contentious business
+7C-92
+Subject to the provisions of any rules of court, on every assessment of costs in respect of any contentious business, the
+costs officer may—
+(a) allow interest at such rate and from such time as he thinks just on money disbursed by the solicitor for the client,
+and on money of the client in the hands of, and improperly retained by, the solicitor or an employee of the solicitor; and
+(b) in determining the remuneration of the solicitor, have regard to the skill, labour and responsibility involved in the
+business done by him or by any employee of his who is an authorised person (within the meaning of section 56(5A)).
+Note
+7C-92. 1 Amended by the Legal Services Act 2007 s.177 and Sch.16 Pt 1 para.62, with effect in part from 31 March 2009 (SI 2009/503)
+and in part from 1 January 2010 (SI 2009/3250).
+Interest
+7C-93
+The power to allow interest relates only to disbursements by the solicitor and, in respect of money belonging to the client, only
+if it is in the hands of and improperly retained by the solicitor. There is no power to allow interest on profit charges and the
+Act applies only as between the solicitor and his client and not to the detailed assessment of costs to be paid out of a fund in
+Court belonging wholly or partly to persons other than the client. The solicitor cannot appropriate payments to costs so as to
+leave disbursements unpaid and therefore bearing interest (Hartland v Murrell (1873) L.R. 16 Eq. 285, 43 L.J. Ch. 94). Nor
+does the section apply to accounts between a London agent and his country solicitor client (Ward v Eyre (1880) L.R. 15 Ch D
+130, 49 L.J. Ch. 657; Re Savery (1851) 15 Beav. 58).
+
+Section 66. - Assessments with respect to contentious business, UKBC-WHITEBK...
+© 2025 Thomson Reuters.
+2
+A contentious business agreement which includes a provision that the client should pay interest on costs would appear to be
+binding if it is valid in all other respects (Re Fanshawe (1905) 59 S.J. 404). A solicitor who sues on his bill of costs and recovers
+judgment is entitled to interest upon the amount recovered from the time of signing judgment. The rate of interest is fixed
+periodically. (Currently 8%, Judgment Debts (Rate of Interest) Order 1993.)
+The mere receipt of clients’ money by his solicitor does not entitle the client to receive interest but as soon as the demand is
+made by the client for payment, which is not complied with within a reasonable time, interest becomes payable (Barclay v
+Harris & Cross (1915) 85 L.J.K.B. 115; 112 L.T. 1134). A credit in favour of the client produced only by a reduction of the
+solicitors’ bill on detailed assessment does not automatically carry interest (Wright v Southwood (1827) 1 Y & J 527).
+In detailed assessment proceedings of a solicitors’ bill to their client, the client claimed interest on one of four alternative bases:
+ 
+(a)s.35(A) of the Senior Courts Act 1981;
+ 
+(b)the general equitable jurisdiction of the courts;
+ 
+(c)s.66(a) of the Solicitors Act 1974; and
+ 
+(d)reg.25 of the Solicitors’ Accounts Rules 1998.
+The court held that s.35(A) could not apply because the claim was not one for a debt or damages. So far as the equitable
+jurisdiction of the court was concerned following Wright v Southwood (above) no such claim was permissible in the
+circumstances of the case. The court held that, so far as s.66(a) of the Solicitors Act 1974 was concerned, the money was not
+“improperly retained” by the solicitor since the money had been retained pending the decision of the costs judge as to whether
+or not the bills were payable in full or in part. Finally the court held that the Solicitors Accounts Rules applied only to money
+held in a client account, whereas in the particular case the money had been paid direct into the office account because it was
+paid in settlement of bills. In any event the solicitors’ terms of business expressly excluded the right of the claimant to interest
+Argonaut Property Development Ltd v Collyer-Bristow [2001] SCCO Review No.9 of 2001, QB, Nelson J.
+The House of Lords in Hunt v Douglas (R.M.) (Roofing) [1988] 3 W.L.R. 975; [1988] 2 All E.R. 823, ruled that a litigant who
+has been awarded costs is entitled to interest from the date upon which judgment is pronounced rather than the date of the costs
+officer’s certificate. The rate of interest will be the rate prescribed for judgment debts.
+This judgment does not of itself make any difference to the interest position on a detailed assessment between solicitor and
+client, but if the solicitor sues the client for his fees, it would seem that the costs of reference could carry interest from the date of
+judgment in the solicitor’s favour, notwithstanding that the amount of the judgment is to be ascertained on detailed assessment.
+The Court of Appeal has decided that interest on an award of costs should run from the date of the order for costs, rather than
+the date when the costs are assessed, i.e. the incipitur date rather than the allocator date. The court followed the ruling of Lord
+Ackner in Hunt v A M Douglas (Roofing) Ltd [1991] AC 398, the paying party’s argument having been that the CPR, and in
+particular r.40.8, had altered the situation. The court referred to Fattal v Walbrook Trustees (Jersey) Ltd [2009] EWHC 1674
+(Ch) Christopher Clarke J, where the court had held that the effect of CPR r.40.8 was that:
+ 
+(a)the general rule is that interest on costs runs from the incipitur date;
+ 
+(b)the departure from the general rule is justified if it is “what justice requires”;
+ 
+(c)the notion that a departure can only be justified in “exceptional” cases is an unhelpful guide;
+ 
+(d)the primary purpose of an award of costs is “to compensate the recipient from having been precluded from obtaining
+a return on his money”; and
+ 
+(e)since the payment of solicitors’ costs involves the payment of money which could otherwise have been profitably
+employed, the overwhelming likelihood is that justice requires some recompense in the form of interest.
+The court had added two precautionary comments. The first discouraging too detailed an approach to the facts of the particular
+case for the purpose of determining the date from which interest should run. The court should take a broad view of the position,
+prolonged argument and detailed evidence on the issue should be avoided. Secondly, the court did not necessarily agree that it
+may be inappropriate to award interest on costs where the case is being funded by a third party entirely voluntarily, or otherwise
+free of any costs. If interest on costs is payable from the incipitur date, the party to whom it is paid may have to account for
+
+Section 66. - Assessments with respect to contentious business, UKBC-WHITEBK...
+© 2025 Thomson Reuters.
+3
+it to a third party and there would therefore be a powerful argument for saying the third party should get interest on costs in
+the normal way.
+The court also had to deal with the fact that the Treasury had not been asked to concur in the making of CPR r.40.8, and the rule
+was in respect of the County Court, therefore ultra vires unless and until the Treasury’s concurrence is obtained. Thus, in the
+County Court, the County Courts (Interest on Judgments Debts) Order 1991 still has effect and there is therefore no discretion
+to alter the date from which interest should run in a County Court case. Simcoe v Jacuzzi UK Group Plc [2012] EWCA Civ 137.
+End of Document
+© 2025 SWEET & MAXWELL

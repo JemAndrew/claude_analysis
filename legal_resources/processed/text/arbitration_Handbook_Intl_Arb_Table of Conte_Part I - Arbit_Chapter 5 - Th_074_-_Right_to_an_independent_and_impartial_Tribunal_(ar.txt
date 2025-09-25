@@ -1,0 +1,97 @@
+Right to an independent and impartial Tribunal (arts 11,..., UKBC-ICCARBN...
+© 2025 Thomson Reuters.
+1
+Right to an independent and impartial Tribunal (arts 11, 14, 15,
+and 32)
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+Right to an independent and impartial Tribunal (arts 11, 14, 15, and 32)
+22-75
+Article 22(4) requires the Tribunal to act fairly and impartially. A Tribunal with members who are not independent is not in a
+position to act fairly. A party has the right to have as members of the Tribunal persons for which there is no “likelihood that they
+will be influenced by factors other than the merits of the case as presented by the parties” (IBA Conflict Guidelines, General
+Principle 2(c)). In addition, a Tribunal must act in a collegial fashion if it is to act fairly.
+22-76
+The requirements of independence and impartiality are discussed under arts 11 and 14. As regards concrete examples, the Non-
+Waivable Red List and Waivable Red List as well as the various decisions and cases are referred to beginning at para.14-60. In
+addition, since art.22(4) focuses on the procedure some specific examples are provided below.
+22-77
+As discussed in ASM Shipping v TTMI Ltd, an arbitrator is not in a position to decide a case fairly if the arbitrator has, as
+counsel, challenged the honesty of a key witness. 258  A Tribunal that is called upon to decide certain issues as a preliminary
+matter should not decide other issues or express an opinion as to the other matters in deciding the preliminary matter. Therefore,
+where a Tribunal decided preliminary issues in a partial award, an arbitrator who dissented and took the position that a party’s
+claims on other issues were without foundation was removed. 259
+22-78
+A party has the right to have a co-arbitrator who participates in the proceedings and in the deliberations. In the Dutco case of the
+French Supreme Court confirmed the importance of ensuring that each party had an equal opportunity to designate an arbitrator.
+The obligations with respect to deliberation are closely related to that right. 260
+22-79
+In a number of French cases the Paris Court of Appeal has dealt in detail with the obligations of collegiality and the obligation
+of arbitrators to participate in deliberations. In Malecki 261  a co-arbitrator resigned and the chair continued the proceedings in
+his absence. The Paris Court of Appeals refused to permit enforcement of the award in France on the basis of a violation of
+collegiality. In Comilog, 262  a co-arbitrator resigned during the deliberations and the award was annulled for failure to respect
+the principle of collegiality. The Paris Court of Appeal distinguished two situations. The first is where the arbitrator failed to
+participate in deliberations despite continuing as an arbitrator and having the possibility of participating. The second situation
+is where the arbitrator had ceased to act. In the latter case, the Tribunal was improperly constituted.
+22-80
+The Milutinovic case 263  concerned a dispute between the members of a consortium for the construction of a power station
+in Libya and the resignation of a co-arbitrator who resigned after he disagreed with a procedural decision. The other two
+arbitrators rendered a partial award. They decided that since the resignation had not been accepted by the ICC, the arbitrator
+was still considered to be a member of the Tribunal. 264  The Swiss Federal Supreme Court annulled the award on the basis that
+it was a violation of the claimant’s basic rights that the two arbitrators continued the proceedings in the absence of the third
+arbitrator. In another case, the Swiss Federal Supreme Court upheld an award issued after an arbitrator who failed to participate
+in deliberations in an ICC arbitration. 265
+
+Right to an independent and impartial Tribunal (arts 11,..., UKBC-ICCARBN...
+© 2025 Thomson Reuters.
+2
+22-81
+In Republic of Colombia v Cauca Company, 266  Columbia had appointed a co-arbitrator who resigned after the proceedings
+were closed and several days prior to the date limit for rendering an award. When Columbia failed to appoint a replacement
+co-arbitrator, the remaining members of the Tribunal issued an award. The US Supreme Court upheld the award finding that
+it was “sufficient and effective”.
+22-82
+The duty to act fairly applies with respect to procedure and deliberations. In Garoube, 267  a co-arbitrator supported a party’s
+application to remove the president of the Tribunal attributing basically to the other party. The Paris Court of Appeal (upheld
+by the French Supreme Court) annulled the award and related addendum issued with the participation of the co-arbitrator in
+particular on the basis that the co-arbitrator’s letter of support evidenced bias. In fact, after participating in the annulled award
+and addendum, the co-arbitrator had been removed by the ICC Court due to his relationship with the counsel. Subsequently,
+in a domestic arbitration in the Tapie case, 268  the Paris Court of Appeal held that the same co-arbitrator had an improper
+relationship with the same counsel and that the award had been obtained by fraud and should be annulled. The decision was
+upheld by the French Supreme Court. 269
+Footnotes
+258
+ASM Shipping Ltd of India v TTMI Ltd of England [2005] EWHC 2238 (Comm). See also the (unsuccessful) subsequent
+challenge to the two other arbitrators in ASM Shipping Ltd v Harris [2007] EWHC 1513 (Comm) (28 June 2007).
+259
+LCIA Court Challenge Decision of 24 December 2014 in LCIA Arbitration No.132498 referred to in C v D1 [2015]
+EWHC 2126 (Comm) (22 July 2015) (one of the authors was the presiding arbitrator in the case).
+260
+Cass Civ 1e, 7 January 1992, Siemens AG and BKMI Industrienlagen GmbH v Dutco Construction Company (1992) Rev.
+Arb. No.3 p.470. For a general discussion regarding deliberations see B. Berger, Rights and Obligations of Arbitrators
+in Deliberations, (2013) Vol.31. No.2, p.244 and also Berger and Schneider (ed) “Inside the Black Box: How Arbitral
+Tribunals Operate and Reach Their Decisions”, ASA Special Series No.42 (Jurisnet 2014).
+261
+CA Paris, 21 April 2005, Malecki v Long (2006) Rev. Arb. No.3 pp.673–678. See also CA Paris, 16 January 2003, Société
+des télécommunications internationales du Cameroun (Intelcam) v SA France Télécom, (2004) Rev. Arb. No.2 p.369.
+262
+CA Paris, 1 July 1997, Agence Transcongolaise des Communication v Comilog (1998) Rev. Arb. No.1 pp.131–135.
+263
+Swiss Federal Supreme Court, 30 April 1991, X v Y, ATF 117 Ia 166.
+264
+ICC Case No.5017, Ivan Milutinovic PIM v Deutsche Babcock AG, reported in detail in Schwebel, “The Validity of an
+Arbitral Award Rendered by a Truncated Tribunal” [1995] ICC ICArb. Bull. Vol.6 No.2, p.22 and following.
+265
+Swiss Federal Supreme Court, 1 February 2002, X Ltd v Y BV, 128 III 234 (4P.226/2001).
+266
+Republic of Colombia v Cauca Company, 190 US 524 (1903) para.6.
+267
+Paris Court of Appeal, 12 February 2012; and French Supreme Court Arrêt No.306 F-D Cass Civ 1e (13 March 2013).
+268
+Paris Court of Appeal, 21 January 2015.
+269
+French Supreme Court, 30 June 2016. Arrêt n°932 du 30 juin 2016 (15-13.755; 15-13.904; 15-14.145).
+End of Document
+© 2025 SWEET & MAXWELL

@@ -1,0 +1,64 @@
+The Convention on Contracts for International Sale of..., UKBC-ICCARBN...
+© 2025 Thomson Reuters.
+1
+The Convention on Contracts for International Sale of Goods
+(Vienna Convention)
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+The Convention on Contracts for International Sale of Goods (Vienna Convention)
+21-41
+In most instances, Tribunals, like the parties, will decide upon a system of national law. However, one of the rules of law
+frequently considered in ICC arbitration is the Vienna Convention, also often referred to as the CISG. 143  In 2013, 79 countries
+have adopted the Vienna Convention, and it has become part of the national law of those countries. Therefore, reference to
+Swiss law, for example, has been held to include reference to the Vienna Convention which is an integral part of Swiss law. 144
+21-42
+Article 1 of the Vienna Convention provides that:
+ 
+3—
+(1) This Convention applies to contracts of sale of goods between parties whose places of business are in different States:
+(a) when the States are Contracting States; or (b) when the rules of private international law lead to the application of the
+law of a Contracting State.
+21-43
+Article 3 145  of the Vienna Convention specifies in particular that “[c]ontracts for the supply of goods to be manufactured
+or produced are to be considered sales unless the party who orders the goods undertakes to supply a substantial part of the
+materials necessary for such manufacture or production”. However, art.3(2) provides that “[t]his Convention does not apply
+to contracts in which the preponderant part of the obligations of the party who furnishes the goods consists in the supply of
+labour or other services”.
+21-44
+When the Vienna Convention is applicable in an arbitration, its provisions displace some but not all of the provisions of the
+national law that would otherwise be applicable. 146  Many Tribunals view it as appropriate to raise the issue of the applicability
+of the Vienna Convention whether or not it is raised by the parties, on the basis that it is an integral part of the national law
+that may be applicable to the dispute.
+Footnotes
+143
+For a discussion of the application of the Vienna Convention in ICC arbitration, see Mourre, “Application of the Vienna
+International Sales Convention in Arbitration”, [2006] ICC ICArb. Bull. Vol.17, No.1, 43. See also van Houtte, “The
+Vienna Sales Convention in ICC Arbitral Practice” including extracts of ICC Arbitral Awards referring to the Vienna
+Convention, [2000] ICC ICArb. Bull. Vol.11 No.2, p.22 and p.34. In 2015, the Vienna Convention was the applicable
+law chosen by the parties on only four occasions. However, the authors have been faced with numerous situations where
+the Tribunal has applied the Vienna Convention or has considered applying it as part of the national law applicable to
+the dispute.
+144
+Swiss Federal Supreme Court, 16 December 2009, Decision 4A_240/2009 (in an ICC case for which the case number
+had not been provided).
+
+The Convention on Contracts for International Sale of..., UKBC-ICCARBN...
+© 2025 Thomson Reuters.
+2
+145
+In addition, art.2 of the Vienna Convention provides that “[t]his Convention does not apply to sales: (a) of goods bought
+for personal, family or household use, unless the seller, at any time before or at the conclusion of the contract, neither
+knew nor ought to have known that the goods were bought for any such use; (b) by auction; (c) on execution or otherwise
+by authority of law; (d) of stocks, shares, investment securities, negotiable instruments or money; (e) of ships, vessels,
+hovercraft or aircraft; (f) of electricity”.
+146
+If the parties have chosen a national law to be applicable, there is frequently a debate about whether the choice of the
+national law means the national law with or without the Vienna Convention; on this issue, see for example van Houtte,
+“The Vienna Sales Convention in ICC Arbitral Practice” including extracts of ICC Arbitral Awards referring to the
+Vienna Convention, [2000] ICC ICArb. Bull. Vol.11 No.2, p.22 and p.34. See also for a discussion of the application of
+the Vienna Convention in ICC arbitration, see Mourre, “Application of the Vienna International Sales Convention in
+Arbitration”, [2006] ICC ICArb. Bull. Vol.17, No.1, 43.
+End of Document
+© 2025 SWEET & MAXWELL

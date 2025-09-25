@@ -1,0 +1,61 @@
+Section 67. - Inclusion of disbursements in bill of costs, UKBC-WHITEBK 458578196...
+© 2025 Thomson Reuters.
+1
+Section 67. - Inclusion of disbursements in bill of costs
+White Book 2025  | Commentary last updated May 2, 2019
+Volume 2
+Section 7 - Legal Representatives—Costs and Litigation Funding
+Section 7C - The Solicitors Act 1974
+Solicitors Act 1974
+Section 67
+Part III Remuneration of Solicitors
+Remuneration—General
+67. Inclusion of disbursements in bill of costs
+7C-94
+A solicitor’s bill of costs may include costs payable in discharge of a liability properly incurred by him on behalf of the
+party to be charged with the bill (including counsel’s fees) notwithstanding that those costs have not been paid before the
+delivery of the bill to that party; but those costs—
+(a) shall be described in the bill as not then paid; and
+(b) if the bill is assessed, shall not be allowed by the costs officer unless they are paid before the assessment is
+completed.
+Note
+7C-94. 1 Amended by the Legal Services Act 2007 Sch.16 para.63, with effect from 1 January 2010 (SI 2009/3250).
+“Costs payable in discharge of a liability properly incurred by the
+solicitor on behalf of the party to be charged with the bill”
+7C-95
+These words define the “disbursements” which may be included as costs. They are those payments only which are made in
+pursuance of the professional duty undertaken by the solicitor, and which he is bound to perform whether kept in funds by his
+client or not, or payments which are sanctioned as professional payments by the established custom and practice of the profession
+(Re Remnant (1849) 11 Beav. 603) such as court fees (Langridge v Lynch (1876) 34 L.T. 695)) counsel’s fees, payments to
+witnesses (Franklin v Featherstonhaugh (1834) 1 Ad. & El. 475) deposit on presentation of bankruptcy petition (Re Grant
+Bulcraig & Co [1906] 1 Ch. 124) stamp duties on deeds, printer’s charges and fees for certificates of birth, etc. Payments for
+photographs are usually reckoned in this class even though the solicitor be not personally liable for them (Wakefield v Duckworth
+[1915] 1 K.B. 218). Such disbursements are properly placed in the bill even though actually paid by the client (Re Metcalf
+(1862) 30 Beav. 406; Re Seal (1893) 37 S.J. 685 at 842; Devereaux v White (1896) 41 S.J. 67) or though security has been taken
+for them (Re Bedson (No.1) (1845) 9 Beav. 5). Since these disbursements form part of the bill and the law implies authority
+
+Section 67. - Inclusion of disbursements in bill of costs, UKBC-WHITEBK 458578196...
+© 2025 Thomson Reuters.
+2
+to make them from the solicitor’s character as solicitor, it follows that where that character is wanting (e.g. where the solicitor
+is uncertificated) the disbursements as well as the charges are disallowed (Fowler v Monmouthshire Railway (1879) 4 Q.B.D.
+334; Kent v Ward (1894) 70 L.T. 612; Browne v Barber [1913] 2 K.B. 553).
+But payments which neither law nor custom required the solicitor himself to make, such as purchase-money (Re Remnant (1849)
+11 Beav. 603) deposit for security for costs (Re Buckwell [1902] 2 Ch. 596) payments to other parties’ solicitors (except for
+copy documents, etc.) (Re Fletcher & Dyson [1903] 2 Ch. 688) debt and costs paid to opponents (Prothero v Thomas (1815)
+6 Taunt. 196; Woollison v Hodgson (1834) 2 Dowl. 360) capital duty on registering a company (Re Blair & Girling [1906]
+2 K.B. 131) after the event insurance premiums (Herbert v HH Law Ltd [2019] EWCA Civ 527) are not properly charged in
+the bill, but should appear in the cash account. Agents’ charges should not appear as a disbursement in either (Re Pomeroy
+& Tanner [1897] 1 Ch. 284) though the charges of other solicitors for service of process or answering inquiries are generally
+treated as professional disbursements.
+“Shall be described as not then paid”
+7C-96
+For a case in which there were defects in the original bill and leave was given for delivery of a fresh bill, see paras 7C-109
+and 7C-110.
+In Tearle & Company (a firm) v Sherring 29 October 1993, unrep., Wright J in chambers, reviewed the law surrounding s.67
+and concluded that he had the power to permit the solicitors to amend their original bill of costs to include the necessary words
+(i.e. “not paid”). Furthermore, relying on the judgment of Farwell J in Re Grant Bulcraig & Co [1906] 1 Ch. 124, stated obiter
+that it might have been within the power of a costs judge or district judge to do likewise if the application had been made during
+the course of a hearing.
+End of Document
+© 2025 SWEET & MAXWELL

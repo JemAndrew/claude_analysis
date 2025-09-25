@@ -1,0 +1,515 @@
+2. - ADR and Case Management, UKBC-WHITEBK 549319339 (2025)
+© 2025 Thomson Reuters.
+1
+2. - ADR and Case Management
+White Book 2025  | Commentary last updated May 13, 2025
+Volume 2
+Section 14 - Alternative Dispute Resolution
+Alternative Dispute Resolution
+2. - ADR and Case Management
+ADR as Part of Active Case Management
+14-5
+The use of ADR is to be encouraged or, where appropriate, mandated by the courts as part of active case management: CPR
+rr.1.1(2)(f), 1.4(2)(e), 3.1(2)(o) and (p) (see Vol.1 paras 1.4.9 and 3.1.15).
+Pre Churchill the emphasis was on the court encouraging ADR. Accordingly, until 1st October 2024, r.1.4(2)(e) stated that
+active case management includes the court’s encouragement of the parties to use ADR procedures “if the court considers that
+appropriate”. Such encouragement may be given at various points in the procedure laid down in the CPR and related practice
+directions and may be given, either on the court’s own initiative, or in response to an initiative of the parties (as to the latter,
+see r.26.4). The Glossary attached to the CPR explains that ADR is a collective description of methods of resolving disputes
+“otherwise than through the normal trial process”. In terms, this includes simple negotiation between the parties not involving
+third parties (apart from the parties’ legal representatives). However, the purpose of r.1.4(2)(e) is to draw attention to methods
+other than simple negotiation.
+Post April 2013 the court’s duty to encourage the parties to use ADR has to be interpreted in light of the amendments relating
+to the overriding objective relating to proportionality. Moreover, the parties are equally enjoined to assist the court in furthering
+the overriding objective, which as Sir Geoffrey Vos, then Chancellor of the High Court stated in OMV Petrom SA v Glencore
+International AG [2017] EWCA Civ 195 at [9], obliges them “to conduct litigation collaboratively and to engage constructively
+in a settlement process”. Post 1 October 2024 the CPR was amended to align the court’s case management powers with Churchill
+and from that date 1.4(2)(e) provides that active case management includes “ordering or encouraging the parties to use, and
+facilitating the use of, alternative dispute resolution”. See also the other Churchill related amendments made by the Civil
+Procedure (Amendment No.3) Rules 2024 (SI 2024/839) which are referred or in para.14-1.
+The ADR process most often used, apart from negotiation, is mediation. Although it is a process that requires some time and
+cost, in difficult cases a skilled mediator can oil the wheels of settlement in ways that are likely to be more effective than the
+normal process of negotiation by discussion and offer and counter-offer (Hickman v Blake Lapthorn [2006] EWHC 12 (QB)).
+It should also be remembered that, when considering case management, mediation can be successfully deployed to deal with
+particular issues in a case if there are reasons not to attempt to settle the entire claim at that juncture—see paras 14-7 and
+14-8. Another dispute resolution process is known as med-arb. In IDA Ltd v Southampton University [2006] EWCA Civ 145;
+[2006] R.P.C. 21; (2006) 29(5) I.P.D. 29038, CA, the Court of Appeal stated that this process (where a mediator trusted by both
+sides is given authority to decide the terms of a binding settlement agreement) is particularly apt for the resolution of disputes
+about entitlements to patents. Also note that Early Neutral Evaluation is referred to in the Court Guides listed in para.14-4
+above. Further, in October 2015 the court’s general powers of management at CPR r.3.1(2)(m) “take any other step or make
+any other order for the purpose of managing the case and furthering the overriding objective” were amended by the addition
+of the following words: “, including hearing an Early Neutral Evaluation with the aim of helping the parties settle the case: see
+Lomax v Lomax [2019] EWCA Civ 1467; [2019] 1 W.L.R. 6527 (Vol.1 para.3.1.5)”. Carr CJ, speaking at London International
+Dispute Week in June 2024, commented on the court’s case management powers following Churchill stating that:
+“… judges are increasingly likely to be called upon—further to the requirement to manage cases—to consider
+whether to mandate the use of ADR. And not just to consider the question of whether to do so, but also the broader
+question of which form of dispute resolution to mandate.”
+
+2. - ADR and Case Management, UKBC-WHITEBK 549319339 (2025)
+© 2025 Thomson Reuters.
+2
+The Lady Chief Justice added that the judiciary and legal practitioners will need to become familiar with the different forms
+of ADR explaining:
+“Here the parties will need to play their role. They will need to consider, constructively and further to the CPR’s
+overriding objective, which process might best suit their circumstances. They will need to inform the court of
+this view. And, as importantly, judges will need to be familiar with the different forms and their features, so that
+they can properly assess which is best-suited” (Michael Cross, Lady chief justice calls for united front on ADR,
+Law Gazette, 4 June 2024).
+The Power of the Court to Order ADR–Churchill
+14-6
+Churchill v Merthyr Tydfil CBC [2023] EWCA Civ 1416; [2024] 1 W.L.R. 3827 made it clear that the court can order what it
+described as non-court-based dispute resolution, i.e. ADR. Before the appeal was heard it was apparent that Halsey was likely
+to be reviewed by the Court of Appeal, and seven organisations, including The Law Society, The Bar Council and several ADR
+organisations, intervened.
+The Court of Appeal held that the court could lawfully stay proceedings for, or order, the parties to engage in a non-court-based
+dispute resolution process subject to these provisos: that the order made did not impair the very essence of the claimant’s right
+to proceed to a judicial hearing and was proportionate to achieving the legitimate aim of settling the dispute fairly, quickly
+and at reasonable cost.
+The Court of Appeal, however, did not lay down fixed principles as to what would be relevant to determining whether
+proceedings should be stayed or whether to order the parties to engage in ADR process. Instead, the approach is that the
+court should take into account all the circumstances of the case, including the nature of the ADR procedure in question, when
+considering whether a particular process is or is not likely or appropriate for the purpose of achieving the important objective of
+bringing about a fair, speedy and cost-effective solution to the dispute and the proceedings, in accordance with the overriding
+objective.
+The Bar Council, intervening, submitted (at para.61) that the following factors were relevant to the exercise of the court’s
+discretion:
+ 
+(i)the form of ADR being considered;
+ 
+(ii)whether the parties were legally advised or represented;
+ 
+(iii)whether ADR was likely to be effective or appropriate without such advice or representation;
+ 
+(iv)whether it was made clear to the parties that, if they did not settle, they were free to pursue their claim or defence;
+ 
+(v)the urgency of the case and the reasonableness of the delay caused by ADR;
+ 
+(vi)whether that delay would vitiate the claim or give rise to or exacerbate any limitation issue;
+ 
+(vii)the costs of ADR, both in absolute terms, and relative to the parties’ resources and the value of the claim;
+ 
+(viii)whether there was any realistic prospect of the claim being resolved through ADR;
+ 
+(ix)whether there was a significant imbalance in the parties’ levels of resource, bargaining power or sophistication;
+ 
+(x)the reasons given by a party for not wishing to mediate: for example, if there had already been a recent unsuccessful
+attempt at ADR; and
+
+2. - ADR and Case Management, UKBC-WHITEBK 549319339 (2025)
+© 2025 Thomson Reuters.
+3
+ 
+(xi)the reasonableness and proportionality of the sanction, in the event that a party declined ADR in the face of an order
+of the Court.
+Vos MR in giving judgment in Churchill noted the observation by Dyson LJ in Halsey that he found “it difficult to conceive
+of circumstances in which it would be appropriate to exercise ...” a power to order unwilling parties to mediate but did not
+agree with it. He said:
+“Moreover, I would not go so far. Experience has shown that it is extremely beneficial for the parties to disputes
+to be able to settle their differences cheaply and quickly. Even with initially unwilling parties, mediation can often
+be successful. Mediation, early neutral evaluation and other means of non-court-based dispute resolution are, in
+general terms, cheaper and quicker than court-based solutions. Whether the court should order or facilitate any
+particular method of non-court-based dispute resolution in a particular case is a matter of the court’s discretion,
+to which many factors will be relevant.”
+The Court of Appeal stated that these matters, those mentioned by Mr Churchill about the internal disputes’ procedure and
+the Halsey factors (at [16]–[35]) were “…likely to have some relevance” and added: “But other factors too may be relevant
+depending on all the circumstances.”
+Mills and Reeve Trust Corp Ltd v Martin [2023] EWHC 654 (Ch) and Jones v Tracey [2023] EWHC 2256 (Ch) are examples
+of cases where the court has carefully considered all of the circumstances of the case in the context of ADR.
+One aspect of the Churchill judgment which may fall to be clarified by the courts sooner rather than later is the weight that
+should be placed on the merits of the case when considering whether to encourage, stay for, or order ADR. “The merits of the
+case” is one of the tests referred to in Halsey as being relevant to the costs question of whether a party had behaved unreasonably
+in refusing ADR (para.16). To some, a case or a defence with excellent merits is a reason not to deploy ADR whereas to others
+that is a positive indication that some form of ADR should be used (see para.14-15). See also Masood Ahmed, University of
+Leicester, “The pre-ADR exception to the without prejudice rule, judicial ADR pluralism, and assessing an unreasonable refusal
+to ADR: Jones v Tracey ”; C.J.Q. 2024, 43(1), [28]–[41]. Also, views on merits are by their nature subjective. As the court
+noted in Stoney-Andersen v Abbas [2023] EWHC 2964 (Ch) at [56]:
+“It is a commonplace that both sides are told by their lawyers that they will win. But they cannot both be right.
+Indeed, sometimes, both sides are wrong.”
+The issue of the merits of the case in this context fell to be considered in DKH Retail Ltd v City Football Group Ltd [2024]
+EWHC 3231 (Ch) when the court considered an application by a claimant for an order for mediation prior to an imminent trial.
+The defendant contested the application on several grounds, contending that mediation was not likely to lead to settlement, that
+the court should only order mediation where there was a realistic prospect that it would succeed, that the defendant was entitled
+to a judicial determination and that negotiations between experienced solicitors had not reached agreement. Miles J rejected
+the defendant’s submissions stating:
+“… in many cases the parties’ positions in the litigation are diametrically opposed and it may easily be said that
+each party requires a judicial determination. But nonetheless the parties come through ADR to recognise the
+desirability of settling for less than their strict legal rights and compromising their positions. Experience shows
+that mediation is capable of cracking even the hardest nuts. The process sometimes succeeds in cases where the
+parties appear at first to have intractable differences.”
+The court, having noted Churchill and the October 2024 amendments to the CPR (see para.14-1 above), ordered that mediation
+take place the following month. The court was informed shortly afterwards that the case had been settled.
+In two post-Churchill cases the court has contemplated parties mediating for a second time where the first mediation did not
+result in resolution: Heyes v Holt [2024] EWHC 779 (Ch) (at [50]) and Francis v Pearson, [2024] EWHC 605 (KB) (at [87]–
+[92]). In Pentagon Food Group Ltd and others v B Cadman Ltd [2024] EWHC 2513 (Comm), HHJ Tindal, sitting as a judge
+of the High Court, encouraged the parties to consider a third mediation:
+
+2. - ADR and Case Management, UKBC-WHITEBK 549319339 (2025)
+© 2025 Thomson Reuters.
+4
+“It is quite possible that in the context of me having made the determinations that I have and having said the things
+that I just have, it may well be possible for the parties to finally put this litigation behind them.”
+Case Management and the Duty of the Parties
+14-7
+Parties have a duty to help the court in furthering the overriding objective and, therefore, they have a duty to consider seriously
+the possibility of ADR procedures being utilised for the purpose of resolving their claim or particular issues within it, when
+ordered or encouraged by the court to do so (see also para.14-8). In Garritt-Critchley v Ronnan [2014] EWHC 1774 (Ch) (at
+[25]) the court took the view this was a continuing duty, throughout the litigation. The discharge of the parties’ duty in this
+respect may be relevant to the question of costs because, when exercising its discretion as to costs, the court must have regard
+to all the circumstances, including the conduct of all the parties (r.44.3(4) and (5) and “…. whether a party failed to comply
+with an order for alternative dispute resolution, or unreasonably failed to engage in alternative dispute resolution” r.44.2(5)(e)).
+Also see PGF II SA v OMFS Co [2013] EWCA Civ 1288; [2014] 1 W.L.R. 1386.
+Case management: the manner in which the court may facilitate the use
+of ADR procedures
+14-8
+The overriding objective in the CPR, which is to enable “… the court to deal with cases justly and at proportionate cost” (r.1.1(1)),
+requires the court to order or encourage the use of an ADR procedure, in appropriate cases, and to facilitate the use of such
+procedure, as one of the elements of active case management (r.1.4(2)(e) as amended with effect from 1 October 2024—see
+para.14-1). Further, as mentioned in para.14-1, the Civil Procedure (Amendment No.3) Rules 2024 (SI 2024/839) made a series
+of amendments to the court’s case management powers in relation to ADR, effective from 1st October 2024. The Court of
+Appeal has made it clear that “facilitating” includes staying proceedings for, or ordering, the parties to engage in ADR process:
+Churchill v Merthyr Tydfil CBC [2023] EWCA Civ 1416; [2024] 1 W.L.R. 3827. The concept of proportionality reinforces the
+need for the court to keep the potential of ADR procedures under review whenever it deals with any aspect of case management.
+It should be noted, when considering case management, that although ADR, and mediation in particular, often leads to settlement
+of the entire action, there is the potential to use an ADR process to attempt settlement or agreement of discrete issues. Recent
+examples of this include parties being ordered to use an ADR process to: (a) attempt agreement of a complex costs budget
+(Hadley v Przybylo [2023] EWHC 1392 (KB)); and (b) agree a bill of costs with a view to avoiding a detailed assessment
+(Elphicke v Times Media Ltd [2024] EWHC 2595 (KB)). Further, the recent decisions by Master Thornett in Worcester v Hopley
+[2024] EWHC 2181 (KB) and Jenkins v Thurrock Council [2024] EWHC 2248 give rise to the prospect that parties might agree,
+or be ordered, to use an ADR process to explore agreement of costs budgets and or directions, rather than wait for a lengthy
+period until directions and decisions can be given at a Costs and Case Management Conference. (See also para.14-17.) It also
+includes the full integration of ADR into the litigation process: see Abdel-Kader v Kensington and Chelsea RLBC (Grenfell
+Tower Litigation) [2022] EWHC 2006 (QB).
+The following multi-party cases are further examples of ADR being used to resolve some, but not all, of the issues in the
+litigation: Supershield Ltd v Siemens Building Technologies FE Ltd [2010] EWCA Civ 7; [2010] 2 All E.R. (Comm) 1185;
+[2010] 1 Lloyd’s Rep. 349 and Mouchel Ltd v Van Oord (UK) Ltd [2011] EWHC 72 (TCC); 135 Con. L.R. 183. The report
+on Senior Master Fontaine’s case management of the Grenfell Tower Litigation at [2022] EWHC 2006 (QB) illustrates many
+facets of how ADR can be deployed during the case management of a multi-party case and that both the court and lawyers
+now demonstrate a sophisticated grasp of how to interweave an ADR process in with the litigation process of a complex action.
+Master Fontaine said (at para.105):
+“I consider that the ADR process being established is the obviously appropriate course to attempt before
+proceeding with litigation involving more than 1,000 Claimants and multiple Defendants. Although it may be that
+
+2. - ADR and Case Management, UKBC-WHITEBK 549319339 (2025)
+© 2025 Thomson Reuters.
+5
+not all issues will be capable of settlement, it is highly likely that there will be a sufficient number of settlements
+and/or narrowing of issues so that when the stay is lifted more efficient progress to resolution of these claims
+can be made in the litigation.”
+The manner in which the court may facilitate the use of ADR procedure includes the following:
+ 
+(i)by staying proceedings for, or ordering, the parties to engage in ADR process, provided that the order does not impair
+the very essence of the claimant’s right to proceed to a judicial hearing, and is proportionate to achieving the legitimate
+aim of settling the dispute fairly, quickly and at reasonable cost (Churchill v Merthyr Tydfil CBC [2023] EWCA Civ 1416;
+[2024] 1 W.L.R. 3827 and 1.4(2)(e) as amended from 1 October 2024—see para.14-1); see also the amendments to court’s
+case management powers in relation to ADR referred to in the paragraph immediately above and note that, with reference
+to Multi-Track directions, r.29.2(1A) provides that “When giving directions, the court must consider whether to order or
+encourage the parties to engage in alternative dispute resolution”. Note that the stay or order might be in contemplation of
+an ADR process being used to attempt resolution of the entire case or a discrete issue (see the first paragraph of para.14-7);
+ 
+(ii)a stay may relate to the whole or part of the proceedings and be pursuant to the application of the parties or one of them
+(r.3.1(2)(g) and r.3.3(1))(see Andrew v Barclays Bank [2012] C.T.L.C. 115 at [24], [28] and [41], Hussain v Chowdhury
+[2020] EWHC 790 (Ch) at [18], the Grenfell Tower Litigation: Abdel-Kader v Kensington and Chelsea RLBC [2022]
+EWHC 2006 (QB)), and Hamon v University College London [2023] EWHC 1812 (KB);
+ 
+(iii)a stay may also be ordered by the court of its own initiative (r.3.1(2)(g) and r.3.3(1));
+ 
+(iv)by ordering such a stay of its own initiative (r.3.1(2)(g) and r.3.3(1)). An appropriate time to make such an order might
+be upon perusal of the parties’ statements about ADR in their directions questionnaires;
+ 
+(v)by ordering such a stay upon the written request of a party or of its own initiative when considering completed directions
+questionnaires (r.26.4). (See also Standard Directions Model Paragraph B05-stay for settlement which provides:
+ 
+“1....
+ 
+2.The claim is stayed until xxxx, during which period the parties will attempt to settle the matter or to narrow the issues.
+ 
+3.By 4pm on xxxx the Claimant must notify the court in writing of the outcome of negotiations (without
+disclosing any matters which remain subject to “without prejudice” terms) and what, if any, further directions
+are sought. Failure to comply with this direction or to engage properly in negotiations may result in the
+application of sanctions. If settlement has been reached, the parties must file a consent order signed by all
+of them” (see https://www.justice.gov.uk/courts/procedure-rules/civil/standard-directions/list-of-cases-of-common-
+occurrence/menu-of-sd-paragraphs (B05-ADR.doc)));”
+ 
+(vi)by ordering the parties to consider ADR using, for example a direction in the form of Standard Directions Model
+Paragraph A03-ADR.doc, whether at the time of giving standard directions or otherwise as follows:
+ 
+“1....
+ 
+2.At all stages the parties must consider settling this litigation by any means of Alternative Dispute Resolution
+(including Mediation); any party not engaging in any such means proposed by another must serve a witness statement
+giving reasons within 21 days of that proposal; such witness statement must not be shown to the trial judge until
+questions of costs arise.
+ 
+3.‘21 days’ can be altered manually. The words ‘and not less than 28 days before trial’ can always
+be added after the word ‘proposal’ by the managing judge if appropriate. Not necessary for every
+Order.” (See https://www.justice.gov.uk/courts/procedure-rules/civil/standard-directions/list-of-cases-of-common-
+occurrence/menu-of-sd-paragraphs (A03-ADR.doc)). It might be particularly appropriate to consider directions of the
+type referred to immediately above when considering cost budgets and proportionality during the costs management
+and case management process. Such directions might be combined with directions designed to facilitate the holding
+of an immediate mediation. For example, provision could be made for early disclosure of a particular category of
+
+2. - ADR and Case Management, UKBC-WHITEBK 549319339 (2025)
+© 2025 Thomson Reuters.
+6
+documents that would facilitate a mediation prior to full disclosure. See Mann v Mann [2014] EWHC 537 (Fam);
+[2014] 1 W.L.R. 2807; [2014] 2 F.L.R. 928 at [525]. In respect of directions for a stay in boundary disputes see the
+observations about Bradley v Heslin [2014] EWHC 3267 (Ch) in para.14-7 above;”
+ 
+(vii)by ensuring that the opportunity to explore ADR prospects is not prejudiced by the rigours of case management
+procedures generally. (For example, see Electrical Waste Recycling Group Ltd v Philips Electronics UK Ltd [2012] EWHC
+38 (Ch) where the court considered how ordering a split trial might impact on the prospects of mediating the matter.) In
+CIP Properties (AIPT) Ltd v Galliford Try Infrastructure Ltd [2014] EWHC 3546 (TCC); [2015] 1 All E.R. (Comm) 765;
+156 Con. L.R. 202, Coulson J suggested “A timetable for trial that allows the parties to take part in ADR along the way
+is a sensible case management tool”;
+ 
+(viii)by acting as a source of information about professional and commercial bodies providing ADR services (for example,
+see https://civilmediation.org/about-mediation;
+ 
+(ix)by verbally encouraging the parties to consider ADR at a hearing or telephone conference, such as a case management
+conference or a pre-trial review;
+ 
+(x)by making an order, whether on directions for allocation or a later stage, of the type referred to in the Multi-Track
+Practice Direction (sometimes referred to as an “Ungley Order”) (29PD4.10(9);
+ 
+(xi)by making an ADR order on the basis of the draft in App.7 to the Admiralty and Commercial Courts Guide. The draft
+order includes the following paragraph: “4. The parties shall take such serious steps as they may be advised to resolve their
+disputes by ADR procedures before the neutral individual or panel so chosen by no later than [*].”;
+ 
+(xii)by making an ADR order on the basis of the draft order in App.E to and Section 7 of the Technology and Construction
+Court Guide. Although these Guides refer to their particular courts there appears to be no reason why the type of ADR
+orders made in these courts could not be made, where appropriate, in other courts;
+ 
+(xiii)by ordering Early Neutral Evaluation. See CPR r.3.1(2)(p) and Lomax v Lomax [2019] EWCA Civ 1467; [2019] 1
+W.L.R. 6527;
+ 
+(xiv)by, in a case which is suitable to be resolved by an ADR procedure except for one sticking point, ordering the hearing
+of that point as a preliminary issue with a view to the case then being referred to ADR (see s.8 of the Technology and
+Construction Court Guide, again there is no reason why the approach taken by the Technology and Construction Court
+cannot be taken by other courts, where appropriate);
+ 
+(xv)by, ordering a stay for mediation followed, if necessary, by either an order for mediation or for compulsory early
+neutral evaluation. Such a tiered approach was suggested by HHJ Stephen Davies as part of a streamlined proportionate
+procedure for domestic property renovation building contract disputes in the Sky's the Limit Transformations Ltd v Mirza
+[2022] EWHC 29 (TCC);
+ 
+(xvi)by arranging, in the Admiralty and Commercial Court or the Technology and Construction Court, for the court to
+provide Early Neutral Evaluation. Further, in the Technology and Construction Court the court can provide a judge to act
+as a mediator (see http://www.justice.gov.uk/downloads/courts/tech-court/tech-con-court-guide.pdf);
+ 
+(xvii)by arranging or, where appropriate, ordering, in the Business and Property Courts, a mediation, an Early Neutral
+Evaluation or a Chancery Financial Dispute Resolution (“Chancery FDR”) (Chancery Guide, Ch.18.);
+ 
+(xviii)by refusing a party’s application to the court unless and until ADR is attempted. See Hussain v Chowdhury [2020]
+EWHC 790 (Ch) at [18] where HHJ Jarman QC refused to give permission to commence charity proceedings until the
+parties “engaged in a meaningful way in mediation with a professional mediator”. See also Jaffer v Jaffer [2021] EWHC
+1329 (Ch). Another example is Wilmington Trust SP Services (Dublin) Ltd v Spicejet Ltd [2021] EWHC 1117 (Comm)
+where the court considered (at [74]):
+
+2. - ADR and Case Management, UKBC-WHITEBK 549319339 (2025)
+© 2025 Thomson Reuters.
+7
+“… that the course most conducive to the furtherance of the overriding objective and the interests of justice
+(was) to give judgment for the First Claimant’s undisputed claims but to stay execution. In that way, the entire
+dispute can be brought within the ambit of any ADR procedures that the parties may choose to adopt”
+;
+ 
+(xix)by making an appropriate costs order (or advising that such an order might be made in the future) in respect of failure
+to give adequate consideration to ADR prior to the commencement of proceedings;
+ 
+(xx) by providing information about PD 36V regarding the Family Mediation Voucher Scheme, which is designed to offer
+a financial contribution of £500 towards mediation costs for eligible cases: Family Procedure Rules 2010 (SI 2010/2955)
+r.36.2;
+ 
+(xxi)by referring a small claim to the Small Claims Mediation Service.
+Case management: the stages at which ADR may be encouraged
+14-9
+The issue of timing, as in when is the best stage of a case to use an ADR procedure, is often a complex question.
+Clearly, there is a duty on the parties to consider ADR pre-proceedings in accordance with the relevant pre-action protocol
+(see para.14-2).
+In Nigel Witham Ltd v Smith [2008] EWHC 12, (TCC); [2008] T.C.L.R. 3; 117 Con. L.R. 117 Judge Peter Coulson QC offered
+general guidance saying that a premature mediation simply wasted time and could sometimes lead to a hardening of positions
+on both sides whereas, conversely, a delay in any mediation until after full particulars and documents had been exchanged
+could mean that the costs that had been incurred to get to that point became themselves the principal obstacle to a successful
+mediation. He added:
+“The trick in many cases was to identify the happy medium: the point when the detail of the claim and the response
+were known to both sides, but before the costs that had been incurred in reaching that stage were so great that
+a settlement was no longer possible.”
+The relevance of escalating costs was highlighted by Ward LJ in Shovelar v Lane [2011] EWCA Civ 802; [2012] 1 W.L.R. 637;
+[2011] 4 All E.R. 66. He said, at [61]:
+“If the claimants are right in their assessment of their costs, then, even without a success fee, the costs incurred
+by them exceed the sum over which battle has been joined. The great British public must think that something
+has gone wrong somewhere if litigation is conducted in that way. I share that sense of horror. One answer has to
+be to engage in mediation constructively and at the very earliest stage.”
+Similarly, in Matthews v Matthews [2018] EWHC 906 (Fam), Holman J stated at [28]:
+“As this case is now going off again for a period, I wish very strongly indeed to stress to both parties (as will
+be recorded on the face of my formal order today) that this case urgently requires to be resolved before costs
+and delay become disproportionate. In the exercise of my powers and duties under the overriding objective under
+rule 1 of the Civil Procedure Rules, I very strongly encourage all the parties to give fresh consideration to seeing
+if these issues cannot be resolved by mediation. I am fearful that a considerable amount of money may yet be
+expended, which will become completely disproportionate to the size and value of the claim.”
+
+2. - ADR and Case Management, UKBC-WHITEBK 549319339 (2025)
+© 2025 Thomson Reuters.
+8
+In Hamon v University College London [2023] EWHC 1812 (KB) Senior Master Fontaine added at [66]:
+“The most important considerations are that both parties know the other parties' case, so that the litigation risk
+can be assessed, and that ADR is attempted at a sufficiently early stage to enable costs to be saved, so that parties
+are not discouraged from settlement by the extent of incurred costs.”
+Masood Ahmed, University of Leicester has opined:
+“The ADR duty is an on-going one and as such litigating parties are required to actively engage in an ADR
+dialogue. This on-going duty and dialogue will mean that, if the matter is not ripe for ADR at a particular time, it
+may be at a later stage when the issues have matured. Therefore, in exercising its discretion on costs, the courts
+should only penalise a party when it is clear that a party has clearly failed to respond to an invitation to ADR; to
+engage in a constructive ADR dialogue or where its behaviour is such that it undermines or frustrates the parties’
+ADR duty.” (“The ADR duty and costs: Ali v Channel 5 Broadcast Ltd” [2018] EWHC 298 (Ch); C.J.Q. 2018
+at 37(4), 407–412.)
+The first main opportunity the court has to consider ADR is at the allocation stage. One of the matters a court may then consider,
+in the context of ADR, is whether the parties have complied with the ADR provisions of any relevant pre-action protocol. The
+court will also consider the parties’ directions questionnaire forms. (See Form N150 (directions questionnaire), Section A.)
+CPR r.26.4 provides that a party, when completing the directions questionnaire required by r.26.3, may make a written request
+for the proceedings to be stayed while the parties try to settle the case by alternative dispute resolution or other means.
+Section A of the directions questionnaire, under the heading “Settlement”, states: “Under the Civil Procedure Rules parties
+should make every effort to settle their case before the hearing”. This could be by discussion or negotiation (such as a roundtable
+meeting or settlement conference) or by a more formal process such as mediation. The court will want to know what steps have
+been taken. Settling the case early can save costs, including court hearing fees.
+Legal representatives are asked to confirm that they have explained to their client the need to try to settle, the options available,
+and the possibility of costs sanctions if they refuse to try to settle. The form then poses three questions, noting that answers
+will be considered in the context of CPR r.44.3(4):
+“1) Given that the rules require you to try to settle the claim before the hearing do you want to attempt to settle
+at this stage? 2) If Yes, do you want a one month stay? 3) If you answered ‘No’ to question 1, please state below
+the reasons why you consider it inappropriate to try to settle the claim at this stage.”
+The issue of timing is always an issue, and will differ from case to case. There will be occasions when it is clear to the parties and
+the court that a case is ready for mediation. On other occasions it is the circumstances of the litigation that may make mediation
+appropriate. For example, where a court is considering making a costs management order; it may be the view of the court that
+it is likely to be cost effective and proportionate to stay the case for mediation immediately on the basis that it may ultimately
+prove to be unnecessary to make such an order. On the other hand, where the claim or defence involves some complexity, the
+court may want to see a matter properly pleaded before mediation is attempted: Williams v Seals [2014] EWHC 3708 (Ch);
+[2015] W.T.L.R. 339, Richards J at [48].
+In CIP Properties (AIPT) Ltd v Galliford Try Infrastructure Ltd [2014] EWHC 3546 (TCC); [2015] 1 All E.R. (Comm) 765;
+156 Con. L.R. 202 Coulson J put the emphasis on the parties consensually agreeing on the best time to mediate, suggesting: “A
+timetable for trial that allows the parties to take part in ADR along the way is a sensible case management tool.” He added “A
+stay or a fixed ‘window’ is likely to lead to delay, extra cost and uncertainty, and should not ordinarily be ordered.”
+CPR r.29.2 states that, when it allocates a case to the multi-track, the court will give case management directions. This provision
+is supplemented by paras 4.1 to 4.11 of Practice Direction (The Multi-Track) (see Vol.1, para.29PD.4). Paragraph 4.10 states
+the general approach that the court will adopt where it gives directions on its own initiative without holding a case management
+conference and is not aware of any steps taken by the parties other that the exchange of statements of case. Subparagraph (9) of
+para.4.10 states that a direction requiring the parties to consider ADR is included among the directions that the court may give
+in these circumstances and sets out the form of Order, known as an “Ungley Order” which may be made; this is as follows:
+
+2. - ADR and Case Management, UKBC-WHITEBK 549319339 (2025)
+© 2025 Thomson Reuters.
+9
+“The parties shall by [the date determined by the court] consider whether the case is capable of resolution by ADR.
+If any party considers that the case is unsuitable for resolution by ADR, that party shall be prepared to justify that
+decision at the conclusion of the trial, should the judge consider that such means of resolution were appropriate,
+when he is considering the appropriate costs order to make. The party considering the case unsuitable for ADR
+shall, not less than 28 days before the commencement of the trial, file with the court a witness statement without
+prejudice, save as to costs, giving reasons upon which they rely for saying that the case was unsuitable.”
+A variation on the above requires a more immediate statement of parties’ intentions concerning ADR:
+The parties shall by [14 days from the date of this order] consider whether the claim is capable of being resolved by Alternative
+Dispute Resolution and:
+ 
+a)if either party considers that the claim is unsuitable for Alternative Dispute Resolution, that party shall, not less than 28
+days from today, serve on the other party a witness statement giving the reasons upon which that party relies in saying
+the claim is unsuitable;
+ 
+b)a party served with such a statement may within 14 days after receiving it serve on the other party a witness statement
+in response;
+ 
+c)all witness statements so served shall be disclosed to the trial judge at, but not until, the conclusion of the trial;
+ 
+d)at the conclusion of the trial, when deciding on the appropriate costs order to make, the trial judge shall take all such
+witness statements into account in considering whether such means of resolution were appropriate; and
+ 
+e)a party who objected to Alternative Dispute Resolution but has not served such a witness statement may be presumed
+to have objected for no good reason.
+See also, regarding such directions, Model Paragraph A03-ADR.doc as referred to in para.14-8 above. See also PGF II SA v
+OMFS Co [2013] EWCA Civ 1288; [2014] 1 W.L.R. 1386 at [35] et seq where Briggs LJ outlined the desirability of requiring
+reasons for refusing ADR being put in writing at the time of the refusal. Failure to provide a written statement, when ordered
+to do so, is to invite a costs sanction: BXB v Watch Tower and Bible Tract Society of Pennsylvannia [2020] EWHC 656 (QB).
+Note that CPR r.29.2(1A) provides, with effect from 1 October 2024, that “when giving directions, the court must consider
+whether to order or encourage the parties to engage in alternative dispute resolution”.
+Case management: healthcare cases involving high emotion
+14-10
+The benefits of ADR, not least mediation, are not restricted to the savings of costs and court time. ADR, and particularly
+mediation, have the potential to play a powerful role in cases involving high personal emotion and tragedy. This was
+demonstrated by the case of baby Charlie Gard, which attracted public attention around the world in 2017. It was the court’s
+duty, in Great Ormond Street Hospital for Children NHS Foundation Trust v Yates [2017] EWHC 1909 (Fam), to consider
+whether to confirm declarations previously made that it was in the child’s best interests for artificial ventilation to be withdrawn
+and for his treating clinicians to provide him with palliative care only. Francis J explained why, even if the prospects of reaching
+agreement between the parties appears impossible, mediation should be used. He said:
+“… it is my clear view that mediation should be attempted in all cases such as this one even if all that it does is
+achieve a greater understanding by the parties of each other’s positions. Few users of the court system will be in
+a greater state of turmoil and grief than parents in the position that these parents have been in and anything which
+helps them to understand the process and the viewpoint of the other side, even if they profoundly disagree with
+it, would in my judgment be of benefit…”
+
+2. - ADR and Case Management, UKBC-WHITEBK 549319339 (2025)
+© 2025 Thomson Reuters.
+10
+The passage immediately above was referred to by one of the parties in the Grenfell Tower Litigation in support of a submission
+for a stay for ADR [2022] EWHC 2006 (QB) at [54]. This advice has been noted. For example, in X (A Child), Re v [2020]
+EWHC 1958 (Fam) Ms Justice Russell DBE reported that:
+“... the Court had to insist that mediation was imperative, both to assist in narrowing the issues to be decided, and
+to reduce the levels of distress for this family.”
+See also Newcastle Upon Tyne Hospitals NHS Foundation Trust v H (A Child) [2022] EWCOP 14 (Hayden J, pp.25):
+“The availability of such a (mediation) service strikes me as having invaluable potential, even where it doesn’t
+achieve its stated objectives. It may for example, establish a greater respect for and understanding of different
+views. This in turn may defuse some distress and anger and benefit the parties in the court process that follows.”
+Re NR (A Child) (Withholding CPR) [2024] EWHC 61 (Fam) at [39] and Mrs R v King's College Hospital NHS Foundation
+Trust [2024] EWHC 2400 (Fam) at [29].
+Case management: where a public authority is a party
+14-11
+In R. (Cowl) v Plymouth City Council [2001] EWCA Civ 1935; [2002] 1 W.L.R. 803, CA, the Court of Appeal noted that, in
+disputes between public authorities and members of the public for whom they were responsible, insufficient attention is being
+paid to the paramount importance of saving cost and reducing delay by avoiding recourse to the application for judicial review
+procedure (This point was cited with approval in Hamon v University College London [2023] EWHC 1812 (KB) at [50]). The
+court said that the High Court should scrutinise extremely carefully such applications and should use its powers to ensure that
+the parties tried to resolve their dispute with the minimum involvement of the court. To achieve that objective, the court might
+have to hold (of its own initiative) a hearing at which the parties could explain what steps they had taken to resolve or reduce
+their dispute by means alternative to the procedure. In Practice Statement (Admin Ct: Administration of Justice) v [2002] 1
+W.L.R. 810, QBD (sub nom Practice Statement (Admin Ct: Annual Statement) [2002] 1 All E.R. 633), the lead judge of the
+Administrative Court drew attention to the Cowl case and stated that the judges of that court “were fully committed to resolving
+disputes by alternative means where appropriate and are exploring ways of promoting this”. It has since been suggested, in
+Halsey, that the issue of public money is not a special factor and that the list of factors outlined in Halsey determine when it
+is reasonable to refuse ADR.
+See also R. (Essex CC) v Secretary of State for Education [2016] EWHC 1724 (Admin), where the parties were criticised for
+not compromising the litigation. The court said that there was no reason why mediation or others forms of alternative dispute
+resolution should not have a role in judicial review cases which did not raise any recurring principle or policy.
+In JR138's Application for Judicial Review [2022] NIQB 46, an application in Northern Ireland, the court identified the case as
+an example of litigation coming before the court with increasing frequency. This was where a person in need contends that a
+health and social care trust is not providing them with the services to which they are entitled and which they desperately need.
+The court analysed (at [39]) why it was often unable to be of significant assistance in such matters and urged parties dealing
+with these issues to give serious consideration to mediation.
+Case management: miscellaneous
+14-12
+CPR r.3.1(2) states that the court’s general powers of case management include the power to order that a party or a party’s legal
+representative be required to attend the court. Such an order may be made with a view to making an ADR order (though the
+
+2. - ADR and Case Management, UKBC-WHITEBK 549319339 (2025)
+© 2025 Thomson Reuters.
+11
+attendance of any party is not required for this purpose) or to otherwise facilitate settlement, but should not be made for the
+purpose of putting pressure on the party to discontinue the proceedings (Tarajan Overseas Ltd v Kaye [2001] EWCA Civ 1859).
+Although the court has jurisdiction to order that parties should be adequately represented at a mediation, it has no jurisdiction
+to order that a particular person should attend, especially where that person was not a party to the proceedings (Shirayama
+Shokusan Co Ltd v Danovo Ltd [2004] EWHC 390 (Ch); [2004] 1 W.L.R. 2985; (2004) 101(13) L.S.G. 34; (Blackburne J) (D
+applying for order staying proceedings until conclusion of mediation attended by a third party (X) as a representative of C,
+where D contending that X’s presence was essential to meaningful mediation)).
+Case management: adjournment of a trial for ADR
+There will rarely be circumstances where a court would be willing to adjourn a trial on the grounds that the parties wish to
+use ADR. See Elliott Group Ltd v Gecc UK (formerly GE Capital Corp) [2010] EWHC 409 (TCC).
+Case management: mediation and delay
+A request for mediation followed by a lengthy discussion will not justify delay: UK Highways A55 Ltd v Hyder Consulting
+(UK) Ltd [2012] EWHC 3505 (TCC).
+Case management: purpose of mediation
+A party should not be required to mediate merely for the purpose of finding out the other party’s case: Brooks v Armstrong
+[2016] EWHC 2893 (Ch).
+In a housing dispute, it would be wrong for a social landlord to use recourse to mediation as a delaying tactic having the effect
+of causing a tenant to lose priority status for housing (Robinson v Hammersmith and Fulham London BC [2006] EWCA Civ
+1122; [2006] 1 W.L.R. 3295; [2007] H.L.R. 7, CA).
+As to ADR in the Court of Appeal, see Vol.1 para.52.0.11.
+For use of ADR procedures for purpose of resolving conflict of expert evidence in lease renewal claims, see commentary in
+para.56PD.1.
+End of Document
+© 2025 SWEET & MAXWELL

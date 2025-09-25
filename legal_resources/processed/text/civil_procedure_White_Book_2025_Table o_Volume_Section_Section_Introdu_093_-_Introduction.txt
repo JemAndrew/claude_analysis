@@ -1,0 +1,48 @@
+Introduction, UKBC-WHITEBK 458578166 (2025)
+© 2025 Thomson Reuters.
+1
+Introduction
+White Book 2025  | Commentary last updated May 2, 2019
+Volume 2
+Section 7 - Legal Representatives—Costs and Litigation Funding
+Section 7A - Litigation Funding after 1 April 2013
+Introduction
+7A-1
+The Legal Aid, Sentencing and Punishment of Offenders Act 2012 and regulations made under it have a significant effect
+in relation to funding arrangements made on or after 1 April 2013. In particular, success fees payable under conditional fee
+agreements made after that date are not recoverable between the parties (except in limited classes of cases which are temporarily
+excluded from the reforms), lower limits are set for success fees in personal injury claims and the recovery of after the event
+insurance premiums is severely limited.
+The amendments made by the 2012 Act will not apply to claims for damages in respect of diffuse mesothelioma until the Lord
+Chancellor has carried out a review of the likely effect of the amendments in relation to such proceedings, and published a
+report of the conclusions of the review. The commencement of the amendments was deferred in relation to publication and
+privacy proceedings: see the Legal Aid, Sentencing and Punishment of Offenders Act 2012 (Commencement No.5 and Saving
+Provision) Order 2013 (SI 2013/77), which lists the proceedings excluded and provides a definition of “publication and privacy
+proceedings”. However in respect of such proceedings s.44 (success fees) but not s.46 (after the event insurance premiums)
+came into force on 6 April 2019: Legal Aid, Sentencing and Punishment of Offenders Act 2012 (Commencement No.13)
+Order 2018 (SI 2018/1287). The commencement of the amendments was deferred until 6 April 2016 in relation to certain
+insolvency proceedings: the Legal Aid, Sentencing and Punishment of Offenders Act 2012 (Commencement No.12) Order 2016
+(SI 2016/345) art.2 (see further Vol.1 para.48.0.2.4).
+This section describes the law relating to funding arrangements made after 1 April 2013.
+Parties may continue to enter into conditional fee agreements with their lawyers. However an amendment to the Courts and
+Legal Services Act 1990 (s.58A(6)) provides that success fees under conditional fee agreements may not be recovered between
+the parties.
+The Conditional Fee Agreements Order 2013 provides that success fees may not exceed 100% of the base costs. In claims for
+personal injuries, success fees are capped at 25% of the general damages for pain, suffering and loss of amenity and damages
+for past pecuniary loss in proceedings at first instance and at 100% of those heads of damage on appeal.
+Premiums for after the event insurance policies are not recoverable save insofar as provided by regulations made under s.58C
+of the Courts and Legal Services Act 1990 and save in limited classes of cases in respect of which the commencement of the
+amendments has been deferred. Sections 29 and 30 of the Access to Justice Act 1999 have been repealed (s.29 is repealed except
+in respect of claims for damages in respect of diffuse mesothelioma and publication and privacy proceedings). The repeal of
+s.29 was deferred until 6 April 2016 in respect of certain insolvency proceedings. The Recovery of Costs Insurance Premiums
+in Clinical Negligence Proceedings (No.2) Regulations 2013 (SI 2013/739) permit the recovery of that part of a premium which
+insures against the liability to pay for experts’ reports on liability and causation in clinical negligence proceedings if the financial
+value of the claim for damages exceeds £1,000. The Supreme Court has confirmed that, in the absence of agreement or specific
+statutory provision to the contrary, a party cannot recover an ATE premium as part of the costs of legal expenses: McGraddie
+v McGraddie [2015] UKSC 1.
+Damages-based agreements, which previously could only be used in employment claims, can now be used to fund proceedings
+of the same types as conditional fee agreements. The Damages-Based Agreements Regulations 2013 (SI 2013/609) set out the
+requirements of a valid agreement and limit the amount of costs payable by the client.
+For commentary on litigation funding before 1 April 2013, see Civil Procedure 2019, Vol.2, Section 7A1.
+End of Document
+© 2025 SWEET & MAXWELL

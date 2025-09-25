@@ -1,0 +1,33 @@
+“Opting Out” of the Expedited Procedure Rules, UKBC-ICCARBN 474406884 (2022)
+© 2025 Thomson Reuters.
+1
+“Opting Out” of the Expedited Procedure Rules
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+“Opting Out” of the Expedited Procedure Rules
+30-18
+Arbitration agreements signed after 1 January 2021 and containing a general reference to the ICC Rules and providing that
+disputes shall be resolved by three arbitrators will be interpreted as containing an implicit agreement that disputes will be
+resolved by a Sole Arbitrator, where the amount in dispute does not exceed the US$3 million threshold. 653  Should parties wish
+to avoid such an outcome, they will need to either provide that the Expedited Procedure Provisions shall not apply, i.e., to opt
+out, or, alternatively, that they agree to have any dispute settled by three arbitrators including in cases where the Expedited
+Procedure Provisions apply.
+30-19
+If the parties wish to exclude the application of the Expedited Procedure Provisions, the ICC recommends an express statement
+to that effect in the ICC arbitration clause as follows:
+“The Expedited Procedure Provisions shall not apply.”
+30-20
+It undoubtedly requires a minimum of understanding of the ICC Rules to appreciate the impact and meaning of such exclusion
+in the standard ICC arbitration clause. In 2019, parties decided to opt out of the Expedited Procedure Rules in only 5 cases. 654
+Footnotes
+653
+Article 30(1) should not be interpreted as preventing the parties from opting out of the Expedited Procedure Provisions,
+as clarified by art.30(3)(b). For arbitration agreements signed after 1 March 2017, but before 1 January 2021, the same
+applies for disputes whose value does not exceed S$2 million.
+654
+2019 ICC Statistical report [2020] ICC DR Bull. Vol.2, pp.26 and following. For 2020 this information was not made
+available.
+End of Document
+© 2025 SWEET & MAXWELL

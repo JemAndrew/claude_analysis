@@ -1,0 +1,131 @@
+Choice of law and the law of the place of arbitration, UKBC-ICCARBN 474407021 (2022)
+© 2025 Thomson Reuters.
+1
+Choice of law and the law of the place of arbitration
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+Choice of law and the law of the place of arbitration
+21-13
+Article 21(1) is subject to the mandatory law of the place of arbitration. However, as a general rule, the law applicable in major
+centres of arbitration adopts a liberal approach with respect to the right of the parties to choose the applicable law and the method
+by which the Tribunal determines the applicable law. Nevertheless, in exercising its discretion to determine the applicable law,
+a Tribunal may well wish to refer to the principles regarding determination of applicable law at the place of arbitration.
+21-14
+In France, art.1511 of the French CPC provides that:
+“The arbitral tribunal shall decide the dispute in accordance with the rules of law chosen by the parties or, where
+no such choice has been made, in accordance with the rules of law it considers appropriate. In either case, the
+arbitral tribunal shall take trade usages into account.” 119
+21-15
+The French courts have confirmed that “[t]o determine the law applicable to the merits, the arbitrator is not required to apply
+a conflicts rule of a specific national legislation”. 120  Therefore French arbitration law grants wide discretionary powers to
+arbitrators as to the methods for determining the appropriate rule(s) of law. Arbitrators are permitted to refer to conflict of law
+principles, use the voie directe or even apply lex mercatoria if they think that it is the appropriate rule of law. The Tribunal
+must, however, give reasons for its decision and respect the mandatory rules that are applicable, failing which the award may
+be subject to a challenge. 121
+21-16
+In Switzerland, art.187(1) of the Swiss PILA provides that “[t]he Tribunal shall decide the case according to the rules of law
+chosen by the parties or, in the absence thereof, according to the rules of law with which the dispute has the closest connection”.
+21-17
+Unlike French law, Swiss law refers to the use of the principle of the closest connection to determine the law applicable to
+the merits. Arguably, the second sentence of art.21(1) permits a Tribunal to use the voie directe in Switzerland. Article 187(1)
+of the Swiss PILA refers to the “rules of law chosen by the parties” and not to the method of choosing the applicable law.
+However, this distinction may be artificial as the Rules are intended to permit the voie directe and the parties have accepted
+this principle in accepting the Rules.
+21-18
+Many Tribunals will, in any event, apply the principle of the law with the closest connection to determine the applicable rules
+of law. In Switzerland, an arbitral award should explain the basis on which the Tribunal found that the law was most closely
+connected with the dispute. 122
+21-19
+In the US, the Federal Arbitration Act contains no express provision regarding the choice of applicable law. Therefore, in most
+cases, one would expect that Tribunals would apply standard conflict of law principles to determine the applicable law. However,
+although not binding, art.187(2) of the Restatement (Second) of Conflict of Laws provides in pertinent part that:
+
+Choice of law and the law of the place of arbitration, UKBC-ICCARBN 474407021 (2022)
+© 2025 Thomson Reuters.
+2
+“[t]he law of the state chosen by the parties to govern their contractual rights and duties will be applied, even if the
+particular issue is one which the parties could not have resolved by an explicit provision in their agreement directed
+to that issue, unless either (a) the chosen state has no substantial relationship to the parties or the transaction and
+there is no other reasonable basis for the parties’ choice, or (b) application of the law of the chosen state would
+be contrary to a fundamental policy of a state which has a materially greater interest than the chosen state in the
+determination of the particular issue …”
+21-20
+A detailed discussion of what constitutes a substantial relationship with the parties or the transaction within the meaning of the
+Restatement goes beyond the scope of this book. However, arguably the fact that an arbitration is being conducted in a specific
+country provides a substantial relationship. In addition, the issue with respect to US law is which state law is applicable and
+various states have enacted provisions expressly permitting parties to choose the applicable law in commercial transactions. 123
+21-21
+In England, s.46(1)(a) of the English Arbitration Act 1996 provides that the Tribunal shall decide the dispute “in accordance
+with the law chosen by the parties as applicable to the substance of the dispute”. In the absence of such a choice of law by the
+parties s.46(1)(b) of the act provides that the Tribunal shall decide the dispute “(b) if the parties so agree, in accordance with
+such other considerations as are agreed by them or determined by the Tribunal”. Section 46(2) goes on that for this purpose the
+choice of the laws of a country shall be understood to refer to the substantive laws of that country and not its conflict of laws
+rules. Section 46(3) gives the Tribunal the power to “apply the law determined by the conflict of laws rules which it considers
+applicable” to the extent there is no choice or agreement of the parties.
+21-22
+Section 46 is not one of the mandatory provisions of the English Arbitration Act of 1996. 124  Therefore, parties can contract
+out of it, in particular, by accepting arbitration rules such as the ICC Rules. Under English law, the Tribunal is free to determine
+the conflict of laws rules applicable, but is expected to apply conflict of law principles in determining the law applicable to the
+dispute. However, the acceptance of the Rules should be viewed as a contrary agreement. If English conflicts rules are applied,
+one would generally expect the law to be applied to be that with which the contract is most closely connected.
+21-23
+The English High Court considered s.46 in the Peterson Farms case. In that case, the arbitrators relied in part of their award on
+the “common intent of the parties” to apply the “group of companies doctrine” with respect to the parties to the arbitration. 125
+The court categorically rejected the approach holding that a state law had to be applicable.
+21-24
+In the countries which have followed the UNCITRAL Model Law, art.28 of the UNCITRAL Model Law will be the relevant
+provision when it comes to the applicable law:
+ 
+“(1)The arbitral tribunal shall decide the dispute in accordance with such rules of law as are chosen by the
+parties as applicable to the substance of the dispute. Any designation of the law or legal system of a given
+State shall be construed, unless otherwise expressed, as directly referring to the substantive law of that State
+and not to its conflict of laws rules.
+ 
+(2)Failing any designation by the parties, the arbitral tribunal shall apply the law determined by the conflict
+of laws rules which it considers applicable …”
+21-25
+The UNCITRAL Working Group Notes 126  make several basic points about art.28 of the UNCITRAL Model Law, which are of
+general interest for arbitration practitioners and therefore repeated here: first, “Article 28 deals with the question which law or
+rules the arbitral tribunal shall apply to the substance of the dispute”. It does not deal with the arbitral procedure. Secondly, art.28
+
+Choice of law and the law of the place of arbitration, UKBC-ICCARBN 474407021 (2022)
+© 2025 Thomson Reuters.
+3
+grants “the parties full autonomy to determine the issue (including the option of amiable composition) and, failing agreement,
+by entrusting the arbitral tribunal with that determination”. Thirdly, art.28 refers to:
+“the freedom to choose ‘rules of law’ and not merely a ‘law’, which could be understood as referring to the legal
+system of one particular State only. This provides the parties with a wider range of options and allows them, for
+example, to designate as applicable to their case rules of more than one legal system, including rules of law which
+have been elaborated on the international level.”
+Footnotes
+119
+Translation by Paris, The Home of International Arbitration, The 13 January 2011 Decree. The New French Arbitration
+Law, p.33. More generally, see Clay, op. cit., pp.269–271.
+120
+Paris, 13 July 1989, Compania Valenciana de Cementos Portland SA v Primary Coal Inc (1990) Rev. Arb. No.3 p.663,
+note Lagarde; (1990) JDI p.430, note Goldman; (1991) YBCA Vol.XVI p.142.
+121
+Delvolvé, Rouche & Pointon, op. cit., pp.144ff.
+122
+It is possible under Swiss law to choose as an applicable law a non-national law, see Girsberger & Voser, International
+Arbitration: Comparative and Swiss Perspectives, 3rd edn (2016), p.358 and following.
+123
+See for example para.5–1401 of the New York General Obligations Law provides in relevant part that: “Choice of law.
+1. The parties to any contract, agreement or undertaking, contingent or otherwise, in consideration of, or relating to
+any obligation arising out of a transaction covering in the aggregate not less than two hundred fifty thousand dollars,
+including a transaction otherwise covered by subsection one of section 1–105 of the uniform commercial code, may
+agree that the law of this state shall govern their rights and duties in whole or in part, whether or not such contract,
+agreement or undertaking bears a reasonable relation to this state.” There are exceptions for various specific types of
+contracts. However, this provision was aimed at permitting broad use of New York law in commercial transactions,
+although it would presumably be subject to any constitutional limitations.
+124
+Sutton, Gill & Gearing, op. cit., para.2–09, pp.79–80.
+125
+See Peterson Farms Inc v C&M Farming Ltd [2004] EWHC 121 (Comm); also see the discussion at para.6-80 in relation
+to the group of companies doctrine.
+126
+A/CN.9/264 English, p.61.
+End of Document
+© 2025 SWEET & MAXWELL

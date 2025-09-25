@@ -1,0 +1,98 @@
+Rule 45.15 - Scope and interpretation, UKBC-WHITEBK 458569396 (2025)
+© 2025 Thomson Reuters.
+1
+Rule 45.15 - Scope and interpretation
+White Book 2025  | Commentary last updated October 1, 2015
+Volume 2
+Section 7 - Legal Representatives—Costs and Litigation Funding
+Section 7B - CPR 43 to 45 [Before 1 April 2013]
+Part 45 [Before 1 April 2013] Fixed Costs
+III. - Fixed Percentage Increase in Road Traffic Accident Claims
+ 
+Related Practice Directions
+Rule 45_15
+45.15— Scope and interpretation 1
+7B-30+
+(1) This Section sets out the percentage increase which is to be allowed in the cases to which this Section applies.
+(Rule 43.2(1)(l) defines “percentage increase” as the percentage by which the amount of a legal representative’s fee
+can be increased in accordance with a conditional fee agreement which provides for a success fee.)
+(2) This Section applies where—
+(a) the dispute arises from a road traffic accident; and
+(b) the claimant has entered into a funding arrangement of a type specified in rule 43.2(k)(i).
+(Rule 43.2(k)(i) defines a funding arrangement as including an arrangement where a person has entered into a
+conditional fee agreement or collective conditional fee agreement which provides for a success fee.)
+(3) This Section does not apply if the proceedings are costs only proceedings to which Section II of this Part applies.
+(4) This Section does not apply—
+(a) to a claim which has been allocated to the small claims track;
+(b) to a claim not allocated to a track, but for which the small claims track is the normal track;
+(c) where the road traffic accident which gave rise to the dispute occurred before 6th October 2003; or
+(d) to a claim to which Section VI of this Part applies.
+(5) The definitions in rule 45.7(4) apply to this Section as they apply to Section II.
+(6) In this Section—
+(a) a reference to “fees” is a reference to fees for work done under a conditional fee agreement or collective
+conditional fee agreement;
+(b) a reference to “trial” is a reference to the final contested hearing or to the contested hearing of any issue
+ordered to be tried separately;
+
+Rule 45.15 - Scope and interpretation, UKBC-WHITEBK 458569396 (2025)
+© 2025 Thomson Reuters.
+2
+(c) a reference to a claim concluding at trial is a reference to a claim concluding by settlement after the trial has
+commenced or by judgment; and
+(d) “trial period” means a period of time fixed by the court within which the trial is to take place and where the
+court fixes more than one such period in relation to a claim, means the most recent period to be fixed.
+Effect of rule
+7B-30.
+1+
+This Section was added to Pt 45 by the Civil Procedure (Amendment) Rules 2004 (SI 2004/1306) and came into effect on 1 June
+2004. The rules in this Section make provision in road traffic accident claims for fixed percentage increases to apply to legal
+representatives’ fees in respect of success fees, where the claimant has entered into a conditional fee agreement or collective
+conditional fee agreement which provides for a success fee (as specified in CPR r.43.2(k)(i)). The provisions apply only where
+the road traffic accident giving rise to the dispute occurred on or after 6 October 2003. The provisions do not apply to a small
+claim, i.e a claim on the small claims track or a claim for which that track is the normal track. If Section II of Pt 45 is applicable
+Section III does not apply. Section VI of this Part (referred to in r.45.15(4)) imposes a fixed recoverable costs regime on claims
+that have been started (or should have been started) under Practice Direction 8B (Pre-Action Protocol for Low Value Personal
+Injury Claims in Road Traffic Accidents—Stage 3 Procedure).
+This rule and the other rules in this Section (rr.45.16 to 45.19) apply in relation to a “pre-commencement funding arrangement”;
+see para.7B-19+, and paras 48.0.1 to 48.0.4 (“Continuing application of CPR Pts 43 to 48 and Costs Practice Direction as in
+force immediately before 1 April 2013”).
+The words “at trial” in r.45.15 mean at a contested hearing. It is clear from r.45.17(1)(a) and (b)(i) that the rules recognise
+a distinction between a trial and the date fixed for the commencement of the trial. Settlement before a trial commences and
+conclusion by settlement after trial commences could both occur on the date fixed for the trial. The trigger for the entitlement
+to a 100% uplift in fees is not a settlement on a particular date, but a settlement or conclusion after a trial, i.e a hearing, has
+commenced. Where settlement is achieved before the hearing has commenced the uplift is 12.5% (Amin v Mullings [2011]
+EWHC 278 (QB), [2011] P.I.Q.R. P10 (Slade J.)). Where on the day fixed as the first day of the trial the court adjourned the
+case until 2pm the following day and the case then settled, the claim did not conclude at trial: James v Ireland [2015] EWHC
+1259 (QB) (Slade J.).
+In Lamont v Burton [2007] EWCA Civ 429; [2007] 1 W.L.R. 2814, CA, a claimant (C) who was injured in a road traffic accident
+refused a Pt 36 payment from the defendant (D) who had admitted liability, and, at the subsequent “disposal hearing”, the judge
+awarded C less than the Pt 36 payment. The judge awarded C costs up to the latest date on which the payment could have been
+accepted, and ordered C to pay the D’s costs from that date. Although C had failed to beat the Pt 36 payment, C claimed, and
+the judge granted, a success fee of 100%, because the matter had concluded at trial. On appeal, D argued that since r.44.3(6)
+contains a non-exhaustive list of the costs orders than can be made by the court, there was nothing in Pt 44 which denied it
+jurisdiction to award such percentage increase as it considered appropriate in all the circumstances, even if such an increase was
+at variance with that prescribed by r.45.16, and submitted that in the circumstances an increase of 12.5% would be appropriate.
+The Court of Appeal rejected these contentions. The Court found that the words “the percentage increase which is to be allowed”
+in r.45.16 (and r.45.17) are mandatory and it was not open to a court to circumvent the mandatory provisions of Pt 45. (The
+Court added that the same applied to the comparable rules in Sections IV and v of Pt 45.) In the circumstances provided for by
+r.47.18 a court may allow a success fee different from that prescribed by r.45.16 or r.45.17.
+Related Practice Directions
+ 
+Costs Practice Direction (CPR Pt 43) [Before 1 April 2013]
+ 
+Costs Practice Direction (CPR Pt 44) [Before 1 April 2013]
+ 
+Costs Practice Direction (CPR Pt 45) [Before 1 April 2013]
+ 
+Costs Practice Direction (CPR Pt 47)
+
+Rule 45.15 - Scope and interpretation, UKBC-WHITEBK 458569396 (2025)
+© 2025 Thomson Reuters.
+3
+ 
+Back to top
+Footnotes
+1
+Amended by the Civil Procedure (Amendment) Rules 2010 (SI 2010/621).
+End of Document
+© 2025 SWEET & MAXWELL

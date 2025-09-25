@@ -1,0 +1,65 @@
+Testimony by video conferencing or telephone, UKBC-ICCARBN 474406911 (2022)
+© 2025 Thomson Reuters.
+1
+Testimony by video conferencing or telephone
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+Testimony by video conferencing or telephone
+26-44
+Until the outbreak of the Covid-19 pandemic in 2020, the general rule was that in case of a physical hearing witnesses are
+expected to be present in person at the evidentiary hearing. Therefore, any alternative arrangement is subject either to consent
+of the parties or an order of the Tribunal. In issuing any order permitting video conferencing, the Tribunal will have to keep
+in mind the importance of the witness, the approximate duration of his testimony, his relationship with the parties and the
+requirements of due process 429  and the environmental impact. 430  Further, to hear a witness only by telephone would generally
+be much less satisfactory, although witnesses are sometimes only heard by telephone, as the last recourse if neither the witness
+physical presence nor videoconference are possible. The situation has changed as a result of the Covid-19 pandemic and virtual
+hearings have become commonplace. As a result, the ICC has developed a “Checklist for a Protocol on Virtual Hearings and
+Suggested Clauses for Cyber-Protocols and Procedural Orders dealing with the Organisation of Virtual Hearings”. 431  This
+protocol addresses various issues under the following headings:
+ 
+A.Prehearing Plan, Scope and Logistics
+ 
+B.Technical Issues, Specifications, Requirements and Support Staff
+ 
+C.Confidentiality, Privacy and Security
+ 
+D.Online Etiquette and Due Process Considerations
+ 
+E.Presentation of Evidence and Examination of Witnesses
+26-45
+Nevertheless, if to the extent that there it is possible to hold a hearing in person, if a party insists on questioning a key factual
+witness for the other side who is in fact employed by the other side and does not have a convincing reason for not physically
+attending the hearing, the Tribunal will generally give that insistence considerable weight. If the evidence to be provided is
+that of a third party with no current relationship with the parties to the arbitration, the Tribunal will most likely take reasonable
+steps to accommodate the witness to obtain his or her testimony. With respect to experts, testimony by video conferencing can
+be quite satisfactory, even in the most complex technical disputes, although the party proposing the expert should consider
+whether the expert’s impact would be reduced if he were not physically present. For an expert to go to a flip chart and make
+a drawing to explain a point when questioned by the Tribunal is not something as easily available and intuitive when it comes
+to a Zoom conferencing.
+Footnotes
+429
+Schäfer, “Videoconferencing in Arbitration” [2003] ICC ICArb. Bull. Vol.14 No.1, p.35 describes in much detail the
+many aspects a Tribunal needs to consider prior to authorising and proceeding with videoconferencing, in Grierson
+& van Hooft, Arbitrating under the 2012 ICC Rules (Kluwer Law International, 2012), Part IV: Procedure Before the
+Arbitral Tribunal, Ch.20: “The Evidentiary Hearing”, p.187. Verbist & Schäfer, ICC Arbitration in Practice, 2nd edn
+(Kluwer Law International, 2015), Ch.3: “Arbitral Proceedings Under the ICC Rules of Arbitration of 2012”, p.103.
+430
+Normally, the shorter the witness statement, the shorter the likely duration of the witness’ examination. The cost and
+inconvenience for a witness to travel to the hearing venue must be balanced also against the length of his testimony.
+Having a witness cross the Atlantic for what might be just 30 minutes of examination, seems no longer reasonable
+
+Testimony by video conferencing or telephone, UKBC-ICCARBN 474406911 (2022)
+© 2025 Thomson Reuters.
+2
+and acceptable in most circumstances. In that regard see “The Campaign for Greener Arbitrations” initiated by Lucy
+Greenwood in 2019, and the launch of a “Green Pledge” aimed at reducing the carbon footprint of international
+arbitration. Six Green Protocols were launched in April 2021 regarding Arbitral Proceedings and Model Green
+Procedural Order; Law Firms, Chambers and Legal Service Providers working in arbitration; Arbitrators; Arbitral
+Institutions; Arbitration Conferences; and Arbitral Hearing Venues.
+431
+See Part II, Document 9.2. This checklist is very useful as a point of reference for the parties to confer on the terms of
+an agreed protocol for a virtual hearing.
+End of Document
+© 2025 SWEET & MAXWELL

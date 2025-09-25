@@ -1,0 +1,93 @@
+Dual language arbitrations, UKBC-ICCARBN 474406944 (2022)
+© 2025 Thomson Reuters.
+1
+Dual language arbitrations
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+Dual language arbitrations
+20-33
+Article 20 contemplates the possibility of several languages being languages of the arbitration. The parties may agree on two
+languages for the arbitration or the Tribunal may decide that the arbitration (or parts of the arbitration) should be conducted in
+two languages. In some cases, the issue is what the parties have agreed on. In one case, the parties agreed that the arbitration
+be conducted in “Czech and English” and the issue was whether both languages should be used, and how. The common sense
+approach in such cases is that the parties should be able to make submissions and arguments in either language (and in this case
+in Czech or English), and not to require the simultaneous use of both languages. This is true in particular when the language
+is not an international language.
+20-34
+Apart from specific circumstances such as those described at para.20-23, the use of multiple languages as languages of the
+arbitration is normally not to be recommended for many reasons. First, it may be difficult to appoint an experienced arbitrator
+who has a full command of all the relevant languages. Secondly, his/her linguistic skills (or lack of) may give rise to an objection
+by a party to his/her confirmation as co-arbitrator by the ICC Court. In such a case, the ICC Court will usually take into account
+the parties’ intent as reflected in the arbitration agreement. If the parties have laid down very specific criteria on the arbitrator’s
+linguistic abilities, there is a risk that the ICC Court may decide not to confirm the potential arbitrator if he/she does not meet
+those requirements. There are, however, instances where it must be sufficient that the arbitrator speaks one of the two languages,
+as long as all submissions are made in both languages. On the other hand, when the arbitration agreement contains no criteria
+relating to the arbitrator’s linguistic skills, the ICC Court has more discretion and it may decide to confirm an arbitrator who
+does not speak one of the languages of the arbitration given that the services of an interpreter may be used. 99  It should however
+be noted that the decision of the ICC Court to confirm an arbitrator does not or should not affect the power of the Tribunal to
+determine the language or languages of the arbitration under art.20. 100  Thirdly, dual language arbitrations are more costly as
+is discussed in the following paragraph.
+20-35
+In deciding the issue of the languages of arbitration, Tribunals should have regard to the overall objective of the Rules to
+provide cost-effective dispute resolution. One of the advantages of international arbitration is to avoid costs of court proceedings
+where each document must generally be submitted in the language of the national court system. Therefore, Tribunals frequently
+adjust the procedure to reflect the linguistic abilities of the parties and their counsel. As a result, if all parties are fluent in
+certain languages (such as English or Spanish), then the Tribunal may permit the parties to make submissions in the language
+of their choice and submit documents in that language. Truly bilingual arbitration (where all documents and submissions are
+in two languages) is cumbersome and expensive and for that reason alone should preferably be avoided. In some instances, it
+is, however, unavoidable. For instance, in a recent case, the arbitration agreement provided expressly for the arbitration to be
+conducted by a sole arbitrator in the language of one of the parties from an Eastern European country, which is only spoken
+in that country. The foreign claimant filed the Request for Arbitration in that language, together with an English translation.
+The ICC Court was unable to find a neutral sole arbitrator, with the requisite experience in a multi-million FIDIC contract
+construction dispute, fluent in that language. It therefore appointed a sole arbitrator fluent in English, who would then, however,
+send all communications to the parties in a bi-lingual format. The need to translate everything in the language of the arbitration
+and to use an interpreter at the hearing undoubtedly added to the costs, but allowed the arbitration to proceed with an experienced
+and neutral arbitrator in a way that satisfied the language of arbitration needs. 101
+20-36
+
+Dual language arbitrations, UKBC-ICCARBN 474406944 (2022)
+© 2025 Thomson Reuters.
+2
+In many national courts, a party submitting documents in a language other than that of the national court must submit a sworn
+translation of any foreign language document. That is often not the case in arbitration. Frequently, the approach in an ICC
+arbitration is to permit documents to be submitted with an unsworn or working translation with the opposing party having the
+possibility to question the translation, request a sworn translation, or simply submit its own translation. 102  If a Tribunal would
+request that a sworn translation be provided, it would normally leave it to the parties to select the sworn translator, who may
+not reside at the place of arbitration. In exceptional cases, the Tribunal may take it upon itself to appoint a sworn translator
+and have a specific document translated by him/her. The costs thereof would be paid by the Tribunal out of the parties’ deposit
+made at the ICC Court.
+20-37
+With regard to legal authorities, parties will usually seek to limit the costs of translation of texts by translating brief extracts
+only (the original text being submitted as well). In ICC arbitrations in particular, many arbitrators allow the submission of legal
+authorities in the language in which they were originally published. Therefore, it is always advisable to provide a copy of the
+text in the original. In many cases, the parties agree that translations are not required where counsel and the parties are fluent
+in the language in which the legal authorities have been published.
+20-38
+With regard to the award, the strong preference of most Tribunals will be to have an award in one language. This would avoid the
+argument of inconsistencies between two versions of the award. Where the award is made in two languages, it is helpful to use
+a side-by-side format, with each paragraph starting in each language on the same page. If the award needs to be translated into
+a second language for enforcement purposes, the party seeking to enforce the award may have to provide a sworn translation
+of the award into the language used by that of the enforcing court. 103
+Footnotes
+99
+Castineira & Petsche, “The Language of the Arbitration: Reflections on the Selection of Arbitrators and Procedural
+Efficiency” [2006] ICC ICArb. Bull. Vol.1 No.1, p.33 highlighting the difficulties for the parties when using more than
+one language to find, for example, individuals who are able to satisfy the linguistic requirements without sacrificing the
+legal knowledge. In addition, the difficulties can be exacerbated in the absence of a fixed practice of the ICC Court,
+whose decisions are usually taken on a case-by-case basis.
+100
+Castineira & Petsche, “The Language of the Arbitration: Reflections on the Selection of Arbitrators and Procedural
+Efficiency” [2006] ICC ICArb. Bull. Vol.1 No.1, p.41.
+101
+One of the co-authors was the sole arbitrator.
+102
+It is often not the translated document in its entirety, but only a few sentences or words with which the opposing party
+may have trouble and take issue.
+103
+See art.IV(2) of the New York Convention; see also Paris, 18 March 2004, Sarl Synergie v Société SC Conect SA (2004)
+Rev. Arb. No.4 p.917, note Garaud & Ziadé (absence of the translation of the award by a sworn translator is not a ground
+for annulment of the exequatur decision granted by the French Court).
+End of Document
+© 2025 SWEET & MAXWELL

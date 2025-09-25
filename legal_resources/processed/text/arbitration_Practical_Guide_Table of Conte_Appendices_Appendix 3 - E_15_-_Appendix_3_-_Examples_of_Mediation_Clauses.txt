@@ -1,0 +1,306 @@
+Appendix 3 - Examples of Mediation Clauses, UKBC-EFFDIS 549291555 (2025)
+© 2025 Thomson Reuters.
+1
+Appendix 3 - Examples of Mediation Clauses
+A Practical Guide to Effective Dispute Resolution: Methods & Clauses 1st Ed.
+Mainwork
+Appendices
+Appendix 3 - Examples of Mediation Clauses
+1. American Arbitration Association (AAA)
+(a) Standard Mediation and If Necessary Arbitration Clause
+A3-001
+“Parties can copy and paste this clause into their contracts.
+The parties hereby submit the following dispute to mediation administered by the American Arbitration
+Association under its Commercial Mediation Procedures [the clause may also provide for the qualifications
+of the mediator(s), the method for allocating fees and expenses, the locale of meetings, time limits, or any
+other item of concern to the parties].” 1
+(b) Standard Mediation Clause
+A3-002
+“If a dispute arises out of or relates to this contract, or the breach thereof, and if the dispute cannot be
+settled through negotiation, the parties agree first to try in good faith to settle the dispute by mediation
+administered by the American Arbitration Association under its Commercial Mediation Procedures before
+resorting to arbitration, litigation, or some other dispute resolution procedure.”
+(c) Standard Mediation and if Necessary Arbitration Clause
+A3-003
+“The parties hereby submit the following dispute to mediation administered by the American Arbitration
+Association under its Commercial Mediation Procedures [the clause may also provide for the qualifications
+of the mediator(s), the method for allocating fees and expenses, the locale of meetings, time limits, or any
+other item of concern to the parties].”
+
+Appendix 3 - Examples of Mediation Clauses, UKBC-EFFDIS 549291555 (2025)
+© 2025 Thomson Reuters.
+2
+2. Multi-Step with Escalation Clauses – Born, International Arbitration
+and Forum Selection Agreements
+A3-004
+“Multi-Step with Escalation
+The parties shall attempt to resolve any dispute arising out of or relating to this [Agreement] [Contract]
+promptly by negotiation between executives who have authority to settle the controversy and who are at a
+higher level of management than the persons with direct responsibility for administration of this contract.
+To initiate a negotiation, a party shall give the other party written notice of any dispute not resolved in the
+normal course of business. Within [30] days after delivery of the notice, the executives of both parties shall
+meet at a mutually acceptable time and place, and thereafter as often as they reasonably deem necessary, to
+attempt to resolve the dispute. All negotiations pursuant to this clause are confidential and shall be treated
+as compromise and settlement negotiations for purposes of applicable rules of evidence. 2
+[Mediation (B): If the dispute has not been resolved by negotiation as provided herein within [45] days after
+delivery of the initial notice of negotiation, [or if the parties failed to meet within [20] days,] the parties
+shall endeavour to settle the dispute by mediation under the International Institute for Conflict Prevention
+& Resolution (‘CPR’) Mediation Procedure [currently in effect OR in effect on the date of this Agreement],
+[provided, however, that if one party fails to participate in the negotiation as provided herein, the other party
+can initiate mediation prior to the expiration of the [45] days.] Unless otherwise agreed, the parties will select
+a mediator from the CPR Panels of Distinguished Neutrals.
+[Arbitration (C): Any dispute arising out of or relating to this [Agreement] [Contract], including the breach,
+termination or validity thereof, which has not been resolved by mediation as provided herein [within [45]
+days after initiation of the mediation procedure] [within [30] days after appointment of a mediator], shall
+be finally resolved by arbitration in accordance with the International Institute for Conflict Prevention and
+Resolution (‘CPR’) Rules for Administered Arbitration [currently in effect OR in effect on the date of this
+Agreement], by [a sole arbitrator] [three independent and impartial arbitrators, of whom each party shall
+designate one] [three arbitrators to be appointed in accordance with the ‘screened’ appointment procedure
+provided in Rule 5(4)] [three independent and impartial arbitrators, none of whom shall be appointed by
+either party]; [provided, however, that if one party fails to participate in either the negotiation or mediation
+as agreed herein, the other party can commence arbitration prior to the expiration of the time periods set
+forth above.] Judgment upon the award rendered by the arbitrator(s) may be entered by any court having
+jurisdiction thereof. The place of the arbitration shall be (city, country). The language of the arbitration shall
+be (language).]”
+
+Appendix 3 - Examples of Mediation Clauses, UKBC-EFFDIS 549291555 (2025)
+© 2025 Thomson Reuters.
+3
+3. Dubai International Arbitration Centre
+Mediation Model Clause
+A3-005
+“In the event of a dispute arising out of or relating to this contract, including any question regarding
+its existence, validity or termination, the parties shall seek settlement of that dispute by mediation in
+accordance with the Mediation Rules of the Dubai International Arbitration Centre, which Rules are
+deemed to be incorporated by reference into this clause.” 3
+Mediation and Arbitration Model Clause
+A3-006
+“In the event of a dispute arising out of or relating to this contract, including any question regarding
+its existence, validity or termination, the parties shall first seek settlement of that dispute by mediation
+in accordance with the Mediation Rules of the Dubai International Arbitration Centre, which Rules are
+deemed to be incorporated by reference into this clause.
+If the dispute is not settled by mediation within [X] days of the commencement of the mediation, or such
+further period as the parties shall agree in writing, the dispute shall be referred to and finally resolved
+by arbitration under the Arbitration Rules of the Dubai International Arbitration Centre, which Rules are
+deemed to be incorporated by reference into this clause.
+The language to be used in the mediation and in the arbitration shall be [language].
+The governing law of the contract shall be the substantive law of [State or Country].
+In any arbitration commenced pursuant to this clause,
+ 
+(i)the number of arbitrators shall be [one/three]; and
+ 
+(ii)the seat of arbitration shall be [City and/or Country*].”
+
+Appendix 3 - Examples of Mediation Clauses, UKBC-EFFDIS 549291555 (2025)
+© 2025 Thomson Reuters.
+4
+4. Mediation Clauses – Centre for Effective Dispute Resolution (CEDR)
+(a) Simple core mediation clause
+A3-007
+“If any dispute arises in connection with this agreement, the parties agree to enter into mediation in good
+faith to settle such a dispute and will do so in accordance with the CEDR Model Mediation Procedure.
+Unless otherwise agreed between the parties within 14 days of notice of the dispute, the mediator will be
+nominated by CEDR.” 4
+(b) Simple core mediation clause including time and notification
+A3-008
+“If any dispute arises in connection with this agreement, the parties agree to enter into mediation in good
+faith to settle such a dispute and will do so in accordance with the CEDR Model Mediation Procedure.
+Unless otherwise agreed between the parties, within 14 [working] days of notice of the dispute, the
+mediator will be nominated by CEDR. To initiate the mediation a party must give notice in writing (‘ADR
+notice’) to the other party[ies] to the dispute, referring the dispute to mediation. A copy of the referral
+should be sent to CEDR.
+[If there is any point on the logistical arrangements of the mediation, other than the nomination of the
+mediator, upon which the parties cannot agree within 14 [working] days from the date of the ADR Notice,
+where appropriate, in conjunction with the mediator, CEDR will be requested to decide that point for the
+parties having consulted with them.]
+Unless otherwise agreed, the mediation will start not later than [28] [working] days after the date of the
+ADR notice.”
+(c) Simple core mediation clause including time, plus reference to court proceedings in
+parallel
+A3-009
+“If any dispute arises in connection with this agreement, the parties agree to enter into mediation in good
+faith to settle such a dispute and will do so in accordance with the CEDR Model Mediation Procedure.
+Unless otherwise agreed between the parties within 14 [working] days of notice of the dispute, the mediator
+will be nominated by CEDR. To initiate the mediation a party must give notice in writing (‘ADR Notice’)
+to the other party[ies] to the dispute, referring the dispute to mediation. A copy of the referral should be
+sent to CEDR.
+
+Appendix 3 - Examples of Mediation Clauses, UKBC-EFFDIS 549291555 (2025)
+© 2025 Thomson Reuters.
+5
+[If there is any point on the logistical arrangements of the mediation, other than the nomination of the
+mediator, upon which the parties cannot agree within 14 [working] days from the date of the ADR Notice,
+where appropriate, in conjunction with the mediator, CEDR will be requested to decide that point for the
+parties having consulted with them.]
+Unless otherwise agreed, the mediation will start not later than [28] [working] days after the date of the
+ADR Notice. The commencement of mediation will not prevent the parties commencing or continuing
+court proceedings/arbitration.”
+(d) Simple core mediation clause including time, plus reference to no court or arbitration
+proceedings until mediation terminated
+A3-010
+“If any dispute arises in connection with this agreement, the parties agree to enter into mediation in good
+faith to settle such a dispute and will do so in accordance with the CEDR Model Mediation Procedure.
+Unless otherwise agreed between the parties within 14 [working] days of notice of the dispute, the mediator
+will be nominated by CEDR. To initiate the mediation a party must give notice in writing (‘ADR Notice’)
+to the other party[ies] to the dispute, referring the dispute to mediation. A copy of the referral should be
+sent to CEDR.
+[If there is any point on the logistical arrangements of the mediation, other than the nomination of the
+mediator, upon which the parties cannot agree within 14 [working] days from the date of the ADR Notice,
+where appropriate, in conjunction with the mediator, CEDR will be requested to decide that point for the
+parties having consulted with them.]
+Unless otherwise agreed, the mediation will start not later than [28] [working] days after the date of the
+ADR Notice. No party may commence any court proceedings/arbitration in relation to any dispute arising
+out of this agreement until it has attempted to settle the dispute by mediation and either the mediation
+has terminated or the other party has failed to participate in the mediation, provided that the right to issue
+proceedings is not prejudiced by a delay.”
+(e) Multi-tiered process: negotiation – mediation – arbitration or litigation
+A3-011
+“If any dispute arises in connection with this agreement, a director [or other senior representatives of the
+parties with authority to settle the dispute] will, within [14] [working] days of a written request from one
+party to the other, meet in a good faith effort to resolve the dispute.
+If the dispute is not wholly resolved at that meeting, the parties agree to enter into mediation in good faith
+to settle such a dispute and will do so in accordance with the CEDR Model Mediation Procedure. Unless
+otherwise agreed between the parties within 14 [working] days of notice of the dispute, the mediator will
+be nominated by CEDR. To initiate the mediation a party must give notice in writing (‘ADR Notice’)
+
+Appendix 3 - Examples of Mediation Clauses, UKBC-EFFDIS 549291555 (2025)
+© 2025 Thomson Reuters.
+6
+to the other party[ies] to the dispute, referring the dispute to mediation. A copy of the referral should be
+sent to CEDR.
+[If there is any point on the logistical arrangements of the mediation, other than the nomination of the
+mediator, upon which the parties cannot agree within 14 [working] days from the date of the ADR Notice,
+where appropriate, in conjunction with the mediator, CEDR will be requested to decide that point for the
+parties having consulted with them.]
+Unless otherwise agreed, the mediation will start not later than [28] [working] days after the date of the
+ADR Notice.”
+Version 1: “The commencement of mediation will not prevent the parties commencing or continuing court
+proceedings/arbitration.”
+Version 2: “No party may commence any court proceedings/arbitration in relation to any dispute arising
+out of this agreement until it has attempted to settle the dispute by mediation and either the mediation
+has terminated or the other party has failed to participate in the mediation, provided that the right to issue
+proceedings is not prejudiced by a delay.”
+(f) International core mediation clause
+A3-012
+“If any dispute arises in connection with this agreement, the parties will attempt to settle it by mediation in
+good faith in accordance with the CEDR Model Mediation Procedure and the mediation will start, unless
+otherwise agreed by the parties, within 28 days of one party issuing a request to mediate to the other.
+Unless otherwise agreed between the parties, the mediator will be nominated by CEDR.
+The mediation will take place in [named city/country; city/country of either/none of the parties] and the
+language of the mediation will be [English]. The Mediation Agreement referred to in the Model Procedure
+shall be governed by, and construed and take effect in accordance with, the substantive law of [England
+and Wales].
+If the dispute is not settled by mediation within [14] days of commencement of the mediation or within
+such further period as the parties may agree in writing, the dispute shall be referred to and finally resolved
+by arbitration. CEDR shall be the appointing body and administer the arbitration. CEDR shall apply the
+UNCITRAL rules in force at the time arbitration is initiated. In any arbitration commenced pursuant to this
+clause, the number of arbitrators shall be [1-3] and the seat or legal place of arbitration shall be [London,
+England].”
+5. Mediation-Arbitration Clause – CIArb
+A3-013
+
+Appendix 3 - Examples of Mediation Clauses, UKBC-EFFDIS 549291555 (2025)
+© 2025 Thomson Reuters.
+7
+“Any dispute arising out of or in connection with this contract shall, at first instance, be referred to a mediator
+for resolution. The parties shall attempt to agree upon the appointment of a mediator, upon receipt, by either
+of them, of a written notice to concur in such appointment. Should the parties fail to agree within fourteen
+days, either party, upon giving written notice, may apply to the President or the Vice President, for the time
+being, of the Chartered Institute of Arbitrators, for the appointment of a mediator.
+Should the mediation fail, in whole or in part, either party may, upon giving written notice, and within twenty-
+eight days thereof, apply to the President or the Vice President, for the time being, of the Chartered Institute
+of Arbitrators, for the appointment of a single arbitrator, for final resolution.” 5
+In contrast, the ICDR Model “Step-Clause” for mediation-arbitration is as follows:
+“In the event of any controversy or claim arising out of or relating to this contract, or a breach thereof,
+the parties hereto agree first to try and settle the dispute by mediation, administered by the International
+Centre for Dispute Resolution under its Mediation Rules. If settlement is not reached within 60 days after
+service of a written demand for mediation, any unresolved controversy or claim arising out of or relating
+to this contract shall be settled by arbitration in accordance with the International Arbitration Rules of the
+International Centre for Dispute Resolution.”
+6. LCAM – Model Mediation Clause
+Arb-Med-Arb model clause
+A3-014
+“Any dispute, controversy or claim arising out of or in connection with this agreement, or the existence,
+breach, termination or invalidity thereof shall be finally determined by arbitration in accordance with
+the London Chamber of Arbitration and Mediation (‘LCAM’) Arbitration Rules for the time being in
+force, which rules are deemed to be incorporated by reference in this clause. The parties further agree that
+following the service of a Request for Arbitration, they will attempt in good faith to resolve the Dispute
+through Mediation in accordance with LCAM Model Mediation Procedures.
+Any settlement reached will be referred to the arbitral tribunal and may be made a consent award on agreed
+terms. The arbitral tribunal shall be composed of [ …] arbitrator(s). The language of the mediation shall
+be [English]. The seat of the arbitration shall be [London] and the language of the arbitration shall be
+[English]. Any hearings will take place in [London]. This agreement and any dispute or claim (including
+non-contractual disputes or claims) arising out of or in connection with it or its subject matter or formation
+shall be governed by and construed in accordance with the law of [England and Wales]. The law of this
+arbitration agreement shall be the law of [England and Wales].” 6
+
+Appendix 3 - Examples of Mediation Clauses, UKBC-EFFDIS 549291555 (2025)
+© 2025 Thomson Reuters.
+8
+Mediation clause
+A3-015
+“Any dispute, controversy or claim arising out of or in connection with this agreement, or the existence,
+breach, termination or invalidity thereof shall be determined by mediation in accordance with the London
+Chamber of Arbitration and Mediation (‘LCAM’) Model Mediation Procedures. The language of the
+mediation shall be [English]. The mediation shall take place in [London]. This agreement and any dispute
+or claim (including non-contractual disputes or claims) arising out of or in connection with it or its subject
+matter or formation shall be governed by and construed in accordance with the law of [England and
+Wales].”
+7. Negotiation-Mediation Clause – LCIA
+A3-016
+“In the event of a dispute arising out of or relating to this contract, including any question regarding its
+existence, validity or termination, the parties shall first seek settlement of that dispute by negotiation between
+the parties.
+Either party may serve a Dispute Notice on the other. Within […] days of the date of service of that Dispute
+Notice, each party will nominate [a director] to meet to discuss the dispute and explore settlement. That
+meeting will take place within […] days of the Dispute Notice.
+If the dispute is not resolved within […] days of the negotiation meeting, the parties shall seek settlement
+of the dispute by mediation in accordance with the LCIA Mediation Rules, which Rules are deemed to be
+incorporated by reference into this clause.” 7
+8. Singapore International Mediation Centre
+A3-017
+“All disputes, controversies or differences arising out of or in connection with this contract, including any
+question regarding its existence, validity or termination, shall before or after the commencement of any other
+proceedings, be first referred to mediation in Singapore at the Singapore International Mediation Centre in
+accordance with its Mediation Rules for the time being in force.” 8
+
+Appendix 3 - Examples of Mediation Clauses, UKBC-EFFDIS 549291555 (2025)
+© 2025 Thomson Reuters.
+9
+Footnotes
+1
+AAA, Clauses (2023), https://www.adr.org/Clauses.
+2
+Born, International Arbitration and Forum Selection Agreements Drafting and Enforcing, 6th edn (2021), Ch.3, (B),
+(8)–(9).
+3
+Dubai International Arbitration Centre, Model Arbitration Clause (2023).
+4
+CEDR, 
+“CEDR 
+Model 
+Documents” 
+(2023), 
+https://www.cedr.com/foundation/currentprojects/
+mediationcontractclause/.
+5
+CIArb, Dispute Resolution Clauses - “Catch All” Dispute Resolution Clause, https://www.ciarb.org/media/2612/
+contract-clause.pdf.
+6
+LCAM, Model Contract Clauses (September 2022).
+7
+LCIA, 
+Guide 
+to 
+Drafting 
+International 
+Dispute 
+Resolution 
+Clauses 
+(2010), 
+http://www.lcia.org/
+Dispute_Resolution_Services/LCIA_Mediation_Clauses.aspx.
+8
+Singapore International Mediation Centre, Mediation Rules (2023).
+End of Document
+© 2025 SWEET & MAXWELL

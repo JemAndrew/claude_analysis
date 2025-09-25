@@ -1,0 +1,738 @@
+Section C. - Duties of Arbitrators, UKBC-REDFERN 530638632 (2025)
+© 2025 Thomson Reuters.
+1
+Section C. - Duties of Arbitrators
+Redfern and Hunter on International Arbitration 7th Ed.
+Mainwork
+Chapter 5 - Powers, Duties, and Jurisdiction of an Arbitral Tribunal
+Section C. - Duties of Arbitrators
+(a) Introduction
+5. 50
+The duties of an arbitrator may be divided into three categories: duties imposed by the parties; duties imposed by law; and
+ethical duties. It is a useful discipline for an arbitral tribunal to draw up for itself a checklist of its specific duties, whatever
+their origin. Such a list will differ from case to case, since it must allow for the impact of different rules of arbitration and for
+the differing applicable laws.
+(b) Duties imposed by the parties
+5. 51
+Specific duties may be imposed upon an arbitral tribunal by the parties. This may be done before the arbitrators are appointed,
+or during the course of the arbitration, or both. If it is done before the appointment of arbitrators (e.g. in an ad hoc submission
+agreement), each arbitrator should check the agreement before accepting the appointment, in case it imposes unreasonable
+duties or duties that are incapable of fulfilment. For example, there might be a provision that the award should be made within
+a limited time after the appointment of the arbitral tribunal. If the agreed time-scale is unacceptable to the arbitrator and cannot
+be changed, the appointment should be declined.
+5. 52
+Duties may also be imposed on the arbitral tribunal during the course of the proceedings by the parties (but usually only after
+consultation with the arbitral tribunal). In a dispute arising out of a construction project in a war zone, for example, the parties
+may decide in the course of the arbitration that they wish the arbitral tribunal to inspect the construction site. The proposal for
+such a site inspection would usually be discussed with, and agreed by, the arbitral tribunal—but if a particular arbitrator was
+unwilling to accept the proposal and the parties were to insist upon it, that arbitrator would have to resign.
+5. 53
+Where the arbitration is conducted under specific rules, those rules usually impose particular duties on the arbitral tribunal in
+addition to any imposed by the parties. A review of the rules of two arbitral institutions indicates the nature of these duties.
+Under the ICSID Rules, arbitrators must, before or at the first session, sign a declaration of independence and readiness to
+judge fairly as between the parties. 77  Under the same Rules, the arbitral tribunal must meet for its first session within sixty
+days of its constitution, or such other period as the parties to the arbitration may agree; 78  it must keep its deliberations private
+and confidential; 79  it must take decisions by a majority vote; 80  and it must give reasons for its award. 81  The ICC Rules also
+impose their own obligations upon arbitral tribunals—such as to confirm their availability, 82  to draw up terms of reference, 83
+to make an award within a defined period of time, 84  and to submit the award in draft form to the ICC’s Court for scrutiny. 85
+
+Section C. - Duties of Arbitrators, UKBC-REDFERN 530638632 (2025)
+© 2025 Thomson Reuters.
+2
+(c) Duties imposed by law
+5. 54
+Other duties are imposed by law. For instance, the law may require an arbitral tribunal to decide all procedural and evidential
+matters, 86  to treat the parties fairly and impartially, 87  or to make the award in a particular form. 88
+(i) Duty to act with due care
+5. 55
+It is generally recognised that members of a profession, such as lawyers, doctors, accountants, architects, and engineers, are
+under a duty to carry out their professional work with proper skill and care—and that they may be held liable in damages at the
+suit of an injured party if they fail to do so. In the course of their professional work, such professionals may well be required
+to formulate a decision that is binding upon two or more parties. For example, an architect may be required, under a standard
+form of building contract, to certify the value of work as it is performed, by issuing interim certificates. If due care is not taken
+so that (for instance) the amount certified is too large and the employer loses money as a consequence, the architect may be
+compelled by legal action to make good the loss caused by his or her negligence. 89  Equally, an accountant may be asked to
+determine the value of shares in a private company in a way that will be binding upon the parties to an agreement. In this case
+also, if the accountant acts without due care and a party suffers loss, the accountant may be sued in respect of negligence. 90
+5. 56
+The distinction between a professional adviser, who formulates a decision binding upon two or more parties in the course
+of a professional activity, and an arbitrator, who formulates a decision binding upon two or more parties in the course of an
+arbitration, is not easy to identify. It seems appropriate to expect the same standard of professional care from a lawyer (or an
+accountant, or an architect, or an engineer) who is serving as an arbitrator as would be expected in the course of his or her
+other professional work. The parties to an arbitration entrust an arbitral tribunal with an important task, for which they are
+prepared to pay—often generously. They therefore expect the arbitrator to perform the task with due care; and there exists
+an obvious moral duty for that arbitrator to do so. The question is whether there is also a legal duty.
+5. 57
+This question goes to the heart of the relationship between the arbitrator and the parties. As the practice of international
+arbitration becomes increasingly sophisticated and as the sums at stake grow in size, a party that has suffered loss as a result
+of an arbitrator’s manifest lack of care may wish to seek to recover that loss from the arbitrator personally.
+5. 58
+This raises a preliminary question: under which legal system should the potential liability of an arbitrator be judged? This is
+relevant since many arbitrators perform arbitral functions outside of their home jurisdiction. For example, should a United
+States-based arbitrator who performs 90 per cent of her work on a London-seated arbitration be held to the rules applicable
+to arbitrators in the United States or to those applicable in the United Kingdom? This issue was addressed in France by the
+Paris Court of Appeal which confirmed that the services performed by an arbitrator are to decide the dispute and to render an
+award at the seat of arbitration. The Court consequently held that the place of performance of the arbitrator’s services must
+be deemed to be the seat of the arbitration, even if the proceedings and deliberations took place elsewhere. 91
+5. 59
+The applicable law will determine the standard by which to judge the potential liability of the arbitrator. This will depend
+on the characterisation made by that legal system of the relationship between the arbitrators and the parties. There are two
+schools of thought: 92  the first considers that the relationship between the arbitrator and the parties is established by contract;
+the second may be identified as the ‘status school’, which considers that the judicial nature of an arbitrator’s function should
+result in treatment comparable to that of a judge. 93  In some jurisdictions, equating the role of the arbitrator to that of a judge
+may give rise to immunity from legal proceedings; in others, it simply results in the application of rules on judicial liability. 94
+
+Section C. - Duties of Arbitrators, UKBC-REDFERN 530638632 (2025)
+© 2025 Thomson Reuters.
+3
+5. 60
+The ‘contractual school’ considers that an arbitrator is appointed by or on behalf of the parties to an arbitration to perform a
+service (that of resolving a dispute between them) for a fee. In these circumstances, a contractual relationship arises between
+the parties and the arbitrator. The terms of this contract may be set out in the submission to arbitration, the relevant rules of
+arbitration, the terms of reference, and/or the terms of appointment. Other terms may be imposed by operation of law and
+include the duties to act with due diligence and to act judicially.
+5. 61
+The contractual approach finds favour in most continental European jurisdictions. 95  Austrian law, for instance, takes the
+position that there is a contract between the arbitrator and the parties. Although this contract resembles a contract for services,
+it is considered to be sui generis by some authors. 96  Certain duties, as well as rights, are imposed upon an arbitrator under the
+contract. One of the rights is a right to remuneration. The duties include conducting the proceedings in an appropriate way and
+making an award. The Austrian Arbitration Act provides that an arbitrator who does not fulfil the duties assumed by accepting
+an appointment, or who does not fulfil them in due time, may be liable to the parties for loss caused by wrongful behaviour. 97
+5. 62
+A similar position is adopted by Dutch law. An arbitrator is held to be in a contractual relationship with the parties and may
+be liable for damages in the event of committing gross negligence. 98  Other jurisdictions, such as Argentina, consider that
+the arbitral contract renders arbitrators liable for losses caused by any failure to perform duties: ‘[A] cceptance byarbitrators
+of their appointment as such shall entitle the parties to compel them to carry out their functions and to hold them liable for
+costs and damages derived from the nonperformance of arbitral functions.’ 99  Chinese law provides for liability for certain
+arbitral conduct, in addition to sanctions such as removal from the relevant list of arbitrators. 100
+5. 63
+The ‘status school’ is based on the performance by arbitrators of a judicial or quasi-judicial function, which grants an element
+of ‘status’ entitling them to treatment similar to that of a judge. Certain rights and duties are conferred on the arbitrator by
+the very fact of having assumed that office. The arbitrator exercises a compulsory jurisdictional function and enjoys statutory
+powers. In most common law jurisdictions, this leads to certain immunities, 101  although the immunity may be qualified
+where the arbitrator has acted in bad faith. 102
+5. 64
+Specifically, arbitrators and arbitral institutions in the United States enjoy a broad degree of immunity from suit for actions
+taken within their mandate. 103  Arbitrators acting in England cannot be held liable for the performance of their arbitral
+functions, unless bad faith can be proved. 104  Similarly, arbitrators in New Zealand, Australia, Kenya, and Ireland cannot
+be held liable for negligence. 105  This common law approach has now been followed by institutions such as the ICC and
+the LCIA, which have adopted rules seeking to exclude liability for arbitrators. 106  Nevertheless, some commentators from
+common law systems have questioned the appropriateness of almost absolute immunity for arbitrators, and several have
+argued that arbitrators have professional duties of care, skill, and diligence, and that they should be liable for breach of such
+duties. 107
+5. 65
+A rigid categorisation of the source of an arbitrator’s obligation to act with due care risks obscuring the real debate, which is
+whether it is appropriate, as a matter of policy, to accord immunity, or partial immunity, to arbitrators. Public policy in this
+context is mainly concerned with the independence and integrity of the decision-making process, which could be jeopardised
+if arbitrators were to be subject to reprisals by disappointed parties. 108
+5. 66
+Other arguments in favour of immunity are that:
+ 
+1.it helps to ensure the finality of arbitral awards, by preventing an unsuccessful party from suing the arbitrator; 109
+
+Section C. - Duties of Arbitrators, UKBC-REDFERN 530638632 (2025)
+© 2025 Thomson Reuters.
+4
+ 
+2.fewer skilled persons would be prepared to act as arbitrators if they were to run the risk of incurring substantial
+liability; 110
+ 
+3.arbitrators have no interest in the outcome of the dispute and should not be compelled to become parties to it.
+Some commentators go so far as to base arbitral immunity entirely on public policy grounds, arguing that immunity can be
+explained satisfactorily only as a concession from the state, which weighs the benefits of arbitration against the risk that
+granting arbitrators immunity may encourage them to be careless (or even dishonest) in the performance of their duties. 111
+5. 67
+Indeed, there are a number of policy arguments against immunity. Immunity may encourage carelessness; the finality of
+the decision is given priority over individual justice; disciplinary remedies are generally unavailable against arbitrators; and
+alternative remedies, such as vacatur of the award and the withholding of fees, may be inadequate.
+5. 68
+One substantial concern is the lack of uniformity in the approach adopted in different states. As a consequence, the source of
+the arbitrator’s duties, and the public policy of the state in which the arbitrator is acting, need to be examined on a case-by-
+case basis. It would be helpful if some overriding principles could be established at an international level to provide guidance
+to arbitrators in the exercise of their functions, irrespective of the seat of arbitration.
+5. 69
+In its 1987 Rules of Ethics for International Arbitrators, 112  the IBA stated that ‘international arbitrators should in principle
+be granted immunity from suit under national laws, except in extreme cases of wilful or reckless disregard of their legal
+obligations’. This appears to be a suitable middle ground, but it remains a wish rather than a reality in many jurisdictions.
+Pending the establishment of uniform or harmonised rules, arbitrators should ascertain the potential scope of their liability,
+principally in accordance with the law of the seat.
+5. 70
+Where arbitrators are exposed to a risk of personal liability by the law of the seat, they may consider making their acceptance
+of an appointment conditional on an indemnity from the parties. In this way, they would obtain immunity from liability by
+contract, even if they were not entitled to it by operation of law. Whether such an indemnity would be enforceable as a matter
+of public policy is uncertain. Professional liability insurance is also generally available to cover the risks—at a price.
+5. 71
+A separate issue is the potential liability of the arbitral institution. Aggrieved parties who have lost an arbitration may look
+indiscriminately for someone to blame, and arbitral institutions have not escaped this trend. 113  Like the relationship between
+arbitrators and parties, the relationship between parties and the institution administering the arbitration is generally considered
+to be contractual. Whereas in common law jurisdictions arbitral institutions have more or less absolute immunity from
+liability, 114  in civil law jurisdictions they may be held liable for wrongful acts, and such liability will usually be based on
+general principles of contractual liability. For example, in January 2009, in a case against the ICC, the Paris Court of Appeal
+held that the waiver of liability contained in the ICC Rules 115  ran contrary to the duty of the ICC as an arbitral institution
+and should be treated as null and void. 116  As a consequence, the ICC could be held liable for breaches of its obligations
+to the parties under its contractual relationship. However, the impact of that decision was softened in March 2021 when the
+Court of Appeal recognised that the ICC’s clause excluding liability would operate except in cases of deliberate wrongdoing
+(dol) or gross negligence (faute lourde). 117
+5. 72
+The basis for immunity of arbitral institutions in common law jurisdictions is different from that relating to arbitrators. It is
+based on their operation as quasi-judicial organisations 118  to protect functions that are (i) closely related to the arbitral process
+and (ii) sufficiently related to the adjudicative phase of the arbitration. In doing so, they fulfil the necessary requirements
+for immunity. It is argued (mainly in the United States) that if this immunity was not accorded to the arbitral institutions,
+the immunity of arbitrators themselves would be meaningless, since liability would merely shift from the arbitrator to the
+arbitral organisation. 119
+
+Section C. - Duties of Arbitrators, UKBC-REDFERN 530638632 (2025)
+© 2025 Thomson Reuters.
+5
+5. 73
+Institutional rules usually provide for the institution’s immunity in relation to any act or omission in connection with the
+arbitration, subject to applicable law 120  with the exception of the LCIA which excludes such immunity for conscious or
+deliberate wrongdoing. 121  The rules of the arbitral institution are usually incorporated in the contract between the parties and
+the institution, and as such may operate as an exclusion of liability. However, any mandatory rules of the forum providing
+for liability would be likely to trump such exclusion. 122
+(ii) Duty to act promptly
+5. 74
+An arbitral tribunal has an obvious moral obligation to carry out its task with due diligence. Justice delayed is justice denied.
+Some systems of law endeavour to ensure that an arbitration is carried out with reasonable speed by setting a time limit
+within which the arbitral tribunal must make its award. 123  The time limit fixed is sometimes as short as six months (as in
+the ICC Rules 124 ), although generally it may be extended by consent of the parties, or at the initiative of the institution 125
+or the tribunal. 126  If an award is not made within the time allowed, the authority of the arbitral tribunal may be regarded
+as having terminated, with the risk that any award will be null and void. 127  Some systems of law provide that an arbitrator
+who fails to proceed with reasonable speed in conducting the arbitration and making his or her award may be removed by
+a competent court, 128  and deprived of any entitlement to remuneration. The Model Law provides that the mandate of an
+arbitrator terminates if he or she ‘fails to act without undue delay’. 129
+5. 75
+Whilst these sanctions may act as a spur to the indolent arbitrator, they do nothing to compensate a party who has suffered
+financial loss as a result of delay in the conduct of the arbitration. Delay in the conduct of an arbitration may have serious
+financial consequences; awards of interest rarely compensate the successful party for the financial loss suffered in the interim.
+The question accordingly arises as to whether an arbitrator may be made liable in damages for undue delay. No liability
+is imposed under the established international or institutional rules, and it would be most unusual to find a term imposing
+liability for delay in an ad hoc submission agreement. Liability might, however, be established on the basis of the contractual
+duty of care, 130  in those jurisdictions in which the arbitrator does not benefit from immunity.
+5. 76
+Faced with increasing delays in the conduct of arbitrations, the major institutions have revised their rules to improve the speed
+and efficiency of arbitrations. For example, the ICC Rules now require the tribunal and the parties to ‘make every effort’
+to ‘conduct the arbitration in an expeditious and cost-effective manner’. 131  This includes a compulsory case management
+conference, 132  in which the use of specific case management techniques is encouraged. 133  The tribunal is also required to
+set an expected date for issue of the award, following the close of the proceedings. 134  Appendix IV sets out case management
+techniques, and is supplemented by the ICC Commission’s updated report on controlling time and costs in arbitration. 135
+The ICC Rules also provide a separate set of rules for expedited procedures, which automatically apply to arbitrations where
+the amount in dispute does not exceed US$ 2 million if the arbitration agreement was concluded between 2017 and 2021 or
+US$ 3 million if it was concluded on or after 2021. 136
+(iii) Duty to act judicially
+5. 77
+It is important that an arbitral tribunal should act, and should be seen to act, judicially (that is, respecting the rules of due
+process). This is more than a mere moral obligation; it is also one that may be enforced under the relevant rules of arbitration
+or the applicable law. The duty to act judicially is a duty that extends to all aspects of the proceedings. 137
+
+Section C. - Duties of Arbitrators, UKBC-REDFERN 530638632 (2025)
+© 2025 Thomson Reuters.
+6
+5. 78
+What does this mean in practice? Neither the arbitral tribunal as a whole nor any of its individual members should, for
+instance, discuss the case with one party in the absence of the other, unless in connection with the nomination of the president
+of the arbitral tribunal (where this has been agreed), or if the absent party has failed to attend a meeting or a hearing, having
+been given proper notice to do so. At the hearing, the duty to act judicially means that each party must be accorded equality of
+treatment and given a fair opportunity to present its case. It would be wrong, for instance, to allow one party to call witnesses
+and to deny the other party a similar opportunity. Similarly, it would be improper to allow one party to address the arbitral
+tribunal orally and to deny the same opportunity to the other party. Rules of arbitration, which are usually silent as to the
+duties of the arbitral tribunal, find common ground on this point. Article 17 of the UNCITRAL Rules provides that the arbitral
+tribunal may conduct the arbitration in such a manner as it considers appropriate ‘provided that the parties are treated with
+equality and that at an appropriate stage of the proceedings each party is given a reasonable opportunity of presenting its
+case’. 138  The ICSID Rules do not contain such a general statement, but its detailed provisions ensure equality of treatment:
+and if any party fails to appear or present its case, a special default procedure must be followed. 139  Article 14.4.i. of the
+LCIA Rules requires arbitrators at all times ‘to act fairly and impartially as between all parties, giving each a reasonable
+opportunity of putting its case and dealing with that of its opponent’.
+5. 79
+The law applicable to the arbitration proceedings often states explicitly that due process must be observed by the arbitral
+tribunal. For example, article 21(2) of the Brazilian Arbitration Act 1996 states that ‘the principles of adversary proceeding,
+equal treatment of the parties, impartiality of the arbitrator and freedom of decision, shall always be respected’. 140  English
+law has gone even further. Section 33(1) of the Arbitration Act 1996 provides that an arbitral tribunal shall:
+Section 33
+[ … ]
+(a) act fairly and impartially as between the parties giving each party a reasonable opportunity of
+putting his case and dealing with that of his opponent, and
+(b) adopt procedures suitable to the circumstances of the particular case, avoiding unnecessary delay
+or expense, so as to provide a fair means for the resolution of the matters falling to be determined.
+This is a mandatory provision, from which neither the parties nor the tribunal may derogate. 141  An arbitrator acting in breach
+of this duty can be removed. 142  Perhaps more significantly, awards made in breach of it are open to challenge 143  and would
+face difficulties of enforcement. 144
+5. 80
+The duty to act judicially is not simply a matter of ensuring equality between the parties and giving each the right to respond
+to the other party’s position; it also arises where the arbitral tribunal decides to base its decision on an issue not specifically
+raised by the parties. It is an accepted principle that the tribunal is free to apply any element of applicable law (even where
+not commented or argued by the parties) under the maxim juris novit curia (‘the court knows the law’ sometimes referred
+to as juris novit arbiter in the arbitration context). However, where the tribunal intends to rely on authorities not cited by the
+parties, best practice is always to permit the parties to comment before rendering a decision. But what is the consequence
+under the applicable law when the arbitral tribunal relies on a legal argument not relied upon or addressed by the parties?
+5. 81
+English law is clear in this respect: a tribunal must give the parties an opportunity to be heard. If it fails to do so, then the duty
+to act judicially will have been infringed. In one case, the English courts noted that an arbitral tribunal must provide each party
+with a fair opportunity to address all of the essential building blocks in its conclusion. 145  On the facts of the case, the claimant
+had been deprived of the opportunity to advance submissions on an issue that had formed part of the tribunal’s reasoning
+in the award, but had not been debated by the parties. The court held that such action amounted to a serious irregularity
+
+Section C. - Duties of Arbitrators, UKBC-REDFERN 530638632 (2025)
+© 2025 Thomson Reuters.
+7
+capable of causing substantial injustice, thus meeting the criteria for the setting aside of an award under section 68 of the
+1996 Arbitration Act. The court set aside the award and remitted the issue to the arbitral tribunal for further consideration.
+5. 82
+The position is less clear in continental Europe. Switzerland, for example, allows arbitrators to reach their conclusions on
+legal theories not advanced by the parties, without inviting them to comment. 146  By contrast, French courts have ruled
+that an arbitral tribunal cannot decide a case based on legal grounds not invoked or debated by the parties. 147  In a Dutch
+case decided in 2021 the District Court of the Hague concluded that ‘the adversarial principle does not require the arbitral
+tribunal to give the parties an opportunity to express themselves in advance on proposed legal considerations’. 148  This lack
+of uniformity is not helpful to tribunals composed of arbitrators from different legal backgrounds and has prompted calls
+for harmonisation. 149
+5. 83
+Where a tribunal fails in its duty to act judicially, the immediate sanction is for the tribunal to be removed. In some
+circumstances, this can be done without waiting for the award, either under the rules of the relevant arbitral institution 150
+or by a national court, where the applicable law permits the courts at the place of arbitration to intervene. 151  However, in
+some jurisdictions, such as the United States, there is no opportunity for concurrent court control and the aggrieved party
+must wait until the end of the proceedings before challenging the award. 152
+5. 84
+The duty to act judicially is to be clearly distinguished from the duty to be independent and impartial. By way of illustration, in
+a decision of the LCIA Court, a sole arbitrator was challenged for conducting a meeting with representatives of the respondent
+during two consecutive days in the absence of the claimant or any of its representatives. A verbatim transcript of the meeting
+was produced for the parties, in which the arbitrator had made clear that the meeting was not a formal hearing. The claimant
+challenged the arbitrator. The LCIA Court, considering the manner in which the arbitration had been conducted, stated that
+it had no reason to doubt the arbitrator’s independence or impartiality, but, in considering whether the arbitrator had acted
+fairly between the parties, found that ‘[f] or the Arbitrator to meet with the representatives of one party in the absence of the
+other, and to permit any discussion of the merits of the dispute at such a meeting is, to put it no higher, an error of judgment’,
+which in the Court’s view, constituted a failure to act fairly between the parties. 153
+5. 85
+With some rare exceptions, 154  the sanctions for a failure to act judicially normally do not include financial compensation
+to the aggrieved party. Nevertheless, a party who has suffered financial loss as a result of such a failure may wish to claim
+personally against the arbitrator. The term ‘failure to act judicially’ may cover a variety of conduct. Where the behaviour is
+wilful misconduct or bad faith (for example, the acceptance of a bribe), the party who has suffered loss would be entitled
+to claim against the offending arbitrator, even in countries that traditionally confer immunity, such as Australia, England,
+and New Zealand. 155
+(d) Ethical duties
+5. 86
+In addition to specific duties imposed on arbitrators, either by the parties or by law, it is generally considered that an arbitrator has
+certain moral or ethical obligations. One obvious example, discussed earlier, is the obligation to decline to accept an appointment
+if sufficient time and attention cannot be given to the case. 156  There has been much discussion as to how these ethical standards
+—sometimes described as the ‘deontology’ of arbitrators—might be defined or established in some form of internationally
+accepted ‘code of conduct’.
+5. 87
+The IBA Guidelines 157  recognised the problems posed by possible conflicts of interest in international arbitration, and the
+increasing recourse to challenges of arbitrators, sometimes brought as a means of delaying arbitrations or of depriving a party
+
+Section C. - Duties of Arbitrators, UKBC-REDFERN 530638632 (2025)
+© 2025 Thomson Reuters.
+8
+of the arbitrator of its choice. We have discussed these Guidelines, and issues relating to the challenge and replacement of
+international arbitrators, in Chapter 4. It is clear from that discussion that there is no easy solution to the question of what
+may or may not constitute a conflict of interest. 158  The search for guidance continues. At the time of writing, UNCITRAL
+Working Group III and ICSID have been collaborating on a draft Code of Conduct for Adjudicators in Investor–State Dispute
+Settlement. 159
+(i) Use of arbitration to further criminal purposes
+5. 88
+Other ethical duties may arise where an arbitrator suspects or has reason to suspect that the arbitral process is being hijacked
+for a criminal purpose. 160  One important concern is the laundering of the proceeds of crime through a fraudulent dispute,
+which is rapidly settled. The parties ask the tribunal to embody a settlement of their ‘dispute’ in a consent award, through
+which an unlawful payment is made and successfully hidden as the proper transfer of funds pursuant to an arbitral award.
+A tribunal should therefore be particularly cautious in agreeing to an early consent award that simply involves the transfer
+of money. A consent award is only needed for the payment of money where there is an element of future performance—
+for instance, an agreement by the winning party to accept payment of the award in instalments, rather than insisting on
+immediate payment. Otherwise, an agreement by the parties to pay money is usually sufficiently protected by mutual releases
+in a settlement agreement conditional upon the receipt of funds. Other parties who wish to abuse the arbitral process may be
+more sophisticated and simply put up a weak defence. There are often ‘tell-tale’ signs: the entities involved are often recently
+incorporated; their activities are usually of a nature that does not require any real investment; and the contract in question
+is rarely detailed or well drafted.
+5. 89
+What is an arbitrator to do when confronted with possible criminal activity linked to an arbitration? There is a balance to be
+struck. It is not the job of the arbitrator to seek to uncover criminal activity but rather to resolve the dispute within the scope
+of the arbitration agreement. Nevertheless, an arbitrator cannot ignore clear signs of criminal activity, especially when the
+applicable law may impose certain reporting obligations. For example, an arbitrator who is suspicious of criminal activity and
+is sitting in the European Union (EU) should check on the way in which relevant EU directives 161  have been implemented
+by local legislation.
+5. 90
+If an arbitrator has grounds for suspecting a criminal offence, each party should be given an opportunity to provide an
+explanation. Once the tribunal believes it has sufficient justification, it can then evaluate the facts. In cases of fraud or
+corruption, this is likely to have an impact on the outcome of the dispute. In cases of money laundering or other manipulation
+of the process by the parties, the tribunal should terminate the proceedings on the basis that there is no genuine dispute. In
+cases of a consent award, the tribunal may issue a ruling refusing to approve the settlement.
+5. 91
+While it may appear contrary to the trust that the parties place in an arbitral tribunal for the tribunal to report to the authorities
+possible offences, if the parties’ trust is simply that the arbitral tribunal act as a mute observer of a criminal offence, then it
+should not be respected. It seems wrong that the confidential nature of arbitral proceedings and the ultimate enforceability
+of an award should be open to abuse by international crime. The arbitration community should be vigilant to ensure that it
+does not unwittingly assist in such ends.
+5. 92
+One issue of increasing concern in international commerce is bribery and corruption. 162  These issues may arise in at least
+three distinct circumstances. First, there is the possibility of the corruption of an arbitrator; secondly, there is a dispute that
+arises out of a contract whose purpose is the bribery of state officials (usually disguised as a ‘consultancy agreement’); and
+thirdly, there is the case in which the contract in question was procured by a bribe.
+5. 93
+
+Section C. - Duties of Arbitrators, UKBC-REDFERN 530638632 (2025)
+© 2025 Thomson Reuters.
+9
+One of the ethical duties of an arbitrator is to decide fairly in the absence of any corruption or bribe. Unfortunately, arbitration
+has not escaped the tentacles of corruption that taint many judicial systems and there have been various initiatives to combat
+corruption in international arbitration. One such initiative is the Additional Protocol to the Criminal Law Convention on
+Corruption, 163  which requires state parties to create a criminal offence of bribery of a domestic or foreign arbitrator, whether
+bribery is instigated by an individual (‘active bribery’) or an arbitrator (‘passive bribery’).
+5. 94
+The question of the contract whose object is the exercise of influence over state officials was addressed in the well-known
+decision of Judge Gunnar Lagergren, acting as arbitrator. 164  Although neither party had alleged the nullity of the contract
+based on its purpose, the arbitrator raised the issue of his own motion. He concluded, on the evidence before him, that he was
+being asked to enforce a contract for the payment of bribes and consequently declined jurisdiction. At the time, this seemed
+to be the correct approach. 165  An arbitrator should not be asked to enforce an illegal contract. Later, however, a different
+approach was adopted by arbitral tribunals. It was thought that an arbitrator should not decline jurisdiction when confronted
+with a possibly illegal contract but should go on to investigate the alleged illegality and make the appropriate award.
+5. 95
+The issue of a contract obtained through a bribe was considered by the arbitral tribunal in the ICSID case World Duty Free v
+Kenya. 166  In this case, the arbitral tribunal was shown evidence that the contract upon which the arbitration was based was
+procured by the payment of a bribe. The tribunal considered the claim, but had no hesitation in dismissing it as being in clear
+breach of international public policy. The arbitral tribunal concluded that:
+In light of domestic laws and international conventions relating to corruption, and in light of the decisions
+taken in this matter by courts and arbitral tribunals, this Tribunal is convinced that bribery is contrary to the
+international public policy of most, if not all, States or, to use another formula, to transnational public policy.
+Thus, claims based on contracts of corruption or on contracts obtained by corruption cannot be upheld by this
+Arbitral Tribunal. 167
+5. 96
+More recently, the Paris Court of Appeal has set aside or refused to enforce awards where there was evidence of illegality
+on the basis of international public policy. In the Belokon case, the Court set aside an investment treaty award that ordered
+the Kyrgyz Republic to pay US$15 million to a bank whose main activity was to devise money laundering schemes. 168  In
+the 2019 case of Alstom, the Court refused to enforce an award that would have obliged the losing party to pay outstanding
+invoices to an entity engaged in corruption of foreign public officials. 169  In Sorelec, which arose out of a dispute regarding
+the performance of a settlement agreement, the Court set aside a pair of investment treaty awards after it determined that the
+settlement agreement at issue had been procured through corruption. 170  These and other decisions have sent an important
+message that international arbitration may not be used as a device to support unlawful contracts. A party that resorts to bribery
+to obtain a contract is likely to find that the mechanism of international arbitral justice is no longer there to enforce it.
+Footnotes
+77
+ICSID Rules, r. 19(3)(b).
+78
+Ibid., r. 29(3).
+79
+Ibid., r. 34.
+80
+Ibid., r. 35.
+81
+Ibid., r. 59.
+82
+ICC Rules, Art. 11.2.
+83
+Ibid., Art. 23.1.
+84
+Ibid., Art. 31.1. Unless extended by the ICC Court under Art. 31.2, this time limit is six months.
+85
+Ibid., Art. 34.
+
+Section C. - Duties of Arbitrators, UKBC-REDFERN 530638632 (2025)
+© 2025 Thomson Reuters.
+10
+86
+English Arbitration Act 1996, s. 34.
+87
+Ibid., s. 33(1)(a).
+88
+Such as in writing or with reasons: see, e.g., the Mexican Commercial Code, art. 1448 and the ZPO, art. 1054(1) and (2).
+89
+As in the English case Sutcliffe v Thackrah [1974] AC 727; [1974] 1 Lloyd’s Rep 312 (HL).
+90
+Arenson v Casson Beckman Rutley & Co. [1977] AC 405; [1976] 1 Lloyd’s Rep 179 (HL).
+91
+Cour d’appel de Paris, 22 June 2021, Case No. 21/07623.
+92
+The two schools are analysed in Mullerat and Blanch, ‘The liability of arbitrators: A survey of current practice’ (2007)
+1 Disp Resol Int’l 99.
+93
+The English Supreme Court now seems to have firmly embraced the contractual approach in the case of Jivraj v
+Hashwani [2011] UKSC 40, at [23]: ‘It is common ground, at any rate in this class of case, that there is a contract
+between the parties and the arbitrator or arbitrators appointed under a contract and that his or their services are rendered
+pursuant to that contract.’
+94
+For a detailed study on the sources of arbitral liability and the implications in connection with immunity, see Franck,
+‘The liability of international arbitrators: A comparative analysis and proposal for qualified immunity’ (2000) 20 NYL
+Sch J Intl Comp L 1. For a discussion of the status of the arbitrator, see Fouchard, ‘Final report on the status of the
+arbitrator’ (1996) 7 ICC International Court of Arbitration Bulletin 1.
+95
+Whilst there is a degree of unity in European civil law jurisdictions on this issue, several jurisdictions in Latin America
+(such as Colombia and Ecuador) have taken a firm view in favour of the status approach in domestic arbitrations
+by considering the arbitrator a ‘temporary judge’, with the same powers and duties as a state-appointed judge during
+the pendency of his or her appointment (there are no such rules for international arbitrations that take place in those
+countries).
+96
+See Melis, ‘Austria’, in Bosman (ed.) International Handbook on Commercial Arbitration (ICCA & Kluwer Law
+International, 2020), p. 17. Swiss law adopts a similar position: see Voser and Fischer, ‘The arbitral tribunal’, in Geisinger
+and Voser (eds) International Arbitration in Switzerland: A Handbook for Practitioners (Kluwer Law International,
+2013), p. 53.
+97
+Austrian Arbitration Act 2013, art. 594(4) states: ‘An arbitrator who does not fulfil his obligation resulting from the
+acceptance of his appointment at all or in a timely manner, shall be liable to the parties for all damages caused by his
+wrongful refusal or delay.’ However, well-established jurisprudence from the Austrian Supreme Court has limited the
+scope of this provision by ruling that an arbitrator’s liability can be triggered only in situations in which the award
+has successfully been set aside, unless the arbitrator plainly refused to issue an award or failed to comply with the
+duties resulting from the acceptance of the appointment altogether. For a discussion on such jurisprudence, see Lukic,
+‘Arbitrators’ Liability: Austrian Supreme Court Reconfirms Strict Standards’, Kluwer Arbitration Blog, 1 September
+2016.
+98
+See van den Berg, ‘The Netherlands’, in Bosman (ed.) International Handbook on Commercial Arbitration (ICCA &
+Kluwer Law International, 2020), p. 37.
+99
+Argentine National Code of Civil and Commercial Procedure, art. 745.
+100
+Arbitration Law of the People’s Republic of China, art. 38.
+101
+See, e.g., Austern v Chicago Bd. Options Exchange, Inc., 898 F.2d 882, 886 (2d Cir. 1990) (‘arbitrators in contractually
+agreed upon arbitration proceedings are absolutely immune from liability in damages for all acts within the scope of the
+arbitral process’); Sutcliffe v Thackrah [1974] AC 727, at 735; Pickens v Templeton [1994] 2 NZLR 718, at 727–728
+(although a valuer was technically classified as an arbitrator by the Arbitration Act 1908, his actions were not sufficiently
+judicial to justify immunity, because they were based on his expertise and he did not make a final determination of the
+dispute). See also Sport Maska Inc. v Zittrer [1988] 1 SCR 564.
+102
+The laws of Australia, Canada, England, and New Zealand all provide that arbitrators may be liable for fraud, bad faith,
+or intentional actions. In the United States, however, arbitrator immunity is subject only to rare exceptions: see, e.g.,
+Lundgren v Freeman, 307 F.2d 104, 118 (9th Cir. 1962).
+103
+Amirfar, Reid, and Popova, ‘United States of America’, in Bosman (ed.) International Handbook on Commercial
+Arbitration (ICCA & Kluwer Law International, 2020), p. 41. See also Corey v New York Stock Exchange, 691 F.2d 1205
+(6th Cir. 1982). Immunity of arbitrators in the United States derives from the view that they are functioning as judges,
+and is to be contrasted with qualified immunity in Austria, Germany, and Norway, and no immunity in France, Spain,
+and Sweden: see Lew, ‘Introduction’, in Lew (ed.) The Immunity of Arbitrators (Lloyd’s of London Press, 1990), p. 4.
+104
+English Arbitration Act 1996, s. 29. See also s. 74, which grants the same immunity to arbitral institutions, appointing
+authorities, and their respective employees.
+105
+New Zealand Arbitration Act 1996, s. 13; Australian International Arbitration Act 1974, s. 28 (which Act was amended
+to incorporate the 2006 Model Law); Kenyan Arbitration (Amendment) Act No. 11 of 2009, s. 16B(1); Irish Arbitration
+
+Section C. - Duties of Arbitrators, UKBC-REDFERN 530638632 (2025)
+© 2025 Thomson Reuters.
+11
+Act 2010, s. 22(1) (‘An arbitrator shall not be liable in any proceedings for anything done or omitted in the discharge
+or purported discharge of his or her functions’).
+106
+See LCIA Rules, Art. 31.1, excluding ‘conscious and deliberate wrongdoing’; ICC Rules, Art. 41, which excludes only
+conduct prohibited by applicable law.
+107
+See, e.g., Brown, ‘The expansion of arbitral immunity: Is absolute immunity a foregone conclusion’ [2009] J Disp Res
+225, at [237–238], which contends that qualified immunity is the appropriate type of immunity that would ‘protect[]
+arbitral decision making while not shielding non-decisional acts’.
+108
+See, e.g., Cort v AAA, 795 F.Supp. 970, 972 (NDCa 1992), determining that, in order to encourage independent
+judgments, the arbitration process is granted immunity.
+109
+See Yat-Sen Li, ‘Arbitral immunity: A profession comes of age’ (1998) 64 Arbitration 51, at 53.
+110
+See, e.g., Cort, fn. 108, at [973]. However, some comment that arbitration is now a fully developed profession, the
+members of which should accept personal responsibility, including full legal liability for loss caused by any failure: see
+Yat-Sen Li, fn. 109, p. 55.
+111
+See Lin Yu and Sauzier, ‘From arbitrator’s immunity to the fifth theory of international commercial arbitration’ (2000)
+3 Intl Arb L Rev 114, at [120].
+112
+The IBA Rules of Ethics were superseded by the IBA Guidelines, for the matters addressed therein. However, the
+question of arbitrator immunity was not addressed in the IBA Guidelines, for which the Rules of Ethics continue to apply.
+113
+For example, in 2013, RSM, a US oil company, filed a lawsuit in the United States against ICSID and its secretary-
+general over the alleged mishandling of an annulment proceeding: see ‘Oil investor sues ICSID over annulment case’,
+Global Arb Rev, 3 June 2013. For a more detailed analysis of arbitral institution liability, see van Houtte and McAsey,
+‘The liability of arbitrators and arbitral institutions’, in Habegger, Hochstrasser, Nater-Bass, and Weber-Stecher (eds)
+Arbitral Institutions under Scrutiny (Juris, 2013), p. 133; Rasmussen, ‘Overextending immunity: Arbitral institutional
+liability in the United States, England, and France’ (2002) 26 Fordham Intl LJ 1824.
+114
+In the United States, institutions, like arbitrators, have absolute immunity. In Austern v Chicago Board Options Exchange
+716 F.Supp. 121 (SDNY 1989), the plaintiffs sued an arbitral institution for damages for mental anguish, but were barred
+by the doctrine of immunity. In England, the Arbitration Act 1996, s. 74, provides for immunity in relation to the
+discharge by the institution of its duties, unless it acts in bad faith.
+115
+The provision under analysis was the 1998 ICC Rules, Art. 34 which read: ‘Neither the arbitrators, nor the Court and
+its members, nor the ICC and its employees, nor the ICC National Committees shall be liable to any person for any act
+or omission in connection with the arbitration.’ The current provision in the ICC Rules, Art. 41 builds in an exception
+for public policy rules: ‘The arbitrators, any person appointed by the arbitral tribunal, the emergency arbitrator, the
+Court and its members, ICC and its employees, and the ICC National Committees and Groups and their employees and
+representatives shall not be liable to any person for any act or omission in connection with the arbitration, except to the
+extent such limitation of liability is prohibited by applicable law.’
+116
+See SNF v Chambre de Commerce Internationale, Paris cour d’appel, 22 January 2009.
+117
+See Paris cour d’appel, 23 March 2021, Case No. 18/14817. French courts make a distinction between the institution’s
+jurisdictional role (decisions intimately linked with the process, such as the challenge of arbitrators) and non-
+jurisdictional conduct, such as when the institution fails to run the arbitration properly: see Dupeyré, ‘Les arbitres et
+centres d’arbitrage face à leurs responsabilités: Le droit français à son point d’équilibre’ (2014) 32 ASA Bulletin 265.
+118
+See Rubenstein v Otterbourg, 357 NYS.2d 62, 64 (NY Misc. 1973); Boraks v AAA, 517 NW.2d 771, 772 (Mich. App. 1994).
+119
+See Corey v New York Stock Exchange, 691 F.2d 1205, 1211 (6th Cir. 1982).
+120
+See ICC Rules, Art. 41; ICSID Convention, Art. 20; NAI Rules, Art. 61; SIAC Rules, Art. 38.1; ICDR Rules, Art. 41.
+121
+LCIA Rules, Art. 31.
+122
+As occurred in Société Cubic Défense Système v Chambre de Commerce Internationale [1997] Rev Arb 417 and SNF
+v Chambre de Commerce Internationale, Paris cour d’appel, 22 January 2009.
+123
+For example, the Italian Code of Civil Procedure, as amended in 2006, Arts 813 and 820 (240 days from date of
+acceptance of appointment by the tribunal); the 2006 Ecuadorean Law of Arbitration and Mediation, art. 25 (150 days
+from the final hearing).
+124
+ICC Rules, Art. 31.1.
+125
+Ibid., Art. 31.2. See also the French Code of Civil Procedure, art. 1463(2): ‘The statutory or contractual time limit may
+be extended by agreement between the parties or, where there is no such agreement, by the judge acting in support of
+the arbitration.’
+126
+Article 25 of the 2006 Ecuadorean Law of Arbitration and Mediation permits the tribunal ‘where strictly necessary’ to
+grant itself ex officio an extension of the 150-day time limit by a further 150 days.
+127
+See, e.g., the National Code of Civil Procedure of Argentina, Arts 760 and 771.
+
+Section C. - Duties of Arbitrators, UKBC-REDFERN 530638632 (2025)
+© 2025 Thomson Reuters.
+12
+128
+As in England: An arbitrator has a duty to act fairly and without unnecessary delay. Arbitration Act 1996, s. 33(1)(b).
+Breach of this duty may result in the removal of the arbitrator by the court (s. 24(2)) and/or a challenge to the award
+(s. 68).
+129
+Model Law, Art. 14.
+130
+See paragraphs 5.55ff.
+131
+ICC Rules, Art. 22.1.
+132
+Ibid., Art. 24.1.
+133
+Ibid., Appendix IV.
+134
+Ibid., Art. 27.
+135
+ICC Commission on Arbitration and ADR, ICC Commission Report: Controlling Time and Costs in Arbitration (2nd
+edn, ICC, 2018).
+136
+ICC Rules, Art. 30 and Appendix VI. See also AAA Rules, Expedited Procedures, Rules E-1 through E-10.
+137
+For instance, the cour de cassation upheld the cour d’appel de Paris’s decision to partially annul an award for lack of due
+process because the tribunal had relied on exhibit translations prepared by one of the arbitrators that were not shared
+with the parties prior to the issuance of the award. See Cass. Civ. 1, 18 March 2015, Case No. 13-22391.
+138
+The ICC Rules contain provisions to a similar effect: see Art. 22.4.
+139
+See ICSID Rules, r. 49.
+140
+See also the Mexican Commercial Code, art. 1434: ‘The parties shall be treated with equality and each party shall be
+given a full opportunity to assert their rights.’
+141
+English Arbitration Act 1996, s. 4(1) and Sch. 1.
+142
+Ibid., s. 24.
+143
+Ibid., s. 68(2)(a).
+144
+New York Convention, Art. V(1)(d) and possibly also Art. V(2)(b).
+145
+OAO Northern Shipping Co. v Remolcadores De Marin SL (Remmar) [2007] EWHC 1821. In Vee Networks Ltd v
+Econet Wireless International Ltd [2005] 1 Lloyd’s Rep 192, at 79–91, the Court of Appeal remanded a partial award
+to the arbitrator for not giving the parties the opportunity to comment on a new legal theory. However, the test is not
+easily met and if the award would have reached the same conclusion absent the issue not placed before the parties, the
+challenge is unlikely to succeed: see ABB AG v Hochtief Airport GmbH [2006] EWHC 388 (Comm).
+146
+X. v 1. Union Cycliste Internationale (UCI), 2. Fédération Z., Decision 4A_110/2012, Federal Supreme Court of
+Switzerland, 1st Civil Law Chamber, 9 October 2012, at [3.1.1]: In Switzerland, the right to be heard mainly relates to
+the finding of facts. The right of the parties to be asked for their views on legal questions is recognised only restrictively.
+As a rule, according to the adage iura novit curia, state courts or arbitral tribunals freely assess the legal consequences
+of the facts and they may also base their decisions on rules of law other than those invoked by the parties but in such a
+case the parties should usually be afforded an opportunity to comment on the arbitrators’ conclusions prior to the issue
+of an award in order to preserve due process.
+147
+In a recent decision, the cour d’appel de Paris explained that an arbitral tribunal could not ‘rearrange the distribution of
+contractual rights and obligations’ without inviting the parties to express themselves on arrangements which were not
+part of the parties’ claims before the tribunal, and that doing so violated due process. Paris cour d’appel, 13 February
+2018, Case No. 15/17137 (Strube case).
+148
+Manuel Garcia and ors v Bolivarian Republic of Venezuela, Judgment of the District Court of the Hague, 19 January
+2021 (Case No. 200.280.055/01), at [18].
+149
+See Giovannini, ‘International arbitration and jura novit curia: Towards harmonization’ 9 TRANSNAT’L DISP. MGMT.
+1, 5 (2012).
+150
+For example, ICC Rules, Art. 15.2.
+151
+For example, English Arbitration Act 1996, s. 24.
+152
+In PK Time Group, LLC v Robert, No. 12 Civ 8200 (PAC), 2013 WL 3833084 (SDNY 13 July 2013), a federal district
+court denied a petition to remove a panel of arbitrators before a final award on damages had been issued, based on
+alleged misconduct and bias. The court dismissed the application and confirmed its view that the FAA prohibits pre-
+award challenges to arbitrators.
+153
+See Nicholas and Partasides, ‘LCIA Court decisions on challenges to arbitrators: A proposal to publish’ (2007) 23 Arb
+Intl 16, referring to Decision No. 10 of the LCIA Court, 13 February 2002.
+154
+Following a series of arbitrations involving sportswear brand Puma, the Spanish Supreme Court found that two
+arbitrators had ‘palpably violated the arbitration rules’ by excluding a third arbitrator from deliberations, which had
+led to the setting aside of an initial award and the need for a second arbitration. The pair were found liable pursuant
+
+Section C. - Duties of Arbitrators, UKBC-REDFERN 530638632 (2025)
+© 2025 Thomson Reuters.
+13
+to the Spanish Arbitration Act, art. 21.1 which says that arbitrators must ‘faithfully discharge their functions’ or they
+will be ‘liable for damages caused in bad faith, willful disregard or fraud’, and they were each ordered to reimburse
+Puma €750,000 in fees plus interest and costs. Ross, ‘Spanish Supreme Court declares arbitrators liable for excluding
+colleague’, Global Arb Rev, 21 February 2017, referring to Spanish Supreme Court Judgment of 15 February 2017.
+155
+See Arbitration Act 1996, s. 29, for England; Arbitration Act 1996, s. 13, for New Zealand; International Arbitration
+Act 1974, s. 28(1), for Australia.
+156
+See paragraph 5.51.
+157
+As discussed earlier in this volume. See Chapter 4, paragraph 4.73.
+158
+See Chapter 4, paragraphs 4.69ff, for further discussion of the IBA Guidelines.
+159
+The third draft was published in September 2021. Apart from more traditional provisions on duties and responsibilities
+of adjudicators (including arbitrators) as well as disclosure obligations, the Draft Code also addresses ‘double-hatting’,
+or the practice of acting in different roles (counsel, arbitrator, or expert) in several investment arbitration proceedings at
+the same time (by either enjoining adjudicators from double-hatting or, at least, requiring them to disclose it).
+160
+For a careful analysis of the interplay between arbitration and criminal law, see Mourre, ‘Arbitration and criminal law:
+Reflections on the duties of the arbitrator’ (2006) 22 Arb Intl 95.
+161
+See, e.g., Directive 2001/97/EC of the European Parliament and of the Council of 4 December 2001 amending Council
+Directive 91/308/EEC on prevention of the use of the financial system for the purpose of money laundering, OJ L 344/76,
+28 December 2001 (which requires ‘auditors, external accountants and tax advisors’, as well as ‘notaries and other
+independent legal professionals’, to report on their own initiative ‘any fact which might indicate money laundering’ and
+to provide the authorities with any information requested); Directive 2005/60/EC of the European Parliament and of the
+Council of 26 October 2005 on the prevention of the use of the financial system for the purpose of money laundering
+and terrorist financing, OJ L 309/15, 25 November 2005. It is questionable whether the definition of ‘independent
+legal professionals’ would include arbitrators, or whether resolving a dispute could be said to be assisting a ‘client’ in
+the implementation of a transaction. Indeed, the 2005 Directive envisages reporting obligations for legal professionals
+when assisting in financial or corporate transactions, but excludes such obligations when information is obtained before,
+during, or after legal proceedings.
+162
+For a deep analysis of this complex topic, see Sayed, Corruption in International Trade and Commercial Arbitration
+(Kluwer Law International, 2004). See also (2013) 24 ICC Bulletin, Supplement entitled ‘Tackling Corruption in
+Arbitration’, and Lamm, Moloo, and Pham, ‘Fraud and corruption in international arbitration’, in Liber Amicorum
+Bernardo Cremades (Wolters Kluwer España; La Ley, 2010), p. 699.
+163
+As of April 2021, the Protocol had been ratified by forty-five member states. The Protocol was developed by the Council
+of Europe to supplement the 2002 Criminal Law Convention on Corruption, widening its scope to cover arbitrators.
+164
+Award by Gunnar Lagergren, ICC Case No. 1110, (1963) XXI YBCA 47, (1994) 10 Arb Intl 282.
+165
+It was certainly viewed as such, in the first edition of this book, at p. 108, where it was said to be inappropriate for an
+arbitral tribunal to assist in the settlement of accounts between parties to an illegal contract.
+166
+World Duty Free Co. Ltd v Republic of Kenya, ICSID Case No. ARB/00/7, Award, 4 October 2006. Similarly, in the case
+of Inceysa Vallisoletana SL v Republic of El Salvador, ICSID Case No. ARB/03/26, Award, 2 August 2006, a systematic
+fraud in securing a contract with the Republic of El Salvador, for the operation of vehicle inspection stations, caused
+the tribunal to deny jurisdiction on a number of grounds, including that the investment was not made in accordance
+with the laws of El Salvador.
+167
+World Duty Free, fn. 166, at [157]. See also Metal-Tech Ltd. v Republic of Uzbekistan, ICSID Case No. ARB/10/3, Award,
+4 October 2013, at [372]–[374] (finding that suspicious payments made by the claimant violated the Uzbek Criminal
+Code and thereby the legality requirement of the Israel-Uzbekistan BIT, thus depriving the tribunal of jurisdiction).
+168
+Paris cour d’appel, 21 February 2017, Case No. 15/01650.
+169
+Paris cour d’appel, 28 May 2019, Case No. 16/11182.
+170
+Paris cour d’appel, 17 November 2020, Case Nos 18/0737, 18/02568.
+End of Document
+© NIGEL BLACKABY KC, CONSTANTINE PARTASIDES
+KC, ALAN REDFERN

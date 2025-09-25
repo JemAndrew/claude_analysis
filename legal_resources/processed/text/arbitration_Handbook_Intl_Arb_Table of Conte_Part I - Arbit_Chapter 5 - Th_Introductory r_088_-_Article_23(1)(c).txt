@@ -1,0 +1,139 @@
+Article 23(1)(c), UKBC-ICCARBN 474406913 (2022)
+© 2025 Thomson Reuters.
+1
+Article 23(1)(c)
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+Introductory remarks
+Article 23(1)(c)
+“a summary of the parties’ respective claims and of the relief sought by each party, together with the amounts of any
+quantified claims and, to the extent possible, an estimate of the monetary value of any other claims;”
+23-23
+The Terms of Reference should be a self-standing document that is understandable for the ICC Court and any national court.
+To render it understandable, basic factual allegations must be set out. Therefore, although some Tribunals simply refer to the
+claims made by the parties in their pleadings, this practice renders the Terms of Reference a much less useful document.
+23-24
+To the extent possible, the Tribunal usually seeks to set out undisputed facts, although the extent to which that is possible will
+depend on the circumstances. In many instances, the parties will agree on little more than the fact that they signed a contract
+and that the contract contains specific provisions. This in itself may be very helpful as these provisions if quoted may give the
+third party an overview of the contractual situation.
+23-25
+The Terms of Reference also set out each of the parties’ claims. These will usually include disputed facts and allegations.
+Therefore, in drafting the Terms of Reference it is important to ensure that a distinction is drawn between what is undisputed
+and what is disputed. In addition, the Terms of Reference should include an express statement that, by signing the Terms of
+Reference, a party is not accepting any claim whether of fact or law asserted by the other party.
+23-26
+The term “claim” is in some instances difficult to define and is not the same as the narrower term of “relief”. 303  Different claims
+may, for example, lead to the same request for relief. The term “claim” is an essential feature of art.23(1) due to the impact of
+art.23(4). That article provides that no new claims may be added after the signature of the Terms of Reference that are “outside
+the limits of the Terms of Reference” unless authorised by the Tribunal. It follows from art.2(iv) that the term claims “include
+any claim by any party against any other party”. The usual debate in this respect is whether a party is making a new “claim”
+or whether it is simply quantifying an existing claim or seeking additional relief with respect to it. In ICC case No.7453 (under
+the former 1988 ICC Rules), the sole arbitrator stated with respect to the 1988 ICC Rules:
+“To say that new claims may not be made (without the consent of the other party) after the Terms of Reference
+have entered into effect is not to say that new calculations of damages or new theories of quantification may not
+be subsequently introduced.
+The Terms of Reference, after all, enter into effect at an early stage of the proceedings, usually long before a
+detailed economic analysis has been made of the consequences of breach and before experts have been consulted.
+Claimants, to be sure, are well advised to ensure that their claims, as restated in the Terms of Reference,
+are in general terms and refer to general theories of recovery, with amounts claimed as damages carefully
+designated as ‘estimates’ or ‘provisional estimates’. Failure to do so is not ordinarily fatal. New evidence, and
+new quantification, of damages does not constitute a new claim.” 304
+
+Article 23(1)(c), UKBC-ICCARBN 474406913 (2022)
+© 2025 Thomson Reuters.
+2
+23-27
+In ICC Case No.7661 (also under the former 1988 ICC Rules), the Tribunal dealt with an alternative claim. The Request had
+set out a warranty claim that the claimant subsequently sought to modify to include a claim for damages. The Tribunal stated:
+ 
+“[2]When it modified its claim, Claimant stated its principal claim as one for defendants to pay the amount
+of the Tax Debt (or a reasonable and proper lesser amount) on the basis of their contractual liability, and for
+defendants to pay damages ‘[a]s a further and/or alternative award’. The defendants protested against the
+introduction of the damages claim on the basis of this being excluded by the Terms of Reference.
+ 
+[3]It would go too far to fully exclude the modification of claimant’s claim on the basis of perceived
+limitations imposed by the Terms of Reference and of the operation of art.16 of the [1988] ICC Rules.
+Claimant’s initial formulation of its claim was ambiguous at best and this was reflected in the Terms of
+Reference, nothing in which can therefore be construed as prohibiting a correction such as applied by the
+Claimant through stating a principal warranty claim and an alternative damages claim.
+ 
+[4]However, the modification of the claim is not admissible to the extent that damages are claimed as a
+‘further award’ as this is tantamount to introducing a new claim, outside the limits of the Terms of Reference,
+which are flexible enough to permit, in the circumstances, a choice of the basis of the claim, but not flexible
+enough to allow for amounts higher than the amount which Claimant clearly had stated as a maximum …
+Thus, any claim for damages in addition to the warranty claim, instead of alternative to it, is outside the
+Terms of Reference and, in view of art.16 of the ICC Rules, inadmissible.”
+23-28
+Most ICC arbitrations that concern commercial disputes (as opposed to investor-state disputes) revolve around allegations of
+breach of contract and one view is that each allegation of breach of contract is a separate claim. Therefore, if a party claims
+that the other has breached three provisions of a contract, but then wishes to amend that argument to allege a breach of a fourth
+provision of a contract or make a claim in tort, then the claim may amount to a new claim. Whether this claim would fall outside
+the limits of the Terms of Reference is discussed under art.23(4).
+23-29
+In arbitration law, claims are sometimes referred to as petita. Hence claims that a Tribunal has acted beyond its authority are
+claims that the Tribunal has acted ultra petita. Claims that the Tribunal has failed to adjudicate an issue that it was required to
+adjudicate are claims that the Tribunal has acted infra petita.
+23-30
+Usually, each party’s claim will involve a mixture of fact and law. The factual allegations are necessary to understand the
+legal position. A Tribunal may want to draft the summary of the claims itself and reproduce the relief sought from the parties’
+submissions, or have each of the parties draft their own outline of their claims and insert this draft in the Terms of Reference.
+The latter method has the advantage of showing each of the parties that their approach to the dispute is exactly reflected in
+the Terms of Reference. The approach has, however, been criticised in that it does not ensure that the Tribunal has actually
+understood the parties’ positions, as the Tribunal is simply incorporating the parties’ respective drafts in the Terms of Reference.
+In each case, it is for the Tribunal to appreciate what is the better or more appropriate approach.
+23-31
+The summary of the claim can be quite brief, as there is no need for it, and it would not contain all the allegations of material
+fact that one would find even in a basic national pleading. Nor would it refer to or cite detailed documents. The overall approach
+is to permit the reader to understand on what basis the claim is being made. The details of the allegations and the documents
+relied upon will be filed with the subsequent submissions.
+23-32
+
+Article 23(1)(c), UKBC-ICCARBN 474406913 (2022)
+© 2025 Thomson Reuters.
+3
+The Terms of Reference should also state clearly whether the claims are in contract or tort (delict) as the nature of the claims
+may be important to determine the rules of law applicable to them.
+23-33
+The Terms of Reference should also set out exactly the relief sought by each of the parties. This relief is usually taken from
+the parties’ written submissions. Article 23(1)(c) requires that the parties insert the amount of quantified claims and to the
+extent possible an estimate of the monetary value of other claims. This provision was introduced in the Rules to seek an earlier
+quantification of claims as is discussed under art.4(3) and art.5(1) and (5).
+23-34
+Subsequent adjustments to the relief sought are also taken into account. Usually, the relief requested will consist of a request
+for payment of a certain sum of monies, e.g. by way of damages, a request for a declaration or a request for an injunction.
+23-35
+Generally, in an ICC arbitration, parties are not expected at this stage to provide a detailed calculation of the damages that they
+are claiming, as the exact quantification of a damage claim will be made after an expert has reviewed the matter. This is true
+in particular, but not solely in construction cases, where it can take a party’s experts many months to assess the amount of the
+loss suffered. Usually, the parties provide a minimum amount claimed. This would enable the other party to ascertain roughly
+the amount at risk. It would also enable the ICC Court to set an amount for the provisional advance on the costs of arbitration.
+Some parties are reluctant to be precise about the amount claimed at the Terms of Reference stage due to the effect that it may
+have on the advance on costs ordered by the ICC. The party may also fear losing its credibility if the subsequent amount is, for
+instance, much lower than it had initially indicated as being the damages suffered. If the amount of a claim is increased at any
+point in the proceedings, then the ICC will usually take the amount of the increase into account and recalculate the amount of
+the advance on the costs of arbitration as is discussed under art.37. 305
+23-36
+The request for relief should include alternative and ancillary requests. In particular, the currency of the damages should be
+set out (as well as the basis for the claim in that currency). If interest is sought, then the basis and amount claimed should
+be provided as well as the date from which the party is claiming interest. Moreover, it should be clear whether the interest is
+claimed by contract, under the rules of law applicable to the contract, or under the procedural rules of the place of arbitration.
+23-37
+Claims by way of set-off are generally viewed as claims under the ICC Rules. 306  To be entitled to set-off one claim against
+another, the claim must exist and be of a fixed amount.
+Footnotes
+303
+In the ICC Rules, the term “claim” is expressed in French as “prétention,” in German as “Vorbringen”, in Spanish as
+“pretensiones” and in Italian as “pretese”, but only the French and English texts are official. This is not stated in the Rules
+itself, but on the first inner cover page of ICC Publication 880-0ENG, which contains the English version of the Rules.
+304
+ICC Case No.7453 (1994), (1997) YBCA Vol. XXII p.107; Collection of ICC Arbitral Awards 1996–2000, Vol.IV, op.
+cit., p.94.
+305
+See the discussion under art.37(5) at para.37-41 and following.
+306
+See the discussion under art.37(7) at para.37-57 and following.
+End of Document
+© 2025 SWEET & MAXWELL

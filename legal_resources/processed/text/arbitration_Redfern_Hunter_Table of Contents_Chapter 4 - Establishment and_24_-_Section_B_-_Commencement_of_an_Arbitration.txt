@@ -1,0 +1,87 @@
+Section B. - Commencement of an Arbitration, UKBC-REDFERN 530638625 (2025)
+© 2025 Thomson Reuters.
+1
+Section B. - Commencement of an Arbitration
+Redfern and Hunter on International Arbitration 7th Ed.
+Mainwork
+Chapter 4 - Establishment and Organisation of an Arbitral Tribunal
+Section B. - Commencement of an Arbitration
+(a) Introduction
+4. 05
+The commencement of an arbitration is a significant step not merely as evidence of a real conflict between the parties, but also
+in terms of compliance with any applicable limitation period for the presentation of claims.
+4. 06
+Time limits for bringing legal proceedings are imposed by the laws of most countries. The interest of the state is that litigation
+(or arbitration) should be started within a reasonable time of the events that gave rise to it. As a matter of public policy, potential
+respondents are protected from stale claims, claimants are obliged to be expeditious, and finality is promoted. Prescriptive time
+limits may also be imposed by contract (as in many standard forms of contract—whether for the charter of a ship or for the
+carrying out of a major civil engineering project). Limitation periods in litigation or arbitration must always be considered with
+care as failure to observe them may be fatal in terms of the jurisdiction of the competent forum. Time usually starts to run
+from the date on which the cause of action arises. In order to toll the limitation (that is, to ‘stop the clock’) in a dispute subject
+to arbitration, it will be necessary to take a step to commence the arbitration, usually through the presentation to the relevant
+institution (or to the opposing party in an ad hoc arbitration) of a request for arbitration. When considering compliance with
+limitation periods, it is important that potential claimants take account of any steps that must be completed under the relevant
+arbitration agreement before proceedings can be launched. For example, if there is an obligation in the agreement to engage
+in amicable negotiations for thirty days, before commencing a claim which is itself subject to a three-year limitation period,
+those negotiations must be commenced no later than two years and eleven months after the claim arose. This will ensure that
+the Request for Arbitration can be served within the limitation period.
+4. 07
+There may be a difference in both the length and the nature of the time limits established by different national systems of
+law. One system of law may classify limitation provisions as matters of procedure, to be governed by the law of the place of
+arbitration, whilst another system may classify them as matters of substance, governed by the same law as that which governs
+the other substantive matters in issue. In order to avoid any lack of predictability as to the relevant limitation period, many
+countries have confirmed that limitation should be governed by the law applicable to the contract; and various countries have
+passed laws to that effect. 7  However, such laws are not universal and the arbitral tribunal will have to determine the legal nature
+and consequences of the time limits in each case.
+(b) Commencement of an arbitration under institutional rules
+4. 08
+In order to stop time running, arbitration proceedings must be commenced in accordance with the arbitration agreement and
+the relevant applicable law. If there is any difference between this law and any applicable institutional rules of arbitration, the
+provisions of the applicable law will prevail, unless they are waivable. In most cases, however, national laws permit parties to
+establish rules for commencement of arbitration by agreement, in which case the claimant need only comply with the relevant
+institutional rules (or the rules set out in the arbitration clause itself).
+
+Section B. - Commencement of an Arbitration, UKBC-REDFERN 530638625 (2025)
+© 2025 Thomson Reuters.
+2
+4. 09
+By way of example, the ICC Rules require a party wishing to commence arbitration to submit a ‘Request for Arbitration’,
+which must contain, inter alia, a description of the nature and circumstances of the dispute, a statement of the relief sought,
+and any observations or proposals concerning the number of arbitrators and their nomination. 8  Article 4.2 of the ICC Rules
+states that: ‘The date on which the Request is received by the Secretariat shall, for all purposes, be deemed to be the date of
+the commencement of the arbitration.’ Similarly, the LCIA Rules treat the arbitration as having commenced on the date upon
+which the Request (including all accompanying documents) is received electronically by the Registrar provided that the LCIA
+has received the registration fee. 9
+(c) Commencement of an ad hoc arbitration under the applicable law
+4. 10
+Where the arbitration is ad hoc and not subject to any specific rules (such as the UNCITRAL Rules or specific contractual
+provisions), the law of the place of arbitration needs to be reviewed to establish how to comply with limitation periods. For
+example, under English law, time will stop running if and when a request for arbitration is made in conformity with the relevant
+arbitration clause. 10  Under Swiss law, in the absence of contrary agreement, proceedings are commenced ‘when a party initiates
+the procedure for the constitution of the arbitral tribunal’. 11  In contrast, the Brazilian Arbitration Act 1996 provides that ‘[t]he
+arbitration shall be deemed to be commenced when the appointment is accepted by the sole arbitrator or by all of the arbitrators
+if there is more than one’. 12  The Model Law establishes that an arbitration is commenced when a respondent receives a request
+for arbitration from the claimant. 13
+Footnotes
+7
+See, e.g., the English Arbitration Act 1996, s. 13; Foreign Limitation Periods Act 1984, s. 1.
+8
+ICC Rules, Art. 4.
+9
+LCIA Rules, Art. 1.4.
+10
+The English Arbitration Act 1996 provides in art. 14(1) that: ‘The parties are free to agree when arbitral proceedings
+are to be regarded as commenced for the purposes of this Part and for the purposes of the Limitation Acts.’
+11
+Swiss PIL, Ch. 12, s. 181. In England, the parties may agree upon when the proceedings are to be regarded as commenced
+for limitation purposes. Failing agreement, it is when one party gives a written notice to the other party or the appointing
+authority seeking the establishment of the tribunal, English Arbitration Act 1996, s. 14.
+12
+Brazilian Arbitration Act 1996, art. 19.
+13
+In this respect, Art. 21 of the Model Law provides that: ‘Unless otherwise agreed by the parties, the arbitral proceedings
+in respect of a particular dispute commence on the date on which a request for that dispute to be referred to arbitration
+is received by the respondent.’
+End of Document
+© NIGEL BLACKABY KC, CONSTANTINE PARTASIDES
+KC, ALAN REDFERN

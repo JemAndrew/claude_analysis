@@ -1,0 +1,33 @@
+Choosing between causes of action, UKBC-BULLENL 488897544 (2022)
+© 2025 Thomson Reuters.
+1
+Choosing between causes of action
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 2
+Part Y - Professional Negligence
+Chapter 85 - Professional Negligence
+Choosing between causes of action
+85-05
+Accordingly, any pleading in this field must maintain a clear distinction between contract and tort so that the litigant can derive
+such benefits as the laws of contract and tort provide.
+There are of course situations where a professional person will come under a duty of care to a claimant despite the absence of
+a contractual arrangement between them. In such case, only a claim in tort will be available. There may also be circumstances
+where the relationship between the claimant and the defendant, although based on or originally derived from contract, develops
+or is extended in the circumstances which occur during the course of the relationship, and a duty of care is imposed by law in
+tort where the contract makes no provision for or does not extend to such development.
+The cause of action in tort or breach of statutory duty may arise at a different time to the cause of action in contract, which will
+have limitation period consequences (see, for example, Pech v Tilgals 5 ). In contract the cause of action accrues when breach
+occurs whether or not damage is suffered at that time, whereas in tort the cause of action accrues when the claimant suffers
+actionable damage (which may be later than the date when the breach of duty occurs).
+Different causes of action may also provide:
+ 
+• Possibly, differences in the measure of damages which a successful claim in contract or tort may give rise to.
+ 
+• Possibly, the ability to satisfy the different grounds for justifying the service of a claim form out of the jurisdiction under
+CPR Pt 6.
+Footnotes
+5
+Pech v Tilgals (1994) 28 A.T.R. 197.
+End of Document
+© 2025 SWEET & MAXWELL

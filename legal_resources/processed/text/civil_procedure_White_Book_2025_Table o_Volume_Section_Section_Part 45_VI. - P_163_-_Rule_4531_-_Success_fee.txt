@@ -1,0 +1,77 @@
+Rule 45.31 - Success fee, UKBC-WHITEBK 458569393 (2025)
+© 2025 Thomson Reuters.
+1
+Rule 45.31 - Success fee
+White Book 2025  | Commentary last updated February 16, 2015
+Volume 2
+Section 7 - Legal Representatives—Costs and Litigation Funding
+Section 7B - CPR 43 to 45 [Before 1 April 2013]
+Part 45 [Before 1 April 2013] Fixed Costs
+VI. - Pre-Action Protocol for Low Value Personal Injury Claims in Road Traffic Accidents
+ 
+Related Practice Directions
+Rule 45_31
+45.31— Success fee 1
+7B-46+
+(1) A party who has entered into a funding arrangement of a type specified in rule 43.2(1)(k)(i) in respect of any
+element of the fixed costs in rule 45.29 may recover a success fee on that element of the fixed costs.
+(2) A reference to a success fee in this Section is a reference to a success fee in accordance with paragraph (1).
+(3) Where the court—
+(a) determines the claim at a Stage 3 hearing or on the papers; and
+(b) awards an amount of damages that is more than the defendant’s RTA Protocol offer,
+the amount of the claimant’s success fee is—
+(i) 12.5% of the Stage 1 and 2 fixed costs; and
+(ii) 100% of the relevant Stage 3 fixed costs.
+(RTA Protocol offer is defined in rule 36.17.)
+(4) Where the court—
+(a) determines the claim at a Stage 3 hearing or on the papers; and
+(b) awards an amount of damages that is equal to or less than the defendant’s RTA Protocol offer,
+the amount of the defendant’s success fee is 100% of the relevant Stage 3 fixed costs.
+(5) Where the claimant is a child and the court—
+(a) does not approve a settlement at a settlement hearing;
+(b) determines the claim at a Stage 3 hearing; and
+(c) awards an amount of damages that is more than the amount of the settlement considered by the court at the
+first settlement hearing;
+the amount of the claimant’s success fee is—
+(i) 12.5% of the Stage 1 and 2 fixed costs; and
+
+Rule 45.31 - Success fee, UKBC-WHITEBK 458569393 (2025)
+© 2025 Thomson Reuters.
+2
+(ii) 100% of the relevant Stage 3 fixed costs.
+(6) Where paragraphs (3) to (5) do not apply the success fee is—
+(a) 12.5% of Stage 1 and 2 fixed costs; and
+(b) 12.5% of the relevant Stage 3 fixed costs.
+(7) The amount of the success fee set out in paragraphs (3) to (6) will be calculated without regard to any additional
+amount which may be included in the fixed costs by virtue of rule 45.29(5).
+Effect of rule
+7B-46.
+1+
+In the RTA Protocol (commenced on 30 April 2010), as it stood immediately before 31 July 2013, paras 7.40 and 7.53 stated
+that, where the parties agree to settle during Stage 2 of the RTA Protocol process, on terms that the defendant should pay the
+claimant damages, the defendant must pay a success fee in accordance with r.43.2(1)(k)(i) for Stage 1 and Stage 2 fixed costs
+within the time fixed by those provisions. Para.7.37 stated that any offer to settle made at any stage by either party must include
+an agreement to pay a success fee in accordance with r.45.31(1). By operation of para.4.2 of the RTA Protocol (as revised in
+2013) paras 7.37, 7.40 and 7.53 continue to apply to all claims where the CNF was submitted before 31 July 2013.
+Rule 45.31 is a rule “relating to a funding arrangement” (see para.7B-42.2+). Accordingly, where the claimant in a claim that
+is or should have been started under Pt 8 in accordance with Practice Direction 8B entered into a funding arrangement before 1
+April 2013 (“a pre-commencement funding arrangement”), the rule applies with the result that a success fee may be recovered
+as costs as provided by the rule.
+In the text of para.(5) of this rule as enacted, the word “and” was omitted at the end of sub-para.(c)(i), although it was included
+in drafts of the rule. That omission would appear to be inadvertent and has been rectified in the text as printed above.
+Related Practice Directions
+ 
+Costs Practice Direction (CPR Pt 43) [Before 1 April 2013]
+ 
+Costs Practice Direction (CPR Pt 44) [Before 1 April 2013]
+ 
+Costs Practice Direction (CPR Pt 45) [Before 1 April 2013]
+ 
+Costs Practice Direction (CPR Pt 47)
+ 
+Back to top
+Footnotes
+1
+Introduced by the Civil Procedure (Amendment) Rules 2010 (SI 2010/621).
+End of Document
+© 2025 SWEET & MAXWELL

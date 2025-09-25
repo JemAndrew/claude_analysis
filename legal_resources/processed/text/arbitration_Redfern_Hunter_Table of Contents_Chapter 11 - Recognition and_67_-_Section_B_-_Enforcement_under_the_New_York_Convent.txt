@@ -1,0 +1,1537 @@
+Section B. - Enforcement under the New York Convention, UKBC-REDFERN 530638676...
+© 2025 Thomson Reuters.
+1
+Section B. - Enforcement under the New York Convention
+Redfern and Hunter on International Arbitration 7th Ed.
+Mainwork
+Chapter 11 - Recognition and Enforcement of Arbitral Awards
+Section B. - Enforcement under the New York Convention
+(a)Introduction
+11. 39
+The origins of the New York Convention have already been described in Chapter 1. The New York Convention replaced the
+1927 Geneva Convention as between states that are parties to both Conventions, 38  and was a substantial improvement, since it
+provides for a simpler and more effective method of obtaining recognition and enforcement of foreign awards. The Convention
+also replaced the earlier 1923 Geneva Protocol as between states that are bound by both, 39  and again constitutes a substantial
+improvement, because it gives much wider effect to the validity of arbitration agreements than that given under the Protocol.
+As a result, the New York Convention has been rightly eulogised as ‘the single most important pillar on which the edifice
+of international arbitration rests’, 40  and as a convention that ‘perhaps could lay claim to be the most effective instance of
+international legislation in the entire history of commercial law’. 41  It is for this reason that, for now, many remain reluctant to
+countenance the possible disruption that would accompany the modernisation of the Convention’s existing text. 42
+(i)Enforcing the agreement to arbitrate
+11. 40
+Although the title of the New York Convention refers only to the recognition and enforcement of ‘foreign arbitral awards’,
+the Convention also deals with the recognition and enforcement of arbitration agreements. This has already been discussed
+in Chapter 1. In this chapter, the focus is on only the recognition and enforcement of ‘foreign arbitral awards’.
+(ii)Enforcing foreign awards
+11. 41
+The New York Convention adopts a strikingly internationalist attitude in its opening statement, despite its title referring to
+‘foreign awards’ rather than to ‘international awards’ as some proponents at the time, including particularly the ICC, would
+have wished. It says:
+This Convention shall apply to the recognition and enforcement of arbitral awards made in the territory of a
+State other than the State where the recognition and enforcement of such awards are sought, and arising out of
+differences between persons, whether physical or legal. It shall also apply to arbitral awards not considered as
+domestic awards in the State where their recognition and enforcement are sought. 43
+If this opening statement were to stand without qualification, it would mean that an award made in any state (even if that
+state were not a party to the New York Convention) would be recognised and enforced by any other state that was a party
+so long as the award satisfied the basic conditions set down in the Convention. There is, however, a qualification: Article
+I(3) of the Convention allows states that adhere to it to make two possible reservations. The first of these is the ‘reciprocity
+reservation’; the second is the ‘commercial reservation’, which was also in the 1923 Geneva Protocol.
+
+Section B. - Enforcement under the New York Convention, UKBC-REDFERN 530638676...
+© 2025 Thomson Reuters.
+2
+(iii)First reservation—reciprocity
+11. 42
+Article I(3) of the New York Convention provides that:
+When signing, ratifying or acceding to this Convention, or notifying extension under Article X hereof,
+any State may on the basis of reciprocity declare that it will apply the Convention to the recognition and
+enforcement of awards made only in the territory of another Contracting State.
+To the extent that states take advantage of it, the reciprocity reservation has the effect of narrowing the scope of application
+of the New York Convention. Instead of applying to all international arbitral awards wherever they are made, the application
+of the New York Convention may be limited to ‘Convention awards’—that is, to awards made in a state that is a party to
+the New York Convention. 45
+11. 43
+States that have entered into the New York Convention on the basis of reciprocity have agreed, in effect, that they will
+recognise and enforce only Convention awards. Accordingly, when seeking a suitable state in which to hold an international
+commercial arbitration, it is advisable to select a state that has adopted the New York Convention, so as to improve the
+chances of securing recognition and enforcement of the award in other Convention countries.
+11. 44
+The limiting effect of the first reservation should not be exaggerated. The number of states that make up the international
+network for the recognition and enforcement of arbitral awards established by the New York Convention grows year by
+year. The Convention now links the world’s major trading nations: Arab, African, Asian, and Latin American, as well as
+European and North American. As more countries become Convention countries, the reciprocity reservation becomes less
+significant. The Model Law, for example, in Articles 35 and 36, requires the recognition and enforcement of an arbitral award
+‘irrespective of the country in which it was made’. This reflects the ‘dream’ of a truly international award, where the place of
+arbitration is irrelevant and an award has no nationality, rather than the approach of the New York Convention which speaks
+of ‘foreign awards’ located in a particular ‘place’ or ‘seat’ of arbitration. 46
+(iv)Second reservation—commercial relationships
+11. 45
+Article I(3) of the New York Convention contains a further reservation. This entitles a contracting state to declare that it
+will apply the Convention only to those differences arising out of legal relationships, whether contractual or not, that are
+‘considered as commercial under the national law of the state making such declaration’. 47
+11. 46
+The effect of this reservation, like the reservation as to reciprocity, is to narrow the scope of application of the New
+York Convention, 48  and the fact that each contracting state may determine for itself what relationships it considers to
+be ‘commercial’ has created problems in the application of the New York Convention. Relationships that are regarded
+as ‘commercial’ by one state are not necessarily so regarded by others—and this does not assist in obtaining a uniform
+interpretation of the Convention. Indeed, the commercial reservation has led to difficulties of interpretation even within the
+same state, as is shown by two cases that arose in India. In the first, 49  the High Court of Bombay (now Mumbai) was asked
+to stay legal proceedings that had been commenced despite the existence of an arbitration agreement. Under the relevant
+Indian legislation enacting the New York Convention, the court was obliged to grant such a stay, as long as the arbitration
+agreement came within the Convention. In ratifying the New York Convention, India had entered the commercial reservation.
+
+Section B. - Enforcement under the New York Convention, UKBC-REDFERN 530638676...
+© 2025 Thomson Reuters.
+3
+The court held that whilst the agreement under which the dispute arose was commercial in nature, it could not be considered
+to be commercial ‘under the law in force in India’:
+In my opinion, in order to invoke the provisions of [the Convention], it is not enough to establish that an
+agreement is commercial. It must also be established that it is commercial by virtue of a provision of law or
+an operative legal principle in force in India. 50
+11. 47
+This decision was subsequently disapproved by the High Court of Gujarat. In this second case, 51  the plaintiffs moved for
+a stay of legal proceedings that, again, had been commenced despite the existence of an arbitration agreement. The court
+granted this motion. On the argument as to whether or not the contract was commercial in nature, the judge said that the
+term ‘commerce’:
+is a word of the largest import and takes in its sweep all the business and trade transactions in any of their forms,
+including the transportation, purchase, sale and exchange of commodities between the citizens of different
+countries. 52
+The judge added:
+It should be noted that the view of the learned single Judge of the Bombay High Court in Indian Organic
+Chemical Ltd’s case has not been approved by the Division Bench of the Bombay High Court. The Division
+Bench after setting out the view of [the judge] in the aforesaid decision, ultimately disagreed with it [ … ] 53
+11. 48
+This position was confirmed by the Indian Supreme Court in its decision in RM Investment & Trading Company v Boeing
+Company, 54  in which it held that in:
+construing the expression ‘commercial’ in Section 2 of the Act it has to be borne in mind that the ‘Act
+is calculated and designed to subserve the cause of facilitating international trade and promotion thereof
+by providing for speedy settlement of disputes arising in such trade through arbitration and any expression
+or phrase occurring [therein] should receive, consistent with its literal and grammatical sense, a liberal
+construction’ [ … ] The expression ‘commercial’ should, therefore, be construed broadly having regard to the
+manifold activities which are an integral part of international trade today.
+11. 49
+Nevertheless, the point remains that each national state may decide for itself, under the provisions of the New York
+Convention, what relationships it considers to be ‘commercial’ for the purposes of the commercial reservation. 55
+(v)Recognition and enforcement under the New York Convention
+11. 50
+The New York Convention provides for both recognition and enforcement of awards to which the Convention applies. As
+far as recognition is concerned, a state bound by the Convention undertakes to respect the binding effect of awards to which
+the Convention applies; accordingly, as has been seen, such awards may be relied upon by way of defence or set-off in any
+legal proceedings. As far as enforcement is concerned, a state that is a party to the Convention undertakes to enforce awards
+to which the Convention applies, in accordance with its local procedural rules. It also undertakes not to impose substantially
+more onerous conditions, or higher fees or charges, for such enforcement than are imposed in the enforcement of its own
+domestic awards. 56
+
+Section B. - Enforcement under the New York Convention, UKBC-REDFERN 530638676...
+© 2025 Thomson Reuters.
+4
+(vi)Formalities
+11. 51
+The formalities required for obtaining recognition and enforcement of awards to which the New York Convention applies
+are simple. 57  The party seeking such recognition and enforcement is merely required to produce to the relevant court:
+ 
+(a)[ … ]
+The duly authenticated original award or a duly certified copy thereof; [and]
+ 
+(b)The original agreement referred to in article II, or a duly certified copy thereof. 58
+11. 52
+Despite these requirements of Article IV of the Convention, courts in a number of jurisdictions have enforced awards in the
+absence of an original of the arbitration agreement, 59  or indeed without a written arbitration clause at all. 60
+11. 53
+If the award and the arbitration agreement are not in the official language of the country in which recognition and enforcement
+is sought, certified translations are needed. 61  Once the necessary documents have been supplied, the court will grant
+recognition and enforcement unless one or more of the grounds for refusal, listed in the Convention, are present.
+(b)Refusal of recognition and enforcement
+11. 54
+The various grounds for refusal of recognition and enforcement of an arbitration award that are set out in the New York
+Convention merit detailed discussion. This is not only because of the importance of the Convention itself, but also (and equally
+crucially) because the provisions of the Model Law governing recognition and enforcement of awards (in Articles 35 and 36)
+are almost identical to those set out in the Convention.
+11. 55
+First, and fundamentally, neither the New York Convention nor the Model Law permits any review on the merits of an award
+to which the Convention applies. 62
+11. 56
+Secondly, the grounds for refusal of recognition and enforcement set out in the New York Convention (and in the Model Law)
+are exhaustive. They are the only grounds on which recognition and enforcement may be refused.
+11. 57
+Thirdly, the New York Convention sets out five separate grounds on which recognition and enforcement of a Convention award
+may be refused at the request of the party against whom it is invoked. 63  It is significant that, under both the Convention and the
+Model Law (which follows the Convention in this respect), the burden of proof is not upon the party seeking recognition and
+enforcement. 64  The remaining two grounds on which recognition and enforcement may be refused, which relate to the public
+policy of the place of enforcement, are grounds that may be invoked by the enforcing court on its own motion. 65
+11. 58
+Fourthly, even if grounds for refusal of recognition and enforcement of an award are proved to exist, the enforcing court is
+not obliged to refuse enforcement. The opening lines of Article V(1) and (2) of the Convention say that enforcement ‘may’
+be refused; they do not say that it ‘must’ be refused. The language is permissive, not mandatory. 66  The same is true of the
+Model Law. 67
+
+Section B. - Enforcement under the New York Convention, UKBC-REDFERN 530638676...
+© 2025 Thomson Reuters.
+5
+11. 59
+Fifthly, the intention of the New York Convention and of the Model Law is that the grounds for refusing recognition and
+enforcement of arbitral awards should be applied restrictively. As a leading commentator on the Convention has stated: ‘As
+far as the grounds for refusal for enforcement of the Award as enumerated in Article V are concerned, it means that they have
+to be construed narrowly.’ 68
+11. 60
+Most national courts have recognised this. There has been long-standing approval in the United States, for example, of the
+‘pro-enforcement bias’ of the Convention. 69  However, not all courts follow this internationalist approach. Practitioners of
+international commercial arbitration are aware, either from their own experience or from the experience of others, of the
+difficulties that may arise in some places in seeking enforcement of an award under the New York Convention. In particular, the
+‘public policy’ exception 70  enables some states to play the game less fairly than others. Nor is this the only problem. 71  There
+are states that have ratified the Convention, but have either not brought it into effect or have brought it into effect inadequately.
+There are states in which the local courts or the local bureaucracy are unfamiliar with international arbitration—and perhaps
+even suspicious of it. There are also oddities of legislation, such as those provisions of a past law in India (now repealed) stating
+that where the governing law was that of India, the ensuing award was deemed to be a domestic award, even though the seat
+of the arbitration was in a foreign state. 72
+11. 61
+Problems of this kind cannot be ignored, but they should not be exaggerated. The New York Convention has proved to be a
+highly effective international instrument for the enforcement of arbitration agreements and, more importantly in the present
+context, arbitration awards. 73  The Convention is now somewhat dated, 74  and it is by no means applied consistently by all of
+the states that have adopted it (or which claim to have done so). 75  However, it has made the greatest single contribution to
+the internationalisation of commercial arbitration. Even though the Model Law may eventually take its place, decisions under
+the New York Convention will remain important, since the Model Law’s provisions governing recognition and enforcement of
+arbitral awards are taken directly from that Convention.
+(c)Grounds for refusal
+11. 62
+Under Article V(1) of the New York Convention, recognition and enforcement of an arbitral award may be refused if the
+opposing party proves that:
+[ … ]
+ 
+(a)The parties to the arbitration agreement [ … ] ] were, under the law applicable to them, under
+some incapacity, or the said agreement is not valid under the law to which the parties have
+subjected it or, failing any indication thereon, under the law of the country where the award
+was made; or
+ 
+(b)The party against whom the award is invoked was not given proper notice of the appointment
+of the arbitrator or of the arbitration proceedings or was otherwise unable to present his [or
+her] case; or
+ 
+(c)The award deals with a difference not contemplated by or not falling within the terms of
+the submission to arbitration, or it contains decisions on matters beyond the scope of the
+submission to arbitration, provided that, if the decisions on matters submitted to arbitration can
+be separated from those not so submitted, that part of the award which contains decisions on
+matters submitted to arbitration may be recognized and enforced; or
+
+Section B. - Enforcement under the New York Convention, UKBC-REDFERN 530638676...
+© 2025 Thomson Reuters.
+6
+ 
+(d)The composition of the arbitral authority or the arbitral procedure was not in accordance with
+the agreement of the parties, or, failing such agreement, was not in accordance with the law of
+the country where the arbitration took place; or
+ 
+(e)The award has not yet become binding on the parties, or has been set aside or suspended by a
+competent authority of the country in which, or under the law of which, the award was made.
+11. 63
+Article V(2) provides:
+Recognition and enforcement [ … ] may also be refused if the competent authority in the country where
+recognition and enforcement is sought finds that:
+ 
+(a) The subject matter of the difference is not capable of settlement by arbitration under the law
+of that country; or
+ 
+(b) The recognition or enforcement of the award would be contrary to the public policy of that
+country.
+These grounds for refusal of recognition and enforcement of foreign arbitral awards are of considerable importance. They
+represent an internationally accepted standard, not only because of the widespread acceptance of the New York Convention
+throughout the world, but also because the Model Law adopts the same grounds (although not in precisely the same words) for
+refusal of recognition and enforcement of an arbitral award, irrespective of the country in which that award was made. 76  In
+addition, six of these seven grounds for refusal are also set out in the Model Law as grounds for the setting aside of an arbitral
+award by the national court of the place of arbitration. 77
+11. 64
+In an ideal world, the provisions of the New York Convention and of the Model Law would be interpreted in the same way by
+courts everywhere. Sadly, this does not happen. There are inconsistent decisions under the New York Convention, just as there
+may be inconsistent decisions within a national system of law (although the latter may be corrected on appeal). Nevertheless, it
+is useful to consider how national courts in different parts of the world have applied the different grounds for refusal set out in
+the New York Convention. Whilst these decisions have no binding authority on national courts in other jurisdictions, they may
+provide useful guidelines for the interpretation of a particular ground for refusal in a particular case.
+(d)First ground for refusal—incapacity; invalid arbitration agreement
+11. 65
+The first ground for refusal of recognition and enforcement under the New York Convention is set out in Article V(1)(a) 78  as:
+ 
+(a) The parties to the agreement [ … ] were, under the law applicable to them, under some
+incapacity, or the said agreement is not valid under the law to which the parties have subjected it
+or, failing any indication thereon, under the law of the country where the award was made [ … ]
+The issue of capacity to enter into an arbitration agreement, which may raise particular difficulties in relation to states and state
+agencies, has already been discussed in Chapter 2, as have issues as to the validity of the arbitration agreement.
+
+Section B. - Enforcement under the New York Convention, UKBC-REDFERN 530638676...
+© 2025 Thomson Reuters.
+7
+11. 66
+A classic example of a successful defence to enforcement based on invalidity of the arbitration agreement is provided by the
+decision of the Administrative Tribunal of Damascus in Fougerolle SA (France) v Ministry of Defence of the Syrian Arab
+Republic. 79  The Tribunal, in its decision of 31 March 1988, refused enforcement of two ICC awards, holding that they were
+‘non-existent’ because they were rendered ‘without the preliminary advice on the referral of the dispute to arbitration, which
+must be given by the competent Committee of the Council of State’. 80
+11. 67
+A later example of a successful defence to enforcement based on this ground is the decision of the UK Supreme Court in Dallah
+Real Estate v Ministry of Religious Affairs. 81  In Dallah, the enforcement in London of an ICC award rendered in Paris against
+the government of Pakistan was refused by the UK Supreme Court on the grounds that the government was not a party to the
+arbitration agreement. The agreement containing the arbitration clause had been signed by the government-owned Awami Hajj
+Trust, 82  which subsequently ceased to exist 83  and was held not to be an organ of the state. 84  In so finding, the Supreme Court
+reversed the arbitral tribunal’s own finding on jurisdiction. Lord Mance emphasised that a determination by the arbitral tribunal
+concerning its own jurisdiction was immaterial to the Court’s review:
+The tribunal’s own view of its jurisdiction has no legal or evidential value, when the issue is whether the tribunal
+had any legitimate authority in relation to the Government at all. This is so however full was the evidence before
+it and however carefully deliberated was its conclusion. It is also so whatever the composition of the tribunal. 85
+11. 68
+The UK Supreme Court’s decision is to be contrasted with the outcome of the application for the annulment of the same award
+before the Paris Court of Appeal. The Paris court, having fully agreed with the UK Supreme Court on the applicable legal
+principles, found differently on the facts (it found that, as a matter of fact, the government of Pakistan was a ‘true party’ to the
+underlying transaction); and so it reached the opposite conclusion on the question as to whether the government was bound
+by the arbitration agreement. 86
+(e)Second ground—no proper notice of appointment of arbitrator or of
+the proceedings; lack of due process
+11. 69
+The second ground for refusal of recognition and enforcement of an award under the New York Convention is set out at Article
+V(1)(b):
+ 
+(b) The party against whom the award is invoked was not given proper notice of the appointment
+of the arbitrator or of the arbitration proceedings or was otherwise unable to present his [or
+her] case [ … ]
+This is perhaps the most important ground for refusal under the New York Convention (and the Model Law). It is directed at
+ensuring that the arbitration itself is properly conducted, and in particular that the parties are accorded proper notice and an
+adequate and fair opportunity to present their case.
+11. 70
+The point as to notice is a matter of formality, but it is important nonetheless. However, the main thrust of this provision of
+the Convention is directed at ensuring that the requirements of ‘due process’ are observed and that the parties are given a fair
+hearing. If parties from different countries are to have confidence in arbitration as a method of dispute resolution, it is essential
+
+Section B. - Enforcement under the New York Convention, UKBC-REDFERN 530638676...
+© 2025 Thomson Reuters.
+8
+that the proceedings should be conducted in a manner that is fair and which is seen to be fair. This is something that should be
+borne in mind, by parties and arbitrators alike, from the very outset of the arbitration.
+11. 71
+The court of the forum state will naturally have its own concept of what constitutes a ‘fair hearing’. In this sense, as was said in a
+leading case in the United States, the New York Convention ‘essentially sanctions the application of the forum state’s standards
+of due process’. 87  This does not mean, however, that the hearing must be conducted as if it were a hearing before a national
+court in the forum state. It is generally enough if the court is satisfied that the proceedings were conducted with due regard to
+any agreement between the parties, and in accordance with the principles of equality of treatment and the right of each party to
+have a reasonable—rather than exhaustive—opportunity to present its case.
+11. 72
+The national court at the place of enforcement thus has a limited role. Its function is not to decide whether or not the award
+is correct, as a matter of fact and law; its function is simply to decide whether the parties have received a fair hearing. Only a
+significant and material mistake in the course of the proceedings should be sufficient to lead the court to conclude that there
+was a denial of ‘due process’.
+11. 73
+By way of example, in a case to which reference has already been made, 88  a US corporation, which had been told that there
+was no need to submit detailed invoices, had its claim rejected by the Iran–United States Claims Tribunal, for failure to submit
+detailed invoices! The US court—rightly, it is suggested—refused to enforce the award against the US company. In different
+circumstances, a German court held that an award that was based upon arguments that had not been raised by the parties or
+the tribunal during the arbitral proceedings, and thus on which the parties had not had an opportunity to comment, violated due
+process and the right to be heard. 89  In France, in Overseas Mining Investments, 90  the successful claimant had not pleaded
+the grounds on which the arbitral tribunal had found in its favour. In these circumstances, the French Court of Cassation held
+that the tribunal’s failure to invite both the parties to express their views on the grounds in question violated the principe de la
+contradiction, which was essential for the conduct of a fair hearing. Similarly, in Kanoria and ors v Guinness, 91  the English
+Court of Appeal decided that the respondent had not been afforded the chance to present its case when critical legal arguments
+were made by the claimant at the hearing, which the respondent could not attend because of serious illness. In the circumstances,
+the Court decided that ‘this [was] an extreme case of potential injustice’ and resolved not to enforce the arbitral award.
+11. 74
+Examples of unsuccessful ‘due process’ defences to enforcement are, however, more numerous. 92  In Minmetals Germany v
+Ferco Steel, 93  the losing respondent in an arbitration in China opposed enforcement in England on the grounds that the award
+was founded on evidence that the arbitral tribunal had obtained through its own investigations. An English court rejected this
+defence, on the basis that the respondent was given an opportunity to ask for the disclosure of evidence at issue and to comment
+on it, but had declined to do so. The court held that the due process defence to enforcement was not intended to accommodate
+circumstances in which a party had failed to take advantage of an opportunity duly accorded to it. 94
+11. 75
+A further example of an unsuccessful attempt to rely on this ground is Gold Reserve Inc v Venezuela. 95  Following an adverse
+award against it, Venezuela sought to resist enforcement in the United States by arguing that it had been ‘unable to present its
+case’ because Gold Reserve had been allocated more time at the hearing to undertake witness examination. The US District
+Court for the District of Colombia, having examined the facts, found there to be a good reason for the tribunal’s decision
+to allocate Gold Reserve more time than Venezuela at the hearing: Venezuela itself had requested a condensed hearing and,
+unlike Gold Reserve, had stated that it did ‘not intend to call any of [the opposing party’s] witnesses’ for cross examination. In
+dismissing Venezuela’s application to resist enforcement, the US District Court emphasised that it was insufficient for Venezuela
+to show merely that the parties were not afforded equal hearing time. Rather, Venezuela must establish ‘exactly what it needed
+more time for, and how the denial of extra time prevented it from presenting its case’, which Venezuela failed to do so in the
+circumstances. 96
+11. 76
+
+Section B. - Enforcement under the New York Convention, UKBC-REDFERN 530638676...
+© 2025 Thomson Reuters.
+9
+In recent years, the concern to minimise a ‘due process’ complaint at the annulment or enforcement stage has led some
+participants in arbitrations (parties and arbitrators alike) to display symptoms of ‘due process paranoia’. 97  This can sometimes
+lead parties or arbitrators to be overly accommodating to procedural objections, procedural obstructions, or dilatory tactics in
+order to safeguard the enforceability of the award—and thereby, in the process, undermining the equally important procedural
+expectation of an efficient process. 98  But a right to due process is a right to an adequate and equal opportunity to present a
+case, not a right to an excessive or unlimited opportunity (which is perhaps better thought of as ‘undue process’). In truth, the
+description of this concern as a ‘paranoia’ is apt because it is rarely justified by the actual risk of a successful due process
+defence to enforcement. 99
+11. 77
+In reality, objections to enforcement are rarely successful on due process grounds. Indeed, in many jurisdictions, the courts have
+begun to recognise the negative effect of ‘due process paranoia’, and have emphasised that arbitrators should not be reluctant to
+make robust case management decisions. By way of example, in dismissing a due process challenge, the Malaysian High Court
+observed that ‘[n]atural justice does not demand that a party is entitled to receive responses to all submissions and arguments
+presented for only the right to be heard is fundamental’. 100  Similarly, the Singapore Court of Appeal recently observed that
+the concept of ‘due process’ does not require tribunals to sacrifice efficiency in order to accommodate unreasonable procedural
+demands by a party. In sentiments that might be expected from many courts around the world, Singapore’s Court of Appeal held
+that reviewing courts should accord a margin of deference to tribunals in matters of procedure and will not intervene simply
+because it might have done things differently. 101
+(f)Third ground—jurisdictional issues
+11. 78
+The third ground for refusal of recognition and enforcement of an award under the New York Convention is set out at Article
+V(1)(c):
+ 
+(c) The award deals with a difference not contemplated by or not falling within the terms of
+the submission to arbitration, or it contains decisions on matters beyond the scope of the
+submission to arbitration, provided that, if the decision on matters submitted to arbitration can
+be separated from those not so submitted, that part of the award which contains decisions on
+matters submitted to arbitration may be recognised and enforced [ … ]
+It is not uncommon for the issue of jurisdiction to be raised as the first line of defence to the enforcement of an arbitral award.
+The issue may be raised as part of a plea that there was no valid agreement to arbitrate, 102  in which case it would fall under
+Article V(1)(a) of the New York Convention, or it may be raised under the present heading. Jurisdictional issues as a ground
+for challenging an award have already been discussed, 103  and it has been noted that the right to raise such an issue may have
+been lost because of failure to do so at the appropriate time. 104
+11. 79
+The first part of this ground for refusal of enforcement under the Convention (and under the Model Law) envisages a situation
+in which the arbitral tribunal is alleged to have exceeded its jurisdiction by going ‘beyond what was sought’ (that is, ultra
+petita) and dealing with a dispute that was not submitted to it. According to a leading authority on the Convention, courts
+almost invariably reject this defence. 105  A robust rejection of such a defence comes from the US Court of Appeals for the
+District of Columbia, in a case in which it was pleaded that the arbitral tribunal had awarded a considerable sum of damages
+for consequential loss when the contract between the parties clearly excluded this head of damage. 106  The Court stated that,
+without undertaking an in-depth review of the law of contract, it could not state whether a breach of contract would abrogate a
+clause that excluded consequential damages. However, ‘the standard of review of an arbitration award by an American Court is
+extremely narrow’, 107  and (adopting the words of the US Court of Appeals in the well-known case of Parsons Whittemore 108 )
+
+Section B. - Enforcement under the New York Convention, UKBC-REDFERN 530638676...
+© 2025 Thomson Reuters.
+10
+the Convention did not sanction ‘second-guessing the arbitrators’ construction of the parties’ agreement’, nor would it be proper
+for the court to ‘usurp the arbitrators’ role’. 109  Accordingly, enforcement was granted.
+11. 80
+A further example of an unsuccessful attempt to use this ground to resist enforcement is a decision by the US District Court for
+the Northern District of Illinois, Eastern Division. 110  The respondents argued that the arbitral tribunal had exceeded its authority
+by giving a preclusive effect to findings of an English court, rather than holding an evidentiary hearing to make its own findings.
+The US court held that since the parties’ arbitration agreement neither stipulated any specific hearing procedure to be followed
+nor prohibited the tribunal from deciding on issues of preclusion, these were issues to be decided by the arbitral tribunal. 111
+11. 81
+The second part of this ground for refusal is concerned with the situation in which it is alleged that the tribunal exceeded its
+jurisdiction in some respects, but not in others. In such a situation, even if the partial excess of authority is proved, that part
+of the award which concerns matters properly submitted to arbitration may be saved and enforcement ordered. For example, in
+a case that came before the Italian courts, the court examined the award to determine whether or not the arbitral tribunal had
+exceeded the limits of its jurisdiction. 112  Having done so, the Italian court granted partial enforcement of the award, to the
+extent that it dealt with matters within the jurisdiction of the arbitral tribunal.
+(g)Fourth ground—composition of tribunal or procedure not in
+accordance with arbitration agreement or the relevant law
+11. 82
+The fourth ground for refusal of recognition and enforcement of an award under the New York Convention is set out at Article
+V(1)(d):
+ 
+(d) The composition of the arbitral authority or the arbitral procedure was not in accordance with
+the agreement of the parties, or, failing such agreement, was not in accordance with the law of
+the country where the arbitration took place [ … ]
+The 1927 Geneva Convention provided that enforcement of an award could be refused if the composition of the arbitral tribunal,
+or the arbitral procedure, was not in accordance both with the agreement of the parties and the law of the place of arbitration.
+This double requirement meant that if an arbitration was not held in strict accordance with the procedural law of the place of
+arbitration, the consequent award would not be enforced. Under the New York Convention, the double requirement has been
+dropped and compliance with the agreement of the parties has become the main area of enquiry.
+11. 83
+In a case that came before the Supreme Court of Hong Kong in 1994, it was argued that enforcement of an award made in
+China should be refused because the composition of the arbitral tribunal was not in accordance with the agreement of the
+parties. 113  The arbitrators who had been appointed were on the Shenzhen list of arbitrators, but not (as specified in the arbitration
+agreement) on the Beijing list.
+11. 84
+Giving judgment, Kaplan J said:
+It is clear therefore that the only grounds upon which enforcement can be refused are those specified [ … ] and
+that the burden of proving a ground is upon the defendant. Further, it is clear that even though a ground has been
+proved, the Court retains a residual discretion. 114
+
+Section B. - Enforcement under the New York Convention, UKBC-REDFERN 530638676...
+© 2025 Thomson Reuters.
+11
+After considering the facts, the judge said:
+I conclude therefore, somewhat reluctantly, that technically the arbitrators did not have jurisdiction to decide this
+dispute and that in all the circumstances of this case, the ground specified in the section has been made out. I say
+technically because the parties did agree to have a CIETAC Arbitration and that is what they got, even though
+it was held at a place within China not specified in the contract and by arbitrators who apparently were not on
+the Beijing list. 115
+11. 85
+Although the ground for refusal of enforcement had been made out, the judge allowed enforcement of the award to go ahead
+nevertheless on the basis that the party objecting to enforcement had taken part in the arbitration knowing that, technically, the
+arbitrators were not selected from the correct list. Having done so, it could not now seek to profit from this departure. The judge
+considered the application of the doctrine of estoppel to other aspects of the New York Convention and said:
+If the doctrine of estoppel can apply to arguments over the written form of the arbitration agreement under Article
+II(2), then I fail to see why it cannot also apply to the grounds of opposition set out in Article V. It strikes me as
+quite unfair for a party to appreciate that there might be something wrong with the composition of the tribunal
+yet not make any formal submission whatsoever to the tribunal about its own jurisdiction, or to the arbitration
+commission which constituted the tribunal and then to proceed to fight the case on the merits and then two years
+after the award, attempt to nullify the whole proceedings on the grounds that the arbitrators were chosen from
+the wrong CIETAC list. 116
+He continued:
+[E]ven if a ground of opposition is proved, there is still a residual discretion left in the enforcing court to enforce
+nonetheless. This shows that the grounds of opposition are not to be inflexibly applied. The residual discretion
+enables the enforcing court to achieve a just result in all the circumstances [ … ] 117
+11. 86
+Similar problems can arise where the arbitral institution prescribed in the arbitration agreement has subsequently undergone
+structural changes. In a case before the Indian court in 2018, 118  the arbitration agreement provided for ‘arbitration before [ … ]
+China International Economic and Trade Arbitration Commission (CIETAC) in Shanghai’. When the contract was signed in
+2011, CIETAC had two sub-commissions: the Shanghai Sub-Commission and the Shenzhen/South China Sub-Commission. In
+2013, however, the two sub-commissions declared independence: The Shanghai Sub-Commission then became the Shanghai
+International Arbitration Centre (SHIAC), and the Shenzhen/South China sub-commission became the Shenzhen Court of
+International Arbitration (SCIA). In 2015, following an unsuccessful challenge of a CIETAC award rendered in China, the losing
+party in the arbitration sought to resist enforcement of the award in India by arguing that the parties had agreed to refer their
+disputes to the then Shanghai sub-commission (which became SHIAC) and therefore CIETAC had no jurisdiction to hear the
+dispute at issue. The Delhi High Court rejected this argument, on the basis that the Shanghai sub-commission was not expressly
+mentioned in the arbitration agreement and that, under the CIETAC Rules effective at the time the arbitration agreement was
+concluded, in the absence of an agreement between the parties as to which of CIETAC or its sub-commissions would administer
+the dispute, the final decision was to be made by CIETAC itself.
+11. 87
+In contrast, Encyclopaedia Universalis SA (Luxembourg) v Encyclopaedia Britannica Inc. (US) 119  is an example of the
+successful reliance on this ground before the US Court of Appeals for the Second Circuit. In their contract, the parties had
+agreed that (a) the two party-appointed arbitrators must attempt to choose a third arbitrator, and (b), upon the failure of the two
+party-appointed arbitrators to agree on a third, the English Commercial Court would appoint one. The appellant, Encyclopaedia
+Universalis SA (Luxembourg), sidestepped the first requirement and the Commercial Court nevertheless proceeded to appoint
+a third arbitrator. In response to a request by Encyclopaedia Britannica Inc. (US) to refuse enforcement of the award rendered
+against it, the US Court held that:
+
+Section B. - Enforcement under the New York Convention, UKBC-REDFERN 530638676...
+© 2025 Thomson Reuters.
+12
+[T]he [English court]’s premature appointment of [the third arbitrator] irremediably spoiled the arbitration process
+[ … ] the issue of how the third arbitrator was to be appointed is more than a trivial matter of form. Article V(1)
+(d) of the New York Convention itself suggests the importance of arbitral composition […] 120
+11. 88
+As described in Chapter 6, it is increasingly common for institutional rules to provide for expedited or emergency arbitration
+procedure. Parties taking advantage of such procedures, however, may sometimes face difficulty in the enforcement stage. In
+Noble Resources International Pte. Ltd v Shanghai Good Credit International Trade Co., Ltd., 121  the arbitration agreement
+provided for a three-member SIAC tribunal. Nobel Resources applied for expedited procedure under the 2013 SIAC Rules and,
+despite Shanghai Good Credit’s objection, the SIAC Court decided to appoint a sole arbitrator to hear the dispute pursuant
+to the expedited procedure. After the sole arbitrator rendered an award in favour of Nobel Resources, Shanghai Good Credit
+successfully resisted enforcement of the award in China, on the basis that the appointment of a sole arbitrator was contrary to
+the parties’ agreement for a three-member tribunal, and that the SIAC Court erred in compelling the parties to accept a sole
+arbitrator in the circumstances.
+11. 89
+Following the Chinese court’s decision, SIAC has amended its latest rules (the 2016 SIAC Rules) to prevent the same conflict
+from arising. Article 5.3 of the 2016 SIAC Rules now provides more explicitly that: ‘[B]y agreeing to arbitration under these
+Rules, the parties agree that, where arbitral proceedings are conducted in accordance with the Expedited Procedure under this
+Rule 5, the rules and procedures set forth in Rule 5.2 shall apply even in cases where the arbitration agreement contains contrary
+terms’.
+(h)Fifth ground—award suspended, or set aside
+11. 90
+The fifth ground for refusal of recognition and enforcement under the New York Convention is set out at Article V(1)(e):
+ 
+(e) The award has not yet become binding on the parties, or has been set aside or suspended by a
+competent authority of the country in which, or under the law of which, that award was made
+[ … ]
+This fifth ground for refusal of recognition and enforcement of an arbitral award (which, like the others, also appears in the
+Model Law) has given rise to more controversy than any of the previous grounds. First, there is the reference to an award being
+‘not binding’. In the 1927 Geneva Convention, the word ‘final’ was used. This was taken by many to mean that the award had
+to be declared as ‘final’ by the court of the place of arbitration and this gave rise to the problem of the double exequatur. It
+was intended that the word ‘binding’ would avoid this problem, particularly since many international and institutional rules
+of arbitration state in terms that the award of the arbitral tribunal is to be accepted by the parties as final and ‘binding’ upon
+them. 122  However, some national courts still consider it necessary to investigate the law applicable to the award to see if it is
+‘binding’ under that law 123 —although the better position appears to be that an award is ‘binding’ if it is no longer open to an
+appeal on the merits, either internally (that is, within the relevant rules of arbitration) or by an application to the court. 124
+11. 91
+There are other problems too, with this fifth ground for refusal, which have led to considerable controversy. At first sight, the
+proposition that an award may be refused recognition and enforcement if it has been set aside or suspended by a court at the
+place (or seat) of the arbitration seems reasonable enough. If, for example, an award has been set aside in Switzerland, it will
+be unenforceable in that country—and it might be expected that, if only as a matter of international comity, the courts of other
+states would also regard the award as unenforceable.
+
+Section B. - Enforcement under the New York Convention, UKBC-REDFERN 530638676...
+© 2025 Thomson Reuters.
+13
+11. 92
+This is not necessarily so, however. Courts in other countries may take the view (and indeed, as will be described, 125  in some
+countries they have taken the view) that they will enforce an arbitral award even if it has been set aside by the courts of the seat
+of the arbitration. This leads to a situation in which an award that has been set aside and so is unenforceable in its country of
+origin may be refused enforcement under the New York Convention in one country, but granted enforcement in another.
+11. 93
+The problem arises because the New York Convention does not in any way restrict the grounds on which an award may be set
+aside or suspended by the court of the country in which, or under the law of which, that award was made. 126  This is a matter
+that is left to the domestic law of the country concerned, and this domestic law may impose local requirements (such as the
+need to initial each page of the award) that judges and lawyers elsewhere would not regard as sufficient to impeach the validity
+of an international arbitral award.
+11. 94
+The allowance for local requirements that is made in the New York Convention has been described by a former secretary-
+general of the ICC Court as:
+a hitherto rock-solid rampart against the true internationalisation of arbitration, because in the award’s country
+of origin all means of recourse and all grounds of nullity applicable to purely domestic awards may be used to
+oppose recognition abroad [ … ] 127
+Another experienced commentator has referred to the ‘anathema of local particularities’, which are capable of leading to the
+setting aside of international awards, and has suggested that ‘such local standard annulments’ should be given only local effect
+and should be disregarded internationally. 128
+11. 95
+The argument in favour of the fifth ground is a familiar one. It is the classic argument that the courts of the place of arbitration
+should have some control over arbitral proceedings conducted on their territory, if only to guard against lack of due process,
+fraud, corruption, or other improper conduct on the part of the arbitral tribunal. Perhaps the real argument is: how far should
+this control go? Should it be limited to the first four grounds of the New York Convention, 129  or should it go further? And if
+so, how much further? The problem is to strike the correct balance between regulation and laissez-faire.
+11. 96
+Whilst the argument continues, courts in France, Belgium, Austria, the United Kingdom, and the United States have shown
+themselves prepared on occasion to recognise and enforce arbitral awards even though they have been set aside by the courts
+at the seat of arbitration. 130  The justification for this is twofold. First, the language of Article V of the New York Convention
+(as already discussed) is permissive, not mandatory. Specifically, the English language version of the Convention says that the
+enforcing court may refuse recognition and enforcement—not that it must do so. Secondly, the New York Convention recognises
+that there may be more favourable provisions under which an award may be recognised and enforced. The Convention contains
+the following provision, in Article VII(1):
+The provisions of the present Convention shall not affect the validity of multilateral or bilateral agreements
+concerning the recognition and enforcement of arbitral awards entered into by the Contracting States nor deprive
+any interested party of any right he may have to avail himself of the arbitral award in the manner and to the extent
+allowed by the law or the treaties of the country where such award is sought to be relied upon.
+In this way, the New York Convention recognises explicitly that, in any given country, there may be a local law that, whether
+by treaty or otherwise, is more favourable to the recognition and enforcement of arbitral awards than the Convention itself. The
+Convention gives its blessing, so to speak, to any party who wishes to take advantage of this more favourable local law.
+11. 97
+The New York Convention has long been regarded as being of fundamental importance to the recognition and enforcement of
+international arbitral awards. It remains so. However, the possibility of obtaining recognition and enforcement of an award that
+
+Section B. - Enforcement under the New York Convention, UKBC-REDFERN 530638676...
+© 2025 Thomson Reuters.
+14
+has been set aside by means of applying a more favourable local law, which does not reflect or rely upon the Convention, should
+not be overlooked. This approach can be illustrated with some famous examples emanating from the French and US courts.
+In the French decision of Hilmarton, 131  an award rendered by a tribunal in Switzerland in favour of the respondent was later
+annulled by the Geneva Court of Appeal. In the meantime, however, the respondent had applied to the French courts to enforce
+the award and was successful at the first instance. On appeal from the enforcement proceedings in France, the French Court of
+Appeal had to decide whether to uphold the lower court’s decision to enforce the award, even though it had been set aside in
+the country in which it was made. The Court of Appeal decided to let the enforcement proceed. This decision was subsequently
+confirmed by the French Court of Cassation, which stated that:
+the award rendered in Switzerland is an international award which is not integrated in the legal system of that
+State, so that it remains in existence even if set aside and its recognition in France is not contrary to international
+public policy. 132
+11. 98
+In Chromalloy, 133  the US Federal Court for the District of Columbia enforced an award that had been set aside in Egypt. 134
+The Court explicitly contrasted the permissive nature of Article V of the Convention with the mandatory nature of Article VII:
+While Article V provides a discretionary standard, Article VII of the Convention requires that, ‘The
+provisions of the present Convention shall not [ … ] deprive any interested party of any right he may have
+to avail himself of an arbitral award in the manner and to the extent allowed by the law [ … ] of the country
+where such award is sought to be relied on.’
+11. 99
+In Putrabali, 136  the French courts enforced an award set aside in England. In so doing, the Court of Cassation held that:
+[A]n international arbitral award, which does not belong to any state legal system, is an international decision of
+justice and its validity must be examined according to the applicable rules of the country where its recognition
+and enforcement are sought. 137
+More recently, in a decision of the US District Court for the Southern District of New York in COMMISA v Pemex, 138  a
+Mexican award was enforced under the 1975 Inter-American Convention on International Commercial Arbitration (the Panama
+Convention), 139  despite being set aside at the seat. A Mexican court had applied a statute that was not yet in existence at the
+time the parties entered into the contract, and had set aside the award on the basis that, as a matter of Mexican law, arbitral
+tribunals lacked the competency to hear and decide cases brought against the Mexican state, or an organ of the state (such as
+Pemex, Mexico’s state-owned oil company). In rejecting the Mexican court’s ruling and confirming the award, the US court
+was careful to explain that it was ‘neither deciding, nor reviewing, Mexican law’; rather, its decision was made on the basis
+that the Mexican court’s ruling ‘violated basic notions of justice in that it applied a law that was not in existence at the time the
+parties’ contract was formed and left COMMISA without an apparent ability to litigate its claims’. 140
+11. 100
+Notwithstanding decisions such as Hilmarton, Chromalloy, Putrabali, and Pemex, the enforcement of awards that have been
+set aside by the courts of the place of arbitration remains controversial. With some notable exceptions, courts around the world
+are more likely than not to decline to enforce annulled awards. 141
+11. 101
+Moreover, it should be noted that the only national court that is competent to suspend or set aside an award is the court of the
+country ‘in which, or under the law of which, that award was made’. 142  This court will almost invariably be the national court
+of the seat of the arbitration. The impracticability of holding an arbitration in country X, but subjecting it to the procedural
+law of country Y, has already been discussed, 143  and so the prospect of an award being set aside under the procedural law
+of a state other than that of the seat of arbitration is unlikely. However, an ingenious (but unsuccessful) attempt was made to
+persuade the US District Court to set aside an award made in Mexico, on the basis that the reference to the law under which
+
+Section B. - Enforcement under the New York Convention, UKBC-REDFERN 530638676...
+© 2025 Thomson Reuters.
+15
+that award was made was a reference to the law governing the dispute and not to the procedural law. 144  The US court firmly
+rejected this argument, stating:
+Decisions of foreign courts under the Convention uniformly support the view that the clause in question means
+procedural and not substantive (that is, in most cases, contract law) [ … ]
+Accordingly, we hold that the contested language in Article V(1)(e) of the Convention [ … ] refers exclusively
+to procedural and not substantive law, and more precisely to the regimen or scheme of arbitral procedural law
+under which the arbitration was conducted. 145
+The court went on to hold that since the seat of the arbitration was Mexico, only the Mexican court had jurisdiction to set aside
+the award. 146
+11. 102
+Courts are not always immune to such creative attempts to resist enforcement. The Indian Supreme Court, 147  for example,
+has in the past accepted that an award rendered in London that was the object of enforcement proceedings in the United States
+could be set aside in India simply because the parties had chosen Indian law to govern the substance of their dispute. 148  This
+decision was plainly wrong and the Indian Supreme Court subsequently recognised this. In its decision in Bharat Aluminium
+Co. v Kaiser Aluminum Technical Service, Inc., 149  the Supreme Court affirmed that Indian courts do not have jurisdiction, in
+either a supportive or supervisory role, where the seat of the arbitration is outside India.
+11. 103
+Finally, as described in Chapter 6, it is increasingly common for institutional rules now to provide for emergency arbitration
+procedures, 150  in addition to endowing arbitral tribunals with the now long-standing power to grant interim measures. The
+finality for the purposes of enforcement of the awards that result from such emergency procedures, as well as measures that result
+from applications for interim relief, lead to vastly different decisions across jurisdictions. For example, courts in Australia, 151
+Chile, 152  and Russia 153  have considered interim awards generally unenforceable, on the basis that such awards are not yet
+‘final’ or ‘binding’ on the parties, although it is unclear whether the same approach is extended to emergency awards. In contrast,
+some courts in the US have held both interim awards and emergency awards to be enforceable provided that the ruling in those
+awards definitively disposes of a self-contained issue, even if the awards do not themselves resolve part of the dispute. 154  The
+Supreme Court of India has taken a similar approach. 155  In Hong Kong and Singapore, this question is now settled by national
+legislation, which expressly provides that both interim and emergency awards are enforceable. 156
+11. 104
+Given the lack of international consensus on this issue, those invoking an emergency procedure or applying for interim relief
+should consider closely the particular approach of the likely courts of enforcement before setting off an errand that may not
+result in an enforceable emergency or interim decision.
+11. 105
+This completes this review of the five grounds for refusal of recognition and enforcement of an arbitral award that are laid down
+in both the New York Convention and the Model Law, and which it is for the party resisting enforcement to prove. As already
+mentioned, there are two further grounds that may be invoked by the enforcement court itself. These concern first, arbitrability
+and secondly, public policy.
+(i)Arbitrability
+11. 106
+The New York Convention provides, as does the Model Law, that recognition and enforcement of an arbitral award may be
+refused:
+
+Section B. - Enforcement under the New York Convention, UKBC-REDFERN 530638676...
+© 2025 Thomson Reuters.
+16
+if the competent authority in the country where recognition and enforcement is sought finds that:
+ 
+(a) The subject matter of the difference is not capable of settlement by arbitration under the law
+of that country [ … ]
+11. 107
+Arbitrability has already been discussed in Chapter 2. As indicated, each state has its own concept of what disputes should be
+reserved for the courts of law and what disputes that state will allow to be resolved by arbitration. This question may arise both
+at the beginning of an arbitration (‘is this dispute capable of being referred to arbitration?’) and at the end (‘would this dispute
+have been capable of settlement by arbitration under the law of the enforcement state?’). When the issue of ‘arbitrability’ arises
+as a defence to enforcement under the New York Convention, it becomes an issue for the law of the enforcement state and,
+being governed principally by considerations of public policy, the decision varies from state to state.
+11. 108
+For example, Russian courts used to interpret provisions of the Russian Commercial Procedure Code stipulating the exclusive
+jurisdiction of certain Russian courts over corporate governance disputes as precluding the arbitrability of such disputes. In
+Maximov v Novolipetsky Metallurgicheskiy Kombinat, 158  following the entry into an agreement to purchase shares in a Russian-
+incorporated company, a dispute arose between the seller and buyer over the purchase price. The seller, who alleged that he had
+not received the price required under the agreement, obtained an arbitral award at the Moscow-based International Commercial
+Arbitration Court (ICAC). The Supreme Commercial Arbitrazh Court, upholding the decision of a lower court to set aside the
+award, held that corporate governance disputes are non-arbitrable under Article 225(1) of the Arbitration Procedural Code.
+However, following a reform of the Russian arbitration law which came into effect in 2017, corporate disputes are now generally
+arbitrable as a matter of Russian law, subject only to some limited conditions. 159
+11. 109
+In another example, the Supreme Court of Singapore ruled that whether a person is the alter ego of a company is an issue that
+does not have a public interest element, so is within the scope of submission to arbitration and is therefore arbitrable. 160  The
+defendant had argued that the arbitrator could not hold that he was bound by the arbitration clause based on a finding of an
+alter ego, since the issue of an alter ego was not arbitrable under Arizona law (the governing law of the contract). The Court
+dismissed this argument, holding that the law of Arizona was irrelevant, since the issue of arbitrability in a Singapore court as
+a ground for refusing enforcement was to be determined under the law of Singapore. 161
+(j)Public policy
+11. 110
+Recognition and enforcement of an arbitral award may also be refused if it is contrary to the public policy of the enforcement
+state. 162  It is understandable that a state may wish to have the right to refuse to recognise and enforce an arbitration award that
+offends its own notions of public policy, and in some jurisdictions an enforcing court is required to examine the possibility of
+a public policy violation ex officio. 163  Yet when reference is made to ‘public policy’, it is difficult not to recall the sceptical
+comment of the English judge who said, almost two centuries ago: ‘It is never argued at all but where other points fail.’ 164
+11. 111
+Certainly, courts in England are reluctant to excuse an award from enforcement on grounds of public policy. At one time, it was
+said that ‘there is no case in which this exception has been applied by an English court’. 165  Inevitably, of course, the exception
+then arose and was applied in Soleimany v Soleimany. 166  In this case, an English court refused to enforce an award giving effect
+to a contract between a father and son that involved the illegal smuggling of carpets out of Iran, in breach of Iranian revenue
+laws and export controls. The father and son had agreed to submit their dispute to arbitration by the Beth Din, the Court of the
+
+Section B. - Enforcement under the New York Convention, UKBC-REDFERN 530638676...
+© 2025 Thomson Reuters.
+17
+Chief Rabbi in London, which applied Jewish law. As a matter of the applicable Jewish law, the illegal purpose of the contract
+had no effect on the rights of the parties and the Beth Din proceeded to make an award enforcing the contract. In declining to
+enforce the award, the English court held that:
+The Court is in our view concerned to preserve the integrity of its process, and to see that it is not abused. The
+parties cannot override that concern by private agreement. They cannot by procuring an arbitration conceal that
+they, or rather one of them, is seeking to enforce an illegal contract. Public policy will not allow it. 167
+11. 112
+Apart from rare exceptions such as this, most countries observe the ‘pro-enforcement bias’ of the New York Convention. 168
+Indeed, this pro-enforcement bias may itself be considered a matter of public policy, as the English courts confirmed in Westacre
+Investments Inc. v Jugoimport-SPDR Holding Co. Ltd. 169  This dispute arose from a consultancy agreement for the procurement
+of contracts for the sale of military equipment in Kuwait. Westacre commenced arbitration, claiming payment of its consulting
+fee. Jugoimport defended the claim on the grounds that, in violation of Kuwaiti law and public policy, the contract involved
+Westacre bribing various Kuwaitis to exert their influence in favour of entering sales contracts with Jugoimport. The agreement
+between Westacre and Jugoimport was governed by Swiss law, and provided for arbitration in Switzerland. The arbitral tribunal
+found that there was no evidence of corruption and that lobbying by private enterprises to obtain public contracts was not illegal
+under Swiss law. The award was first challenged in the Swiss Federal Court, which rejected the challenge on the basis that
+allegations of corruption had already been dealt with and rejected by the arbitral tribunal. Attempts to enforce the award were
+subsequently challenged in the English courts, where Jugoimport filed new affidavit evidence in support of its allegation of
+corruption.
+11. 113
+In decisions that attracted some critical commentary, 170  the English courts rejected the challenge to enforcement, both at first
+instance and in the Court of Appeal, on the grounds that: the arbitral tribunal itself had considered the allegations of bribery and
+found that they had not been substantiated; ‘lobbying’ was not, as such, an illegal activity under the governing law chosen by
+the parties; and the Court was faced with international arbitration awards that had been upheld by the Swiss Federal Tribunal,
+and therefore had to balance the public policy of discouraging international commercial corruption against the public policy
+of sustaining international arbitration awards.
+11. 114
+It is clear that the ‘public policy’ referred to in the New York Convention is the public policy of the enforcement state. 171  The
+real question is whether that public policy differentiates between foreign arbitral awards and purely domestic awards.
+11. 115
+The approach of the US courts was summarised by the Federal District Court of Massachusetts in Sonatrach. 172  The court
+stated that:
+The line of decisions which conclusively tip the judicial scale in favour of arbitration [are] a line of United States
+Supreme Court opinions which enthusiastically endorse an internationalist approach towards commercial disputes
+involving foreign entities. These decisions, The Bremen v Zapata Offshore Co 173  (forum selection clauses in
+international commercial contract enforced); Scherk v Alberto-Culver Co 174  (international arbitration clause
+held enforceable when in conflict with federal securities laws); and most recently Mitsubishi 175  (international
+arbitration clause held enforceable when in conflict with Federal Antitrust laws) eschew the parochial tendencies
+of domestic tribunals in retaining jurisdiction over international commercial disputes. The Supreme Court
+powerfully advocates the need for international comity in an increasingly interdependent world. Such respect
+is especially important, in this Court’s view, when parties mutually agree to be bound by freely negotiated
+contracts. 176
+11. 116
+A similar line of reasoning is found in the decision of the New York District Court in the well-known case of Parsons Whittemore
+Overseas Co. Inc. v Société Générale de l’Industrie du Papier (RAKTA). 177  The court was confronted by an argument that
+recognition and enforcement of an award should be refused on the grounds that diplomatic relations between Egypt (the
+
+Section B. - Enforcement under the New York Convention, UKBC-REDFERN 530638676...
+© 2025 Thomson Reuters.
+18
+respondent’s state) and the United States had been severed. The court rejected this argument and referred to the ‘general pro-
+enforcement bias’ of the New York Convention. 178  It held that the Convention’s ‘public policy’ defence should be construed
+narrowly, and that enforcement of foreign arbitral awards should be denied on this basis only ‘where enforcement would violate
+the forum state’s most basic notions of morality and justice’. 179
+11. 117
+Courts in other countries have also recognised that, in applying their own public policy to Convention awards, they should
+give it an international, and not a domestic, dimension. The English Court of Appeal in RBRG Trading (UK) Ltd v Sinocore
+International Co. Ltd, 180  having considered the decisions in both Soleimany and Westacre discussed above, concluded that
+‘where, on the facts, there is no illegality under the governing law but there is under English law, public policy will only be
+engaged where the illegality reflects considerations of international public policy rather than purely English domestic public
+policy’. 181
+11. 118
+Similarly, in India, in a case to which reference has already been made, 182  the Supreme Court said:
+This raises the question of whether the narrower concept of public policy as applicable in the field of public
+international law should be applied or the wider concept of public policy as applicable in the field of municipal
+law. The Court held that the narrower view should prevail and that enforcement would be refused on the public
+policy ground if such enforcement would be contrary to (i) fundamental policy of Indian law; or (ii) the interests
+of India; or (iii) justice or morality. 183
+11. 119
+French, 184  Swiss, 185  German, 186  and Egyptian 187  courts have made decisions to similar effect. In addition, the arbitration
+legislation in some countries makes an express distinction between domestic and international public policy, limiting the refusal
+of enforcement to the latter ground only. 188
+11. 120
+These decisions and legislation, from different parts of the world, show a readiness to limit (sometimes severely) the public
+policy defence to enforcement. However, the boundaries of national public policy are not fixed, and some national courts have
+historically taken a broader view of the defence than modern international standards would countenance. 189
+11. 121
+Rather than refer to ‘public policy’, Chinese law refers to the ‘social and public interest’, which is potentially an even more
+oblique concept. Chinese courts have recognised an obligation to consider, in every case, whether this ‘social and public interest’
+is violated, even if neither party has raised it. 190  The Supreme People’s Court has issued a statement of how to interpret this
+‘social and public interest’ ground, asking:
+[U]nder what circumstances does the principle of public interest apply? The principle of public interest can apply
+where there are breaches of fundamental principles of Chinese law, national sovereignty or national security, or
+breaches of the principles of social ethics and fundamental moral value. 191
+11. 122
+Commentators have summarised this position as meaning that in China ‘public policy’ is broader than ‘public morals’, and
+includes ‘traditional and societal sentiment’. 192
+11. 123
+Such broad conceptions of public policy may explain decisions such as that in Heavy Metal. 193  In that case, the Supreme
+People’s Court had to decide whether to enforce a foreign-related arbitral award, which directed the respondent to pay
+compensatory damages to a US heavy metal band, whose performances had been banned by the Chinese Ministry of Culture
+on the grounds that the artists performed ‘outrageous acts’ such as drinking, smoking, splashing water, lying on the stage floor
+while performing, and jumping down from the stage. A CIETAC tribunal awarded damages for the band’s lost income. When
+
+Section B. - Enforcement under the New York Convention, UKBC-REDFERN 530638676...
+© 2025 Thomson Reuters.
+19
+the band sought enforcement, the Supreme People’s Court denied enforcement, on the grounds that the tribunal’s findings were
+in manifest disregard of the underlying facts that the performance of heavy metal music was against ‘national sentiments’, and
+accordingly contrary to the social and public interests. 194  Whatever one may think of heavy metal music, it is difficult not to
+reach the conclusion that this amounted to a troublingly broad interpretation of the public policy exception to the enforcement
+of arbitral awards.
+11. 124
+The requirement that lower courts must obtain leave of the Supreme People’s Court to refuse recognition or enforcement has
+helped to reduce the incidence of overly broad interpretations of public policy to deny enforcement of awards in China. 195
+According to a speech in 2008 by Deputy Chief Justice Wan E’xiang, of the Supreme People’s Court, between 2000 and 2008
+the Court did not uphold a single decision by the Chinese lower courts that refused to enforce a foreign arbitral award on public
+policy grounds. 196  Attempts by parties to equate the social and public interest, for example, with a simple violation of Chinese
+law, or (more worryingly) the interests of state-owned enterprises, have been rejected as falling short of a breach of public
+policy. 197
+11. 125
+Russian courts are likewise known for expansive interpretations of the notion of public policy and have declined, for instance,
+to enforce foreign arbitral awards if the amount of damages awarded was ‘punitive’ or ‘disproportionate to the breach’ in the
+eyes of Russian courts. 198
+11. 126
+In an attempt at harmonisation, the Committee on International Commercial Arbitration of the International Law Association
+(ILA) has sought to offer definitions of the concepts of ‘public policy’, ‘international public policy’, and ‘transnational public
+policy’, and recommends that ‘[t]he finality of awards rendered in the context of international commercial arbitration should
+be respected save in exceptional circumstances’, such exceptional circumstances being the violation of international public
+policy. 199  The Committee defined ‘international public policy’ as that ‘part of the public policy of a state which, if violated,
+would prevent a party from invoking a foreign law or foreign judgment or foreign award’. 200
+11. 127
+The application of competition law raises particular issues of public policy that may become relevant in both annulment and
+enforcement proceedings. In Eco Swiss China Time Ltd v Benetton International NV, 201  the European Court of Justice (ECJ)
+held that Article 81 of the Treaty Establishing the European Community, or EC Treaty (now Article 101 of the Treaty on
+the Functioning of the European Union, or TFEU) constituted a matter of public policy within the meaning of the New York
+Convention and, on this basis, ruled that:
+[A] national court, to which application is made for annulment of an arbitration award must grant that application
+if it considers that the award in question is in fact contrary to Article 81 EC (ex Article 85), where its domestic
+rules of procedure require it to grant an application for annulment founded on failure to observe national rules
+of public policy. 202
+11. 128
+The French courts (including the French Court of Cassation) have taken a narrow approach to the impact of EU competition
+law on the enforceability of awards, setting aside awards on EU competition law grounds only if they show a ‘flagrant, specific
+and concrete breach’ of French international public policy. 203  The Swiss Federal Court has taken an even more restrictive
+approach. In its decision of 8 March 2006, it held that EU competition law could not be considered as part of the foundation of
+all legal orders so as to qualify as a matter of public policy and, on that ground, simply dismissed the case. 204  For their part,
+and in contrast, the Dutch and Belgian courts have shown themselves ready to undertake a substantive review of awards from
+the perspective of competition law and have not refrained from annulling awards found to be in breach of EU competition law
+(and in particular Article 81 EC). 205
+11. 129
+
+Section B. - Enforcement under the New York Convention, UKBC-REDFERN 530638676...
+© 2025 Thomson Reuters.
+20
+In the United States too, the interplay between public policy and the enforcement of anti-trust arbitral awards has proved
+significant. The general approach was set by the US Supreme Court in the case of Mitsubishi v Soler Chrysler-Plymouth, 206
+in which it confirmed the arbitrability of antitrust claims, but emphasised that US national courts would have the opportunity
+to have a ‘second look’ at such arbitral awards at the enforcement stage, in order to ensure that the legitimate interest in the
+enforcement of anti-trust laws had been addressed by the arbitral tribunal. In practice, however, US appellate courts have
+demonstrated different views with respect to their power to review an arbitral award au fond. For instance, in 2003, a divided
+Court of Appeal for the Seventh Circuit, considering the enforcement of a domestic award, quoted Mitsubishi, stating that a
+court should confirm only that the arbitral tribunal ‘took cognizance of the antitrust claims and actually decided on them’; no
+further review of the merits had to be carried out. 207  However, one year later, the US Court of Appeal for the Fifth Circuit did
+not refrain from a substantive review of the merits of a domestic antitrust arbitral award. 208
+(k)Other grounds
+11. 130
+Although the grounds for refusal of enforcement listed in Article V of the New York Convention are exhaustive, some courts
+have refused enforcement on grounds derived from other articles of the Convention. Thus, in the US case Monegasque de
+Reassurance SAM (Monde Re) v NAK Naftogart of Ukraine and State of Ukraine, 209  the Second Circuit refused enforcement
+of a Moscow award on grounds of forum non conveniens—a judicial procedural discretion that exists in the common law world,
+but is unknown in the civil law world. In so doing, it rejected the contention that Article V sets forth the only grounds for
+refusing to enforce a foreign arbitral award, and held that Article III made the enforcement of foreign arbitral awards subject to
+the rules of procedure of the courts where enforcement is sought, which, so it held, included the rule of forum non conveniens.
+11. 131
+More recently, the Second Circuit Court of Appeals in Figueiredo Ferraz E Engenharia de Projeto Ltda v Republic of
+Peru 210  reversed, on grounds of forum non conveniens, a lower court’s confirmation of a Peruvian arbitral award. Figueiredo
+had obtained an award against the Peruvian government, which the latter began paying out gradually, in accordance with a
+subsequently enacted Peruvian statute that limits the amount of money that an agency of the Peruvian government may pay
+annually to satisfy a judgment to 3 per cent of the agency’s annual budget. The Second Circuit held that Peru was a more
+appropriate forum for the enforcement of the award than New York for a number of reasons, including the Peruvian cap statute.
+Similar to the court in Monde Re, the Court in Figueiredo held that Article III of the New York Convention and its equivalent
+Article IV of the Panama Convention, providing for the application of local procedural law at the enforcement stage, allow
+for the application of forum non conveniens. However, Judge Lynch, in a powerful dissent, opined that recognising a forum
+non conveniens defence would undermine the enforceability of arbitral awards in general. Indeed, the very idea of forum non
+conveniens is incompatible with the concept of international enforcement of foreign awards, which takes as its starting point
+that the places of arbitration and principal performance of the obligation are likely to be different, while the resulting award can
+be enforced internationally subject to limited grounds for refusal. Almost by definition, there is likely to be another jurisdiction
+with a closer connection to the underlying dispute than the place of enforcement. Nevertheless, the whole point of enforcement
+under the New York Convention is to internationalise the enforcement of awards rendered elsewhere, not to constrain a party
+to enforce in the jurisdiction of origin.
+Footnotes
+38
+New York Convention, Art. VII(2).
+39
+Ibid.
+40
+Wetter, ‘The present status of the International Court of Arbitration of the ICC: An appraisal’ (1990) 1 Am Rev Intl
+Arb 91, at 93.
+41
+Mustill, ‘Arbitration: History and background’ (1989) 6 J Intl Arb 43, at 49. See also Schwebel, ‘A celebration of the
+United Nations’ New York Convention’ (1996) 12 Arb Intl 823.
+
+Section B. - Enforcement under the New York Convention, UKBC-REDFERN 530638676...
+© 2025 Thomson Reuters.
+21
+42
+See van den Berg, ‘Hypothetical Draft Convention on the International Enforcement of Arbitration Agreements
+and Awards: Explanatory Note’, Paper prepared for the ICCA Conference, Dublin, 2008, for the last unsuccessful
+attempt to advocate for such modernisation; available online at https://www.newyorkconvention.org/11165/web/files/
+document/1/6/16015.pdf. See also Gaillard, ‘The urgency of not revising the New York Convention’, in Albert Jan van
+den Berg (ed.) 50 Years of the New York Convention: ICCA International Arbitration Conference, ICCA Congress
+Series, Vol. 14 (Kluwer Law International, 2009), pp. 689–696.
+43
+New York Convention, Art. I(1).
+45
+At the time of writing, 167 states had acceded to the New York Convention. Of these, eighty-one had done so
+on the basis of the reciprocity reservation. Some countries that had adopted the reciprocity reservation (such as
+Germany and Switzerland) have subsequently withdrawn it. See UNCITRAL, ‘Status: Convention on the Recognition
+and Enforcement of Foreign Arbitral Awards (New York, 1958)’, available online at https://uncitral.un.org/en/texts/
+arbitration/conventions/foreign_arbitral_awards/status2.
+46
+For further discussion of the role of the Model Law, see Chapter 1, paragraphs 1.109ff.
+47
+A similar commercial reservation was permitted in the 1923 Geneva Protocol.
+48
+Of the 167 states that were parties to the Convention by December 2020, fifty-five had applied the commercial
+reservation. On 12 March 2001, Serbia and Montenegro confirmed Yugoslavia’s declaration of 1982 restricting the
+application of the Convention to ‘economic’ disputes. Norway’s reservation stated that it would not apply the Convention
+in any disputes if the subject matter were immovable property in Norway or rights in such property.
+49
+Indian Organic Chemical Ltd v Subsidiary 1 (US), Subsidiary 2 (US), and Chemtex Fibres Inc (Parent Co.) (US) (1979)
+IV YBCA 271.
+50
+Ibid., at 273.
+51
+Union of India and ors v Lief Hoegh Co. (Norway) (1984) IX YBCA 405.
+52
+Ibid., at 407.
+53
+Ibid., at 408.
+54
+RM Investment & Trading Company v Boeing Company, 1994 (4) SCC 541, (1997) XXII Ybk Comm Arb 711.
+55
+The Tunisian courts, e.g., have construed the commercial reservation so broadly as to exclude enforcement of an award
+relating to obligations arising under a contract for professional services. See Société d’Investissement Kal (Tunisia) v
+Taieb Haddad (Tunisia) and Hans Barrett (1998) XXIII YBCA 770. In China, the Supreme People’s Court’s Circular on
+Implementing the Convention excludes relationships between ‘foreign investors and the host government’: Notice of
+the Supreme People’s Court Regarding the Implementation of the Convention on the Recognition and Enforcement of
+Foreign Arbitral Awards Acceded to by China [1987] Fa Jing Fa No. 5, effective from 10 April 1987. At the other end
+of the spectrum is Bautista v Star Cruises, 396 F.3d 1289 (11th Cir. 2005), in which a US court denied the application
+of an exclusion from arbitration under the Federal Arbitration Act of 1925 (FAA) of the ‘contracts of employment of
+seamen, railroad employees or other class of workers engaged in foreign or interstate commerce’ to the commercial
+reservation. Its rationale was that ‘to read industry-specific exceptions into the broad language of the Convention Act
+would be to hinder the Convention’s purpose’: ibid., at 1299.
+56
+New York Convention, Art. III.
+57
+New York Convention, Art. IV. However, see the discussion of the ‘writing requirement’ in Chapter 2.
+58
+Despite this, enforcement fails, from time to time, because these simple formal requirements are not fulfilled: see, e.g.,
+the decisions of the Italian Court of Cassation in Lampart Vegypary Gepgyar (Hungary) v Srl Campomarzio Impianti
+(Italy) (1999) XXIVa YBCA 699; the Bulgarian Supreme Court’s decision in National Electricity Co. AD (Bulgaria) v
+ECONBERG Ltd (Croatia) (2000) XXV YBCA 678. Equally, an increasing number of jurisdictions take a liberal and
+pragmatic approach to the fulfilment of formal requirements. By way of example, a Geneva court recognised a Chinese
+award that had not been translated into French, noting that the spirit of the Convention was to reduce the obligations
+for the party seeking recognition and enforcement, and that the burden of proof in respect of any questions relating to
+the authenticity of the arbitration agreement or the award lay on the party opposing recognition: R SA v A Ltd (2001)
+XXVI YBCA 863.
+59
+In Hewlett-Packard, Inc. v Berg, 867 F.Supp. 1126, 1130, n. 11 (D. Mass. 1994), the court considered Berg’s motion
+to confirm an arbitral award made in his favour. While noting that the submission of uncertified copies of the arbitral
+award and arbitration agreement fell short of the requirements in Art. VI of the Convention, the court nevertheless felt
+able to confirm the arbitral award, in part because neither party had contested the validity of the documents submitted.
+60
+See, e.g., Profura v Blomgren (T 2863-07, Court of Appeals for Western Sweden), 19 March 2008. Furthermore, under
+the English Arbitration Act 1996, an oral arbitration agreement is, in some circumstances, capable of enforcement: see
+the English Arbitration Act 1996, s. 88(1)(b).
+61
+New York Convention, Art. IV(2).
+
+Section B. - Enforcement under the New York Convention, UKBC-REDFERN 530638676...
+© 2025 Thomson Reuters.
+22
+62
+This statement, which was made in an earlier edition of this volume, has since been cited with approval by the Supreme
+Court of India in Renusagar Power Co. Ltd v General Electric Co. (1995) XX YBCA 681. The Court added that, in its
+opinion, ‘the scope of enquiry before the court in which the award is sought to be enforced is limited [to the grounds
+mentioned in the Act] and does not enable a party to the said proceedings to impeach the Award on merits’: ibid., at 691.
+63
+These grounds are set out in the New York Convention, Art. V.
+64
+This represents a major change from the 1927 Geneva Convention.
+65
+New York Convention, Art. V(2).
+66
+This interpretation of the relevant provision of the Convention seems to be generally accepted, both in court decisions
+and by experienced commentators: see, e.g., van den Berg, The New York Arbitration Convention of 1958 (Kluwer
+Law International, 1981), p. 265; Delaume, ‘Enforcement against a foreign state of an arbitral award annulled in the
+foreign state’ (1997) Revue du Droit International des Affaires 254. For a US decision to this effect, see Chromalloy
+Aeroservices Inc. v Arab Republic of Egypt, 939 F.Supp 907, 909 (DDC 1996); for an English decision, see China
+Agribusiness Development Corporation v Balli Trading [1998] 2 Lloyd’s Rep 76. See also M. Paulsson, The 1958 New
+York Convention in Action (Kluwer Law International, 2016), pp. 158-160, which analyses the travaux préparatoires
+of the New York Convention and concludes that the word ‘may’ was intended by the drafters to allow the competent
+courts to decide whether to refuse enforcement. The suggestion that the French text of the Convention (in contrast to the
+equally authentic Chinese, English, Spanish, and Russian texts) is mandatory, rather than permissive, is demolished by
+J. Paulsson, ‘May or must under the New York Convention: An exercise in syntax and linguistics’ (1998) 14 Arb Intl 227.
+67
+The same is true for the grounds for refusal under the English Arbitration Act 1996, although it is not based on the
+Model Law: see, e.g., Kanoria v Guinness [2006] EWCA Civ 222, [2006] Arb LR 513.
+68
+van den Berg, The New York Arbitration Convention of 1958 (Kluwer Law International, 1981), pp. 267 and 268
+(emphasis added).
+69
+Parsons Whittemore Overseas Co. v Société Générale de L’Industrie de Papier (RAKTA), 508 F.2d 969 (2d Cir. 1974);
+also reported in (1976) I YBCA 205.
+70
+See paragraph 11.33.
+71
+For further discussion of these problems, see, e.g., Kerr, ‘Concord and conflict in international arbitration’ (1996)
+13 ASA Bulletin 129, paras 1-157 (also published in (1997) 13 Intl Arb 121); Proceedings of the Fourteenth ICCA
+Congress, Paris, May 1998. See also J. Paulsson, ‘Why good arbitration cannot compensate for bad courts’ (2013) 30
+J Intl Arb 345.
+72
+Such an award is normally regarded as a foreign (or international) award under the New York Convention.
+73
+See fn. 6.
+74
+For instance, in its definition of an ‘agreement in writing’ as discussed in Chapters 1 and 2.
+75
+See, e.g., J. Paulsson, ‘The New York Convention in international practice: Problems of assimilation’, in Blessing
+(ed.) The New York Convention of 1958: A Collection of Reports and Materials Delivered at the ASA Conference
+Held in Zurich 2 February 1996 (ASA, 1996), pp. 100ff; Cheng, ‘Celebrating the fiftieth anniversary of the New York
+Convention’ (2009) 14 ICCA Congress Series 679.
+76
+Model Law (as amended in 2006), Art. 36.
+77
+Model Law, Art. 34. The ground that is omitted, naturally, is that of the award being set aside by a national court of
+the place of arbitration.
+78
+As already noted, this ground for refusal, and the others that follow, also appear in virtually the same terms in the Model
+Law (as amended in 2006), Art. 36, as grounds for refusing enforcement of arbitral awards wherever made.
+79
+Fougerolle SA (France) v Ministry of Defence of the Syrian Arab Republic (1990) XV, YBCA 515.
+80
+Ibid.
+81
+Dallah Real Estate and Tourism Holding Co. v The Ministry of Religious Affairs, Government of Pakistan [2010] UKSC
+46.
+82
+Ibid., at [2].
+83
+Ibid., at [8].
+84
+Ibid., at [66], [147], [149], [162], and [163].
+85
+Ibid., at [30].
+86
+Gouvernement du Pakistan v Société Dallah Real Estate and Tourism Holding Co., Paris Cour d’Appel, 17 February
+2011 [2012] Rev Arb 369.
+87
+Parsons Whittemore Overseas Co. Inc. v Société Générale de l’Industrie du Papier (RAKTA), 508 F.2d 969, 975 (2d
+Cir. 1974).
+88
+Iran Aircraft Industries v Avco Corporation, 980 F.2d 141 (2d Cir. 1992). See Chapter 10.
+
+Section B. - Enforcement under the New York Convention, UKBC-REDFERN 530638676...
+© 2025 Thomson Reuters.
+23
+89
+See the decision of the Stuttgart Court of Appeal, dated 6 October 2001, referred to in Liebscher, The Healthy Award:
+Challenge in International Commercial Arbitration (Kluwer Law International, 2003), p. 406.
+90
+Société Overseas Mining Investments Ltd v Société Commercial Caribbean Nique, Cass. Civ., Ch. 1ere, 25 March 2010,
+Case No. 08-23901l.
+91
+Kanoria and ors v Guinness [2006] EWCA Civ 222, [2006] Arb LR 513.
+92
+See Liebscher, The Healthy Award: Challenge in International Commercial Arbitration (Kluwer Law International,
+2003), ch. VIII, paras 2.2 and 2.3.
+93
+Minmetals Germany v Ferco Steel (1999) XXIV YBCA 739.
+94
+Many jurisdictions have taken a similarly restrictive interpretation of the due process defence to enforcement, e.g.
+German courts have held that a tribunal’s refusal to hear evidence can breach the right to be heard only if such evidence
+is relevant: see Decision of the Bremen Court of Appeal, 30 September 1999, (2001) 4 Intl ALR N-26.
+95
+Gold Reserve Inc. v Venezuela, 146 F.Supp.3d 112, 128-29 (DDC 2015).
+96
+Ibid.
+97
+This phenomenon is most notably explored by Professor Lucy Reed in the 2016 Freshfields Arbitration Lecture: see
+Reed, ‘Ab(use) of due process: sword vs shield’ (2017) 33(3) Arb Intl 361–377.
+98
+Queen Mary 2015 International Arbitration Survey: Improvements and Innovations in International Arbitration (which
+highlights that ‘the issue [of “due process paranoia”] was repeatedly raised in responses, including in nearly all the
+personal interviews’).
+99
+It has been suggested that the behavioural model known as ‘prospect theory’, may explain why arbitrators tend to give
+too much weight to low-probability events (e.g. the successful challenge of an award for ‘due process’ reasons) in
+their decision-making when faced with risks and uncertainty: see Metsch and Gerby, ‘Prospect Theory and due process
+paranoia: what behavioral models say about arbitrators’ assessment of risk and uncertainty’ (2020) 36(2) Arb Intl
+233–252.
+100
+Allianz General Insurance Company Malaysia Berhad v Virginia Surety Company Labuan Branch, Originating
+Summons No. WA-24NCC(ARB)-13-03/2018, at [31].
+101
+China Machine New Energy Corp v Jaguar Energy Guatemala LLC [2020] SGCA 12, at [97] and [103].
+102
+As in the Pyramids arbitration: The Arab Republic of Egypt v Southern Pacific Properties, Paris cour d’appel, 12
+July 1984, published in English at (1984) 23 ILM 1048. The award of the ICC tribunal in this case was challenged
+by the Egyptian government on the basis that it was not a party to the relevant agreement and so was not bound by
+the arbitration clause. The Paris Court of Appeal agreed and the award was set aside. For a discussion of the case, see
+Redfern, ‘Jurisdiction denied: The pyramid collapses’ (1986) JBL 15. See also (1984) IX YBCA 113 and (1985) X YBCA
+487. The claimants then started fresh arbitration proceedings, under the ICSID Convention. For the rest of the story, see
+Delaume, ‘The pyramids stand: The pharaohs can rest in peace’ (1993) 8 ICSID Rev—Foreign Investment LJ 231; J.
+Paulsson, ‘Arbitration without privity’ (1995) 10 ICSID Rev—Foreign Investment LJ 232.
+103
+See Chapter 10, paragraphs 10.36ff.
+104
+See Chapter 10, paragraphs 10.25ff.
+105
+See van den Berg, ‘Court decisions on the New York Convention’, in Blessing (ed.) The New York Convention of 1958:
+A Collection of Reports and Materials Delivered at the ASA Conference Held in Zurich 2 February 1996 (ASA, 1996),
+p. 86.
+106
+Libyan American Oil Co. (Liamco) v Socialist People’s Libyan Arab Yamahirya, formerly Libyan Arab Republic (1982)
+VII YBCA 382.
+107
+Ibid., at 388. See also Telenor Mobile Communications AS v Storm LLC, 584 F.3d 396 (2d Cir. 2009). In this case, the
+US Court of Appeals for the Second Circuit rejected Storm’s contention that the arbitral tribunal acted in ‘manifest
+disregard of the law’ by ignoring a Ukrainian court decision that the arbitration clause in dispute was ‘null and void’.
+The Court noted that there is a strong presumption against finding manifest disregard of the law by an arbitral tribunal
+and upheld the confirmation of the award.
+108
+Parsons Whittemore Overseas Co. Inc. v Société Générale de l’Industrie du Papier (RAKTA), 508 F.2d 969 (2d Cir.
+1974).
+109
+Libyan American Oil Co. (Liamco) v Socialist People’s Libyan Arab Yamahirya, formerly Libyan Arab Republic (1982)
+VII YBCA 382, at 388.
+110
+Sphere Drake Insurance Ltd v Lincoln National Life Insurance Co. et al. (2007) XXXII YBCA 857.
+111
+A further example of where this ground was unsuccessfully relied upon is Aloe Vera of America, Inc. (US) v Asianic
+Food (S) Pte Ltd (Singapore) and anor (2007) XXXII YBCA 489. One of the defendants argued that he was not a party to
+the arbitration clause and that, by entering an award against him, the arbitrator went beyond the scope of the submission
+to arbitration. The Supreme Court of Singapore dismissed this argument and held that the issue of whether the defendant
+
+Section B. - Enforcement under the New York Convention, UKBC-REDFERN 530638676...
+© 2025 Thomson Reuters.
+24
+was a party to the arbitration clause did not fall properly under this ground. The Court further held that the defendant had
+brought no evidence to prove that, under Arizona law, the award contained a decision on a matter beyond the scope of
+the submission to arbitration. In contrast, and as discussed at paragraph 11.67, the Supreme Court of England and Wales
+adopted a far less deferential approach, and undertook a full examination of the arbitral tribunal’s jurisdiction when
+presented with a potential breach of jurisdictional issues in Dallah Real Estate and Tourism Holding Co. v Ministry
+of Religious Affairs, Government of Pakistan [2010] UKSC 46. The Court also held that while it can have regard to
+any statements made by the arbitral tribunal on its own jurisdiction, the Court was neither bound nor restricted by such
+statements.
+112
+General Organization of Commerce and Industrialisation of Cereals of the Arab Republic of Syria v SpA SIMER (Società
+delle Industrie Meccaniche di Rovereto) (Italy) (1983) VIII YBCA 386.
+113
+See China Nanhai Oil Joint Service Corporation v Gee Tai Holdings Co. Ltd (1995) XX YBCA 671. Similarly, see
+Tongyuan International Trading Group v Uni-Clan [2001] 4 Intl ALR N-31.
+114
+China Nanhai Oil, at 672.
+115
+Ibid., at 673.
+116
+Ibid., at 677.
+117
+Ibid.
+118
+LDK Solar Hi-Tech (Suzhou) Co. Ltd v Hindustan Cleanenergy Limited, ex. parte 278/2018 in the High Court of Delhi
+at New Delhi, 4 July 2018.
+119
+Encyclopaedia Universalis SA (Luxembourg) v Encyclopaedia Britannica Inc. (US) (2005) XXX, YBCA 1136.
+120
+Ibid., at [8]–[10]. See also HSN Capital LLC (US) v Productora y Comercializador de Television, SA de CV (Mexico)
+(2007) XXXII YBCA 774, at [3]–[7]. China’s Supreme People’s Court has more recently gone further still: in Bunge
+Agribuss v Guangdong Fengyuan [2006] Min Si Ta Zi No. 41, the designated arbitral institution appointed an arbitrator
+on behalf of the respondent because of the latter’s failure to do so within the permitted time limit. Even though this
+was entirely consistent with the arbitral rules selected by the parties, the Supreme People’s Court held that the failure to
+consult Fengyuan on the appointment was a valid basis on which to refuse enforcement.
+121
+Noble Resources International Pte. Ltd v Shanghai Good Credit International Trade Co., Ltd. (2016) Hu 01 Xie Wai
+Ren No. 1.
+122
+See, e.g., UNCITRAL Rules, Art. 34.2.
+123
+van den Berg, ‘Court decisions on the New York Convention’, in Blessing (ed.) The New York Convention of 1958: A
+Collection of Reports and Materials Delivered at the ASA Conference Held in Zurich 2 February 1996 (ASA, 1996),
+pp. 87 and 88.
+124
+Ibid., p. 88. If an appeal is pending, the enforcement court may, if it considers it proper, adjourn the decision on
+enforcement. It may also order the party against whom enforcement is sought to give security: New York Convention,
+Art. VI. As to the question of which law determines the ‘binding’ effect of an award, see Antilles Cement Corporation
+(Puerto Rico) v Transficem (Spain) (2006) XXXI YBCA 846, at [9]–[13], in which the Supreme Court of Spain held, at
+[13], that whether an award is binding ‘is not to be examined in accordance with the law of the State where the award
+is rendered’.
+125
+See paragraph 11.97ff.
+126
+Unlike the Model Law (as amended in 2006), which sets out the limited grounds on which an award may be set aside:
+see Art. 34.
+127
+Derains, ‘Foreword’, in ICC (ed.) Hommage à Frédéric Eisemann (ICC, 1978), p. 13, translated in J. Paulsson, ‘The case
+for disregarding local standard annulments under the New York Convention’ (1996) 7 Am Rev Intl Arb 99. This is not
+true of states that have different laws to govern international arbitrations from those that govern domestic arbitrations,
+but nevertheless the point is a valid one.
+128
+See ibid. In a sense, this comes back to the ‘delocalisation’ debate, which was a source of lively controversy at the time:
+see, e.g., J. Paulsson, ‘Arbitration unbound: Award detached from the law of its country of origin’ (1981) 30 ICLQ 358;
+J. Paulsson, ‘Delocalisation of international commercial arbitration: When and why it matters’ (1983) 32 ICLQ 53.
+See also the discussion in Chapter 3.
+129
+As with the European Convention of 1961.
+130
+For a comprehensive survey of instances in which national courts have recognised or enforced awards set aside
+by the courts of the place of arbitration, see Gharavi, The International Effectiveness of the Annulment of an
+Arbitral Award (Kluwer Law International, 2002). The French Code of Civil Procedure, art. 1526 now expressly
+provides that an application to set aside an arbitral award does not stay the proceedings to enforce the award. For
+commentary on the rationale behind art. 1526, see Kleiman and Saleh, ‘Enforcement of international arbitration awards:
+
+Section B. - Enforcement under the New York Convention, UKBC-REDFERN 530638676...
+© 2025 Thomson Reuters.
+25
+Latest developments’, available online at https://www.lexology.com/commentary/arbitration-adr/france/freshfields-
+bruckhaus-deringer-llp/enforcement-of-international-arbitration-awards-latest-developments.
+131
+Hilmarton Ltd v Omnium de Traitement et de Valorisation (OTV) (1994) Rev Arb 327; English excerpts in (1995) XX
+YBCA 663.
+132
+Ibid., at 664. When a second award in favour of the claimants was subsequently rendered in Switzerland and enforcement
+was sought in France, the cour de cassation held that the issue was res judicata in the French legal order and hence that
+the award could not be enforced: Hilmarton Ltd v Omnium de Traitement et de Valorisation (OTV) (1994) Rev Arb 327;
+English excerpts in (1997) XXII YBCA 696. The same approach was followed in the recent case of Egyptian General
+Petroleum Corporation v National Gas Company, Cass. Civ., Ch. Civ. 1ere, 13 January 2021, in which the cour de
+cassation upheld the enforcement of an Egyptian award that had been set aside by the Cairo Court of Appeal.
+133
+Chromalloy Aeroservices Inc. v Arab Republic of Egypt, 939 F.Supp 907 (DDC 1996).
+134
+See paragraphs 11.78ff.
+136
+Société PT Putrabali Adyamulia v Société Rena Holding et Société Mnogutia Est Epices [2007] Rev Arb 507. The first
+arbitral award was annulled by the High Court of London and a second award with a directly opposite outcome was
+issued. Both claimant and respondent sought to enforce the awards in France. In the enforcement proceedings of the
+first award, the losing party argued that the enforcement of the award would be contrary to international public policy,
+but the cour de cassation did not follow that reasoning and enforced the annulled first award. The cour de cassation then
+refused the enforcement of the second award on the basis that res judicata attached to the decision enforcing the first
+award, which was incompatible with the second award.
+137
+Ibid.
+138
+Corporación Mexicana de Mantenimiento Integral, S. de R.L. de C.V. v PEMEX-Exploración y Producción, No.10 Civ
+206 (AKH) 2013 WL 4517225 (SDNY, 27 August 2013).
+139
+As will be explained in paragraph 11.144, the grounds for refusal to enforce foreign arbitral awards under the Panama
+Convention are similar to those under the New York Convention. In particular, Art. 5(e) of the Panama Convention
+provides that: ‘[T]he recognition and execution of the decision may be refused, at the request of the party against which
+it is made, only if such party is able to prove to the competent authority of the State in which recognition and execution
+are requested [ … ] that the decision is not yet binding on the parties or has been annulled or suspended by a competent
+authority of the State in which, or according to the law of which, the decision has been made.’
+140
+Pemex, at [14]. See also Yukos Capital SARL v OJSC Oil Co. Rosneft [2014] EWHC 2188, in which the English High
+Court held, as a preliminary issue, that an annulment by the Moscow Arbitrazh Court of arbitral awards rendered in
+Russia would not prevent the English court from giving effect to the annulled awards (under English common law
+principles) if it were proven that the annulment offended against basic principles of honesty, natural justice, or English
+public policy. The awards in question had also previously been enforced by the Amsterdam Appeal Court, despite the
+local standard annulment in Russia.
+141
+See, e.g., Baker Marine (Nig.) Ltd v Chevron (Nig.) Ltd, 191 F.3d 194 (2d Cir. 1999), in which, notwithstanding
+Chromalloy, the US Second Circuit refused to enforce an award that had been set aside by the court of the place
+of arbitration (in this case, Nigeria). See also Spier v Tecnica, 71 F.Supp.2d 279 (SDNY 1999); TermoRio SA ESP v
+Electrificadora Del Atlantico SA ESP, 421 F.Supp.2d 87 (DDC 2006), in which the US court denied the enforcement of
+a Colombian arbitral award that had been set aside by the Colombian courts on the ground that Colombian law in effect
+at the date of the agreement did not expressly permit the use of ICC procedural rules, which the parties had designated in
+their arbitration clause. This decision was subsequently upheld by the US appellate court. For a discussion of Putrabali
+and TermoRio, see Gaillard, ‘Note—29 juin 2007—Cour de Cassation (1re Ch. Civ.)’ [2007] Rev Arb 517. In Germany,
+courts take into account the status of the award in the jurisdiction in which it was rendered. In 1999, the Court of
+Appeal of Rostock refused to enforce an award rendered by the Moscow Maritime Arbitration Commission that had
+been set aside in Russia: Oberlandsgericht Rostock, 28 October 1999, (2000) XXV YBCA 717, at 719. However, when
+the Russian Supreme Court overturned the lower courts’ decisions setting aside the award, the German Federal Supreme
+Court similarly reversed the decision of the Court of Appeal of Rostock and deemed it enforceable: Bundesgerichtshof,
+22 February 2001, (2004) XXIX YBCA 724. A similar approach is taken in Chile: see EDF Internacional SA v Endesa
+Internacional SA and YPF SA, Supreme Court of Chile, 8 September 2011, (2012) 5 Arbitraje: Revista de Arbitraje
+Comercial y de Inversiones 915, in which the Court held that an Argentinean award set aside at the place of arbitration
+could not be enforced in Chile. In Maximov v OJSC Novolipetsky Metallurgichesky Kombinat [2017] EWHC 1911
+(Comm) the English High Court held that for the English courts to enforce awards that had been set aside by the courts
+in the place of arbitration, the decision to set aside ‘must be so wrong as to be evidence of bias, or be such that no court
+acting in good faith could have arrived at it’. In Esso Exploration and Production Nigeria Limited v Nigeria National
+Petroleum Corporation, 397 F.Supp.3d 323 (SDNY 2019), the US District Court for the Southern District of New York
+refused to enforce an award that had been annulled in Nigeria, holding that although the US courts can enforce an award
+
+Section B. - Enforcement under the New York Convention, UKBC-REDFERN 530638676...
+© 2025 Thomson Reuters.
+26
+that was set aside at the seat if the judgment setting aside the award is contrary to US public policy, this ‘public policy
+exception is narrow and available only in “rare circumstances” ’, and ‘[t]he standard is high[] and infrequently met’ (at
+[351]–[354]).
+142
+New York Convention, Art. V(1)(e).
+143
+See Chapter 3.
+144
+International Standard Electric Corporation (US) v Bridas Sociedad Anonima Petrolera (Argentina) (1992) VII YBCA
+639.
+145
+Ibid., at 644 and 645.
+146
+Ibid., at 645.
+147
+Venture Global Engineering v Satyam Computer Services [2008] INSC 40.
+148
+Venture Global Engineering v Satyam Computer Services, 233 Fed. Appx 517 (6th Cir. 2007). Similar decisions
+have been rendered by courts in Indonesia and Russia. In Karaha Bodas Co. LLC (Cayman Islands) v Persusahaan
+Pertambangan Minyak Dan Gas Bumi Negara aka Pertamina (Indonesia), US District Court, Southern District of
+Texas, Houston Division, 17 April 2003, (2003) XXVIII YBCA 908, the Central Jakarta District Court annulled a Swiss
+arbitral award applying Indonesian substantive law in favour of Karaha against Pertamina. In Russia, similar arrogations
+of authority to annul an award have occasionally emerged: see OAO Stoilensky GOK v Mabetex Project Engineering
+SA, et al. and Interconstruction Project Management SA v OAO Stoilensky GOK, Case No. A08-7941/02-18, Federal
+Commercial Court of the Central District, 2 September 2003; Collective Fishing Farm Krasnoye Znamya v White Arctic
+Marine Resources Ltd, Case No. A05-4274/2007, Federal Commercial Court of the North-Western District, 25 July
+2007, in which Art. IX(1) of the European Convention of 1961 was used as a basis to set aside awards rendered in
+Sweden and Norway, respectively, simply because Russian law applied to the substance of the dispute.
+149
+Bharat Aluminium Co. v Kaiser Aluminum Technical Service, Inc., Civil Appeal No. 7019 of 2005, Decision of 6
+September 2012, given at New Delhi.
+150
+See, e.g. ICC Rules, Art. 29(1) (providing that ‘[a] party that needs urgent interim or conservatory measures that cannot
+await the constitution of an arbitral tribunal (‘Emergency Measures’) may make an application for such measures
+pursuant to the Emergency Arbitrator Rules [… ]’); and SCC Rules, Appendix II, Article 1(1) (providing that ‘[a] party
+may apply for the appointment of an Emergency Arbitrator until the case has been referred to an Arbitral Tribunal [ … ]’).
+151
+Resort Condominiums International Inc. v Ray Bolwell and Resort Condominiums, Pty. Ltd., Supreme Court of
+Queensland, Australia, 29 October 1993, XX Y.B. COM. ARB. 628 (1995).
+152
+Supreme Court No. 5468-2009, Western Technology Services International Inc. (Westech) v a Chilean company, Cauchos
+Industriales SA (Cainsa), 11 May 2010 (case described in UNCITRAL’s Case Law on UNCITRAL Texts (CLOUT),
+dated 23 August 2011 (A/CN.9/SER.C/ABSTRACTS/111), at 5.
+153
+Living Consulting Group AB (Sweden) v OOO Sokotel (Russian Federation), Presidium of the Highest Arbitrazh Court,
+Russian Federation, 5 October 2010, A56-63115/2009, in Albert Jan van den Berg (ed.), XXXVI Yearbook Com. Arb.
+317, 318 (Kluwer, 2011): an SCC tribunal rendered an award ordering the respondent to pay the claimant an advance
+that the claimant had paid on behalf of the respondent earlier in the arbitration proceedings. Although awards of this
+nature are expressly permitted under the SCC Rules, the Supreme Arbitrazh Court of the Russian Federation declined to
+enforce the award, citing Art. V(1)(e) of the New York Convention. Specifically, the Russian court considered the award
+in question to be of an interim nature and therefore unenforceable, noting that the New York Convention is applicable
+only to final awards on the merits.
+154
+Island Creek Coal Sales Company v City of Gainesville Florida, 729 F.2d 1046, USCA (6th Cir. 1985); see also Yahoo!
+Inc. v Microsoft Corp [2013] 983 F.Supp 2d 310, 319 (enforcing interim measures rendered by an emergency arbitrator
+under the AAA-ICDR Rules, holding that ‘if an arbitral award of equitable relief based upon a finding of irreparable
+harm is to have any meaning at all, the parties must be capable of enforcing or vacating it at the time it is made’).
+155
+Bharat Aluminium Co v Kaiser Aluminium Technical [2012] 9 SCC 552; Future Retail Ltd. v Amazon.com Investment
+Holdings LLC & ors [2020] CS(COMM) 493/2020.
+156
+Hong Kong Arbitration Ordinance (Cap. 609), s. 22B (providing that ‘[a]ny emergency relief granted, whether in or
+outside Hong Kong, by an emergency arbitrator under the relevant arbitration rules is enforceable in the same manner
+as an order or direction of the Court that has the same effect’) and s. 61(5) (providing that ‘an interim measure’ is
+‘enforceable in the same manner as an order or direction of the Court that has the same effect’); Singapore International
+Arbitration Act 1994 (as amended in 2020), s. 2 (providing that the definition of an ‘award’ expressly includes any
+‘interim, interlocutory or partial award’, and the definition of an ‘arbitral tribunal’ expressly includes an ‘emergency
+arbitrator’).
+158
+Maximov v Novolipetsky Metallurgicheskiy Kombinat, Case No. N VAS-15384/11, Ruling of the Supreme Commercial
+Arbitrazh Court, 30 January 2012.
+
+Section B. - Enforcement under the New York Convention, UKBC-REDFERN 530638676...
+© 2025 Thomson Reuters.
+27
+159
+For example, in relation to disputes associated with the ownership of shares or participation interests in the authorised
+capital of Russian companies, the arbitration must be administered by an arbitral institution authorised by the Russian
+Government: see the Federal Law ‘On Arbitration Proceedings in the Russian Federation’ No. 382-FZ, Art. 45(7).
+160
+Aloe Vera of America, Inc. (US) v Asianic Food (S) Pte Ltd (Singapore) and anor (2007) XXXII YBCA 489.
+161
+Ibid. Similarly, in Dallah Real Estate & Tourism Holding Co. v Ministry of Religious Affairs, Pakistan [2010] UKSC
+46, the UK Supreme Court held that, in considering jurisdiction over a non-signatory, ‘arbitral tribunals are entitled to
+consider their own jurisdiction, and to do so in the form of an award’, but added that ‘the last word as to whether or not
+an alleged arbitral tribunal actually has jurisdiction will lie with the court’ (at [86]).
+162
+New York Convention, Art. V(2)(b).
+163
+See Decision of the Geneva Cour de Justice, 11 December 1997, (1998) XXIII YBCA 764.
+164
+Richardson v Mellish (1824) 2 Bing 229, at 252 per Burrough J, [1824–34] All ER 258.
+165
+Kerr, ‘Concord and conflict in international arbitration’ (1997) 13 Arb Intl 121, at 140.
+166
+Soleimany v Soleimany [1999] QB 785.
+167
+Ibid., at 800.
+168
+See the discussion of Parsons Whittemore Overseas Co. Inc. v Société Générale de l’Industrie du Papier (RAKTA),
+508 F.2d 969 (2d Cir. 1974) at paragraph 11.60. See also the Second Circuit decision in MGM Productions Group
+Inc. v Aeroflot Russian Airlines, WL 234871 (2d Cir. 2004), in which Aeroflot sought to challenge a Stockholm award
+because it compensated the claimant for Aeroflot’s non-performance of an agreement, the provisions of which allegedly
+violated the United States–Iran Transactions Regulations adopted pursuant to executive orders issued by the President
+of the United States under the International Emergency Economic Powers Act of 1977. The Second Circuit rejected the
+challenge, holding, at [3], that: ‘Courts construe the public policy limitation in the Convention very narrowly and apply
+it only when enforcement would violate the forum state’s “most basic notions of morality and justice”.’ In this case,
+even if the agreement in operation did violate the Iranian Transactions Regulations, which the arbitral tribunal itself had
+found was not the case, the award would not contravene public policy, because ‘a violation of United States foreign
+policy does not contravene public policy as contemplated in Art V of the Convention’: ibid., at [5].
+169
+Westacre Investments Inc. v Jugoimport-SPDR Holding Co. Ltd. [1999] 2 Lloyd’s Rep 65 (CA).
+170
+See Rogers and Kaley, ‘The impact of public policy in international commercial arbitration’ (1999) 65 J CIArb 4.
+171
+This is clear from the text of Art. V(2) itself and, accordingly, the Supreme Court of India was right to reject the argument
+that the references (in the Indian statute that enacted the Convention) to ‘public policy’, rather than to the ‘public policy
+of India’, meant that the words were not restricted to India, but would extend to the laws governing the contract and the
+place of arbitration: see Renusagar Power Co. Ltd (India) v General Electric Co. (US) (1995) XX YBCA 681.
+172
+Sonatrach, 407 US 1 (1972).
+173
+Bremen v Zapata Offshore Co, 417 US 506 (1974).
+174
+Mitsubishi Motor Corporation v Soler Chrysler-Plymouth Inc., 473 US 614, 105 S.Ct. 3346, 87 L.Ed.2d 444 (1985).
+175
+Sonatrach (Algeria) v Distrigas Corporation (United States District Court) Massachusetts, 80 BR 606, 612 (1987).
+176
+Sonatrach (Algeria) v Distrigas Corporation (United States District Court) Massachusetts, (1995) XX YBCA 795.
+177
+See the discussion of Parsons Whittemore Overseas Co. Inc. v Société Générale de l’Industrie du Papier (RAKTA), 508
+F.2d 969 (2d Cir. 1974) at paragraph 11.60.
+178
+Ibid., at 973.
+179
+Ibid., at 974.
+180
+RBRG Trading (UK) Ltd v Sinocore International Co. Ltd [2018] EWCA Civ 838.
+181
+Ibid, at [25].
+182
+Renusagar Power Co. Ltd (India) v General Electric Co. (US) (1995) XX YBCA 681.
+183
+Ibid., at 702.
+184
+See, e.g., SA Laboratoires Eurosilicone v Société Bez Medizintechnik GmbH [2004] Rev Arb 133.
+185
+(1995) XX YBCA 762.
+186
+(1987) XII YBCA 489.
+187
+See, e.g., Cases Nos 20, 64/128 and 16, 20, 47/129, 7 April 2013, Cairo Court of Appeal, Commercial Circuit No. 7.
+188
+For example, Art. 814 of the Lebanese Arbitration Provisions provides that ‘arbitral awards shall be recognized and
+granted exequatur [ … ] if they do not manifestly violate international public policy’.
+189
+In a more recent example, the Higher Regional Court of Berlin refused to recognise a foreign arbitral award to the
+extent that the award ordered a party to pay penalty interest, on the grounds that the high interest rate was contrary to
+German public policy: see Judgment of 7 February 2019, 12 Sch 5/18 (Kammergericht Berlin). The Saudi Arabian courts
+
+Section B. - Enforcement under the New York Convention, UKBC-REDFERN 530638676...
+© 2025 Thomson Reuters.
+28
+often refuse to enforce the interest element included in foreign arbitral awards since interest is considered a usury (riba)
+under Shari’ah rules: riba is considered to include any type of interest. For a more detailed discussion on this subject,
+see: Emre, ‘A refusal reason of recognition and enforcement of foreign arbitral awards: Public policy’ (2019) 56(2)
+Zbornik Radova Pravnog Fakulteta u Splitu 503, at 510 and Güzeloğlu, ‘The role of Shari’a law on the enforcement
+of arbitral awards in the Kingdom of Saudi Arabia’ (28 January 2016). https://www.lexology.com/library/detail.aspx?
+g=71e501f7-8552-45fd-8797-077fa25e88a3.
+190
+Peerenboom, ‘Seek truth from facts: An empirical study of enforcement of arbitral awards in the PRC’ (2001) 49 Am
+J Comp L 39.
+191
+Explanations on and Answers to Practical Questions in Trial of Foreign-Related Commercial and Maritime Cases (No.
+1), Issued by the Supreme People’s Court on 8 April 2004, Art. 43.
+192
+Fei, ‘Public policy as a bar to enforcement of international arbitral awards: A review of the Chinese approach’ (2010)
+26 Arb Intl 301, at 311.
+193
+Reply of the Supreme People’s Court in the matter regarding the request by Beijing First Intermediary People’s Court
+to Refuse Enforcement of Arbitral Award [1997] Jing Ta 35 (‘Heavy Metal’).
+194
+For further discussion of the topic, see Yeoh, ‘Enforcement of dispute outcomes’, in Moser (ed.) Managing Business
+Disputes in Today’s China (Kluwer Law International, 2007), p. 274.
+195
+Notice Regarding the Local People’s Court Handling Foreign-related Arbitral Awards and Foreign Arbitral Awards,
+Issued by the Supreme People’s Court on 28 August 1995.
+196
+Chen and Howes, ‘Public policy and the enforcement of foreign arbitration awards in China’ (2010) 3 Intl News 14.
+197
+Fei, ‘Public policy as a bar to enforcement of international arbitral awards: A review of the Chinese approach’ (2010)
+26 Arb Intl 301, at 305–307.
+198
+See Presidium of Supreme Commercial Arbitrazh Court, Information Letter No. 96, 22 December 2005, s. 29; Presidium
+of Supreme Commercial Arbitrazh Court, Information Letter No. 156, 26 February 2013, s. 6.
+199
+ILA, Final Report of the Committee on International Commercial Arbitration on Public Policy (2004) 1 TDM.
+200
+Ibid. This seems to be a circular definition that is of little assistance. See also SA Compagnie commercial André v SA
+Tradigrain France [2001] Rev Arb 773.
+201
+Eco Swiss China Time Ltd v Benetton International NV, Case C-126/97 [1999] ECR I–3055.
+202
+Ibid., at [49].
+203
+See Thales Air Defence BV v GIE Euromissile et al., Paris cour d’appel, 18 November 2004; also the judgment in SNF
+SAS v Cytec Industries BV (Holland), Cass. Civ., Ch. Civ. 1ere, 4 June 2008, in which the cour de cassation explicitly
+reiterated the narrow approach to the application of public policy.
+204
+See Tensacciai v Terra Armata, Swiss Federal Court, 8 March 2006.
+205
+See Marketing Displays International Inc. v VR Van Raalte Reclame BV, Dutch Court of Appeal, The Hague, 24 March
+2005; SNF v Cytec Industries BV, Brussels Court of First Instance, 8 March 2007.
+206
+See the decision of the US Supreme Court in Mitsubishi v Soler Chrysler-Plymout h, 473 US 614 (1985).
+207
+See Baxter International v Abbott Laboratories, 315 F.3d 829 (7th Cir. 2003).
+208
+See US Court of Appeals for the Fifth Circuit, American Central Eastern Texas Gas Co. v Union Pacific Resources
+Group, Inc., 93 Fed. Appx. 1, 2004 WL 136091 (5th Cir. 27 Jan. 2004).
+209
+Monegasque de Reassurance SAM (Monde Re) v NAK Naftogart of Ukraine and State of Ukraine, 311 F.3d 488 (2d
+Cir. 2002).
+210
+Figueiredo Ferraz E Engenharia de Projeto Ltda v Republic of Peru, 663 F.4d 384 (2d Cir. 2011).
+End of Document
+© NIGEL BLACKABY KC, CONSTANTINE PARTASIDES
+KC, ALAN REDFERN

@@ -1,0 +1,72 @@
+Hire-purchase, UKBC-BULLENL 459371741 (2022)
+© 2025 Thomson Reuters.
+1
+Hire-purchase
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part F - Business Law
+Chapter 20 - Credit, Finance and Leasing
+Hire-purchase
+20-05
+A hire-purchase agreement is an agreement whereby the owner of a chattel lets it on hire to a hirer for a fixed period and
+agrees that upon the happening of a stated event (usually, but not necessarily, the exercise by the hirer of an option to purchase),
+property in the chattel will pass to the hirer. The acquirer is a hirer until the option is exercised and then becomes a buyer. The
+essential point to note is that hire-purchase is not a contract of sale and although people (even, regrettably practitioners and
+judges) sometimes speak of “buying on hire-purchase”, this is not only incorrect but misleading, creating the false belief that
+the hirer, like a purchaser, has title to the goods which he can dispose of by sale or otherwise.
+The key elements of hire-purchase are:
+ 
+1.the creditor owns the goods and remains owner until the option to purchase is exercised;
+ 
+2.the hirer obtains physical possession of the goods and accepts the obligations of a hirer of goods;
+ 
+3.the hirer is not obliged to exercise the option or acquire title;
+ 
+4.if the hirer defaults, (subject to statutory controls) the owner can terminate the agreement, repossess the goods and sell
+or re-let them.
+As with any area where it is necessary to assign a contract to a particular category, courts will have regard to the substance of a
+contract rather than its appearance. If a contract has these essential elements, it will be a hire-purchase contract whatever terms
+the parties may care to have used. 3  The wide range of controls over virtually all forms of chattel acquisition other than outright
+sale have removed most of the point from trying to disguise hire-purchase as something else, but parties sometimes do mistake
+the category into which an agreement comes and this can lead to problems of enforcement if the wrong prescribed wording
+is used in the written contract. Note that the term ‘lease-purchase’, though undoubtedly more classy, is entirely synonymous
+with ‘hire-purchase’.
+Analysis of a hire-purchase situation is essential. Virtually all hire-purchase involves three parties: a supplier of the goods, a
+creditor and a hirer. There will be a contract whereby the supplier sells the goods to the creditor and a second (and separate)
+contract whereby the creditor lets them on hire-purchase to the hirer. The mistake is often made (and not only by lay people) of
+believing that the hirer has “bought” the goods from the supplier with a loan from the creditor. This may be the financial reality
+of the transaction but it is not the legal reality. There may be no contract (or, at best, only a collateral contract) between the
+hirer and the supplier and, at common law, the creditor was only in very rare cases made liable for the supplier’s representations
+or warranties to the hirer.
+Note that, in hire-purchases cases, the terms “creditor” (now “lender”) and “owner” are used interchangeably. It is probably
+better to use the term “owner” both because it is preferred by the CCA and because it keeps firmly in everyone’s mind that the
+juridical basis of the contract is the hire of a chattel with an option to purchase.
+Statutory definition of hire-purchase
+20-06
+
+Hire-purchase, UKBC-BULLENL 459371741 (2022)
+© 2025 Thomson Reuters.
+2
+The definition of hire-purchase under s.189(1) of the CCA is very wide and should be noted as it affects not only control but
+the procedural requirements of pleading (see below):
+“an agreement, other than a conditional sale agreement, under which:
+ 
+(a)goods are bailed or (in Scotland) hired in return for periodical payments by the person to whom they are
+bailed or hired, and
+ 
+(b)the property in the goods will pass to that person if the terms of the agreement are complied with and one
+or more of the following occurs:
+ 
+(i)the exercise of an option to purchase by that person,
+ 
+(ii)the doing of any other specified act by any party to the agreement,
+ 
+(iii)the happening of any other specified event”.
+The statutory definition was reworded in 2014 by the RAO art.60L but the essentials of the definition remain the same. Yet a
+further definition of hire-purchase is attempted by the Consumer Rights Act 2015 but, happily, it is not relevant to this section.
+Footnotes
+3
+Staffs Motor Guarantee Ltd v British Wagon Co [1934] 2 K.B. 305.
+End of Document
+© 2025 SWEET & MAXWELL

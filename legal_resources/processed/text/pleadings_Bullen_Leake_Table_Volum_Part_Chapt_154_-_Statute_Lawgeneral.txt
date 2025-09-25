@@ -1,0 +1,40 @@
+Statute Law—general, UKBC-BULLENL 459371222 (2022)
+© 2025 Thomson Reuters.
+1
+Statute Law—general
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part F - Business Law
+Chapter 19 - Introduction
+Statute Law—general
+19-07
+A feature of this section is that a great deal of the law is now statutory. Since the last edition, much of the law is also regulatory
+and the interaction between the civil law that governs relations between the parties to a contract and regulatory law that governs
+the conduct of traders towards their customers leads to problems for the litigator. Sale of Goods has been codified since 1893,
+and up to the last edition was principally governed by the Sale of Goods Act 1979. As will be seen in Ch.25: Supply of Goods
+and Digital Content, however, many of the provisions of that Act have been replaced by similar (though, sadly, not identical)
+provisions of the Consumer Rights Act 2015 (the CRA) which is intended to codify supply of goods, digital content and services
+and to replace (inter alia) much of the existing law relating to unfair contract terms. As the CRA (not unnaturally) applies only to
+consumers, there are now two sources of law for sale of goods (the SGA and the CRA) depending on the status of the purchaser.
+Similarly, though this has been the case for much longer, there are two sources of law for unfair contract terms, for consumers,
+the CRA Pt 2 (which replaced EU-derived regulations dating back to 1993) and, for the rest, the Unfair Contract Terms Act 1977.
+Credit, Finance and Leasing was formerly dominated by the Consumer Credit Act 1974 and its host of attendant regulations. As
+will be seen in Ch.20: Credit, Finance and Leasing, however, the regulation of this industry has been transferred to the Financial
+Conduct Authority (FCA) operating under the Financial Services and Markets Act 2000 (FSMA). There is thus a dual system
+of law, much of it regulatory. The difficulty here lies in the fact that regulatory rules—in this instance the FCA Handbook—are
+unlike statutes and statutory instruments: they can be (and are) liable to modification virtually overnight and such modification
+is not subject to either Parliamentary or ministerial scrutiny. Nevertheless, such rules have the force of law and, in appropriate
+circumstances, can afford a consumer a right of action based on breaches of the rules.
+Surety has had statutory requirements since the seventeenth century and commercial agency is now governed by regulations of
+EU origin. Statutes impinge even on the section dealing with torts relating to goods with the Torts (Interference with Goods)
+Act 1977 and the various exceptions to the rule nemo dat qui non habet contained in the Sale of Goods Act, the Factors Act
+1889 and Pt III of the Hire-Purchase Act 1964.
+It is, therefore, always necessary when framing pleadings in these areas to have recourse to the legislation itself. This will
+normally make clear what are the elements of the cause of action or defence and may well provide material for a claim or a
+defence which would not necessarily be available in an ordinary contractual case. A good example of the latter is afforded by
+the Consumer Credit Act 1974 which provides a plethora of technical defences available to debtors and hirers.
+In the introduction to each topic, the editors attempt a brief summary of the law and the principal statutory provisions but they
+emphasise that this cannot be a substitute for a reference to the source material.
+End of Document
+© 2025 SWEET & MAXWELL

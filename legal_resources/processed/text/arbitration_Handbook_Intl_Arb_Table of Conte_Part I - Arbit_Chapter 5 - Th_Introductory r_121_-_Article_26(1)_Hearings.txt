@@ -1,0 +1,137 @@
+Article 26(1): Hearings, UKBC-ICCARBN 474406885 (2022)
+© 2025 Thomson Reuters.
+1
+Article 26(1): Hearings
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+Introductory remarks
+Article 26(1): Hearings
+“A hearing shall be held if any of the parties so requests or, failing such a request, if the arbitral tribunal on its own motion
+decides to hear the parties. When a hearing is to be held, the arbitral tribunal, giving reasonable notice, shall summon the
+parties to appear before it on the day and at the place fixed by it. The arbitral tribunal may decide, after consulting the
+parties, and on the basis of the relevant facts and circumstances of the case, that any hearing will be conducted by physical
+attendance or remotely by videoconference, telephone or other appropriate means of communication.”
+26-5
+The first sentence of art.26(1) was introduced with the 2021 Rules, but its content is not new. In the previous versions of the
+Rules it corresponded to the second paragraph of art.25, which deals with the Tribunal’s establishing the facts of the case. In the
+past, it provided for the Tribunal to hear the parties after review of the parties’ written submissions and documents. This part
+of the sentence has now been deleted, as it goes without saying that leaving the case management conference aside, a Tribunal
+would normally hear oral submissions of the parties only once it has received their written submissions and the documentary
+evidence and witness statements and/or expert opinions on which they rely. The wording of art.26(1) leaves no doubt that the
+Tribunal is required to hold a hearing if any of the parties so requests. The requirement appears to apply to the issue of any
+awards, which includes an interim and a partial award. In practice, a Tribunal will have to hear the parties at least once before
+issuing its final award but may be required to do so also prior to rending an interim award on jurisdiction or partial award on
+applicable law, for example. It may therefore be appropriate for a Tribunal to define in its first procedural order the conditions
+under which an oral hearing other than the so-called evidentiary hearing (at which witnesses and/or experts are being examined)
+must be held. But usually, if there is only one hearing, it will be the evidentiary hearing with or without legal argument at the
+end of the hearing.
+26-6
+If there is more than one hearing, then one may be for evidentiary purposes and the other for legal argument. Given the overriding
+concern about costs and timing, for smaller, more straightforward arbitrations it may be possible and advisable to have one set
+of hearings dealing with both the presentation of the oral evidence and the legal argument. If the amount in dispute is substantial
+and the legal issues are complex, the providing for a separate hearing for legal argument is often the preferred approach. As
+will be further discussed below, having the hearing on legal argument held by remotely by videoconference is nowadays often
+a good option.
+26-7
+The Tribunal may decide to hear the parties also on its own motion. In practice, it will only want to take this initiative after having
+deliberated, and thus after having studied the parties’ written submissions. There may indeed situations where the Tribunal feels
+that to improve clarity, the parties should be heard orally, as this is a good basis for the Tribunal then also to ask questions.
+For instance, if the parties have made convoluted legal submissions and are relying on several legal theories in support of their
+claims or defences, the Tribunal may want to engage in a legal debate with the parties as a way to test these legal theories and its
+understanding thereof. Quite often, where the Tribunal would seek to organize a hearing at its own initiative, it would prepare
+a list of specific questions for the parties to consider at such hearing.
+26-8
+
+Article 26(1): Hearings, UKBC-ICCARBN 474406885 (2022)
+© 2025 Thomson Reuters.
+2
+Following the evidentiary hearing, the parties will often submit post-hearing briefs. In appropriate cases, the Tribunal may prefer
+to have oral submissions rather than yet another set of lengthy written submissions. Or the Tribunal may want to have a brief oral
+hearing following the parties’ post-hearing briefs, as a way of asking final questions for clarification. The more complicated the
+issues at stake, the more likely it will be that the Tribunal calls for such hearing. Since the outbreak of the Covid-19 pandemic
+in 2020, hearings by video-conference have become an established part of international arbitration. Therefore, it has become
+much easier for Tribunals to call on their own motion for such hearings, as the costs and time that were involved with physical
+hearings will no longer be a deterrent.
+26-9
+The date (or a series of alternative dates) for the oral hearings is frequently established in the provisional timetable under
+art.24(2). Given the commitments of the parties, their lawyers and the arbitrators, as well as of witnesses and experts that may
+have to be heard, establishing dates for the hearings is often complicated in international arbitrations. Whenever the hearing is
+to last two days or more, this holds true even when the hearing is to take remotely by videoconference, as it requires several
+people to be available during the entire duration of the hearing. Therefore, once the dates are set, it is often very difficult to
+change them, and every possible effort should be made by all participants to save such date.
+26-10
+As discussed above, the Tribunal sets the date of the hearings in consultation with the parties, often at the initial procedural
+hearing. The Tribunal summons the parties to appear on a specific date. This can be done by letter or a procedural order by
+directing that the parties comply with the procedural timetable for example. In either case, there should be a clear record of
+transmission and receipt of the summons or procedural order concerning the date. The date will usually have been known well
+in advance of the hearing, in particular when it was set at the time of establishing the procedural timetable established under
+art.24(2). If the parties have accepted the dates, it is for the parties and their witnesses and experts to make themselves available
+for the hearing date, and to ensure that they will have no conflicting commitments. If the parties have not accepted the dates,
+then it is arguably an obligation of the Tribunal to propose a reasonable number of alternative dates to ensure that the parties
+can be represented by the counsel of their choice and that the parties’ witnesses and experts can attend.
+26-11
+Generally, if the hearing is held physically, it will be held at the place of arbitration. In practice, there are many exceptions to
+this general rule. The Tribunal may hold the hearings elsewhere than at the place of arbitration in accordance with art.18(2)
+provided that the Tribunal first consults with the parties, and that the parties agree. If there is more than one set of evidentiary
+hearings, the Tribunal may hold the hearings at a more convenient place for the witnesses. Other reasons for changing the venue
+of the hearings may relate to the need for, or at least the Tribunal’s wish to have, a site visit, 412  the convenience of the members
+of the Tribunal and the parties or the availability of support for the hearings.
+26-12
+On a practical level, it is important to reserve adequate space for the hearings (and accommodation for the participants) well
+in advance. Usually, Tribunals prefer neutral venues such as arbitration centres (such as the ICC Hearing Center in Paris) or
+hotels. The parties are left to organise their facilities, such as separate break-out rooms to prepare for the hearings.
+26-13
+The issue of whether a party has been “duly summoned” is important in case one party fails to attend the hearing as discussed
+under art.26(2). The Tribunal (and if need be the other party) should ensure that there is a clear documentary record of the notice
+of the date of the hearing and that such notice was given in accordance with the Terms of Reference. In addition, if there is
+a chance that a party will fail to attend, some arbitrators ensure that the notice is given to the official address of the party as
+provided in the Registry of Commerce, for example. The issue of insolvent companies is discussed at para.26-21. As regards
+notice, the most prudent course is to give notice to the legal representative of the company and any person appointed by the
+court either to approve or direct the affairs of the insolvent company.
+26-14
+Article 26(1) deals with notice to the parties only. Therefore the Tribunal is to give notice to the parties’ representatives in the
+arbitration, in accordance with the Terms of Reference. A Tribunal is not obliged under art.26(1) or any other article of the
+Rules, to summon any of the parties’ witnesses, and will normally not do so. It is the responsibility of each party who submits
+a witness statement to ensure that the witness appears at the hearing.
+
+Article 26(1): Hearings, UKBC-ICCARBN 474406885 (2022)
+© 2025 Thomson Reuters.
+3
+26-15
+The third sentence of art.26(1) was introduced with the 2021 Rules and gives the Tribunal now expressly the option between
+holding a hearing by way of physical attendance or remotely by the use of telecommunications. Article 3(5) of the Expedited
+Procedure Rules, that were introduced in March 2017 with art.30, already expressly allowed the hearing to take place “by
+videoconference, telephone or similar means of communication”. Physical and remote hearings are now the two options that
+must be chosen from for any hearing under the ICC Rules. Prior to deciding for either option, the Tribunal will have to hear the
+parties and their preferences. In practice, the parties will often be able to agree and make a proposal to the Tribunal. If there is
+no such agreement, the Tribunal will have to decide “on the basis of the relevant facts and circumstances of the case”. Travel
+and accommodation costs for all participants, the costs of hiring hearing room facilities, timing issues, including the difficulty
+of having virtual hearings when the participants’ time zones are far apart, physical security at the proposed hearing venue, due
+to sanitary or other reasons, the number of witnesses and experts, the nature of their testimony are all factors that the Tribunal
+may need to consider in this context. 413
+26-16
+However, in person contact between the parties and arbitrators is generally a very valuable tool to secure the integrity of the
+arbitral process. It helps to foster the trust of the parties in the Tribunal, and facilitates the latter’s ability to exercise its authority.
+But here again, in each case, a fine balance of costs and benefits will have to be made. To achieve broad adherence to the
+Tribunal’s ultimate decision, it will be essential for it to clearly spell out its considerations and to discuss them with the parties
+before issuing its decision.
+26-17
+If there is a physical hearing, the Tribunal should ensure that all parties can be physically present. It would be unorthodox, and
+should be avoided, to have, for example, one party attend in person and the other party attend by video link only. Likewise,
+when there is a three-member Tribunal, all three arbitrators should be physically present, or none. But in case of a physical
+hearing, in principle nothing prevents the Tribunal parties from hearing some of the witnesses and/or experts remotely only. As
+stated before, this are matters to be discussed and decided in each case.
+Footnotes
+412
+The construction site may be in the country of one of the parties, so that holding the hearing in that country may be
+giving an advantage to that party. The Tribunal will have to consider such a situation with due care. In some cases, it
+may be preferable to separate the site visit from the evidentiary hearing, at the risk of increasing the costs and possibly
+the duration of the arbitration.
+413
+Article 8(2) of the Prague Rules (as to the latter, see para.25-6) encourage parties and arbitral tribunals to “seek to
+organise the hearing in the most cost-efficient manner possible, including by limiting the duration of the hearing and
+using video, electronic or telephone communications to avoid unnecessary travel costs (…)”.
+End of Document
+© 2025 SWEET & MAXWELL

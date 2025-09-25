@@ -1,0 +1,503 @@
+Appendix E - IBA Rules on the Taking of Evidence in..., UKBC-REDFERN...
+© 2025 Thomson Reuters.
+1
+Appendix E - IBA Rules on the Taking of Evidence in
+International Commercial Arbitration
+Redfern and Hunter on International Arbitration 7th Ed.
+Mainwork
+Appendix E - IBA Rules on the Taking of Evidence in International Commercial Arbitration
+(Adopted by a resolution of the IBA Council on 17 December 2020)
+The Rules
+Preamble
+1. These IBA Rules on the Taking of Evidence in International Arbitration are intended to provide an efficient, economical
+and fair process for the taking of evidence in international arbitrations, particularly those between Parties from different
+legal traditions. They are designed to supplement the legal provisions and the institutional, ad hoc or other rules that apply
+to the conduct of the arbitration.
+2. Parties and Arbitral Tribunals may adopt the IBA Rules of Evidence, in whole or in part, to govern arbitration
+proceedings, or they may vary them or use them as guidelines in developing their own procedures. The Rules are not
+intended to limit the flexibility that is inherent in, and an advantage of, international arbitration, and Parties and Arbitral
+Tribunals are free to adapt them to the particular circumstances of each arbitration.
+3. The taking of evidence shall be conducted on the principles that each Party shall act in good faith and be entitled to
+know, reasonably in advance of any Evidentiary Hearing or any fact or merits determination, the evidence on which the
+other Parties rely.
+Definitions
+In the IBA Rules of Evidence:
+‘Arbitral Tribunal’ means a sole arbitrator or a panel of arbitrators;
+‘Claimant’ means the Party or Parties who commenced the arbitration and any Party who, through joinder or otherwise,
+becomes aligned with such Party or Parties;
+‘Document’ means a writing, communication, picture, drawing, program or data of any kind, whether recorded or
+maintained on paper or by electronic, audio, visual or any other means;
+‘Evidentiary Hearing’ means any hearing, whether or not held on consecutive days, at which the Arbitral Tribunal, whether
+in person, by teleconference, videoconference or other method, receives oral or other evidence;
+‘Expert Report’ means a written statement by a Tribunal-Appointed Expert or a Party-Appointed Expert;
+‘General Rules’ mean the institutional, ad hoc or other rules that apply to the conduct of the arbitration;
+‘IBA Rules of Evidence’ or ‘Rules’ means these IBA Rules on the Taking of Evidence in International Arbitration, as they
+may be revised or amended from time to time;
+‘Party’ means a party to the arbitration;
+‘Party-Appointed Expert’ means a person or organisation appointed by a Party in order to report on specific issues
+determined by the Party;
+
+Appendix E - IBA Rules on the Taking of Evidence in..., UKBC-REDFERN...
+© 2025 Thomson Reuters.
+2
+‘Remote Hearing’ means a hearing conducted, for the entire hearing or parts thereof, or only with respect to certain
+participants, using teleconference, videoconference or other communication technology by which persons in more than
+one location simultaneously participate;
+‘Request to Produce’ means a written request by a Party that another Party produce Documents;
+‘Respondent’ means the Party or Parties against whom the Claimant made its claim, and any Party who, through joinder
+or otherwise, becomes aligned with such Party or Parties, and includes a Respondent making a counterclaim;
+‘Tribunal-Appointed Expert’ means a person or organisation appointed by the Arbitral Tribunal in order to report to it on
+specific issues determined by the Arbitral Tribunal; and
+‘Witness Statement’ means a written statement of testimony by a witness of fact.
+Article 1 Scope of Application
+1. Whenever the Parties have agreed or the Arbitral Tribunal has determined to apply the IBA Rules of Evidence,
+the Rules shall govern the taking of evidence, except to the extent that any specific provision of them may be found
+to be in conflict with any mandatory provision of law determined to be applicable to the case by the Parties or by
+the Arbitral Tribunal.
+2. Where the Parties have agreed to apply the IBA Rules of Evidence, in whole or in part, they shall be deemed to
+have agreed, in the absence of a contrary indication, to the version as current on the date of such agreement.
+3. In case of conflict between any provisions of the IBA Rules of Evidence and the General Rules, the Arbitral
+Tribunal shall apply the IBA Rules of Evidence in the manner that it determines best in order to accomplish, to the
+extent possible, the purposes of both the General Rules and the IBA Rules of Evidence, unless the Parties agree to
+the contrary.
+4. In the event of any dispute regarding the meaning of the IBA Rules of Evidence, the Arbitral Tribunal shall interpret
+them according to their purpose and in the manner most appropriate for the particular arbitration.
+5. Insofar as the IBA Rules of Evidence and the General Rules are silent on any matter concerning the taking of
+evidence and the Parties have not agreed otherwise, the Arbitral Tribunal shall conduct the taking of evidence as it
+deems appropriate, in accordance with the general principles of the IBA Rules of Evidence.
+Article 2 Consultation on Evidentiary Issues
+1. The Arbitral Tribunal shall consult the Parties at the earliest appropriate time in the proceedings and invite them to
+consult each other with a view to agreeing on an efficient, economical and fair process for the taking of evidence.
+2. The consultation on evidentiary issues may address the scope, timing and manner of the taking of evidence,
+including, to the extent applicable:
+ 
+(a) the preparation and submission of Witness Statements and Expert Reports;
+ 
+(b) the taking of oral testimony at any Evidentiary Hearing;
+ 
+(c) the requirements, procedure and format applicable to the production of Documents;
+ 
+(d) the level of confidentiality protection to be afforded to evidence in the arbitration;
+ 
+(e) the treatment of any issues of cybersecurity and data protection; and
+
+Appendix E - IBA Rules on the Taking of Evidence in..., UKBC-REDFERN...
+© 2025 Thomson Reuters.
+3
+ 
+(f) the promotion of efficiency, economy and conservation of resources in connection with the taking of
+evidence.
+3. The Arbitral Tribunal is encouraged to identify to the Parties, as soon as it considers it to be appropriate, any issues:
+ 
+(a) that the Arbitral Tribunal may regard as relevant to the case and material to its outcome; and/ or
+ 
+(b) for which a preliminary determination may be appropriate.
+Article 3 Documents
+1. Within the time ordered by the Arbitral Tribunal, each Party shall submit to the Arbitral Tribunal and to the other
+Parties all Documents available to it on which it relies, including public Documents and those in the public domain,
+except for any Documents that have already been submitted by another Party.
+2. Within the time ordered by the Arbitral Tribunal, any Party may submit to the Arbitral Tribunal and to the other
+Parties a Request to Produce.
+3. A Request to Produce shall contain:
+ 
+(a)
+ 
+(i) a description of each requested Document sufficient to identify it, or
+ 
+(ii) a description in sufficient detail (including subject matter) of a narrow and specific
+requested category of Documents that are reasonably believed to exist; in the case of
+Documents maintained in electronic form, the requesting Party may, or the Arbitral
+Tribunal may order that it shall be required to, identify specific files, search terms,
+individuals or other means of searching for such Documents in an efficient and economical
+manner;
+ 
+(b) a statement as to how the Documents requested are relevant to the case and material to its outcome; and
+ 
+(c)
+ 
+(i) a statement that the Documents requested are not in the possession, custody or control
+of the requesting Party or a statement of the reasons why it would be unreasonably
+burdensome for the requesting Party to produce such Documents, and
+ 
+(ii) a statement of the reasons why the requesting Party assumes the Documents requested
+are in the possession, custody or control of another Party.
+4. Within the time ordered by the Arbitral Tribunal, the Party to whom the Request to Produce is addressed shall
+produce to the other Parties and, if the Arbitral Tribunal so orders, to it, all the Documents requested in its possession,
+custody or control as to which it makes no objection.
+5. If the Party to whom the Request to Produce is addressed has an objection to some or all of the Documents requested,
+it shall state the objection in writing to the Arbitral Tribunal and the other Parties within the time ordered by the
+Arbitral Tribunal. The reasons for such objection shall be any of those set forth in Articles 9.2 or 9.3, or a failure to
+satisfy any of the requirements of Article 3.3. If so directed by the Arbitral Tribunal, and within the time so ordered,
+the requesting party may respond to the objection.
+
+Appendix E - IBA Rules on the Taking of Evidence in..., UKBC-REDFERN...
+© 2025 Thomson Reuters.
+4
+6. Upon receipt of any such objection and response, the Arbitral Tribunal may invite the relevant Parties to consult
+with each other with a view to resolving the objection.
+7. Either Party may, within the time ordered by the Arbitral Tribunal, request the Arbitral Tribunal to rule on the
+objection. The Arbitral Tribunal shall then, in timely fashion, consider the Request to Produce, the objection and
+any response thereto. The Arbitral Tribunal may order the Party to whom such Request is addressed to produce any
+requested Document in its possession, custody or control as to which the Arbitral Tribunal determines that (i) the
+issues that the requesting Party wishes to prove are relevant to the case and material to its outcome; (ii) none of
+the reasons for objection set forth in Articles 9.2 or 9.3 applies; and (iii) the requirements of Article 3.3 have been
+satisfied. Any such Document shall be produced to the other Parties and, if the Arbitral Tribunal so orders, to it.
+8. In exceptional circumstances, if the propriety of an objection can be determined only by review of the Document,
+the Arbitral Tribunal may determine that it should not review the Document. In that event, the Arbitral Tribunal may,
+after consultation with the Parties, appoint an independent and impartial expert, bound to confidentiality, to review
+any such Document and to report on the objection. To the extent that the objection is upheld by the Arbitral Tribunal,
+the expert shall not disclose to the Arbitral Tribunal and to the other Parties the contents of the Document reviewed.
+9. If a Party wishes to obtain the production of Documents from a person or organisation who is not a Party to the
+arbitration and from whom the Party cannot obtain the Documents on its own, the Party may, within the time ordered
+by the Arbitral Tribunal, ask it to take whatever steps are legally available to obtain the requested Documents, or seek
+leave from the Arbitral Tribunal to take such steps itself. The Party shall submit such request to the Arbitral Tribunal
+and to the other Parties in writing, and the request shall contain the particulars set forth in Article 3.3, as applicable.
+The Arbitral Tribunal shall decide on this request and shall take, authorize the requesting Party to take, or order any
+other Party to take, such steps as the Arbitral Tribunal considers appropriate if, in its discretion, it determines that
+(i) the Documents would be relevant to the case and material to its outcome, (ii) the requirements of Article 3.3, as
+applicable, have been satisfied and (iii) none of the reasons for objection set forth in Articles 9.2 or 9.3 applies.
+10. At any time before the arbitration is concluded, the Arbitral Tribunal may (i) request any Party to produce
+Documents, (ii) request any Party to use its best efforts to take or (iii) itself take, any step that it considers appropriate
+to obtain Documents from any person or organisation. Any Party may object to the request for any of the reasons set
+forth in Articles 9.2 or 9.3. In such cases, Article 3.4 to Article 3.8 shall apply correspondingly.
+11. Within the time ordered by the Arbitral Tribunal, the Parties may submit to the Arbitral Tribunal and to the other
+Parties any additional Documents on which they intend to rely or which they believe have become relevant to the
+case and material to its outcome as a consequence of the issues raised in Documents, Witness Statements or Expert
+Reports submitted or produced, or in other submissions of the Parties.
+12. With respect to the form of submission or production of Documents, unless the Parties agree otherwise or, in the
+absence of such agreement, the Arbitral Tribunal decides otherwise:
+ 
+(a) copies of Documents shall conform to the originals and, at the request of the Arbitral Tribunal, any
+original shall be presented for inspection;
+ 
+(b) Documents that a Party maintains in electronic form shall be submitted or produced in the form most
+convenient or economical to it that is reasonably usable by the recipients;
+ 
+(c) a Party is not obligated to produce multiple copies of Documents which are essentially identical;
+ 
+(d) Documents to be produced in response to a Request to Produce need not be translated; and
+ 
+(e) Documents in a language other than the language of the arbitration that are submitted to the Arbitral
+Tribunal shall be accompanied by translations marked as such.
+13. Any Document submitted or produced by a Party or non-Party in the arbitration and not otherwise in the public
+domain shall be kept confidential by the Arbitral Tribunal and the other Parties, and shall be used only in connection
+with the arbitration. This requirement shall apply except and to the extent that disclosure may be required of a Party
+
+Appendix E - IBA Rules on the Taking of Evidence in..., UKBC-REDFERN...
+© 2025 Thomson Reuters.
+5
+to fulfil a legal duty, protect or pursue a legal right, or enforce or challenge an award in bona fide legal proceedings
+before a state court or other judicial authority. The Arbitral Tribunal may issue orders to set forth the terms of this
+confidentiality. This requirement shall be without prejudice to all other obligations of confidentiality in the arbitration.
+14. If the arbitration is organised into separate issues or phases (such as jurisdiction, preliminary determinations,
+liability or damages), the Arbitral Tribunal may, after consultation with the Parties, schedule the submission of
+Documents and Requests to Produce separately for each issue or phase.
+Article 4 Witnesses of Fact
+1. Within the time ordered by the Arbitral Tribunal, each Party shall identify the witnesses on whose testimony it
+intends to rely and the subject matter of that testimony.
+2. Any person may present evidence as a witness, including a Party or a Party’s officer, employee or other
+representative.
+3. It shall not be improper for a Party, its officers, employees, legal advisors or other representatives to interview its
+witnesses or potential witnesses and to discuss their prospective testimony with them.
+4. The Arbitral Tribunal may order each Party to submit within a specified time to the Arbitral Tribunal and to the
+other Parties Witness Statements by each witness on whose testimony it intends to rely, except for those witnesses
+whose testimony is sought pursuant to Articles 4.9 or 4.10. If Evidentiary Hearings are organised into separate issues
+or phases (such as jurisdiction, preliminary determinations, liability or damages), the Arbitral Tribunal or the Parties
+by agreement may schedule the submission of Witness Statements separately for each issue or phase.
+5. Each Witness Statement shall contain:
+ 
+(a) the full name and address of the witness, a statement regarding his or her present and past relationship
+(if any) with any of the Parties, and a description of his or her background, qualifications, training and
+experience, if such a description may be relevant to the dispute or to the contents of the statement;
+ 
+(b) a full and detailed description of the facts, and the source of the witness’s information as to those facts,
+sufficient to serve as that witness’s evidence in the matter in dispute. Documents on which the witness
+relies that have not already been submitted shall be provided;
+ 
+(c) a statement as to the language in which the Witness Statement was originally prepared and the language
+in which the witness anticipates giving testimony at the Evidentiary Hearing;
+ 
+(d) an affirmation of the truth of the Witness Statement; and
+ 
+(e) the signature of the witness and its date and place.
+6. If Witness Statements are submitted, any Party may, within the time ordered by the Arbitral Tribunal, submit to the
+Arbitral Tribunal and to the other Parties revised or additional Witness Statements, including statements from persons
+not previously named as witnesses, so long as any such revisions or additions respond only to:
+ 
+(a) matters contained in another Party’s Witness Statements, Expert Reports or other submissions that have
+not been previously presented in the arbitration; or
+ 
+(b) new factual developments that could not have been addressed in a previous Witness Statement.
+7. If a witness whose appearance has been requested pursuant to Article 8.1 fails without a valid reason to appear
+for testimony at an Evidentiary Hearing, the Arbitral Tribunal shall disregard any Witness Statement related to that
+Evidentiary Hearing by that witness unless, in exceptional circumstances, the Arbitral Tribunal decides otherwise.
+
+Appendix E - IBA Rules on the Taking of Evidence in..., UKBC-REDFERN...
+© 2025 Thomson Reuters.
+6
+8. If the appearance of a witness has not been requested pursuant to Article 8.1, none of the other Parties shall be
+deemed to have agreed to the correctness of the content of the Witness Statement.
+9. If a Party wishes to present evidence from a person who will not appear voluntarily at its request, the Party may,
+within the time ordered by the Arbitral Tribunal, ask it to take whatever steps are legally available to obtain the
+testimony of that person, or seek leave from the Arbitral Tribunal to take such steps itself. In the case of a request to
+the Arbitral Tribunal, the Party shall identify the intended witness, shall describe the subjects on which the witness’s
+testimony is sought and shall state why such subjects are relevant to the case and material to its outcome. The Arbitral
+Tribunal shall decide on this request and shall take, authorize the requesting Party to take or order any other Party to
+take, such steps as the Arbitral Tribunal considers appropriate if, in its discretion, it determines that the testimony of
+that witness would be relevant to the case and material to its outcome.
+10. At any time before the arbitration is concluded, the Arbitral Tribunal may order any Party to provide for, or to use
+its best efforts to provide for, the appearance for testimony at an Evidentiary Hearing of any person, including one
+whose testimony has not yet been offered. Any Party may object for any of the reasons set forth in Articles 9.2 or 9.3.
+Article 5 Party-Appointed Experts
+1. A Party may rely on a Party-Appointed Expert as a means of evidence on specific issues. Within the time ordered
+by the Arbitral Tribunal, (i) each Party shall identify any Party-Appointed Expert on whose testimony it intends to
+rely and the subject-matter of such testimony; and (ii) the Party-Appointed Expert shall submit an Expert Report.
+2. The Expert Report shall contain:
+ 
+(a) the full name and address of the Party-Appointed Expert, a statement regarding his or her present and
+past relationship (if any) with any of the Parties, their legal advisors and the Arbitral Tribunal, and a
+description of his or her background, qualifications, training and experience;
+ 
+(b) a description of the instructions pursuant to which he or she is providing his or her opinions and
+conclusions;
+ 
+(c) a statement of his or her independence from the Parties, their legal advisors and the Arbitral Tribunal;
+ 
+(d) a statement of the facts on which he or she is basing his or her expert opinions and conclusions;
+ 
+(e) his or her expert opinions and conclusions, including a description of the methods, evidence and
+information used in arriving at the conclusions. Documents on which the Party-Appointed Expert relies
+that have not already been submitted shall be provided;
+ 
+(f) if the Expert Report has been translated, a statement as to the language in which it was originally
+prepared, and the language in which the Party-Appointed Expert anticipates giving testimony at the
+Evidentiary Hearing;
+ 
+(g) an affirmation of his or her genuine belief in the opinions expressed in the Expert Report;
+ 
+(h) the signature of the Party-Appointed Expert and its date and place; and
+ 
+(i) if the Expert Report has been signed by more than one person, an attribution of the entirety or specific
+parts of the Expert Report to each author.
+3. If Expert Reports are submitted, any Party may, within the time ordered by the Arbitral Tribunal, submit to the
+Arbitral Tribunal and to the other Parties revised or additional Expert Reports, including reports or statements from
+persons not previously identified as Party-Appointed Experts, so long as any such revisions or additions respond
+only to:
+ 
+(a) matters contained in another Party’s Witness Statements, Expert Reports or other submissions that have
+not been previously presented in the arbitration; or
+
+Appendix E - IBA Rules on the Taking of Evidence in..., UKBC-REDFERN...
+© 2025 Thomson Reuters.
+7
+ 
+(b) new developments that could not have been addressed in a previous Expert Report.
+4. The Arbitral Tribunal in its discretion may order that any Party-Appointed Experts who will submit or who have
+submitted Expert Reports on the same or related issues meet and confer on such issues. At such meeting, the Party-
+Appointed Experts shall attempt to reach agreement on the issues within the scope of their Expert Reports, and they
+shall record in writing any such issues on which they reach agreement, any remaining areas of disagreement and the
+reasons therefor.
+5. If a Party-Appointed Expert whose appearance has been requested pursuant to Article 8.1 fails without a valid
+reason to appear for testimony at an Evidentiary Hearing, the Arbitral Tribunal shall disregard any Expert Report
+by that Party-Appointed Expert related to that Evidentiary Hearing unless, in exceptional circumstances, the Arbitral
+Tribunal decides otherwise.
+6. If the appearance of a Party-Appointed Expert has not been requested pursuant to Article 8.1, none of the other
+Parties shall be deemed to have agreed to the correctness of the content of the Expert Report.
+Article 6 Tribunal-Appointed Experts
+1. The Arbitral Tribunal, after consulting with the Parties, may appoint one or more independent Tribunal-Appointed
+Experts to report to it on specific issues designated by the Arbitral Tribunal. The Arbitral Tribunal shall establish the
+terms of reference for any Tribunal-Appointed Expert Report after consulting with the Parties. A copy of the final
+terms of reference shall be sent by the Arbitral Tribunal to the Parties.
+2. The Tribunal-Appointed Expert shall, before accepting appointment, submit to the Arbitral Tribunal and to the
+Parties a description of his or her qualifications and a statement of his or her independence from the Parties,
+their legal advisors and the Arbitral Tribunal. Within the time ordered by the Arbitral Tribunal, the Parties shall
+inform the Arbitral Tribunal whether they have any objections as to the Tribunal-Appointed Expert’s qualifications
+and independence. The Arbitral Tribunal shall decide promptly whether to accept any such objection. After the
+appointment of a Tribunal-Appointed Expert, a Party may object to the expert’s qualifications or independence only
+if the objection is for reasons of which the Party becomes aware after the appointment has been made. The Arbitral
+Tribunal shall decide promptly what, if any, action to take.
+3. Subject to the provisions of Articles 9.2 and 9.3, the Tribunal-Appointed Expert may request a Party to provide
+any information or to provide access to any Documents, goods, samples, property, machinery, systems, processes or
+site for inspection, to the extent relevant to the case and material to its outcome. The Parties and their representatives
+shall have the right to receive any such information and to attend any such inspection. Any disagreement between
+a Tribunal-Appointed Expert and a Party as to the relevance, materiality or appropriateness of such a request shall
+be decided by the Arbitral Tribunal, in the manner provided in Articles 3.5 through 3.8. The Tribunal-Appointed
+Expert shall record in the Expert Report any non-compliance by a Party with an appropriate request or decision by
+the Arbitral Tribunal and shall describe its effects on the determination of the specific issue.
+4. The Tribunal-Appointed Expert shall report in writing to the Arbitral Tribunal in an Expert Report. The Expert
+Report shall contain:
+ 
+(a) the full name and address of the Tribunal-Appointed Expert, and a description of his or her background,
+qualifications, training and experience;
+ 
+(b) a statement of the facts on which he or she is basing his or her expert opinions and conclusions;
+ 
+(c) his or her expert opinions and conclusions, including a description of the methods, evidence and
+information used in arriving at the conclusions. Documents on which the Tribunal-Appointed Expert
+relies that have not already been submitted shall be provided;
+
+Appendix E - IBA Rules on the Taking of Evidence in..., UKBC-REDFERN...
+© 2025 Thomson Reuters.
+8
+ 
+(d) if the Expert Report has been translated, a statement as to the language in which it was originally
+prepared, and the language in which the Tribunal-Appointed Expert anticipates giving testimony at the
+Evidentiary Hearing;
+ 
+(e) an affirmation of his or her genuine belief in the opinions expressed in the Expert Report;
+ 
+(f) the signature of the Tribunal-Appointed Expert and its date and place; and
+ 
+(g) if the Expert Report has been signed by more than one person, an attribution of the entirety or specific
+parts of the Expert Report to each author.
+5. The Arbitral Tribunal shall send a copy of such Expert Report to the Parties. The Parties may examine any
+information, Documents, goods, samples, property, machinery, systems, processes or site for inspection that the
+Tribunal-Appointed Expert has examined and any correspondence between the Arbitral Tribunal and the Tribunal-
+Appointed Expert. Within the time ordered by the Arbitral Tribunal, any Party shall have the opportunity to respond
+to the Expert Report in a submission by the Party or through a Witness Statement or an Expert Report by a Party-
+Appointed Expert. The Arbitral Tribunal shall send the submission, Witness Statement or Expert Report to the
+Tribunal-Appointed Expert and to the other Parties.
+6. At the request of a Party or of the Arbitral Tribunal, the Tribunal-Appointed Expert shall be present at an Evidentiary
+Hearing. The Arbitral Tribunal may question the Tribunal-Appointed Expert, and he or she may be questioned by the
+Parties or by any Party-Appointed Expert on issues raised in his or her Expert Report, the Parties’ submissions or
+Witness Statement or the Expert Reports made by the Party-Appointed Experts pursuant to Article 6.5.
+7. Any Expert Report made by a Tribunal-Appointed Expert and its conclusions shall be assessed by the Arbitral
+Tribunal with due regard to all circumstances of the case.
+8. The fees and expenses of a Tribunal-Appointed Expert, to be funded in a manner determined by the Arbitral
+Tribunal, shall form part of the costs of the arbitration.
+Article 7 Inspection
+Subject to the provisions of Articles 9.2 and 9.3, the Arbitral Tribunal may, at the request of a Party or on its own
+motion, inspect or require the inspection by a Tribunal-Appointed Expert or a Party-Appointed Expert of any site,
+property, machinery or any other goods, samples, systems, processes or Documents, as it deems appropriate. The
+Arbitral Tribunal shall, in consultation with the Parties, determine the timing and arrangements for the inspection.
+The Parties and their representatives shall have the right to attend any such inspection.
+Article 8 Evidentiary Hearing
+1. Within the time ordered by the Arbitral Tribunal, each Party shall inform the Arbitral Tribunal and the other Parties
+of the witnesses whose appearance it requests. Each witness (which term includes, for the purposes of this Article,
+witnesses of fact and any experts) shall, subject to Article 8.3, appear for testimony at the Evidentiary Hearing if such
+person’s appearance has been requested by any Party or by the Arbitral Tribunal.
+2. At the request of a Party or on its own motion, the Arbitral Tribunal may, after consultation with the Parties, order
+that the Evidentiary Hearing be conducted as a Remote Hearing. In that event, the Arbitral Tribunal shall consult with
+the Parties with a view to establishing a Remote Hearing protocol to conduct the Remote Hearing efficiently, fairly
+and, to the extent possible, without unintended interruptions. The protocol may address:
+ 
+(a) the technology to be used;
+ 
+(b) advance testing of the technology or training in use of the technology;
+
+Appendix E - IBA Rules on the Taking of Evidence in..., UKBC-REDFERN...
+© 2025 Thomson Reuters.
+9
+ 
+(c) the starting and ending times considering, in particular, the time zones in which participants will be
+located;
+ 
+(d) how Documents may be placed before a witness or the Arbitral Tribunal; and
+ 
+(e) measures to ensure that witnesses giving oral testimony are not improperly influenced or distracted.
+3. The Arbitral Tribunal shall at all times have complete control over the Evidentiary Hearing. The Arbitral Tribunal
+may limit or exclude any question to, answer by or appearance of a witness, if it considers such question, answer
+or appearance to be irrelevant, immaterial, unreasonably burdensome, duplicative or otherwise covered by a reason
+for objection set forth in Articles 9.2 or 9.3. Questions to a witness during direct and re-direct testimony may not
+be unreasonably leading.
+4. With respect to oral testimony at an Evidentiary Hearing:
+ 
+(a) the Claimant shall ordinarily first present the testimony of its witnesses, followed by the Respondent
+presenting the testimony of its witnesses;
+ 
+(b) following direct testimony, any other Party may question such witness, in an order to be determined
+by the Arbitral Tribunal. The Party who initially presented the witness shall subsequently have the
+opportunity to ask additional questions on the matters raised in the other Parties’ questioning;
+ 
+(c) thereafter, the Claimant shall ordinarily first present the testimony of its Party-Appointed Experts,
+followed by the Respondent presenting the testimony of its Party-Appointed Experts. The Party who
+initially presented the Party-Appointed Expert shall subsequently have the opportunity to ask additional
+questions on the matters raised in the other Parties’ questioning;
+ 
+(d) the Arbitral Tribunal may question a Tribunal-Appointed Expert, and he or she may be questioned by
+the Parties or by any Party-Appointed Expert, on issues raised in the Tribunal-Appointed Expert Report,
+in the Parties’ submissions or in the Expert Reports made by the Party-Appointed Experts;
+ 
+(e) if the arbitration is organised into separate issues or phases (such as jurisdiction, preliminary
+determinations, liability and damages), the Parties may agree or the Arbitral Tribunal may order the
+scheduling of testimony separately for each issue or phase;
+ 
+(f) the Arbitral Tribunal, upon request of a Party or on its own motion, may vary this order of proceeding,
+including the arrangement of testimony by particular issues or in such a manner that witnesses be
+questioned at the same time and in confrontation with each other (witness conferencing);
+ 
+(g) the Arbitral Tribunal may ask questions to a witness at any time.
+5. A witness of fact providing testimony shall first affirm, in a manner determined appropriate by the Arbitral Tribunal,
+that he or she commits to tell the truth or, in the case of an expert witness, his or her genuine belief in the opinions
+to be expressed at the Evidentiary Hearing. If the witness has submitted a Witness Statement or an Expert Report,
+the witness shall confirm it. The Parties may agree or the Arbitral Tribunal may order that the Witness Statement or
+Expert Report shall serve as that witness’s direct testimony, in which event the Arbitral Tribunal may nevertheless
+permit further oral direct testimony.
+6. Subject to the provisions of Articles 9.2 and 9.3, the Arbitral Tribunal may request any person to give oral or written
+evidence on any issue that the Arbitral Tribunal considers to be relevant to the case and material to its outcome. Any
+witness called and questioned by the Arbitral Tribunal may also be questioned by the Parties.
+Article 9 Admissibility and Assessment of Evidence
+1. The Arbitral Tribunal shall determine the admissibility, relevance, materiality and weight of evidence.
+
+Appendix E - IBA Rules on the Taking of Evidence in..., UKBC-REDFERN...
+© 2025 Thomson Reuters.
+10
+2. The Arbitral Tribunal shall, at the request of a Party or on its own motion, exclude from evidence or production
+any Document, statement, oral testimony or inspection, in whole or in part, for any of the following reasons:
+ 
+(a) lack of sufficient relevance to the case or materiality to its outcome;
+ 
+(b) legal impediment or privilege under the legal or ethical rules determined by the Arbitral Tribunal to
+be applicable (see Article 9.4 below);
+ 
+(c) unreasonable burden to produce the requested evidence;
+ 
+(d) loss or destruction of the Document that has been shown with reasonable likelihood to have occurred;
+ 
+(e) grounds of commercial or technical confidentiality that the Arbitral Tribunal determines to be
+compelling;
+ 
+(f) grounds of special political or institutional sensitivity (including evidence that has been classified as
+secret by a government or a public international institution) that the Arbitral Tribunal determines to be
+compelling; or
+ 
+(g) considerations of procedural economy, proportionality, fairness or equality of the Parties that the
+Arbitral Tribunal determines to be compelling.
+3. The Arbitral Tribunal may, at the request of a Party or on its own motion, exclude evidence obtained illegally.
+4. In considering issues of legal impediment or privilege under Article 9.2(b), and insofar as permitted by any
+mandatory legal or ethical rules that are determined by it to be applicable, the Arbitral Tribunal may take into account:
+ 
+(a) any need to protect the confidentiality of a Document created or statement or oral communication made
+in connection with and for the purpose of providing or obtaining legal advice;
+ 
+(b) any need to protect the confidentiality of a Document created or statement or oral communication made
+in connection with and for the purpose of settlement negotiations;
+ 
+(c) the expectations of the Parties and their advisors at the time the legal impediment or privilege is said
+to have arisen;
+ 
+(d) any possible waiver of any applicable legal impediment or privilege by virtue of consent, earlier
+disclosure, affirmative use of the Document, statement, oral communication or advice contained therein,
+or otherwise; and
+ 
+(e) the need to maintain fairness and equality as between the Parties, particularly if they are subject to
+different legal or ethical rules.
+5. The Arbitral Tribunal may, where appropriate, make necessary arrangements to permit Documents to be produced,
+and evidence to be presented or considered subject to suitable confidentiality protection.
+6. If a Party fails without satisfactory explanation to produce any Document requested in a Request to Produce to
+which it has not objected in due time or fails to produce any Document ordered to be produced by the Arbitral Tribunal,
+the Arbitral Tribunal may infer that such document would be adverse to the interests of that Party.
+7. If a Party fails without satisfactory explanation to make available any other relevant evidence, including testimony,
+sought by one Party to which the Party to whom the request was addressed has not objected in due time or fails
+to make available any evidence, including testimony, ordered by the Arbitral Tribunal to be produced, the Arbitral
+Tribunal may infer that such evidence would be adverse to the interests of that Party.
+
+Appendix E - IBA Rules on the Taking of Evidence in..., UKBC-REDFERN...
+© 2025 Thomson Reuters.
+11
+8. If the Arbitral Tribunal determines that a Party has failed to conduct itself in good faith in the taking of evidence, the
+Arbitral Tribunal may, in addition to any other measures available under these Rules, take such failure into account in
+its assignment of the costs of the arbitration, including costs arising out of or in connection with the taking of evidence.
+End of Document
+© NIGEL BLACKABY KC, CONSTANTINE PARTASIDES
+KC, ALAN REDFERN

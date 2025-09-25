@@ -1,0 +1,114 @@
+Chapter 21 - Commission Agents, UKBC-BULLENL 459371861 (2022)
+© 2025 Thomson Reuters.
+1
+Chapter 21 - Commission Agents
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part F - Business Law
+Chapter 21 - Commission Agents
+21-01
+As a result of the obligation to implement EU Council Directive 86/653, 1  the Commercial Agents (Council Directive)
+Regulations 1993 (SI 1993/3053) were made by the Secretary of State for Trade and Industry. The 1993 Regulations came into
+force on 1 January 1994 and apply to all contracts entered into under the agency agreement after that date, and whether or not
+the agency agreement itself pre-dates the commencement date. The Regulations define a commercial agent as a self-employed
+intermediary with continuing authority to negotiate the sale or purchase of goods on behalf of his principal or to negotiate and
+conclude the sale or purchase of goods on behalf of and in the name of that principal. There must be a contractual relationship of
+principal and agent between the parties so, for example, a sub-agent who had not directly contracted with the principal cannot
+invoke the Regulations. 2  The Regulations are concerned with the sale and purchase of goods and not of services. Officers of
+a company or association (or partners in the case of a partnership) are excluded from the definition, but there are few other
+exceptions. The primary ones are where the commercial agent’s activities are secondary to his principal commercial agency
+activities, 3  or are unpaid, or where he is operating on a commodity exchange or in the commodity market.
+In performing his activities, a commercial agent must look after the interests of his principal and act dutifully and in good faith
+(reg.3). He has three specific obligations: (a) the duty to make proper efforts to negotiate and where appropriate conclude the
+transactions he is instructed to take care of; (b) the duty to communicate to his principal all necessary information available to
+him; and (c) the duty to comply with his principal’s reasonable instructions.
+The principal has a similar duty to act dutifully and in good faith (reg.4). This duty includes the obligation to provide all
+necessary documentation relating to the goods concerned as well as information necessary for the performance of the agency
+contract. In particular, where the principal knows that the volume of commercial transactions are likely to decrease to less than
+normally expected, he must tell his agent.
+The parties are not free to contract out of these duties. Furthermore, the 1993 Regulations apply where an agent’s operations take
+effect within the EU on behalf of a principal situated outside the EU. This cannot be overridden by a choice of law purporting
+to choose the law of a non-EU jurisdiction. 4
+21-02
+Part III of the regulations deals with remuneration. In the absence of agreed terms as to remuneration, the agent is entitled to
+remuneration which commercial agents appointed for the goods forming the subject of the agency are customarily allowed, in
+the place where the agent carries on his activities. In the absence of such a custom, it is then that he is entitled to reasonable
+remuneration taking into account all the aspects of the transaction.
+Part IV of the 1993 Regulations deals with the conclusion and termination of the agency contract including a statutory right
+to compensation contained in reg.17. There is also a specific limitation on the right to impose restraint of trade clauses. For
+the purposes of reg.17 the “agency contract” is to be widely construed as meaning the agency itself rather than the particular
+contract in force at the date of termination. 5
+The guidelines on the calculation of indemnity are usefully summarised in AMB Imballaggi Plastici Srl v Pacflex Ltd. 6
+The compensation provisions on termination operate when the contract expires by effluxion of time. 7
+
+Chapter 21 - Commission Agents, UKBC-BULLENL 459371861 (2022)
+© 2025 Thomson Reuters.
+2
+The 1993 Regulations were amended by the Commercial Agents (Council Directive) (Amendment) Regulations 1998 (SI
+1998/2868) which came into force on 16 December 1998. Regulation 2 amends the 1993 Regulations to allow a court or tribunal
+to apply the law of another Member State where the parties have agreed that the agency contract is to be governed by the law
+of that Member State.
+In Sagal (trading as Bunz UK) v Atelier Bunz GmbH, 8  the Court of Appeal decided that the definition of ‘commercial agent’
+in the 1993 Regulations connoted an agent who had to obtain the authority of his principal to enter into a contract whereupon
+the contract would be made in the principal’s name and not that of the agent. While an agent can, in English law, be authorised
+to contract in his own name, such an agent falls outside the Regulations.
+In Software Incubator Ltd v Computer Associates UK Ltd, 9  the Queen’s Bench Mercantile Court (HH Judge Waksman QC)
+held that the sale or supply of software promoted by the claimant company counted as the “sale of goods” for the purpose of
+the definition of “commercial agent” in reg.2(1) of the 1993 Regulations.
+21-03
+In Lonsdale (trading as Lonsdale Agencies) v Howard & Hallam Ltd, 10  the House of Lords held that, for the purposes of
+compensation, reference to the value of the agency was based on the assumption that it continued, as being the amount which
+an agent could reasonably expect to receive for the right to stand in his shoes, continue to perform the duties of the agency and
+receive the commission which he would have received. The agent was entitled to be compensated for the damage he suffered as
+a result of the termination of his relations with the principal; he was treated as having lost something of value as a result of the
+termination and was entitled to compensation for the loss. The value of the agency relationship lay in the prospect of earning
+commission and what had to be valued was the income stream which the agency would have generated. English courts were
+entitled to apply English rules for assessing this compensation and were not bound by the practice in other EU jurisdictions
+(notably France) of assessing compensation by applying a fixed multiplier to the lost annual income.
+In Semen v Deutsche Tamoil GmbH 11  the First Chamber of the ECJ decided two important points about indemnity of
+commercial agents under the Directive. First, it is not possible automatically to limit the amount of indemnity to which a
+commercial agent is entitled in respect of loss of commission where his actual loss would exceed that limit. Secondly, if an agent
+is employed by one of a group of companies, benefits accruing to other companies of that group are not, in principle, deemed
+to be benefits accruing to the principal and, consequently, do not necessarily have to be taken into account for the purposes of
+calculating the amount of indemnity to which a commercial agent is entitled.
+Although not strictly arising out of the 1993 Regulations, the Supreme Court’s decision in Re D&D Wines International Ltd (In
+Liquidation); Bailey v Angove’s Pty Ltd 12  should be noted. Though the general rule of law is that authority of the agent may
+be revoked by the principal at any time, even if expressed to be irrevocable in the agency agreement, such authority may be
+treated as irrevocable if two conditions are met. First, the agency agreement must expressly make it irrevocable and, secondly,
+the authority had to secure an interest of the agent, being either a proprietary interest or a liability owed to him personally. In
+those cases, the agent’s authority was irrevocable while the interest subsisted.
+Footnotes
+1
+Council Directive 86/653/EEC of 18 December 1986 on the coordination of the laws of the Member States relating to
+self-employed commercial agents [1986] OJ L382/17.
+2
+Light v Ty Europe Ltd [2003] EWCA Civ 1238; [2004] 1 Lloyd’s Rep. 693.
+3
+Crane v Sky In-Home Service Ltd [2007] EWHC 66 (Ch); [2007] 2 All E.R. (Comm) 599.
+4
+Ingmar GB Ltd v Eaton Leonard Technologies Ltd [2001] 1 All E.R. (Comm) 329; [2001] 2 All E.R. (EC) 57.
+5
+Moore v Piretta PTA Ltd [1999] 1 All E.R. 174.
+6
+AMB Imballaggi Plastici Srl v Pacflex Ltd [1999] 2 All E.R. (Comm) 249. See also Roy v MR Pearlman Ltd [1992] 2
+C.M.L.R. 1155; King v T Tunnock Ltd [2000] I.R.L.R. 569.
+7
+Light v Ty Europe Ltd [2004] 1 Lloyd’s Rep. 693; Cooper v Pure Fishing Ltd [2004] EWCA Civ 375; [2004] 2 Lloyd’s
+Rep. 518.
+
+Chapter 21 - Commission Agents, UKBC-BULLENL 459371861 (2022)
+© 2025 Thomson Reuters.
+3
+8
+Sagal (trading as Bunz UK) v Atelier Bunz GmbH [2009] EWCA Civ 700; [2009] 4 All E.R. 1253
+9
+Software Incubator Ltd v Computer Associates UK Ltd [2016] EWHC 1587 (QB); [2017] Bus. L.R. 245.
+10
+Lonsdale (t/a Lonsdale Agencies) v Howard & Hallam Ltd [2007] UKHL 32; [2007] 1 W.L.R. 2055.
+11
+Semen v Deutsche Tamoil GmbH (C-348/07) EU:C:2009:195; [2009] All E.R. (D) 271.
+12
+Re D&D Wines International Ltd (In Liquidation); Bailey v Angove’s Pty Ltd [2016] UKSC 47; [2016] 1 W.L.R. 3179.
+End of Document
+© 2025 SWEET & MAXWELL

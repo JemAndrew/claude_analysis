@@ -1,0 +1,231 @@
+Section F. - Specific Issues, Other Applicable Rules, and..., UKBC-REDFERN...
+© 2025 Thomson Reuters.
+1
+Section F. - Specific Issues, Other Applicable Rules, and
+Guidelines
+Redfern and Hunter on International Arbitration 7th Ed.
+Mainwork
+Chapter 3 - Applicable Laws
+Section F. - Specific Issues, Other Applicable Rules, and Guidelines
+(a) Legal privilege
+3. 249
+Issues relating to legal privilege arise most commonly, though not exclusively, in international arbitration in the context of
+document production, where parties invoke attorney–client privilege or legal privilege as a defence to document production
+requests. In the context of document production or otherwise, parties are free to agree on the law applicable to legal privilege
+in their dispute. 346  But in the absence of such a choice, and where there is a dispute as to the proper invocation of legal
+privilege, it falls to a tribunal to determine the applicable law. In this scenario, tribunals are, more commonly than not, faced
+with the fact that institutional rules do not provide an answer. 347  Nor do national laws treat the matter uniformly: privilege is,
+in some jurisdictions, considered a substantive issue (the position adopted in many common law countries), while in others it
+is a procedural matter (particularly in civil law countries), and tends to be addressed as part of domestic litigation procedure
+rather than as a specific aspect of international arbitration. 348  If the law of the seat and the law of the contract differ, which
+law should the tribunal apply?
+3. 250
+The uncertainty resulting from the lack of clarity on this issue can have significant practical repercussions. As one commentator
+has noted: ‘in a dispute involving the United States, France, Iran, and China, each and every party (and their lawyers)—where
+documents, transactions, and communications transcend borders—it is not necessarily clear which national (or international)
+norms govern privilege and confidentiality’. 349  Thus, a party may enter into an arbitration assuming that certain in-house
+communications with another in-house colleague located in another country are protected from privilege, only to learn that,
+depending on the law governing privilege, those conversations may be discoverable and put into evidence in an arbitration. 350
+3. 251
+In the absence of explicit or implied choice of law, tribunals may employ a closest connection test, looking at the law that
+has the closest connection to the relevant attorney–client relationship, such as the law of the country where the attorney–client
+relationship took place. 351
+3. 252
+This approach resembles that taken by some courts. 352  Such an approach could, however, result in different legal privileges
+applying to different parties. This has led some tribunals to apply a ‘most-favoured privilege’ rule approach, in which the
+tribunal adopts the law that grants the parties the highest standard of protection. 353  Given their wide discretion as to which law
+to apply to the question of privilege, some tribunals have adopted a cumulative approach, applying all laws that might have a
+close connection to the arbitration and searching for commonalities between them. 354  Other tribunals have adopted their own,
+autonomous standard. 355
+3. 253
+The IBA set out sensible guidelines for counsel and tribunals concerned with issues of legal professional privilege, in its Rules
+on the Taking of Evidence in International Arbitration (the IBA Rules). The Rules state that at the request of a party or on its own
+initiative, an arbitral tribunal may exclude from evidence or production any document, statement, or oral testimony where there
+
+Section F. - Specific Issues, Other Applicable Rules, and..., UKBC-REDFERN...
+© 2025 Thomson Reuters.
+2
+is ‘legal impediment or privilege under the legal or ethical rules determined by the Arbitral Tribunal to be applicable’. 356  The
+matters that the tribunal is to take into account in considering pleas of legal privilege include (i) the protection of confidentiality,
+for the purposes of providing or obtaining legal advice; (ii) the protection of confidentiality for the purposes of settlement
+negotiations; (iii) ‘the expectations of the Parties and their advisors at the time the legal impediment or privilege is said to have
+arisen’; (iv) possible waiver of privilege by consent, earlier disclosure, use of the relevant information, or otherwise; and (v) the
+need to maintain fairness and equality between the parties, ‘particularly if they are subject to different legal or ethical rules’. 357
+3. 254
+The IBA Rules, as we have said previously, form part of the ‘soft law’ of international arbitration, but it is increasingly common
+for experienced counsel and arbitrators to adopt them as part of the procedural rules for arbitrations in which they are engaged.
+Often, however, rather than make the arbitration subject to another set of rules that have to be obeyed, they will be adopted
+as guidelines. This avoids the risk of any conflict with other rules to which the arbitration may be subject, such as those of
+an arbitral institution.
+(b) Ethical rules
+3. 255
+Much has been said and written about the duties to which arbitrators are subject. 358  But what of arbitration practitioners who
+appear as counsel in international arbitrations, often outside their home jurisdictions? A lawyer appearing in a court action
+before his or her own local courts will clearly be subject to the rules of professional ethics of his or her local bar. But what
+if that lawyer practises outside his or her home jurisdiction? And what if he or she is appearing in an arbitration? And what
+if that arbitration is taking place in yet another different jurisdiction? Will the lawyer remain subject to his or her local bar
+rules? Will he or she also be subject to the ethical rules applying to lawyers practising in the jurisdiction in which he or she is
+now based? Will the lawyer also be subject to the ethical rules applying to lawyers conducting legal proceedings in the place
+of arbitration, if different?
+3. 256
+The answers to these myriad questions can have a significant impact on the conduct of the arbitration. Let us consider, for
+example, the question of how much contact a lawyer should have with a witness prior to a hearing. In some jurisdictions, such as
+England, it is not permissible for a lawyer to ‘coach’ a witness on the evidence to be given at a hearing. 359  In others, constraints
+on lawyers appear to be far more limited. In her comparison of standards of professional conduct, one commentator put it
+thus: ‘An Australian lawyer felt that from his perspective it would be unethical to prepare a witness; a Canadian lawyer said
+it would be illegal; and an American lawyer’s view was that not to prepare a witness would be malpractice.’ 360  Therein lies
+the problem: counsel in the same procedure, playing to very different rules, with a possible concrete impact on the substantive
+outcome of the arbitration.
+3. 257
+Until recently, there had been little alternative for counsel other than to ascertain individually the answers to the following
+questions.
+ 
+i.‘Am I subject to my professional bar rules when I am acting in an arbitration, and even when I am acting in an arbitration
+abroad?’ 361
+ 
+ii.‘If I am practising abroad, am I also subject to the professional ethical rules of the jurisdiction in which I am
+practising?’ 362
+ 
+iii.‘If the seat of the arbitration is in a third jurisdiction, am I also subject to the ethical rules of a third bar?’
+3. 258
+It is a matter of concern that the answers to these questions may not be the same for all counsel participating in the same
+arbitration proceedings. Commentators have for some time questioned whether professional bar rules might be harmonised to
+apply to practitioners in international arbitration. 363  The idea is attractive, particularly for those concerned to ensure that the
+
+Section F. - Specific Issues, Other Applicable Rules, and..., UKBC-REDFERN...
+© 2025 Thomson Reuters.
+3
+playing field for the participants in international arbitration is level. However, the changes necessary to achieve this should
+not be underestimated. National bar rules around the world would have to make express exceptions to their general codes for
+international practitioners. 364  It seems certain that such changes are unlikely to happen quickly, if at all.
+3. 259
+An alternative means of harmonisation lies in non-binding guidelines. Again, the IBA has taken a lead on this, publishing its
+Guidelines on Party Representation in International Arbitration in May 2013. The Guidelines, which are intended to provide
+practical assistance in dealing with ethical issues that arise in international arbitration, provide useful guidance in relation to
+some of the most frequent issues encountered by practitioners.
+3. 260
+The Guidelines address five ethical issues that arise in practice, relating to:
+ 
+i.conflicts of interest (Guidelines 5 and 6);
+ 
+ii.ex parte communications with arbitrators (Guidelines 7 and 8);
+ 
+iii.misleading submissions to the arbitral tribunal (Guidelines 9–11);
+ 
+iv.improper information exchange and disclosure (Guidelines 12–17); and
+ 
+v.assistance to witnesses and experts (Guidelines 19–24).
+In relation to each, the Guidelines set out best practices and recommended approaches. They also propose certain remedies and
+sanctions, including admonishing the representative, drawing adverse inferences, and altering the apportionment of costs, as
+well as a broader reference to any ‘other measures’ that might ensure the fairness and integrity of proceedings.
+3. 261
+The leading international arbitral institutions have also taken their first cautious steps towards regulating the conduct of counsel
+(and parties) in international arbitration.
+The ICC, for instance, envisages that an arbitral tribunal may sanction unreasonable conduct in making its award of costs. The
+ICC Rules provide that, in making a decision on costs, the tribunal shall take account of ‘such circumstance as it considers
+relevant, including the extent to which each party has conducted the arbitration in an expeditious and cost-effective manner’. 365
+3. 262
+More boldly, the LCIA Rules set out certain provisions governing a party’s legal representatives. These include a provision that
+each party ‘shall ensure that all its authorised representatives appearing by name before the Arbitral Tribunal have agreed to
+comply with the general guidelines contained in the Annex to the LCIA Rules, as a condition of such representation’. 366  The
+general guidelines in the Annex are designed to promote ‘the good and equal conduct of the parties’ authorised representatives
+of the parties appearing by name within the arbitration’, and they provide, for example, that a legal representative should not
+knowingly make any false statement to the arbitral tribunal, should not conceal or assist in the concealment of any document
+of which production is ordered, and should not initiate any undisclosed contact with an arbitrator. The LCIA Rules also give an
+arbitral tribunal the power to order sanctions for the violation of the guidelines, including (broadly) the taking of any measure
+‘necessary to fulfill within the arbitration the general duties required of the Arbitral Tribunal’, as defined elsewhere in the
+Rules. 367
+(c) Guidelines
+3. 263
+Every international arbitration—at least in theory—is a microcosm of potential procedural reform. That potentiality is
+undoubtedly a quality of the arbitral process, but that quality has a price: procedural unpredictability. And it is a price that many
+in the expanding constituency of arbitration users are increasingly unwilling to pay. To address this unpredictability, in recent
+
+Section F. - Specific Issues, Other Applicable Rules, and..., UKBC-REDFERN...
+© 2025 Thomson Reuters.
+4
+years there has been a steady growth in procedural guidelines and recommendations, which now occupy a prominent place in
+the practice of international arbitration.
+3. 264
+These many rules and guidelines constitute the so-called ‘soft law’ of international arbitration. They do not seek to alter any
+local rules and regulations in relation to the conduct of party representatives, nor do they imbue arbitral tribunals with any of
+the powers held by national courts, professional societies, or other authorities to enforce such rules and regulations. Instead,
+they are intended by the parties and by the arbitral tribunal as a useful guide in the conduct of an international arbitration. Many
+of them feature prominently—side-by-side with the applicable laws—in the conduct of international arbitrations. That is why
+they are referred to, where appropriate, throughout this book.
+Footnotes
+346
+This may be ex ante or ex post.
+347
+For example, none of the ICC, LCIA, nor UNCITRAL Rules provide any guidance in this respect. One exception is the
+ICDR Rules 2021, which provide in Art. 25 that the arbitral tribunal should (to the extent possible) give ‘preference to
+the rule that provides the highest level of protection’.
+348
+See discussion in Mockesch, Attorney-Client Privilege in International Arbitration (Oxford University Press, 2016), at
+paragraphs 8.16–8.17. See also paragraph 8.28 (‘There appears to be no national arbitration legislation which expressly
+mentions the issue of privilege’).
+349
+Franck, ‘International arbitration and attorney–client privilege: Conflict of laws approach’ (2019) 51(3) Arizona State
+Law Journal 938.
+350
+Ibid., at 938–939.
+351
+If the client and the attorney live in different countries, this law can be either the client’s place of business or the attorney’s
+domicile. See Catelli and Brueggemann, ‘Evidentiary objections’, in Klaesner, Magal, and Neuhaus (eds) The Guide to
+Evidence in International Arbitration (Global Arbitration Review, 2021), p. 96.
+352
+See, e.g., Wellin v Wellin, 211 F Supp 3d 793 (DSC 2016), where the US District Court of South Carolina used conflicts
+principles to determine which US state jurisdiction had the ‘most significant relationship’ with the legal privilege in
+question.
+353
+See, e.g., Blanco v United Mexican States, ICISD Case No. UNCT/17/1, Procedural Order No. 5 at [17], [19] (the
+tribunal was ‘concerned that applying different standards on the matters of privilege could affect the balance and equality
+of treatment of the Parties’). For an in-depth analysis of the advantages and disadvantages of each approach, see Stouten
+and Jansen, ‘Legal privilege issues: At the mercy of the arbitral tribunal’, 3 June 2021, International Bar Association,
+available online at https://www.ibanet.org/legal-privilege-arbitral-tribunal.
+354
+See, e.g., ICC Case No. 13054, (2014) 25 ICC ICArb Bull Suppl 14.
+355
+See, e.g., Bank for International Settlements: Procedural Order No 6 (Order with Respect to the Discovery of Certain
+Documents for Which Attorney-Client Privilege Has Been Claimed), 11 June 2002, Recueil des Sentences Arbitrales,
+Vol. XXIII, pp. 169–182 (in which the tribunal defined the scope of legal privilege without reference to any national law).
+356
+IBA Rules, Art. 9.2.
+357
+IBA Rules, Art. 9.4.
+358
+Indeed, this is discussed in Chapter 5.
+359
+Bar Council of England and Wales Code of Conduct, Pt. VII, s. 705(a). See, e.g., R v Momdou and anor [2005] EWCA
+Crim 177 at [45] (‘There is no place for witness training in this country, we do not do it. It is unlawful’).
+360
+Miller, ‘Zip to nil? A comparison of American and English lawyers’ standards of professional conduct’ (1995) CA 32
+ALI-ABA 199, at 204.
+361
+van Houtte, ‘Counsel–witness relations and professional misconduct in civil law systems’ (2003) 19 Arb Intl 457.
+Professor van Houtte argues that Art. 4 (‘Applicable Rules of Conduct in Court’) of the Code of Conduct for European
+Lawyers has the effect that whenever the seat of the arbitration is within the EU, the ethical standards of the seat apply.
+For standards that should apply to participants in the arbitral process, see Veeder, ‘The 2001 Goff Lecture: The lawyer’s
+duty to arbitrate in good faith’ (2002) 18 Arb Intl 431.
+362
+In many jurisdictions, it is a requirement for foreign lawyers practising in the jurisdiction to register with the local bar.
+
+Section F. - Specific Issues, Other Applicable Rules, and..., UKBC-REDFERN...
+© 2025 Thomson Reuters.
+5
+363
+Paulsson, ‘Standards of conduct for counsel in international arbitration’ (1992) 3 Am Rev Intl Arb 214. In a similar vein,
+the Code of Conduct for European Lawyers was originally drawn up and adopted in 1998 by the Conseil des Barreaux
+de la Communauté Européene (CCBE).
+364
+The Brussels Bar Rules contain such express exceptions. For a further discussion of the issue, see van Houtte, ‘Counsel–
+witness relations and professional misconduct in civil law systems’ (2003) 19 Arb Intl 457.
+365
+ICC Rules 2021, Art. 38.5.
+366
+LCIA Rules 2020, Art. 18.5.
+367
+LCIA Rules 2020, Art. 18.6.
+End of Document
+© NIGEL BLACKABY KC, CONSTANTINE PARTASIDES
+KC, ALAN REDFERN

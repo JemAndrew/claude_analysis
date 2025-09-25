@@ -1,0 +1,34 @@
+Incidents of the cause of action, UKBC-BULLENL 459371081 (2022)
+© 2025 Thomson Reuters.
+1
+Incidents of the cause of action
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part E - Banking and Financial Services
+Chapter 12 - Financial Services
+Incidents of the cause of action
+12-15
+Where FSMA confers a right of action for breach of statutory duty, 152  it is expressed to be subject to the “defences and other
+incidents applying to actions for breach of statutory duty”. Since the right of action is conferred by FSMA itself, there is no
+need to go through the often-complex process of determining whether the statute confers a private law cause of action on a
+claimant, or whether such cause of action has been conferred by delegated legislation. 153  An important incident of a claim
+for breach of statutory duty is that the action is not “for negligence in the strict or ordinary sense”, but is more like strict or
+absolute liability. 154  This observation does not, of course, apply to the statutory causes of action which depend on the duty of
+an authorised person to exercise reasonable care (ss.56(6) and 59(1) and (2)). Equally, a claim under s.138D which relates to a
+breach of an FCA rule importing a requirement of reasonable care cannot be categorised as a strict liability claim. To establish
+a breach, the nature of the obligation under the relevant rule must be determined. 155
+Footnotes
+152
+See FSMA, ss.20, 71 and 138D.
+153
+See R. (Hague) v Deputy Governor of Parkhurst Prison [1992] 1 A.C. 58.
+154
+London Passenger Transport Board v Upson [1949] A.C. 155; Caswell v Powell Duffryn Associated Collieries Ltd
+[1940] A.C. 152.
+155
+In Day (t/a Appledore Clinical Services) v Barclays Bank Plc [2018] EWHC 393 (QB) the court struck out part of
+the claim under FSMA s.138D, which alleged breach of FCA rules which applied only where there was an “advisory
+relationship” whereas the contractual documentation stated that the relationship between the parties was non-advisory.
+End of Document
+© 2025 SWEET & MAXWELL

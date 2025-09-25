@@ -1,0 +1,271 @@
+Section E. - Conflict Rules and the Search for the..., UKBC-REDFERN...
+© 2025 Thomson Reuters.
+1
+Section E. - Conflict Rules and the Search for the Applicable Law
+Redfern and Hunter on International Arbitration 7th Ed.
+Mainwork
+Chapter 3 - Applicable Laws
+Section E. - Conflict Rules and the Search for the Applicable Law
+(a) Introduction
+3. 225
+As the foregoing discussion has endeavoured to make clear, parties to a contract are entitled to choose the law that is to govern
+their contractual relationship, and parties should exercise this entitlement with proper care and consideration in any international
+commercial contract into which they may enter. In the event of a dispute, such care and consideration may prove to be very
+valuable in saving a potentially expensive and time-consuming dispute about what law governs the contract or its arbitration
+clause.
+3. 226
+The choices generally open to parties have been set out throughout this chapter. If disputes arise and no choice of law has been
+agreed, it is difficult to make a proper assessment of the rights and obligations of the parties, because there is no known legal
+framework within which to make this assessment.
+3. 227
+If arbitration proceedings are commenced, one of the first tasks of the arbitral tribunal will be to do what the parties have failed
+to do—that is, to establish what law is applicable to the contract. In some cases, it might be appropriate for the arbitral tribunal
+to identify some non-national rule or custom to decide the issue in question, as opposed to a national law. 323  This search for the
+applicable substantive law may be a time-consuming and unpredictable process. The next section indicates how arbitrators are
+likely to approach the task if obliged to do so. By way of general introduction, the ILA’s Committee for International Commercial
+Arbitration has recognised the need for guidance and development of best practices for parties, counsel, and arbitrators in
+ascertaining the contents of the applicable law to an international commercial arbitration. The recommendations made in the
+report, Ascertaining of the Content of the Applicable Law in International Commercial Arbitration, are commended to arbitral
+tribunals, with a view to facilitating uniformity and consistency in identifying the potentially applicable laws or rules. 324
+(b) Implied or tacit choice
+3. 228
+In the absence of an express choice of law, the arbitral tribunal will usually look first for the law that the parties are presumed
+to have intended to choose. This is often referred to as a ‘tacit’ choice of law. It may also be known as an implied, inferred, or
+implicit choice. There is a certain artificiality involved in selecting a substantive law for the parties and attributing it to their
+tacit choice, where (as often happens in practice) it is apparent that the parties themselves have given little or no thought to the
+question of the substantive law applicable to their contract and have not in fact made any choice.
+3. 229
+The Rome I Regulation recognises this artificiality when it provides that a choice of law must be ‘expressed or demonstrated
+with reasonable certainty by the terms of the contract or the circumstances of the case’. 325  The report by Professors Guiliano
+and Lagarde that was published alongside the Convention has a special status in its interpretation. 326  The report states that the
+
+Section E. - Conflict Rules and the Search for the..., UKBC-REDFERN...
+© 2025 Thomson Reuters.
+2
+parties may have made a real choice of law, although not expressly stated in their contract, but the court may not be permitted
+to infer a choice of law that the parties might have made where they had no clear intention of making a choice. 327
+3. 230
+Depending on the application of institutional rules, arbitral tribunals may be directed to determine the applicable law by applying
+‘the conflict of law rules it considers applicable’ 328  (granting a tribunal wide discretion as to how to determine the governing
+law), or to apply ‘directly’ the substantive law that the tribunal deems ‘appropriate’ 329  (thereby bypassing altogether the need
+to apply any conflict of laws principles).
+3. 231
+In such an event, the court—or the arbitral tribunal—may decide that the contract is to be governed by the law of the country
+with which it is most closely connected. 330  It will be presumed that this is the country that is the place of business or residence
+of the party that is to effect the performance characteristic of the contract. However, this presumption does not apply if the place
+of characteristic performance cannot be determined. Indeed, it will be disregarded altogether if it appears that the contract is
+more closely connected with another country. 331
+3. 232
+In practice, as already indicated, parties to an international commercial contract would do well to make a specific choice of law,
+rather than to leave the matter to be determined by a court or arbitral tribunal.
+(c) Choice of forum as choice of law
+3. 233
+One criterion for attributing a choice of law to the parties, in the absence of any express choice, is that of a choice of forum
+by the parties. If the parties make no express choice of law, but agree that any disputes between them shall be litigated in a
+particular country, it may be assumed that they intend the law of that country to apply to the substance of their disputes. This
+assumption is expressed in the maxim qui elegit iudicem forum elegit ius (‘a choice of forum is a choice of law’).
+3. 234
+The assumption makes sense when the reference is to a court of law. For instance, if the parties fail to put a choice-of-law
+clause into their contract, but provide for the resolution of any disputes by the courts of New York, it would seem to be a
+reasonable assumption that they intended those courts to apply their own law—that is, the law of the State of New York. The
+assumption is less compelling, however, when the dispute resolution clause provides for arbitration in a particular country,
+rather than litigation in the courts of that country. As already discussed, a place of arbitration may be chosen for reasons that
+are unconnected with the law of that place. It may be chosen because of its geographical convenience to the parties, or because
+it is a suitably neutral venue, or because of the high reputation of the arbitration services to be found there, or for some other,
+equally valid reason. In one SCC arbitration, the tribunal highlighted the fallacy of the principle that a choice of forum is a
+choice of law in the context of arbitration in the following terms:
+[I]t is highly debatable whether a preferred choice of the situs of the arbitration is sufficient to indicate a choice
+of governing law. There has for several years been a distinct tendency in international arbitration to disregard
+this element, chiefly on the ground that the choice of the place of arbitration may be influenced by a number of
+practical considerations that have no bearing on the issue of applicable law. 332
+
+Section E. - Conflict Rules and the Search for the..., UKBC-REDFERN...
+© 2025 Thomson Reuters.
+3
+(d) Conflict rules
+3. 235
+In the absence of an express or implied choice by the parties, an arbitral tribunal is faced with the problem of choosing a system
+of law or a set of legal rules to govern the contract. It must first decide whether it has a free choice, or whether it must follow
+the conflict-of-law rules of the seat of the arbitration—that is, the conflict rules of the lex fori.
+3. 236
+Every developed national system of law contains its own rules for the conflict of laws (sometimes called private international
+law, in the narrower sense of that phrase). These conflict rules usually serve to indicate what law is to be chosen as the law
+applicable to a contract.
+3. 237
+To carry out this role, the relevant conflict rules generally select particular criteria that serve to link or connect the contract
+in question with a given system of law. These criteria are often referred to as ‘connecting factors’. However, they differ from
+country to country; accordingly, the answer to the question ‘what is the applicable law?’ will also differ from country to country.
+Some of the rules that are applied to connect a particular contract with a particular national law or set of legal rules now look
+decidedly out of date. For example, under the conflict rules of some states, the applicable law (in the absence of an express
+or tacit choice) is likely to be the law of the place where the contract was concluded (the lex locus contractus). The place of
+conclusion of a contract may, at one time, have been a factor of some significance, since it would usually be the place of business
+or residence of one of the parties and might well also have been the place in which the contract was to be performed. However,
+with contracts now being concluded by telephone, email, or WhatsApp, or by meetings at an airport or some other location, the
+place in which the contract is finally concluded is often a matter of little or no significance.
+3. 238
+A modern set of conflict rules is that adopted in the Rome I Regulation, 333  which provides that, in the absence of an express
+choice by the parties, ‘the contract shall be governed by the law of the country with which it is most closely connected’. 334  In
+this regard, there is a rebuttable presumption that the contract is most closely connected with the country in which the party that
+is to effect the ‘performance characteristic of the contract’ has its central administration, principal place of business, or other
+place of business through which the performance is to be effected. 335
+(e) Does an international arbitral tribunal have a lex fori?
+3. 239
+As already stated, conflict-of-law rules differ from one country to another. A judge or arbitral tribunal in one country may
+select the applicable law by reference to the place where the contract was made, whereas in another country it may be selected
+by reference to the law with which the contract has the closest connection. In short, the same question may produce different
+answers, depending upon where the judge or arbitral tribunal happens to be sitting.
+3. 240
+In the context of international arbitration, this is plainly unsatisfactory. The seat of the arbitration is invariably chosen for
+reasons that have nothing to do with the conflict rules of the law of the place of arbitration. This has led to the formulation of
+a doctrine that has found support in both arbitration statutes and rules—namely, that, unlike the judge of a national court, an
+international arbitral tribunal is not bound to follow the conflict-of-law rules of the country in which it has its seat. By way of
+notable example, the Model Law states that:
+Failing any designation by the parties, the arbitral tribunal shall apply the law determined by the conflict of laws
+rules which it considers applicable. 336
+
+Section E. - Conflict Rules and the Search for the..., UKBC-REDFERN...
+© 2025 Thomson Reuters.
+4
+3. 241
+A leading commentator has spoken of ‘the almost total abandonment of the application of the rules of conflict of the so-called
+arbitral forum’, 337  and the point was emphasised in the Sapphire arbitration, 338  in which the tribunal commented that, unlike
+the judge of a national court, an international arbitral tribunal has no lex fori:
+Contrary to a State judge, who is bound to conform to the conflict law rules of the State in whose name he metes
+out justice, the arbitrator is not bound by such rules. He must look for the common intention of the parties, and
+use the connecting factors generally used in doctrine and in case law and must disregard national peculiarities. 339
+This was an early enunciation of what has come to be known as the ‘direct choice’ (voie directe) method of choosing the
+substantive law, which in reality gives arbitrators the freedom to choose as they please.
+(f) International conventions, rules of arbitration, and national laws
+3. 242
+The ICSID Convention states that, in the absence of any choice of the applicable or governing law of the contract by the
+parties, the arbitral tribunal must apply the law of the contracting state that is a party to the dispute, together with such rules
+of international law as may be applicable. 340  The ICSID Convention, however, is necessarily concerned with states or state
+entities. Accordingly, it follows the traditional practice of giving weight to the law of the state party to a contract, in the absence
+of any choice of law.
+3. 243
+Other conventions are content to leave the choice to the arbitral tribunal. Article VII of the European Convention of 1961, for
+instance, provides that ‘[f]ailing any indication by the parties as to the applicable law, the arbitrators shall apply the proper law
+under the rules of conflict that the arbitrators deem applicable’. Although the European Convention of 1961 refers to ‘rules of
+conflict’, these are not necessarily the rules of conflict of the country in which the arbitration has its seat; on the contrary, the
+reference is to the conflict rules that the arbitrators deem applicable.
+3. 244
+A similar approach is adopted in some institutional rules, 341  as well as the Model Law. 342  The intention is to make it clear
+that the arbitral tribunal is entitled to choose the governing law of the contract in the absence of any express or implied choice
+of law by the parties themselves. In doing this, the arbitrators proceed objectively—but should they still be obliged to proceed
+by way of particular conflict rules? The point may be academic, since in practice an arbitral tribunal will seek to apply the law
+(or, if permitted, the rules of law) that it considers to be appropriate. Whether this choice is reached through conflict rules or
+more directly may not matter.
+3. 245
+It should be noted, however, that French law omits any reference to conflict rules. This is both logical and sensible. French law
+states that: ‘The arbitral tribunal shall decide the dispute in accordance with the rules of law chosen by the parties or, where
+no such choice has been made, in accordance with the rules of law it considers appropriate.’ 343  This provision contains two
+propositions: first, an international arbitral tribunal is not obliged to proceed to its choice of law by the adoption of any national
+conflict of laws rules; and secondly, it is not obliged to choose a system of law as the substantive law of the contract, but may
+instead choose such rules of law as it considers appropriate for the resolution of the dispute. 344  The trail blazed by French law
+has since been followed by other countries, including Canada, India, Kenya, and the Netherlands. 345
+
+Section E. - Conflict Rules and the Search for the..., UKBC-REDFERN...
+© 2025 Thomson Reuters.
+5
+(g) Conclusion
+3. 246
+In reaching its decision on the law to be applied in the absence of any choice by the parties, an arbitral tribunal is entitled (unless
+otherwise directed by the applicable rules or the lex arbitri) to select any of the systems or rules of law upon which the parties
+themselves might have agreed, had they chosen to do so.
+3. 247
+When it comes to determining how an arbitral tribunal should proceed to its decision, then once again (as so often in international
+arbitration) no universal rule can be identified. Some systems of law insist that, in making its choice, an arbitral tribunal should
+follow the rules of conflict of the seat of the arbitration—an attitude that looks increasingly anachronistic. The modern tendency
+is for international conventions and rules of arbitration to give considerable latitude to arbitral tribunals in making their choice
+of law, whilst still requiring them to do so by way of appropriate or applicable conflict rules. Some national laws (including
+the French, the Swiss, and the Dutch) carry the matter to its logical conclusion: by abandoning the reference to conflict rules
+altogether, they allow an arbitral tribunal to decide for itself what law (or rules of law) the tribunal considers appropriate to
+settle the dispute.
+3. 248
+This is an approach to be commended. If an arbitral tribunal can be trusted to decide a dispute, so too can it be trusted to
+determine the set of legal rules by which it will be guided in reaching its decision. If the parties do not wish the arbitral tribunal
+to have such freedom of action, the remedy is in their own hands: they should agree upon the applicable law or set of legal
+rules, preferably in their contract, but if not, then at any time after the dispute has arisen. If they do not do so, it will fall to
+the arbitral tribunal to make a decision that is likely to impact on the outcome of the arbitration. In order to reach this decision
+(which may be given as a ruling on a preliminary issue by way of an interim or partial award), the arbitral tribunal will usually
+have to consider detailed arguments of law and fact. This is an expense that could readily have been avoided if the parties had
+taken the time and the trouble to agree on one of the many choices open to them.
+Footnotes
+323
+See Mayer, ‘Reflections on the international arbitrator’s duty to apply the law: The 2000 Freshfields Lecture’ (2001)
+17 Arb Intl 235, at 237–240, for a discussion of how arbitrators may not be bound to apply the law.
+324
+The report issued after the ILA’s Seventy-third Conference, held in Rio in August 2008. The Annex Resolution No.
+6/2008 contains guidance split into the following sections: general considerations; acquiring information relevant to the
+ascertainment of the applicable law; interaction with the parties; making use of information about the law’s content;
+and guidance in special circumstances, e.g. where public policy is implicated. Recommendations of particular note
+are: Recommendation 4, that the rules governing the ascertainment of the contents of law by national courts are not
+necessarily suitable for arbitration and that arbitrators should not rely on unexpressed presumptions as to the contents
+of the applicable law, including any presumption that it is the same as the law best known to the tribunal or to any of
+its members, or even that it is the same as the law of the seat of arbitration; Recommendation 5, that arbitrators should
+primarily receive information about the contents of the applicable law from the parties; and Recommendation 6, that
+arbitrators should not introduce legal issues (propositions of law that may bear on the outcome of the dispute) that the
+parties have not raised.
+325
+Rome I Regulation, Art. 3(1) (emphasis added).
+326
+Giuliano and Lagarde, Council Report on the Convention on the Law Applicable to Contractual Obligations, OJ C
+282/1, 31 October 1980.
+327
+Ibid., at p. 17 (emphasis added). See also Collins (ed.) Dicey, Morris & Collins on the Conflict of Laws (15th edn, Sweet
+& Maxwell, 2018), pp. 1809ff.
+328
+UNCITRAL Rules 1976, Art. 33.1.
+329
+UNCITRAL Rules 2010, Art. 35.1; ICC Rules 2021, Art. 21.1.
+
+Section E. - Conflict Rules and the Search for the..., UKBC-REDFERN...
+© 2025 Thomson Reuters.
+6
+330
+See, e.g., Swiss PIL, art. 187(1).
+331
+Rome I Regulation, Art. 4; see also Collins (ed.) Dicey, Morris & Collins on the Conflict of Laws (15th edn, Sweet
+& Maxwell, 2018), pp. 1818ff, for a commentary on this provision of the Convention, which is based on Swiss and,
+subsequently, Dutch law.
+332
+See Arbitration Institute of the SCC, Stockholm Arbitration Report (SCC, 2002), p. 59, with commentary by Fernandez-
+Armesto.
+333
+It is worth noting that arbitral agreements are expressly excluded from the scope of the Convention by Art. 1(2)(d), but
+the discussion in the present section is about contracts as a whole and not about a separate (or separable) agreement
+to arbitrate.
+334
+Rome I Regulation, Art. 4(1).
+335
+Rome I Regulation, Art. 4(2).
+336
+Model Law, Art. 28.
+337
+Goldman, ‘La lex mercatoria dans les contrats et l’arbitrage internationaux: Réalité et perspectives’ [1979] J du Droit
+Intl 475, at 491.
+338
+Sapphire International Petroleum Ltd v The National Iranian Oil Co. (1964) 13 ICLQ 1011.
+339
+Ibid.
+340
+ICSID Convention, Art. 42(1).
+341
+See, e.g., the UNCITRAL Rules 2010, Art. 35.1 (‘The arbitral tribunal shall apply the rules of law designated by the
+parties as applicable to the substance of the dispute. Failing such designation by the parties, the arbitral tribunal shall
+apply the law which it determines to be appropriate’ (emphasis added)).
+342
+Model Law, Art. 28(2).
+343
+French Code of Civil Procedure, art. 1511. The same formulation is now used at Art. 35 of the UNCITRAL Rules 2010.
+344
+ICC Rules 2021, Art. 21.1; LCIA Rules 2020, Art. 22.3. The SCC Rules 2017, Art. 27.1, and WIPO Rules, Art. 59.a,
+also endorse the direct approach.
+345
+In Canada, by the Ontario International Commercial Arbitration Act 2017, s. 7; in India, the Arbitration and Conciliation
+Act 1996 (as amended in 2022), s. 28(1)(b)(iii); in Kenya, the Arbitration Act 1995 (as amended in 2010), s. 29(3); in
+the Netherlands, the Arbitration Act 2015, s. 1054(2). Swiss law also comes close to the same position, in the Swiss
+PIL, s. 187.
+End of Document
+© NIGEL BLACKABY KC, CONSTANTINE PARTASIDES
+KC, ALAN REDFERN

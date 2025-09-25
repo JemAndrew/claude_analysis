@@ -1,0 +1,180 @@
+Section 71. - Assessment on application of third parties, UKBC-WHITEBK 458578222...
+© 2025 Thomson Reuters.
+1
+Section 71. - Assessment on application of third parties
+White Book 2025  | Commentary last updated January 18, 2024
+Volume 2
+Section 7 - Legal Representatives—Costs and Litigation Funding
+Section 7C - The Solicitors Act 1974
+Solicitors Act 1974
+Section 71
+Part III Remuneration of Solicitors
+Remuneration—General
+71.— Assessment on application of third parties
+7C-125
+(1) Where a person other than the party chargeable with the bill for the purposes of section 70 has paid, or is or
+was liable to pay, a bill either to the solicitor or to the party chargeable with the bill, that person or his executors,
+administrators or assignees may apply to the High Court for an order for the assessment of the bill as if he were the
+party chargeable with it, and the court may make the same order (if any) as it might have made if the application had
+been made by the party chargeable with the bill.
+(2) Where the court has no power to make an order by virtue of subsection (1) except in special circumstances it may,
+in considering whether there are special circumstances sufficient to justify the making of an order, take into account
+circumstances which affect the applicant but do not affect the party chargeable with the bill.
+(3) Where a trustee, executor or administrator has become liable to pay a bill of a solicitor, then, on the application
+of any person interested in any property out of which the trustee, executor or administrator has paid, or is entitled
+to pay, the bill, the court may order—
+(a) that the bill be assessed on such terms, if any, as it thinks fit; and
+(b) that such payments, in respect of the amount found to be due to or by a solicitor and in respect of the costs
+of the taxation, be made to or by the applicant, to or by the solicitor, or to or by the executor, administrator or
+trustee, as it thinks fit.
+(4) In considering any application under subsection (3) the court shall have regard—
+(a) to the provisions of section 70 as to applications by the party chargeable for the assessment of a solicitor’s
+bill so far as they are capable of being applied to an application made under that subsection;
+(b) to the extent and nature of the interest of the applicant.
+(5) If an applicant under subsection (3) pays any money to the solicitor, he shall have the same right to be paid that
+money by the trustee, executor or administrator chargeable with the bill as the solicitor had.
+(6) Except in special circumstances, no order shall be made on an application under this section for the assessment
+of a bill which has already been taxed.
+
+Section 71. - Assessment on application of third parties, UKBC-WHITEBK 458578222...
+© 2025 Thomson Reuters.
+2
+(7) If the court on an application under this section orders a bill to be assessed, it may order the solicitor to deliver
+to the applicant a copy of the bill on payment of the costs of that copy.
+Note
+7C-125.
+1
+Amended by the Legal Services Act 2007 Sch.16 para.66, with effect from 1 January 2010 (SI 2009/3250).
+Subsection (1)—“Person other than … the party chargeable with the bill”
+7C-126 Examples are—a mortgagee, the trustee in bankruptcy of a mortgagor, the liquidator of a company, a subsequent encumbrancer,
+a lessee in respect of his lessor’s costs, a cestui que trust, a party liable to pay the costs of the umpire’s solicitor (Re Collyer-
+Bristow & Co [1901] 2 K.B. 839, CA) a third person who, as a term of an agreement of compromise, agrees to pay costs as
+between solicitor and client (Re Grundy, Kershaw & Co (1881) 17 Ch D 108; Re Chapman (1903) 20 T.L.R. 3). In the latter case,
+if there is a question as to the construction of the agreement, the costs judge has jurisdiction to determine it for the purposes
+of the detailed assessment (Re Hirst & Capes [1908] A.C. 416) though not exclusive jurisdiction (Mosley v Kitson (1912) 57
+S.J. 12). The following have been held not to be entitled to detailed assessment—a volunteer who pays the costs (Re Becke &
+Flower (1843) 5 Beav. 406; Langford v Nott (1820) 1 Jac. & W. 291; Re Cookson (1886) 30 S.J. 305); ratepayers where the bill
+has been paid by a surveyor of highways (Re Barber (1845) 14 M. & W. 720); a party who agrees to pay the opposite party a
+fixed sum for costs on discontinuing proceedings (Re Morris (1872) 27 L.T. 554; Ex p. Docker, Re Heritage (1878) 3 Q.B.D.
+726; Re Grundy, Kershaw & Co, above).
+“As if he were the party chargeable”
+7C-127 The detailed assessment at the instance of the third person is to proceed on the same principles of allowance as though it were
+at the instance of the party chargeable (see Re Wells (1845) 8 Beav. 416; Re Holliday & Godlee (1888) 58 L.T. 301; Re Massey
+(1865) 34 L.J.Ch. 492).
+In Tim Martin Interiors Ltd v Akin Gump LLP [2010] EWHC 2951 (Ch), the court had to consider the correct approach that
+a Costs Judge should adopt on the assessment of a solicitor’s bill at the behest of a third party who is liable to pay it. The
+claimant had borrowed money from a bank, the loan was secured by a mortgage and guaranteed by two directors. The company
+defaulted on the mortgage and breached some of its conditions. The court found that the correct approach was to consider how
+much the solicitors could legitimately have charged the bank for dealing with the matters falling within the scope of its retainer
+by the bank, acting strictly in its capacity as a mortgagee; and secondly, how much of that sum could the bank legitimately
+pass on to the company. Thus two assessments needed to be made: an assessment as between the solicitors and the bank, and
+the second between the bank and the company. This second assessment could be carried out either under CPR 48.3, or by an
+action for an account. CPR 48.3(2) specifically excludes a contract between a solicitor and client. It therefore follows that the
+parties to such an assessment must be the parties to the contract. Thus the bank, or possibly the co-directors, should have been
+party to the assessment of how much the bank was entitled to pass on to the company. On assessment of the solicitor’s bill
+the court had to assess it as if the client himself had required the assessment, so that the third party was entitled to raise such
+objections as the client could have raised, and only such objections. It could not therefore dispute hourly rates, which had been
+agreed between the parties.
+
+Section 71. - Assessment on application of third parties, UKBC-WHITEBK 458578222...
+© 2025 Thomson Reuters.
+3
+On appeal to the Court of Appeal the court carried out an exhaustive examination of earlier authorities, some of which appeared
+to be conflicting. Lloyd LJ stated:
+ 
+“69.… The purpose of the provision for third party assessment [under Section 71 of the 1974 Act] is the
+same as it was under the 1843 Act. It is still to allow for an assessment of the costs as between solicitor and
+client, in a case where a third party is liable to pay those costs and (normally) where there has not been an
+assessment under section 70. The differences in the statutory language are purely presentational, resulting
+from a different approach to the drafting of statutes. They do not change the substance of what the court can
+do under the section. Apart from the fact that an assessment under section 71 must be limited to costs which
+the third party is liable to pay, which may be more restricted in scope than those which the client is liable
+to pay to the solicitor, the certificate resulting from an assessment under section 71 must be for the same
+amount as would have been the result of an assessment under section 70. It also follows that, for what they
+do decide, the cases in the Court of Appeal – particularly Re Longbotham & Sons [1904 2 Ch 152] and Re
+Cohen & Cohen [1905 2 Ch 137] – are binding on us as to the effect of the statute.”
+Lloyd LJ went on to say:
+ 
+“82.Neither on the basis of precedent … nor as a matter of principle does it seem to me that it is open to
+the court on an assessment under section 71 to substitute a lower amount for a higher one, on the basis that
+something is allowable but that the rate claimed is unreasonably high, unless that substitution could have
+been made on an assessment under section 70 as well. Where the client has agreed the bill and paid it, such
+a substitution is not possible under section 70.”
+The court held that on an assessment under s.71 the court can strike out of a bill:
+ 
+(a)any item which relates to business for which the third party is not liable at all; and
+ 
+(b)any item which, as a whole, would only be allowable as against the client on the basis of advice that it would not be
+recoverable against the third party, and therefore is to be treated as subject to a special arrangement between client and
+solicitor.
+The court concluded in the light of its findings that a third party assessment under s.71 is of limited use to a third party, since
+it only allows the Costs Judge to eliminate items which ought not to be laid at the door of the third party at all because they are
+outwith the scope of his liability, and items which are only allowable as between client and solicitor on a special arrangement
+basis within the terms of CPR r.48.8(2)(c). The Costs Judge cannot either eliminate any other item or reduce the quantum of
+any item which is properly included in itself, but for which he considers that the charge made is excessive, unless he could have
+done so as between client and solicitor on an assessment under s.70.
+Lloyd LJ continued:
+ 
+“97.If … the client has paid the solicitor, and the third party has paid the client, then it seems to me that the
+third party’s remedy must lie against the client, not against the solicitor, because it cannot be right to require
+the solicitor to pay to the third party money which he received from his client and which his client was bound
+to pay to him, merely because the third party was not liable to pay the same amount to the client.
+ 
+98.In those circumstances, the third party ought to bring proceedings against the client to establish how much
+was due from him to the client. In a mortgage case such as the present, the proceedings would be conventional
+proceedings for an account of what was due under the mortgage. Such proceedings would enable the court
+to determine the correct issue as between the correct parties, and if appropriate to order repayment by the
+mortgagee to the mortgagor. In such proceedings it would be possible for the court to do what cannot be done
+under a section 71 assessment, namely to disallow part of an amount claimed on the basis that something
+was due, but not as much as is claimed – for example by substituting a lower hourly rate.
+...
+
+Section 71. - Assessment on application of third parties, UKBC-WHITEBK 458578222...
+© 2025 Thomson Reuters.
+4
+ 
+100.Instead of seeking an assessment under section 71, therefore, in almost all cases a mortgagor or other
+party seeking to challenge the costs claimed and received by a mortgagee should bring a claim for an account
+of the sums due under the mortgage.”
+Tim Martin Interiors Ltd v Akin Gump LLP [2011] EWCA Civ 1574.
+However, in Kenig v Thomson Snell and Passmore LLP [2024] EWCA Civ 15, the Court of Appeal distinguished Tim Martin and
+concluded that the same principles did not apply to assessments under s.71(3), namely where a trustee, executor or beneficiary
+was liable to pay the bill. In such cases, following Brown (A Solicitor), Re v (1867) L.R. 4 Eq. 464, the court may embark on
+a wider enquiry going to the quantum of the costs as well as their scope.
+Where a third party’s liability is dependent on a contract, express or implied, to pay costs the fact that he obtains an order for
+detailed assessment under this section does not alter the nature or enlarge or extend the scope of that liability which will be
+determined on a proper construction of that contract. Nor can he dispute the amount properly payable as between the solicitor
+and his client.
+The Law Society instructed solicitors to intervene in another solicitor’s practice. The intervening solicitor submitted five bills
+to the Law Society for their professional charges. The Society paid the bills and sought reimbursement from the solicitor whose
+practice had been intervened. That solicitor applied for detailed assessment of the bills under s.71. The Court of Appeal held
+that the bills clearly were solicitors bills within the meaning of s.70(1) of the 1974 Act and that para.13 of Pt 2 of Sch.I to the
+Act did not override or exclude the right conferred by s.71. Section 71 was of general application, it recognised that the person
+chargeable with the bill might not be ultimately liable to pay the costs thereby claimed. Its evident purpose was to confer on
+one with a secondary liability for those costs a right comparable to that possessed by the person primarily liable: Pine v The
+Law Society [2002] EWCA Civ 175; [2002] 2 All E.R. 658; [2002] 1 W.L.R. 2189, CA.
+Subsection (3)—“Any person interested in any property”
+7C-128 This includes a creditor who has obtained a judgment in an administration action, and he can assess a bill of costs paid by the
+deceased (Re Jones & Everett [1904] 2 Ch. 363). For the rights of a cestui que trust in respect of a bill delivered to his trustee,
+see Re Downes (1844) 5 Beav. 425; Re Brown (1867) L.R. 4 Eq. 464). A trustee in bankruptcy is not such a “trustee” as to enable
+the bankrupt to obtain detailed assessment (Re Leadbitter (1878-79) L.R. 10 Ch D 388).
+Subsection (4)—“The provisions of section 70”
+7C-129 So, if the bill has already been paid, no order will be made in the absence of “special circumstances” (Re Wellborne [1901] 1
+Ch. 312); and see notes to s.69, paras 7C-103 et seq.
+The court allowed a beneficiary under a will to apply to have assessed solicitors’ bills which had been discharged out of the
+estate even though some had been paid more than twelve months before the application, and in respect of others there were
+no special circumstances. The court held that the power under s.71(3) of the Act was a separate power and although s.70(3)
+had to be taken into account under s.71(4), it was not determinative of the application. It was for the applicant to persuade the
+court that it should, in all the circumstances, order assessment: McIlwraith v McIlwraith and Stevens & Bolton [2002] EWHC
+1757 (Ch), (HHJ Rich QC). In Kenig v Thomson Snell and Passmore LLP [2024] EWCA Civ 15, the Court of Appeal appeared
+to reach a similar conclusion at [54].
+
+Section 71. - Assessment on application of third parties, UKBC-WHITEBK 458578222...
+© 2025 Thomson Reuters.
+5
+The application
+7C-130 As to the application, see para.7C-114.
+County courts
+7C-131 See note at para.7C-110.
+End of Document
+© 2025 SWEET & MAXWELL

@@ -1,0 +1,57 @@
+Termination of the Emergency Arbitration Proceedings..., UKBC-ICCARBN...
+© 2025 Thomson Reuters.
+1
+Termination of the Emergency Arbitration Proceedings without
+an Order
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+Termination of the Emergency Arbitration Proceedings without an Order
+29-88
+The Order of the Emergency Arbitrator, and its notification to the parties is the last step in any Emergency Arbitration
+Proceeding. The Emergency Arbitrator Provisions expressly foresee one situation where the Emergency Arbitration Proceedings
+are brought to an end without an Order having been issued by the Emergency Arbitrator. Article 1(6) of the Emergency Arbitrator
+Rules authorises the ICC Court’s President to terminate the Emergency Arbitrator Proceedings, if the applicant has failed to
+file a Request for Arbitration within 10 days upon having filed the Application. The requirement to do so follows from art.1(6)
+of the Emergency Arbitrator Rules.
+29-89
+Thus, the ICC Court’s President will first have to consult the Emergency Arbitrator before taking such a radical measure. Article
+1(6) of the Emergency Arbitrator Rules expressly authorises the Emergency Arbitrator to determine that a longer period of time
+is necessary for filing the Request for Arbitration. This may be the case in multi-tier arbitration clauses that provide for a “cooling
+off” period before a party can file its Request for Arbitration. The dispute resolution mechanism in the FIDIC Conditions of
+Contract provide, a good example of cooling-off periods that are not compatible with the 10 days under art.1(6) of the Emergency
+Arbitrator Rules. Such provisions should not per se prevent a party from seeking Emergency Measures pending the cooling-off
+period. 600  In the case of the FIDIC Conditions, the question arises, however, whether they do not take precedence over and,
+in fact, exclude the Emergency Arbitrator Provisions, as per art.29(6)(c). 601
+29-90
+The possibility to extend the time limit for filing the Request for Arbitration, based on the Emergency Arbitrator’s assessment,
+attenuates the stringent and very short 10-day time limit, and effectively allows the Emergency Arbitrator to determine the
+deadline by which the applicant must file the Request for Arbitration.
+29-91
+The Emergency Arbitrator will have to inform not only the ICC Court’s President, but also the parties of his or her decision to
+allow a longer period for the filing of the Request for Arbitration, and may have to invite the latter for comments prior to making
+such decision. The extension will have to be notified by the Secretariat to both parties. The Emergency Arbitrator Rules do not
+indicate the criteria that are to be considered in determining that a longer period is necessary. If the arbitration clause conditions
+the filing of the Request for Arbitration on a lapse of time, be it for a simple “cooling off” period prior mediation proceedings,
+an extension of the time limit is likely to be justified. The 10-day time limit in art.1(6) of the Emergency Arbitrator Rules is
+particularly short, compared, for instance, to the 30 days that the SCC Rules provide in the similar situation. 602  In practice,
+any plausible explanation of why the drafting of the Request for Arbitration could not yet have been completed, coupled with
+a request for a reasonable extension of time, should normally be sufficient for the Emergency Arbitrator’s determination. An
+extension of 20 days (or less) would normally seem to be reasonable.
+Footnotes
+
+Termination of the Emergency Arbitration Proceedings..., UKBC-ICCARBN...
+© 2025 Thomson Reuters.
+2
+600
+One of the ICC’s standard clauses expressly states that if the dispute has not been settled pursuant to the Mediation Rules
+within 45 days following the filing of a Request for Mediation, the dispute shall then be settled under the ICC Rules
+of Arbitration, see ICC model clause “Obligation to submit dispute to Mediation, followed by arbitration, if required,”
+Part II, Document 1.
+601
+This issue is discussed at para.29-132 and following.
+602
+SCC Rules App.II art.9(4)(iii).
+End of Document
+© 2025 SWEET & MAXWELL

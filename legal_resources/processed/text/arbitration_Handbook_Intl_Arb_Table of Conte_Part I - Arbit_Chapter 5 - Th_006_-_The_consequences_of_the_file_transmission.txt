@@ -1,0 +1,85 @@
+The consequences of the file transmission, UKBC-ICCARBN 474406969 (2022)
+© 2025 Thomson Reuters.
+1
+The consequences of the file transmission
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+The consequences of the file transmission
+16-11
+The transmission of the file to the Tribunal automatically changes the direct counterpart for the parties: it is no longer the
+Secretariat, but henceforth the Tribunal. In its cover letter to the parties, when transmitting the file, the Secretariat expressly
+advises them to correspond directly with the Tribunal from now on. It is the latter that is from now on in charge of the case, and
+which up to the final award will take all decisions, unless on matters for which the ICC Court retains exclusive responsibility. 5
+16-12
+The transmission of the file triggers the running of a one-month time-limit to have the Terms of Reference signed, as per
+art.23(1) and the 15-day period to convene the case management conferences for arbitrations subject to the Expedited Procedure
+Provisions. The Secretariat will point out in its cover letter to the Tribunal the relevant time limits. As a result, the obligation
+to deal with the case in a timely fashion starts from the moment of the transmission of the file pursuant to art.16.
+16-13
+Under art.28(1), “[u]nless the parties have otherwise agreed, as soon as the file has been transmitted to it, the arbitral tribunal
+may, at the request of a party, order any interim or conservatory measure it deems appropriate”. Therefore, once the file has
+been transmitted, the Tribunal may issue such interim or conservatory measures, whether or not the Terms of Reference have
+been signed. Prior to transmittal of the file, a party would have to obtain interim measures from a national court, or apply for
+emergency arbitrator measures under art.29. That does not preclude the parties from filing a request for interim relief with
+their Request or Answer or shortly thereafter. Nevertheless, the Tribunal will only be able to deal with it once the file has been
+transmitted. In addition, prior to the transmittal of the file to the Tribunal, a party may file an application under Part VII D of the
+2021 ICC Note for the Expeditious Determination of Manifestly Unmeritorious Claims or Defenses, although, as with interim
+measures, such an application can only be dealt with once the file has been transmitted to and received by the Tribunal.
+16-14
+As noted above, for arbitrations under the Expedited Procedure Provisions, a case management conference is to be convened
+within 15 days after transmittal of the file to the Tribunal. With respect to other arbitrations, pursuant to art.24(1), the case
+management conference must be convened when drawing up the Terms of Reference, or as soon as possible thereafter, i.e.
+within a relatively short period of the transmission of the file to the Tribunal.
+16-15
+Under art.25(1), “[t]he arbitral tribunal shall proceed within as short a time as possible to establish the facts of the case by all
+appropriate means”. Usually, the Tribunal deals with procedural issues after the Terms of Reference have been signed. However,
+nothing prevents the Tribunal from taking steps with respect to establishing the facts of the case as soon as it has received
+the file from the Secretariat and it may well be appropriate to do so to expedite the proceedings. This is particularly the case
+where the arbitration is subject to the Expedited Procedure Provisions or where there is a pending application for Expeditious
+Determination of Manifestly Unmeritorious Claims or Defenses.
+16-16
+Pursuant to art.11(3), the arbitrator’s disclosure duty regarding only facts or circumstances of a similar nature to those referred
+to in art.11(2) concerning his or her impartiality or independence is an ongoing one that exists until the end of the arbitration. 6
+As a practical matter, it may be that upon receipt of the file an arbitrator realises that an issue with respect to his impartiality
+and/or independence could exist, of which it had not been aware of before. The transmission of the file also represents an
+
+The consequences of the file transmission, UKBC-ICCARBN 474406969 (2022)
+© 2025 Thomson Reuters.
+2
+important moment for the arbitrator when it comes to assessing the disclosure duty towards the parties. 7  For example, the
+Request or Answer may provide further details of the parties or their action, or the probable witnesses that raise the issue of
+a conflict. It may also be that additional or replacement counsel has been appointed for one of the parties, which may result
+in the need for disclosure by one of the arbitrators. 8  The usual solution in such a case is for the arbitrator to disclose the fact
+and invite the comments of the parties. Such disclosure is required by art.11(3). Since the proceedings have just commenced,
+replacement of an arbitrator may be less problematic at this stage than later in the proceedings. In addition, as the Tribunal will
+not have taken any substantive steps, a party may well waive a potential conflict as it may have little or no incentive to have an
+arbitrator replaced. Disclosure later in the proceedings may result in a more critical approach by the parties if they have become
+dissatisfied with the Tribunal’s procedural or substantive decisions.
+16-17
+Once the Tribunal has received the file, it will be entitled to a fee even if the arbitration thereafter gets settled and thus withdrawn
+shortly thereafter, and provided it has done some work, e.g. read into the file. Pursuant to art.2 of Appendix III, when fixing
+the arbitrators’ fees, the Court takes into consideration, amongst other factors, the time spent by the arbitrators. As regards
+the payment of advances on fees, the ICC Court considers it appropriate to pay 35 per cent of the minimum fee in Expedited
+Procedure Provisions cases once the case management conference has been held, and 50 per cent of the minimum fee in other
+cases once the Terms of Reference have been established. 9  These thresholds may be viewed as the upper ceilings for fixing
+the arbitrators’ fees in the event of early termination of the proceedings.
+16-18
+The time the co-arbitrators spent in selecting the president does normally not give rise to remuneration by the ICC Court, in
+case the matter settles or is not pursued for some other reason prior to the file transmission.
+Footnotes
+5
+Such as, e.g. an increase of the advance on costs, the granting of an advance on costs to the arbitrators, deciding upon
+the challenge or replacement of an arbitrator, to mention but a few.
+6
+See para.11-38.
+7
+Sometimes, several weeks, if not months, may have passed since the arbitrator first submitted the Statement of
+Acceptance, Availability, Impartiality and Independence.
+8
+See in this context the new art.17(1), discussed in paras 17-5–17-6.
+9
+See Part XIV D of the 2021 ICC Note (at para.186), Doc.3.1.
+End of Document
+© 2025 SWEET & MAXWELL

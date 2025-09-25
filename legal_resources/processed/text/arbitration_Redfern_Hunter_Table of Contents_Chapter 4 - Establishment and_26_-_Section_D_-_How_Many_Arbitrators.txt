@@ -1,0 +1,109 @@
+Section D. - How Many Arbitrators?, UKBC-REDFERN 530638628 (2025)
+© 2025 Thomson Reuters.
+1
+Section D. - How Many Arbitrators?
+Redfern and Hunter on International Arbitration 7th Ed.
+Mainwork
+Chapter 4 - Establishment and Organisation of an Arbitral Tribunal
+Section D. - How Many Arbitrators?
+(a) Introduction
+4. 16
+The establishment of an arbitral tribunal involves many considerations. First, should there be more than one arbitrator, and if
+so, how many more ? Some national laws sensibly provide that the number of arbitrators must be uneven. Clauses providing for
+two arbitrators and an ‘umpire’, used historically in shipping and commodities disputes, are now largely relics and in any event
+unsuitable for contemporary international arbitration. 32  Tribunals of five (or more) arbitrators are best reserved for arbitrations
+between sovereign states. 33  In commercial cases, the choice is usually between one arbitrator and three, and in investment
+arbitrations, it is usual for three members to be appointed.
+(b) Sole arbitrators
+4. 17
+Article 12.2 of the ICC Rules provides that, where the parties have not agreed upon the number of arbitrators, the Court shall
+appoint a sole arbitrator unless it appears to the Court that ‘the dispute is such as to warrant the appointment of three arbitrators’.
+Following the same policy, Article 5.8 of the LCIA Rules states: ‘A sole arbitrator shall be appointed unless the parties have
+agreed in writing otherwise or the LCIA Court determines that in the circumstances a three-member tribunal is appropriate (or,
+exceptionally, more than three).’
+4. 18
+The ICDR Rules adopt a similar approach, with a sole arbitrator being the default solution, although the size and complexity of
+the case will be taken into account in the decision as to whether or not to constitute a three-member tribunal. Article 12 provides:
+If the parties have not agreed on the number of arbitrators, one arbitrator shall be appointed unless the
+Administrator determines that three arbitrators are appropriate because of the size, complexity, or other
+circumstances of the case. 34
+4. 19
+The advantages of referring a dispute to a sole arbitrator are self-evident. Appointments for meetings or hearings can more
+easily be arranged. The interests of economy are also served since the parties will have to bear the fees and expenses of only
+one arbitrator. Moreover, the arbitral proceedings should be completed more quickly, since (obviously) a sole arbitrator does
+not need to ‘deliberate’ with colleagues to arrive at an agreed, or majority, decision. If the parties to an international arbitration
+are able to agree upon the appointment of a sole arbitrator, it makes sense for them to do so, unless the amounts in dispute are
+so high that it seems more prudent to appoint three arbitrators. The disadvantages of a sole arbitrator include a possibly greater
+risk of error since sole arbitrators do not benefit from a broader discussion of the case with their co-arbitrators. 35
+4. 20
+
+Section D. - How Many Arbitrators?, UKBC-REDFERN 530638628 (2025)
+© 2025 Thomson Reuters.
+2
+Where the agreement provides for a sole arbitrator, and the parties cannot agree on the person to be appointed, an arbitrator
+will be chosen for them by a national court or by an agreed appointing authority 36  (thus depriving the parties of one of the
+fundamental benefits of arbitration, namely participating in the choice of the tribunal).
+4. 21
+In practice, there is usually a preference for the appointment of three arbitrators in all but the smallest cases. The UNCITRAL
+Rules reflect this preference by providing that if the parties have not previously agreed otherwise, three arbitrators will be
+appointed 37  and a similar provision is contained in the Model Law. 38
+(c) Three arbitrators
+4. 22
+The preference for international disputes to be referred to three arbitrators has much to commend it. It means that each party
+will usually be entitled to nominate one arbitrator, leaving the third arbitrator to be chosen either by agreement of the parties,
+or by the two party-appointed arbitrators, or by an institution. The advantage to a party of being able to nominate an arbitrator
+is that it gives a sense of investment in the arbitral tribunal. Each party will have at least one ‘judge of its choice’ to listen
+to its case. 39  This is particularly important in an international arbitration, where a party may select an arbitrator who will be
+able to explain to the other tribunal members any differences of language, tradition, or culture between the parties. In addition,
+party-appointed arbitrators can help to clarify the case advanced by their appointing party, whilst remaining independent and
+impartial, and so fulfil a useful role in ensuring due process.
+4. 23
+A three-member tribunal is inevitably more expensive than one that consists of a sole arbitrator and it will usually take longer
+to render its award. However, as already stated, the risk of an error of law or fact by a three-member tribunal is likely to be
+lower than it is with a sole arbitrator.
+(d) More than three arbitrators
+4. 24
+Even in a case of major importance, three carefully chosen and appropriately qualified arbitrators should be sufficient to dispose
+satisfactorily of the issues in dispute. The occasional practice of states in agreeing inter-state arbitral tribunals of five, seven,
+or more is usually dictated by political, rather than by practical, considerations.
+Footnotes
+32
+The LMAA still recognises the possibility of two arbitrators and an umpire in its Rules (LMAA Terms 2021, Art. 9) but,
+absent a specific agreement on the number of arbitrators, three arbitrators will be appointed (LMAA Terms, Art. 8.a).
+33
+For example, Mexico v USA (Cross-Border Trucking) USA-98-2008-01, 6 February 2001, in which one of the authors
+was the chair of the tribunal, available online at http://www.nafta-sec-alena.org/. The USMCA, like its predecessor
+the NAFTA, provides for the appointment of a ‘panel’ of five members in inter-state disputes without calling them
+‘arbitrators’ (Art. 31.9.1(a)). Other examples may be found online at http://www.pca-cpa.org/, e.g. Ireland v United
+Kingdom (Mox Plant), an arbitration pursuant to Annex VII of UNCLOS, and Channel Tunnel Group Ltd and France-
+Manche SA v United Kingdom and France, UNCITRAL, PCA, Partial Award, 30 January 2007, IIC 58 (2007), an
+arbitration brought under a concession agreement between the parties in accordance with Art. 19 of the Treaty of
+Canterbury between the United Kingdom and France, dated 12 February 1986. A more recent example is The ‘Enrica
+
+Section D. - How Many Arbitrators?, UKBC-REDFERN 530638628 (2025)
+© 2025 Thomson Reuters.
+3
+Lexie’ Incident (Italy v India), PCA Case No. 2015-28. In 2018, an award was rendered by the first ever five-member
+ICC tribunal in PT Ventures v Unitel, ICC Case No. 21404/ASM.
+34
+Pursuant to the ICDR Rules, Art. 1.1, the ICDR is the ‘administrator’ of the rules.
+35
+An error in an arbitral award is potentially more serious in arbitration since, unlike the courts where errors by a first
+instance judge sitting alone can be corrected on appeal, an arbitral award is generally final on the merits.
+36
+The procedure for the appointment of arbitrators is discussed at paragraphs 4.25ff.
+37
+UNCITRAL Rules, Art. 7.1.
+38
+Model Law, Art. 10(2).
+39
+The expression ‘judge of its choice’ comes from the Hague Conventions on the Pacific Settlement of International
+Disputes of 1899 (Art. 15) and 1907 (Art. 37). However, there is a debate as to the pros and cons of party appointments
+within the arbitral process. See Paulsson, ‘Moral hazard in international dispute resolution’, Inaugural lecture as holder
+of Michael R. Klein Distinguished Scholar Chair, University of Miami School of Law, Miami, FL, 29 April 2010;
+Brower and Rosenberg, ‘The death of the two-headed nightingale: Why the Paulsson–van den Berg presumption that
+party-appointed arbitrators are untrustworthy is wrongheaded’ (2013) 29 Arb Intl 43. See also the analysis in Gomez-
+Acebo, Party-Appointed Arbitrators in International Commercial Arbitration (Kluwer Law International, 2016).
+End of Document
+© NIGEL BLACKABY KC, CONSTANTINE PARTASIDES
+KC, ALAN REDFERN

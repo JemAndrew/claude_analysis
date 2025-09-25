@@ -1,0 +1,88 @@
+Case Management Techniques, UKBC-ICCARBN 474407037 (2022)
+© 2025 Thomson Reuters.
+1
+Case Management Techniques
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+Case Management Techniques
+24-10
+The case management conference is also intended to provide an occasion to discuss, if need be, any of the case management
+techniques described in App.IV of the Rules which reads as follows:
+“The following are examples of case management techniques that can be used by the arbitral tribunal and the
+parties for controlling time and cost. Appropriate control of time and cost is important in all cases. In cases of
+low complexity and low value, it is particularly important to ensure that time and costs are proportionate to what
+is at stake in the dispute.
+ 
+a)Bifurcating the proceedings or rendering one or more partial awards on key issues, when doing so may
+genuinely be expected to result in a more efficient resolution of the case.
+ 
+b)Identifying issues that can be resolved by agreement between the parties or their experts.
+ 
+c)Identifying issues to be decided solely on the basis of documents rather than through oral evidence or legal
+argument at a hearing.
+ 
+d)Production of documentary evidence:
+ 
+(i)requiring the parties to produce with their submissions the documents on which they rely;
+ 
+(ii)avoiding requests for document production when appropriate in order to control time and cost;
+ 
+(iii)in those cases where requests for document production are considered appropriate, limiting such
+requests to documents or categories of documents that are relevant and material to the outcome of the
+case;
+ 
+(iv)establishing reasonable time limits for the production of documents;
+ 
+(v)using a schedule of document production to facilitate the resolution of issues in relation to the
+production of documents.
+ 
+e)Limiting the length and scope of written submissions and written and oral witness evidence (both fact
+witnesses and experts) so as to avoid repetition and maintain a focus on key issues.
+ 
+f)Using telephone or video conferencing for procedural and other hearings where attendance in person is not
+essential and use of IT that enables online communication among the parties, the arbitral tribunal and the
+Secretariat of the Court.
+ 
+g)Organising a pre-hearing conference with the arbitral tribunal at which arrangements for a hearing can be
+discussed and agreed and the arbitral tribunal can indicate to the parties issues on which it would like the
+parties to focus at the hearing.
+ 
+h)Settlement of disputes:
+
+Case Management Techniques, UKBC-ICCARBN 474407037 (2022)
+© 2025 Thomson Reuters.
+2
+ 
+(i)encouraging the parties to consider settlement of all or part of the dispute either by negotiation or
+through any form of amicable dispute resolution methods such as, for example, mediation under the
+ICC ADR Rules;
+ 
+(ii)where agreed between the parties and the arbitral tribunal, the arbitral tribunal may take steps to
+facilitate settlement of the dispute, provided that every effort is made to ensure that any subsequent
+award is enforceable at law.”
+24-11
+The list in App.IV is a checklist of elements that may, at some stage of the proceedings, be relevant. However, where experienced
+counsel are involved, they will be familiar with these techniques and will have considered them without the assistance of the
+Tribunal. Most experienced Tribunals are very familiar with the above techniques and the issues that they raise.
+For example, with respect to (a) bifurcation, there is frequently, as discussed below, a trade-off between bifurcating a specific
+claim and deciding the case as a whole if the bifurcated issue is not dispositive of the case. With respect to (b) it is now standard
+practice to at least consider the possibility of having experts meet to seek to agree on issues between them and to identify the
+reasons as to which they differ on other issues. With regard to (c), there are issues that may be capable of resolution based
+on documents only. However, this type of approach is generally only suitable for smaller cases or for specific and discrete
+issues, such as, for instance, jurisdiction. With regard to (d) it is standard practice to use a Redfern schedule for documentary
+requests and to seek to limit documentary production to issues that the Tribunal considers material and relevant to the case. In
+this respect the IBA Rules on Evidence are a key reference point. With regard to (e), practices diverge with respect to limitations
+on the length of submissions. In the authors’ view such limitations are only appropriate in smaller cases prior to the evidentiary
+hearings but perfectly acceptable for post-hearing briefs. With regard to (f), in the authors’ experience, unless counsel is located
+in the same city as the Tribunal, case management conferences are generally carried out by telephone or video conference.
+This tendency has been reinforced by the desire to hold such case management conferences promptly after transmittal of the
+file to the Tribunal and even more so by the outbreak of the Covid-19 pandemic. With regard to (g), it is standard practice to
+hold a pre-hearing conference. In the authors’ view it would only be in smaller cases that the Tribunal would seek to orient the
+issues to be dealt with at the main evidentiary hearings. However, if there is an issue that has not been dealt with in the parties’
+submissions, the Tribunal may and should raise it. With regard to (h), counsel is well aware of the possibility of settlement and
+the Tribunal should be wary of being seen to seek to avoid to deal with its responsibility, which is to decide the case according
+to applicable law.
+End of Document
+© 2025 SWEET & MAXWELL

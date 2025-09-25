@@ -1,0 +1,36 @@
+Correspondence with sample or model, UKBC-BULLENL 459372222 (2022)
+© 2025 Thomson Reuters.
+1
+Correspondence with sample or model
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part F - Business Law
+Chapter 25 - Supply of Goods and Digital Content
+Action for breach of condition or warranty
+Correspondence with sample or model
+25-30
+Where goods are sold by sample, SGA s.15 creates what are, in effect, two separate conditions:
+ 
+(a)a condition that the bulk will correspond with the sample in quality (SGA s.15(2)(a));
+ 
+(b)a condition that the goods will be free from any defect, rendering them unsatisfactory which would not be apparent on
+reasonable examination of the sample (SGA s.15(2)(c)).
+The second condition brings in the concept of satisfactory quality as defined by s.14(2A). As with correspondence with
+description, this condition is not confined to sales made in the course of a business.
+These provisions have been much expanded by the CRA for consumer sales. CRA s.13(2) provides:
+“Every contract to which this section applies is to be treated as including a term that—
+ 
+(a)the goods will match the sample except to the extent that any differences between the sample and the
+goods are brought to the consumer’s attention before the contract is made, and
+ 
+(b)the goods will be free from any defect that makes their quality unsatisfactory and that would not be
+apparent on a reasonable examination of the sample.”
+This is bolstered by two other provisions. CRA s.11(2) provides that where a supply is by sample as well as by description, it
+is not sufficient that the bulk of the goods matches the sample if the goods do not also match the description. The second is
+a new concept, supply by reference to a model. Under CRA s.14, if supply is by reference to a model, there is an obligatory
+contractual term that the goods will match the model except to the extent that differences between the model and the goods are
+brought to the consumer’s attention before he enters into the contract.
+The terms imported by CRA ss.11, 13 and 14 cannot be excluded—CRA s.31.
+End of Document
+© 2025 SWEET & MAXWELL

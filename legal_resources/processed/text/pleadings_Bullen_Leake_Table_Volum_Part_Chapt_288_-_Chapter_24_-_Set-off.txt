@@ -1,0 +1,51 @@
+Chapter 24 - Set-off, UKBC-BULLENL 459371947 (2022)
+© 2025 Thomson Reuters.
+1
+Chapter 24 - Set-off
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part F - Business Law
+Chapter 24 - Set-off
+24-01
+Set-off is a method of adjusting cross claims to monetary relief. In the absence of lien or some form of real security, an entitlement
+to set-off does not give one party the right to detain the property or assets of the other as a “set-off” against the other’s monetary
+claims. 1
+Where a claimant claims a sum of money against a defendant who has a monetary cross-claim, such that the defendant is entitled,
+to the extent of his cross-claim, to be relieved from payment of the claim and to set it up as a defence in the claimant’s action,
+the defendant is exercising a right of set-off to the extent of his cross-claim.
+The defendant’s claim may be for an unascertained amount. CPR Pt 16.6 does not limit the right of set-off to ascertained sums.
+The application is, however, limited to money claims and operates as a defence to the claimant’s action, thereby rendering the
+defendant no longer liable to the obligation on the claim. Notwithstanding the broad terms of CPR Pt 16.6, the courts do not
+classify a set-off as a monetary cross-claim raised by a defendant to the claimant’s claim, but continue to identify set-offs under
+well-established headings such as legal and equitable set-offs. 2
+With contracts for the sale of goods and for work done, the Sale of Goods Act 1979 permits a defendant to raise a breach of
+warranty as a defence to a claim for the price. In this case the defendant is not strictly setting off his claim at all but exercising
+a right to an abatement of the price provided that he establishes that the seller’s breach has caused him damage.
+Note that Re Kauping Singer v Friedlander Ltd (In Administration) was overturned by the Supreme Court on the provisions
+of insolvency law.
+A contractual clause excluding a right of set-off may, in an appropriate case, be avoided under the Unfair Contract Terms Act
+1977. 3
+In the relatively unlikely event of a set-off being asserted by a trader in a consumer contract or the somewhat more likely event
+of a right of set off being excluded by a trader in such a contract, the fairness of the term would now be judged under Pt 2 of
+the Consumer Rights Act 2015. It is at least arguable that a clause excluding a set off would fall foul of para.18 of Sch.2 to the
+2015 Act—the so-called “Grey List” of terms which are presumed to be unfair until refuted by the trader.
+In practice, a defence of set-off will nearly always be accompanied by a counterclaim. The right to set up a counterclaim,
+however, is much wider than the right of set-off and many counterclaims will often end the defence section of the defence and
+counterclaim with a plea of set-off: if, in the event, no set-off of the counterclaim is possible, it is very unlikely that its inclusion
+in the defence will have added to the costs of the action.
+Footnotes
+1
+Smith (Administrator of Cosslett (Contractors) Ltd) v Bridgend CBC [2001] UKHL 58; [2002] 1 A.C. 336.
+2
+Re Kauping Singer v Friedlander Ltd (In Administration) [2009] EWHC 740 (Ch); [2009] 2 Lloyd’s Rep. 154; Fearns
+v Anglo-Dutch Paint & Chemical Co Ltd [2010] EWHC 2366 (Ch); [2011] 1 W.L.R. 366.
+
+Chapter 24 - Set-off, UKBC-BULLENL 459371947 (2022)
+© 2025 Thomson Reuters.
+2
+3
+FG Wilson (Engineering) Ltd v John Holt & Co (Liverpool) Ltd [2012] EWHC 2477 (Comm); [2013] 1 All E.R. (Comm)
+223.
+End of Document
+© 2025 SWEET & MAXWELL

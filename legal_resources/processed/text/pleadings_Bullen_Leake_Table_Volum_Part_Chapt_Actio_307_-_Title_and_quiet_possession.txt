@@ -1,0 +1,37 @@
+Title and quiet possession, UKBC-BULLENL 459372181 (2022)
+© 2025 Thomson Reuters.
+1
+Title and quiet possession
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part F - Business Law
+Chapter 25 - Supply of Goods and Digital Content
+Action for breach of condition or warranty
+Title and quiet possession
+25-23
+The basic rule of the SGA is that there is an implied condition on the part of the seller that, in the case of a sale, he has the
+right to sell the goods and, in the case of an agreement to sell, that he will have that right at the time when property is to pass
+(SGA s.12(1)). There are warranties that the goods are free from all charges and encumbrances unless disclosed by the seller
+or otherwise known to the buyer and that the buyer will enjoy quiet possession of the goods (SGA s.12(2)). There are similar
+warranties applying to sales where the seller is transferring only such title as he or a third party may have (SGA s.12(3), (4)
+and (5)).
+The condition in SGA s.12(1) is regarded as fundamental by the courts. If it turns out, long after the goods have been delivered,
+that the seller had no right to sell, the buyer may treat the contract as repudiated and recover back the price and he need give
+no allowance for the value of any use of the goods he may have enjoyed in the meantime. 12
+If between the sale and the buyer’s decision to avoid the contract under SGA s.12(1), a seller who had no title at the time of
+sale acquires title, this will “feed title” to the buyer and preclude him from treating the contract as repudiated by the seller. 13
+This is an area where the law for consumer sales has been replaced by the CRA. As the CRA is legislating for all contracts
+where the ownership or possession of goods is transferred, it necessarily has to adopt a global approach. CRA s.17 compulsorily
+imports into every supply contract a term that “the trader must have the right to sell or transfer the goods at the time when
+ownership of the goods is to be transferred”—s.17(1)(b)—unless the circumstances show that the contract is to transfer the
+limited title of the trader or of a third party—s.17(4). There is a term that the goods are free from any charge or encumbrance
+not disclosed to the buyer and that the buyer will enjoy quiet possession—s.17(2). This term cannot be excluded—CRA s.31.
+Footnotes
+12
+Rowland v Divall [1923] 2 K.B. 500; Karflex Ltd v Poole [1933] 2 K.B. 251; Barber v NWS Bank Plc [1996] 1 W.L.R.
+641.
+13
+Butterworth v Kingsway Motors Ltd [1954] 1 W.L.R. 1286.
+End of Document
+© 2025 SWEET & MAXWELL

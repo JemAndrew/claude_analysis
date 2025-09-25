@@ -1,0 +1,79 @@
+The right to sue, UKBC-BULLENL 459372408 (2022)
+© 2025 Thomson Reuters.
+1
+The right to sue
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part F - Business Law
+Chapter 26 - Title to Goods—Torts Against Goods
+The right to sue
+26-10
+The claimant must show that at the time of the conversion he was either in actual possession of the goods or entitled to immediate
+possession of them. It is not necessary to show a title of absolute ownership. Title unaccompanied by either actual possession
+or an immediate right to possession is insufficient to support an action in conversion (The Winkfield. 24  The title to possession
+must be a legal title: an equitable title will not be sufficient 25 ).
+Even a person in possession of goods which he has acquired knowing them to have been stolen has a title good against everyone
+except the true owner or someone claiming under him. 26
+The interest on which the claimant relies must have vested in him at the time of the act of conversion, 27  unless the right to sue
+passed to the claimant as part of the transfer of the goods to him. 28
+Where goods have been bailed, it will depend on the terms of the bailment who is to be treated as being in possession of the
+goods or as entitled to possession. If the bailment confers exclusive possession on the bailee as long as the bailment lasts, only
+the bailee can maintain an action for conversion as the bailor has no immediate right to possession. Examples of such bailments
+are letting on hire, pledging or delivering the goods to someone who acquires a lien. 29  An unpaid vendor protected by his lien
+has exclusive possession. The purchaser cannot bring an action unless he has tendered the price and thus become immediately
+entitled to possession. 30
+Title to sue was considered by the Court of Appeal in Iran v Barakat Galleries Ltd. 31  Where the owner of goods, who had an
+immediate right to possession of them, albeit that they were in the possession of a third party, by agreement transferred his title
+to a new owner, the new owner could bring a claim in conversion against the person in whose possession they were. Where
+the owner of goods with an immediate right to possession of them by contract transferred the latter right to another, so that
+he no longer had an immediate right to possession but retained ownership, it would seem right in principle that the transferee
+should be entitled to sue in conversion. A fortiori, if the contract provided that when the transferee entered into possession,
+ownership would be transferred to him.
+26-11
+If the bailee commits an act inconsistent with the bailment which terminates the bailment or entitles the bailor to do so, the
+bailor has the necessary right to possession to sue the bailee or any transferee from him. 32  A breach of bailment by a pledgee
+or an unpaid seller does not give the pledgor or buyer a right of action: only if redemption or payment of the price is tendered
+can they sue. 33
+A bailee at will (e.g. the borrower under a gratuitous loan) has a concurrent possession with his bailor: either may sue. A servant
+or agent may have merely custody of the goods, and possession will remain exclusively with the employer or principal who
+alone can sue.
+As mere possession will suffice to ground an action, a finder or other person who has come into actual possession of goods
+may sue. Much of the old law concerning the difference between such possession (called “special property”) and title to the
+goods (“general property”) has become academic with the abolition of the rule known as jus tertii which prohibited a defendant
+from setting up as a defence the fact that some person other than the claimant or a person through whom the defendant claimed
+
+The right to sue, UKBC-BULLENL 459372408 (2022)
+© 2025 Thomson Reuters.
+2
+had a better title than the claimant (see s.8(1)). A co-owner can sue his fellow owner in conversion where the goods have been
+destroyed or disposed of whether or not such disposal was effective to transfer title to the transferee (see s.10).
+Not every act by a bailee which may set up a right inconsistent with that of the bailor will amount to a conversion by the bailee.
+This was emphasised by the Court of Appeal in BMW Financial Services (GB) Ltd v Bhagwanani. 34
+Footnotes
+24
+The Winkfield [1902] P. 42.
+25
+MCC Proceeds Inc v Lehman Bros International Europe [1998] 4 All E.R. 675.
+26
+Costello v Chief Constable of Derbyshire Constabulary [2001] 3 All E.R. 150; Jaroo v Attorney General of Trinidad
+[2002] 2 W.L.R. 705.
+27
+The Future Express [1993] 2 Lloyd’s Rep. 542; Smith (Administrator of Cosslett Contractors Ltd) v Bridgend CBC
+[2002] 1 A.C. 336.
+28
+Bristol and West of England Bank v Midland Ry [1891] 2 Q.B. 653.
+29
+Milgate v Kebble (1841) 3 M. & G. 100.
+30
+Lord v Price (1874) L.R. 9 Exch. 54.
+31
+Iran v Barakat Galleries Ltd [2007] EWCA Civ 1374; [2008] 1 All E.R. 1177.
+32
+Jelks v Hayward [1905] 2 K.B. 460.
+33
+Halliday v Holgate (1868) L.R. 3 Exch. 299.
+34
+BMW Financial Services (GB) Ltd v Bhagwanani [2007] EWCA Civ 1230; [2007] All E.R. (D) 26.
+End of Document
+© 2025 SWEET & MAXWELL

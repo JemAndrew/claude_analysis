@@ -1,0 +1,645 @@
+Chapter 3 - Mediation, UKBC-EFFDIS 549291543 (2025)
+© 2025 Thomson Reuters.
+1
+Chapter 3 - Mediation
+A Practical Guide to Effective Dispute Resolution: Methods & Clauses 1st Ed.
+Mainwork
+Part 1 - Non-binding Dispute Resolution Methods and Escalation Clauses
+Chapter 3 - Mediation
+Overview and purpose of the clause
+3-001
+The purpose of a mediation clause is to move the parties to an alternative dispute resolution (ADR) phase that, by definition,
+involves an independent neutral third-party mediator whose role is to try and facilitate the parties reaching a mutually acceptable
+agreement before litigation or arbitration commences. In contrast, a negotiation clause largely relies on the parties’ internal
+processes, mainly involving the parties in discussions with each other.
+Similar to negotiation, the potential benefits of resolving a dispute through mediation include avoiding the costs and risks of
+litigation with the added benefit that the parties retain control of the decision on whether or not to settle. In addition, in a
+mediated agreement, as with a negotiated settlement, it is possible to agree solutions that a court does not have the power to
+order and to keep the settlement, and any disclosures, confidential.
+Evidence of the power of mediation as a tool for effective dispute resolution can be found in the Tenth Mediation Audit of
+commercial mediators carried out by the Centre for Effective Dispute Resolution (CEDR). 1  Looking at this report, and earlier
+CEDR reports, over a 10-year period (from 2012 to 2023), these audits show a consistent figure of around 70–75% of commercial
+disputes settled on the mediation day, with a further 20% of disputes settling shortly after. To show that this figure of settlement
+rates on the day of mediation is not a unique feature of UK dispute resolution, it is mirrored by CEDR Asia Pacific who report
+that, of the 650 commercial mediations they arrange each year, the settlement rate remains consistent at between 75–80% on
+the day of mediation. 2
+Given the costs and time taken to follow a binding dispute resolution process (either arbitration or litigation), this combined
+settlement rate of around 90% should be borne in mind when considering whether to engage in mediation.
+The principal features of mediation are that it: 3
+ 
+• involves a neutral third party to facilitate negotiations;
+ 
+• can be relatively quick to set up and is inexpensive, and, in most circumstances, is without prejudice and confidential;
+ 
+• involves party representatives with the authority to settle;
+ 
+• is flexible and puts the parties in control, enabling the process to be designed and managed by the mediator to suit the
+parties, in consultation with them;
+ 
+• enables the parties to devise solutions which are not possible in an adjudicative process such as litigation or arbitration,
+and which may benefit all the parties, particularly if there is the possibility of a continuing relationship between them; and
+ 
+• can be used in both domestic and cross-border disputes, two-party and multi-party disputes, and whether or not litigation
+or arbitration has been commenced.
+
+Chapter 3 - Mediation, UKBC-EFFDIS 549291543 (2025)
+© 2025 Thomson Reuters.
+2
+Styles of mediation
+3-002
+All approaches to mediation share a common thread in using an independent third-party mediator to help the parties resolve
+their dispute by facilitating an adjustment to their relative positions and reaching a compromise settlement by consent.
+However, underneath the umbrella heading, different styles of mediation can be found in different circumstances, most often
+determined by a specific cultural approach and/or acceptance of just how involved the mediator is in formulating the final
+compromise.
+Although there are many examples of hybrid approaches (depending on the country and the mediator themselves) the differences
+can be considered under the broad headings of “facilitative” and “evaluative” mediation. 4
+In facilitative mediation, the mediator is neutral and helps the parties reach their own, mutually agreeable solutions. To achieve
+this, the mediator typically asks open questions and encourages co-operation between the parties.
+In evaluative mediation, 5  the mediator adopts a more advisory role and can actively provide opinions, assess the relative
+strengths and weaknesses of each party’s case and even offer some indication of a likely outcome if the dispute were to go
+to court. There is no prescriptive process and the practical approach varies from mediator to mediator. The benefits of using
+evaluative mediation bring it a bit closer to the reasons why parties might consider early neutral evaluation (ENE) and supports
+the trend towards combining ENE with mediation.
+Whilst there are clear conceptual differences, the approach to mediation should be considered to be a spectrum approach, where
+the balance between facilitation and evaluation can vary between mediations or mediators as well as from issue to issue within
+a mediation.
+The benefit of a pure facilitative approach, where the parties identify their own preferences and their agreed solution, is that the
+parties are more likely to own the outcome and not attribute blame to the mediator for somehow encouraging them to accept a
+solution that they might actually end up regretting. Having said that, if the parties are stuck, a skilled evaluative mediator can
+guide them towards a solution that they may not have been able to identify themselves. Independent of whether the solution is
+arrived at via facilitation or evaluation, one of the main mutual benefits can be the preservation of business relationships.
+In practice there is often a blurred line between facilitative and evaluative mediation styles as even a facilitative mediator will
+pose questions that cause the parties to reflect on outcomes, litigation risk and similar. Most mediation training focuses on the
+facilitative approach.
+There is also a third model of mediation that is sometimes referred to as “transformative mediation”, 6  in which the objective
+is closer to providing a more holistic approach, so that the outcome of the resolution of the immediate dispute is a deeper
+understanding of each other’s perspective 7  and a transformation of the long-term relationship between the parties. 8
+Transformative mediation focuses on the key principles of empowerment and recognition and seeks to change the way that
+the parties relate to each other rather than focusing on the transactional elements of the instant dispute. This is in contrast to
+evaluative mediation, where the mediator plays a key role in guiding the parties towards a resolution based on the mediator’s
+evaluation of a case. In this sense, transformative mediation is closer to facilitative mediation with its focus on communication
+but goes beyond helping the parties to find a solution just to their dispute and tries to empower the parties to improve their
+relationship, with the resolution of the dispute being a stepping stone to a better future relationship.
+Whilst it has clear potential long-term benefits, the downside to transformative mediation is that it takes time and requires the
+dedicated involvement of the parties. As it is more idealistic in nature, it is not always suited to high-stakes, legally focused
+disputes but works well if parties are seeking a deeper change to their dynamic rather than a quick fix.
+There are some differences in regional approach with evaluative mediation generally being favoured in the US, and UK/Europe
+preferring a facilitative approach. In Asia-Pacific, mediation has traditionally aligned more closely with the facilitative principles
+as these increase the prospects for consensus and preserving social harmony.
+
+Chapter 3 - Mediation, UKBC-EFFDIS 549291543 (2025)
+© 2025 Thomson Reuters.
+3
+However, given the increasing levels of globalisation and commercial complexity, the overall trend in international commercial
+dispute resolution is towards blending these styles. This hybrid approach is characterised by an evaluation of relative strengths
+and weaknesses of cases in various jurisdictions, commonly followed by facilitated conversations focused on mutual gain and
+collaborative resolution.
+When considering including mediation in a contractual dispute resolution clause, it is worth confirming the other party’s
+perception and expectations of what mediation may involve. If the parties have different experience and expectations, this may
+highlight why one party might be more or less keen on mediation than another. In any event, it is important to ensure that both
+parties have the same understanding of what mediation involves before agreeing to include a mediation clause.
+It is also important that parties considering mediation discuss and agree the approach that they wish their mediator to take
+and ensure that their selected mediator has the ability to conduct the mediation in this agreed way. If the parties cannot agree
+on which approach they wish to take, in order to maintain the perception of neutrality and independence, it can be better for
+the parties to ask the mediator to operate in a facilitative mode at the start. If there is progress but the parties find themselves
+deadlocked, either party can indicate to the mediator that they would welcome a transition to a more evaluative mode where the
+mediator makes proposals for solutions. If requested, before proposing any solutions, the mediator should seek confirmation
+from both sides that they agree for this to happen.
+In addition, the parties are encouraged to consider the duration of the mediation. Most mediation training and most mediators
+focus on the one-day mediation of litigated disputes. However, the earlier the parties engage in mediation, possibly under the
+requirements of an escalation clause, the more time they may need to be allocated for the mediation process. The additional time
+is required to allow the mediator the time needed to prepare the parties for the mediation, exchange information, identify issues
+and to coach the parties, so they are best placed to work together towards identifying possible resolution options. Mediation
+under an escalation clause runs the risk of failure if insufficient direction is given to the parties in how to conduct the mediation
+and if insufficient time is allowed for the process to develop.
+The role of a mediator
+3-003
+The role of the mediator will depend on whether the parties have agreed to evaluative or facilitative mediation. In a facilitative
+mediation, it is a fundamental point that the mediator does not decide the case on its merits, or advise the parties on their relative
+merits, but facilitates the parties’ exchanging information about what they are seeking and helps them understand each other’s
+interests. This works best when both parties are completely frank and open with the mediator about their true positions and
+bottom lines.
+Although an evaluative mediator will be much more involved in putting forward their own views about how the dispute should
+be resolved, even judging the merits of a party’s case, it is important to understand that, as mediation is non-binding, if a mediator
+is to stand any chance of getting the parties to reach agreement, they will still need to gain the trust and confidence of both
+parties. This is even more important for a mediator who adopts an evaluative role as, otherwise, by indicating that they believe
+one party is in a stronger position than another, they run the risk of giving the impression that they are biased.
+The common principle is that an open exchange with the mediator (who will not reveal any information to the other side without
+express consent) will ultimately lead to both parties conceding some points and, by so doing, to narrow the gap to the point
+where it can be bridged, and a mutually acceptable settlement found. The nature of the confidential exchanges with the mediator
+(whose independence requires they cannot have had any previous dealings with the parties) means that the parties often have a
+natural concern about whether the mediator can be trusted not to give their hand away.
+A good mediator will have the ability to uncover and understand the underlying interests of each party, often going beyond
+the previously stated positions that may have been pleaded or expressed in an adversarial and polarising way. The mediator
+will only be able to act effectively if they can gain the trust and confidence of both parties. It is particularly important that the
+mediator is able to convince both parties that they will communicate a party’s position to the other side without passing on any
+other information unless it is expressly authorised.
+
+Chapter 3 - Mediation, UKBC-EFFDIS 549291543 (2025)
+© 2025 Thomson Reuters.
+4
+In this sense, the mediator should be aiming to enhance the communication between the parties by removing any emotional
+overtone and clarifying the parties’ respective positions. In discussing and exchanging interests, the mediator will try and help
+parties brainstorm and propose new options for resolving the dispute. Even in a facilitative mediation, the mediator has a role in
+assisting the parties to evaluate their options and the potential consequences of putting forward new solutions and/or accepting
+the other party’s proposals.
+In most circumstances, a mediator will not (or should not…) give legal advice to either party. However, if a party does not have
+legal representation, the mediator might try and explain legal terms if these are important for an understanding of the parties’
+respective positions.
+If the parties have agreed to what is called “judicial mediation” (where the mediator is a judge in their normal role but, for the
+purposes of dispute resolution, is acting as a mediator), there is a possibility that the judicial mediator might give indications
+about what is likely to happen in court if the dispute is unresolved and, as a result, moves to a litigation phase. In this event, any
+such indications will always be caveated—typically by the judicial mediator stating they do not have all the facts, so their views
+are not fully considered. Judicial mediation is most often found in resolving employment and family disputes but, more rarely,
+can also be used in resolving civil claims. A judge who acts as a mediator cannot be the judge in any subsequent substantive
+hearings.
+Expectations of mediation
+3-004
+Whether a mediator actively proposes fresh solutions or focuses on stimulating or encouraging the parties to develop their own
+solutions, can depend on the established practice in the country where a mediation is taking place.
+As has been mentioned, this difference in national experience could mean that, if and when a clause is activated, a mediation
+clause in a contract between parties who come from different backgrounds could lead to the parties going into the mediation
+with different expectations. It is also important to recognise that different cultures may place varying degrees of emphasis on
+direct communications between parties and the decision-making capacity of a mediator/mediation session.
+It is crucial for both sides to understand that “mediation is not just about one side getting what they want. That is a misconception
+of the purpose of mediation. Mediation should be about attempting to reach a solution which both parties can live with as a
+better alternative to litigation”. 9
+Parties typically go into mediation with their preferred outcome firmly fixed in their mind. This is to be discouraged as that
+outcome becomes an anchor or a fixed reference point, which parties then struggle to move away from. Having a preferred
+outcome blocks parties from genuinely considering a broad range of different resolution options. As indicated in the above
+quote, it inhibits the parties from exploring solutions that they can both live with.
+National legislation
+3-005
+Some countries may have specific laws and regulations governing mediation whilst others may not. National laws range from
+specifying mediation as being mandatory and applying penalties if a party refuses to attend (without good cause) through to a
+milder encouragement of just asking parties whether they are willing to attend mediation.
+Whilst the law in a particular jurisdiction can require mediation as a pre-condition before commencing litigation (referred to as
+“mandatory mediation” or “court ordered mediation”), it is unenforceable to impose a requirement that the parties must resolve
+their dispute through mediation.
+Behind legislation requiring the parties to attempt mediation lay the same reasons for including a mediation clause in a
+contractual agreement. The additional incentive for the legislators in a jurisdiction to impose this obligation is that, if successful,
+
+Chapter 3 - Mediation, UKBC-EFFDIS 549291543 (2025)
+© 2025 Thomson Reuters.
+5
+mediation would take pressure off an overloaded and expensive court system. The approaches are similar because both mandate
+that the parties will mediate—the mandatory nature is either contractual (in an escalation clause) or imposed via national
+legislation or court rules.
+By way of illustration, although the exact requirements vary from state to state, many US states have implemented mandatory
+mediation programs for various types of cases, including commercial dispute resolution. 10  The primary difference between
+states is whether the mediation step is a “must” or a “may”. In England and Wales, it was initially established in 2004 that,
+whilst parties are strongly encouraged to mediate, they cannot be compelled. 11  However, in 2023 this position was overturned
+in the Court of Appeal, which determined that, whilst statute does not require parties to mediate, a court can lawfully order a
+stay in proceedings and compel the parties to engage in a “non-court-based dispute resolution process”. 12  Even without such
+an order, if a party refuses to go to mediation unreasonably, a court may impose cost sanctions.
+The EU has also encouraged the use of mediation in cross-border civil and commercial disputes. Directive 2008/52 on certain
+aspects of mediation in civil and commercial matters (the EU Mediation Directive) 13  promotes mediation and requires member
+states to encourage its use in various civil and commercial matters. The Directive applies to cross-border disputes and foresees
+that EU Member States must provide for agreements reached through mediation to be enforceable. The Directive is focused on
+encouragement and does not impose an obligation on parties to mediate or impose any sanctions for a failure to mediate.
+By way of illustration, Italy is an example of an EU state that made mediation mandatory before litigation proceedings start in
+certain types of disputes. 14  This legislation followed the EU Mediation Directive and established that compulsory mediation is
+a precondition for taking to court a number of disputes related to property rights, division among heirs, hereditary succession,
+family covenants, rentals, loans, company leases, claims for damages from road or water traffic accidents, medical liability and
+defamation in the press or other means of publicity. Anyone who wants to go to court over a dispute concerning any of these
+subjects must first make an attempt at mediation in accordance with the procedures laid down in Legislative Decree 28/10. 15
+After some early resistance, a further law was passed in November 2021 to extend the scope of mandatory mediation as a pre-
+litigation step to new categories of civil and commercial claims. 16
+Italian law also allows judges to encourage parties to opt for mediation proceedings at any time during a dispute (Legislative
+Decree 28/2010 art.2).
+If parties are weighing up the pros and cons of whether to include a mediation clause, they would do well to consider that,
+following the Italian legislation, according to a study by the Ministry of Justice in Italy, the average resolution rate in 2021 for
+parties settling in mediation (commenced before institution of proceedings) was 45.8%. 17  This contrasts with the settlement
+figures from the biennial CEDR UK mediation audit of 70–75% 18  but, nevertheless, is still significant.
+In assessing whether a party’s refusal to mediate (or go to other non-binding dispute resolution methods) is unreasonable, there
+are a number of English law cases that can be of assistance and may be helpful to parties considering if and how to include a
+mediation clause in their contracts. The (non-exhaustive) factors include: 19
+ 
+• the nature of the dispute;
+ 
+• the merits of the case;
+ 
+• the extent to which other settlement methods had been attempted;
+ 
+• whether the costs of ADR would be disproportionately high;
+ 
+• whether any delay in setting up and attending the ADR would have been prejudicial;
+ 
+• whether the ADR had a reasonable prospect of success; and
+ 
+• whether a party has refused to enter into ADR despite the court’s encouragement.
+As a general principle, silence in the face of an invitation to participate in ADR is, of itself, unreasonable. This is regardless of
+whether an outright refusal to participate might have been justified by the identification of otherwise reasonable grounds. 20
+As a reminder of the importance of considering ADR, and therefore ensuring that contracts contain a mediation/ADR clause,
+the words of Mr Justice Griffiths are worthy of note:
+
+Chapter 3 - Mediation, UKBC-EFFDIS 549291543 (2025)
+© 2025 Thomson Reuters.
+6
+“The reasons given for refusing to engage in mediation were inadequate. They were, simply, and repeatedly, that
+the Defendant ‘continues to believe that it has a strong defence’. No defence, however strong, by itself justifies a
+failure to engage in any kind of alternative dispute resolution. Experience has shown that disputes may often be
+resolved in a way satisfactory to all parties, including parties who find themselves able to resolve claims against
+them which they consider not to be well founded. Settlement allows solutions which are potentially limitless in
+their ingenuity and flexibility, and they do not necessarily require any admission of liability, or even a payment
+of money. Even if they do involve payment of money, the amount may compare favourably (if the settlement is
+timely) with the irrecoverable costs, in money terms alone, of an action that has been successfully fought. The
+costs of an action will not always be limited to financial costs, however. A trial is likely to require a significant
+expenditure of time, including management time, and may take a heavy toll on witnesses even for successful
+parties which a settlement could spare them. As to admission of liability, a settlement can include admissions or
+statements which fall short of accepting legal liability, which may still be of value to the party bringing a claim.
+[…]” 21
+The clause—overview
+3-006
+For a clause to be valid, one of the most important things is that it cannot contain wording to the effect that “the parties will
+resolve their dispute by mediation”. This means that, if the parties do decide to include a mediation clause, the clause must
+consider the possibility of failure to resolve the dispute and determine what follows. If it fails, mediation is typically followed
+by an agreed form of binding determinative process – which can be any one of the binding stages considered in Part 3 (i.e.
+expert determination, arbitration or litigation).
+Despite having agreed to a mediation (or other ADR) clause during the negotiation of the contract, in the event of a dispute
+arising, it is still possible that one party may attempt to start litigation proceedings (effectively ignoring the ADR clause). In this
+event, the following principles are applicable where a party seeks to enforce an ADR provision by means of an order staying
+proceedings: 22
+ 
+(i)The agreement must create an enforceable obligation requiring the parties to engage in alternative dispute resolution.
+ 
+(ii)The obligation to participate in alternative dispute resolution prior to litigation or arbitration must be mandatory. 23
+ 
+(iii)The dispute resolution process to be followed does not have to be formal but must be sufficiently clear and certain
+by reference to objective criteria, including machinery to appoint a mediator or determine any other necessary step in the
+procedure without the requirement for any further agreement by the parties.
+ 
+(iv)The court has a discretion to stay proceedings commenced in breach of an enforceable dispute resolution agreement.
+In exercising its discretion, the court will have regard to the public policy interest in upholding the parties’ commercial
+agreement and furthering the overriding objective in assisting the parties to resolve their disputes.
+In drafting the clause, it is also important to be reminded that, in order for mediation to be effective, both parties must be prepared
+to compromise. As a result, the people who attend the mediation must have a good understanding of the issues and must have
+the authority and mandate to make concessions and to reach a resolution. It is impossible to reach a mediated settlement if one
+(or both!) parties have no intention of settling or want their day in court.
+In considering the inclusion of a mediation clause in a contract during the contract drafting stage, it can be helpful for both
+parties to consider the nature of their business relationship and to test whether, if a material dispute did arise, their respective
+organisations understand what mediation involves and what internal processes/approvals they might need to go through before
+mediation is started. It is understood that disputes may arise as a result of unknown unknowns appearing out of the mist, but
+it is much easier to have a proactive discussion about how such a clause would work before any disputes (and the resulting
+tension) are present. This discussion should include consideration of mediating over an extended time period (as referenced
+
+Chapter 3 - Mediation, UKBC-EFFDIS 549291543 (2025)
+© 2025 Thomson Reuters.
+7
+above) and any procedural steps that may be needed to assist the parties in preparing for mediation (exchange of information,
+outlining of issues, early engagement with the mediator, etc).
+Before drafting a mediation clause, depending on the type of business relationship between the parties, it can also make sense to
+consider whether there are any types of dispute that the parties consider may not be suitable to resolve through mediation. 24  If
+such types of dispute can be identified, it could be desirable to exclude them from being covered by the mediation clause. This
+will avoid wasted time and the risks of an action by one party alleging that the other did not comply with the mediation clause.
+With consent, parties can engage in mediation at any time. One of the primary objectives of a mediation clause is to stop the
+parties pursuing litigation (or arbitration) whilst the clause is active and, ideally, until the mediation option has been exhausted.
+Having said that, even with a contractual clause, it is not possible to force a party to engage positively and, if there is a significant
+imbalance of power, or a cultural refusal to engage, then the only result of the clause will be to delay what, through the lens of
+hindsight, will be seen as the inevitable binding process of arbitration or litigation.
+A 2013 review indicated that the general expectations of agreeing to mediation are:
+ 
+(a)the third-party mediator will be impartial, independent and competent;
+ 
+(b)the process will be confidential;
+ 
+(c)the aim of the mediation is to arrive at a settlement of all or part of the dispute; and
+ 
+(d)the subsequent settlement will be concluded or at least evidenced in writing. 25
+The clause—key elements
+3-007
+In common with other dispute resolution clauses, mediation clauses tend to come under the classification of being “midnight
+clauses” in that they are often concluded (typically being copied and pasted) late in the drafting/completion process. 26  As an
+indication of the nature of the challenge facing parties in giving a mediation clause the attention it deserves, a 2017 survey of
+the perception of ADR practitioners reported that 65% of dispute resolution clauses are simply copied and pasted. 27  Given the
+consequence of a clause being found to be invalid 28  or even simply not fit for purpose, proper consideration is necessary to
+ensure that a clause satisfies the necessary criteria. 29
+An effective clause must provide certainty as regards scope and process. In essence, the clause must address the following: 30
+ 
+(a)the scope of the agreement (disputes covered);
+ 
+(b)a description of the procedure to be followed by the parties including any pre-mediation steps such as disclosure of
+information, issues papers or similar (often referred to as process design);
+ 
+(c)procedure to select the mediator(s) and his or her payment;
+ 
+(d)time frame for the mediation or timetable for compliance; and
+ 
+(e)the obligation to refrain from acting (that is, initiating arbitration).
+In addition to the “process” elements of the clause, given the potential for contract disputes to arise over elements of the main
+contract, it is essential that any dispute resolution clause is separable such that it is not rendered void if the main contract is
+found to be void for any reason. This means that, ideally, the parties’ agreement to submit any current or future disputes to
+mediation should be recorded and isolated from any discussion about the validity of the main contract.
+There are many template clauses available online and it would be impossible, and probably unhelpful, to try and list them all.
+In addition, there are, of course, many clauses that end up in contracts that are produced by in-house lawyers and are not public.
+
+Chapter 3 - Mediation, UKBC-EFFDIS 549291543 (2025)
+© 2025 Thomson Reuters.
+8
+A systematic content analysis of 172 such clauses was carried out in 2018–2019. 31  This showed that around 50% were two-
+step clauses with a non-binding stage (mediation) leading to a binding stage (arbitration or litigation) and 33% called for a three-
+step clause (negotiation, mediation, arbitration). This relatively high adoption rate confirms that the benefit of contractually
+trying to encourage efforts to settle prior to entering into arbitration or litigation is widely accepted. As such, if a party wishes
+to include such clauses in their contract they should persist and not be put off if the other party is resistant or simply does not
+seem interested.
+To illustrate the detail behind each clause and to allow for a comparison, a selection of mediation clauses is included in Appendix
+Three. Whilst these have been taken from some of the more well-known institutions, the mere fact that they are included in
+Appendix Three should not be seen as an endorsement or indication that other providers of such clauses, including individual
+providers of mediation services, are in any way inferior. The reason for including them here is to allow for a real-life comparison
+of the elements of a typical mediation clause and to distil out a clause that captures the key elements and options available
+when drafting such a clause.
+The institutions that are included in Appendix Three are:
+ 
+American Arbitration Association (AAA)
+ 
+Centre For Effective Dispute Resolution (CEDR)
+ 
+Chartered Institute of Arbitration (CIArb)
+ 
+Dubai International Arbitration Centre (DIAC)
+ 
+International Centre for Dispute Resolution (ICDR)
+ 
+International Chamber of Commerce (ICC)
+ 
+London Chamber of Arbitration and Mediation (LCAM)
+ 
+London Court of International Arbitration (LCIA)
+ 
+Singapore International Mediation Centre (SIMC)
+Mediation clause: trigger
+3-008
+The primary operative part of a mediation clause is to determine if, when, and how a mediation clause is activated. The structure
+of this part appears simple and boils down to stating that, if a dispute arises, it must be referred to mediation. However, there
+are a number of important “invisible” issues that need to be considered in order to ensure that the clause is effective and meets
+the needs of both parties.
+A common feature of the standard clauses is that, to provide the necessary certainty, these institutional clauses universally refer
+to running the mediation according to their own procedures and do not require the procedures themselves to be included in
+the contract between the parties. In contrast, DIAC and LCIA actually deem that their procedures are incorporated into the
+contractual clause.
+It is not the purpose of this book to go through the differences in mediation procedures between the institutions, but it should
+be clear that any reference to the procedures (or administration) by a third-party institution should not be put into a contract
+unless the parties are clear what these procedures mean.
+Some institutions (e.g. AAA) go further in their clauses by stating that the mediation will be actually administered (rather than
+just the appointment of a mediator) by the institution. It is clear that this obligation should not slip into a mediation clause
+without knowing what this means in terms of cost, appointment of mediators, venue, etc.
+
+Chapter 3 - Mediation, UKBC-EFFDIS 549291543 (2025)
+© 2025 Thomson Reuters.
+9
+Illustrative clauses
+3-009
+By way of comparative illustration, examples of institutional clauses are:
+AAA: “If a dispute arises out of or relates to this contract, or the breach thereof, and if the dispute cannot
+be settled through negotiation, the parties agree first to try in good faith to settle the dispute by mediation
+administered by the American Arbitration Association under its Commercial Mediation Procedures.”
+CEDR: “If any dispute arises in connection with this agreement, the parties agree to enter into mediation in
+good faith to settle such a dispute and will do so in accordance with the CEDR Model Mediation Procedure.”
+DIAC: “In the event of a dispute arising out of or relating to this contract, including any question regarding its
+existence, validity or termination, the parties shall seek settlement of that dispute by mediation in accordance
+with the Mediation Rules of the Dubai International Arbitration Centre, which Rules are deemed to be
+incorporated by reference into this clause.”
+ICC: “In the event of any dispute arising out of or in connection with the present contract, the parties shall
+first refer the dispute to proceedings under the ICC Mediation Rules.” 32
+ICDR: “In the event of any controversy or claim arising out of or relating to this contract, or a breach thereof,
+the parties hereto agree first to try and settle the dispute by mediation, administered by the International
+Centre for Dispute Resolution under its Mediation Rules, before resorting to arbitration, litigation or some
+other dispute resolution procedure.”
+LCAM: “Any dispute, controversy or claim arising out of or in connection with this agreement, or the
+existence, breach, termination or invalidity thereof shall be determined by mediation in accordance with the
+London Chamber of Arbitration and Mediation (“LCAM”) Model Mediation Procedures.”
+LCIA: “In the event of a dispute arising out of or relating to this contract, including any question regarding its
+existence, validity or termination, the parties shall seek settlement of that dispute by mediation in accordance
+with the LCIA Mediation Rules, which Rules are deemed to be incorporated by reference into this clause.”
+
+Chapter 3 - Mediation, UKBC-EFFDIS 549291543 (2025)
+© 2025 Thomson Reuters.
+10
+SIMC: “All disputes, controversies or differences arising out of or in connection with this contract, including
+any question regarding its existence, validity or termination, shall before or after the commencement of any
+other proceedings, be first referred to mediation in Singapore at the Singapore International Mediation Centre
+in accordance with its Mediation Rules for the time being in force.”
+Born (author):
+(This is an extract from an authoritative book 33  to illustrate the contrast between a fully considered clause with
+one that might have been simplified by an institution for ease of use)
+“The parties shall attempt to resolve any dispute arising out of or relating to this [Agreement] [Contract]
+promptly by negotiation [ ].
+[Mediation (B): If the dispute has not been resolved by negotiation as provided herein within [45] days after
+delivery of the initial notice of negotiation, [or if the parties failed to meet within [20] days,] the parties
+shall endeavour to settle the dispute by mediation under the International Institute for Conflict Prevention &
+Resolution (“CPR”) Mediation Procedure [currently in effect OR in effect on the date of this Agreement],
+[provided, however, that if one party fails to participate in the negotiation as provided herein, the other party
+can initiate mediation prior to the expiration of the [45] days.] Unless otherwise agreed, the parties will select
+a mediator from the CPR Panels of Distinguished Neutrals.”
+“Hidden” issues
+Scope
+3-010
+All of the clauses have a broad definition of the trigger (“If a dispute arises…” “In the event of a dispute…” “All disputes,
+controversies or differences…” “Any dispute, controversy or claim…”). The immediate potential problem with this is that
+there is no materiality threshold or restriction to the type of dispute. It is unlikely to have been intended but, without thinking,
+these clauses would technically catch anything from a dispute over an unpaid invoice, a delay in delivery, damage to a product,
+personal injury, through to breach of a condition or termination of an agreement. Whilst it is logical that the parties will not
+address a trivial dispute through the full process, this ambiguity could become an issue when the level of materiality has a
+different significance to the “injured” party compared to the other.
+Whilst the parties could rely on both being reasonable and it being in no-one’s interest to require mediation for a minor
+dispute, in court, the clause would be interpreted as it is written, i.e. every dispute. If it is found to be too difficult to narrow
+the scope, then the parties could go ahead with such clauses, but they need to do this with their eyes open. In the alternative,
+they could exclude certain areas of dispute (for example, disputed invoices, damage to products) or put in some form of
+materiality threshold.
+
+Chapter 3 - Mediation, UKBC-EFFDIS 549291543 (2025)
+© 2025 Thomson Reuters.
+11
+Certainty
+3-011
+It is essential that any reference in the clause to a recognised model mediation procedure should provide certainty: 34
+The reference to institutional procedures will provide clear guidelines on the conduct of the mediation
+and could specify the nature of relevant disputes as well as the appointment of a mediator. In order to
+avoid secondary litigation, the parties need to review any third-party procedures and confirm that they
+understand what they involve.
+Timing and venue
+3-012
+In order to avoid delays and facilitate the benefits offered by mediation as being a quicker solution than arbitration or litigation,
+this wording should address the question of timing and specify the number of days from an effective notice of mediation to
+having the mediation itself (or if the mediation is going to be conducted over time, when the mediation needs to be completed).
+Given the consequence of getting things wrong if such clauses or requirements are drafted ad hoc, this is one of the benefits
+of consciously selecting the procedures of a local institution to follow.
+When deciding on the logistics arrangements of the mediation, if the parties select institutional guidelines, these are also
+likely to include important factors such as choice of venue (including location), date of the mediation (relative to the trigger),
+start time, and deadlines for documentary disclosure.
+Event of failure
+3-013
+Unless it is expressly specified, there is nothing in a typical mediation clause that prevents the issuance of court proceedings.
+As such, given the objective of the parties trying to avoid uncontrolled escalation to litigation or arbitration, it is recommended
+that the wording be reviewed to ensure that it is both mandatory and exclusive, i.e. a binding process cannot start until a
+certain effort or number of days have been spent with mediation.
+Similarly, if the parties wish to retain the ability to resort to court proceedings/arbitration whilst mediating, they should
+express this consciously rather than allow the right to slip in by default.
+Potential issues
+Willingness to compromise
+3-014
+The biggest issue is not related to the wording of the clause but the willingness of both parties to compromise to resolve their
+dispute. Given the non-binding nature of mediation it is inevitable that, if one party is unwilling to compromise and reluctant
+to engage with the objectives of the mediation process, then mediation is certain to fail.
+
+Chapter 3 - Mediation, UKBC-EFFDIS 549291543 (2025)
+© 2025 Thomson Reuters.
+12
+If a party is unwilling to engage, it is likely to become apparent quite quickly and, in this event, the party, who is willing to
+participate, may suggest that the parties agree to halt the mediation process and go to arbitration or litigation in advance of
+the expiry of a mediation phase that was incorporated in the agreement.
+If this is done by consent, then such a decision should not compromise the agreement. The essential factor here is that it
+must be by consent, otherwise the other party could use a failed mediation process to try and halt the litigation/arbitration
+for failure to comply with the mediation clause.
+An unwillingness to compromise is quite common when there is a significant power imbalance between the parties (there is
+typically a power imbalance of some form between the parties to a dispute). This power imbalance can also give rise to the
+weaker party feeling disadvantaged or pressured to settle and, in turn, this could affect the fairness of any mediated outcome.
+The involvement of a good independent mediator should reduce this pressure by communicating the stronger party’s position
+in a neutral manner, but the pressure is there.
+Ultimately, the weaker party would have to assess whether accepting an offer put to them during mediation is likely to be better
+or worse than going to a final binding stage. This is easier said than done but, if the stronger party refuses to compromise,
+the weaker party should, in principle, not be worse off having included a mediation clause as, in any event, the alternative
+would have been litigation or arbitration.
+Non-compliance
+3-015
+It is also possible that a party may appear to have engaged with mediation but, they may fail to follow the process that has been
+agreed and, as a result, will cause delays and complications. Symptoms of non-compliance can also include a breakdown of
+communication. The fall-back here is that, if one party refuses to engage, the binding stage will still eventually be triggered.
+Choice of mediator
+3-016
+The choice of mediator is critical to the success of a mediation. The critical characteristics of an effective mediator can be
+broadly described under the headings of personality and skills/technique. A good mediator will be empathetic, culturally
+aware, patient, flexible, adaptable and, above all, trustworthy. They should also possess good communication skills with a
+highly developed ability to actively listen. The mediator should be able to deploy these characteristics to build confidence
+and encourage open communication.
+A legal knowledge may be helpful if the dispute is legally complex but problem-solving skills are more important. Here, the
+mediator should be able to identify underlying issues and to distil the parties’ respective true positions and, ideally, bottom
+lines. They should also be able to explore creative solutions and to be able to guide the parties towards a resolution.
+In choosing a good mediator, their training and experience can be a useful indicator of their capability. The more mediations
+that a mediator has under their belt, the more likely it is that they have gained their work through being effective and being
+recommended. Having said that, it should be recognised that a young inexperienced mediator may be just as effective as they
+are more likely to have had more recent training and not slipped into any bad habits as well as being motivated to put extra
+effort into the mediation to try and prove their capability.
+If the dispute relates to a specific area (e.g. shipping, construction, energy, shareholders) then experience of the relevant area
+may be more important than a simple count of how many mediations they have conducted.
+Having checked that there is no conflict of interest, taking references (which can be provided to both parties) can also help
+select a mediator. In any event, the selection has to be agreed between the parties. There are a number of ways of doing
+this including specifying that one party produces a list of mediators (typically three but sometimes five) and the other party
+makes a selection from that list.
+
+Chapter 3 - Mediation, UKBC-EFFDIS 549291543 (2025)
+© 2025 Thomson Reuters.
+13
+One of the benefits of appointing a mediator versus, for example, appointing an arbitrator, is that the parties and their advisers
+can engage with the mediator on a confidential basis to discuss the dispute and how the mediator might approach the mediation
+process. This is a helpful way for parties and their advisers to gain confidence when using a mediator for the first time.
+The mediator candidate clearly needs to be alert to perceptions of bias (if they only meet with one party) and the inevitable
+attempts by a party to attempt to persuade the mediator of the virtues of their case at an early stage. That is inevitable and
+experienced mediators are alive to the issue and avoid it whilst still being able to build trust and confidence.
+Given the complexity of the parties choosing the mediator, if they cannot agree, the most common way of selecting one is
+to ask the most relevant national institution to select a mediator from their panel. This option can also be specified in the
+mediation agreement.
+The most important criterion for success is the willingness of the parties to compromise and, as such, whilst important, the
+choice of a mediator who is competent but not experienced may not be fatal.
+Footnotes
+1
+CEDR, Tenth Mediation Audit. A survey of commercial mediator attitudes and experience in the United Kingdom (1
+February 2023), p.7; CEDR, The Sixth Mediation Audit. A survey of commercial mediator attitudes and experience
+(22 May 2014).
+2
+CEDR Asia Pacific, “CEDR Asia Pacific and CEDR London track record”, http://www.cedr-asia-pacific.com/cedr/
+solve/record/.
+3
+CEDR, Model Mediation Procedure (2022) https://www.cedr.com/wp-content/uploads/2022/05/CEDR-Model-
+Mediation-Procedure-May-22.pdf.
+4
+Leonard L. Riskin, “Understanding Mediators’ Orientations, Strategies, and Techniques: A Grid for the
+Perplexed” (1996) 1 Harvard Negotiation Law Review 7 45.
+5
+Martin Brink, “Evaluative Mediation (Part I), an Analysis” (2021) Corporate Mediation Journal 12.
+6
+Bruce McKinney, “A Critical Analysis of Transformative Mediation” (1997) 29(1) Peace Research 41.
+7
+Charlie Irvine, “Transformative Mediation: A Critique” (2007) SSRN Electronic Journal, 10.2139/ssrn.1691847.
+8
+Joseph Folger and Robert Bush, “Transformative Mediation: A Self-Assessment” (2014) 2(1) International Journal of
+Conflict Engagement and Resolution 20.
+9
+Burgess v Penny [2019] EWHC 2034 (Ch); [2019] Costs L.R. 1453 at [15], per Catherine Newman QC.
+10
+Lawrence Freedman and Larry Ray, State Legislation on Dispute Resolution (American Bar Association, 1982), NCJRS
+Number 89152. This report presents the substance and current status of legislation in 14 states dealing with mediation,
+arbitration, and conciliation.
+11
+Halsey v Milton Keynes General NHS Trust [2004] EWCA Civ 576; [2004] 1 W.L.R. 3002.
+12
+Churchill v Merthyr Tydfil CBC [2023] EWCA Civ 1416; [2024] Costs L.R. 249 at [74(ii)], per Sir Geoffrey Vos.
+13
+Directive 2008/52 on certain aspects of mediation in civil and commercial matters (The EU Mediation Directive) [2008]
+OJ L136/3.
+14
+LD 28/2010, Legislative Decree 28 of 4 March 2010 implementing Article 60 of Law 69 of 18 June 2009 on mediation
+aimed at the settlement of civil and commercial disputes (Legislative Degree 28/2010), Official Gazette, No.53 of 5
+March 2010, introduced the Italian mediation model, providing for mandatory mediation before hearings for certain
+types of dispute.
+15
+European Parliament, Directorate-General for Internal Policies, Policy Department C, Italian Legislation on Mediation
+(April 2011), PE 453.175.
+16
+Italian Parliament passed Law no. 206/2021 in November 2021. This Act extended the scope of mandatory mediation
+as a pre-litigation step to new categories of civil and commercial claims.
+17
+Mediations in Italy: Overview (November 2022), Practical Law UK Practice Note, Overview w-036-9298.
+18
+CEDR, Tenth Mediation Audit. A survey of commercial mediator attitudes and experience in the United Kingdom
+(2023), p.7.
+19
+Halsey v Milton Keynes General NHS Trust [2004] EWCA Civ 576; [2004] 1 W.L.R. 3002.
+20
+PGF II SA v OMFS Co 1 Ltd [2013] EWCA Civ 1288; [2014] 1 W.L.R. 1386 and Thakkar v Patel [2017] EWCA Civ
+117; [2017] 2 Costs L.R. 233.
+
+Chapter 3 - Mediation, UKBC-EFFDIS 549291543 (2025)
+© 2025 Thomson Reuters.
+14
+21
+DSN v Blackpool Football Club Ltd [2020] EWHC 670 (QB); [2020] Costs L.R. 359 at [28], per Griffiths J.
+22
+Ohpen Operations UK Ltd v Invesco Fund Managers Ltd [2019] EWHC 2246 (TCC); [2019] B.L.R. 576 at [32], per
+O’Farrell J.
+23
+Children’s Ark Partnerships Ltd v Kajima Construction Europe (UK) Ltd [2022] EWHC 1595 (TCC); 203 Con. L.R.
+91 at [48], per Smith J—the requirement for a “condition precedent” (per Ohpen) was replaced by a requirement that
+the relevant ADR step be a “mandatory obligation”.
+24
+Halsey v Milton Keynes General NHS Trust [2004] EWCA Civ 576; [2004] 1 W.L.R. 3002.
+25
+Neil Andrews, Andrews on Civil Processes: Arbitration and Mediation (Cambridge, UK: Intersentia, 2013), para.2.28.
+26
+Ewelina Kajkowska, Enforceability of Multi-Tiered Dispute Resolution Clauses (Oxford: Hart Publishing, 2017), p.223.
+27
+Maryam Salehijam, “ADR Clauses and International Perceptions: A Preliminary Report” (2017) 21(3) Nederlands-
+Vlaams tijdschrift voor Mediation en conflictmanagement 27.
+28
+Maryam Salehijam, “Mediation Clause Decoded: A Systematic Content Analysis” (2018–2019) 5(6) McGill Journal
+of Dispute Resolution 120.
+29
+Michael Pryles, “Multi-Tiered Dispute Resolution Clauses” (2001) 18(2) J. Int’l Arb. 159, 160.
+30
+Maryam Salehijam “Mediation Clauses: Enforceability and Impact” (2019) 31 Singapore Academy of Law Journal 598;
+Elizabeth Bay Development Pty Ltd v Bora/Building Services Pty Ltd (1995) 36 NSWLR 709; Hooper Bailie Associated
+Ltd v Natcon Group Pty Ltd (1992) 28 NSWLR 194 and Chinadotcom Corp v Hugh Morrow [2001] NSWSC 209.
+31
+Maryam Salehijam, “Mediation Clause Decoded: A Systematic Content Analysis” (2018–2019) 5(6) McGill Journal of
+Dispute Resolution 120, 136, “E. Composition of the Mediation Agrements”.
+32
+© International Chamber of Commerce (ICC). Reproduced with kind permission of ICC.
+33
+G.B. Born, International Arbitration and Forum Selection Agreements, Drafting and Enforcing, 6th edn (Kluwer Law
+International B.V., 2021), Ch.3 Drafting International Arbitration Agreements, “B Potentially Desirable Elements of
+International Arbitration Agreements”, “B9 Multi-Tiered Dispute Resolution Clauses”, p.137.
+34
+Cable & Wireless Plc v IBM United Kingdom Ltd [2002] EWHC 2059 (Comm); [2002] C.L.C. 1319.
+End of Document
+© 2025 SWEET & MAXWELL

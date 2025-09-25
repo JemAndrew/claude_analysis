@@ -1,0 +1,33 @@
+Defences, UKBC-BULLENL 459371085 (2022)
+© 2025 Thomson Reuters.
+1
+Defences
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part E - Banking and Financial Services
+Chapter 12 - Financial Services
+Defences
+12-17
+FSMA enacts expressly that the illegality of various forms of contravention do not render a resulting transaction void or voidable
+or unenforceable except to the extent expressly provided in the Act. Where the claim is for breach of statutory duty, the following
+defences may arise:
+ 
+(i)Defences created by the statute itself;
+ 
+(ii)The causation of loss by the claimant’s own act (this requirement is effectively embodied in the relevant sections that
+the loss claimed must have been suffered in consequence of the relevant breach of the Act or the rules 156 );
+ 
+(iii)Contributory negligence (this is likely to be rarely established in a claim under the Act);
+ 
+(iv)The loss was caused by the intervening act of a third person, at least if it was unforeseeable. 157
+Footnotes
+156
+As to causation and remoteness, see Rubenstein v HSBC Bank Ltd [2012] EWCA Civ 1184; [2013] 1 All E.R. (Comm)
+915 where the Court of Appeal held that the first instance judge had erred in concluding that the loss suffered by the
+investor on his capital was caused by unprecedented market turmoil and was therefore unforeseeable and too remote.
+The Court of Appeal held that the market turmoil and its impact on the investor were foreseeable.
+157
+Groves v Lord Wimborne [1898] 2 Q.B. 402; Cooper v Railway Executive [1953] 1 W.L.R. 223.
+End of Document
+© 2025 SWEET & MAXWELL

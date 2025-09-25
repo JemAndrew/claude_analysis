@@ -1,0 +1,121 @@
+Confidentiality under applicable law, UKBC-ICCARBN 474406908 (2022)
+© 2025 Thomson Reuters.
+1
+Confidentiality under applicable law
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+Confidentiality under applicable law
+22-53
+If the underlying contract contains a confidentiality provision, then a party can rely on that provision in the arbitration
+proceedings. In many instances, the party will seek confirmation from the other side that then proceedings are to be treated
+as confidential. If there is agreement on the issue, then a confidentiality provision may be inserted in the Terms of Reference.
+There may be an argument that, under either the rules of law governing the arbitration agreement or under the laws of the place
+of arbitration, the arbitration should be treated as confidential.
+22-54
+There may be an argument that, under either the rules of law governing the arbitration agreement and/or under the laws of the
+place of arbitration, the arbitration should be treated as confidential. However, relatively few national laws address the issue.
+22-55
+Under French law, the Decree of 13 January 2011 expressly provides that, subject to legal requirements and unless otherwise
+agreed by the parties, arbitral proceedings shall be confidential in domestic arbitrations. 237  This provision was not, however,
+declared applicable to international arbitrations, 238  unless the parties agree otherwise. 239  Article 1479 of the French CPC
+stipulates that the deliberations of arbitrators are confidential. This provision applies to both domestic and international
+arbitrations. For more than two decades, French courts had favoured a general principle of confidentiality in arbitration,
+finding in the Aïta 240  and Bleustein cases that arbitral proceedings are confidential. The Paris Commercial Court (Tribunal
+de Commerce) held for example in Bleustein that “[w]hereas arbitration is a private proceeding of a confidential nature and
+that arbitration having been accepted by the parties, they must avoid any publicity relating to the dispute between them and
+the possible results”. 241
+22-56
+In a 2004 case, the Paris Court of Appeal, although admitting this principle, seemed to reduce the scope of the duty of
+confidentiality by requiring in the Nafimco case that the alleged breach of confidentiality be proved by the party requesting the
+payment of damages in this respect. The production of a party’s financial books does not necessarily open the right to obtain
+the payment of damages for a party in absence of such a proof.
+22-57
+Under Swiss law, there is an implied duty of confidentiality. In one case, the Swiss Federal Supreme Court admitted such a
+need for discretion in arbitration if the parties demonstrate that their interest outweighs the public interest to know how justice
+is administered and rendered. In other words, the Supreme Court is disposed to grant applications for the removal of the names
+of the parties, including the removal of certain portions of its judgments which relate to confidential information, such as the
+description of know-how. 242
+22-58
+Under US law, there appears to be no legal requirement of confidentiality in arbitration, 243  but at least one expert has opined, that
+there is no implied obligation of confidentiality although it would appear that it depends on an interpretation of the arbitration
+agreement. 244
+22-59
+
+Confidentiality under applicable law, UKBC-ICCARBN 474406908 (2022)
+© 2025 Thomson Reuters.
+2
+There is a line of English authority in favour of confidentiality of arbitration hearings. 245  As the Court of Appeals noted in the
+City of Moscow case, “[a]mong features long assumed to be implicit in parties” choice to arbitrate in England are privacy and
+confidentiality. The Act’s silence does not detract from this. In its Report on the Arbitration Bill dated February 1996 (paras 10–
+17), the Departmental Advisory Committee (DAC) (chaired by Lord Saville) recorded that “there is … no doubt whatever that
+users of commercial arbitration in England place much importance” on privacy and confidentiality “as essential features”. 246  In
+that case, the issue was confidentiality of annulment proceedings. However, the basic position is that the arbitration proceedings
+themselves are confidential. 247
+22-60
+In countries that have adopted the UNCITRAL Model Law, the position appears to vary. There is no provision in the Model Law
+providing for confidentiality, unlike with the more recent UNCITRAL Model Law on Conciliation. Australian courts held that
+there is no implied duty of confidentiality in arbitral proceedings but the Australian International Arbitration Act was amended
+in 2015 to expressly provide for confidentiality in arbitration. 248  Singapore has preferred the English approach. 249  Québec
+has recently adopted a provision that arbitration is confidentiality unless the parties have agreed otherwise. 250
+Footnotes
+237
+The confidentiality principle under art.1464(4) French CPC is subject to certain exceptions deriving from other areas
+of law, such as fiscal and banking law obligations of disclosure. Moreover, such obligation is limited by a party’s right
+to assert a legal right in annulment procedures before courts. See Derains, “Les nouveaux principles de procédure:
+confidentialité, célérité, loyauté” in T. Clay (ed), Le nouveau droit français de 1’arbitrage (Lextenso, 2011), pp.91 and
+102. See also Clay, op. cit., pp.131–141.
+238
+See art.1506 No.3 of French CPC. Derains, “Les nouveaux principes de procédure: confidentialité, célérité, loyauté”,
+op cit., p.101, explaining that confidentiality is far from being a settled matter in international arbitration, and that in
+fact, other concerns like transparency and the public’s right to be informed seem to gain more ground in the field.
+239
+Derains, “Les nouveaux principes de procédure: confidentialité, célérité, loyauté”, op.cit., p.100.
+240
+G. Aïta v A. Ojjeh, Cour d’Appel de Paris (1re Ch. suppl.), 18 February 1986, Rev. Arb. 1986, p.583.
+241
+Bleustein et autres c/société True North Inc et société FCB Tribunal de commerce de Paris (Ord. réf.) 22 February 1999
+(2003) Rev. Arb. Vol.1, pp.189 and 190.
+242
+See Swiss Federal Supreme Court, 19 June 2006, 4P.74/2006, 24–4 [2006] ASA Bull. 724–725. See also, for a comment
+on this decision, Tschanz, “Switzerland: Confidentiality of Swiss Supreme Court Review of Arbitral Awards”, Mondaq
+Business Briefing, 28 September 2006, online publication available at: http://www.mondaq.com [accessed 17 August
+2021]; Jolles, Stark-Traber and de Cediel, op. cit., p.145.
+243
+See US v Panhandle Eastern Corp, 118 F.R.D. 346 (D. Del., 1988). For a more recent decision of the United States Court
+of Appeals for the Seventh Circuit confirming that arbitration materials may be disclosed in response to a subpoena,
+despite any previous confidentiality obligations undertaken by those in their possession, see Gotham Holdings v Health
+Grades, 580 F.3d 664 (7th Cir. 2009).
+244
+See Expert Report of Professor Hans Smit (in Esso/BHP v Plowman ), (1995) Arbitration Int. Vol.11 No.3, pp.297–
+298. See also, Pryles, “Confidentiality” in the Leading Arbitrators’ Guide in International Arbitration, 3rd edn (Juris
+Publishing/Staempfli Publishers, 2014), p.109.
+245
+See for example Ali Shipping Corp v Shipyard “Trogir” [1998] 2 All E.R. 136. For limitations see Emmot v Michael
+Wilson & Partners [2008] EWCA Civ 184.
+246
+Department of Economics, Policy and Development of the City of Moscow v Bankers Trust Co [2004] EWCA Civ 314
+at [2]. For more details on the extent of the confidentiality obligation under English law, see Lew, ‘Confidentiality in
+Arbitrations in England’, in Lew et al., Arbitration in England (2007), pp.441–454.
+247
+The English position on confidentiality was further reflected in art.30 of the LCIA Rules. For a commentary thereof, see
+Koepp, Farah and Webster, “Arbitration in London: Feature of the London Court of International Arbitration” in Giuditta
+Cordero-Moss (ed) International Commercial Arbitration. Different Forms and their Features (Cambridge: Cambridge
+University Press, 2013), pp.217–270.
+248
+See sections 23C and 23D of the International Arbitration Act as amended. The prior position was reflected in Esso
+Australia Resources Ltd v Sidney James Plowman, 1–3 Arbitration Int., 235 (1995).
+
+Confidentiality under applicable law, UKBC-ICCARBN 474406908 (2022)
+© 2025 Thomson Reuters.
+3
+249
+See, for example, Myanma Yaung Chi Coo Ltd v Win Win Nu [2003] 2 S.L.R. (Singapore Law Reports), 547; International
+Coal Pte Ltd v Kristle Trading Ltd [2008] SGHC 182.
+250
+Québec’s New Code of Civil Procedure provides that: “4. Parties who opt for a private dispute prevention and resolution
+process and the third person assisting them undertake to preserve the confidentiality of anything said, written or done
+during the process, subject to any agreement between them on the matter or to any special provisions of the law.”
+End of Document
+© 2025 SWEET & MAXWELL

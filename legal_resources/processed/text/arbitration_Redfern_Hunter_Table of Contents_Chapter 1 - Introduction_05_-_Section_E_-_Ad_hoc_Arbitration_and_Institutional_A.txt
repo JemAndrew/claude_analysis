@@ -1,0 +1,242 @@
+Section E. - Ad hoc Arbitration and Institutional Arbitration, UKBC-REDFERN 530638602...
+© 2025 Thomson Reuters.
+1
+Section E. - Ad hoc Arbitration and Institutional Arbitration
+Redfern and Hunter on International Arbitration 7th Ed.
+Mainwork
+Chapter 1 - Introduction
+Section E. - Ad hoc Arbitration and Institutional Arbitration
+1. 150
+There are broadly two types of international arbitration. The first is an ad hoc arbitration, the second is an institutional arbitration.
+1. 151
+Any arbitration, wherever it is conducted, is subject to the mandatory rules of the lex arbitri: that is, the law of the place of
+arbitration. Generally, these rules will be broad and non-specific. They will say, for instance, that the parties must be treated
+with equality, 127  but they will not set out the way in which this is to be achieved. For this, more specific rules will be required.
+Here, the parties have a choice. Should the arbitration be conducted ad hoc, that is, pursuant to a set of rules agreed between
+the parties without the involvement of an arbitral institution, or should it be conducted according to the rules of one of the
+established arbitral institutions?
+(a) Ad hoc arbitration
+1. 152
+Parties to an ad hoc arbitration may establish their own rules of procedure (so long as these rules treat the parties fairly and
+allow each party a reasonable opportunity to present its case). 128  Alternatively, the parties may agree that the arbitration will
+be conducted without involving an arbitral institution, but according to an established set of rules, such as the UNCITRAL
+Rules. These provide a tried and tested framework for the proceedings, to which the tribunal and the parties may of course add
+other provisions, if they so wish.
+1. 153
+In practice, ad hoc arbitrations are now almost universally conducted on the basis of the UNCITRAL Rules, which the parties
+agree to accept as a convenient and up-to-date set of rules. 129  States in particular are likely to regard the UNCITRAL Rules as a
+preferred option, since they do not derive their authority from an arbitral organisation based in a particular country or designed
+to serve the interests of commerce, but from a broad international consensus reflected in a set of rules designed and adapted
+under the auspices of the United Nations.
+1. 154
+The principal disadvantage of ad hoc arbitration is that it depends for its full effectiveness on cooperation between the parties and
+their lawyers, supported by an adequate legal system in the place of arbitration. It is not difficult to delay arbitral proceedings,
+for example by refusing at the outset to appoint an arbitrator with the consequence that there is no arbitral tribunal in existence
+and no agreed book of rules to say what is to be done. 130  It will then be necessary to rely on such provisions of law as may
+be available to offer the necessary support. 131  It is only when an arbitral tribunal is in existence and a set of rules has been
+established that an ad hoc arbitration will be able to proceed if one of the parties fails or refuses to play its part in the proceedings.
+This is one of the reasons why UNCITRAL arbitration is often seen as the best of both worlds: in addition to dispensing with the
+services of arbitral institutions (which state parties sometimes prefer), the UNCITRAL Rules (by providing for the designation
+of an appointing authority to constitute the arbitral tribunal) prevent a reluctant respondent from blocking the proceedings by
+refusing to take part in the appointment of a tribunal.
+
+Section E. - Ad hoc Arbitration and Institutional Arbitration, UKBC-REDFERN 530638602...
+© 2025 Thomson Reuters.
+2
+(b) Institutional arbitration
+1. 155
+An ‘institutional’ arbitration is one that is administered by a specialist arbitral institution under its own rules of arbitration.
+These rules cover the progress of the arbitration from commencement to final award, but with differences of approach and
+emphasis. Some rules reflect the influence of the civil law, whereas others derive greater inspiration from the common law.
+What is common to all sets of rules is that they are formulated specifically for arbitrations that are to be administered by the
+institution concerned; and they are usually incorporated into the main contract between the parties by means of an arbitration
+clause. The clause recommended by the LCIA, for instance, states:
+Any dispute arising out of or in connection with this contract, including any question regarding its existence,
+validity or termination, shall be referred to and finally resolved by arbitration under the LCIA Rules, which Rules
+are deemed to be incorporated into this clause. 132
+1. 156
+An arbitration clause is a convenient way of incorporating a set of broad procedural rules, as well as an institution to police
+the process, into the parties’ contract. If at some future date the defending party or parties are unwilling to go ahead with an
+arbitration, it will nevertheless be possible for the claimant to do so effectively, since there will be a set of rules and an institution
+to regulate the way in which the arbitral tribunal is to be appointed and the way in which the arbitration is to be conducted
+and carried through to its conclusion.
+(i) Advantages
+1. 157
+Rules laid down by the established arbitral institutions will usually have been proven to work effectively in practice. They
+also will generally have undergone periodic revision in consultation with experienced practitioners, to take account of new
+developments in the law and practice of international arbitration. The rules themselves are generally set out in a small booklet
+and parties who agree to submit any dispute to arbitration in accordance with the rules of a named institution effectively
+incorporate that institution’s ‘rulebook’ into their arbitration agreement.
+1. 158
+This automatic incorporation of an established ‘rulebook’ is one of the principal advantages of institutional arbitration. If,
+for example, there is a challenge to an arbitrator on the grounds of lack of independence or impartiality, or if the defending
+party is unwilling to arbitrate and fails to appoint an arbitrator, the rulebook will provide a solution to enable the arbitration
+to proceed and for an award to be issued.
+1. 159
+A further advantage of institutional arbitration is that most arbitral institutions provide specialist staff to administer the
+arbitration. They will ensure that the arbitral tribunal is appointed, that advance payments are made in respect of the fees and
+expenses of the arbitrators, that time limits are observed, and generally that the arbitration is run as smoothly as possible.
+1. 160
+Finally, the assistance that an arbitral institution can give to the parties and their counsel in the course of the arbitral
+proceedings is appreciable. Even lawyers who are experienced in the conduct of arbitrations may run into problems that they
+may find it useful to discuss with the institution’s secretariat.
+
+Section E. - Ad hoc Arbitration and Institutional Arbitration, UKBC-REDFERN 530638602...
+© 2025 Thomson Reuters.
+3
+(ii) Disadvantages
+1. 161
+There are two principal disadvantages of institutional arbitration as opposed to ad hoc arbitration. First, there are the fees of
+the arbitral institution which will add, sometimes considerably, to the cost of the proceedings. Secondly, there is an additional
+tier of ‘management’ of the proceedings, in the shape of the staff of the arbitral institution. Experienced counsel and arbitrators
+may regard this as unnecessary. However, since the tasks performed by the staff of the institution usually need to be performed
+in any event, and in the absence of an institution would need to be performed by the tribunal itself (or by the tribunal’s
+secretary, if there is one), excluding an institution may prove to be a false economy.
+(iii) Selecting an arbitral institution
+1. 162
+In recent years, arbitral institutions have moved to centre-stage in the world of international arbitration. Their continued
+proliferation indicates an increasing demand for the services they offer, although some fall by the wayside. The best of them
+will offer a full range of services. First, they will have rules of arbitration, which have either been tested over time and proved
+to work effectively or which are based on a recognised and trusted model, such as the UNCITRAL Rules. This will save the
+parties and their lawyers the time and money that would otherwise be spent, as in non-institutional (or ad hoc) arbitrations,
+in drawing up a tailor-made set of rules.
+1. 163
+Secondly, if the parties are unable to agree upon a sole arbitrator, or upon the presiding arbitrator of a three-member tribunal,
+the selection of a suitably qualified individual will be made by the arbitral institution itself. Thirdly, if an arbitrator is
+challenged for lack of independence or impartiality, that challenge will not be determined by the court at the place of arbitration
+but by the arbitral institution itself, exercising a quasi-judicial role. Fourthly, once the arbitration is under way, the institution’s
+secretariat will usually monitor its progress and deal with any enquiries that the parties or the tribunal may have.
+1. 164
+Finally, at the end of the arbitral proceedings, and when the award is ready to be issued, it may be reviewed by the arbitral
+institution, who will refer back to the arbitrators with any minor corrections; and once the award has been signed and dated by
+the tribunal, it will usually be issued to the parties by that institution. It may even be referred to by the name of the institution,
+being described in the arbitration journals and reviews as, for instance, an ‘ICC Award’. Nevertheless, it is and remains the
+award of the arbitral tribunal and not of the institution that issues it.
+1. 165
+There are so many arbitral institutions or centres in the world that it is not practicable, nor would it be useful, simply to list
+them all in this book. We therefore propose to assist in the selection of the ‘right’ arbitral institution for a particular case by
+setting out some general considerations that might be helpful.
+(c) General considerations
+1. 166
+First, if the arbitral institution is relatively new or unknown, steps should be taken to ensure (i) that it is a genuine arbitral
+institution and (ii) that it has credible premises with staff who are suitably qualified to offer the services that are advertised. As to
+the first point, although it seems unlikely, fraudulent arbitral institutions are not unknown. For instance, customers of Citibank
+who had a complaint about credit card debts were invited to submit that complaint to arbitration under the rules of the National
+Arbitration Council (NAC). Those who did so received an ‘award’ for the amount of their debt, plus the fee of the NAC. It
+was not a genuine operation and Citibank eventually obtained an injunction to stop it happening. 133  As to the second point, the
+
+Section E. - Ad hoc Arbitration and Institutional Arbitration, UKBC-REDFERN 530638602...
+© 2025 Thomson Reuters.
+4
+staff of a good arbitral institution should be capable of giving advice on potentially sensitive matters, such as the appointment
+or challenge of arbitrators, unreasonable delay in the conduct of the proceedings, extension of time limits, and so forth.
+1. 167
+Secondly, it is necessary to make a distinction between ‘arbitral institutions’ and ‘arbitration centres’. The titles may cause some
+confusion. An arbitral institution, properly so called, will administer arbitrations, either under its own rules or under established
+rules such as those of UNCITRAL. An arbitration centre may in fact be an arbitral institution, like the Cairo Regional Centre
+for International Commercial Arbitration (CRCICA), which administers arbitrations under a slightly modified version of the
+UNCITRAL Rules. Alternatively, an arbitration centre may in fact be a business enterprise such as the International Dispute
+Resolution Centre (IDRC) in London, which offers ‘high-tech’ facilities for arbitrations, mediations, and conferences but does
+not itself administer arbitrations.
+1. 168
+Thirdly, there is the question of location. Regional arbitral institutions have grown in importance and it is now possible to look
+for a reputable regional institution, rather than one based in Europe or the United States. For example, if the parties are based in
+Africa, consideration should certainly be given to the selection of one of the institutions or centres that are based there. 134  Some
+institutions that have started regionally now operate internationally. One example is the Singapore International Arbitration
+Centre which now has representative offices in India, Korea, the United States, and China.
+1. 169
+Finally, there is the question of the quality of the arbitrators appointed and the awards rendered under the rules of a given
+institution. Arbitral institutions compete on accessibility, price, speed of service, and other factors, but the quality of the tribunal
+should also be taken into account. The way an arbitral institution selects arbitrators is thus a very important factor.
+1. 170
+A good award, made by a tribunal of quality under the auspices of a reputable arbitral institution, should be capable of standing
+up to most challenges. An award is, of course, the award of the tribunal and not of the arbitral institution, but it nevertheless
+carries to a greater or lesser extent the imprimatur of that institution. This raises the question of the extent to which an arbitral
+institution should review an award before it is issued to the parties (and the rules should be reviewed with that question in mind.)
+1. 171
+At one time, it was assumed that parties would comply voluntarily with international arbitral awards, however reluctant they
+might be to do so. This is no longer the position, as indicated in Chapters 11 and 12. Attempts to challenge (or ‘set-aside’)
+international awards at the place of arbitration, and actions in foreign courts to try to enforce such awards, are becoming
+noticeably more frequent as the amounts in dispute grow larger.
+(d) Selection of arbitrators by the institution
+1. 172
+The qualities required of international arbitrators are considered in Chapter 4 of this book. In the present context, the focus is
+simply on the selection of arbitrators by an arbitral institution. The ideal situation is no doubt one in which the parties themselves
+agree on the selection of the arbitrator or arbitrators who are to constitute the arbitral tribunal. However, if the parties cannot
+agree, it will be for the court or if there is one, the relevant arbitral institution, to make the necessary selection.
+1. 173
+In circumstances in which an arbitral institution may be required to select one or more arbitrators for a particular arbitration, it
+is important to know what method of selection that institution uses. Does it have a list of favourite arbitrators that it appoints in
+turn, in a contemporary version of ‘Hobson’s Choice’? 135  Or does it employ a list system on the lines of that in the UNCITRAL
+Rules, where parties are given a list of possible arbitrators from which they are invited to choose? If so, what are the criteria
+for inclusion on that list and how often is it revised? Or again, is the choice referred to a committee and, if so, who are the
+members of that committee and what selection criteria do they use? In effect, is there a genuine list of diverse, skilled, and
+
+Section E. - Ad hoc Arbitration and Institutional Arbitration, UKBC-REDFERN 530638602...
+© 2025 Thomson Reuters.
+5
+effective arbitrators or is it a members’ club? In general terms, the choice of arbitrators will depend heavily on the nature of the
+dispute and the skills required to resolve it and so any list system may unnecessarily constrain that choice.
+1. 174
+It is not always easy to find the answer to questions on how an institution selects arbitrators for its panel, even by a careful
+scrutiny of its rules and any accompanying publicity. In an age in which increasing importance is attached to ‘transparency’,
+it would be helpful if the answers were more readily available. If parties are to have confidence in arbitrators appointed by an
+institution on their behalf, it is only right that they should know on what basis those arbitrators are selected.
+(e) Costs
+1. 175
+An arbitral institution, like any business in the service sector, will charge fees in order to cover its own costs and expenses and,
+in the case of some institutions, to make a profit that it will pass on to its parent company or owners. There are in general two
+bases on which these fees are calculated.
+1. 176
+They may be calculated ad valorem, which is to say as a set proportion of the amount in dispute; or they may be calculated on
+the basis of time spent on the arbitration by the staff of the institution and the tribunal. The parties to the arbitration will then be
+required to make an advance payment, based either on the amount in dispute or on an estimate of the time likely to be spent on
+the case. These payments will add to the overall costs of the arbitral proceedings, sometimes quite substantially, and the parties
+and their lawyers will want to know that they are receiving value for money.
+1. 177
+The advantage of the ad valorem approach is that it means that the parties know from the outset what the arbitration is going
+to cost, in terms of payments to the tribunal and the institution concerned (although further advances on account of costs may
+be required if the arbitration turns out to take longer than expected—for example, because of the need for an interim award
+on jurisdiction). The advantage of the time/cost method, which is the method generally used by professional firms such as
+accountants and lawyers, is that there is a correlation between the work done (or at least, the time recorded as being spent)
+and the fees charged.
+Footnotes
+127
+See, e.g., the Model Law, Art. 18.
+128
+Many important arbitrations, e.g. reinsurance disputes under the so-called Bermuda Form, are regularly conducted ad
+hoc.
+129
+It is not advisable to try to adopt or adapt institutional rules (such as those of the ICC) for use in an ad hoc arbitration,
+since such rules make repeated references to the institution concerned and are unlikely to work properly or effectively
+without it. It seems however (although it is not a practice that the authors would recommend) that it may be possible
+to involve two arbitral institutions in what would otherwise be an ad hoc arbitration (although quite why this should
+be done is another matter). The court in Singapore was faced with an arbitration clause stating that disputes should be
+resolved by arbitration before SIAC in accordance with the ICC Rules. The Singapore International Arbitration Centre
+was prepared to administer the arbitration under its rules, applying the ICC Rules to the ‘essential features the parties
+would like to see’ and the arbitration proceeded on this basis. The Singapore court upheld this arrangement: see Insigma
+Technology Co. Ltd v Alstom Technology Ltd [2008] SGHC 134, at 26. For its part, the ICC Court is unwilling to
+administer proceedings fundamentally different from its own basic concepts: see Craig, Park, and Paulsson, International
+Chamber of Commerce Arbitration (3rd edn, Oceana, 2000), para. 715.
+130
+Unless it has already been agreed that the UNCITRAL Rules are to govern the proceedings.
+131
+See Chapter 3.
+
+Section E. - Ad hoc Arbitration and Institutional Arbitration, UKBC-REDFERN 530638602...
+© 2025 Thomson Reuters.
+6
+132
+The parties may go on, if they wish, to specify the number of arbitrations, the seat of the arbitration, the language to be
+used, and the governing law of the contract and it would usually be sensible to do this.
+133
+See Rau, ‘Arbitral Jurisdiction and the Dimensions of “Consent” ’ (2008) 24 Arb Intl 204 at fn. 19.
+134
+See the ‘2020 SOAS Arbitration in Africa Survey Report’ by the School of Oriental and African Studies, University
+of London.
+135
+T. Hobson (1544–1631) owned livery stables in Cambridge, the English university town. He hired out horses to students
+and visitors in strict order, giving customers the option to take the horse they were offered or none at all.
+End of Document
+© NIGEL BLACKABY KC, CONSTANTINE PARTASIDES
+KC, ALAN REDFERN

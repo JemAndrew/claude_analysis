@@ -1,0 +1,116 @@
+Liens at common law, UKBC-BULLENL 459371935 (2022)
+© 2025 Thomson Reuters.
+1
+Liens at common law
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part F - Business Law
+Chapter 23 - Lien
+Liens at common law
+23-02
+The person claiming to exercise a lien must be lawfully in possession of the property. Thus, if a buyer rejects goods for which
+he has paid, he loses his right to possession of them and, therefore, a lien over them for the return of the price. 2  Certain types of
+property are not susceptible to possession: for example, it has been held that an electronic database is not property susceptible
+of possession or of being subject of tort of conversion. 3
+Possession must be continuous so that if the owner has the right to call for the return of the goods, the lien is lost. 4
+There are exceptional circumstances where possession is not necessary to give rise to a legal lien: for example, liens for seamen’s
+wages and bottomry bonds.
+General liens—examples
+23-03
+A banker, in the absence of an agreement to the contrary, has a general lien upon the securities of his customers, which are in
+his hands as a banker, 5  but this lien may be subject to a trust in favour of a third party where the banker has knowledge of
+circumstances giving rise to such a trust. 6
+Solicitors have a general lien for their taxable costs, charges and expenses on the deeds and papers of their clients which have
+come into their hands in the course of their professional employment. 7
+Hotel proprietors, as innkeepers, enjoy a lien upon any property (subject to certain statutory exceptions) brought by a guest in
+respect of the guest’s unpaid bill.
+A factor has a general lien upon all goods consigned to him as factor for the balance due to him. 8  He does not lose his lien
+because he has instructions to sell the goods at a particular price and in the principal’s name. 9
+A packer has a general lien upon the goods of his customer which are in his hands. 10  Wharfingers and warehousemen have
+similar liens, 11  but not where the transaction shows an intention on the part of both parties inconsistent with such a general
+lien. 12  A warehouseman cannot assert a general lien against all goods deposited by a factor in his own name whether his goods
+or not. 13
+Stockbrokers have a general lien upon the securities of their customers. 14  A similar lien is available to insurance brokers. 15
+
+Liens at common law, UKBC-BULLENL 459371935 (2022)
+© 2025 Thomson Reuters.
+2
+Particular liens
+23-04
+Where a party is obliged by law to receive goods, the common law imposes the concomitant obligation to pay for the services
+rendered and a lien upon the goods until payment is made. Thus, a common carrier, being bound to carry the goods, has a
+particular lien on the goods carried until payment is made. Where there is no obligation to receive goods, there is lien for moneys
+spent on improving the goods, but the lien does not extend to labour expended on mere maintenance. 16  To train a horse gives
+rise to a lien, but to stable one does not. 17
+Particular liens have arisen in the following cases, amongst many others: an accountant upon the books of account of his client;
+an architect upon plans drawn by him; an auctioneer for his commission; a conveyancer upon documents prepared by him; a
+garage proprietor for a car repaired by him; a printer upon copies of a book printed by him; and a tailor for the price of the suit.
+Charterparties often create what is called a “lien” in favour of the shipowner over subfreights. This is not a lien properly called
+and is subject to special rules. It is a product of maritime law and does not arise either at common law or by equity. 18
+Equitable liens
+23-05
+An equitable lien arises by operation of law and is not dependent upon possession. It is not possible to state, by reference to a
+general rule, the circumstances in which the law imposes an equitable lien. A vendor of land has a legal lien on the land sold
+and on documents of title within his or her possession until completion of the transaction. The vendor also has an equitable lien
+for the unpaid purchase price of any part of it. It ranks as an overriding interest for the purposes of the Land Registration Act
+2002 in a claim for specific performance, the vendor may also expressly plead that he or she is entitled to a lien. 19
+Conversely, a purchaser of land who has paid part of the purchase price not only has a lien on the title deeds in his or her
+possession but also has an equitable lien on the vendor’s land. The effect is the same as if the vendor had executed a charge
+upon the property.
+Other examples of equitable liens are found as between partners in relation to the partnership estate and in the case of a
+remainderman who has a lien upon profits receivable in the tenant’s hands against the tenant who has committed acts of waste. 20
+A lien or charge in favour of a person who expends money for the benefit of or on the property of another may arise if the payer
+is under an obligation to spend or is entitled to be indemnified for such expenditure. 21
+A person entitled to trace a proprietary right into trust moneys or their proceeds may in appropriate circumstances be entitled
+to an equitable lien over those moneys or proceeds. 22
+Footnotes
+2
+JL Lyons & Co v May & Baker Ltd [1923] 1 K.B. 685.
+3
+Response Ltd v Datateam Business Media Ltd [2014] EWCA Civ 281; [2015] Q.B. 41.
+4
+Scarfe v Morgan (1838) M. & W. 270 where the livery stable owner who was required to permit the owner to remove
+the horse as and when the owner required its use did not thereby obtain a lien.
+5
+Brando v Barnett (1846) 12 C1. & F. 787.
+6
+Barclays Bank Ltd v Quist-close Investments Ltd [1970] A.C. 567.
+
+Liens at common law, UKBC-BULLENL 459371935 (2022)
+© 2025 Thomson Reuters.
+3
+7
+Stevenson v Blakelock (1813) 1 M. & S. 535 cited in Re Taylor, Stileman and Underwood [1891] 1 Ch. 590 at 600.
+8
+Dixon v Stansfield (1850) 10 C.B. 398.
+9
+Stevens v Biller (1883) 25 Ch. D. 31.
+10
+Re Witt (1876) 2 Ch. D. 489.
+11
+Holderness v Collinson (1827) 7 B. & C. 212.
+12
+Hill & Sons v London Central Markets Cold Storage Co (1910) 102 L.T. 715.
+13
+Leuckhart v Cooper (1836) 3 Bing. N.C. 99.
+14
+Re London and Globe [1902] 2 Ch. 416 and Hope v Glendinning [1911] A.C. 419.
+15
+Hewison v Guthrie (1836) 2 Bing. N.C. 755.
+16
+Re Southern Livestock Producers Ltd [1964] 1 W.L.R. 24.
+17
+Bevan v Waters (1828) Mood. & M. 235.
+18
+Agnew v Commissioner of Inland Revenue [2001] UKPC 28; [2001] 2 A.C. 710.
+19
+Tacon v National Standard Mortgage and Investment Co (1887) 56 L.J. Ch. 529.
+20
+Briggs v Earl of Oxford (1855) 1 Jur. M.S. 817 and Re Spurlings Wills Trusts [1966] 1 W.L.R. 920.
+21
+Chalmers v Pardoe [1963] 1 W.L.R. 677.
+22
+Foskett v McKeown [2001] 1 A.C. 102; [2000] 2 W.L.R. 1299.
+End of Document
+© 2025 SWEET & MAXWELL

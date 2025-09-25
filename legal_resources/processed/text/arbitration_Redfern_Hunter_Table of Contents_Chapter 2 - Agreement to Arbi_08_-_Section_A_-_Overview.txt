@@ -1,0 +1,202 @@
+Section A. - Overview, UKBC-REDFERN 530638608 (2025)
+© 2025 Thomson Reuters.
+1
+Section A. - Overview
+Redfern and Hunter on International Arbitration 7th Ed.
+Mainwork
+Chapter 2 - Agreement to Arbitrate
+Section A. - Overview
+(a) Introduction
+2. 01
+The agreement to arbitrate is the foundation stone of international arbitration. 1  It records the consent of the parties to submit
+to arbitration—a consent that is indispensable to any process of dispute resolution outside national courts. 2  Such processes
+depend for their very existence upon the agreement of the parties. As already discussed, many lawyers and commentators attach
+great importance to the wishes of the parties—to l’autonomie de la volonté. Indeed, some go so far as to suggest that this
+consent, together with an appropriate set of rules, is sufficient to turn international arbitration into an autonomous, delocalised
+process that takes place independently of national law. For most, this goes too far. 3  It attaches too much importance to the
+wishes of the parties and not sufficient to the framework of national laws and international treaties within which the international
+arbitral process must take place. Nevertheless, the consent of the parties remains the essential basis of a voluntary system of
+international arbitration. 4
+(b) Categories of arbitration agreement
+2. 02
+There are two basic types of arbitration agreement, as already indicated, namely the arbitration clause and the submission
+agreement. An arbitration clause looks to the future, whereas a submission agreement looks to the past. An arbitration clause,
+which is now the most common, and is usually contained in the principal agreement between the parties, is an agreement to
+submit to arbitration any future disputes. The second is an agreement to submit existing disputes to arbitration.
+In this book, the terms ‘arbitration clause’ and ‘submission agreement’ are used according to these descriptions.
+(i) Arbitration clauses
+2. 03
+An arbitration clause that deals with disputes that may arise in the future is usually brief, since when it is agreed the parties
+do not know what kind of dispute (if any) may possibly arise and if it does, how it should best be handled. 5  Accordingly,
+parties insert a short model clause, recommended by an arbitral institution. 6
+2. 04
+These clauses were often barely discussed and were often referred to as ‘midnight clauses’—that is, the last clauses to be
+considered in contract negotiations, sometimes late at night or in the early hours of the morning. Insufficient thought was given
+to how disputes were to be resolved (possibly because the parties were reluctant to contemplate divorce as they prepared to
+walk up the proverbial aisle). In consequence, an inappropriate and unwieldy compromise was often adopted 7 —for example,
+the wrong choice (or no choice at all) of the substantive law or of the place of arbitration. Such neglect is increasingly a thing
+
+Section A. - Overview, UKBC-REDFERN 530638608 (2025)
+© 2025 Thomson Reuters.
+2
+of the past. Increasingly, parties recognise that all rights under a contract may ultimately be dependent upon an effective
+dispute resolution clause.
+(ii) Submission agreements
+2. 05
+In contrast to arbitration clauses, submission agreements tend to be longer. A submission agreement deals with a dispute that
+has in fact already arisen—and so it should contain many, if not all, of the provisions required to fit precisely the circumstances
+of the particular dispute. In addition to indicating the place of arbitration and the substantive law, a submission agreement
+will often name the arbitrators, contain a definition, or at least an outline, of the disputes that are to be arbitrated, and even
+(if thought appropriate) address procedural arrangements, such as the production of documents, the exchange of written
+submissions and witness statements, and the timetable to be followed. 8
+2. 06
+The position of the parties and their advisers in dealing with a submission agreement is radically different from that of
+agreeing an arbitration clause. First, as a dispute has actually arisen, this usually means that there will be an adversarial
+element in the relationship. Secondly, the parties and their legal advisers will know what kind of dispute they are facing, and
+each side will wish to structure the arbitral procedure in a manner that suits its own case, which may well lead to conflicting
+positions. Thirdly, the fundamental interests of the parties may conflict, in that the claimant usually wants a speedy resolution
+of the dispute, whereas the respondent may consider that it would be advantageous to create delay. 9  For these reasons,
+the negotiation of a submission agreement may be a lengthy and difficult process. It is less advisable than inclusion of an
+arbitration clause in the underlying agreement and, as a consequence, has become much rarer.
+2. 07
+Irrespective of whether the parties agree to settle their dispute pursuant to an arbitration agreement contained in an arbitration
+clause or to one set out in a submission agreement, the following general observations regarding the international conventions
+governing arbitration, and the international standards derived therefrom, apply.
+(c) International conventions
+2. 08
+As noted in Chapter 1, the 1923 Geneva Protocol and the 1927 Geneva Convention dealt with the recognition and enforcement
+of international arbitration agreements and the execution of arbitral awards. These were then followed by various regional
+conventions, 10  until eventually the most important convention in the field of international commercial arbitration, the New
+York Convention, was promulgated in 1958.
+2. 09
+The New York Convention continued where the Geneva treaties left off. 11  Its title as a ‘Convention on the Recognition and
+Enforcement of Foreign Arbitral Awards’ is a partial misnomer. The Convention’s starting point is in fact the recognition and
+enforcement of arbitration agreements. 12  Having first provided for recognition of the validity and enforceability of arbitration
+agreements, the Convention then provides for the international enforcement of awards that arise from such agreements and
+comply with the specified criteria. 13
+2. 10
+Closely modelled 14  on the New York Convention, the 1975 Panama Convention 15  was signed by the United States and a
+significant number of Latin American states, and marked another step forward in the recognition of arbitration as an established
+method of resolving disputes in a regional context. It has somewhat fallen into disuse as the signatory states have now all ratified
+the New York Convention.
+
+Section A. - Overview, UKBC-REDFERN 530638608 (2025)
+© 2025 Thomson Reuters.
+3
+(d) International standards
+2. 11
+What is important about these and other conventions on arbitration, 16  whether international or regional, is that they establish the
+requirements for a valid international arbitration agreement and they indicate the parameters within which such an agreement
+will operate.
+2. 12
+These conventions reflect the provisions to be found in developed arbitration laws and in the practice of arbitral institutions. In
+turn, together with the Model Law, they have played an important part in modernising and harmonising state laws governing
+arbitration. An arbitration agreement that provides for international arbitration must take account of these international
+requirements. If it fails to do so, the arbitration agreement, and any award made under it, may not qualify for international
+recognition and enforcement.
+2. 13
+In seeking to establish the ‘international requirements’, the starting point has to be the New York Convention. Under the
+Convention, each contracting state undertakes to recognise and give effect to an arbitration agreement when the following
+requirements are fulfilled:
+ 
+• the agreement is in writing;
+ 
+• it deals with existing or future disputes;
+ 
+• these disputes arise in respect of a defined legal relationship, whether contractual or not; and
+ 
+• they concern a subject matter capable of settlement by arbitration.
+2. 14
+These are the four positive requirements of a valid arbitration agreement, laid down in Article II(1) of the New York
+Convention. 17  A further two requirements are, in effect, added by the provisions of Article V(1)(a), 18  which stipulates that
+recognition or enforcement of an award may be refused if the party requesting refusal is able to prove that the arbitration
+agreement was made by a person under incapacity or that the agreement was invalid under the applicable law. Expressed
+positively, 19  these represent additional requirements to the effect that:
+ 
+• the parties to the arbitration agreement must have legal capacity under the law applicable to them;
+ 
+• the arbitration agreement must be valid under the law to which the parties have subjected it or, failing any indication
+thereon, under the law of the country where the award was made. (In the words used earlier in the New York Convention,
+in Article II(3), the agreement must not be ‘null and void, inoperative or incapable of being performed’.)
+Each of these requirements is now considered in turn.
+Footnotes
+1
+See Chapter 1, paragraph 1.20.
+2
+As discussed later in this chapter, consent can be deemed by conduct or found in more than one document.
+3
+Except for arbitrations conducted under the ICSID Convention. For further discussion of delocalised arbitration, see
+Chapter 3, paragraphs 3.83–3.101.
+4
+Compulsory arbitration does exist. Nationally, it is used as a supposedly cheap and informal method of resolving disputes
+in particular areas. Internationally, the most striking example of compulsory arbitration was in the socialist countries
+of Central and Eastern Europe, where it was employed as the method of settling disputes under the provisions of the
+Convention on the Settlement of Arbitration of Civil Law Disputes Arising from Relations of Economic, Scientific
+
+Section A. - Overview, UKBC-REDFERN 530638608 (2025)
+© 2025 Thomson Reuters.
+4
+and Technical Co-operation (Moscow Convention) of 1972. However, compulsory arbitration is outside the scope of
+this book, which is concerned with the mainstream of international arbitration—that is, with arbitration as a consensual
+process, taking place pursuant to the parties’ voluntary agreement to arbitrate.
+5
+In some Latin American states (for instance, Argentina and Uruguay) a clause to submit future disputes to arbitration
+was not operative until a submission agreement (or compromiso) had also been executed. In any such jurisdictions, the
+ICC Rules may be preferred. They provide for a functional equivalent of the compromiso (the terms of reference), which
+are not included in other institutional rules. However, the requirement for an additional compromise is now increasingly
+rare. In 2018, both Argentina and Uruguay enacted new legislation governing international commercial arbitration (Law
+No. 27,449 on International Commercial Arbitration, published in Argentina’s Official Gazette on 26 July 2018; and
+Law No. 19.636, published on 26 July 2018), neither of which contain a requirement for a submission agreement.
+In Brazil, there is similarly no requirement for a submission agreement to be executed, but to be valid an arbitration
+agreement must make provision for the procedure to be adopted in the arbitration, which it may do by reference to a
+set of institutional rules.
+6
+By contrast, in some contexts (e.g. in an ad hoc arbitration) it is possible for parties to agree an arbitration clause
+that identifies the procedure to be followed in detail, as well as the means of establishing the arbitral tribunal, filling
+vacancies, and so forth.
+7
+For a step-by-step guide to drafting arbitration clauses, see Paulsson, Rawding, and Reed (eds) The Freshfields Guide
+to Arbitration Clauses in International Contracts (3rd edn, Kluwer Law International, 2010).
+8
+This is not a universal rule. A submission agreement may take the form of a brief agreement to submit an existing dispute
+to the procedures of an arbitral institution. On balance, it is probably better to deal with detailed procedural questions
+in a separate document, perhaps with the assistance of the arbitral tribunal once the arbitration has commenced.
+9
+Although it should, of course, be borne in mind that the claimant may be compensated for the delay by an award of
+interest and that delay is usually achieved only by the expenditure of costs, e.g. the determination of a preliminary issue.
+Ultimately, the respondent may be directed to pay the costs of the arbitration, particularly if it is considered that its
+conduct has contributed to the delay. See Chapter 9.
+10
+See, e.g., the Bustamante Code of 1928 and the European Convention of 1961.
+11
+The New York Convention replaces the Geneva treaties between states that have become bound by it: Art. VII(2).
+12
+New York Convention, Arts II(1) and II(3).
+13
+The Model Law follows a similar pattern.
+14
+It too recognises the validity of an agreement that submits existing and future disputes to arbitration: Panama Convention,
+Art. 1.
+15
+Its formal title is ‘The Convention on the Settlement of Civil Law Disputes Resulting from Economic, Scientific and
+Technological Cooperation’. The text of the Convention appears in (1978) III YBCA 15.
+16
+Such as the European Convention of 1961 and the ICSID Convention.
+17
+The first three are also contained in the Model Law, Art. 7(1) and (2), and the fourth in Arts 34(2)(b) and 36(2)(b)
+(i). More recently, however, the UN Commission on International Trade Law (UNCITRAL) formulated and adopted
+a recommendation regarding the interpretation of Arts II(2) and VII(1) of the New York Convention on 7 July 2006,
+by which it recognised that Art. II(2), which defines the way in which the ‘writing’ requirement must be fulfilled,
+must be applied ‘recognizing that the circumstances described therein are not exhaustive’. The International Council for
+Commercial Arbitration (ICCA)’s Guide to the Interpretation of the 1958 New York Convention (2011) acknowledges
+this recommendation, noting that ‘an inflexible application of the Convention’s writing requirement would contradict
+current and widespread business usages and be contrary to the pro-enforcement thrust of the Convention’. See paragraphs
+2.15–2.26.
+18
+They are also to be found in the Model Law, Arts 34(2)(a) and 36(1)(a)(i).
+19
+Although it should be noted that the burden of proof is on the party opposing recognition or enforcement, who must
+prove lack of capacity or invalidity.
+End of Document
+© NIGEL BLACKABY KC, CONSTANTINE PARTASIDES
+KC, ALAN REDFERN

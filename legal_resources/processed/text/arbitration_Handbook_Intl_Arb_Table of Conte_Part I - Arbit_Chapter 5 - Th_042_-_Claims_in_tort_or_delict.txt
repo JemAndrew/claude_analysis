@@ -1,0 +1,77 @@
+Claims in tort or delict, UKBC-ICCARBN 474406931 (2022)
+© 2025 Thomson Reuters.
+1
+Claims in tort or delict
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+Claims in tort or delict
+21-34
+The issue of whether a claim in tort or delict is covered by the arbitration agreement is an issue of interpretation of the arbitration
+agreement and the law applicable thereto discussed in art.6. The standard ICC arbitration clause covers “all disputes arising out
+of or in connection with this contract” and this language is often considered as covering tort or delict claims that are related to
+the contract. 134  Assuming that the Tribunal has jurisdiction over a claim in delict or tort, the issue arises as to the law applicable
+to the merits of that claim.
+21-35
+In some instances, in their choice of law provision (or in the arbitration agreement itself), the parties will expressly agree on
+the choice of law for tort or delict claims. Such an agreement is covered by the first sentence of art.21(1), although there may
+be issues as to the whether this choice of law is effective. 135  In other instances either the parties will not have agreed on the
+applicable law for the contract as a whole or it will not be clear whether the applicable law under the contract govern claims in
+tort or delict. In such a case, the Tribunal will be called upon to determine the applicable rules of law under the second sentence
+of art.21(2). In ICC Case No.16981, the issue was whether the law applicable to a claim for certain termination claims based
+on a Greek law was governed by the law of the distribution contract (Finnish law) or the law under which the claims were
+made (Greek law). By majority decision, the Tribunal held that Finnish law, the law of the contract, was applicable due to the
+nature of the claims. 136  The Tribunal also held that the choice of Finnish law met the requirements of art.14 of the Rome II
+Regulation. 137
+21-36
+The law applicable to the tort or delict may well be different from that applicable to the contract itself. For example, it is
+possible that the parties have agreed that a distribution agreement between a French manufacturer and an English distributor
+will be governed by French law. However, if a tort occurs, the law governing the tort will generally be, although not necessarily
+exclusively, the law of the place where the tort occurs. 138  Therefore, if there is a tort in England, the Tribunal may be called
+upon to apply English law to the tort and French law to the contract, if in fact the claims are distinct. In another example, the
+law governing a financing was expressed to be English law. However, the lenders asserted tort claims under the law of the
+place of incorporation of the borrower and the parties agreed that the applicable law for those claims was the law of the place
+of incorporation of the respondent. 139
+Footnotes
+134
+As the Ontario Court of Appeal noted in Dalimpex Ltd v Janicki, 2003 CanLII 34234 (ON CA), the issue of whether
+the tort claims are covered by this type of wording is an issue for the Tribunal initially. The Court of Appeal overturned
+the lower court’s holding that the clause did not extend to such claims. See also ICC Case No.12167 (Final Award)
+(2007) JDI No.4 p.1270, note Jarvin and Truong-Nguyen (jurisdiction of the Tribunal to consider a counterclaim based
+on tort due to the broad scope of the arbitration agreement which provided that any disputes arising out or in connection
+with the contract shall be submitted to arbitration); ICC case No.12363 (Partial Award) [2006] ASA Bull. Vol.24 No.3
+p.462; Gonzales, “The Treatment of Tort in ICC Arbitral Awards” including extracts on ICC Arbitral Awards relating
+to Tort, [2002] ICC ICArb. Bull. Vol.13 No.2, p.39 and p.55; Reymond, “Conflits de lois en matière de responsabilité
+
+Claims in tort or delict, UKBC-ICCARBN 474406931 (2022)
+© 2025 Thomson Reuters.
+2
+délictuelle devant l’arbitre international” in Travaux du Comité français de droit international privé, 1988–1989, Paris,
+CNRS 1991, p.97. Born, op. cit., at p.319 citing Consolidated Data Terminals v Applied Digital Data Systems Inc, 708
+F 2nd 385 (9th Cir. 1983) (non application of the parties’ chosen law to the contract to tort issues); Knieriemen v Bache
+Halsey Stuart Shields, 427 N.Y. S. 2d 10; 12–13 App. Div. (New York law only permits a choice-of-law as to contract
+but not to tort claims), Richie Enterprises v Honeywell Bull, Inc, 730 F Supp. 1041 (D. Kan. 1990) (application of the
+parties’ choice of law only to contract claims in absence of an “express and unambiguous” agreement to its application
+to tort claims as well). More generally, see also EC Regulation No.864/2007 of 11 July 2007 on the law applicable to
+non-contractual obligations (Rome II), OJ L199/40).
+135
+For a general discussion, see Gonzalez, “La responsabilité délictuelle dans les sentences arbitrales de la Chambre de
+Commerce Internationale”, [2002] ICC ICArb. Bull. Vol.13 No.2 p.41, 56
+136
+Final award in Case 16981 [2016] ICC DR Bull. No.1, p.111.
+137
+Article 14 of the Rome II Regulation provides that: “1. The parties may agree to submit non-contractual obligations to
+the law of their choice: (a) by an agreement entered into after the event giving rise to the damage occurred; or (b) where
+all the parties are pursuing a commercial activity, also by an agreement freely negotiated before the event giving rise
+to the damage occurred. The choice shall be expressed or demonstrated with reasonable certainty by the circumstances
+of the case and shall not prejudice the rights of third parties.”
+138
+See for example, art.4(1) of the Rome II Regulation: “1. Unless otherwise provided for in this Regulation, the law
+applicable to a non-contractual obligation arising out of a tort/delict shall be the law of the country in which the damage
+occurs irrespective of the country in which the event giving rise to the damage occurred and irrespective of the country
+or countries in which the indirect consequences of that event occur.”
+139
+LCIA Arbitration No.132455 (unpublished) (One of the authors is presiding arbitrator in the arbitration)
+End of Document
+© 2025 SWEET & MAXWELL

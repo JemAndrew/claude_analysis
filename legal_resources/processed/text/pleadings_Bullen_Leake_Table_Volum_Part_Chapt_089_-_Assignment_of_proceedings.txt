@@ -1,0 +1,24 @@
+Assignment of proceedings, UKBC-BULLENL 459371076 (2022)
+© 2025 Thomson Reuters.
+1
+Assignment of proceedings
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part E - Banking and Financial Services
+Chapter 12 - Financial Services
+Assignment of proceedings
+12-13
+By CPR PD 8A Section C para.21, proceedings in the High Court under the Act (other than proceedings for a mandatory order
+by way of judicial review) and actions for damages for breach of a statutory duty under the Act, are assigned to the Chancery
+Division. Such proceedings and actions must be commenced by claim form, except for applications under s.367 by the FCA or
+PRA for a winding up order in respect of an authorised person or an appointed representative, which are begun by petition.
+The expression “the Court” is used, but not defined in the Act: no rules have ever been made for the assignment of any
+proceedings under the Act to the County Court. The cause of action conferred by FSMA ss.20, 26, 27, 29, 30 and 71 is probably
+not within s.15 of the County Courts Act 1984; jurisdiction may be conferred on the County Court by s.16 of that Act (money
+recoverable by virtue of any enactment), but that section would not cover recovery of property (as provided for by the relevant
+sections of FSMA). The parties cannot agree in writing to confer jurisdiction on the County Court pursuant to the County Courts
+Act 1984 s.18, as that section excludes from its scope proceedings which, if commenced in the High Court, would be assigned
+to the Chancery Division.
+End of Document
+© 2025 SWEET & MAXWELL

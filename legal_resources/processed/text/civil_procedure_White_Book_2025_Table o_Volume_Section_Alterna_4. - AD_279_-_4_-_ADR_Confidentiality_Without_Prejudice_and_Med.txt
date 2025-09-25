@@ -1,0 +1,478 @@
+4. - ADR, Confidentiality, Without Prejudice and “Mediation..., UKBC-WHITEBK...
+© 2025 Thomson Reuters.
+1
+4. - ADR, Confidentiality, Without Prejudice and “Mediation
+Privilege” in Relation to Mediation
+White Book 2025  | Commentary last updated December 12, 2024
+Volume 2
+Section 14 - Alternative Dispute Resolution
+Alternative Dispute Resolution
+4. - ADR, Confidentiality, Without Prejudice and “Mediation Privilege” in Relation to Mediation
+14-18
+It is very important, for reasons of public policy, that communications between parties to a mediation, and between those parties
+and the mediator, remain private and confidential. The courts will, generally, be ready to reinforce the cloak of confidentiality
+under which settlements are reached:
+“... communications made with a view to an amicable settlement ought to be held very sacred; for if parties
+were to be afterwards prejudiced by their efforts to compromise, it would be impossible to attempt an amicable
+arrangement of differences” (per Lord Scott, quoting Romilly M.R. in Hoghton v Hoghton 51 E.R. 545, 321 when
+discussing the “without prejudice” rule in Ofulue v Bossert [2009] UKHL 16; [2009] 2 W.L.R. 749).
+In the context of ADR, Dyson LJ said in Halsey v Milton Keynes General NHS Trust [2004] EWCA Civ 576; [2004] 1 W.L.R.
+3002 (at [14]):
+“… parties are entitled in an ADR to adopt whatever position they wish and if, as a result the dispute is not settled,
+that is not a matter for the court … if the integrity and confidentiality of the process is to be respected, the court
+should not know, and therefore should not investigate, why the process did not result in agreement.”
+In Woodward v Santander UK Plc (formerly Abbey National Plc) [2010] I.R.L.R. 834, Employment Appeal Tribunal, the
+rationale for confidential, without prejudice discussions was put (at [61]) in this way:
+“It is important that parties should be able to settle their differences (whether by negotiation or mediation) in
+conditions where they can speak freely. A claimant must be free to concede a point for the purposes of settlement
+without the fear that if negotiations are unsuccessful he or she will be accused for that reason of pursuing the point
+dishonestly. A respondent must be free to adhere to and explain a position, or to refuse a particular settlement
+proposal, without the fear that in subsequent litigation this will be taken as evidence of committing or repeating
+an act of discrimination or victimisation. And it is idle to suppose that parties, when they participate in negotiation
+or mediation, will always be calm and dispassionate. They should be able, within limits, to argue their case and
+speak their mind.”
+Finally, in Cumbria Waste Management Ltd v Baines Wilson (A Firm) [2008] EWHC 786 (QB), HHJ Kirkham said: “…
+the court should support the mediation process by refusing, in normal circumstances, to order disclosure of documents and
+communications within a mediation.” There are different ways in which mediation communications are protected and, as the
+cases mentioned below demonstrate, it can be important to differentiate between the concepts of confidentiality, “without
+prejudice”, legal professional privilege, and (if it exists) “mediation privilege”. The cloak of confidentiality is, in fact, multi-
+layered. These cases will also demonstrate that, and again this is for reasons of public policy, confidentiality is not absolute
+and there are exceptions whereby a court may wish to examine mediation matters that usually remain private and confidential.
+Such exceptions are limited in nature and guarded by the court. Essentially, when considering whether matters in relation to
+a particular mediation should remain confidential, the court will usually be involved in a careful public policy balancing act,
+weighing the importance of encouraging parties to settle against, for example, some kind of impropriety.
+Paragraph 14-24 mentions some less obvious aspects relating to confidentiality.
+
+4. - ADR, Confidentiality, Without Prejudice and “Mediation..., UKBC-WHITEBK...
+© 2025 Thomson Reuters.
+2
+Issues that relate to confidentiality in its broadest sense are of importance in various ways; they are relevant, for example,
+to lawyers advising a party before a mediation, to mediation providers when drafting agreements to mediate, to lawyers and
+mediators in relation to the conduct of a mediation and to lawyers and the courts when there are applications, post mediation,
+that the court should explore what took place at a mediation.
+Correspondence Setting up ADR Meetings—Not Privileged
+14-19
+In Jones v Tracey [2023] EWHC 2256 (Ch), Master Marsh held that a letter simply proposing mediation does not attract
+privilege, even if headed without prejudice. Also, the Civil Justice Council’s working group on pre-action protocols has
+recommended that correspondence setting up mediations should not be privileged. (See CJC Review of Pre-Action Protocols–
+Final Report Part I Annex 2 Draft General Pre-Action Protocol (Practice Direction) and Joint Stocktake Template (at para.4.17):
+https://www.judiciary.uk/guidance-and-resources/civil-justice-council-publishes-final-report-on-pre-action-protocols.)
+Confidentiality, Without Prejudice and “Mediation Privilege” in Relation
+to Mediation
+14-20
+In Farm Assist Ltd (in liquidation) v Secretary of State for the Environment, Food and Rural Affairs [2009] EWHC 1102 (TCC);
+[2009] B.L.R. 399; 125 Con. L.R. 154 (“Farm Assist 2”) the court gave guidance on these matters. It did so in the context of
+an application by a mediator to set aside a witness summons that was intended to require her to give evidence about what had
+taken place at a mediation. Having reviewed the authorities Ramsey J gave the following summary of the different concepts or
+principles that are applied in the protection of the privacy of mediation:
+“(1) Confidentiality:
+The proceedings (at a mediation) are confidential both as between the parties and as between the parties and the
+mediator. As a result even if the parties agree that matters can be referred to outside the mediation, the mediator can
+enforce the confidentiality provision. The court will generally uphold that confidentiality but where it is necessary
+in the interests of justice for evidence to be given of confidential matters, the Courts will order or permit that
+evidence to be given or produced.
+(2) Without Prejudice Privilege:
+The proceedings are covered by without prejudice privilege. This is a privilege which exists as between the parties
+and is not a privilege of the mediator. The parties can waive that privilege.
+(3) Other Privileges:
+If another privilege attaches to documents which are produced by a party and shown to a mediator, that party
+retains that privilege and it is not waived by disclosure to the mediator or by waiver of the without prejudice
+privilege.”
+These three concepts of privilege will be explored in more detail below.
+The mediator’s application in this case to set aside the witness summons was dismissed for a number of reasons: the parties had,
+as they were entitled to do, waived the without prejudice privilege and, although the mediator was on the face of it entitled to
+enforce the confidentiality provision in the Mediation Agreement, it was held that this was: “… a case where, as an exception, the
+
+4. - ADR, Confidentiality, Without Prejudice and “Mediation..., UKBC-WHITEBK...
+© 2025 Thomson Reuters.
+3
+interests of justice lie strongly in favour of evidence being given of what was said and done (at the mediation).” These findings,
+however, had no practical consequences as the mediator did not have any relevant notes or any recall of the issues; further, the
+case went on to settle in any event. Farm Assist 2 has attracted the attention of mediators and has resulted in the publication
+by the Civil Mediation Council of two Guidance Notes “Mediation Confidentiality—Guidance Note 1” and “Chairman’s Note
+on Farm Assist v DEFRA”.
+In Wedgwood v Hosein [2024] EWHC 1836 (Ch) Master Marsh (sitting in retirement) provided a brief exposition on mediation
+confidentiality. The context was an application for Beddoe relief, but the passages referred to below are of general application:
+ 
+“17.Caution should be exercised before there is any encroachment upon the confidentiality of a mediation,
+which will be governed by the mediation agreement. It may be permissible, depending upon the express or
+implied terms of the agreement, to refer to offers made during the mediation; but even this cannot be taken
+for granted. Offers made outside of mediation can be referred to in the context of a Beddoe application but
+it does not necessarily follow that the court may be referred to offers that are made within the scope of the
+mediation agreement.
+ 
+18.The parties to a Beddoe application will need to consider the contractual obligations they have entered
+into carefully before referring to any aspect of the mediation. Unless the agreement expressly permits a party
+to reveal, to a greater or lesser degree, confidential information relating to the mediation, it will be wise for
+consent to be sought from all parties to the agreement, including the mediator. The position is even more
+sensitive concerning information shared or discussions in open or private sessions during the mediation. It is
+doubtful whether it will ever be appropriate, even with full consent, to place such matters before the court.”
+Confidentiality
+14-21
+As in Farm Assist 2, most agreements to mediate include clauses providing that, in addition to the mediation being conducted
+on a without prejudice basis, the parties and the mediator are required to treat the proceedings as confidential. In Farm Assist
+2 Ramsey J also found that the confidentiality would have been implied, even if the mediation agreement had not agreed it
+expressly.
+In concluding that the court can override such confidentiality, where it is necessary in the interests of justice, the court in Farm
+Assist 2 took into account on the following passage in Toulson and Phipps on Confidentiality 2nd ed. (2006):
+“Generally speaking, confidentiality is not a bar to disclosure of documents or information in the process of
+litigation, but the court will only compel such disclosure if it considers it necessary for the fair disposal of the
+case: see … British Steel Corporation v Granada Television Ltd [1981] A.C. 1096” (para.17-001).
+If there is an explicit agreement on confidentiality it will, as with any other type of agreement, fall to be construed by the court.
+In Farm Assist 2 the confidentiality provisions were narrowly drawn and not as wide as the mediator might have wished.
+Another particular point clarified by this case was the finding that the mediator could enforce the provisions relating to
+confidentiality, as against the parties. This means that where, as in Farm Assist 2, the parties have waived without prejudice
+privilege the mediator may nevertheless be able to require that confidentiality will be maintained. (As in Farm Assist Ltd, the
+Court may not always treat the mediator’s word on this issue as decisive: see the comment by Nicol J in Commodities Research
+Unit International (Holdings) Ltd v King and Wood Mallesons LLP [2016] EWHC 63 (QB) at [21].)
+Where there is a risk that a party may act in breach of the agreement that proceedings at a mediation be kept confidential they
+may be restrained by an injunction (Venture Investment Placement Ltd v Hall [2005] EWHC 1227 (Ch); [2005] All E.R. (D)
+224 and Instance v Denny Brothers Printing Ltd (Interim Injunction) [2000] F.S.R. 869.
+
+4. - ADR, Confidentiality, Without Prejudice and “Mediation..., UKBC-WHITEBK...
+© 2025 Thomson Reuters.
+4
+How far does the duty of confidentiality extend? In Aujla v Aujla [2022] 10 WLUK 191 the court examined the role of the
+mediator, concluding that there was not a:
+“… relationship between mediator and litigator that gave rise to a relationship of trust and confidence sufficient
+to found an assertion of undue influence. A mediator has a duty of confidentiality, but otherwise his role is simply
+to explore and facilitate the parties reaching their own settlement. He does not assume any fiduciary duties or
+invite either party to the dispute to repose in him the type of trust and confidence necessary for a finding of undue
+influence.”
+Without prejudice
+14-22
+It is apparent, from the analysis in Farm Assist 2, that part of the mediation cloak of confidentiality is based on without prejudice
+privilege, and that such privilege can be waived by the parties. For a straightforward application of the without prejudice rule
+to mediation communications see Mason v Walton on Thames Charity [2010] EWHC 1688 (Ch). For a fuller statement of the
+without prejudice rule or concept see Cutts v Head [1984] Ch. 290; [1984] 1 All E.R. 597, CA; Unilever Plc v The Proctor
+& Gamble Co [2000] 1 W.L.R. 2436; [2001] 1 All E.R. 783; Muller v Linsley & Mortimer [1996] P.N.L.R. 74 and Vol.1,
+para.31.3.40. There are, however, exceptions to this privilege (helpfully summarised by Robert Walker LJ in Unilever Plc v
+Procter & Gamble Co [2000] 1 W.L.R. 2436) which are of importance in the context of mediation and ADR. A number of these
+exceptions, which are largely based on public policy and the better administration of justice, appear in the following cases.
+In Muller, the claimant’s initial claim had been against his fellow shareholders in a private company following his dismissal as a
+director of that company. He settled that claim following without prejudice correspondence. Subsequently, he sued the solicitors
+who had advised him in the initial claim, alleging negligence. It was held that the without prejudice correspondence in the initial
+claim was disclosable in the subsequent claim. The public policy reasons that would have applied to prevent disclosure in the
+initial claim did not apply in the context of the subsequent claim: any without prejudice statements or offers made in the initial
+claim were kept from the court, in that claim, lest they be treated as an admission of liability. Once that claim has been concluded,
+however, that reason fell away. (See Vol.1, para.35.12.3 and also Bradford & Bingley Plc v Rashid [2006] 1 W.L.R. 2066.)
+The decision in Muller seems applicable in circumstances where there is a subsequent claim following an earlier claim and there
+are relevant mediation communications in the earlier claim that do, on the face of it, appear to be subject to without prejudice
+privilege. This was the finding in Cattley v Pollard [2007] EWHC B16 (Ch); [2007] EWHC 5561 (Ch). There the claimants
+in the initial action were the executors of an estate who sued various defendants, including the solicitors acting in the estate,
+for misappropriation of estate funds. A settlement was reached at a successful mediation involving some of the defendants. A
+subsequent action was bought by the claimants against one of the defendants in the initial action who had not been involved
+in the mediated settlement. The defendant in this subsequent action was concerned about the issue of double recovery by the
+claimants and sought disclosure of mediation documents. The defendants resisted disclosure, arguing that mediations will not
+succeed if confidentiality is broken. The court held, following Muller and taking account of the overriding objective to deal
+justly with cases, that there should be disclosure limited to such parts of the mediation bundle as were factually material to the
+defendant’s argument relating to double recovery.
+See also Youlton v Charles Russell [2010] EWHC 1032 (Ch); [2010] Lloyd’s Rep. P.N. 227, Curtis v Pulbrook [2011] EWHC
+167 (Ch) and Commodities Research Unit International (Holdings) Ltd v King and Wood Mallesons LLP [2016] EWHC 63
+(QB). These are solicitor’s professional negligence claims where it was necessary for the court to enquire into the detail of
+proceedings of a prior mediation to deal with the subsequent claim against the solicitors.
+In Cumbria Waste Management Ltd v Baines Wilson (A Firm) [2008] EWHC 786 (QB); [2008] B.L.R. 330, however, the
+court found that Muller did not apply and refused to order disclosure of confidential mediation documents for the purposes
+of a subsequent action. The parties to the mediation did not waive privilege and the court held that the documents should
+remain privileged, both on the basis that they were subject to without prejudice privilege and were confidential by virtue
+of the agreement to mediate. HHJ Kirkham said that the court should support the mediation process by refusing, in normal
+circumstances, to order disclosure of documents and communications within a mediation. The court found that the disclosure
+
+4. - ADR, Confidentiality, Without Prejudice and “Mediation..., UKBC-WHITEBK...
+© 2025 Thomson Reuters.
+5
+sought here did not fall within the exception to the without prejudice rule set out in Muller and, further, noted that the court in
+Muller gave no consideration to the position of third parties.
+In Pentagon Food Group Ltd v B Cadman Ltd [2024] EWHC 2513 (Comm) (9 August 2024), HHJ Tindal, sitting as a judge
+of the High Court, found that evidence of the matters dealt with at a mediation were admissible in relation to a subsequent,
+separate claim of misrepresentation which stemmed from the mediation. Two exceptions to without prejudice privilege applied.
+(See para.14-23 below.) The court went on to find that when interpreting a settlement agreement, which was concise and drafted
+quickly at the close of a mediation, the evidential context was perhaps more important than in a complex commercial contract
+negotiated in detail over a lengthy period. The context could include matters which would otherwise be without prejudice.
+Therefore, the circumstances in which the agreement was produced could be considered, even though that was in mediation
+(paras 68–69).
+Without prejudice—exceptions
+14-23
+Muller and the applicability of the without prejudice rule fell to be considered by the House of Lords in Ofulue v Bossert
+[2009] UKHL 16; [2009] 2 W.L.R. 749. This property case concerned two sets of proceedings between the same parties and,
+in particular, without prejudice negotiations between the parties during the first set of proceedings. The House of Lords said
+that the without prejudice rule was based on both the public policy of encouraging the negotiated settlement of actions and the
+express or implied agreement of the parties that communications in the course of such negotiations should not be admissible in
+evidence. It was held that the rule did extend to without prejudice negotiations conducted during earlier proceedings involving an
+issue which was still unresolved. The court further found that, although there were exceptions to the rule where justice required
+it, as where it was necessary to prevent the rule being used to further impropriety, reasons of legal and practical certainty made
+it inappropriate to create a further exception to limit the protection to identifiable admissions. Lord Hope referred to Ormrod
+J’s words in Tomlin v Standard Telephones & Cables Ltd [1969] 1 W.L.R. 1378 when he said that the court should be very
+slow to lift the without prejudice umbrella unless the case for doing so is absolutely plain. Lord Neuberger explained that if the
+House of Lords created further exceptions to the without prejudice rule this would severely risk hampering the freedom parties
+should feel when entering into settlement negotiations. In Briggs v Clay [2019] EWHC 102 (Ch) a similar line was taken, the
+court providing a reminder that the without prejudice rule was broad in its effect, with narrow exceptions. The exceptions to
+the without prejudice rule deriving from the decision in Muller were considered in the context of a prior mediation.
+Another well-established exception to the without prejudice rule is that it does not prevent the admission in evidence of what
+parties said to one another when the issue is whether or not such communications resulted in a concluded settlement agreement
+(see Vol.1, para.31.3.40). At the trial of such issue, the fact that such communications took place between the parties at a
+mediation does not confer on them a status distinct from any other without prejudice communications sufficient to take them
+outside the scope of the exception or otherwise to render them inadmissible (Brown v Rice [2007] EWHC 625 (Ch); [2007]
+B.P.I.R. 305; [2008] F.S.R. 3; Oceanbulk Shipping and Trading SA v TMT Asia Ltd [2010] UKSC 44 and Aujla v Aujla [2022]
+10 WLUK 191, at [8].)
+As seen in Farm Assist 2, parties can waive their entitlement to without prejudice confidentiality and did so in Chantry Vellacott
+v Convergence Group [2007] EWHC 1774, Carleton (Earl of Malmesbury) v Strutt & Parker (A Partnership) [2008] EWHC
+424 (QB) and Pedriks v Grimaux [2021] EWHC 3448 (QB) (at [13]). In Carleton, Jack J made adverse findings in relation to
+a party’s recovery of costs on the basis of that party’s conduct during a mediation. He said that “the claimant’s position at the
+mediation was plainly unrealistic and unreasonable” and found that, had they made an offer which truly reflected their position,
+the mediation might have succeeded. Note, however, that without prejudice privilege is effectively regarded as a joint privilege
+and cannot be waived by one party alone (see Somatra Ltd v Sinclair Roche & Temperley (No.1) [2000] 1 W.L.R. 2453; [2000]
+2 Lloyd’s Rep. 673, referred to in Vol.1 at para.31.3.40).
+In Smith Group v Weiss, 22 March 2002, unrep., the court followed Somatra (see above) when considering whether material,
+prepared for a mediation that did not result in a settlement, should retain its without prejudice status. It was held that the material
+should remain without prejudice save in clear and unequivocal circumstances.
+The court had to consider whether in all the circumstances it was fair and just to allow a party to rely on the material.
+
+4. - ADR, Confidentiality, Without Prejudice and “Mediation..., UKBC-WHITEBK...
+© 2025 Thomson Reuters.
+6
+Where the court directs under r.35.12 that there should be a discussion between experts and that they must prepare a statement
+for the court, any such statement is available for use in the proceedings and is not protected by the without prejudice privilege
+(see Vol.1, para.35.12.3 below). Consequently, where a mediation takes place after such order, it cannot be argued in subsequent
+proceedings before the court that the statement cannot be referred to, even though the direction was made by the court with an
+eye to assisting a contemplated mediation (Aird v Prime Meridian Ltd [2006] EWCA Civ 1866; [2007] C.P. Rep. 18; [2007]
+B.L.R. 105, CA). See also Krishna Holdco Ltd v Gowrie Holdings Ltd [2025] EWHC 341 (Ch).
+In Farm Assist Ltd v Secretary of State [2008] EWHC 3079 (TCC); [2009] B.L.R. 80; [2009] P.N.L.R. 16 (the precursor to
+Farm Assist 2) the issue concerned legal advice privilege rather than the without prejudice concept. Party 1 sought to set aside
+the agreement resulting from a mediation on account of duress by party 2. Party 2 said that, as the allegations about duress went
+to party 1’s state of mind, it should be able to see the (usually privileged) documents containing the legal advice to party 1. It
+was held that disclosure be refused, there having been no waiver of legal advice privilege. In Aujla v Aujla [2022] 10 WLUK
+191, however, the court did review the conduct of the mediation when dealing with an application to set aside an agreement
+resulting from a mediation on account of duress.
+See also Berkeley Square Holdings v Lancer Property Asset Management Ltd [2020] EWHC 1015 (Ch) and King v Stiefel [2021]
+EWHC 1045 (Comm) for an example of where the court will review confidential mediation papers in subsequent proceedings.
+An example of a case where the court refused to permit a party relying on matters that took place at a mediation is E (A Child)
+(Mediation Privilege), Re [2020] EWHC 3379 (Fam).
+In Pentagon Food Group Ltd v B Cadman Ltd [2024] EWHC 2513 (Comm), the court found (at [61]–[65]) that two exceptions
+to without prejudice privilege applied. These were the Unilever exception (Unilever v Procter & Gamble [2000] 1 W.L.R.
+2436—unambiguous impropriety) and the Oceanbulk exception (Oceanbulk Shipping & Trading SA v TMT Asia Ltd [2010] 3
+W.L.R. 1424 (SC)—admissibility of evidence of facts within the parties' common knowledge conveyed during without prejudice
+negotiations where relevant to interpreting contractual words).
+As mentioned in para.14-15, correspondence setting up ADR meetings will probably treated as not privileged, even where it
+is marked Without Prejudice.
+Without prejudice—threats
+14-24
+In Ferster v Ferster [2016] EWCA Civ 717; [2016] C.P. Rep. 42 a without prejudice offer to sell shares for an increased amount,
+on the basis that alleged wrongdoing could lead to the company taking committal proceedings against the offeree, was held to
+amount to blackmail. The threat fell within the unambiguous impropriety exception to prejudice and the offeree was permitted
+to rely on it in his unfair prejudice petition. In Holyoake v Candy [2016] EWHC 2119 (Ch) a text message threat made during
+without prejudice negotiations ahead of a commercial trial had not amounted to unambiguous impropriety and was therefore
+not admissible in evidence. The threat did not amount to an abuse of a privileged occasion; it was no more than the sort of
+negotiating tactic that the parties to the hard-fought commercial litigation would have expected. See also Interactive Technology
+Corporation Ltd v Ferster [2015] EWHC 3895 (Ch).
+Without prejudice save as to costs
+14-25
+In Savings Advice Ltd v EDF Energy Customers Plc [2017] 1 WLUK 179, during costs proceedings subsequent to the main
+action, Master Howarth allowed a party to refer to costs information provided during a mediation of the main action. This
+was on the basis that the duty of confidence and without prejudice privilege existed to protect the disclosure of admissions
+or concessions made in negotiations, not costs information in the form of purely factual statements which had been disclosed
+“without prejudice save as to costs”. See also Willers v Joyce [2019] EWHC 937 (Ch).
+
+4. - ADR, Confidentiality, Without Prejudice and “Mediation..., UKBC-WHITEBK...
+© 2025 Thomson Reuters.
+7
+Mediation privilege
+14-26
+The question of “mediation privilege”, something wider than traditional without prejudice privilege, is discussed below.
+This question fell to be considered in Pentagon Food Group Ltd v B Cadman Ltd [2024] EWHC 2513 (Comm). This case was
+heard not long after Churchill and the amendments to the CPR in October 2024 (as mentioned in 14-1) and the court opined
+that, even though these developments enhanced the importance of ADR, this did not justify an enhanced form of "mediation
+privilege" beyond without prejudice privilege. The reasoning of HHJ Tindal, sitting as a judge of the High Court, was that, in
+the context of mediation, the without prejudice privilege duties of confidentiality can be enhanced by the parties' agreement to
+mediate, and their conduct, to impose duties of confidentiality over and above those flowing from without prejudice privilege.
+Those enhanced duties, he said, could even be raised by the mediator if called upon to give evidence, even if the parties both
+waived without prejudice privilege ([55]–[57] and [60]).
+Historically, questions of mediation privilege arose in Farm Assist 2 when Ramsey J, having considered “other privileges” (see
+(3) in para.14-12 above), noted that in H. Brown and A. Marriott ADR Principles and Practice, 2nd edn (London: Sweet &
+Maxwell, 1999) the authors discuss the possible existence of and desirability for a distinct privilege attaching to the mediation
+process:
+“It remains to be resolved definitively by the English Courts (if not by the legislature) whether there is a privilege
+attaching to the whole mediation process, including all communications passing within that process, whether the
+mediation relates to family matters, civil or commercial disputes or any other kind of issue” (para.22-088).
+He went on to canvass the “… the need for a further ‘privilege’ which arises other than the Mediator’s right to confidentiality in
+relation to the mediation proceedings.” In Brown v Rice [2007] EWHC 625 (Ch); [2007] B.P.I.R. 305; [2008] F.S.R. the court
+commented, although it did not have to make a finding on the point, that:
+“It may be in the future that the existence of a distinct mediation privilege will require to be considered by either
+the legislature or the courts …”
+Mr Justice Briggs, as he then was, has written on “Mediation Privilege?” in an authoritative two-part review in the New Law
+Journal (159 N.L.J. 506 and 159 N.L.J. 550). Having reviewed the various concepts of privilege in relation to mediation he
+goes on to develop a potential common law solution. This is based on a distinction between the facts that:
+“... a mediator will act as a conduit for the sharing of such information between the parties as is commonly shared
+in without prejudice negotiations: (shared information)”
+and
+“... the important part of the mediator’s facilitative role (which) is to encourage the parties to share with him or
+her information, views, hopes and fears about the dispute which the party communicating them does not wish the
+other party to know, and which the mediator agrees to keep secret from the other party (mediator secrets).”
+His thesis likens mediator secrets to legal professional privilege, on the basis that parties to disputes should be able to unburden
+themselves with absolute frankness to a mediator in the same way as with their legal advisers, and to argue that public policy
+may justify a new privilege strictly limited to mediator secrets. He adds that such a privilege would not be likely to interfere with
+the application to shared information in mediation of the recognised exceptions to the without prejudice principle, as occurred
+in both Brown and Cattley. Mr Justice Briggs supports the idea of a new privilege by referring to the ability of the common law
+to recognise a new form of privilege, where, in a new context, the public interest so requires, pointing out that a distinct form of
+non-status based privilege, in connection with matrimonial conciliation relating to children, has recently been recognised: see
+Re D (Minors) (Conciliation: Disclosure of Information) [1993] Fam 231 at 238. He concludes:
+
+4. - ADR, Confidentiality, Without Prejudice and “Mediation..., UKBC-WHITEBK...
+© 2025 Thomson Reuters.
+8
+“There is in principle therefore good reason why the courts should now recognise that the undoubted public
+interest in facilitating the process of mediation as a desirable and often preferable means of dispute resolution,
+by comparison with the full panoply of a trial, justifies the identification of a narrow form of mediator secret
+privilege of the type described above. There is no reason why a party to a mediation should not be encouraged
+to be as frank with the mediator as with his or her legal adviser. The similarity with the underlying justification
+for legal professional privilege is therefore very close.”
+Mr Justice Briggs’ call for a development in this area was made all the more timely by virtue of the fact that the EU Mediation
+Directive (Directive 2008/52/EC of the European Parliament and of the Council of 21 May 2008 on certain aspects of mediation
+in civil and commercial matters) carries the requirement that member states must ensure that, with reference to cross-border
+mediation, mediators must not be compellable to give evidence in civil proceedings or arbitration regarding information arising
+out of or in connection with a mediation, except where overriding considerations of public policy otherwise require, or where
+disclosure of the content of the mediation settlement agreement is necessary in order to implement or enforce it. The Directive
+is no longer, post-Brexit, operative in England and Wales.
+Other aspects relating to confidentiality
+14-27
+There are other ways in which mediation confidentiality may be called into question including, for example, money laundering
+(Proceeds of Crime Act 2002), breaches of professional conduct, insolvency proceedings in circumstances where the court
+reserves the power to veto settlement agreements and, arguably, a mediation settlement involving a minor where court approval
+is required. Other examples might possibly include applications of the UK General Data Protection Regulation and the Data
+Protection Act 2018 and the Freedom of Information Act 2001. For a review of confidentiality in this area see “The practical
+significance of confidentiality in mediation” by Andrew Agapiou and Bryan Clark C.J.Q. 2018, 74.
+In Glencairn IP Holdings Ltd v Product Specialities Inc (t/a Final Touch) [2019] EWHC 1733 (IPEC) the claimant had two
+similar intellectual property actions against separate defendants, and both of these instructed the same firm of solicitors. The
+claimant sought an order restraining the firm from acting for the defendant in the second action. This was on the grounds that
+the solicitors should not act in the second action because of what they had learned, in a mediation in the first action, of the
+claimant’s negotiating position and the terms on which the claimant was prepared to settle. The court declined to grant the order.
+Bolkiah v KPMG [1999] 2 A.C. 222 considered.
+Mediation Costs—Recoverability
+14-28
+There are three important points regarding the recoverability of mediation costs (both the fees paid to the mediator and the costs
+and disbursements in preparing for and attending mediation) that need to be considered before a mediation takes place. The
+first concerns the provisions regarding costs in the mediation agreement (that is, the agreement which forms the contractual
+basis under which the mediation takes place), the second relates to recoverability generally and the third is concerned with the
+costs of mediations which take place pre-proceedings.
+The costs provisions in a mediation agreement were considered in National Westminster Bank Plc v Thomas Feeney and Linda
+Feeney [2006] EWHC 90066 (Costs) and [2007] (Costs Appeal). Eady J held that the successful party could not recover the
+mediator’s costs or its costs for preparing for and attending at the mediation because: (a) the mediation agreement entered in to
+by the parties on the mediation provider’s standard terms was on the basis that the mediator’s fee would be borne equally by
+the parties who would bear their own costs; (b) the Tomlin Order agreed when settlement was reached did not deal explicitly
+with the costs of the mediation; and (c) it was held that the Tomlin Order did not alter the mediation agreement. This approach
+was followed in Lobster Group Ltd v Heidelberg Graphic Equipment Ltd [2008] EWHC 413 (TCC); [2008] 2 All E.R. 1173;
+[2008] 1 B.C.L.C. 722.
+
+4. - ADR, Confidentiality, Without Prejudice and “Mediation..., UKBC-WHITEBK...
+© 2025 Thomson Reuters.
+9
+Subject to the provisions of the mediation agreement, mediation costs are, on the face of it, recoverable. In Feeney, Eady J
+said that:
+“... as a matter of general principle, costs incurred in a mediation would form part of the costs of the action just
+as any reasonable costs of negotiation would (see Costs Practice Direction para.4.6(8)).”
+Whether mediation costs are recoverable in pre proceedings mediations, however, appears to depend on both the provisions of
+the mediation agreement (see above) and whether or not the mediation took place as part of the pre-action protocol work. This
+is important, because, in accordance with the pre-action protocols, mediations are increasingly carried out pre-proceedings. The
+cases dealing with this issue have involved the construction of s.51 of the Senior Courts Act 1981. In Lobster Coulson J was
+considering mediation costs as one aspect of an application for security for costs and he put forward a number of reasons for
+his view that the costs of the pre-action mediation were not recoverable:
+“16. First, unlike the costs incurred in a pre-action protocol, I do not believe that the costs of a separate pre-action
+mediation can ordinarily be described as ‘costs of and incidental to the proceedings’ (pursuant to s.51 of the Senior
+Courts Act 1981). On the contrary, it seems to me clear that they are not. They are the costs incurred in pursuing
+a valid method of alternative dispute resolution. Those costs were incurred in a form of dispute resolution which
+had no connection to these proceedings, and which here took place 2.5 years before the proceedings even started.”
+In McGlinn v Waltham Contractors Ltd [2005] EWHC 1419 (TCC); [2005] All E.R. 1126, Judge Peter Coulson QC had also
+considered s.51 of the Senior Courts Act. He held that, although costs in respect of claims dropped by a claimant prior to
+the commencement of proceedings were not, in unexceptional circumstances, capable of amounting to costs “incidental” to
+the proceedings, the costs incurred in complying with a pre-action protocol may be recoverable as costs “incidental to” any
+subsequent proceedings. Further, in Roundstone Nurseries Ltd v Stephenson Holdings Ltd [2009] EWHC 1431 (TCC); [2009]
+5 Costs L.R. 787 the court, noting that a pre proceedings mediation was treated by the parties as an integral part of the pre-
+action protocol work, applied McGlinn and held that, as a matter of principle, costs incurred during the pre-action protocol
+process could be recovered as costs incidental to the litigation. The court did confirm that the costs of a separate, stand-alone
+pre-proceedings mediation or ADR process would not usually form part of the costs of, or incidental to, litigation and would
+not, therefore, be recoverable.
+These decisions were discussed in North Oxford Golf Club v A2 Dominion Homes Ltd [2013] EWHC 852 (QB); [2013] 3 Costs
+L.R. 509. See also Earl of Malmesbury v Strutt & Parker [2008] EWHC 424 (QB); 118 Con. L.R. 68; [2008] 5 Costs L.R. 736
+and the comments on costs sanctions in relation to conduct at a mediation, above.
+Multi-tier Dispute Resolution Clauses
+14-29
+Parties may enter into multi-tier dispute resolution clauses, which the courts are increasingly likely to uphold: see Ohpen
+Operations UK Ltd v Invesco Fund Managers Ltd [2019] EWHC 2246 (TCC); [2020] 1 ALL E.R. (Comm) 786 and Children’s
+Ark Partnerships Ltd v Kajima Construction Europe (UK) Ltd [2022] EWHC 1595 (TCC) at [39]–[83].
+See, however, Kajima Construction Europe (UK) Ltd v Children’s Ark Partnership Ltd [2023] EWCA Civ 292 where the Court
+of Appeal held that a judge had been correct to conclude that a dispute resolution procedure in a construction contract had been
+unenforceable for uncertainty, and that even if it had been enforceable the proper exercise of discretion under CPR r.11(1)(b)
+would have been to stay the claim rather than strike it out.
+Miscellaneous Matters
+14-30
+
+4. - ADR, Confidentiality, Without Prejudice and “Mediation..., UKBC-WHITEBK...
+© 2025 Thomson Reuters.
+10
+Where the parties freely consent to arbitration there is unlikely to be a denial of access to a court within the meaning of ECHR
+art.6(1): Deweer v Belgium (1979–1980) 2 E.H.R.R. 439; Axelsson v Sweden No.11960/86, decision of 13 July 1990, unrep.,
+EComHR, Pastore v Italy No.46483/Pastore v Italy No.46483/99, 25 May 1999, unrep., ECtHR, 2nd chamber. The key is the
+absence of restraint: ibid. Where the court was excessively forceful in its encouragement of the use of ADR, ECHR art.6(1)
+might be engaged. Any waiver of art.6 rights must be unequivocal: Zumtobel v Austria (1994) 17 E.H.R.R. 116, Gustafson v
+Sweden (1998) 25 E.H.R.R. 623. The authorities concerning art.6 and ADR were reviewed by the Court of Appeal in Churchill
+v Merthyr Tydfil CBC [2023] EWCA Civ 1416.
+For the enforcement of a contractual ADR clause and comparison with an arbitration clause, see Cable & Wireless Plc v IBM
+United Kingdom Ltd [2003] EWHC 316 (Comm); [2002] All E.R. (D) 277 (Colman J). In Kaur v Malhi [2022] EWHC 2219
+(Ch), the court effectively upheld a mediation clause in refusing to grant injunctive relief where parties had not attempted
+mediation in contravention of the clause.
+Routinely, the courts will exercise their inherent jurisdiction to stay legal proceedings where there is an extant arbitration
+clause, in effect enforcing the agreement to arbitrate the dispute. See, for example, Channel Tunnel Group Ltd v Balfour Beatty
+Construction Ltd [1993] A.C. 334. Initially, it appeared that the English courts were tentative in edging towards the position that
+they should exercise their jurisdiction to stay legal proceedings where there was an agreement between the parties to negotiate
+or mediate (albeit an agreement that might be lacking in the certainty traditionally regarded as necessary for enforceability and
+perhaps even non-binding) (ibid.; cf., Halifax Financial Services Ltd v Intuitive Systems Ltd [1999] 1 All E.R. (Comm) 303
+(McKinnon J)). See further Vol.2, paras 9A-176 to 9A-177. See also Ardentia Ltd v British Telecommunications Plc [2008]
+EWHC 2111 (Ch) where one of the parties commenced proceedings before a tiered dispute resolution procedure had been
+exhausted. The procedure made an exception to the bar on commencing proceedings where, as was the case, interim relief
+was sought from the court. The court, however, having granted interim relief, then stayed the matter to enable the other issues
+between the parties to be dealt with under the procedure. See also Sulamerica CIA Nacional de Seguros SA v Enesa Engenharia
+SA [2012] EWHC 42 (Comm); [2012] Lloyd’s Rep. I.R. 198: the agreement considered by the court was found to provide no
+unequivocal commitment to engage in mediation. The parties had merely agreed in general, non binding, terms to attempt to
+resolve differences by mediation. See also Wah v Grant Thornton International Ltd [2012] EWHC 3198 (Ch); [2013] 1 All
+E.R. (Comm) 1226; [2013] 1 Lloyd’s Rep. 11 and Mann v Mann [2014] EWHC 537 (Fam); [2014] 1 W.L.R. 2807; [2014] 2
+F.L.R. 928.
+In Emirates Trading Agency LLC v Prime Mineral Exports Private Ltd [2014] EWHC 2104 (Comm); [2015] 1 W.L.R. 1145;
+[2014] 2 Lloyd’s Rep. 457, Teare J held that a dispute resolution clause in a contract which required the parties to seek to
+resolve a dispute by friendly discussions in good faith and within a limited period of time before the dispute could be referred
+to arbitration was enforceable. Further, in R. (on the application of Med Chambers Ltd) v Medco Registration Solutions Ltd
+[2017] EWHC 3258 (Admin) (Channel Tunnel Group Ltd v Balfour Beatty Construction Ltd [1993] A.C. 334 followed) the
+court had to consider an escalation procedure which included a referral to mediation. Lavender J found that this should have
+been followed, stating:
+“ Prima facie, a Court should, in the absence of reasons to the contrary, refrain from exercising jurisdiction over
+a dispute which a party has promised to refer to a particular dispute resolution procedure.”
+In NWA v FSY [2021] EWHC 2666 (Comm), however, it was held that the failure of a party to comply with a term of an
+arbitration agreement to seek to mediate a settlement of their dispute before referring it to arbitration did not result in the arbitral
+tribunal not having jurisdiction to hear the dispute. The failure was a potential breach of a procedural requirement going to the
+admissibility of the dispute for arbitration, and it was for the arbitrator to determine the consequence of any such breach.
+In Lancashire Schools SPC Phase 2 Ltd (formerly Catalyst Education (Lancashire) Phase 2 Ltd) v Lendlease Construction
+(Europe) Ltd (formerly Bovis Lend Lease Ltd) [2024] EWHC 37 (TCC) the court accepted jurisdiction over a claim issued
+in breach of a mandatory adjudication clause in a private finance initiative project agreement. Although the clause made
+adjudication a condition precedent to litigation, there were good reasons for not staying or striking out the claim. The dispute
+was a multi-party one and was unlikely to be resolved by the bilateral adjudication mandated by the clause. Further, the claim
+was likely to be consolidated with ongoing proceedings, and to delay the disposal of both claims pending adjudication would
+be contrary to the CPR r.1.1 overriding objective.
+See also Ohpen Operations UK Ltd v Invesco Fund Managers Ltd [2019] EWHC 2246 (TCC). Any agreement reached at
+mediation needs to be recorded carefully and arrangements need to be made to implement the agreement in a manner that reflects
+
+4. - ADR, Confidentiality, Without Prejudice and “Mediation..., UKBC-WHITEBK...
+© 2025 Thomson Reuters.
+11
+the outcome intended to be agreed between the parties. This involves consideration of all aspects relating to implementation
+e.g. the impact of any taxation provisions that may arise during implementation e.g. the impact of s.2 of the Law of Property
+(Miscellaneous Provisions) Act 1989. See Moore v Revenue and Customs Commissioners [2016] UKFTT 115 (TC) and Abberly
+v Abberley [2019] EWHC 1564 (Ch). In ELM Property Finance Ltd v Johal [2018] EWHC 1000 (QB) a plea of non est factum
+in relation to a settlement agreement reached at mediation was rejected. See also Pedriks v Grimaux [2021] EWHC 3448 (QB)
+where the court considered alleged breaches of a mediation settlement agreement in a commercial dispute relating to fiduciary
+relationships and estoppel by representation.
+An interesting practice point arose in Savings Advice Ltd v EDF Energy Customers Plc [2017] 1 WLUK 179 , Master Howarth
+stated:
+“29. In my judgment it is imperative that when parties enter into a formal mediation or informal negotiations for
+settlement of a claim that they do so in the full knowledge of their opponent’s costs. The amount of the costs of
+litigation condition any subsequent negotiations or mediation that may follow.”
+End of Document
+© 2025 SWEET & MAXWELL

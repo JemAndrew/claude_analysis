@@ -1,0 +1,319 @@
+Section E. - Defence of State Immunity, UKBC-REDFERN 530638673 (2025)
+© 2025 Thomson Reuters.
+1
+Section E. - Defence of State Immunity
+Redfern and Hunter on International Arbitration 7th Ed.
+Mainwork
+Chapter 11 - Recognition and Enforcement of Arbitral Awards
+Section E. - Defence of State Immunity
+11. 152
+The defences to recognition and enforcement of an international arbitral award, which are laid down in the New York Convention
+and the Model Law, have been considered. 247  There is one standard form of defence, however, that is not mentioned in the
+Convention or the Model Law, but which may be encountered in practice, where the unsuccessful party is either a sovereign
+state or a state agency. This is the defence of state immunity, or ‘sovereign immunity’ as it is sometimes known. In essence, the
+defence means that a sovereign state cannot be compelled to submit to the jurisdiction of the courts of another state:
+The sovereign was a definable person, to whom allegiance was due. As an integral part of this mystique, the
+sovereign could not be made subject to the judicial processes of his country. Accordingly, it was only fitting that he
+could not be sued in foreign courts. The idea of the personal sovereign would undoubtedly have been undermined
+had courts been able to exercise jurisdiction over foreign sovereigns. This personalisation was gradually replaced
+by the abstract concept of state sovereignty, but the basic mystique remained. In addition, the independence and
+equality of states made it philosophically as well as practically difficult to permit municipal courts of one country
+to manifest their power over foreign sovereign states, without their consent. 248
+11. 153
+State immunity does not prevent a state or state agency from agreeing to submit to the authority of an arbitral tribunal. It is a
+well-established principle of international law that a sovereign is bound by an agreement to arbitrate contractual disputes, 249
+and the ability so to submit may itself be seen as an incident or attribute of sovereignty.
+11. 154
+State immunity exists at two levels. First, at the level of jurisdiction; and secondly, at the level of execution. Accordingly,
+there may be both immunity from jurisdiction and immunity from execution. In considering state immunity, a distinction will
+usually need to be made between acts of a state taking place in its capacity as a state (acts jure imperii) and those taking place
+in its commercial capacity (acts jure gestionis). As a distinguished Swiss commentator has written, this distinction is clear in
+theory, but difficult to apply in practice. 250  The distinction is important because some states claim absolute immunity (that is,
+immunity for all acts carried out by or on behalf of the state) whilst others claim restricted immunity (that is, immunity only
+for acts jure imperii). 251  In La Générale des Carrières et des Mines, 252  the Privy Council of England and Wales considered
+whether a mining company owned by the Democratic Republic of Congo represented the state in its capacity as a state or in its
+commercial capacity. In holding to the latter view, the Privy Council observed that where a separate juridical entity is formed by
+the state for commercial or industrial purposes with its own management and budget, subject to ‘quite extreme’ circumstances
+to the contrary, the separate legal personality should be respected. 253
+(a) Jurisdictional immunity
+11. 155
+During the course of arbitration proceedings to which a state is a party, the distinction between absolute and restricted immunity
+should be of no relevance. The arbitration can proceed validly only on the basis that the state concerned has agreed to arbitrate,
+and such an agreement is generally held to be a waiver of immunity. This is also taken to extend to the jurisdiction of the relevant
+court at the seat of the arbitration to supervise the arbitration taking place in its territory.
+
+Section E. - Defence of State Immunity, UKBC-REDFERN 530638673 (2025)
+© 2025 Thomson Reuters.
+2
+11. 156
+The restricted theory of sovereign immunity has been adopted by national courts in many countries, 254  and in some countries
+the position has been established by legislation. Indeed, it is possible now to state that a majority of states adhere to the doctrine
+of restricted immunity, although with notable exceptions, such as China, Hong Kong, and some Latin American countries. 255
+In the United Kingdom, for example, the State Immunity Act 1978 provides that where a state has agreed in writing to submit
+existing or future disputes to arbitration, the state is not immune in respect of proceedings in the courts of the United Kingdom
+that relate to the arbitration. 256  Once again, however, the precise position adopted by a given country can be established only
+by reference to the law and practice of that country. In the United States, for example, it was not clear under the Foreign
+Sovereign Immunities Act of 1976, 257  as enacted, whether a foreign state’s agreement to arbitrate could be regarded as a waiver
+of immunity from the jurisdiction of a US court. Following the Liamco case, 258  in which an award made against the Libyan
+state was recognised, an amendment to the 1976 Act 259  made it clear that the US courts have jurisdiction, inter alia, to confirm
+an arbitration award made under an agreement to arbitrate where the arbitration takes place, or is authorised to take place, in
+the United States, or where the award is governed by a treaty to which the United States is a party. 260
+(b) Immunity from execution
+11. 157
+Problems are most likely to arise when a winning party attempts to enforce and execute its award against a state or state entity. If
+the state concerned wishes to evade its obligations, 261  it may do so by claiming immunity from execution. 262  It may be thought
+inappropriate that a state or state entity can escape its legal obligations in this way, but this is the logical result of conferring
+immunity upon states. Moreover, whilst the existence of an arbitration agreement is usually held to be a waiver of immunity
+from jurisdiction, such a waiver is generally not held to extend to immunity from execution. By way of example, statutes in
+England require separate waivers in respect of execution and jurisdiction. 263
+11. 158
+Thus, under the ICSID Convention, an ICSID award must be treated by a contracting state as if it were a final judgment of a
+court of that state. However, this provision for the automatic recognition of such an award does not mean that it will be treated as
+overriding any immunity from execution that exists in the contracting state. Indeed, Article 55 of the ICSID Convention states
+that immunity from execution is a matter of national law. It is surprising that, in a convention that was intended to encourage
+investment, the state parties did not agree to waive their immunity from execution. It seems, however, that ‘abandonment of
+immunity of execution was mentioned by only one representative and his statement found no echo whatsoever’. 264
+11. 159
+However, courts in some instances have found ways of circumventing this obstacle to the efficacy of the arbitral process. The
+decision of the French Court of Cassation in Creighton v Qatar is a notable example. 265  In 1982, Creighton Ltd, a Cayman
+Islands corporation with offices in the United States, contracted with the government of Qatar to build a women’s hospital in
+Doha. After obtaining the necessary authorisations, Creighton entered into a contract with the Qatari Ministry of Municipal
+Affairs and Agriculture on 19 June 1982. In November 1986, Creighton was expelled from the project by the Government of
+Qatar; in 1987, pursuant to the arbitration clause in the agreement, Creighton commenced ICC arbitration in Paris. In October
+1993, final awards were rendered against Qatar.
+11. 160
+After a failed Qatari attempt to challenge the award in France, Creighton sought to enforce the awards against, inter alia, bank
+accounts held in France by the Qatari ministry. Following Creighton’s seizure of those accounts, Qatar initiated proceedings
+before the Paris Tribunal de Grande Instance to have those seizures lifted, on the grounds of Qatar’s immunity from execution.
+In January 1997, the Paris Tribunal ordered the lifting of the seizures and concluded that the subject matter of the agreement
+prevented any waiver of Qatar’s immunity from execution. Specifically, it held that the construction of a hospital was an activity
+of a public nature, and therefore subject to state immunity.
+
+Section E. - Defence of State Immunity, UKBC-REDFERN 530638673 (2025)
+© 2025 Thomson Reuters.
+3
+11. 161
+In June 1998, the Paris Court of Appeal confirmed that there was no waiver of immunity from execution. Creighton appealed
+again, and on 6 July 2000 the Court of Cassation overturned the Paris Court of Appeal’s decision. Relying on Article 24 of the
+then applicable ICC Rules (now reflected in Article 35.6 of the ICC Rules), by which the parties are ‘deemed to have undertaken
+to carry out the resulting award without delay and to have waived their right to any form of appeal insofar as such waiver
+can validly be made’, the Court of Cassation found that, in agreeing to ICC arbitration, a state waives not only its immunity
+from jurisdiction, but also its immunity from execution. 266  Following Creighton, the French courts maintained the position
+that once a state had waived its immunity from execution, it had opened itself to enforcement against its commercial assets.
+However, in three simultaneous decisions involving the enforcement of interim measures ordered by a foreign court, the Court
+of Cassation applied a more exacting test to the waiver of sovereign immunity from execution. 267  All three cases dealt with
+attachments made by NML Capital on debts owed to Argentina by each of BNP Paribas, Air France, and Total Austral. The
+Court of Cassation held that waivers can be effective only if made in an express and specific manner, such that the assets or the
+category of assets over which the waiver is granted are specifically identified.
+11. 162
+As to the assets over which the immunity from execution can be waived, the position varies. The successful party to an arbitration
+against a state or state entity is in a better position where the forum state allows execution against the commercial assets of a
+foreign sovereign. This is the position, for example, in countries such as Austria, England, France, Germany, Sweden, and the
+United States, amongst others. Execution is allowed against funds held by the defaulting state or state entity for commercial
+purposes. Care must be taken to ascertain whether all commercial property of the foreign state is subject to execution (such as
+in England), or merely that property which is (or was) used for the commercial activity upon which the claim is based. 268
+11. 163
+However, even where execution against state assets is allowed, national legislation and national courts have traditionally tended
+to show considerable respect for foreign states. In the United Kingdom, for example, the State Immunity Act 1978 provides that
+a certificate from the head of a state’s diplomatic mission that certain property is not used for commercial purposes is sufficient
+evidence of that fact unless the contrary is proved. 269  Consequently, in 1984, the highest appellate court in England decided
+that a declaration by the ambassador of a foreign state that its account with a London bank was not held for commercial purposes
+should be accepted as sufficient evidence of this fact, unless the contrary could be proved by showing that the account was used
+almost exclusively for commercial purposes. 270  In reaching this decision, the court was strongly influenced by a decision of
+the Constitutional Court of the Federal Republic of Germany in the Philippine Republic case, 271  in which a similar dispute
+was decided according to principles of public international law. In recent years, however, courts in some jurisdictions have
+broadened the scope of government assets that are considered commercial. 272
+11. 164
+Other important targets in the execution of awards against states are assets held by foreign central banks or monetary authorities.
+The English State Immunity Act 1978, as one example, affords those assets complete immunity irrespective of the purposes
+for which they are used. 273
+11. 165
+In the United States, the Liberian Eastern Timber Company (Letco), a company registered in France, failed in its attempt to
+enforce an ICSID award 274  against those assets of the government of Liberia that were in the United States. There were a series
+of proceedings in the courts and Letco was permitted to enter judgment against the Liberian government. However, because of
+state immunity, Letco was refused leave to execute this judgment, first against shipping fees due to the Liberian government,
+and secondly (and more predictably), against Liberian embassy bank accounts. 275
+11. 166
+In France, the Compagnie NOGA d’Importation et d’Exportation SA, a Swiss company, was frustrated in its attempt to enforce
+an ICC award rendered in Stockholm against assets of the Russian Federation. In March 2000, the Paris Tribunal de Grande
+Instance granted exequatur of the award; in May 2000, NOGA proceeded, inter alia, to seize bank accounts opened in the names
+of the embassy of the Russian Federation in France, the commercial delegation of the Russian Federation, and the permanent
+delegation of the Russian Federation at the United Nations Educational, Scientific and Cultural Organization (UNESCO).
+
+Section E. - Defence of State Immunity, UKBC-REDFERN 530638673 (2025)
+© 2025 Thomson Reuters.
+4
+Following Russia’s failed attempt to have the seizures lifted by the Paris Tribunal, Russia appealed to the Paris Court of
+Appeal. Notwithstanding explicit contractual waivers of immunity from execution in the underlying agreements, the Court of
+Appeal held that Russia had not waived its diplomatic immunity, which is governed by the distinct regime of the 1961 Vienna
+Convention on Diplomatic Relations. A general waiver of immunity from execution therefore did not extend to diplomatic
+assets. 276  The Paris Court of Appeal based its decision on Articles 22(3) and 25 of the Vienna Convention, and concluded that
+all of the accounts that had been seized by NOGA were held by Russian diplomatic bodies and, as such, could not be part of
+Russia’s waiver of immunity from execution. 277  Following failed attempts to enforce its Stockholm award in France against
+a Russian ship in the port of Brest and Russian Mig fighter jets participating in an air show outside of Paris, NOGA sought to
+enforce the award in Switzerland, inter alia, against bank accounts of the Russian central bank. 278  However, the Swiss Federal
+Supreme Court went on to refuse NOGA’s attempt to block an award subsequently rendered in Paris in the Russian Federation’s
+favour, which declared that the claim underlying the debt collection proceedings did not exist. 279
+11. 167
+However, the French Court of Cassation in Commissions Import Export SA. v The Republic of the Congo 280  did not adopt the
+approach taken by the Paris Court of Appeal in NOGA. In the Commissions case, Congo entered into an arbitration agreement
+by which it expressly waived its right to ‘invoke, in the context of the settlement of a dispute relating to the undertakings which
+are the subject of this letter, any immunity of jurisdiction as well as any immunity of execution’. Following an award rendered
+against the Congo, Commissions sought to enforce the award by seizing the bank accounts held in the name of the Congo’s
+diplomatic mission as well as those held in the name of the Congo’s delegation to UNESCO in Paris. In a marked departure from
+the precedent set in the NOGA case, the Court of Cassation held that, based on a proper interpretation of the Vienna Convention,
+diplomatic missions of foreign states do not enjoy an independent form of immunity and therefore the bank accounts at issue
+were subject to Congo’s waiver in the arbitration agreement. 281
+Footnotes
+247
+See paragraphs 11.62ff.
+248
+Shaw, International Law (6th edn, Cambridge University Press, 2008), p. 698. See also Lauterpacht, ‘The problem of
+jurisdictional immunities of foreign states’ (1951) 28 BYIL 220; Higgins, ‘Certain unresolved aspects of the law of state
+immunity’ (1982) 29 NILR 265.
+249
+This principle of international law is highlighted in the award of 12 April 1977 of Mahmassani, sole arbitrator in Libyan
+American Oil Co. (Liamco) v Government of the Libyan Arab Republic (1982) 62 ILR 140, at 178. It was noted that
+even UN General Assembly Resolution No. 1803, dated 21 December 1962, which proclaims permanent sovereignty
+over natural resources, confirms the obligation of states to respect arbitration agreements.
+250
+Lalive, ‘Quelques observations sur l’immunité d’exécution des états et l’arbitrage international’, in Dinstein (ed.)
+International Law at a Time of Perplexity (Brill, 1989), p. 370.
+251
+The United Nations Convention on Jurisdictional Immunities of States and their Property attempts to harmonise the
+approach taken by states. Adopted by the UN General Assembly in December 2004, it will only come into force once
+thirty states have ratified it. At time of writing, only twenty-two states had done so (while twenty-eight states have signed
+the Convention): see online at http://treaties.un.org/Pages/ViewDetails.aspx?src = IND&mtdsg_no = III-13&chapter =
+3&lang = en.
+252
+La Générale des Carrières et des Mines v FG Hemisphere Associates LLC [2012] UKPC 27.
+253
+Notwithstanding the robust position on sovereign immunity taken by English courts, the British parliament introduced
+another obstacle to the enforcement of awards against developing sovereigns, styled ‘heavily indebted poor
+countries’ (HIPCs), in the form of the Debt Relief (Developing Countries) Act 2010, which aims to diminish debt in the
+world’s poorest economies, including Africa and Asia. The Act seeks to complement the HIPC initiative and prohibits
+private creditors from pursuing in English courts any claims against such countries above a limited amount, set by the
+HIPC Initiative formula: Barratt and Michael, ‘Degrees of immunity: A lesson from the Privy Council’, in The European,
+Middle Eastern and African Arbitration Review (GAR, 2013), pp. 6–7.
+254
+Whilst this position has evolved from case law in many countries, reference must also be had to those countries that
+have given effect to the 1972 European Convention on State Immunity.
+
+Section E. - Defence of State Immunity, UKBC-REDFERN 530638673 (2025)
+© 2025 Thomson Reuters.
+5
+255
+Barratt and Michael, ‘Degrees of immunity: A lesson from the Privy Council’, in The European, Middle Eastern and
+African Arbitration Review (GAR, 2013), p. 4.
+256
+English State Immunity Act 1978, s. 9. See Svenska Petroleum Exploration AB v Government of the Republic of
+Lithuania (No. 2) [2006] EWCA Civ 1529. See also UN Convention on Jurisdictional Immunities of States and their
+Property 2004, Art. 17, which provides: ‘[I]f a State enters into an agreement in writing with a foreign natural or juridical
+person to submit to arbitration differences relating to a commercial transaction, that State cannot invoke immunity from
+jurisdiction before a court of another State which is otherwise competent in a proceeding which relates to: (a) the validity,
+interpretation or application of the arbitration agreement; (b) the arbitration procedure; or (c) the confirmation or the
+setting aside of the award, unless the arbitration agreement otherwise provides.’
+257
+Foreign Sovereign Immunities Act of 1976, Title 28, US Code, § 1605(a)(1). See Kahale, ‘New legislation facilitates
+enforcement of arbitral agreements and awards’ (1989) 6 J Intl Arb 57.
+258
+Libyan American Oil Co. (Liamco) v Libyan Arab Republic (1981) 20 ILM 1.
+259
+Section 1605(a)(6), as amended 16 November 1988. For commentary, see Delaume, ‘Recognition and enforcement of
+state contract awards in the United States: A restatement’ (1997) 91 Am J Intl L 476.
+260
+See, e.g., Chevron Corporation v Republic of Ecuador 2013 WL 2449172 (DDC 2013), in which the US District Court
+for the District of Columbia held that the arbitration exception to sovereign immunity under the Foreign Sovereign
+Immunities Act of 1976 applied in the case of enforcement of an award under a BIT, which was being enforced under
+the New York Convention.
+261
+If it did not, presumably the question of enforcement would not arise, since it would carry out the award voluntarily.
+262
+For a classic discussion of this topic, see van den Berg, ‘The enforcement of arbitral awards against a state: The problem
+of immunity from execution’, in Lew (ed.) Contemporary Problems in International Arbitration (CCLS/Kluwer, 1986),
+p. 359.
+263
+State Immunity Act 1978, s. 13(3).
+264
+See Broches, ‘Awards rendered pursuant to the ICSID Convention: Binding force, finality, recognition, enforcement,
+execution’ (1987) 2 ICSID Rev—Foreign Investment LJ 287, at 332. See, e.g., Decision 5A_681/2011 of the Swiss
+Federal Supreme Court, 23 November 2011, which, in considering the enforcement of an ICSID award rendered against
+Kyrgyzstan, held that the assets of Kyrgyzaeronavigatsia (a Kyrgyz government agency in charge of aerospace control)
+were protected by sovereign immunity, since they were used for the exercise of sovereign authority. For a view that
+the problem of immunity from execution of an ICSID award is more theoretical than real, by reason, inter alia, of the
+obligation in ICSID Convention, Art. 53, to comply with the award, see Delaume, ‘Sovereign immunity and transnational
+arbitration’ (1987) 3 Arb Intl 28, at 43.
+265
+Creighton Ltd (Cayman Islands) v Minister of Finance and Minister of Internal Affairs and Agriculture of the
+Government of the State of Qatar, Cass. Civ., 6 July 2000, (2000) XXV YBCA 458 and [2001] Rev Arb 114; cf. Yugoslavia
+v SEEE, Paris Tribunal de Grande Instance, 6 July 1970, (1970) 65 ILR 47, at 49 (‘waiver of jurisdictional immunity
+does not in any way involve waiver of immunity from execution’); Paris cour d’appel, 21 April 1982, [1983] J du
+Droit Intl 145.
+266
+See Meyer-Fabre, ‘Enforcement of arbitral awards against sovereign states: A new milestone’ (2000) 15 Mealey’s Intl
+Arb Rep 9, at 48–52. See also Carrier, ‘France: Shrinking of immunity from execution and discovery of diplomatic
+immunity from execution’ (2003) 18 Mealey’s Intl Arb Rep 1, at 46–50, in which Carrier suggests that the wording of
+ICC Rules, Art. 24 (now 2012 ICC Rules, Art. 34.6) is not clear enough to deduce such a waiver.
+267
+Cass. Civ., Ch. Civ. 1ere, Arrêt No. 395 du 28 mars 2013 (11-10.450), Arrêt No. 395 du 28 mars 2013 (11-10.450), and
+Arrêt No. 396 du 28 mars 2013 (11-13.323). See Kleiman and Spinelli, ‘NML v Argentina: Supreme Court tightens
+waiver of sovereign immunity test’, available online at http://www.internationallawoffice.com/newsletters/
+268
+See J. Paulsson, ‘Sovereign immunity from jurisdiction: French case law revisited’ (1985) 19 Intl Lawyer 277.
+269
+State Immunity Act 1978, s. 13(5).
+270
+Alcom Ltd v Republic of Colombia [1984] AC 580 (HL). See also SerVaas Incorporated v Rafidain Bank & Republic of
+Iraq and ors [2012] UKSC 40, in which a certificate issued by the Iraqi head of mission was held sufficient to prove that
+the funds in question were earmarked for the restructuring of Iraq’s sovereign debt and, as such, protected by sovereign
+immunity.
+271
+BVerfGE 46, 342 2 BvM 1/76 ‘Philippine Embassy ’.
+272
+See, e.g., Orascom Telecom Holding SAE v Republic of Chad and anor [2008] 2 Lloyd’s Rep 396, at [23], in which
+enforcement of an ICC award was allowed against Chad’s Citibank account, which was set up and operated so as ‘to
+receive the proceeds of a contract for the supply of goods or services, and/or to be part of a system specifically established
+for the purposes of repayment of the loans by the World Bank etc to Chad’. See also Russian Federation v Franz J.
+Sedelmayer, Case No. ö 170-10, Swedish Supreme Court, 1 July 2011, in which the Court held that an arbitral award
+could be enforced against a block of flats in Stockholm owned by the Russian government, which was partially used
+
+Section E. - Defence of State Immunity, UKBC-REDFERN 530638673 (2025)
+© 2025 Thomson Reuters.
+6
+by the Russian Federation to house diplomats, partly for non-commercial (but non-official) purposes and partly for
+commercial purposes.
+273
+State Immunity Act 1978, s. 14(4); AIG Capital Partners Inc. v Kazakhstan [2005] App LR 10/20. See also the US
+Foreign Sovereign Immunities Act of 1976, § 1611(b)(1), which also provides that the immunity of central banks or
+monetary authorities can be waived: see LNC Investments Inc. v Republic of Nicaragua, 115 F.Supp.2d 358 (SDNY 2000)
+for a restrictive approach to waivers of immunity.
+274
+One of the authors was a member of the tribunal.
+275
+Liberian Eastern Timber Co. (Letco) v Government of the Republic of Liberia, 650 F.Supp. 73 (SDNY 1986), 659 F.Supp.
+606 (DDC 1987) (embassy bank accounts). For a commentary, see Broches, ‘Awards rendered pursuant to the ICSID
+Convention: Binding force, finality, recognition, enforcement, execution’ (1987) 2 ICSID Rev—Foreign Investment LJ
+287.
+276
+Ambassade de la Féderation de Russie en France v Compagnie NOGA d’Importation et d’Exportation SA, Paris cour
+d’appel, Ch. 1ere A, 10 August 2000, [2001] Rev Arb 114; for excerpts in English, see also (2001) XXVI YBCA 273.
+Although the cour de cassation subsequently overturned the Court of Appeal’s decision on 12 May 2004, it did not
+impugn the Court of Appeal’s reasoning on the relationship between a waiver of immunity from execution and diplomatic
+immunity. See also Gaillard, ‘La jurisprudence de la Cour de Cassation en matiere d’arbitrage international’ (2007)
+4 Rev Arb 697, at 716–720.
+277
+Separately, in February 2000, the Brussels Court of Appeal followed the decision of the Paris Court of Appeal in NOGA
+(whilst basing its reasoning solely on Art. 25 of the Vienna Convention) and found the Embassy of Iraq’s bank accounts
+to be immune from execution.
+278
+See, e.g., Fédération de Russie v BNP Paribas (Suisse) SA Compagnie NOGA d’Importation et d’Exportation SA,
+Decision 5A_618/2007, Swiss Federal Supreme Court, 10 January 2008.
+279
+Decision 4A_403/2008, Federal Supreme Court of Switzerland, 9 December 2008.
+280
+Commissions Import Export SA. v The Republic of the Congo, Cass. Civ., Chambre civile 1, no. 13-17751.
+281
+Ibid, at the dispositif section.
+End of Document
+© NIGEL BLACKABY KC, CONSTANTINE PARTASIDES
+KC, ALAN REDFERN

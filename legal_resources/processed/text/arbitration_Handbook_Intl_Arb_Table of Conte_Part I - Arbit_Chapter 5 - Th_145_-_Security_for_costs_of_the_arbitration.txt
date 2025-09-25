@@ -1,0 +1,284 @@
+Security for costs of the arbitration, UKBC-ICCARBN 474406962 (2022)
+© 2025 Thomson Reuters.
+1
+Security for costs of the arbitration
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+Security for costs of the arbitration
+28-32
+It is undisputed that in an ICC arbitration, security for costs can be granted by way of an interim measure under art.28(1). In
+most jurisdictions, a Tribunal would appear to be entitled to order that a party provide security for costs of the arbitration. The
+English Arbitration Act 1996 expressly provides for such orders and in most other jurisdictions, there would appear to be no
+impediment to such an order. 490
+28-33
+However, there are varied views as to whether it is appropriate to order security for costs in an ICC arbitration. In large part,
+this reflects the practice in state court proceedings. In English court proceedings, security for costs is relatively commonplace.
+In American and French court proceedings, they are virtually unknown. 491  In German court proceedings, a claimant indirectly
+provides such security by depositing an amount based on the amount of the dispute to secure the court’s costs, not, however,
+the legal costs of the other side. 492  These court proceedings are not directly relevant to security for costs orders, but a Tribunal
+with London as the place of arbitration may well be more open to ordering security for costs than a Tribunal seated elsewhere.
+28-34
+The difficulty is compounded in international arbitration, because the parties have to pay advances on the costs of arbitration.
+Therefore, there is a concern that requiring a party to provide security for costs may stifle valid claims. As a result, the practice
+of Tribunals has varied considerably. 493  Set out below are some examples of where Tribunals have dealt with applications for
+security for costs followed by general references to additional cases.
+28-35
+An award under the Rules of the Zurich Chamber of Commerce decided that an insolvent company should be ordered to provide
+security for the costs of arbitration, and analysed the position as follows:
+“the modern view expressed in Swiss legal doctrine and arbitral practice is that the authority granted to the
+arbitrators by art.183 PILA also extends to orders requesting a party to provide security for the opposing party’s
+legal costs.
+Recent arbitral decisions appear to signal differing views regarding the circumstances under which security for
+costs may be ordered. In an unpublished arbitral decision of December 1995, it was held that security should only
+be ordered in exceptional circumstances, that is if there is a clear and present danger that a future cost award would
+not be enforceable, e.g. because of a party’s insolvency as proven by the applicant.
+A party’s insolvency is a common ground for granting security for costs. p 73, para.2 to 5 of the Zurich Civil
+Procedure Code lists various grounds on which a court is allowed to request a claimant to provide security for
+costs all of which are based on the risk of claimant’s insolvency.
+A recent arbitral decision, by contrast, appears to consider a mere potential risk of non-enforceability of a future
+cost award as insufficient grounds; it rather emphasizes the requirement that an order for security shall not unduly
+restrict the party’s access to arbitral justice and that the principle of equal treatment of the parties should be
+observed.” (citations omitted) 494
+
+Security for costs of the arbitration, UKBC-ICCARBN 474406962 (2022)
+© 2025 Thomson Reuters.
+2
+28-36
+In a 2005 ICC case, a Swiss respondent requested that a Tribunal sitting in Geneva order security for costs, covering inter alia
+the claimant’s share of the ICC arbitration and its own legal costs, against a Nigerian claimant. The respondent based its request
+on the alleged fact that the claimant would encounter difficulties to effect a payment abroad in favour of the respondent, and
+that enforcing an award in Nigeria would require lengthy and costly procedures. The Tribunal rejected the respondent’s request
+given the absence of any special circumstances justifying such a decision. 495
+28-37
+In ICC Case No.13070, 496  a Tribunal sitting in Paris, rejected the respondent’s request for security for costs against the claimant
+based on the lack of exceptional circumstances. The Tribunal appeared to consider deterioration of the financial situation of a
+claimant as constituting an exceptional circumstance justifying security for costs. However, the Tribunal held that the respondent
+had failed to provide specific proof thereof in the case. 497
+28-38
+In ICC Case No.13359, a Tribunal sitting in Paris by a majority decision refused to order security for costs where the claimant
+was apparently funding the arbitration out of its current assets and had paid its share of the advance on costs. 498
+28-39
+In ICC Case No.14355, a Tribunal sitting in Switzerland refused a request for security for costs where the claimant was insolvent,
+based in particular on the concern that it would stifle the claim. As regards the insolvency, the Tribunal held that that was a
+commercial risk and it was not in a position to accept or exclude that the respondent had contributed to the insolvency. 499
+28-40
+In ICC Case No.14433, a sole arbitrator sitting in London refused to order security for costs after noting that such an order should
+be granted sparingly and in limited circumstances. The sole arbitrator listed as factors to consider in rendering the decision the
+bona fides of the claim, the prospects of success, the admissions or offers, the oppressive features of the application, the effect
+of the respondent’s behaviour on the claimant’s financial condition, whether there is a risk of irreparable harm, whether there
+was a fundamental change in the claimant’s financial situation since the arbitration agreement was entered into and whether
+it would be “just” to make the order. 500
+28-41
+In ICC Case No.14661, a claimant obtained an order for security for costs against a respondent who had advanced counterclaims.
+The claimant sought further security after 93 per cent of the respondent’s counterclaims had been rejected. By majority decision,
+the Tribunal rejected the request. The Tribunal held that security for costs should be solely for future costs and those would
+be limited to the post-hearing briefs. 501
+28-42
+In ICC Case No.14993, the Sole Arbitrator sitting in Vienna refused a request for security for costs holding that it was insufficient
+that the respondent had doubts as to claimant’s solvency due in particular to losses over the prior two years and noted that were
+no other circumstances in favour of such measures (such as bankruptcy, the use of a special purpose vehicle, transfer of assets
+or a change of domicile or residence). 502
+28-43
+In ICC Case No.15218, a Sole Arbitrator sitting in Bern granted a request for security for costs where the claimant was insolvent
+and the financial situation of the claimant had deteriorated since the contract was signed (although the claimant attributed that
+deterioration to the respondent). 503
+28-44
+In ICC Case No.16945, a Tribunal sitting in Paris refused to order security for costs against claimant, as the respondent, a
+Ministry of Natural Resources from a Middle Eastern country, knew, when entering into a Production Sharing Agreement with
+
+Security for costs of the arbitration, UKBC-ICCARBN 474406962 (2022)
+© 2025 Thomson Reuters.
+3
+claimant, that the latter was “a company organized under the laws of the British Virgin Islands, which do not require detailed
+filings of financial statements”. The Tribunal opined that “by entering into the PSA with an off-shore company, amongst others,
+it accepted the risk that should litigation occur, the Ministry would be faced with a company that would not necessarily have the
+ability to apply the possible costs of an arbitration against its assets”. The Tribunal added that since this was an ICC arbitration,
+the claimant would in any event have to pay its share of the advance on costs. 504
+28-45
+In ICC Case No.19933 (unpublished), a Tribunal sitting in London rejected a claim for security for costs which was brought
+based in part on the US Sanctions regulations, on the fact that the claimant was based in a non-New York Convention country
+and on the fact that the claimant had failed to pay a costs order in another related arbitration. Key factors in rejecting the
+application were the fact that it was brought after the claimant had succeeded with respect to its claim on jurisdiction and a
+general license had been issued by the US authorities for the relevant country. In addition, the Tribunal was concerned about
+stifling the claim. 505
+28-46
+In ICC Case No.20707, a Tribunal sitting in Paris rejected the respondent’s claim for security for costs against two claimants
+that were part of a Consortium of contractors. One of the claimants had entered into insolvency proceedings even before the
+arbitration had started, but not the other. The Tribunal noted, amongst other, that the court-appointed administrator of the first
+claimant had currently sufficient cash funds available “to cover a possible cost award in Respondent’s favour”, and that the risk
+that in the future this may not be the case was hypothetical, and did not appear to be imminent. The Tribunal then stated: “For
+the Respondent to be able to fully assess that risk and its chances to obtain security for costs, under the circumstances of this
+case, it seems fair that the [insolvent] Claimant informs it of the financial situation of its assets.” The Tribunal insisted that the
+first claimant provide respondent with an update of its financial situation every six months. 506
+28-47
+In ICC Case No.21115 (unpublished) the Tribunal ordered security for costs after it ordered that the proceeds of a bank guarantee
+be retained and not drawn by the respondent and that it be paid out in accordance with a final award. In this case, the security
+for costs order was a consequence of the other order for interim relief granted in favour of the claimant.
+In ICC Case No.25003/GR (unpublished) a Tribunal sitting in Rio de Janeiro rejected the respondent’s claim for security for
+costs holding that it was insufficient that claimant’s financial situation “had significantly deteriorated as compared to the time
+when the arbitration agreement was entered into”. The Tribunal added that the fact that claimant had not paid the cost order of
+a previous award between the parties was “troubling”, but it did not consider that factor to be sufficient to order security for
+costs as the respondent had “not pursued this claim beyond the two reminders” it sent to claimant, and had also not paid “its
+share of the advance of costs” in the present arbitration. 507
+28-48
+As is clear from the above, applications for security for costs have become a regular feature in ICC arbitration. Such applications
+have also been discussed for many years in the relevant literature. 508  However, the decisions of Tribunals are varied.
+Nevertheless, for the authors a number of principles appear frequently. 509
+28-49
+First, a party applying for security for costs must generally be in a position to demonstrate that the other party’s financial situation
+has deteriorated substantially since the date on which the arbitration agreement was signed. The underlying reason for this
+approach is that the party seeking security for costs should have had a reasonable expectation that the other party would provide
+security for costs when it agreed to arbitration. In the decisions referred to above, there is no clear indication of whether the
+argument that the other party contributed to the deterioration in financial condition will be taken into account. For the authors,
+that will most likely depend on the prima facie strength of the respective cases on the merits.
+28-50
+Second, a Tribunal will be concerned about the stifling of a claim, and the stronger that claim is, the greater that concern. This
+issue is related to the issue of due process referred to in the Pirelli case for example. 510  In that case, the French Supreme Court
+held that refusal to deal with counterclaims due to a failure to pay the portion of the advance on costs for the counterclaims
+could result in a failure to respect access to justice and the principle of equality between the parties. Although this decision was
+
+Security for costs of the arbitration, UKBC-ICCARBN 474406962 (2022)
+© 2025 Thomson Reuters.
+4
+attenuated somewhat in the Lola Fleurs cases, it is one matter to have an (agreed) obligation to advance the costs of arbitration
+and another to provide security for the other party’s costs. In considering whether a claim would be stifled, most Tribunals will
+consider not only the financial condition of the party against whom the order is sought but also the financial resources that may
+be available to the party whether through its shareholders.
+28-51
+Third, the timing of any application for security for costs is important and there is much to be said for the view that an application
+should be for future costs only.
+28-52
+Fourth, the procedural behaviour of the parties will be a factor. If an application for security for costs is viewed as (another)
+attempt to wear down the other party it may well be rejected as unjust.
+28-53
+Finally, the presence of a third party financing the arbitration changes the situation. If a party has arranged for such financing, the
+likelihood of an order for security for costs is presumably much higher, although the cases reflecting this are, as yet, infrequent.
+For the authors, to the extent a third party funder would participate in the benefits of any award, it should also participate to
+a certain extent in the risk relating to costs. 511
+Footnotes
+490
+Section 38(3) of the English Arbitration Act 1996 provides: “[t]he tribunal may order a Claimant to provide security
+for the costs of the arbitration. This power shall not be exercised on the ground that the Claimant is–(a) an individual
+ordinarily resident outside the United Kingdom, or (b) a corporation or association incorporated or formed under the
+law of a country outside the United Kingdom, or whose central management and control is exercised outside the United
+Kingdom”. The well-known Ken Ren case of the House of Lords, where the English Courts were requested to, and did,
+order the Kenyan claimant, an insolvent project company, to post security for cost in an ICC arbitration, was based on
+the law prior to the English Arbitration Act: [1994] 2 All E.R. 449 and (1995) YBCA Vol.XX p.228. See also Paulsson,
+“The Unwelcome Atavism of Ken Ren: The House of Lords Shows is Meddle” [1994] ASA Bull. Vol.12, No.3/4, p.439.
+491
+Moreover, art.1468 of the CPC states in part that “only courts may order conservatory attachments and judicial security”.
+492
+Only when the party is a resident in a foreign country with which Germany is not bound through a multilateral or bilateral
+treaty regarding civil or commercial matters, would the claimant have to post security for costs for the legal costs of the
+other party. This is true for the US, the Philippines and Uganda, to give but three examples.
+493
+For an overview and a helpful table of decisions see Haridi, “Security for Costs and Claim under the ICC Rules of
+Arbitration: Rare but Possible: A Survey of 23 ICC Procedural Orders and Final Awards” [2020] ICC DR Bull. No.2,
+p.77. The author concludes: “Although tribunals are hesitant to award security for costs or for claim, the survey results
+show that such requests can be successful. Financial instability or difficulty enforcing an award, standing alone, will not
+typically suffice. In order to succeed, it is critical that the applicant point to some fundamental change in circumstance
+—beyond the accepted risks inherent in international commercial agreements—resulting in a clear and present danger
+that a future award would not be enforceable. This is a high bar for applicants to meet, but the survey results confirm
+that it is possible. The results also show that although tribunals follow similar approaches, they have yet to determine
+a single test, applicable to any security application.”
+494
+ZCC Arbitration Proceedings No.415 of November 2001, [2002] ASA Bull. Vol.20 No.3, p.467 at p.469.
+495
+ICC case No.13646, Procedural Order No.3 (2005), unreported where the Tribunal emphasised in its Procedural Order
+the necessity for it to use such a power in a restrictive manner stating in particular that: “It is generally admitted, however,
+that such power must be used in a restrictive manner. In Switzerland, this is, in particular, the opinion of Jean-François
+Poudret and Sebastien Besson: ‘Un security for costs n’est à notre avis justifié que dans des cas très particuliers’ (Droit
+comparé de l’arbitrage international, Bruylant L.G.D.J. Schulthess, 2002, §610). The abovementioned procedural order
+issued by a tribunal sitting in Zurich expresses the same view: ‘Arbitral precedents … show that security for costs should
+only be granted in exceptional circumstances and with the greatest reluctance’ (ASA Bulletin 2005, at p.112). As far as
+ICC Arbitration is concerned, Y. Derains and E. Schwartz confirm that ‘those drafting the 1998 Rules were reluctant
+to mention security for costs expressly because they did not wish to encourage the proliferation of such applications,
+
+Security for costs of the arbitration, UKBC-ICCARBN 474406962 (2022)
+© 2025 Thomson Reuters.
+5
+which, apart from being rare, are generally disfavoured in ICC arbitration’ (op. cit., p.297). This Arbitral Tribunal
+shares the view that the mere existence of doubt as to the possibility of enforcing a future award against the other
+party is not a sufficient ground for granting a request for security for costs. To impose such burden on a party requires
+more than the ordinary risk that the party ordered to pay may not be willing and may not be easily forced to do so; it
+requires the existence of special circumstances. Such necessity might be lightened if a very serious likelihood, if not
+near certainty that the alleged debt exists or will exist could be established …” See also Puerto Rico Hospital Supply Inc
+v Boston Scientific Corp, 21 October 2005 First Circuit US Court of Appeals, Mealey’s IAR Vol.20 No.10 p.16 (denial
+of injunctive relief pending ICC arbitration by US court in absence of any irreparable harm for the requesting party);
+Plama Consortium Ltd v Republic of Bulgaria, ICSID Case No.ARB/03/24 of 6 September 2005, Mealey’s IAR Vol.20
+No.10 p.8 (denial of a request for urgent provisional measures to protect a party’s right to non aggravation of a pending
+arbitration claim in absence of a change of circumstances that threatens the ability of the Tribunal to grant the relief
+sought by a party and the capability of giving effect to the relief).
+496
+ICC Case No.13070 (2006) (Interim Award), unreported.
+497
+The Tribunal stated in particular that: “Security for costs should only be granted in exceptional circumstances and
+with the greatest reticence (Karrer/Desax, Security for Costs in International Arbitration, in: Briner/Fortier/Berger/
+Bredow (eds.), Liber Amicorum Karl-Heinz Böckstiegel, Köln et al. 2001, Weigand (Ed.), Practitioner’s Handbook
+on International Arbitration, Copenhague 2002, p.253). Insolvency must be considered as one of these exceptional
+circumstances ([1997] ASA Bull, p.377), as well as the situation, where a claimant did no longer conduct its commercial
+activity ([1999] ASA Bull, p.59). As a general rule, security for costs may only be ordered if, inter alia, the following
+conditions are fulfilled: there must be a situation of urgency and a risk of substantial damage for the requesting party. It is
+usually required to be in presence of a ‘fundamental change of the situation since the basic agreement between the parties
+was entered into’ (Karrer/Desax, op. cit., p.345). In other words, the financial situation of the counterparty must have
+deteriorated since the time when the parties concluded their agreement. Respondent does nowhere provide for specific
+proof for any such deterioration of Claimant’s financial situation. Neither has it established that Claimant’s financial
+situation has changed, either since the validity of the agreement or since the beginning of the arbitral proceedings. On
+the other hand, Claimant rightly observes that 1/ so far, it has assumed the entirety of the arbitration costs, 2/ it is a
+public institution under the Government monitoring. This last element, indeed, precludes by principle any serious risk
+of insolvency or bankruptcy.”
+498
+Procedural Order of February 2006 in ICC Case No.13359 (Extract) in Special Supplement 2014: Procedural Decisions
+in ICC Arbitration, 63.
+499
+Procedural Order of January 2007 in ICC Case No.14355 (Extract) in Special Supplement 2014: Procedural Decisions
+in ICC Arbitration, 70.
+500
+Procedural Order of October 2008 in ICC Case No.14433 (Extract) in Special Supplement 2014: Procedural Decisions
+in ICC Arbitration, 73.
+501
+Procedural Order of December 2008 in ICC Case No.14661 (Extract) in Special Supplement 2014: Procedural Decisions
+in ICC Arbitration, 76 (p.74 for the original decision).
+502
+Procedural Order of December 2007 in ICC Case No.14993 (Extract) in Special Supplement 2014: Procedural Decisions
+in ICC Arbitration, 77.
+503
+Procedural Order of July 2008 in ICC Case No.15218 (Extract) in Special Supplement 2014: Procedural Decisions in
+ICC Arbitration, 79.
+504
+Procedural Order No.2 (2011). One of the authors was counsel of claimant.
+505
+One of the authors is the president of the Tribunal in the case.
+506
+Procedural Order No.3 (2015), unpublished. One of the co-authors was the president of the Tribunal in this case, which
+ultimately ended by way of a settlement.
+507
+Procedural Order No.4 (2020), unpublished. One of the co-authors was the president of the Tribunal in this in this case.
+508
+Veit, “Note–Procedural Order No.14 of 27 November 2002-Security for Costs in International Arbitration–Some
+Comments to Procedural Order No.14 of 27 November 2002” [2005] ASA Bull. Vol.28 No.1, p.116; Besson, “Arbitrage
+international et mesures provisoires–Etude de droit comparé”, op. cit., para.37, p.38 and para.358 p.220; Sandrock, “The
+Cautio Judicatum Solvi in Arbitration Proceedings or The Duty of an Alien Claimant to Provide Security for the Costs
+of the Defendant” (1997) J. Int. Arb. Vol.4 No.2, p.17 at p.28; Karrer and Desax, “Security for Costs in International
+Arbitration; Why, When and What if …” in Liber Amicorum Karl-Heinz Böckstiegel (Carl Heymanns Verlag, 2001),
+p.339.
+509
+A very helpful document is the Chartered Institute of Arbitrators in 2016 entitled “Applications for Costs” (the “CIArb
+Applications for Costs Guidelines”). These guidelines are often used particularly for international arbitrations where
+the place of arbitration is England; however, they were drafted by international practitioners and refer to various ICC
+decisions on applications for costs.
+
+Security for costs of the arbitration, UKBC-ICCARBN 474406962 (2022)
+© 2025 Thomson Reuters.
+6
+510
+28 March 2013, Arrêt n° 392 du 28 mars 2013 (11-27.770).
+511
+On this subject, see V. Frignati, “Ethical implications of third-party funding in international arbitration”, [2016] Arb.
+Int. No.3, pp.505-522; N. Darwazeh & A. Leleu, “Disclosure and Security for Costs or How to Adress Imbalances
+Created by Third-Party Funding”, [2016] J. Int. Arb. No.2, pp.125-150; K. H. Shahdadpuri, “Third-Party Funding in
+International Arbitration: Regulating the Treacherous Trajectory”, [2016] Asian Int. Arb. J. No.2 pp.77-106.
+End of Document
+© 2025 SWEET & MAXWELL

@@ -1,0 +1,477 @@
+Section I. - Multiparty Arbitrations, UKBC-REDFERN 530638613 (2025)
+© 2025 Thomson Reuters.
+1
+Section I. - Multiparty Arbitrations
+Redfern and Hunter on International Arbitration 7th Ed.
+Mainwork
+Chapter 2 - Agreement to Arbitrate
+Section I. - Multiparty Arbitrations
+(a) Introduction
+2. 234
+When several parties are involved in a dispute, it is usually considered desirable that the issues should be dealt with in the same
+proceedings, rather than in a series of separate proceedings. In general terms, this saves time and money. More importantly, it
+avoids the possibility of conflicting decisions on the same issues of law and fact, since all issues are determined by the same
+tribunal at the same time. In national courts, it is generally possible to join additional parties, or to consolidate separate sets
+of proceedings. In arbitration, however, it is difficult, and sometimes impossible, to achieve this, because the arbitral process
+is based upon the agreement of the parties. As a working group of the ICC’s Commission on International Arbitration noted
+in its Final Report on Multi-party Arbitrations:
+The difficulties of multi-party arbitrations all result from a single cause. Arbitration has a contractual basis; only
+the common will of the contracting parties can entitle a person to bring a proceeding before an arbitral tribunal
+against another person and oblige that other person to appear before it. The greater the number of such persons,
+the greater the degree of care which should be taken to ensure that none of them is joined in the proceeding against
+its will. 379
+2. 235
+Where there is a multiparty arbitration, it may be because there are several parties to one contract, or it may be because there are
+several contracts with different parties that have a bearing on the matters in dispute. It is helpful to distinguish between the two.
+(i) Several parties to one contract
+2. 236
+It is increasingly common—particularly in international trade and commerce—for individuals, corporations, or state agencies
+to join together in a joint venture, or consortium, or in some other legal relationship of this kind, in order to enter into a
+contract with another party or parties. Where such a contract contains an arbitration clause and a dispute arises, the members
+of the consortium or joint venture may decide that they would each like to appoint an arbitrator. This is what happened in
+Dutco. 380  Dutco had entered into a contract with a consortium of two German companies and, when disputes arose, brought
+arbitral proceedings under the ICC Rules against those two companies. Each of the companies claimed to be entitled to
+appoint an arbitrator. This created problems, because the ICC Rules do not contemplate an arbitral tribunal of more than three
+arbitrators. 381  The ICC requested the two German companies to make a joint nomination of an arbitrator. They did so, but
+reserved their right to challenge the ICC’s decision, which they regarded as depriving each of them of the right to nominate
+an arbitrator. The French Court of Cassation agreed with the German companies: the court regarded the principle of equality
+in the appointment of arbitrators as a matter of public policy.
+2. 237
+Many arbitration rules now make express provision for arbitration proceedings arising under multiparty contracts, so as to
+avoid the Dutco dilemma. For example, Article 12.6 of the ICC Rules states:
+
+Section I. - Multiparty Arbitrations, UKBC-REDFERN 530638613 (2025)
+© 2025 Thomson Reuters.
+2
+[ … ]
+Where there are multiple claimants or multiple respondents, and where the dispute is to be referred to three
+arbitrators, the multiple claimants, jointly, and the multiple respondents, jointly, shall nominate an arbitrator
+for confirmation
+[ … ]
+In the absence of a joint nomination [ … ] and where all parties are unable to agree to a method for the
+constitution of the arbitral tribunal, the Court may appoint each member of the arbitral tribunal and shall
+designate one of them to act as president. [ … ]
+2. 238
+Article 8 of the LCIA Rules adopts a similar procedure:
+ 
+8.1Where the Arbitration Agreement entitles each party howsoever to nominate an arbitrator, the parties to the dispute
+number more than two and such parties have not all agreed in writing that the disputant parties represent collectively
+two separate ‘sides’ for the formation of the Arbitral Tribunal (as Claimants on one side and Respondents on the other
+side, each side nominating a single arbitrator), the LCIA Court shall appoint the Arbitral Tribunal without regard to any
+party’s entitlement or nomination.
+ 
+8.2In such circumstances, the Arbitration Agreement shall be treated for all purposes as a written agreement by the
+parties for the nomination and appointment of the Arbitral Tribunal by the LCIA Court alone.
+These and other arbitration rules 382  recognise the right of the parties to nominate a member of the arbitral tribunal if they
+are able to agree, but takes this right away from all parties equally and vests it in the institution if they cannot do so. This is
+a sensible solution to the problem of constituting an arbitral tribunal where there are three or more parties who are unable to
+agree amongst themselves. However, there may be difficulties when it comes to obtaining recognition and enforcement of
+an award made by a tribunal that has been established for the parties, rather than by the parties. The New York Convention,
+in Article V(1)(d), states that recognition and enforcement of an award may be refused on proof that ‘[t]he composition
+of the arbitral authority or the arbitral procedure was not in accordance with the agreement of the parties, or, failing such
+agreement, was not in accordance with the law of the country where the arbitration took place’. The Model Law contains
+a similar provision. 383
+2. 239
+However, if a losing party in an arbitration were to ask the competent court to refuse recognition or enforcement of an award
+on these grounds, the party seeking enforcement would argue with force that the composition of the arbitral tribunal was in
+accordance with the agreement of the parties, since, by adopting the institutional rules, they had agreed, inter alia, to this
+particular provision.
+2. 240
+As noted above, many arbitration rules now make express provisions for the joinder of third parties to an arbitration. 384
+Some of these rules specify that joinder must be requested before the constitution of the tribunal, in order to protect the new
+party’s right to nominate an arbitrator. 385  Other rules allow the tribunal, having been constituted, to determine the issue of
+joinder, taking into account whether a joinder in these circumstances will result in any prejudice to the new party. 386
+(ii) Several contracts with different parties
+2. 241
+A different problem arises where there are several contracts with different parties, each of which has a bearing on the issues
+in dispute. Again, this is a situation that is not uncommon in modern international trade and commerce. A major international
+
+Section I. - Multiparty Arbitrations, UKBC-REDFERN 530638613 (2025)
+© 2025 Thomson Reuters.
+3
+construction project is likely to involve not only the employer and the main contractor (which itself may be a consortium
+of companies), but also a host of specialised suppliers and subcontractors. Each of these parties will be operating under a
+different contract, often with different choice-of-law and arbitration clauses—and yet any dispute between, say, the employer
+and the main contractor is likely to involve one or more of the suppliers or subcontractors. 387
+2. 242
+What happens when a dispute between the employer and the main contractor is referred to arbitration, and the main contractor
+wishes to join the subcontractor in the proceedings, on the basis that if there is any liability, it is a liability that the main
+contractor is entitled to pass on to the subcontractor? This was the issue raised in the Adgas case. 388  Adgas 389  was the owner
+of a plant that produced liquefied natural gas in the Arabian Gulf. The company started an arbitration in England against the
+main contractors under an international construction contract, alleging that one of the huge tanks that had been constructed
+to store the gas was defective. The main contractor denied liability, but added that if the tank were defective, it would be
+the fault of the Japanese subcontractor. Adgas brought ad hoc arbitration proceedings against the main contractor before a
+sole arbitrator in London. The main contractor then brought separate arbitration proceedings, also in London, against the
+Japanese subcontractor.
+2. 243
+There is little doubt that if the matter had been litigated in an English court, the Japanese company would have been joined as
+a party to the action. However, Adgas did not agree that the Japanese subcontractor should be brought into its arbitration with
+the main contractor, since this would have lengthened and complicated the proceedings, 390  nor did the Japanese subcontractor
+agree to be joined. It preferred to await the outcome of the main arbitration, to see whether or not there was a case to answer.
+2. 244
+Lord Denning, giving judgment in the English Court of Appeal, plainly wished that an order could be made consolidating
+the two sets of arbitral proceedings, so as to save time and money and to avoid the risk of inconsistent awards:
+As we have often pointed out, there is a danger in having two separate arbitrations in a case like this. You might
+get inconsistent findings if there were two separate arbitrators. This has been said in many cases [ … ] it is
+most undesirable that there should be inconsistent findings by two separate arbitrators on virtually the self-same
+question, such as causation. It is very desirable that everything should be done to avoid such a circumstance. 391
+The Court recognised that it was powerless to order consolidation without the consent of all parties:
+There is no power in this court or any other court to do more upon an application such as this than to appoint
+an arbitrator or arbitrators, as the case may be; we have no powers to attach conditions to that appointment,
+and certainly no power to inform or direct an arbitrator as to how he should thereafter conduct the arbitration
+or arbitrations. 392
+2. 245
+However, the Court was able to go some way towards meeting the problem of conflicting decisions. The case had come
+before the Court on an application for the appointment of an arbitrator, and the Court decided that it could appoint the same
+arbitrator in each case, if that arbitrator was ready to accept the appointment (as indeed he was). Lord Denning said: ‘It seems
+to me that there is ample power in the court to appoint in each arbitration the same arbitrator. It seems to me highly desirable
+that this should be done so as to avoid inconsistent findings.’ 393  This was one practical solution to the problem of conflicting
+decisions—but it still meant that there would be two separate arbitrations arising out of the same dispute.
+(b) Court-ordered consolidation
+2. 246
+
+Section I. - Multiparty Arbitrations, UKBC-REDFERN 530638613 (2025)
+© 2025 Thomson Reuters.
+4
+A different solution that has been adopted in different parts of the world has been to enact legislation that enables the relevant
+national court to order consolidation of arbitrations. 394  In the Netherlands, for example, under the 1986 Arbitration Act, the
+president of the District Court in Amsterdam may order the whole or partial consolidation of two or more connected arbitrations
+in the Netherlands, unless the parties agree otherwise. 395  Some provinces of Canada also allow for court-ordered consolidation
+of connected proceedings. 396
+2. 247
+There is no provision in the Model Law for the consolidation of arbitrations, but nevertheless several states that have adopted
+it have added a provision providing for court-ordered consolidation. In any given case, it is necessary to consider the relevant
+legislation of the state concerned to see exactly what provision is made, but two examples illustrate what might be expected.
+Under the Hong Kong Arbitration Ordinance, the court may consolidate proceedings or order them to be heard concurrently
+or consecutively if: (a) a common question of law or fact arises in both proceedings; (b) the disputes arise out of the same
+transaction or series of transactions; or (c) the court considers it desirable to do so for any other reason. 397  In California, the
+court may order consolidation on such terms as it considers just and necessary. If the parties cannot agree upon the arbitrators,
+the court will appoint them. The court will also determine any other matters on which the parties cannot agree and which are
+necessary for the conduct of the arbitration. 398
+2. 248
+At first sight, court-ordered consolidation seems to be a powerful solution to the problem of ensuring consistent decisions, when
+the same or similar issues of law and fact would otherwise come before different arbitral tribunals. There are, however, likely
+to be practical and legal problems. The different arbitration agreements may differ in their provisions as to number and method
+of appointment of arbitrators, as to the relevant rules of arbitration, as to the power to issue interim awards, and so on. They
+may also differ as to the law governing the merits of the dispute. 399  Finally, there may be a problem in obtaining recognition
+and enforcement for such awards. Reference has already been made to the requirement of Article V(1)(d) of the New York
+Convention to the effect that the composition of the arbitral authority, and the arbitral procedure, must be in accordance with
+the agreement of the parties. Where an arbitral tribunal that has been imposed upon the parties makes an award, it may be
+argued that the award should be refused recognition and enforcement under this provision of the Convention. 400  There is strong
+support, however, for the view that where a court has ordered a consolidated arbitration, the award will be enforceable under
+the New York Convention provided that the parties have at least agreed to arbitration and to the same arbitral jurisdiction. 401
+(c) Consolidation by consent
+(i) Under an arbitration agreement
+2. 249
+The ICC Commission on International Arbitration’s Final Report on Multi-party Arbitrations stated that, ‘[i]n a multilateral
+relationship, whether involving a single contract or separate related contracts, it may be appropriate or necessary to have a
+multi-party arbitration clause’. 402
+2. 250
+Drafting such a clause is not easy. It requires a close understanding of the nature of the relationship between the different
+parties and of the type of disputes that may conceivably arise, and it calls for careful and detailed drafting. It is miles away
+from the standard, or model, form of arbitration clause under which most arbitrations are conducted. The report includes as
+an annexe examples of multiparty arbitration agreements that have been drawn from various sources. 403
+
+Section I. - Multiparty Arbitrations, UKBC-REDFERN 530638613 (2025)
+© 2025 Thomson Reuters.
+5
+(ii) Under institutional rules
+2. 251
+Neither the Model Law nor the UNCITRAL Rules contain any provision for the consolidation of different arbitrations.
+However, modern sets of institutional rules have developed useful pre-fabricated provisions. Under Article 10 of the ICC
+Rules, the ICC Court may, at the request of a party, consolidate two or more pending arbitrations where: (a) the parties
+agree; (b) all claims are made under the same arbitration agreement; or (c) in the case of claims under multiple contracts,
+the arbitrations are between the same parties, the disputes arise in connection with the same legal relationship, and the Court
+considers that the terms of the arbitration agreements are compatible.
+2. 252
+Article 22A of the LCIA Rules provides that an arbitral tribunal may order the consolidation of arbitrations where either (a)
+all parties to the arbitrations to be consolidated so agree in writing; or (b) the arbitrations to be consolidated were commenced
+under the same arbitration agreement or compatible arbitration agreements, provided that those arbitrations are between the
+same parties or arise out of the same transaction or series of related transactions. 404
+2. 253
+Article 4.1 of the Swiss Rules allows for consolidation in the following circumstances:
+Where a Notice of Arbitration is submitted between parties already involved in other arbitral proceedings
+pending under these Rules, the Court may decide, after consulting with the parties and any confirmed arbitrator
+in all proceedings, that the new case shall be consolidated with the pending arbitral proceedings. The Court
+may proceed in the same way where a Notice of Arbitration is submitted between parties that are not identical
+to the parties in the pending arbitral proceedings. When rendering its decision, the Court shall take into account
+all relevant circumstances, including the links between the cases and the progress already made in the pending
+arbitral proceedings. Where the Court decides to consolidate the new case with the pending arbitral proceedings,
+the parties to all proceedings shall be deemed to have waived their right to designate an arbitrator, and the Court
+may revoke the appointment and confirmation of arbitrators and apply the provisions of Section II (Composition
+of the Arbitral Tribunal). 405
+2. 254
+In an appropriate case, provisions such as these should prove useful in bringing everyone concerned before the same arbitral
+tribunal. However, the procedure to be followed in the conduct of such a consolidated arbitration would again have to be
+carefully worked out, so as to ensure that each party is given a proper opportunity to present its case. Otherwise, any resulting
+award may be refused recognition or enforcement. 406
+(d) Concurrent hearings
+2. 255
+Another practical solution to the problem created by multiparty disputes that are not subject to joinder, consolidation, or class
+arbitration, is to appoint the same arbitrator to more than one arbitration. If this is to be done, the procedures to be followed
+need to be considered carefully. Provision should be made for whether, and to what extent, there is confidentiality across the
+formally different proceedings, 407  and whether the record (and even the transcript of witness testimony) can be used across
+different proceedings. Such de facto consolidation would depend upon the agreement of all of the parties concerned and, once
+again, appropriate procedural rules would have to be worked out.
+
+Section I. - Multiparty Arbitrations, UKBC-REDFERN 530638613 (2025)
+© 2025 Thomson Reuters.
+6
+(e) Class arbitrations
+2. 256
+A ‘class’, or ‘representative’, action is a legal proceeding that enables the claims of a number of persons with the same
+interest (the ‘class members’) to be brought by one or a number of claimants (the ‘representative claimant(s)’) against the same
+respondent. In a class action, only the representative claimant(s) is a party to the action, and although the class members do not
+take an active part in the proceedings, they are bound by the outcome.
+2. 257
+Although, for many years, class actions were peculiar to the US litigation landscape, variations on the theme have since appeared
+in other legal systems. 408  Perhaps more surprisingly, class actions have begun to make an appearance in international arbitration.
+‘Surprisingly’ because one might take the view that a representative action is anathema to the principles of privity and party
+autonomy that tend to lead to the classic constellation of claimants facing respondents in the same proceedings who are party
+to the same contract. But US courts, no doubt more comfortable with the concept of class actions than other courts around the
+world, have seen no reason why class action cannot be exported to international arbitration.
+2. 258
+Thus, in the US Supreme Court’s 2003 landmark decision in Green Tree Financial Corporation v Bazzle, 409  the plurality of a
+divided Supreme Court opened the door to class-wide arbitrations. The case involved a lender who had entered into standard-
+form contracts for home improvement loans with a number of borrowers. As is typical in contracts of this type, the contracts
+contained an arbitration clause, referring all disputes to ‘binding arbitration by one arbitrator selected by us [the lender] with
+the consent of you’. The matter was commenced by two sets of consumers, who first brought two separate lawsuits before state
+courts challenging the lender’s practices. Both lawsuits were referred to arbitration at the lender’s demand, and in both cases
+the sole arbitrator (who was, in fact, the same individual in both cases) administered the cases as class-wide arbitrations and
+issued class awards in favour of the borrowers. 410
+2. 259
+The lender challenged the award, submitting that, in ‘selecting an’ arbitrator that was ‘consented to by’ one of its customers
+as required by the express terms of the arbitration agreement, it was not selecting an arbitrator to determine its dispute with its
+other customers. On this basis, it argued that the terms of the arbitration agreement did not accommodate, but rather forbade,
+class-wide arbitration.
+2. 260
+The South Carolina Supreme Court upheld the class awards, reasoning that there was nothing in either the contracts or the Federal
+Arbitration Act to preclude class-wide arbitration. Unable to arrive at a majority opinion, the US Supreme Court nevertheless
+affirmed the judgment and found in the process that an arbitrator, rather than a court, must determine whether the contracts
+forbid class arbitration.
+2. 261
+The response to Green Tree in the United States was immediate. Many companies—particularly in consumer businesses—
+modified their standard arbitration clauses to add an express prohibition on class-wide proceedings. This led to another wave
+of litigation, challenging the enforceability of such class-action waivers. The Californian courts, for instance, have consistently
+refused to give effect to waivers contained in consumer contracts on the basis that they are unconscionable. 411
+2. 262
+In 2003, US arbitral institutions promulgated new rules that deal with class-action scenarios. The AAA promulgated
+Supplementary Rules for Class Actions, which:
+ 
+• require the arbitrator first to decide whether a class action is permissible under the contract in question and applicable
+state law;
+ 
+• provide guidance for the arbitrator thereafter in determining whether to ‘certify’ the existence of a class; 412  and
+
+Section I. - Multiparty Arbitrations, UKBC-REDFERN 530638613 (2025)
+© 2025 Thomson Reuters.
+7
+ 
+• in particular, require the arbitrator to set forth his or her ruling on the class-action issues in a ‘class construction award’
+that may itself be enforced or set aside in court. 413
+2. 263
+As for the courts, until recently there appeared to be a discernible trend towards allowing class treatment of issues that
+were arbitrable under most standard arbitration clauses, at least where the clause did not explicitly prohibit or restrict
+class treatment. 414  However, the tide changed following the Supreme Court’s decision in Stolt-Nielsen SA v Animalfeeds
+International Corporation. 415  The Court overturned an arbitral award that determined issues on a class basis on the ground
+that the tribunal had exceeded its powers, stating that:
+An implicit agreement to authorize class-action arbitration [ … ] is not a term that the arbitrator may infer solely
+from the fact of the parties’ agreement to arbitrate. This is so because class-action arbitration changes the nature
+of arbitration to such a degree that it cannot be presumed the parties consented to it by simply agreeing to submit
+their disputes to an arbitrator. 416
+2. 264
+The Court noted that a shift from an ordinary bilateral or multilateral arbitration to a class- action arbitration involved
+‘fundamental changes’, including a larger number of parties, lack of privacy and confidentiality, the adjudication of rights of
+absent parties, and the potential for high-value awards that were subject to only minimal judicial review on the merits. It stated
+that tribunals should therefore not presume that the parties’ mere silence on the issue of class arbitration constitutes consent. 417
+2. 265
+The recent case of Lamps Plus v Varela 418  appears—at least for now—to have removed any doubt in the matter. In proceedings
+before the Court of Appeals for the Ninth Circuit, an employee had successfully argued that an arbitration clause, which was
+ambiguous as to whether the employee could bring a class arbitration against his employer, should be read contra proferentum
+and was thus enforceable. 419  The Supreme Court, however, appears to have taken its previous findings in the case of Stolt-
+Nielsen a step further. It considered ‘whether, consistent with the [Federal Arbitration Act], an ambiguous agreement can provide
+the necessary “contractual basis” for compelling class arbitration’, and concluded that it cannot. In the Court’s view, the Federal
+Arbitration Act requires ‘more than ambiguity to ensure that the parties actually agreed to arbitrate on a classwide basis’. 420
+2. 266
+After much debate, the related question of the validity of class arbitration waivers has also reached the US Supreme Court. In
+AT&T Mobility LLC v Concepcion, 421  it was held that such provisions are enforceable. The Court noted the ‘liberal federal
+policy favouring arbitration’, and held that arbitration agreements should be placed on an equal footing with other contracts and
+enforced according to their terms. Most recently, the Supreme Court affirmed in Epic Systems Corp v Lewis that ‘one-on-one’
+mandatory arbitration agreements imposed by employers upon their employees are enforceable. 422
+2. 267
+Until recently, the concept of class arbitration found little support outside the United States. 423  This may be changing. Following
+a number of years of consultation, the European Union recently published the ‘Directive on representative actions for the
+protection of the collective interests of Consumers’. 424  The Directive, which EU member states will have two years to
+implement (from 4 December 2020) and an additional six months to apply, introduces a right of collective redress across the EU,
+primarily by requiring member states to establish procedures by which ‘qualified entities’ will be able to bring representative
+actions to seek injunctions, damages, and other redress on behalf of a group of consumers against a trader who has allegedly
+infringed EU law. Although much depends on how the Directive is implemented by member states, there is now the prospect that
+class arbitration could, in principle, be extended beyond the United States, and the resulting awards enforced internationally. 425
+
+Section I. - Multiparty Arbitrations, UKBC-REDFERN 530638613 (2025)
+© 2025 Thomson Reuters.
+8
+Footnotes
+379
+Commission on International Arbitration, Final Report on Multiparty Arbitrations, Paris, June 1994, published in (1995)
+6 ICC Bulletin 26 (the ‘Delvolvé Report’), para. 5. See also generally Hanotiau, Complex Arbitrations: Multiparty,
+Multicontract, Multi-issue and Class Actions (Kluwer Law International, 2005). For an illustration of judicial reluctance
+to order consolidation unless the agreement of all parties is express, see the US courts, e.g. in Stolt-Nielsen SA v Animal
+Feeds Intern Corporation, 2008 WL 4779582 (2d Cir. 4 November 2008); Glencore Ltd v Schnitzer Steel Products, 189
+F.3d 264, 265–266 (2d Cir. 1999); Champ v Siegel Trading Co. 55 F.3d.269 (7th Cir. 1995).
+380
+BKMI and Siemens v Dutco, French Cass. Civ. 1ere, 7 January 1992, (1992) 1 Bull Civ, (1992) 119 J du Droit Intl 707,
+2nd document; commentary by Bellet [1992] Rev Arb 470, at 473–482; excerpts in (1993) XVII YBCA 140.
+381
+ICC Rules, Art. 12 (ex Art. 8.4).
+382
+See the UNCITRAL Rules, Art. 10; SIAC Rules, r. 12; Swiss Rules, Art. 8; HKIAC Rules, Art. 8.2; SCC Rules, Art. 17.5.
+383
+In Model Law, Art. 36(1)(a)(iv).
+384
+See paragraphs 2.65–2.69 above.
+385
+See, e.g., the ICC Rules, Art. 7, which provides that ‘unless all parties, including the additional party, otherwise agree
+[ … ], no additional party may be joined after the confirmation or appointment of any arbitrator’ and that ‘any Request
+for Joinder made after the confirmation or appointment of any arbitrator shall be decided by the arbitral tribunal once
+constituted and shall be subject to the additional party accepting the constitution of the arbitral tribunal and agreeing
+to the Terms of Reference’.
+386
+See, e.g., the UNCITRAL Rules, Art. 7.5, which provides that ‘the tribunal may [ … ] allow one or more persons to be
+joined in the arbitration provided such person is a party to the arbitration agreement, unless the arbitral tribunal finds
+[ … ] that joinder should not be permitted because of prejudice to any of those parties’.
+387
+Another common situation arises in connection with bank guarantees concluded in connection with the main
+agreement: see Hanotiau, Complex Arbitrations: Multiparty, Multicontract, Multi-issue and Class Actions (Kluwer Law
+International, 2005), pp. 129–132; Wessel and Gsell, ‘ITSA v SATCOM & BBVA: Spanish court extends an arbitration
+agreement to guarantor not a party to the contract’ [2006] Intl Arb L Rev N16.
+388
+Abu Dhabi Gas Liquefaction Co. Ltd v Eastern Bechtel Corporation [1982] 2 Lloyd’s Rep 425 (CA), (1982) XXI ILM
+1057, [1983] Rev Arb 119 (with comment by Paulsson), (1984) IX YBCA 448.
+389
+That is, the Abu Dhabi Gas Liquefaction Co. Ltd, which itself was owned by a consortium consisting of the Abu Dhabi
+National Oil Corporation and several international corporations.
+390
+There was also a different choice-of-law clause in the two contracts.
+391
+Abu Dhabi Gas, at 427.
+392
+Abu Dhabi Gas, at 427 per Watkins LJ. See also Hartford Accident and Indemnity Co. v Swiss Reinsurance America
+Corporation 87 F.Supp.2d 300 (SDNY 2000), in which the US courts acknowledged the risk of inconsistent decisions,
+but stated that this did not give courts ‘the authority to reform [ … ] private contracts’.
+393
+Abu Dhabi Gas, at 427.
+394
+See generally Hanotiau, Complex Arbitrations: Multiparty, Multicontract, Multi-issue and Class Actions (Kluwer Law
+International, 2005), pp. 179–190.
+395
+Code of Civil Procedure 1986, Art. 1046. Proposals submitted to the Dutch parliament to amend this provision were
+approved on 27 May 2014. The amended Art. 1046 contains three material differences. First, the parties may now
+nominate a third party (e.g. an arbitral institution) to decide on a party’s request to consolidate arbitration proceedings.
+This was a power previously held only by the president of the District Court of Amsterdam. Secondly, such a third
+party’s power to consolidate is broader than that of the president (who may order consolidation only where both sets of
+proceedings are in the Netherlands), in that the third party may also decide on a request to consolidate a Netherlands-
+seated arbitration with an arbitration seated outside of the Netherlands. Thirdly, the requirement that the subject matter
+of the arbitrations be connected has been removed.
+396
+See Western Oil Sands Inc. v Allianz Insurance Co. of Canada [2004] ABQB 79.
+397
+See the Hong Kong Arbitration Ordinance 2011, Sch. 2, s. 2. However, parties must ‘opt in’ to this provision: see also
+Chun Wo Building Construction v China Merchants Tower Co. [2000] 2 HKC 255.
+398
+California Code of Civil Procedure, § 1297.272. For a note of other states that adopted the Model Law, but
+added a provision for consolidation of arbitrations, see Sanders, ‘Arbitration’, in Cappelletti (ed.) Encyclopedia of
+
+Section I. - Multiparty Arbitrations, UKBC-REDFERN 530638613 (2025)
+© 2025 Thomson Reuters.
+9
+International and Comparative Law, Vol. XVI (Brill, 1987), ch. 12, para. 45. See also Leboulanger, ‘Multi-contract
+arbitrations’ (1996) 13 J Intl Arb 43.
+399
+As in Abu Dhabi Gas Liquefaction Co. Ltd v Eastern Bechtel Corporation [1982] 2 Lloyd’s Rep 425 (CA): see paragraph
+2.219.
+400
+See Hascher, ‘Consolidation of arbitration by American courts: Fostering or hampering international commercial
+arbitration?’ (1984) 1 J Intl Arb 127.
+401
+See van den Berg, ‘Consolidated arbitrations and the 1958 New York Arbitration Convention’ (1986) 2 Arb Intl 367;
+see also Jarvin, ‘Consolidated arbitrations, the New York Arbitration Convention and the Dutch Arbitration Act 1986:
+A critique of Dr van den Berg’ (1987) 3 Arb Intl 254; van den Berg, ‘A replique to Mr Jarvin’ (1987) 3 Arb Intl 259.
+See also Karaha Bodas Co. v Perusahaan Pertambangan Minyak 364 F.3d 274 (5th Cir. 2004); Riverstone Ins Ltd v
+Liquidators of ICD, Paris cour d’appel, 5 November 2009, Case No. 08/12816.
+402
+Delvolvé Report, para. 113.
+403
+They are not, however, to be regarded as approved by the Working Group. For further guidance, see Paulsson,
+Rawding, and Reed (eds) The Freshfields Guide to Arbitration Clauses in International Contracts (3rd edn, Kluwer Law
+International, 2010).
+404
+See also the SIAC Rules, r. 8; the CIETAC Rules, Art. 19.
+405
+See also the Rules of the Belgian Centre for Arbitration and Mediation (CEPANI), Art. 13, which adopts a similar
+approach.
+406
+Under the provisions of the New York Convention, Art. V1(b), or the Model Law, Art. 36(1)(a)(ii).
+407
+In this regard, see Aegis v European Re [2003] 1 WLR 1041; Rawding and Seeger, ‘Aegis v European Re and the
+confidentiality of arbitration awards’ (2003) 19 Arb Intl 483.
+408
+In England, procedural rules of court now exist for collective and representative actions (see the Civil Procedure Rules,
+Pt. 19). Similar procedural rules exist in Canada and have, since 2003, been introduced for the courts in Sweden, Norway,
+Finland, Germany, and Italy.
+409
+Green Tree Financial Corporation v Bazzle, 539 US 444 (2003).
+410
+In one of the two cases, the court had certified it as a class action before it was removed to arbitration. In the second
+case, the arbitrator certified it as a class-wide arbitration himself.
+411
+See, in particular, Discover Bank v Superior Court, 36 Cal. 4th 148 (2005); Thibodeau v Comcast Corporation, 2006
+Pa. Super. 306 (2006).
+412
+In this regard, the Rules, for the most part, mirror the standards set forth in the Federal Rules of Civil Procedure, r. 23.
+413
+Of particular interest for international practitioners, as part of its rules for class arbitrations, the AAA explicitly waived
+the normal policy of confidentiality.
+414
+See the decision of the Southern District of New York in JSC Surtneftegat v President & Fellows of Harvard College,
+SDNY 04 Civ 6069, 11 October 2007.
+415
+Stolt-Nielsen SA v Animalfeeds International Corporation, 130 S.Ct. 1758 (2010).
+416
+Ibid., at 1775.
+417
+Ibid.
+418
+Lamps Plus v Varela 2019 WL 1780275 (2019).
+419
+Ibid.
+420
+Ibid.
+421
+AT&T Mobility LLC v Concepcion, 131 S.Ct. 1740 (2011).
+422
+Epic Systems Corp v Lewis, 138 S.Ct. 1612—2018. See also American Express Co. v Italian Colors Restaurant, No.
+12-133, Supreme Court of the United States, 20 June 2013, in which the Supreme Court refused to carve out an exception
+to this principle where the cost of pursuing separate arbitrations is prohibitively high.
+423
+However, see Luis Alberto Duran Valencia v Bancolombia, 24 April 2003, in which a Colombian tribunal allowed a
+class arbitration to proceed in a post-acquisition dispute involving multiple shareholders.
+424
+Directive (EU) 2020/1828 of 25 November 2020 on representative actions for the protection of the collective interests
+of consumers and repealing Directive 2009/22/EC. The Directive, which was published in the Official Journal on 4
+December 2020, was preceded by public consultations on ‘collective redress’ mechanisms in EU member states, which
+was launched by the European Commission and resulted in non-binding policy being published on 11 June 2013. In
+2017, the Commission issued a Call for Evidence seeking evidence on how the policy was being implemented in practice.
+In 2018, the Commission issued a report which concluded that, although the policy had achieved its aim of inspiring
+discussions across the EU regarding collective redress, it had resulted in only limited development of new legislation,
+and access to collective redress mechanisms remained unevenly distributed across the EU.
+
+Section I. - Multiparty Arbitrations, UKBC-REDFERN 530638613 (2025)
+© 2025 Thomson Reuters.
+10
+425
+Strong, ‘Enforcing class arbitration in the international sphere: Due process and public policy concerns’ (2008) 30 U
+Penn JIL 89.
+End of Document
+© NIGEL BLACKABY KC, CONSTANTINE PARTASIDES
+KC, ALAN REDFERN

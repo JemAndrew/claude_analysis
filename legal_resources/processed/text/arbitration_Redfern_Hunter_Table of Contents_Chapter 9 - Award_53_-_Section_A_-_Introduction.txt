@@ -1,0 +1,308 @@
+Section A. - Introduction, UKBC-REDFERN 530638663 (2025)
+© 2025 Thomson Reuters.
+1
+Section A. - Introduction
+Redfern and Hunter on International Arbitration 7th Ed.
+Mainwork
+Chapter 9 - Award
+Section A. - Introduction
+(a) Destination of an international arbitration—the award
+9. 01
+Parties to transborder transactions who go to the trouble and expense of taking their disputes to international arbitration do so
+in the expectation that, unless a settlement is reached along the way, the process will lead to an award. They also expect that,
+subject to any right of recourse, the award will be final and binding upon them. Both international and institutional rules of
+arbitration reflect this expectation. Article 34.2 of the Arbitration Rules of the United Nations Commission on International
+Trade Law (UNCITRAL) states simply: ‘All awards shall be made in writing and shall be final and binding on the parties. The
+parties shall carry out all awards without delay.’ The Rules of the International Chamber of Commerce (ICC), recognising the
+possibility of some form of challenge to an award at the place of arbitration under the lex arbitri, are more circumspect:
+Every award shall be binding on the parties. By submitting the dispute to arbitration under the Rules, the parties
+undertake to carry out any award without delay and shall be deemed to have waived their right to any form of
+recourse insofar as such waiver can validly be made. 1
+9. 02
+As the UNCITRAL Rules suggest, there may be more than one award in any given dispute. Indeed, a number of institutional
+rules expressly empower arbitral tribunals to make separate awards on different issues at different times. 2  These powers reflect
+the practical reality that, during the course of an arbitration, an arbitral tribunal may be called upon to make more than one
+award at different times on different issues between the parties. 3  For example, the tribunal may make an early decision on
+its jurisdiction, rather than take the risk of proceeding to the merits of the case and then, perhaps, deciding later that it lacks
+jurisdiction. Alternatively, it may make a partial award of a sum of money that it considers to be indisputably due and payable
+by one party to the other. 4
+9. 03
+All ‘awards’ are ‘final’ in the sense that they dispose ‘finally’ of the issues decided in them (subject to any challenge or available
+procedure for correction or interpretation), and they are ‘binding’ on the parties. 5  The award that disposes ‘finally’ of all
+outstanding issues is known as the ‘final award’. A final award, in this sense, is usually the outcome of arbitral proceedings
+that have been contested throughout. However, it may embody an agreed settlement between the parties, in which case it is
+generally known as a ‘consent award’. 6  Another category is an award in proceedings in which a party has failed or refused to
+participate, in which case it is usually described as a ‘default award’.
+9. 04
+Each of these different types of award are considered in this chapter. Since all awards are dispositive of the issues that they
+determine, it is important that the arbitral tribunal does its best to ensure not only that the award is correct, but also that it is
+enforceable across international frontiers. Indeed, several institutional rules impose an express obligation on arbitral tribunals
+to make every effort to ensure the enforceability of their awards. 7
+
+Section A. - Introduction, UKBC-REDFERN 530638663 (2025)
+© 2025 Thomson Reuters.
+2
+(b) Definition of an award
+9. 05
+There is no internationally accepted definition of the term ‘award’. Indeed, no definition is to be found in the main international
+conventions dealing with arbitration, including the Geneva treaties, the New York Convention, and the Model Law. Although
+the New York Convention is directed to the recognition and enforcement of arbitral awards, 8  the nearest that it comes to a
+definition is in Article I(2): ‘The term “arbitral awards” shall include not only awards made by arbitrators appointed for each
+case but also those made by permanent arbitral bodies to which the parties have submitted.’
+9. 06
+At one stage, it was proposed that there should be a definition of the term ‘award’ in the Model Law, but ultimately none was
+adopted. One suggested solution illustrates the difficulty of finding a definition that encompasses not only final awards, but also
+partial awards, which dispose of only some issues. The proposed definition was as follows:
+Award means a final award which disposes of all issues submitted to the arbitral tribunal and any other decision
+of the arbitral tribunal which finally determines any question of substance or the question of its competence or
+any other question of procedure but, in the latter case, only if the arbitral tribunal terms its decision an award. 9
+As this proposed definition shows, the need to distinguish between awards that are final and other decisions of a tribunal that
+are not is a complicating factor. The possible solution of defining each separately was not adopted. The Model Law also plainly
+contemplates that there may be more than one award during the course of an arbitration. For example, a plea that the arbitral
+tribunal does not have jurisdiction may be dealt with either in the final award or as a ‘preliminary question’; thus, in a ‘Model
+Law country’, if the tribunal takes the second course, its partial award may be challenged in the competent court within thirty
+days of its notification to the parties. 10
+9. 07
+The time limit for challenge of an award generally begins to run from the date on which the award was issued. 11  Once the
+final award has been made, it may be impossible for a party to challenge any element in it that flows from a previously
+unchallenged partial award. Moreover, only an ‘award’ will qualify for recognition and enforcement under the relevant
+international conventions, including the New York Convention. Thus important consequences flow from a ruling or decision
+of the arbitral tribunal that has the status of an award.
+9. 08
+The term ‘award’ should generally be reserved for decisions that finally determine the substantive issues with which they
+deal. 12  This involves distinguishing between awards, which are concerned with substantive issues, and procedural orders and
+directions, which are concerned with the conduct of the arbitration. Procedural orders and directions help to move the arbitration
+forward; they deal with such matters as the exchange of written evidence, the production of documents, protective measures,
+and the arrangements for the conduct of the hearing. They do not have the status of awards and they may perhaps be called into
+question after the final award has been made (for example as evidence of ‘bias’, or ‘lack of due process’). 13
+(c) Which decisions have the status of an award?
+9. 09
+Distinguishing between an ‘award’ and an ‘order’ may not be as easy as simply reading the title that an arbitral tribunal chooses
+to give to its ruling; it is a matter of substance not form. The English High Court identified the following factors as being
+relevant to distinguishing an award from an order: 14
+ 
+•real weight is to be given to the substance and not merely the form of the decision;
+
+Section A. - Introduction, UKBC-REDFERN 530638663 (2025)
+© 2025 Thomson Reuters.
+3
+ 
+•a decision is more likely to be an award if it finally disposes of the matters submitted to arbitration so as to render the
+tribunal functus officio, either entirely or in relation to that issue or claim;
+ 
+•the nature of the issues considered in the decision is significant, as substantive rights and liabilities of parties are likely to
+be dealt with in the form of an award, whereas a decision dealing purely with procedural issues is less likely to be an award;
+ 
+•the tribunal’s own description of the decision is relevant but not conclusive;
+ 
+•the perception of a reasonable recipient of the tribunal’s decision is relevant;
+ 
+•the reasonable recipient is likely to take into account the objective attributes of the decision, including the formality of
+the language, the level of detail in the reasoning, and whether the decision complies with the formal requirements for an
+award under any applicable rules.
+9. 10
+Both the Paris Court of Appeal and a US Federal Court of Appeals have classified certain arbitral decisions as awards, even
+though they have been entitled ‘orders’ by tribunals.
+9. 11
+The Paris Court of Appeal decision in Brasoil 15  arose from an ICC arbitration under a contract whereby Brasoil agreed to
+drill a number of wells in the Libyan desert for the Management and Implementation Authority of the ‘Great Man-Made River
+Project’. Brasoil started an ICC arbitration following termination of the contract by the Authority in 1990. In 1995, the arbitral
+tribunal issued a partial award in which it held Brasoil liable for the malfunctioning of the wells that it had constructed. In
+1997, during the damages phase of the proceedings, the Authority submitted certain documents that Brasoil alleged had been
+fraudulently withheld during the liability phase. Brasoil requested that the tribunal review its partial award on liability. In May
+1998, the tribunal denied Brasoil’s request in what it described as an ‘order’. In subsequent challenge proceedings, the Paris
+Court of Appeal granted Brasoil’s request to have the ‘order’ set aside. The Court held that, although described as an ‘order’, the
+tribunal’s decision was, in fact, an ‘award’, because it purported to make a final determination of a substantive issue between
+the parties. 16  In so finding, the Court of Appeal noted that:
+The qualification of [a decision as an] award does not depend on the terms used by the arbitrators or by the parties
+[ … ] after a five-month deliberation, the arbitral tribunal rendered the ‘order’ of 14 May 1998, by which, after
+a lengthy examination of the parties’ positions, it declared that the request could not be granted because Brasoil
+had not proven that there had been fraud as alleged. This reasoned decision—by which the arbitrators considered
+the contradictory theories of the parties and examined in detail whether they were founded, and solved, in a final
+manner, the dispute between the parties concerning the admissibility of Brasoil’s request for a review, by denying
+it and thereby ending the dispute submitted to them—appears to be an exercise of its jurisdictional power by the
+arbitral tribunal [ … ] Notwithstanding its qualification as an ‘order’, the decision of 14 May 1998 [ … ] is thus
+indeed an award. 17
+9. 12
+Some years later, the French Supreme Court provided a definition of an arbitral award that supported this interpretation.
+Addressing a challenge to an award on the basis of an alleged professional relationship between the chairman of the arbitral
+tribunal and the parent company of the guarantor of debts owed by the respondent, the Court of Cassation held that ‘only proper
+arbitral awards may be challenged through an action to set aside’ and went on to define awards as:
+[ … ] decisions made by the arbitrators which resolve in a definitive manner all or part of the dispute that
+is submitted to them on the merits, jurisdiction or a procedural matter which leads them to put an end to the
+proceedings. 18
+9. 13
+The decision of the Seventh Circuit Federal Court of Appeal in True North 19  addressed similar issues. True North, a US
+advertising company, and Publicis Communications, an affiliate of the Publicis global communications group, entered into a
+joint venture in 1989, which eventually led the parties to arbitration in London. As one of its requests for relief in the arbitration,
+True North requested that Publicis disclose tax records filed with the US Internal Revenue Service and the Securities and
+
+Section A. - Introduction, UKBC-REDFERN 530638663 (2025)
+© 2025 Thomson Reuters.
+4
+Exchange Commission (SEC). In October 1998, the chairman of the arbitral tribunal, ‘for and on behalf of the arbitrators’,
+signed an unreasoned ‘order’ directing Publicis to disclose the requested tax records to True North. Publicis failed to comply
+and True North applied to the court to confirm the arbitral decision. Publicis argued that the tribunal’s decision constituted no
+more than a procedural order and that only finally determinative ‘awards’ are subject to confirmation or enforcement. The issue
+ultimately came before the Seventh Circuit Federal Court of Appeals, which disagreed, reasoning that the finality of a decision
+was the key to its recognition or enforcement under the New York Convention. In so doing, it described Publicis’s approach
+as ‘extreme and untenable formalism’, and observed:
+Although Publicis suggests that our ruling will cause the international arbitration earth to quake and mountains
+to crumble, resolving this case actually requires determining only whether or not this particular order by this
+particular arbitration tribunal regarding these particular tax records was final. If the arbitration tribunal’s 30
+October 1998 decision was final, then [the district court judge] had the authority to confirm it. If the arbitrators’
+decision was not final, then the district court jumped the gun. 20
+9. 14
+Referring to an earlier edition of this volume, the Federal Court of Appeals noted that the arbitral tribunal’s decision on the tax
+records was intended to be final and stated that the fact that the ‘order’ was issued prior to the conclusion of the arbitration
+was no bar to its enforceability or finality:
+The tribunal’s order resolved the dispute, or was supposed to, at any rate. Producing the documents wasn’t just
+some procedural matter—it was the very issue True North wanted arbitrated [ … ] The tribunal explicitly carved
+out the tax records issue for immediate action from the bulk of the matter still pending, stating that ‘the delivery
+of the documents should not await final confirmation in the Final Award’. Requiring the unrelated issues to be
+arbitrated to finality before allowing True North to enforce a decision the tribunal called urgent would defeat the
+purpose of the tribunal’s order. A ruling on a discreet, time-sensitive issue may be final and ripe for confirmation
+even though other claims remain to be addressed by arbitrators. 21
+(d) Rendering an internationally enforceable award
+9. 15
+No arbitral tribunal can be expected to guarantee that its award will be enforceable in whatever country the winner chooses to
+enforce it. However, as noted above, every arbitral tribunal must do its best. As Article 42 of the ICC Rules provides: ‘In all
+matters not expressly provided for in the Rules, the Court and the arbitral tribunal shall act in the spirit of these Rules and shall
+make every effort to make sure that the award is enforceable at law.’ 22  Phrases such as ‘make every effort’ imply an ‘obligation
+to perform’, rather than an ‘obligation to achieve a defined result’. Nonetheless, the message is clear: in principle, the eventual
+outcome of every arbitration is intended to be a final, enforceable award—as opposed to the outcome of a mediation, which
+is intended to be an agreement between the parties.
+9. 16
+For an arbitral tribunal to achieve the standard of performance required to make an internationally enforceable award, it must first
+ensure that it has jurisdiction to decide all of the issues before it. The arbitral tribunal must also comply with any procedural rules
+governing the arbitration. Such rules commonly include, for example, allocation of the costs of the arbitration, 23  identifying
+the seat of the arbitration, and having the award formally approved by an arbitral institution (as with an ICC award). 24  The
+arbitral tribunal must also sign and date the award, and arrange for it to be delivered to the parties in the manner laid down in the
+relevant law or by the rules that apply to the arbitration. If the arbitral tribunal has carried out its work adequately, its decision
+should not be susceptible to any post-award recourse that may otherwise be available to the parties. 25
+9. 17
+Moreover, Article V(2)(b) of the New York Convention provides that, even when these conditions have been met, an award
+need not be enforced if it violates the public policy of the place of enforcement:
+
+Section A. - Introduction, UKBC-REDFERN 530638663 (2025)
+© 2025 Thomson Reuters.
+5
+Recognition and enforcement of an arbitral award may also be refused if the competent authority in the
+country where recognition and enforcement is sought finds that [ … ] the recognition or enforcement of the
+award would be contrary to the public policy of that country.
+This provision gives discretion to the judicial authority at the recognition and enforcement stage, highlighting the impossibility
+of guaranteeing international enforceability at the time of issuing the award (particularly given that the jurisdiction(s) in which
+a tribunal’s award will ultimately be enforced are often difficult to predict at the time when the award is issued).
+9. 18
+Given the complexity of the task facing an arbitral tribunal, the arbitrators should be adequately trained and experienced. 26
+An award may comply meticulously with the agreed rules of procedure and with the law governing the arbitration, but may
+fail to comply with some special requirement of the law of the place of enforcement, so that the award may be unenforceable
+in that jurisdiction.
+Footnotes
+1
+ICC Rules, Art. 35.6. See also SIAC Rules, r. 32.11.
+2
+SIAC Rules, r. 32.5; and LCIA Rules, Art. 26.1.
+3
+The authors recommend use of the term ‘partial awards’, rather than ‘interim’, or ‘provisional’, awards. The latter terms,
+particularly in the civil law context, can be interpreted to mean that such awards are not final, when they are indeed final.
+4
+Some modern arbitration statutes make a specific distinction between interim, partial, and final awards. The Netherlands
+Arbitration Act 2015, s. 1049, provides that: ‘The arbitral tribunal may render a final award, a partial final award, or
+an interim award.’ Commentary on the materially identical version of this article in the 1986 Netherlands Arbitration
+Act by Sanders and van den Berg, The Netherlands Arbitration Act 1986 (Kluwer International Law, 1987) suggests
+that partial awards are given in respect of substantive issues that are separated, such as liability and quantum; interim
+awards are given on jurisdictional issues; and simple orders are made in respect of procedural issues. The Swiss Private
+International Law Act 1987 (Swiss PIL), Ch. 12, provides for ‘preliminary awards’ in relation to jurisdictional issues in
+s. 186(3), while ‘partial awards’ that finally determine the issue are provided for in s. 188: see Geisinger, International
+Arbitration in Switzerland: A Handbook for Practitioners (2nd edn, Wolters Kluwer, 2013), pp. 226–227.
+5
+The English Arbitration Act 1996, s. 39, is an exception to this general rule in granting a power to make ‘provisional
+awards’ if the parties agree that the arbitral tribunal shall have such power. Interestingly, s. 39 mentions the word ‘award’
+only in the marginal note and the body of the section refers to ‘orders’. Whether such provisional orders are enforceable
+under the New York Convention is questionable and would be a matter for the courts of the country in which enforcement
+is sought: see Hunter and Landau, The English Arbitration Act 1996: Text and Notes (Wolters Kluwer, 1998), p. 35. For
+an example of the English courts enforcing a provisional order made by a tribunal under s. 39, see Pearl Petroleum Co
+Ltd v Kurdistan Regional Govt of Iraq [2016] 1 Lloyd’s Rep 441.
+6
+See English Arbitration Act 1996, s. 51(2)–(3).
+7
+See, e.g., ICC Rules, Art. 42 (‘the arbitral tribunal [ … ] shall make every effort to make sure that the award is enforceable
+at law’). See also LCIA Rules, Art. 32.2, and SIAC Rules, r. 41.2.
+8
+And of arbitration agreements: see Chapter 2.
+9
+Broches, ‘Recourse against the award; Enforcement of the award: UNCITRAL’s Project for a Model Law on
+International Commercial Arbitration’ (1984) 2 ICCA Congress Series 201, at 208.
+10
+Model Law, Art. 16(3). Model Law jurisdictions have taken differing approaches to determining the consequences
+of a failure to challenge a partial award on jurisdiction within the specified time limit. New Zealand recently passed
+an amendment to its 1996 Arbitration Act clarifying that failure to make a request to the High Court challenging a
+jurisdictional decision within thirty days ‘operates as a waiver of any right to later object’ (NZ Arbitration Amendment
+Act 2019, 7 May 2019, s. 4). In contrast, in Singapore, a non-participating respondent who fails to challenge a
+jurisdictional award retains the right to challenge the tribunal’s jurisdiction in set-aside proceedings (see Rakna
+Arakshaka Lanka Ltd v Avant Garde Maritime Services (Private) Limited [2019] SGCA 33).
+
+Section A. - Introduction, UKBC-REDFERN 530638663 (2025)
+© 2025 Thomson Reuters.
+6
+11
+See, e.g., English Arbitration Act, s.70(3). Where there has been any arbitral process of appeal or review, the relevant
+time limit in England runs from the date when the applicant invoking any such post-award remedy is notified of the
+result of such process (English Arbitration Act, s. 70(3)).
+12
+Some commentators have suggested that a ‘preliminary award’ may be treated as ‘provisional’. However, this concept
+seems to be fraught with peril; the authors suggest that any decision that is not finally determinative of the issues with
+which it deals should not be described as an ‘award’.
+13
+If a party is aggrieved by a procedural order or direction, it is sensible for that party to make a formal protest. In this
+way, it will reserve the position in case it emerges, at a later stage, that the ruling in question has, e.g., denied that party
+a proper opportunity to present its case or to respond to the case submitted by the opposing party.
+14
+ZCCM Investments Holdings PLC v Kansanshi Holdings PLC & Anor [2019] EWHC 1285 (Comm), at 40. See also
+Uganda v Rift Valley Railways Uganda Ltd [2021] EWHC 970 (in which the Republic of Uganda’s application to set
+aside a procedural order was dismissed on the ground that the order would not have been understood by a reasonable
+recipient as an award and did not finally determine any issues between the parties).
+15
+Braspetro Oil Services Co. v The Management and Implementation Authority of the Great Man-Made River Project,
+Paris cour d’appel, 1 July 1999, (1999) 14 Mealey’s Intl Arb Rep 8, at [G-1]–[G-7].
+16
+For a commentary on this decision, see Gill, ‘The definition of award under the New York Convention’ (2008) 2 Disp
+Res Intl 114, at 119, in which the author writes that ‘the court found that the “procedural order” was effectively an award
+because it settled a substantive issue between the parties. The tribunal was exercising its jurisdictional power and its
+decision was therefore an award.’
+17
+Braspetro Oil Services Co. v The Management and Implementation Authority of the Great Man-Made River Project,
+Paris cour d’appel, 1 July 1999, (1999) XXIVa YBCA 297, at [1]–[4].
+18
+Groupe Antoine Tabet v République du Congo, Case No. 09-72.439, Cass. Civ. 1ere, 12 October 2011, n.p.
+19
+Publicis Communications and Publicis SA v True North Communications Inc. (2000) XXV YBCA 1152.
+20
+Ibid., at [4].
+21
+Ibid., at [9]. For a commentary on this decision, see Murphy, ‘Enforceability of foreign arbitral decisions’ (2001) 67
+Arbitration 369, at 371, in which the author concludes that: ‘[T]his decision has clearly announced that all orders or
+awards made in the arbitral process are capable of recognition and enforcement abroad by means of the New York
+Convention, so long as the finality test is satisfied [ … ] when rendering any decision, it may be prudent to determine
+whether or not the issue is being dealt with finally, to recite that in the decision and, despite the approach of the Seventh
+Circuit, to label the decision or order as an award to ensure that no argument of form over substance can take place.’ See
+also, e.g., Santos v GE Co., No. 10 Civ. 6948, 2011 US Dist. LEXIS 131925 (SDNY 2011), at [14]–[15]; Yonir Techs, Inc.
+v Duration System (1992) Ltd, 244 F.Supp.2d 195, 204 (SDNY 2002). ‘[T]hese authorities suggest that, regardless of
+whether the form of the arbitral measure (e.g., an award or order) resembles a final award, if the substance of the measure
+serves a discrete function and effects a final disposition of a particular issue, the interim measure is confirmable and
+enforceable’: Sherwin and Rennie, ‘Interim relief under international arbitration rules and guidelines: A comparative
+analysis’ (2009) 20 Am Rev Int’l Arb 318, at 326.
+22
+See also LCIA Rules, Art. 32.2.
+23
+For example, ICC Rules, Art. 38.6; UNCITRAL Rules, Art. 40.
+24
+ICC Rules, Art. 34.
+25
+For further discussion of interpretation, correction, and revision of awards, see paragraphs 9.206ff.
+26
+See Chapter 10, paragraphs 10.02, 10.08, and 10.61.
+End of Document
+© NIGEL BLACKABY KC, CONSTANTINE PARTASIDES
+KC, ALAN REDFERN

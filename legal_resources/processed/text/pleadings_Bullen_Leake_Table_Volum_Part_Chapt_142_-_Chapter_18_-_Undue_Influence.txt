@@ -1,0 +1,473 @@
+Chapter 18 - Undue Influence, UKBC-BULLENL 459371206 (2022)
+© 2025 Thomson Reuters.
+1
+Chapter 18 - Undue Influence
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part E - Banking and Financial Services
+Chapter 18 - Undue Influence
+18-01
+The equitable doctrine of undue influence is a jurisdiction which extends to gifts, settlements, contracts, guarantees and
+securities. It extends to all cases where “influence is acquired and abused, where confidence is reposed and betrayed” 1  at
+the time of the impugned transaction. 2  The doctrine “arises whenever one party has acted unconscionably by exploiting the
+influence to direct the conduct of another which he has obtained from the relationship between them”. 3  The question which
+the court asks is not whether the party influenced knew what he or she was doing, had done or was proposing to do, but how the
+intention was produced. 4  The touchstone for whether an intention was produced through an exercise of improper or ‘undue’
+influence is whether “the consent thus procured ought not fairly to be treated as the expression of a person’s free will”. 5  Where
+the plea of undue influence is made out, a transaction which has been procured by the undue influence of one party over another
+is voidable at the instance of the party influenced.
+A claim to avoid a transaction on the ground of undue influence constitutes a cause of action in itself and can also be relied
+upon as a defence to a claim to enforce the transaction which was so procured.
+The court will also refuse to admit to probate a will, the execution of which is proved to have been procured by actual undue
+influence. For a full exposition on the law of undue influence see, for example Chitty on Contracts, Vol.1, para.8–058 onwards 6
+and Halsbury’s Laws, Vol.22, paras 294 onwards.
+The doctrine of undue influence
+18-02
+The principle laid down in Barclays Bank Plc v O’Brien 7  was clarified and extended by the House of Lords in Royal Bank
+of Scotland v Etridge (No.2). 8  The O’Brien principle is that where a lender takes a third party security from the spouse of (or
+other co-habitee with the principal debtor), the lender will, unless certain steps are taken, be on notice of the possibility that the
+principal debtor used undue influence or misrepresentation to obtain the surety’s consent to giving the security. Therefore, if the
+lender fails to take appropriate steps at the time of taking the security, and it later transpires that the spouse (or other surety) was
+misled or coerced into providing the security, the security will be voidable at the instance of the surety against the bank or lender.
+The O’Brien principle was extended beyond only co-habitees by the decision in Etridge. Lord Nicholls made clear (at [87])
+that in the case of suretyship, the lender will be “… ‘put on inquiry’ in every case where the relationship between the surety
+and the debtor is non-commercial. The creditor must always take reasonable steps to bring home to the individual guarantor
+the risks he is running by standing as surety.”
+The steps that should be taken by a lender once it has been “put on inquiry” were set out by Lord Nicholls in Etridge, at [50]–
+[57]. This passage should be read in full, as should Lord Scott’s speech at [163]ff. In summary, however, “Ordinarily it will
+be reasonable that a bank should be able to rely upon confirmation from a solicitor, acting for a wife, that he has advised the
+wife appropriately” (per Lord Nicholls at [56]). 9
+
+Chapter 18 - Undue Influence, UKBC-BULLENL 459371206 (2022)
+© 2025 Thomson Reuters.
+2
+The Etridge line of cases involves a three-party situation, the question most commonly being whether a creditor is affected by
+undue influence exercised by the principal debtor on the surety. One should not of course lose sight of the simpler two-party
+situation, in which a party’s consent to a transaction is procured by undue influence.
+A recent banking case in which a two-party situation was alleged is The Libyan Investment Authority v Goldman Sachs
+International. 10  The claim made by Libya’s sovereign wealth fund (the LIA) was that Goldman Sachs had used undue influence
+to procure its entry into a series of high-value synthetic derivative transactions through January to April 2008, for which the
+LIA paid a total premium to Goldman Sachs of about US $1.2 billion. The claim was put on two bases: that Goldman Sachs
+had procured the LIA’s consent to the transactions by (a) offering an “improper inducement” to a senior LIA employee, and/or
+(b) exploiting a “protected relationship” with the unsophisticated and reliant LIA. Mrs Justice Rose rejected the LIA’s claims
+in a judgment that offers a comprehensive summary of the principles of undue influence (see [132] onwards) and an illustrative
+consideration of when a relationship of dependence might arise between a bank and its client.
+It is also important to remember that actual undue influence can arise even without a pre-existing relationship of trust and
+confidence, if threats, menaces or coercion is shown (see Holyoake v Candy, 11  where it was noted that such a plea is likely to
+overlap very significantly with an allegation of duress), or where there is evidence of dependence or vulnerability. 12
+Classes of undue influence
+18-03
+It is clear from the judgments in Etridge that the system of classification into “classes” of undue influence should be abandoned:
+see, for example, per Lord Clyde at [92]. In its place, the following analysis, derived from Lord Nicholls’ speech in Etridge
+at [13]ff. is suggested.
+In broad terms, equity identified two forms of unacceptable conduct. The first “… comprises acts of improper pressure or
+coercion such as unlawful threats”. The second, “… arises out of a relationship between two persons where one has acquired
+over another a measure of influence, or ascendancy, of which the ascendant person then takes unfair advantage.” 13  In both
+cases, the touchstone of undue influence was whether “the consent thus procured ought not fairly to be treated as the expression
+of a person’s free will”. 14  There is an open question as to whether an “improper inducement” such as a bribe—and as distinct
+from improper threats—might amount to “unacceptable means”. This issue was raised but not decided in the case of Libyan
+Investment Authority v Goldman Sachs International in which the LIA alleged that Goldman Sachs had procured the LIA’s
+consent to a series of derivative trades by offering an improper inducement to a senior LIA employee (the offer of a Goldman
+Sachs internship to his younger brother). The court declined to decide the legal point as it found that the internship offer was
+not improper, and would not realistically have influenced the LIA’s investment decision in any event. 15
+The general rule is that the burden of proving an allegation of undue influence rests upon the person who claims to have
+been wronged. Proof that the complainant placed trust and confidence in the other party in relation to the management of the
+complainant’s financial affairs coupled with a transaction which calls for an explanation will usually discharge the burden of
+proof. In other words there is a rebuttable evidential presumption of undue influence—this is the equitable analogue of the
+common law principle of res ipsa loquitur. To raise the rebuttable presumption, the complainant must prove that he placed trust
+and confidence 16  in the other party and there must be a transaction which calls for an explanation. 17
+The above is to be “distinguished sharply” from a different presumption. This arises where a relationship between A and B is
+of a class such that “… the law presumes, irrebuttably, that one party had influence over the other. The complainant need not
+prove he actually reposed trust and confidence in the other party. It is sufficient for him to prove the existence of the type of
+relationship.” It is well settled that the relationship between spouses does not fall into this category. Relationships to which the
+principle does apply (so long as there is or has recently been a relationship conferring a power analogous to parental control)
+are those between parent and child 18 ; guardian and ward 19 ; uncle and niece 20 ; stepfather and stepdaughter 21 ; stepmother
+and stepdaughter. 22  Obviously, it is highly unlikely that the courts today would apply a different assumption depending on the
+sex of either party. Other relationships include solicitor and client 23 ; doctor and patient 24 ; trustee and beneficiary 25 ; religious
+adviser and a person to whom he gives his advice. 26
+
+Chapter 18 - Undue Influence, UKBC-BULLENL 459371206 (2022)
+© 2025 Thomson Reuters.
+3
+Although there is no presumption in the second sense in the case of the relationship between spouses, the court will “… note,
+as a matter of fact, the opportunities for abuse which flow from a wife’s confidence in her husband”, and there seems no reason
+not to apply the same principle depending on the sex of the spouse(s).
+In the case of Hewitt v First Plus Financial Group Plc 27  the concealment of an affair by the husband at the time of proposing
+that the wife enter into a risky financial transaction was considered to amount to undue influence, because the wife was entitled
+to be apprised of all relevant circumstances. The finding of undue influence did not depend on the conclusion that the wife
+had made no decision of her own or that her will and intention was completely overborne. Conscious exercise of will can be
+vitiated by the undue influence.
+Contract calling for an explanation
+18-04
+In cases where actual undue influence has been shown, the party influenced is entitled to a remedy 28  unless the right to rescind
+has been lost (for example) by affirmation or impossibility of restitution or change of position.
+The former requirement that, for either presumption above to apply, there must be manifest disadvantage to the complainant has
+now been re-formulated; in particular, the phrase “manifest disadvantage” should not be employed. 29  The proper approach is
+“…to adhere more directly to the test outlined by Lindley LJ in Allcard v Skinner, 36 Ch. D. 145, and adopted by Lord Scarman
+in National Westminster Bank Plc v Morgan [1985] A.C. 686.” Lord Nicholls quoted from Lindley LJ’s judgment (at 185): “…
+if the gift is so large as not to be reasonably accounted for on the ground of friendship, relationship, charity, or other ordinary
+motives on which ordinary men act, the burden is upon the donee to support the gift.” And from Lord Scarman’s speech (at 704):
+the transaction must have “… constituted an advantage taken of the person subjected to the influence which, failing proof to the
+contrary, was explicable only on the basis that undue influence had been exercised to procure it”. The phrase employed by Lord
+Nicholls was a transaction which “calls for an explanation”. 30  An example of the Court of Appeal correcting the application
+of the former, incorrect test can be found in Macklin v Dowsett. 31
+It should be noted that, after Etridge, all non-commercial contracts of suretyship fall into something of a special category, for
+in all such cases the creditor “… must always take reasonable steps to bring home to the individual guarantor the risks he is
+running by standing as surety.” If the creditor fails to do that, “… it is deemed to have notice of any claim the guarantor may
+have that the transaction was procured by undue influence or misrepresentation on the part of the debtor.” 32
+The effect of independent legal advice
+18-05
+In order to rebut the presumption of undue influence, evidence must be adduced to satisfy the court that the donor was acting
+independently of any influence from the donee and with a full appreciation of what he or she was doing. 33  The most usual,
+though not the only way of rebutting the presumption, is to prove that the complainant had competent and independent advice. 34
+The fact that the complainant received independent legal advice does not of itself show that the transaction was free of undue
+influence: whether the proper inference is that the advice had an emancipating effect is a question of fact to be decided having
+regard to all the evidence: see Etridge, per Lord Nicholls, at [20]. 35
+However, it is not invariably necessary for independent legal advice to have been given. 36  For an example of an (unsuccessful)
+attempt to argue that the evidential presumption should be rebutted on the basis that the making of the gift was due to the free
+exercise of will on the part of the donor, see Hammond v Osborn. 37  See too Goodchild v Bradbury, 38  where the donee was
+unable to rebut the evidential presumption notwithstanding the fact that the donor had stated in his witness statement that he
+did not think that he had come under any pressure from the donee.
+
+Chapter 18 - Undue Influence, UKBC-BULLENL 459371206 (2022)
+© 2025 Thomson Reuters.
+4
+In the surety-wife cases, independent legal advice is critically relevant to whether the lender has constructive notice of any
+undue influence, see further para.18-06. “Ordinarily, it will be reasonable that a bank should be able to rely on a confirmation
+from a solicitor, acting for the wife, that he has advised the wife appropriately” (per Lord Nicholls in Etridge, at [56]).
+It is now clear that suggestions made in the Court of Appeal in Etridge that a solicitor should veto the wife’s participation in a
+disadvantageous transaction are wrong: see the speech of Lord Nicholls at [61].
+Position of third parties
+18-06
+It is essential to bear in mind that the lender (or other third party) will only be affected by the exercise of undue influence over
+the complainant if it had actual or constructive notice of that undue influence. In many cases, the lender will have had no actual
+notice of the undue influence. In such cases, to make out constructive notice, it is necessary to plead and prove that the lender
+was put on inquiry 39  that there may have been some equitable wrong. In Mortgage Agency Services (No.2) Ltd v Chater, 40
+Scott Baker LJ put the test this way (at [57]): “… the court is not concerned with what was actually happening between mother
+and son but with what the bank knew about it or, by making appropriate inquiries, ought to have known about it. … What is
+the information that was available to the respondent? That is the crucial question? Was it sufficient to put it on inquiry as to
+some equitable wrong?”
+Further, in mortgage cases, it should be noted that even if the charge over the whole property fails due to undue influence exerted
+by one party (usually the husband) over the other (usually the wife), the charge may still take effect as an equitable charge over
+the husband’s interest: see s.63 of the Law of Property Act 1925. 41
+A replacement or substitute mortgage with the same lender would be voidable if it was inseparably connected with an earlier
+mortgage that was voidable for undue influence and of which the lender had constructive notice. 42
+The peculiar status of contracts of suretyship should be noted: if the creditor fails to take the “reasonable steps” set out in Etridge
+(see Lord Nicholls’ speech at [50]ff.), then if the complainant’s consent was procured by the exercise of undue influence or
+misrepresentation by the principal debtor, the contract of suretyship will be voidable as against the creditor. 43
+In relation to independent legal advice, that the bank knows that a solicitor acts for the spouse is not sufficient to avoid it being
+fixed with constructive notice of any undue influence—rather, the bank must have proper grounds for believing that the solicitor
+has properly advised the spouse (whether he has or has not, in fact); conversely, absent special circumstances, it is enough that
+the bank knows that the spouse’s solicitor has been instructed to give him/her independent legal advice as to the nature and effect
+of the transaction and has received confirmation that such advice has been given: see Achampong (above) and Etridge at [79].
+The burden of proof
+18-07
+In the three party-situation, such as the surety spouse situation, it will usually be necessary for a spouse (or other complainant) to
+plead and to prove that the bank had constructive notice in O’Brien type cases, rather than for the bank to disprove constructive
+notice. 44
+However, there is no distinction between facts that are said to put a bank on inquiry in a case of an abuse of a relationship of
+trust and confidence which would not equally put it on inquiry in the case of actual undue influence. 45
+In the two-party situation, and as set out at para.18-03, there are classes of relationship that give rise to an irrebuttable
+presumption of influence at law, such as doctor-patient and parent-child relationships. Outside those specified relationships,
+however, a presumption of undue influence is merely a rebuttable evidential presumption. As Lord Scott in Etridge said at [219]:
+
+Chapter 18 - Undue Influence, UKBC-BULLENL 459371206 (2022)
+© 2025 Thomson Reuters.
+5
+“It is a presumption which arises if the nature of the relationship of the two parties coupled with the nature of the
+transaction between them is such as justifies, in the absence of any other evidence, an inference that the transaction
+was procured by the undue influence of one party over the other. This evidential presumption shifts the onus to
+the dominant party and requires the dominant party, if he is to avoid a finding of undue influence, to adduce some
+sufficient additional evidence to rebut the presumption …. In an appropriate case the presumption may carry the
+complainant home.”
+Allegations of actual undue influence (such as improper coercion) must simply be made out on the balance of probabilities.
+Affirmation
+18-08
+A transaction entered into as a result of undue influence is voidable and not void. The right to rescind on the ground of undue
+influence may be lost either by express affirmation 46  of the transaction by the alleged victim, 47  or by estoppel, or by delay
+amounting to proof of acquiescence. 48  Estoppel requires a clear and unequivocal representation that the claimant would not
+seek to set the agreement aside which is intended to be acted on and in fact acted on by the other party to his detriment or in
+such a way that it would be inequitable to allow the claimant to go back on that representation. 49  The affirmation must in any
+event take place after the influence has ceased if it is to be of any value. Lapse of time in itself does not constitute a bar to
+relief 50  but it will provide evidence of acquiescence if the victim fails to take any steps to set aside the transaction within a
+reasonable time after he is freed from the undue influence. 51
+For the possible effects of seeking inconsistent remedies (spouse’s taking of transfer of husband’s share of property coupled with
+continuing to advance an undue influence claim), see First National Bank Plc v Walker 52  (though see also Bank of Scotland
+v Hussain). 53
+Agency
+18-09
+In Barclays Bank v O’Brien it was established that the doctrine of constructive notice avoids the need for the somewhat strained
+approach used in the earlier cases where the creditor was constituted as agent of the wrongdoer in order to get the surety’s
+signature on the transaction. Thus there may still be cases in which the creditor is responsible for the husband’s actions because
+it can be said on the facts that the husband was acting as agent of the creditor, but such cases will be rare. 54  After Etridge, in
+most cases the creditor will be protected if the wife is already dealing with the bank through her solicitor or the bank has either
+advised the wife to take independent advice or complied with the principles set out in Etridge (see above).
+Etridge made it very clear that in the great majority of cases, the knowledge of the solicitor advising the wife cannot be attributed
+to the bank because the wife’s solicitor is not the bank’s agent although the bank may have asked the solicitor to advise the
+wife: see per Lord Nicholls, at [77]–[78].
+Lord Scott considered the question of s.199(1)(ii)(b) of the Law of Property Act 1925 in Etridge at [176] ff. Where the solicitor
+is instructed by both the bank and the wife, a request by the bank to advise the wife is irrelevant, and when advising the wife, the
+solicitor is not the bank’s solicitor and so s.199(1)(ii)(b) is of no application. However, if the solicitor never becomes the wife’s
+solicitor, the solicitor is acting for the bank alone, and the solicitor’s knowledge that the wife has not been properly advised as
+to the security documentation may be attributed to the bank.
+
+Chapter 18 - Undue Influence, UKBC-BULLENL 459371206 (2022)
+© 2025 Thomson Reuters.
+6
+Pleading points
+18-10
+If the allegation is that the conduct complained of amounted to acts of “improper pressure or coercion”, or potentially, to
+improper inducement, 55  it is incumbent on the person alleging that actual undue influence to plead and prove it.
+This may be done by showing that there was actual coercion by the done in the form of illegitimate pressure of some kind.
+It may also be shown by proving that the stronger party exercised such a degree of domination or control over the mind of
+the weaker party that the latter’s independence of decision was substantially undermined. 56  The party relying on such a plea
+must show that 57 :
+ 
+(1)the other party to the transaction had the capacity to influence the complainant;
+ 
+(2)the influence was exercised;
+ 
+(3)its exercise was undue; and
+ 
+(4)its exercise has “some causal connection between the undue influence alleged and the complainant’s decision to enter
+the impugned transaction” (albeit it is not required to be the principal reason or cause). 58  The Court of Appeal has stated
+that the causal link to the transaction that is required to make out an allegation of undue influence is that “the equitable
+wrong constituted by the abuse of confidence was part of the process by which the victim’s consent to it was obtained. 59
+In contrast, in cases where the presumption of undue influence is alleged to arise, the complainant must plead and prove either:
+ 
+(1)the existence of a relationship which, as a matter of law, gives rise to the presumption and a transaction which “calls
+for an explanation”; or
+ 
+(2)the facts necessary to establish the relationship of trust and confidence and a transaction which “calls for an explanation”.
+As against a third party creditor, rather than as against the wrongdoer, the burden of proof lies on the person alleging constructive
+notice on the part of the creditor or bank to plead and prove that the creditor or bank had constructive notice of the undue
+influence, rather than for the creditor or bank to prove that it did not. It is for the complainant to show why the bank or creditor
+cannot rely upon the transaction/charge or covenant because they were vitiated by the undue influence or misrepresentations
+of the wrongdoer, and to plead and prove why this should make the charge/covenant/transaction invalid as against the bank.
+The burden of proving notice is upon the person who claims that the vitiating circumstances affect an innocent third party or
+party who was not a party to the undue influence or misrepresentation: see Barclays Bank v Boulter, per Lord Hoffmann. The
+burden then shifts to the bank to show that it took reasonable steps to satisfy itself that consent was properly obtained. In the
+case of Boulter, the House of Lords held that a rule which would put the burden upon the bank to show that it had no notice
+of vitiating circumstances could operate very unreasonably.
+Defences
+18-11
+A party claiming undue influence as a defence (for example as a defence to a claim for payment under a guarantee or other
+security) makes a claim for rescission of the transaction and pleads the material facts in the same way as if a claim for rescission
+was being made by way of particulars of claim. The pleadings set out in the claims can be modified appropriately as defences,
+and a counterclaim added for rescission of the transaction.
+As a general comment, note that under the CPR Pt 16 r.16.5 60  bare denials are not permissible and where the defendant denies
+an allegation, he must state his reasons for doing so and must state his own version of events if he intends to put forward a
+different version of events from that given by the claimant. Undue influence failed as a defence in Fladgate Fielder (A Firm)
+v Smith, 61  where, on a summary judgment application, the court found that in order to establish a defence based on undue
+influence (in the absence of express undue influence), it was necessary to establish two pre-requisites, namely (1) a relationship
+
+Chapter 18 - Undue Influence, UKBC-BULLENL 459371206 (2022)
+© 2025 Thomson Reuters.
+7
+of trust and confidence between the parties and (2) that the transaction called for an explanation. Warren J held that there was
+no reasonable prospect of establishing the second pre-requisite.
+The position in a suretyship contract is to be noted. As against the creditor, provided that the surety can make out that: (1) the
+relationship between the surety and the principal debtor is non-commercial; (2) undue influence was exercised against her by the
+principal debtor (whether by relying on the presumptions set out above or not); and (3) the creditor did not take the “reasonable
+steps” identified in Etridge, (s)he is entitled to relief.
+Note: Each of the precedents below should have a statement of truth in the following terms at the end:
+[I believe]/[the Claimant/Defendant believes] that the facts stated in this Particulars of Claim/Defence are true.
+Footnotes
+1
+Smith v Kay (1859) 7 H.L.C. 750 at 779; 11 E.R. 299.
+2
+In Thompson v Foy [2009] EWHC 1076 (Ch); [2009] 22 E.G. 119 (C.S) at [114] it was held that evidence of events
+occurring after the impugned transaction is irrelevant.
+3
+National Commercial Bank (Jamaica) Ltd v Hew [2003] UKPC 51; [2004] 2 L.R.C. 396 at [28]. This definition was
+adopted verbatim in Morley v Elmaleh [2009] EWHC 1196 (Ch) at [595].
+4
+Lord Eldon LC in Huguenin v Baseley (1807) 14 Ves. 273 at 300; 33 E.R. 526. In the case of Davies v AIB Group (UK)
+Plc [2012] EWHC 2178 (Ch); [2012] 2 P. & C.R. 19, a claimant’s attempt to have liability under a personal loan set
+aside on the basis of undue influence by her late husband was unsuccessful because the judge felt the claimant had been
+aware of the true situation.
+5
+Per the speech of Lord Nicholls in the leading case on undue influence, Royal Bank of Scotland v Etridge (No.2) [2001]
+UKHL 44; [2002] 2 A.C. 773 at [7], cited and applied in UCB Corporate Services v Williams [2002] EWCA Civ 555;
+[2002] 3 F.C.R. 448 at [86] and Libyan Investment Authority v Goldman Sachs International [2016] EWHC 2530 (Ch)
+at [135].
+6
+Chitty on Contracts, 33rd edn (London: Sweet & Maxwell, 2018).
+7
+Barclays Bank Plc v O’Brien [1994] 1 A.C. 180.
+8
+Royal Bank of Scotland v Etridge (No.2) [2001] UKHL 44; [2001] 3 W.L.R. 1021.
+9
+For an application of the principle that the Bank will usually be entitled to rely on a solicitor’s confirmation that he has
+advised the wife, see Governor & Company of the Bank of Scotland v Hill [2002] EWCA Civ 1081; [2002] 29 E.G.
+152. For an example where the solicitor’s advice was not sufficient, see Pesticcio v Huet [2003] All E.R. (D.) (Apr.),
+Neuberger J; [2003] EWHC 2293 (Ch). This case was upheld on appeal [2004] EWCA Civ 372.
+10
+Libyan Investment Authority v Goldman Sachs International [2016] EWHC 2530 (Ch).
+11
+Holyoake v Candy [2017] EWHC 3397 (Ch) at [404]–[408].
+12
+See Malik v Sheikh [2018] EWHC 973 (Ch); [2018] 4 W.L.R. 86.
+13
+The decision of Daniel v Drew [2005] EWCA Civ 507; [2005] 2 F.C.R. 365 gives useful guidance. See in particular [31],
+where the Court of Appeal stated that: “In the broadest possible way, the difference between the two classes is that in the
+case of actual undue influence something has to be done to twist the mind of a donor whereas in cases of presumed undue
+influence it is more a case of what has not been done namely ensuring that independent advice is available to the donor.”
+14
+See Etridge [2001] 3 W.L.R. 1021 at [7] and Libyan Investment Authority v Goldman Sachs International [2016] EWHC
+2530 (Ch) at [135].
+15
+Libyan Investment Authority v Goldman Sachs International [2016] EWHC 2530 (Ch) at [165] onwards.
+16
+For a discussion of the meaning in practice of “trust and confidence” see Morley v Elmaleh [2009] EWHC 1196
+(Ch) at [597]–[601] and Thompson v Foy [2009] EWHC 1076 (Ch); [2010] 1 P. & C.R. 16 at [100]. See also the
+case of Libyan Investment Authority v Goldman Sachs International [2016] EWHC 2530 (Ch), in which the Libyan
+sovereign wealth fund contended that a protected relationship had grown up between it and Goldman Sachs, such that
+the “unsophisticated” LIA trusted Goldman Sachs to act in its best interests, and Goldman Sachs knew and took unfair
+advantage of this. The Court rejected the LIA’s arguments about its own lack of sophistication and the level of influence
+exerted by Goldman Sachs, finding that the relationship had not “crossed the line from being a strong, cordial business
+relationship between a buyer and a seller of financial services to being the kind of relationship of trust and confidence
+giving rise to a duty of candour and fairness on the part of the bank to its client”: at [278].
+
+Chapter 18 - Undue Influence, UKBC-BULLENL 459371206 (2022)
+© 2025 Thomson Reuters.
+8
+17
+That replaced the earlier test of a transaction which was to the wronged party’s “manifest disadvantage”—see para.18-04.
+However, per David Richards J in Royal Bank of Scotland v Chandra [2010] EWHC 105 (Ch); [2010] 1 Lloyd’s Rep.
+667 at [121] (affirmed by the Court of Appeal [2011] EWCA Civ 192 at [17]) while this presumption shifts the evidential
+burden, when oral evidence is given “… the issue for the Court is whether on the totality of evidence, including any
+appropriate inference, it finds that the transaction was in fact brought about by undue influence”.
+18
+Wright v Van der Plank (1855) 2 K.&J. 1; Turkey v Awadh [2005] EWCA Civ 382; [2005] 2 F.C.R. 7. Turkey v Awadh
+is an example of a case where it appears that the presumption of trust and confidence did arise. Rather there was no
+transaction which called for an explanation to give rise to the rebuttable presumption of undue influence which is a
+different matter. Conversely, the relationship between child and parent does not give rise to the presumption—see Paull
+v Paull [2018] EWHC 2520 (Ch).
+19
+Hylton v Hylton (1754) 2 Ves. Sen. 547, 28 E.R. 349; Taylor v Johnston (1882) 19 Ch. D. 603.
+20
+Archer v Hudson (1844) 7 Beav. 551, 49 E.R. 1180.
+21
+Kempson v Ashbee (1874) L.R. 10 Ch. App.15 This case was applied more recently by Yorkshire Bank Plc v Tinsley
+[2004] EWCA Civ 816; [2004] 1 W.L.R. 2380.
+22
+Powell v Powell (1900) 1 Ch. 243.
+23
+Liles v Terry [1895] 2 Q.B. 679; Willis v Barron [1902] A.C. 271; McMaster v Byrne [1952] 1 All E.R. 1362.
+24
+Mitchell v Homfray (1881) 8 Q.B.D. 587; Radcliffe v Price (1902) 18 T.L.R. 466.
+25
+Ellis v Barker [1871] L.R. 7 Ch. App. 104; Beningfield v Baxter (1866) 12 App. Cas. 167.
+26
+Huguenin v Baseley (1807) 14 Ves. 273; 33 ER 526; Allcard v Skinner (1887) 36 Ch. D. 145.
+27
+Hewitt v First Plus Financial Group Plc [2010] EWCA Civ 312; [2010] 2 F.L.R. 177.
+28
+CIBC Mortgages Ltd v Pitt [1994] 1 A.C. 200. Applied by UCB Corporate Services Ltd v Williams [2002] EWCA Civ
+555; [2002] 3 F.C.R. 448. Also applied by Royal Bank of Scotland v Fielding [2003] EWHC 986 (Ch).
+29
+But according to the Privy Council in National Commercial Bank v Hew [2003] UKPC 51 at [33] it “is always highly
+relevant that the transaction in question was manifestly disadvantageous to the person seeking to set it aside; although this
+is not always necessary”. Manifest disadvantage would therefore appear to be a sufficient but not a necessary condition
+to showing an abuse of influence. Recently Lewison J. stressed the evidential value of manifest disadvantage in showing
+undue influence on the donor, see Thompson v Foy [2009] 22 E.G. 119 (C.S) at [99].
+30
+See Libyan Investment Authority v Goldman Sachs International [2016] EWHC 2530 (Ch), for an example of a case
+where a bank’s allegedly “excessive profits” on a transaction was considered (and rejected) as a basis on which the
+transaction might be said to “call for an explanation”.
+31
+Macklin v Dowsett [2004] EWCA Civ 904; [2004] 34 E.G. 68.
+32
+Etridge [2001] 3 W.L.R. 1021 at [87].
+33
+See the case of Inche Noriah v Shaik Allie Bin Omar [1929] A.C. 127 at 135. Independence and full appreciation are
+both necessary: full appreciation without independence is insufficient, see Curtis v Pulbrook [2009] EWHC 782 (Ch)
+at [143]. Note also that manifest disadvantage is irrelevant at this stage, see Smith v Cooper [2010] EWCA Civ 722;
+[2010] 2 F.C.R. 551 at [65].
+34
+See e.g. Humphreys v Humphreys [2004] EWHC 2201 (Ch); [2005] 1 F.C.R. 712; Stevens v Leeder (aka Newey) [2005]
+EWCA Civ 50.
+35
+For an application of the principle that the bank will usually be entitled to rely on a solicitor’s confirmation that he has
+advised the wife, see Governor & Co of the Bank of Scotland v Hill [2002] EWCA Civ 1081; [2002] 29 E.G. 152. For an
+example where the solicitor’s advice was not sufficient, see Pesticcio v Huet [2003] All E.R. (D) (Apr.) (Neuberger J).
+Pesticchio v Huet was upheld on appeal: see [2004] EWCA Civ 372. See also Kapoor v National Westminster Bank Plc
+[2010] EWHC 2986 (Ch) at [28] which held the test was an objective one, namely whether a reasonable person, in the
+position of the lender, would find the documents satisfied it that the donor had received independent legal advice. Note
+also Etridge divided the test of whether a lender had avoided constructive notice between past and future transactions,
+and that the test applying to past transactions includes those that were in train shortly after the Etridge decision, see
+Royal Bank of Scotland v Chandra [2010] EWHC 105 (Ch); [2010] 1 Lloyd’s Rep. 677 at [175]. For a recent example
+of a two-party case in which independent legal advice was not sufficient to emancipate the claimant from the effect of
+the undue influence, see Paull v Paull [2018] EWHC 2520 (Ch).
+36
+Inche Noriah v Omar [1929] A.C. 127 (PC).
+37
+Hammond v Osborn [2002] EWCA Civ 885; [2002] W.T.L.R. 1125.
+38
+Goodchild v Bradbury [2006] EWCA Civ 1868.
+39
+It is worth reiterating that in all non-commercial surety cases, the lender will be put on inquiry.
+40
+Mortgage Agency Services (No.2) Ltd v Chater [2003] EWCA Civ 490; [2003] 15 E.G. 138.
+
+Chapter 18 - Undue Influence, UKBC-BULLENL 459371206 (2022)
+© 2025 Thomson Reuters.
+9
+41
+see also First National Bank Plc v Achampong [2003] EWCA Civ 487; [2004] 1 F.C.R. 18 at [53]–[54] and Santander
+UK Plc v Fletcher [2018] EWHC 2778 (Ch); [2019] 2 P. & C.R. 4. For the principles to be applied when the lender
+seeks an order for sale under s.14 of the Trusts of Land and Appointment of Trustees Act 1996, see Mortgage Corp v
+Shaire; Mortgage Corp v Lewis Silkin (A Firm) [2001] Ch. 743 Neuberger J.
+42
+Tinsley was distinguished, in the cases of Samuel (Professionally known as Seal) v Wadlow [2007] EWCA Civ 155 and
+Davies v AIB Group (UK) Plc [2012] EWHC 2178 (Ch); [2012] 2 P. & C.R. 19.
+43
+See Yorkshire Bank Plc v Pamela Tinsley [2004] EWCA Civ 816; [2004] 3 All E.R. 463. See also First National Bank
+Plc v Achampong [2004] 1 F.C.R. 18 at [22]ff.
+44
+see Barclays Bank Plc v Boulter [1999] 1 W.L.R. 1919 HL.
+45
+See BCCI v Hussain unreported 15 December 1999, Hart J, and see Bank of Scotland v Bennett [1999] Lloyd’s Rep.
+Bank 145; [1999] 1 F.L.R. 1115. Bank of Scotland v Bennett [1999] Lloyd’s Rep. Bank 145 was overturned on appeal in
+Royal Bank of Scotland v Etridge (No.2) [2001] UKHL 44; [2002] 2 A.C. 773 but on different grounds. Etridge likewise
+emphasised there is no distinction between undue influence established by inference or fact.
+46
+See Ryder v Nicholl [2000] E.M.L.R. 632.
+47
+Mitchell v Homfray (1881) 8 Q.B.D. 587; Morse v Royal (1806) 12 Ves. 355; 33 ER 134.
+48
+Allcard v Skinner (1887) 36 Ch. D. 145; Turner v Collins (1871) L.R. 7 Ch. App. 329 (recently applied in Howard v
+Howard-Lawson [2012] EWHC 3258 (Ch)).
+49
+Goldsworthy v Brickell [1987] Ch. 378.
+50
+Hatch v Hatch (1804) 9 Ves. 292, 32 ER 615; Re Paulings Settlement Trust [1964] Ch. 303.
+51
+Allcard v Skinner (1887) 36 Ch. D. 145;, cf. Bullock v Lloyds Bank Ltd [1955] Ch. 317.
+52
+First National Bank Plc v Walker [2001] F.L.R. 505; [2001] Fam. Law 182.
+53
+Bank of Scotland v Hussain [2010] EWHC 2812 (Ch)).
+54
+Barclays Bank v O’Brien [1994] 1 A.C. 180 at 195.
+55
+Libyan Investment Authority v Goldman Sachs International [2016] EWHC 2530 (Ch) at [165] onwards.
+56
+See Bank of Montreal v Stuart [1911] A.C. 120 and Coldunell Ltd v Gallon [1986] Q.B. 1184.
+57
+Bank of Credit and Commerce International SA v Aboody [1990] 1 Q.B. 923 at 967 per Slade LJ delivering the judgment
+of the Court of Appeal (see also Chitty on Contracts, 33rd edn (2018) at para.8-067).
+58
+Libyan Investment Authority v Goldman Sachs International [2016] EWHC 2530 (Ch) at [157], noting UCB Corporate
+Services v Williams [2002] 3 F.C.R. 448 at [86].
+59
+Hewett v First Plus Financial Group Plc [2010] 2 F.L.R. 177at [34], cited in LIA v Goldman Sachs [2016] EWHC 2530
+(Ch) at [158].
+60
+Civil Procedure Rules 1998 (SI 1998/3132).
+61
+Fladgate Fielder (A Firm) v Smith [2005] All E.R. (D) 264 (May).
+End of Document
+© 2025 SWEET & MAXWELL

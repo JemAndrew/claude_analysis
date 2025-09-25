@@ -1,0 +1,180 @@
+Tribunal’s decision as to the language(s) of the arbitration, UKBC-ICCARBN 474406874...
+© 2025 Thomson Reuters.
+1
+Tribunal’s decision as to the language(s) of the arbitration
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+Tribunal’s decision as to the language(s) of the arbitration
+20-19
+Once the Tribunal is constituted, it can decide: (i) whether there has been an agreement on the language(s) of the arbitration;
+and (ii) if not, which language(s) should be used for the arbitration. Therefore, if it is left to be decided by the Tribunal, it will
+only be decided after the Request and Answer have been filed, perhaps in two different languages.
+20-20
+If the issue is whether there has been an agreement as to the language of the arbitration, then the Tribunal will have to resolve
+it as one of the issues in the proceedings and reflect it generally in the Terms of Reference and subsequently in an award. If the
+Tribunal decides that there is an agreement as to the language of the arbitration, one would expect that this would be reflected
+in the partial or final award.
+20-21
+However, if the Tribunal is to decide the language of the arbitration pursuant to its power under art.20 (rather than its
+interpretation of whether there was an agreement as to the language of arbitration), the usual course would be to have the issue
+decided by a procedural order. 92  Where there is no agreement as to the language of the arbitration, the most efficient way to
+proceed is to issue a procedural order at an early stage in the proceedings, that is, prior to the Terms of Reference, to enable
+the parties to know the language to be used in the arbitration. The procedural decision of the Tribunal would then usually be
+reflected in the Terms of Reference, as a matter that has already been decided by the Tribunal, and the Terms of Reference would
+then have to be drafted in that language. It may be seen as a sign of a predisposition if the Tribunal provides the parties with a
+draft on the Terms of Reference in a given language, without first having decided the language issue. However, if the Tribunal
+has reasons to believe that both parties will understand the draft Terms of Reference in the language it has provisionally chosen
+for it, and describes the language issue as one of the issues to be decided, it would seem perfectly proper and sensible for a
+Tribunal to proceed in this manner. 93
+20-22
+Article 20 requires the Tribunal to “determine the language or languages of the arbitration, due regard being given to all relevant
+circumstances, including the language of the contract”. The wording of this provision indicates that the language of the contract
+will not necessarily be the sole factor, although it certainly is a strong and persuasive one, as will be further discussed at
+para.20-29.
+20-23
+Usually, this analysis will result in the Tribunal deciding that one language shall be used in the arbitration. More infrequently,
+for the reasons referred to in para.20-33, Tribunals will decide to use more than one language for the arbitration. An illustration
+of the factors considered in deciding on the language of the arbitration is provided in ICC Case No.9875, 94  where the Tribunal
+issued a procedural order including the following analysis:
+“This provision [corresponding to art.20 of the Rules] invites the Tribunal to give special, but not exclusive,
+attention to the language of the contract, which is English. In the practice of ICC arbitration, a certain proportion
+of procedures are actually conducted in a language other than that of the contract (cf. LAZAREFF, La langue
+de l’arbitrage institutionnel, [1997] Bull. Cour Arb. C.C.I., pp.18–27. ‘The precedent version of the ICC Rules
+gave more weight to the language of the contract’). The modified formulation of the 1998 version (‘in particular’
+replaced by ‘including’) reveals the admission that the language of the contract does not have such paramount
+importance. Other factors must also be considered (‘all relevant circumstances’).
+
+Tribunal’s decision as to the language(s) of the arbitration, UKBC-ICCARBN 474406874...
+© 2025 Thomson Reuters.
+2
+The Tribunal does not consider the neutral choice of [city], a bilingual if not polyglot place, as the seat of the
+arbitration a convincing factor in determining the language of the procedure. Nor does it consider there should
+be a necessary link between such language and the law applicable to the substance of the case, which will be
+discussed later.
+The Tribunal has also taken the following factors into consideration. The parties are respectively [nationality] and
+[nationality]. Even though they have written their contract in English and used English to communicate, they (as
+well as the witnesses they may call to appear before the tribunal) may feel disadvantaged at certain stages of this
+legal procedure if they have to express themselves in a language other than their own. Both parties have chosen
+French-speaking counsel. The parties’ choice of arbitrators, approved by the I.C.C. Court, includes a French
+arbitrator who has specified French as the only language in which he could conduct an arbitration without the
+assistance of an interpreter or translator and English arbitrator who has said the same about English, while adding
+he had a good knowledge of French.
+The Tribunal is guided by the concern that this procedure should be concluded efficiently, in fairness to all
+parties involved. Under the above circumstances, it decides that English and French will be the languages of the
+arbitration, to be applied as follows:
+ 
+—English will be the language used in the tribunal’s correspondence to the parties, procedural orders, awards
+and other official documents.
+ 
+—Oral debates may take place in French and English.
+Simultaneous translations will be organised.
+ 
+—Written submission will be accepted in either of those languages.
+ 
+—With prior notice, [language] will also be accepted in oral debates, with simultaneous translations into
+English and French.
+ 
+—The costs of interpretation and translation will be included in the costs of the arbitration.”
+20-24
+In the Bombardier Transportation case, 95  the challenging party attempted to have an ICC award set aside, alleging violation by
+the Tribunal Terms of Reference, which provided for English as the language of the arbitration. It was argued that by allowing
+communications of exhibits in a language other than English, the Tribunal had exceeded its powers and mission (art.1502(3) of
+the French NCPC (now art.1520(3) of the French CPC)). The Paris Court of Appeal rejected the challenge stating:
+“Considering that, although the Terms of Reference signed by the parties on November 13, 2001, provide as
+regards procedural rules that ‘the language used for the deliberations, files and other documents to be presented
+by the parties is English’; however a decision of the arbitral tribunal dated April 8, 2002 clarifies ‘that documents
+which have been used in prior contractual dealings of the parties and have been used by both parties in a language
+other than English, can be communicated in that other language notwithstanding the possibility for the tribunal
+to ask for a translation, it appears unreasonable that a party who, during the contract had accepted to work from
+French or German documents, would now object to the use of such documents, that the parties have been reminded
+of this decision in a letter from the tribunal dated April 30, 2002 as Bombardier which used documents written in
+languages other than English, objected nonetheless to the other side’s German documents;
+Moreover, taking into account that the tribunal has a jurisdictional prerogative which enabled it to regulate the
+proceedings, and that the tribunal rightly took care not to define the procedure too strictly in a way which would
+hinder its adaptability to new circumstances during discovery, that the arbitrators have not exceeded their powers,
+the first argument for annulment is rejected.” (Authors’ translation)
+20-25
+
+Tribunal’s decision as to the language(s) of the arbitration, UKBC-ICCARBN 474406874...
+© 2025 Thomson Reuters.
+3
+As illustrated by this case, a Tribunal may consider keeping some flexibility in the Terms of Reference with respect to language
+issues, for instance, by providing that it may accept documents submitted in a language other than the language of the arbitration.
+20-26
+Nevertheless, the Paris Court of Appeal’s ruling in Blow Pack v Windmöller underscores that a Tribunal’s opting for such
+flexibility needs to be careful, as such practice may conflict with due process. 96  In Blow Pack, an ICC final award was partially
+set aside by the Paris court on the ground that the Tribunal had breached due process when it allowed Windmöller to produce
+exhibits that it had translated in part only, on the ground that the translated extracts were the only relevant ones. Moreover,
+the president of the Tribunal, a bilingual (French-German) lawyer, took it upon himself to translate extracts of some additional
+documents filed by Windmöller himself. According to the Paris court, this deprived the other party of the ability to address such
+evidence. Furthermore, the court found that, although French was the language of the arbitration, the Tribunal based its award
+exclusively on a forensic expert report, to which the exhibits (accounting documents in German taken from respondent’s IT
+system) that had only been translated in part had been annexed. 97  Whatever reservations one may have regarding the Paris
+court’s decision, 98  this case illustrates that utmost care must be taken in order not to allow the saving of translation costs result
+in a risk of annulment.
+20-27
+In the UNCITRAL commentary on art.22 of the UNCITRAL Model Law, the point is made that the language of the arbitration
+must be determined by reference to art.19(3) of the UNCITRAL Model Law providing that “the parties shall be treated with
+equality and each party shall be given a full opportunity of presenting his case”. This corresponds to the principle in art.22(4)
+that the parties be given a “reasonable opportunity” to present their case. Therefore, one of the legal circumstances will be the
+ability of the parties to present their cases in the arbitration.
+20-28
+If one party requires translation of the entire proceedings, this may have adverse consequences on its ability to defend itself. It
+may cause delay in counsel seeking and obtaining instructions from its client. This is therefore yet another factor the Tribunal
+will have to consider when deciding upon the language of the arbitration.
+20-29
+The sole factor expressly referred to in art.20 is the language of the contract. Generally, a Tribunal will anticipate that a party
+who signs a contract in one language is at the very least able to understand that language for the purposes of an arbitration. This
+is frequently reinforced by the language of communications between the parties prior to and after the signing of the contract.
+20-30
+In the case of dual language contracts, the presumption may well be reversed. If parties sign a contract in English and Arabic,
+for example, it may well be taken as an indication that the parties are not comfortable in the other language, whether or not
+communications are in that language.
+20-31
+The Tribunal will usually take into account the language abilities of the counsel to the arbitration and, to some lesser extent,
+of the arbitrators who have been appointed. If a party has signed a contract in one language and appoints an arbitrator fluent
+in that language, then the party is indirectly indicating that it is comfortable in the language. If a party appoints an arbitrator
+who is unable to conduct an arbitration in the language of the contract or in a commonly spoken international language in
+general, then there may be an issue as to whether that arbitrator is able to conduct arbitral proceedings in accordance with the
+requirements of art.11(5).
+20-32
+As noted above, in many instances, the language of both the contract and the communications between the parties is English.
+Therefore, there is a tendency to have arbitrations in English even where neither of the parties has that language as its native
+language. Arbitrations are frequently conducted in English, for example in France or Switzerland, and the language of the place
+of arbitration in such cases is generally viewed as virtually irrelevant for the purpose of deciding the language of the arbitration.
+Likewise, if a project is located in a given country, the language spoken in that country is often also viewed as only marginally
+relevant in deciding the language of the arbitration. In addition, the applicable law on the merits would rarely, if ever, be a
+
+Tribunal’s decision as to the language(s) of the arbitration, UKBC-ICCARBN 474406874...
+© 2025 Thomson Reuters.
+4
+determining factor when fixing the language. This is true even though the need to translate the laws and judgments is often
+undesirable, in particular given the costs that such translations may entail.
+Footnotes
+92
+See in that sense, Paris Court of Appeal, 26 February 2013 (2013) Rev. Arb. No.2, p.524; for a distinction between
+“award” and “procedural order” see also discussion under art.34 at para.34-4. Also see the ICC Court of Arbitration
+Bulletin 2010 for a discussion of procedural orders on languages.
+93
+The situation may, however, be different again, if the respondent does not participate in the proceedings, and if therefore
+the Terms of Reference need to be approved by the ICC Court pursuant to art.23(3). In such case, the decision on the
+language might have to be taken before draft Terms of Reference are being circulated to the parties. See 2012 Secretariat's
+Guide, para.3–860, which considers that the Tribunal “must” do so in such case, which is, however, questionable.
+94
+ICC Case No.9875 (1999) (Partial Award), unreported.
+95
+La Société Bombardier Transportation Switzerland v La Société Siemens AG, JurisData: 2005-287132. More generally
+on art.1520(3) of the French CPC, see Clay, op. cit., pp.292–295, 304–307.
+96
+Blow Pack v Windmöller et Hölscher KG, Paris Court of Appeal, 1e Ch. 2 April 2013, No.11/18244, (2013) Rev. Arb.
+No.2, p.538.
+97
+The French Supreme Court confirmed this decision, see Cass Civ 1e, 18 March 2015, No.13-22.391, Rev. Arb. 2015
+Issue 2 pp.632–633.
+98
+One of the authors was a party-appointed arbitrator in this matter and considers that the Paris Court of Appeal made an
+erroneous assessment of the facts and therefore drew wrong conclusions.
+End of Document
+© 2025 SWEET & MAXWELL

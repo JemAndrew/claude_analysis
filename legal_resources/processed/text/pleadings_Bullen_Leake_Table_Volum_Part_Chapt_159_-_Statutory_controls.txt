@@ -1,0 +1,75 @@
+Statutory controls, UKBC-BULLENL 459371736 (2022)
+© 2025 Thomson Reuters.
+1
+Statutory controls
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part F - Business Law
+Chapter 20 - Credit, Finance and Leasing
+Statutory controls
+20-03
+Statutory controls on certain forms of credit agreement have existed since at least the Great War (arguably in the case of “usury”
+since the Middle Ages) and hire-purchase became subject to a complete legal regime in the inter-war period. No attempt was
+made to create a universal system for credit and hiring until the passing of the Consumer Credit Act 1974 and even then it took
+a decade to bring all its provisions into effect. In this section the Consumer Credit Act 1974 will be referred to as “the CCA”
+and all reference to section numbers, unless otherwise stated, will be to sections of the CCA. The CCA was drastically amended
+by the Consumer Credit Act 2006 and was further amended when the UK implemented the EU Consumer Credit Directive
+2008 (Directive 2008/48/EC) 1  which aimed to harmonise the consumer credit law of all 27 EU Member States. In general the
+changes brought about by the Directive came into force on 1 February 2011.
+Until 2014 both the regulatory structure and the statutory rules for this sector were to be found in the CCA and its derivative
+statutory instruments, which established the regulator (the Office of Fair Trading—OFT) and provided a prescriptive code
+governing all aspects of credit and hire agreement. On 1 April 2014, however, the regulation of the industry was transferred
+from the OFT to the Financial Conduct Authority (FCA) and the OFT was abolished. The FCA’s governing statute was the
+Financial Services and Markets Act 2000 (FSMA) and the regulatory side of the credit industry was subsumed into the FCA’s
+general remit over the financial services industry.
+This led to a very uneasy situation where the main provisions of the CCA relating to the solicitation, negotiation, form, contents,
+administration and enforcement of regulated agreements remained in force but were supplemented by a regulatory régime
+which operated through mandatory codes of practice incorporated into FCA handbooks and sourcebooks. The FCA published
+a specific sourcebook for consumer credit, known as CONC, whose provisions, though expressed in very general terms, will
+sit alongside the very precise and prescriptive rules laid down by the CCA and its subordinate legislation. The litigator must,
+therefore, bear in mind that it is no longer sufficient to consult the CCA and its regulations to see whether the agreement is
+compliant and the conduct of the trader lawful: he must also be aware of the FCA material and, in particular, CONC.
+The Consumer Rights Act 2015, which came into force on 1 October 2015, impinges on those credit agreements where the credit
+finances the acquisition of goods, software or services but mainly in the field of providing redress for breaches of contractual
+terms relating to title, quality and performance. The provisions of that Act will be discussed in Section 25: Supply of Goods,
+Digital Content.
+20-04
+All the categories of contract with which this section is concerned were originally regulated by the CCA alone but are now
+regulated both by CCA and FSMA. The definitions of the categories of agreement (hire-purchase, loan etc) were originally
+contained in the CCA. The FCA régime proceeds on the basis of defining the activities for which authorisation by the FCA is
+required by FSMA and those activities in turn are then defined. In the event, the definitions of the relevant agreements have
+been retained but the source of the definitions is no longer the CCA but the Financial Services and Markets Act 2000 (Regulated
+Activities) Order 2001 (SI 2001/544) (the RAO). It should be noted that there is a small category of credit agreements, buy-
+to-let finance, which are apparently outside the system. In 2015 the UK implemented the EU Mortgage Credit Directive 2014
+(Directive 2014/17/EU) 2  by means of the Mortgage Credit Directive Order 2015 (SI 2015/910) (the 2015 Order). This brought
+such agreements back into regulation (they had previously been exempt since 2008) but created a parallel regulatory regime
+mirroring the control of other credit agreements.
+
+Statutory controls, UKBC-BULLENL 459371736 (2022)
+© 2025 Thomson Reuters.
+2
+It is important to note that neither the CCA nor FSMA regulates all agreements within each category of agreement. The word
+“consumer” in the title of the CCA is misleading: the CCA regulates some agreements where the debtor or hirer is not a consumer
+(principally business agreements below the £25,000 credit ceiling). Although, until 6 April 2008 regulation was principally
+dependent on the financial amounts involved with (eventually) a ceiling of £25,000, all financial limits were abolished on that
+date. Consequently all consumer credit and consumer hire agreements are regulated where:
+ 
+(a)the debtor or hirer is an ‘individual’ or, under the RAO, “an individual or relevant recipient of credit”: in both cases
+this is defined as being either a single natural person or a group of not more than three members where no member is a
+body corporate;
+ 
+(b)the agreement is not expressly exempted by the CCA or (from 1 April 2014) the RAO.
+The CCA’s main provisions will be discussed below. In general, this explanatory section will stick to the CCA’s concepts of
+‘creditor’ and ‘debtor’. It must be noted, however, that the nomenclature approved by FSMA and the RAO is ‘lender’ and
+‘borrower’. In the precedents, therefore, the new terms will be used.
+Footnotes
+1
+Directive 2008/48/EC of the European Parliament and of the Council of 23 April 2008 on credit agreements for
+consumers and repealing Council Directive 87/102/EEC [2008] OJ L133/66.
+2
+Directive 2014/17/EU of the European Parliament and of the Council of 4 February 2014 on credit agreements for
+consumers relating to residential immovable property and amending Directives 2008/48/EC and 2013/36/EU and
+Regulation (EU) No 1093/2010 [2014] OJL60/34 (EU Mortgage Credit Directive 2014).
+End of Document
+© 2025 SWEET & MAXWELL

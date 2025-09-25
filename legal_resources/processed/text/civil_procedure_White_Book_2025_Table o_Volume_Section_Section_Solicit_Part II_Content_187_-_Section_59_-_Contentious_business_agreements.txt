@@ -1,0 +1,157 @@
+Section 59. - Contentious business agreements, UKBC-WHITEBK 458578230 (2025)
+© 2025 Thomson Reuters.
+1
+Section 59. - Contentious business agreements
+White Book 2025  | Commentary last updated November 20, 2017
+Volume 2
+Section 7 - Legal Representatives—Costs and Litigation Funding
+Section 7C - The Solicitors Act 1974
+Solicitors Act 1974
+Section 59
+Part III Remuneration of Solicitors
+Contentious business
+59.— Contentious business agreements
+7C-62
+(1) Subject to subsection (2) a solicitor may make an agreement in writing with his client as to his remuneration in
+respect of any contentious business done, or to be done, by him (in this Act referred to as a “contentious business
+agreement”) providing that he shall be remunerated by a gross sum, or by reference to an hourly rate, or by a salary,
+or otherwise, and whether at a higher or lower rate than that at which he would otherwise have been entitled to be
+remunerated.
+(2) Nothing in this section or in section 60 to 63 shall give validity to—
+(a) any purchase by a solicitor of the interest, or any part of the interest, of his client in any action, suit or other
+contentious proceeding; or
+(b) any agreement by which a solicitor retained or employed to prosecute any action, suit or other contentious
+proceeding, stipulates for payment only in the event of success in that action, suit or proceeding; or
+(c) any disposition, contract, settlement, conveyance, delivery, dealing or transfer which under the law relating
+to bankruptcy is invalid against a trustee or creditor in any bankruptcy or composition.
+Note
+7C-63
+Amended by the Courts and Legal Services Act 1990 s.98.
+“Contentious business”
+7C-64
+
+Section 59. - Contentious business agreements, UKBC-WHITEBK 458578230 (2025)
+© 2025 Thomson Reuters.
+2
+See s.87, para.7C-140.
+Subsection (1)
+“Agreement in writing”
+7C-65
+The section enables solicitors to make binding agreements in writing. In Chamberlain v Boodle & King (1980) 124 S.J. 186,
+Smith J held it was essential for the agreement to be in writing and must show all the terms of the bargain between the parties.
+This decision was upheld by the Court of Appeal [1982] 1 W.L.R. 1443; [1982] 3 All E.R. 188.
+In Martin Boston & Co v Levy [1982] 1 W.L.R. 1434; [1982] 3 All E.R. 193, it was held that the client’s rights under the
+Solicitors Act would not be defeated where solicitors sued on a dishonoured cheque received in payment of their account.
+The fact that an agreement between a firm of solicitors and their client does not refer to itself as a contentious business
+agreement is not determinative of the issue as to whether it is in fact such an agreement. If the agreement fulfils the criteria
+for a contentious business agreement then that is what it is regardless of what the parties call it. The essence of a CBA
+is certainty: In the matter of Wilson Properties UK Ltd (in liquidation) sub nom Pierre Wilson v The Specter Partnership,
+Official Receiver, and Joint Liquidators of Wilson Properties UK Ltd [2007] EWHC 133 (Ch), Mann J. See also Fladgate
+LLP v Lee Harrison [2012] EWHC 67 (QB) Lang J and para.7C-57.
+Cross claims and account stated
+7C-66
+The solicitor cannot rely on a parol agreement (Re Russell, Son & Scott (1885) 30 Ch D 114) yet where there is a claim for
+costs and a cross-claim, and an account stated, but not in writing, showing a balance in favour of the solicitor, he can sue for
+it without delivering a signed bill (Turner v Willis [1905] 1 K.B. 468).
+Agreement for security
+7C-67
+The section has no application to an agreement by a client to give his solicitor security for such costs as he may become entitled
+to, whether the security be by cash cover, or charge upon or assignment of part of a fund to be received by the solicitor, and
+such agreement may be oral (Re Jackson [1915] 1 K.B. 371; Jonesco v Evening Standard [1932] 2 K.B. 340, CA).
+Bill of exchange
+7C-68
+A solicitor cannot evade his obligations under the Act by taking a bill of exchange (Ray v Newton [1913] 1 K.B. 249, CA).
+
+Section 59. - Contentious business agreements, UKBC-WHITEBK 458578230 (2025)
+© 2025 Thomson Reuters.
+3
+Signature by client
+7C-69
+The agreement may be enforced by the solicitor though signed by the client alone (Re Thompson [1894] 1 Q.B. 462; Re Jones
+[1895] 2 Ch. 719; Beake v French (No.2) [1907] 2 Ch. 215).
+“Gross sum … hourly rate … or salary or otherwise”
+7C-70
+Contingency fee agreements are not enforceable in English law, but s.58 of the Courts and Legal Services Act 1990, introduced
+conditional fees subject to appropriate orders being made by the Lord Chancellor. The 1974 Act is not intended to legalise
+champertous agreements (Anon. (1875) 1 Ch D 573) as to the nature of which see Simpson v Lamb (1856) 7 El. & Bl. 84;
+Davis v Freethy (1890) L.R. 24 Q.B.D. 519 at 523; Pittman v Prudential Deposit Bank (1896) 13 T.L.R. 110; Re a Solicitor
+[1912] 1 K.B. 302. So, a solicitor who receives a proper retainer subsequently varied so as to be champertous, cannot recover
+his fees (Wild v Simpson [1919] 2 K.B. 544; Awwad v Geraghty &Co [2001] Q.B. 570, CA). This includes disbursements as
+well as profit costs (Re Trepca Mines Ltd [1963] Ch. 199, CA). Similarly, an agreement for the collection of rents, interest, or
+debts, the remuneration for which is to be a percentage of the amount recovered, and which contemplates litigation, would be
+an infringement of the law against champerty and illegal; but such an agreement, if it excludes the taking of legal proceedings,
+is neither unprofessional nor objectionable: Wallersteiner v Moir (No.2) [1975] Q.B. 373; [1975] 1 All E.R. 849, CA and see
+AXA Equity & Law Life Assurance Society Plc (No.2), Re; Axa Sun Life Plc, Re [2001] 1 All E.R. (Comm) 1010.
+In a housing disrepair case the defendant local authority argued that the claimant’s CFA was tainted by champerty or
+maintenance, and that the provision in the CFA that the solicitors would be responsible for any liability to pay the opponent’s
+costs was a form of insurance. MacDuff J stated [21]:
+“Champerty, maintenance and public policy walk together and it is unhelpful in my judgment to look at them in
+isolation. The question … is this: whether public policy demands that this CFA, looked at in the round, should be
+struck down because of the interests which the solicitor has in the litigation. Whether the agreement, looking at
+this case today on its own facts, creates a conflict of interest in the solicitor, and whether, if it does create such a
+conflict of interest, that conflict is so stark or so obvious as to threaten and undermine what has been called “the
+purity of justice”; whether it gives rise to the risks which were identified by Lord Phillips … in the case of [R.
+(Factortame) v Secretary of State for Transport [2002] EWCA Civ 93].”
+Having quoted Lord Denning in Wallersteiner v Moir (No.2) [1975] Q.B. 373 at 402 MacDuff J stated [27]:
+“Those statements of the law have been overtaken by events clearly as all judges, lawyers and other interested
+commentators have been able to see the CFA itself potentially places strains and stresses upon the work of the
+legal adviser creating obvious potential conflicts which Lord Denning would not have recognised. They are not
+created by common law, they are allowed only because they are permitted by statute and regulated by detailed
+rules and statutory instruments.”
+The judge relied on the dictum of Lord Phillips in Factortame, where he said:
+“… we believe one must today look at the facts of the particular case, and consider whether those facts suggest
+that the agreement in question might tempt the allegedly champertous maintainer for his personal gain to inflame
+the damages, to suppress evidence, to subborn witnesses or otherwise to undermine the ends of justice.”
+MacDuff J concluded [40]:
+
+Section 59. - Contentious business agreements, UKBC-WHITEBK 458578230 (2025)
+© 2025 Thomson Reuters.
+4
+“In my judgment this particular scheme was in respect of cases with a low risk, low quantum, low volume, low
+success fee and an enhancement of access to justice. There were many advantages and the disadvantage, the one
+disadvantage, namely the potential conflict of having this modest financial stake in the litigation was … so small
+as to be so clearly outweighed by the advantage and potential value of this scheme.”
+With regard to the suggestion by the local authority that the terms of the CFA amounted to an insurance, the judge took the view
+that it was, on any view, a contract for the provision of legal services. The indemnity clause, whether looked at individually or
+as part of the contract, was a subsidiary part of the contract: Morris v London Borough of Southwark [2010] EWHC 5 (QB),
+MacDuff J.
+Salaried solicitor
+7C-71
+A solicitor can be remunerated by salary for contentious as well as non-contentious business (see Galloway v Corporation of
+London (1867) L.R. 4 Eq. 90) and the client can recover usual costs from his opponent in litigation unless the latter can show
+that such costs would exceed the appropriate amount of the salary (see s.60(2), para.7C-75 and Henderson v Merthyr Urban DC
+[1900] 1 Q.B. 434). See also Re Eastwood (dec’d), Lloyds Bank Ltd v Eastwood [1975] Ch. 112; [1974] 3 All E.R. 607, CA and
+MaesFinance Ltd v W.G. Edwards & Partners [2000] 2 Costs L.R. 198, QBD. Reaffirmed: Cole v British Telecommunications
+Plc [2000] 2 Costs L.R. 310, CA.
+Lump sum where no agreement
+7C-72
+See s.64.
+Bankruptcy
+7C-73
+A solicitor may retain moneys paid under an agreement before notice of an act of bankruptcy, though the services are rendered
+later, Re Charlwood [1894] 1 Q.B. 643).
+Subsection (2)
+7C-74
+This section merely provides that nothing in the Act shall give validity to arrangements of the kind specified. The Act does not
+legitimise any arrangements which would otherwise be unlawful but neither does it made them unlawful if they are otherwise
+lawful. The Court of Appeal found nothing in the 1974 Act which prohibits the charging of contingent fees. The fact that the
+Solicitors Practice Rules 1990 made it professional misconduct for a solicitor to enter into any agreement, even for his normal
+fee, where this was dependent on achieving a successful result in litigation, did not of itself make the practice contrary to law
+(following Picton Jones & Co v Arcadia Developments Ltd [1989] 1 E.G.L.R. 42). The court found that the rules were based on
+a perception of public policy derived from judicial decisions which were flawed, Thai Trading Co v Taylor [1998] 2 W.L.R. 893,
+CA. In Hughes v Kingston Upon Hull City Council [1999] 2 All E.R. 49, DC, the Divisional Court decided that Thai Trading
+(above) had been decided per incuriam because Swain v The Law Society [1983] 1 A.C. 598, HL decided that the (Solicitors
+
+Section 59. - Contentious business agreements, UKBC-WHITEBK 458578230 (2025)
+© 2025 Thomson Reuters.
+5
+Practice Rules 1990 r.8) had the force of statute (see also Leeds City Council v Carr; Wells v Barnsley MBC, The Times, 12
+November 1999, DC). Since that decision the Solicitors’ Practice Rules 1990 have been altered (with effect from 7 January
+1999) to forbid contingency fee agreements save those permitted under statute or by the common law. In Awwad v Geraghty
+&Co, [2001] Q.B. 570, CA, the Court of Appeal held that all contingency fee agreements other than those permitted by statute
+are unlawful; i.e. there can be no lawful contingency fee agreement under the common law. The decision in Thai Trading has
+thus been reversed and the only valid contingency fee agreements are those which accord with statute (see Conditional Fee
+Agreements Order 2013, para.7A-15). For the statutory framework, see the Courts and Legal Services Act 1990 ss.58 and 58A
+(paras 7A-3 to 7A-6).
+End of Document
+© 2025 SWEET & MAXWELL

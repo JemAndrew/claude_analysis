@@ -1,0 +1,58 @@
+“before the file is transmitted”, UKBC-ICCARBN 474406886 (2022)
+© 2025 Thomson Reuters.
+1
+“before the file is transmitted”
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+“before the file is transmitted”
+28-69
+Prior to transmittal of the file to the Tribunal, it is generally accepted that parties may apply to national courts for conservatory
+or interim relief. 526  Article 9 of the UNCITRAL Model Law states that “[i]t is not incompatible with an arbitration agreement
+for a party to request, before or during arbitral proceedings, from a court an interim measure of protection and for a court to grant
+such measure”. 527  This has now been confirmed and broadened in art.17J of the UNCITRAL Model Law that provides that:
+“[a] court shall have the same power of issuing an interim measure in relation to arbitration proceedings,
+irrespective of whether their place is in the territory of this State, as it has in relation to proceedings in courts. The
+court shall exercise such power in accordance with its own procedures in consideration of the specific features
+of international arbitration.”
+28-70
+The nature of the relief that may be sought will of course depend on the judicial authority and the location. It is not infrequent
+that parties seek to block sums that are in dispute pending resolution of a dispute in arbitration as was the case in several recent
+cases referred to above.
+28-71
+In certain circumstances, parties have the option of seeking interim or conservatory measures from an Emergency Arbitrator
+under art.29 instead of seeking such measures from a state court, for example. Nevertheless, for attachments or blocking orders
+relating to bank accounts for example, using traditional methods before state courts will presumably remain the predominant
+method of obtaining such relief.
+Footnotes
+526
+For example, in France, see Versailles, 8 October 1998, Société Akzo Nobel v SA Elf Atochem (1999) Rev. Arb. No.1
+p.57, note Houry: “[w]hereas it is a principle of positive French law that the parties to an agreement with an arbitration
+clause giving jurisdiction to an arbitral tribunal of the ICC may have recourse to the state courts to obtain conservatory
+measures having in particular as their objective to preserve the situation, the rights or the evidence and in particular the
+existence of an arbitration clause does not preclude action by the judge for urgent matters” (Authors’ translation); see
+also art.185 of the Swiss PILA, s.38 of the English Arbitration Act 1996. See also Cass Civ 1e, 18 November 1986,
+Atlantic Triton Co v (1) Republic of Guinea and (2) Soguipêche (1987) YBCA Vol.XII p.183, note Gaillard (art.26 of
+the ICSID Convention does bar one of the parties from resorting to national courts to attach assets until an award is
+rendered by the Tribunal).
+527
+Discussed for example in Federal Court of Canada, Frontier International Shipping Corp v Tavros [2000] 2 F.C. 427;
+1999 CanLII 9389 (F.C.). See also Brunswick Corp, Mercury Marine Division v Yamaha Motor Co Ltd, US District Court
+Eastern District of Wisconsin, case No.04-C-0584 (1 October 2004) (preliminary injunction ordering the respondent
+to continue the performance of the contract pending the final resolution of the dispute based on the wording of the
+contract, the court declining to rule on the substance which is left to the arbitrators); Peabody Coalsales Co v Tampa
+Elec Co, 36 F.3d46 (8th Cir 1994) (preliminary injunction ordered by the court based on the contractual provision
+
+“before the file is transmitted”, UKBC-ICCARBN 474406886 (2022)
+© 2025 Thomson Reuters.
+2
+stating: “Unless otherwise agreed in writing by the parties during the dispute resolution process.” According to the
+court, an order compelling arbitration “in accordance with the terms of the agreement” must necessarily include an order
+requiring continued performance); RGI Inc v Tucker & Assocs Inc, 858F.2d 227 (5th Cir.1988) (a preliminary injunction
+is appropriate in light of the contract language providing “[i]n the event that a dispute is submitted for arbitration pursuant
+to this paragraph, this Subcontract shall continue in full force and effect until such decision is rendered … in such a
+circumstance, the court needs not involve itself in balancing the various factors to determine whether a preliminary
+injunction should be issued”).
+End of Document
+© 2025 SWEET & MAXWELL

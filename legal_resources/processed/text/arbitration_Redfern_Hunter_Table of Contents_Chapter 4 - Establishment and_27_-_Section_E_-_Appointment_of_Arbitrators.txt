@@ -1,0 +1,248 @@
+Section E. - Appointment of Arbitrators, UKBC-REDFERN 530638629 (2025)
+© 2025 Thomson Reuters.
+1
+Section E. - Appointment of Arbitrators
+Redfern and Hunter on International Arbitration 7th Ed.
+Mainwork
+Chapter 4 - Establishment and Organisation of an Arbitral Tribunal
+Section E. - Appointment of Arbitrators
+4. 25
+There are several methods of appointing an arbitral tribunal. The most usual are: (i) by agreement of the parties; (ii) by an
+arbitral institution; (iii) by means of a list system; (iv) by means of the co-arbitrators appointing a presiding arbitrator; (v) by
+a professional institution or a trade association; (vi) by a national court; or (vii) by an appointing authority. Each method is
+now considered in turn.
+(a) Agreement of the parties
+4. 26
+As we have previously stated (i) a major attraction of arbitration is that it allows parties to submit a dispute to judges of their
+choice, and (ii) where the arbitral tribunal is to consist of three arbitrators, it is usual for each party to nominate one arbitrator,
+leaving the third arbitrator to be appointed by one of the methods mentioned above. Where possible, an agreement is always
+preferable.
+4. 27
+From time to time, a respondent may seek to derail an arbitration which it seems destined to lose, by refusing to appoint an
+arbitrator. The party-appointed arbitrators may also try but fail to agree on a presiding arbitrator. A reliable arbitral institution
+will almost invariably have a provision in its rules that will allow it to make the necessary appointment in the event of default. 40
+In a situation where such a provision does not exist (for example, in an ad hoc arbitration), it may be necessary to rely on the law
+of the seat of the arbitration and to ask for the appointment to be made by the competent national courts. However, relying on
+national courts to appoint is likely to lead to delay and uncertainty, particularly if the relevant court does not have a sufficiently
+international perspective to make a suitable appointment.
+It is therefore sensible to ensure that there is a provision for the ‘default appointment’ of an arbitrator in the arbitration agreement
+itself. This can be done either by choosing an arbitral institution whose rules provide for a default appointment or, in an ad hoc
+arbitration, by nominating an appointing authority that will make such an appointment.
+(b) Appointment by arbitral institutions
+4. 28
+Arbitral institutions each have their own rules for appointing arbitrators. The ICC Rules, for example, provide that where there
+is to be a sole arbitrator and the parties fail to reach an agreed nomination within thirty days from the communication of the
+Request for Arbitration, the arbitrator will be appointed by the ICC Court. 41  The Rules also provide that, where there is to be
+an arbitral tribunal of three arbitrators, the third arbitrator will be appointed by the ICC Court, unless the parties have agreed
+upon another procedure, in which case the agreed appointment must be made within a limited time. 42  In contrast, the rules of
+the China International Economic and Trade Arbitration Commission (CIETAC) require the parties to nominate their respective
+arbitrators from CIETAC’s designated panel of arbitrators; alternatively, if they agree to nominate from outside the panel of
+arbitrators, then that nomination is subject to confirmation by the chair of CIETAC. 43
+
+Section E. - Appointment of Arbitrators, UKBC-REDFERN 530638629 (2025)
+© 2025 Thomson Reuters.
+2
+4. 29
+As we indicated earlier, in referring to default appointments in ad hoc arbitrations, many arbitral institutions offer their services
+as ‘appointing authority’ for a fee, including the ICC, the ICDR, the LCIA, and the PCA in The Hague. 44  The Secretary-
+General of ICSID is also prepared to act as ‘designating’, or appointing, authority for ad hoc arbitration agreements that do
+not fall within the scope of the ICSID Convention. 45  It is always worth considering the use of these services in an ad hoc
+arbitration. What the arbitral institutions and international bodies have to offer, compared to national courts or professional
+societies and trade associations, is their day-to-day involvement in international arbitration and their access to (and knowledge
+of) a pool of highly qualified arbitrators.
+(c) List system
+4. 30
+A ‘list system’ is often used to assist the parties to reach agreement over the identity of the president of the arbitral tribunal.
+Typically, the parties will agree on a list of the required criteria (for example, experience, language, nationality) and then each
+party will compile a list of three or four persons considered to be acceptable as arbitrators who comply with those criteria,
+perhaps with a brief note of the relevant experience and qualifications of each. The lists are then exchanged simultaneously in
+an attempt to reach agreement. If there is a common candidate, that person is appointed president. Even if this is not the case,
+the process focuses the thinking of the parties and may help to pave the way towards agreement. 46
+4. 31
+A variation on this system, used by some arbitral institutions (particularly the ICDR, the SCC, and the Netherlands Arbitration
+Institute (NAI)), is the dispatch by the institution of the same list of names to each party. 47  Each party then returns the list,
+deleting any name to which it objects and grading the remainder in order of preference. The appointing authority then chooses
+an arbitrator from the list, in accordance with the order of preference indicated by the parties. The system is slower than that
+of direct appointment by an arbitral institution but has the advantage of offering an element of choice (even though this choice
+is restricted to persons initially named by the institution on its list). This procedure may be used to appoint a sole arbitrator as
+well as to choose the presiding arbitrator. 48
+(d) Appointment by co-arbitrators of the presiding arbitrator
+4. 32
+Where a tribunal of three arbitrators is to be constituted, the arbitration clause or submission agreement often provides that each
+party is to nominate one arbitrator and that the two arbitrators so nominated will choose the third, who acts as the presiding
+arbitrator. The same solution is also found in some arbitration rules. 49  This is undoubtedly the most satisfactory way of
+nominating a third arbitrator, since the party-nominated arbitrators will have confidence in their chosen candidate and their
+ability to work well together. Before putting forward a possible candidate, it is usual for each of the arbitrators to inform its
+appointing party of the candidate or candidates that the two co-arbitrators are considering for appointment, so as to ensure that
+there is not some well-founded objection to that candidate (for instance, a conflict of interest or history of personal animosity).
+This is considered an acceptable exception to the general rule that there should be ‘no ex parte communication’ in international
+arbitration. 50  To avoid any misunderstandings, the party-nominated arbitrators should inform each other that they are following
+this procedure. 51
+
+Section E. - Appointment of Arbitrators, UKBC-REDFERN 530638629 (2025)
+© 2025 Thomson Reuters.
+3
+(e) Professional institution
+4. 33
+The president or a senior officer of a professional institution may be named as the appointing authority in arbitration clauses,
+but before doing this, the parties should ensure that the institution will in fact provide this service, that the person concerned
+will accept the role, and that the terms (cost and time) of such appointment are understood. In general terms, it is not an option
+that we would recommend, as it is unlikely that the institution concerned will have a strong knowledge of suitable candidates
+for an international arbitration; and if there are specialist issues which fall within the knowledge and experience of the members
+of a particular institution, these can usually be more suitably addressed through expert evidence. More importantly, it is usually
+impossible to know whether a specific dispute will be of a technical or legal nature before it arises. 52
+(f) National courts
+4. 34
+If the parties are unable to reach agreement upon the appointment of an arbitrator and no one is empowered in the arbitration
+clause or submission agreement to make the appointment for them, the courts of the seat will usually have the power to nominate
+any remaining members of the tribunal, irrespective of the nationality of the parties or the law governing the substance of the
+dispute. The relevant rules are usually set out in the arbitration law of the seat (which may be a separate statute or part of a
+wider code of civil procedure). It is usually sufficient for the claimant (who is invariably the party interested in proceeding
+speedily) to apply to the relevant court for the appointment. For example, under the English Arbitration Act, the courts have
+default powers to:
+ 
+• give directions as to the making of any necessary appointments
+ 
+• direct that the tribunal shall be constituted by such appointments (or any one or more of them) as have been made
+ 
+• revoke any appointments already made
+ 
+• make any necessary appointments itself 53
+In making any appointments, a court will often ask the parties’ lawyers, or the party-nominated arbitrators, to suggest possible
+candidates.
+4. 35
+In principle, a national court will have jurisdiction where the arbitration is to be conducted on its territory. 54  Accordingly,
+there should be no problem where the seat of arbitration is specified in the arbitration clause or submission agreement: the
+party wishing to proceed with the arbitration simply applies to the national courts for the appointment to be made. However,
+a problem arises if the seat of arbitration has not been specified in the arbitration clause or submission agreement. It may be
+possible to persuade a court to assume jurisdiction, for example on the basis that the law governing the substantive issues in
+dispute is the law of the country of that court, or that the respondent is within the jurisdiction of the court (and so capable of
+being compelled to carry out its orders). 55
+4. 36
+This situation offers a clear example of the dangers inherent in a defective, or ‘pathological’, arbitration clause. A clause that
+fails to provide either for an effective method of constituting the arbitral tribunal or for the place of arbitration risks being
+inoperable. If a claimant takes its case to a national court, it may be met by an application for a stay of the proceedings on
+the grounds of the existence of an arbitration clause. At best, there is considerable potential for delay. At worst, there is the
+possibility that the claimant may be deprived of an effective remedy.
+4. 37
+
+Section E. - Appointment of Arbitrators, UKBC-REDFERN 530638629 (2025)
+© 2025 Thomson Reuters.
+4
+Countries with developed systems of arbitration law recognise the role that needs to be played by their law and by their courts
+in assisting the arbitral process. Accordingly, national courts are usually empowered to appoint arbitrators where necessary.
+Wide powers to appoint arbitrators are contained in most modern national arbitration laws. 56  However, the position under the
+relevant local law should be checked carefully at the time of selecting the place of arbitration.
+(g) Appointing authority
+4. 38
+As we have already emphasised, parties should recognise that in an ad hoc arbitration, it is in their common interest to choose an
+appointing authority by agreement (such as the PCA)—or, at least, to choose a method of designating an appointing authority.
+One way of doing this is to adopt the UNCITRAL Rules. Under these Rules, if the parties have not agreed upon an appointing
+authority, a party may request the Secretary-General of the PCA to designate one. 57
+(h) Designation by the Secretary-General of the PCA
+4. 39
+The UNCITRAL Rules do not specify the information that must be supplied to the Secretary-General of the PCA for the purposes
+of designating an appointing authority. However, in practice, the PCA asks for the same documents as are required under Article
+6.6 of the UNCITRAL Rules or the appointment of an arbitrator. These documents include the notice of arbitration and the
+response, if it exists. The Secretary-General will usually also request copies of correspondence indicating that the designation
+of an appointing authority is necessary because a party has failed to appoint an arbitrator, or that it has been impossible to reach
+agreement on a sole or presiding arbitrator, or that there is a challenge to an arbitrator.
+4. 40
+If the respondent does not participate in making a request, the Secretary-General writes to the respondent to invite comments
+and specifies a reasonable time for reply. Before designating an appointing authority, the Secretary-General may also ask for
+the names of potential arbitrators and appointing authorities that have been discussed between the parties and rejected. 58
+After reviewing the documents submitted and considering any comments from the parties, the Secretary-General selects the
+organisation or individual that he or she considers best placed to act as appointing authority. 59  The Secretary-General then
+enquires whether that organisation or individual is willing to accept the designation. If the answer is in the affirmative, the
+parties are informed and requested to approach the ap-pointing authority directly for the next steps. The Secretary-General does
+not give reasons for the decision. 60
+Footnotes
+40
+See, e.g., ICC Rules, Art. 12.2; LCIA Rules, Art. 7.2.
+41
+ICC Rules, Art. 12.3.
+42
+ICC Rules, Art. 12.4 and 12.5.
+43
+CIETAC Rules, Art. 26.
+44
+The fees for this service are typically £1,250 for the LCIA (Schedule of Costs), €3,000 for the secretary-general of the
+PCA, US$5,000 for the ICC, and US$2,500–5,000 for ICDR (Canada). These figures are available on each institution’s
+website. See Rules of ICC as Appointing Authority in UNCITRAL or other arbitration proceedings, Appendix, Art. 1;
+ICDR Canadian Rules, p. 42.
+45
+https://icsid.worldbank.org/services/appointments-challenges/appointing-authority.
+
+Section E. - Appointment of Arbitrators, UKBC-REDFERN 530638629 (2025)
+© 2025 Thomson Reuters.
+5
+46
+One problem that has arisen in practice when the list system has failed and the appointment has been left to a third-party
+institution, or court, relates to the appointing authority appointing a person who has appeared on one of the party’s lists.
+It is not uncommon for the other party to object to such an appointment on the basis that the candidate has already been
+discussed by the parties, thereby ‘burning’ all of those names. To avoid this risk, it is useful to agree in advance that
+the inclusion of a name on the list will not operate as a bar to the eventual appointment of such a person by the arbitral
+institution or appointing authority. Another, more tactical, approach is for a party not to nominate the person whom it
+wants on the first list, but to keep the name in reserve, so that it might emerge in subsequent negotiations. However,
+such gamesmanship may prove to be self-defeating if the other party agrees to a person named on the first list!
+47
+ICDR Rules, Art. 13.6.
+48
+UNCITRAL Rules, Arts 8.2 and 9.3.
+49
+UNCITRAL Rules, Art. 9.1.
+50
+The IBA Guidelines on Party Representation provide that communications between a party representative and a
+prospective or party-nominated arbitrator relating to the selection of the presiding arbitrator fall outside the general rule
+that party representatives should not engage in ex parte communications with an arbitrator concerning the arbitration
+(see Guideline 8(b)).
+51
+As an alternative method to avoid the problem of biased arbitrators, the CPR Rules provide that neither the CPR nor the
+parties shall advise or otherwise provide any information or indication to any arbitrator candidate or appointed arbitrator
+as to which party selected either of the party-designated arbitrators (‘blind appointments’) (r. 5.4).
+52
+There may be exceptions, e.g. where the nature of the contract is likely to implicate only the area of expertise of the
+institution. For example, one author was appointed chair of an ad hoc arbitral tribunal by the President of the Law Society
+of England and Wales (the governing authority of the solicitors’ branch of the profession) acting as the appointing
+authority in a dispute under a severance agreement between a solicitor who was a partner of a law firm and the firm
+itself, where issues of solicitors’ ethics were concerned. It was thus sensible for a solicitor (which the institution was
+well-placed to identify) to be appointed as arbitrator.
+53
+English Arbitration Act 1996, s. 18(3).
+54
+See the discussion concerning the lex arbitri in Chapter 3, paragraphs 3.42ff.
+55
+For example, the English court may appoint an arbitrator where the seat of arbitration has not been designated, provided
+that the proceedings have sufficient connection with England, English Arbitration Act 1996, ss. 2(4) and 18. Under
+French law, the French courts may act in support of an international arbitration located abroad if (a) the parties have
+agreed that French procedural law shall apply to the arbitration; (b) the parties have expressly granted jurisdiction to
+French courts over disputes relating to the arbitral procedure; or (c) one of the parties is exposed to a risk of a denial
+of justice (understood as the impossibility to constitute the arbitral tribunal by any other means). See French Code of
+Civil Procedure, art. 1505. See also Seraglini and Ortscheidt, Droit de l’Arbitrage Interne et International (2nd edn,
+LGDJ, 2019), paras 774-781.
+56
+See, e.g., Swiss PIL, Ch. 12, s. 179; French Code of Civil Procedure, art. 1452. Article 11(4) of the Model Law confers
+upon the appropriate national courts the power to appoint arbitrators where necessary. The English Arbitration Act 1996,
+s. 18, gives the court the power to make an appointment in the event of a failure of the procedure for the appointment
+of the arbitral tribunal.
+57
+UNCITRAL Rules, Art. 6.2.
+58
+Hence the need to be clear, before discussing candidates between the parties, as to whether the candidates rejected may
+subsequently be appointed by an appointing authority, or if they are excluded or ‘burned’ as a result. Most parties agree
+to a ‘no burn’ rule whereby candidates rejected between the parties may still be appointed by the appointing authority.
+59
+The views of the parties, as well as concerns of speed and cost, may influence the Secretary-General’s choice of an
+individual, rather than of an organisation. The Secretary-General’s designations of organisations include the ACICA,
+the AAA, the Arbitral Centre of the Austrian Federal Economic Chamber, the Bombay Incorporated Law Society, the
+CRCICA, the CIArb, the DIS, the HKIAC, the ICC, ICSID, the KLRCA, the LCIA, SIAC, and the SAA. Examples
+of designations of individuals include: a former chief justice of New South Wales, Australia, in a dispute between a
+Korean company and an Asian state entity; an international arbitration practitioner based in the United Kingdom, in a
+dispute between a French company and the government of a Central European Republic; and an international arbitration
+practitioner based in the United States, in a dispute between a Dutch company and an African state entity.
+60
+In 2019, the PCA received 39 requests to designate an appointing authority or to act directly as the appointing authority.
+See PCA, Annual Report of the Permanent Court of Arbitration (PCA, 2019), p. 10.
+End of Document
+© NIGEL BLACKABY KC, CONSTANTINE PARTASIDES
+KC, ALAN REDFERN

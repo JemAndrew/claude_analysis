@@ -1,0 +1,91 @@
+Rights under the contract, UKBC-BULLENL 459371174 (2022)
+© 2025 Thomson Reuters.
+1
+Rights under the contract
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part E - Banking and Financial Services
+Chapter 16 - Sale of Shares
+Rights under the contract
+16-02
+The express terms of the contract and the general law of contract govern the rights and liabilities of the vendor and purchaser
+of shares. In the absence of express provision to the contrary, the following are the consequences of the contract:
+ 
+(1)Where the particular shares sold are not specified in the contract, the court cannot order specific performance of the
+contract in favour of the purchaser until shares have been appropriated to the contract. 6  Appropriation may possibly not
+occur in many cases of sales on the Stock Exchange until the transfer form has been filled in. After the shares have been
+identified, specific performance can be ordered 7  even where the purchase price is dependent on future events, such as
+future profits or losses. In such a case, the court may make a modified order for specific performance, designed, for example,
+to preserve the vendor’s lien for payment of the price. 8
+ 
+(2)The vendor remains the legal owner of the shares and is to be treated by the company as the owner of them: Companies
+Act 2006 s.126.
+ 
+(3)Beneficial ownership of the shares passes to the purchaser on the making of the contract. 9  This is so even if the sale is
+in breach of a right of pre-emption conferred by the articles of association of the company. 10
+ 
+(4)The passing of the beneficial ownership means that the purchaser becomes entitled to dividends declared after the date
+of the contract, even if the dividends relates to a period before the contract. 11  The vendor is entitled to dividends declared
+before the contract even if paid thereafter. 12  On a sale on the Stock Exchange at a time when a dividend is about to be
+declared, the contract will normally provide that the sale is to be cum div. or ex div. as the case may be.
+ 
+(5)The vendor is liable to the company for calls made on him in respect of the shares after the date of the contract; the
+purchaser (or a sub-purchaser to whom the shares have passed) is liable to indemnify him against the calls. 13  There is an
+implied promise to indemnify the vendor against such calls unless the purchaser “positively negative” it. 14
+ 
+(6)The company will only recognise the right to vote of the registered holder of shares. The vendor is entitled to cast the
+votes, and the purchaser acquires a right to direct how the votes are to be cast when he has paid the purchase price. 15
+ 
+(7)If a winding up intervenes before completion of the sale, the contract will not be specifically enforced, except in special
+circumstances, because a transfer of the shares would be prima facie void under the Insolvency Act 1986 s.127. 16  However,
+an agreement to sell shares may be sanctioned by the court as a scheme of arrangement, as such an agreement may amount
+to an “arrangement” between the company and its members for the purposes of s.895 of the Companies Act 2006, even if
+the company has purely administrative functions in relation to that arrangement. 17
+ 
+(8)The vendor’s obligation is to deliver to the purchaser a properly executed transfer of the shares and the relevant share
+certificate. There is no warranty that the company will accept the purchaser as a member, and the vendor may keep
+
+Rights under the contract, UKBC-BULLENL 459371174 (2022)
+© 2025 Thomson Reuters.
+2
+the purchase money even if the company wrongfully refuses to register the purchaser. 18  The contract may provide for
+“registration guaranteed”. 19
+Footnotes
+6
+Re London Hamburg and Continental Exchange Bank (1867) 2 Ch. App. 431.
+7
+See Llewellin v Grossman (1950) 83 Lloyd’s Rep. 462; Woodlands v Hinds [1955] 1 W.L.R. 688; Horrobin v Majestic
+Hotel (Cheltenham) Ltd (1973) 227 E.G. 993.
+8
+Langen & Wind Ltd v Bell [1972] Ch. 685.
+9
+Re National Bank of Wales [1897] 1 Ch. 298. See also Birdi v Specsavers Optical Group Ltd [2015] EWHC 2870 (Ch),
+in which the High Court indicated that the vendor under a contract to sell shares becomes constructive trustee from the
+date of contract and not from completion, and that this may be the case even where the price has not yet been determined
+in the context of a petition under s.994 of the Companies Act 2006.
+10
+Tett v Phoenix Property Co [1984] B.C.L.C. 599 (overruled on other points: [1986] B.C.L.C. 149 CA).
+11
+Black v Homersham (1879) 4 Ex. D. 24; Re Wimbush [1940] Ch. 92.
+12
+Re Kidner [1929] 2 Ch. 121 and compare Barclays Bank v R [1974] Q.B. 823.
+13
+Bowring v Shepherd (1870–71) L.R. 6 Q.B. 309; Re National Bank of Wales, above; Spencer v Ashworth Partington
+& Co [1925] 1 K.B. 589.
+14
+Rudge v Bowman (1868) L.R. 3 Q.B. 689, per Blackburn J.
+15
+Musselwhite v CH Musselwhite & Son Ltd [1962] Ch. 964. See also Stablewood Properties Ltd v Virdi [2010] EWCA
+Civ 865.
+16
+Sullivan v Henderson [1973] 1 W.L.R. 333.
+17
+Re Jelf Group Plc [2015] EWHC 3857 (Ch); [2016] B.C.C. 289.
+18
+Skinner v City of London Marine Corp (1885) 14 Q.B.D. 882; London Founders’ Association v Clarke (1888) 20 Q.B.D.
+576.
+19
+See Cruse v Paine (1869) L.R. 4 Ch. App. 441.
+End of Document
+© 2025 SWEET & MAXWELL

@@ -1,0 +1,111 @@
+Chapter 9 - Banking, UKBC-BULLENL 459370981 (2022)
+© 2025 Thomson Reuters.
+1
+Chapter 9 - Banking
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part E - Banking and Financial Services
+Chapter 9 - Banking
+Introduction
+9-01
+The modern law of banking is the product of a plethora of interwoven sources. Ancient common law principles have been
+supplemented by statutory interventions, from the Bills of Exchange Act 1882 to the modern-day Financial Services and
+Markets Act 2000. There are in addition layers of EU directives, domestic regulatory rules and guidance (in particular those
+promulgated by the Financial Conduct Authority), and voluntary codes of conduct. The landscape has been recently altered by
+a wave of litigation in the aftermath of the 2008 financial crisis. The practical issues facing banking lawyers have also changed
+significantly: the days where banking law was dominated by issues over cheques and other bills of exchange are gone, and
+modern litigation now involves a wide spectrum of claims, from the mis-selling of derivatives and other financial products,
+to claims involving fraud and money laundering. Nevertheless, it remains important to understand the fundamental nature of
+the relationship between the banker and customer, the respective obligations between them, and the nature of various types
+of bank accounts.
+References
+9-02
+The narrative in the following paragraphs cannot be, and is not intended to comprise, an exposition of the law of banking.
+Reference should be made the comprehensive texts available, including Paget’s Law of Banking (15th edn), the Encyclopaedia
+of Banking Law (a looseleaf subscription which is regularly revised and updated), Brindle & Cox, Law of Bank Payments (5th
+edition), Hewetson and Elliott, Banking Litigation (4th edition), and Ellinger’s Modern Banking Law (5th edition). 1
+Reference should also be made to the further chapters in this banking and financial services section, dealing with bills of
+exchange, bonds, the lending of money, guarantees and mortgages, financial services, and the stock exchange, as well as Ch.20
+on credit, finance and leasing. It should be noted in particular that since 2008 there has been no financial limit on the definition
+of a regulated consumer credit agreement, such that, subject to specified exceptions, all credit agreements involving money
+advanced to individuals are now regulated agreements under the Consumer Credit Act 1974.
+The relationship between banker and customer
+9-03
+The essential relationship between a banker and its customer is contractual, not fiduciary. 2  Obligations are owed on both sides
+of the contractual arrangement, the fundamental obligations of the bank being to honour its customer’s instructions and to repay
+on demand monies deposited in an account. Other obligations may be come into existence by virtue of specific arrangements.
+For example, the parties may enter into a loan agreement or overdraft facility, or the bank may agree to provide certain specific
+
+Chapter 9 - Banking, UKBC-BULLENL 459370981 (2022)
+© 2025 Thomson Reuters.
+2
+services with concomitant obligations, for example in relation to the provision of banker’s drafts, letters of credit or other
+instruments, or the provision of foreign currency services, or advisory services.
+Absent such special arrangements, terms are rarely to be implied into the underlying banker/customer contract. 3  So for example,
+there is not normally an implied term in the contract between bank and customer obliging the bank to provide overdraft facilities
+or other finances to its customer, 4  nor is there an implied obligation upon the bank to inform its customers of the introduction
+of more advantageous forms of account 5  or to give a period of notice to the customer before withholding further finances. 6
+Equally, there is in general no implied obligation upon the bank to advise its customer that particular borrowing is or may be
+imprudent. 7  On the other, a bank does owe a statutory duty to perform such services as it is providing with skill and care,
+by virtue of s.13 of the Supply of Goods and Services Act 1982. It is also under an implied obligation to keep its customer’s
+affairs confidential. 8
+Banks have been found to owe tortious duties of care to customers in a variety of factual circumstances, including the following:
+ 
+(1)A duty not to honour a payment instruction where the bank is on notice of a potential fraud: see para.9-11.
+ 
+(2)Where a bank gives financial advice to a customer, for example in relation to derivatives or security documents, it has
+a duty to provide its advice with reasonable skill and care: see para.9-21.
+ 
+(3)When providing a reference for a customer, the bank owes a duty of care and faces potential liability for negligent
+misstatements. 9
+In general, the bank does not owe a duty of care to third parties, such as the customer’s own clients. 10  It has been held that
+a bank which fails to honour a payment instruction owes no duty of care to the intended beneficiary of the payment. 11  A
+bank notified of a freezing order does not owe a duty in tort to the party that has obtained the order to take care to prevent the
+dissipation of money in the frozen account. 12
+Footnotes
+1
+Paget’s Law of Banking, 15th edn (London: LexisNexis, 2018); Wood, Encyclopaedia of Banking Law (London:
+LexisNexis) (looseleaf); Brindle & Cox, Law of Bank Payments, 5th edn (London: Sweet & Maxwell, 2017); Hewetson
+and Elliott, Banking Litigation, 4th edn (London: Sweet & Maxwell); Ellinger’s Modern Banking Law, 5th edn (Oxford:
+OUP, 2010).
+2
+Foley v Hill (1848) 2 HL Cas. 28; Hart v Sangster [1957] 1 Ch. 329 at 337; Joachimson v Swiss Bank Corp [1921] 3
+K.B. 110 at 127; First City Monument Bank Plc v Zumax Nigeria Ltd [2019] EWCA Civ 294, [25].
+3
+A variety of alleged implied terms were rejected by the Court of Appeal in Property Alliance Group Ltd v Royal Bank
+of Scotland Plc [2018] 1 W.L.R. 3529 (permission to appeal was refused by the Supreme Court [2018] 1 W.L.R. 4517).
+4
+Suriya & Douglas v Midland Bank [1999] 1 All E.R. 612.
+5
+Barclays Bank v Green unreported 17 May 1996 CA.
+6
+Socomex v Banque Bruxelles Lambert SA [1996] 1 Lloyd’s Rep. 156.
+7
+Williams & Glyn’s Bank Ltd v Barnes (1980) 10 Legal Decisions Affecting Bankers 200; [1981] Com. L.R. 205; Frost
+v James Finlay Bank [2001] Lloyd’s Rep. Bank. 302, 310–311.
+8
+Tournier v National and Union Bank of England [1924] 1 K.B. 461; United Pan-Europe Communications NV v Deutsche
+Bank AG [2000] 2 B.C.L.C. 461; Christofi v Barclays Bank Plc [2000] 1 W.L.R. 937. See Paget’s Law of Banking, 15th
+edn (London: Butterworths, 2018), pp.90-92; Neate and Godfrey, Bank Confidentiality, 6th edn (London: Boomsbury,
+2015).
+9
+Hedley Byrne & Co Ltd v Heller & Partners Ltd [1964] A.C. 465; HSBC Bank Plc v So [2009] EWCA Civ 296; Playboy
+Club London Ltd v Banca Nazionale Del Lavoro SPA [2014] EWHC 2613 (QB). Note, however, that (subject to satisfying
+the requirement of reasonableness under the Unfair Contract Terms Act 1977) a bank can disclaim legal responsibility,
+and did so successfully in the Hedley Byrne case itself: see Paget’s Law of Banking, 15th edn (2018), p.98.
+10
+See Ellinger’s Modern Banking Law, 5th edn (2010), p.167; Box v Midland Bank [1998] Lloyd’s L.R. Banking 185 at
+205; Diamantides v JP Morgan Chase Bank [2005] EWCA Civ 1612. See also Chudley v Clydesdale Bank Plc [2017]
+
+Chapter 9 - Banking, UKBC-BULLENL 459370981 (2022)
+© 2025 Thomson Reuters.
+3
+EWHC 2177 (Comm) (reversed on appeal, but not on this point [2019] 1 Lloyd’s Rep. 333), where it was held that no duty
+of care was owed by the bank to (third party) clients of the bank’s customer who had been defrauded by the customer.
+11
+Wells v First National Commercial Bank [1998] P.N.L.R. 552, CA.
+12
+Customs & Excise Commissioners v Barclays Bank Plc [2006] UKHL 28; [2006] 3 W.L.R. 1.
+End of Document
+© 2025 SWEET & MAXWELL

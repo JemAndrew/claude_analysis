@@ -1,0 +1,104 @@
+Rule 44.3 - Court’s discretion and circumstances to be..., UKBC-WHITEBK...
+© 2025 Thomson Reuters.
+1
+Rule 44.3 - Court’s discretion and circumstances to be taken into
+account when exercising its discretion as to costs
+White Book 2025  | Commentary last updated December 4, 2018
+Volume 2
+Section 7 - Legal Representatives—Costs and Litigation Funding
+Section 7B - CPR 43 to 45 [Before 1 April 2013]
+Part 44 [Before 1 April 2013] General Rules about Costs
+ 
+Related Practice Directions
+Rule 44_3
+44.3— Court’s discretion and circumstances to be taken into account when exercising its discretion as to costs 1
+7B-10+
+(1) The court has discretion as to—
+(a) whether costs are payable by one party to another;
+(b) the amount of those costs; and
+(c) when they are to be paid.
+(2) If the court decides to make an order about costs—
+(a) the general rule is that the unsuccessful party will be ordered to pay the costs of the successful party; but
+(b) the court may make a different order.
+(3) The general rule does not apply to the following proceedings—
+(a) proceedings in the Court of Appeal on an application or appeal made in connection with proceedings in the
+Family Division; or
+(b) proceedings in the Court of Appeal from a judgment, direction, decision or order given or made in probate
+proceedings or family proceedings.
+(4) In deciding what order (if any) to make about costs, the court must have regard to all the circumstances, including—
+(a) the conduct of all the parties;
+(b) whether a party has succeeded on part of his case, even if he has not been wholly successful; and
+(c) any payment into court or admissible offer to settle made by a party which is drawn to the court’s attention,
+and which is not an offer to which costs consequences under Part 36 apply.
+(5) The conduct of the parties includes—
+(a) conduct before, as well as during, the proceedings, and in particular the extent to which the parties followed
+the Practice Direction (Pre-Action Conduct) or any relevant pre-action protocol;
+
+Rule 44.3 - Court’s discretion and circumstances to be..., UKBC-WHITEBK...
+© 2025 Thomson Reuters.
+2
+(b) whether it was reasonable for a party to raise, pursue or contest a particular allegation or issue;
+(c) the manner in which a party has pursued or defended his case or a particular allegation or issue;
+(d) whether a claimant who has succeeded in his claim, in whole or in part, exaggerated his claim.
+(6) The orders which the court may make under this rule include an order that a party must pay—
+(a) a proportion of another party’s costs;
+(b) a stated amount in respect of another party’s costs;
+(c) costs from or until a certain date only;
+(d) costs incurred before proceedings have begun;
+(e) costs relating to particular steps taken in the proceedings;
+(f) costs relating only to a distinct part of the proceedings; and
+(g) interest on costs from or until a certain date, including a date before judgment.
+(7) Where the court would otherwise consider making an order under paragraph (6)(f), it must instead, if practicable,
+make an order under paragraph (6)(a) or (c).
+(8) Where the court has ordered a party to pay costs, it may order an amount to be paid on account before the costs
+are assessed.
+(9) Where a party entitled to costs is also liable to pay costs the court may assess the costs which that party is liable
+to pay and either—
+(a) set off the amount assessed against the amount the party is entitled to be paid and direct him to pay any
+balance; or
+(b) delay the issue of a certificate for the costs to which the party is entitled until he has paid the amount which
+he is liable to pay.
+Editorial note
+7B-10.
+1+
+This rule, together with r.44.4 (Basis of assessment) and CPR r.44.5 (Factors to be taken into account in deciding amount of
+costs), form the heart of Pt 44. After the re-enactment of Pt 44 by the Civil Procedure (Amendment) Rules 2013 (SI 2013/262),
+with effect from 1 April 2013, with the exception of para.(9), this rule became r.44.2. (Para.(9) became r.44.12 (Set off).) For
+amendments made to this rule taking effect on 1 April 2013, see para.44.2.1 above. (Rule 44.3 was supplemented by Section 8
+of the Costs Practice Direction; r.44.2 is supplemented by subs.4 of Practice Direction 44.)
+
+Rule 44.3 - Court’s discretion and circumstances to be..., UKBC-WHITEBK...
+© 2025 Thomson Reuters.
+3
+The court’s discretion (r.44.3(1))
+7B-10.
+2+
+For commentary on the exercise of the court’s discretion as to costs, see commentary following r.44.2 (as enacted with effect
+from 1 April 2013) above.
+Additional liability for costs
+7B-10.
+3+
+As a result of provisions in the Access to Justice Act 1999 and related legislation (explained above in para.7B-2.2+ “funding
+arrangement”), it became possible for a court to impose on a paying party liability for certain additional receiving party costs, in
+particular “success fees” payable under CFAs and costs protection insurance premiums. Consequently, by the Civil Procedure
+(Amendment No.3) Rules 2000 (SI 2000/1317) r.43.2(1)(a), the definition of “costs” was enhanced by the addition of the words
+“any additional liability incurred under a funding arrangement” (see further para.7B-2.2+). (For the same purpose that statutory
+instrument also added rr.44.3A and 44.3B and 44.15 to 44.17 to Pt 44.) Since 1 April 2013 the circumstances in which a court
+may award such costs is greatly reduced (see para.7B-2.2+). Insofar as the power survives, rules in Pt 44 related to its exercise
+continue to apply as they were in force immediately before 1 April 2013.
+Related Practice Directions
+ 
+Costs Practice Direction (CPR Pt 43) [Before 1 April 2013]
+ 
+Costs Practice Direction (CPR Pt 44) [Before 1 April 2013]
+ 
+Costs Practice Direction (CPR Pt 45) [Before 1 April 2013]
+ 
+Costs Practice Direction (CPR Pt 47)
+ 
+Back to top
+Footnotes
+1
+Amended by the Civil Procedure (Amendment No.3) Rules 2006 (SI 2006/3435).
+End of Document
+© 2025 SWEET & MAXWELL

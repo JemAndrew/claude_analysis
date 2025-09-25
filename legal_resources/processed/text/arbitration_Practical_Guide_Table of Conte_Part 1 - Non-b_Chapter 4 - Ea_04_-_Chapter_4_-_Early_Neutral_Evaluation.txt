@@ -1,0 +1,336 @@
+Chapter 4 - Early Neutral Evaluation, UKBC-EFFDIS 549291544 (2025)
+© 2025 Thomson Reuters.
+1
+Chapter 4 - Early Neutral Evaluation
+A Practical Guide to Effective Dispute Resolution: Methods & Clauses 1st Ed.
+Mainwork
+Part 1 - Non-binding Dispute Resolution Methods and Escalation Clauses
+Chapter 4 - Early Neutral Evaluation
+Overview
+4-001
+Early neutral evaluation (ENE) is a tool to help the parties resolve their disputes without having to move to a binding stage
+(being litigation or arbitration). The purpose of ENE is to reduce litigation costs by addressing disputes early, focusing on
+discovery and facilitating effective negotiations. Unlike traditional litigation, ENE is designed to save time and resources by
+using a third-party to identify the core issues at stake, and assess the strengths and weaknesses of each party’s position, and
+set the stage for potential resolution. In itself, it will not resolve a dispute but has the potential to help the parties adjust their
+expectations and to narrow the gap between their positions. The main difference between ENE and expert determination (which
+will be discussed in Chapter Five) is that, in ENE, the independent evaluator is not being asked to make a decision but to give
+an opinion on the merits of a potential claim/dispute.
+The parties ask an independent third-party evaluator to hear their competing positions and to provide an assessment of the
+relative merits of each side’s case. Although an evaluator is not required to, it is possible for the parties to request that the
+evaluator provides an evaluation of the likely outcome if the issue put before them went to a binding dispute resolution stage.
+The development of ENE as an identifiable process stems from a judge in California who, in 1982, appointed a task force to
+which he gave one objective: to determine if there are ways the court can help make litigation less expensive. 1  A committee
+analysed the cost of litigation to identify where most money was spent and the underlying causes of the cost problem. This
+committee reached the conclusion that the place where most money could be saved was in the early stages of litigation.
+The committee found that it was in those stages that patterns and expectations were set and concluded that an “infusion of
+intellectual discipline, common sense, and more direct communication” 2  might have the most beneficial effect. A programme
+was put together and received positive feedback from various test cases. In this programme, the success of ENE hinged on
+experienced evaluators providing unbiased assessments, focusing discovery on key issues, and fostering an environment that
+is conducive to settlement.
+Effectiveness and benefits
+4-002
+Whilst the benefits of ENE may seem obvious, either party’s lawyers may resist including an agreement for ENE in a contract
+or, in the absence of a clause mandating ENE, may be sceptical about the value of ENE and the potential for evaluators to be
+perceived as biased. A possible reason for a lawyer resisting the use of ENE include where they believe their client has a weak
+case and, as a result, they fear that ENE could expose that weakness. In addition, if a lawyer believes that the other party may
+not negotiate in good faith, they could conclude that ENE is a waste of time and resources. Unfortunately, if a party were to
+receive advice from their lawyer that they should not engage in ENE, the practical effect would be that ENE is then unlikely
+to be used. The effectiveness can also be reduced if the parties are not fully committed to the process or if the evaluator lacks
+the necessary expertise in the relevant area of law.
+The development of ENE showed that there was a positive impact on participants, including reductions in the time and cost
+that were (or would have been) associated with litigation. Participants particularly appreciated the opportunity for early case
+
+Chapter 4 - Early Neutral Evaluation, UKBC-EFFDIS 549291544 (2025)
+© 2025 Thomson Reuters.
+2
+assessment, which, in turn, facilitated more informed decision making regarding settlement versus continued litigation. One of
+the major benefits of ENE is that it can help clarify the issues whilst, at the same time, improving communication between the
+parties. In themselves, these simple benefits often lead to early dispute resolution.
+As with mediation, the biggest factors that can reduce the benefits of ENE are the lack of engagement of all parties involved,
+as well as the expertise and neutrality of the evaluator.
+In addition to significantly reducing the time and cost of commercial litigation by encouraging early settlement, ENE also
+provides a confidential setting where parties can openly discuss their positions without the formalities and pressures of court
+proceedings. This environment helps facilitate open communication and more realistic assessments. In turn, this can increase
+the prospects for developing innovative solutions tailored to the specific needs of the disputing parties.
+From its development in the 1980’s, ENE has received recognition for its efficiency and cost-effectiveness, embodying the
+principle that a timely intervention can prevent more extensive and expensive litigation. This approach aligns with the adage
+“a stitch in time saves nine”, suggesting that early expert input can lead to substantial time and money savings.
+The process is designed to be flexible, allowing for its application at virtually any stage prior to the final hearing. It can be
+effectively applied to commercial disputes where the complexities and stakes are high. However, whilst it can be used at any
+time, it is most helpful when employed early in the dispute resolution process.
+Given the nature of the role of the evaluator, even at its early stage of development, generative artificial intelligence (AI) has
+enormous potential to enhance the concept of ENE. As is discussed in detail in Chapter Ten, this is because AI excels in learning
+from large data sets and has the capacity to provide advice that, behind the scenes, is based on a statistical analysis of previous
+published cases including reference to all relevant statutes, regulations and previous judgments. Having done that, AI has the
+potential capacity to produce a list of the issues and identify what has to be proven/disproved by either party in order to win. As
+such, it is highly likely that the future of ENE in dispute resolution will be enhanced by AI with both cost and time being reduced.
+The use of generative AI tools also brings the potential for either party to run their own AI-based ENE without any engagement
+with the other party (see Chapter Ten on AI). The use of AI in this way can help inform a party’s negotiation and/or litigation
+strategy and, at the same time, give the party a sense check of their position and, in so doing, manage expectations.
+When to apply?
+4-003
+Ideally, ENE should take place at an early stage of a dispute but, in principle, ENE is a tool that can be employed at any stage of
+the dispute resolution process. Whenever it is applied, it is important for both parties to be clear (and agree) what the primary
+issues are and whether there are any disputes of fact. As such, the benefits of ENE can be reduced if it is used at the very start
+of a dispute before any real negotiation has begun or the real issues in dispute have been identified. This is because, without
+identifying the issues, the expert might inadvertently be asked to address issues that turn out not to be contentious or, indeed,
+change as the parties continue their efforts to resolve the dispute.
+From a practical perspective, once negotiations have started and the parties have effectively declared their positions, it can be
+highly beneficial to apply an ENE stage at any point before binding procedures start.
+There is no automatic reason for ENE to be linked to mediation but, if mediation is to be attempted, ENE can be particularly
+helpful prior to starting the mediation process. Conversely, if mediation was attempted before ENE but settlement is not
+achieved, there is still a chance that mediation will have narrowed the issues or gap in the dispute. In this case, having helped
+the parties to determine what it is they can agree on and what is disputed, a new understanding of the outstanding issues (that
+can arise from the mediation) can still feed into a final ENE stage prior to moving to a binding stage if unresolved.
+
+Chapter 4 - Early Neutral Evaluation, UKBC-EFFDIS 549291544 (2025)
+© 2025 Thomson Reuters.
+3
+The process
+4-004
+Once the key issues have been identified, a neutral evaluator, being an expert in the subject matter of the dispute, needs to
+be chosen by mutual agreement of the parties or through a process designated in the dispute resolution clause of a contract.
+It is essential for the scope of the evaluator’s work to be defined and any questions worded carefully to ensure that, after the
+evaluation has been provided, a party does not say “ah, but the evaluator did not consider x, y, or z”.
+The parties need to be clear that the role of the evaluator is to provide a frank, non-binding assessment of the merits of the case,
+potential outcomes and areas for settlement.
+Having provided the evaluator with a case summary identifying the issues, each party then presents its case to the evaluator,
+outlining the key facts, legal arguments and evidence supporting their position. This presentation can take various forms,
+including written submissions, oral presentations, or a combination of both. The process is designed to be less formal and
+adversarial than traditional litigation.
+After consideration of the facts and any legal submissions, the evaluator then provides a non-binding opinion based on their
+assessment of the strengths and weaknesses of each party’s case. This opinion may include insights into the likely outcome if
+the dispute were to proceed to formal binding proceedings.
+Once the evaluation is received, the parties need to consider how this impacts on their willingness to settle. There remains a real
+risk that, if one party is deeply entrenched in their position, they might find it psychologically difficult to accept the conclusions.
+In the extreme, an evaluation may be provided that effectively says to one party: “You are in the right and will win”, but for
+the other party to still insist on going to court.
+This unwillingness to change position is more likely to surface if there is an imbalance in power and especially where one
+party has deeper pockets. This is an extension of the well-known strategy of a defendant/respondent delaying and extending
+proceedings in the hope that the opposing party runs out of money, or some other critical time event happens.
+The parties need to be aware that, even if ENE is in their favour, an opposing party may still not be willing to settle. As good
+practice, similar to the requirements for a successful structured mediation, the parties should ideally confirm their willingness
+to change position if an ENE highlights particular strengths or weaknesses on either side of the dispute.
+By default, the discussions and opinions shared during the ENE process are confidential, encouraging open communication
+between the parties. It is also normal to include an agreement that the report of the evaluator is without prejudice to any
+subsequent binding proceedings and will not be seen by a judge or arbitrator. This does not stop the evaluation being used
+to help frame the subsequent submissions of either party and it is normal for this to find its way into skeleton arguments or
+position statements.
+Implementing ENE requires careful planning and consideration of the specific dynamics of each case. Lawyers must prepare
+by gathering and presenting evidence effectively, formulating clear arguments and being open to the evaluator’s feedback. The
+choice of an evaluator is critical; their expertise and impartiality can significantly influence the process’s effectiveness.
+The parties have flexibility about how to conduct the ENE process and, provided they stay focused on the overall reason for
+running an ENE stage, can merge or skip some of the steps.
+The key requirements for effective application of ENE are:
+ 
+1.Initiate ENE at the earliest stage of the dispute to prevent the escalation of conflict and costs. Early involvement facilitates
+a more open dialogue between the parties and sets a cooperative tone for resolution.
+ 
+2.Choose an evaluator with extensive expertise in commercial law and specific knowledge relevant to the dispute. The
+evaluator’s impartiality, experience and reputation are crucial for credibility and acceptance of their feedback.
+ 
+3.Both parties submit briefs to the evaluator detailing their view of the case facts, legal issues and arguments. A challenge is
+that these submissions need to be concise yet comprehensive, allowing the evaluator to understand the dispute’s core issues.
+
+Chapter 4 - Early Neutral Evaluation, UKBC-EFFDIS 549291544 (2025)
+© 2025 Thomson Reuters.
+4
+ 
+4.Conduct an initial meeting with the evaluator to outline the ENE process, discuss confidentiality agreements and set
+expectations for the evaluation. Whilst the parties should ideally have already agreed the process and confidentiality
+requirements, by sharing these in the presence of the evaluator, this step ensures all parties are aligned.
+ 
+5.The next stage is the evaluation session which involves the parties presenting their case, including key evidence and
+arguments. In order for the process to be effective, the parties should be prepared for the evaluator to ask questions of
+clarification. At this stage, in order to maintain confidence in their independence, it is important that the evaluator takes
+care in framing the questions to avoid creating a sense of bias.
+ 
+6.The evaluator provides an unbiased assessment of the dispute, highlighting the strengths and weaknesses of each party’s
+position. If the parties have agreed and the evaluator is instructed, the assessment can also include predictions on likely
+outcomes in litigation, potential areas for compromise and recommendations for settlement.
+The formal part of ENE ends when the expert provides their evaluation. For the process to be of any benefit, after receiving
+the evaluator’s assessment, the parties then normally engage (or re-engage) in negotiations to explore settlement options. If
+requested, the evaluator can also facilitate these discussions, helping to identify mutually beneficial solutions and encourage
+compromise. However, at this stage, the role of the evaluator effectively shifts to that of a mediator. Care needs to be taken in
+deciding whether to ask the evaluator to do this as the skills required of an effective mediator are different. As the evaluator
+will have been chosen for their knowledge of the area of dispute, they may not have the skills necessary to act as a mediator.
+Depending on the outcome of the negotiations that follow the ENE, if there are still unresolved issues, a follow-up discussion
+(or mediation) may be necessary. This can address the unresolved issues, refine settlement terms, and/or explore alternative
+dispute resolution methods if a settlement is not reached.
+If a settlement is achieved, the agreement needs to be recorded in a legally binding contract. As with negotiated or mediated
+settlements, if proceedings have not yet started, this settlement contract is not the same as a court order or an arbitration consent
+award but will be considered to be a stand-alone contract/settlement agreement. The fact that resolution has been facilitated by
+ENE does not affect the requirement for a formal legally enforceable agreement.
+As enforceability arises from the contractual nature of the settlement agreement, if required, enforcement would require a
+separate claim. All is not lost if no settlement is reached with the help of ENE as the evaluator may provide a written summary
+of the assessment and recommendations for future actions. A further potential benefit is that, even if not resolved, the evaluation
+process may have led to the parties narrowing the issues that may ultimately need to be placed before a court or tribunal.
+If an ENE process leads to a successful outcome for parties in an ongoing business relationship, they should consider reviewing
+how it worked and considering options to improve its effectiveness and/or areas for improvement that may enhance the process
+in the event of any future disputes.
+If ENE does not lead directly to a successful outcome, it still has the potential to clarify each party’s position with regard to the
+evaluation of issues put to the evaluator. Whether this leads to further non-binding dispute resolution steps will depend on the
+circumstances but, if the decision to use ENE arose from a multi-tier escalation clause, the next step will have been determined
+by the clause and is likely to include mediation and/or arbitration as the next or final steps.
+Benefits
+4-005
+One of the primary benefits of ENE is that it can facilitate a quicker resolution compared to binding proceedings. It is important
+to note that, whilst ENE is not an alternative to mediation, if the dispute lends itself to such an evaluation, it has the potential to
+bring the parties closer without the cost of mediation. However, it should be noted that the costs of ENE are likely to be higher
+than mediation and this needs to be balanced against the benefit of reducing the level of tension that can arise if parties need to
+change their position or compromise without any factual justification. In any event, by narrowing the issues early on, there is
+a good chance that the parties may save on the costs associated with lengthy litigation.
+
+Chapter 4 - Early Neutral Evaluation, UKBC-EFFDIS 549291544 (2025)
+© 2025 Thomson Reuters.
+5
+A significant benefit of ENE can be where one side is being unrealistic about its chances of success at trial. A neutral evaluator
+can highlight weaknesses in a case that would be fully exposed if the matter were litigated. Having said that, if unrealistic
+expectations are driven by emotions and/or beliefs, then it is possible that even a definitive evaluator’s report highlighting that
+a party is likely to “lose”, may not affect that party’s willingness to settle.
+Whatever the outcome, given the softer, less adversarial nature of ENE, a material secondary benefit is that it can help maintain
+working relationships between parties, which is particularly important in commercial settings.
+Issues
+Voluntary participation
+4-006
+Given that ENE requires both parties to voluntarily participate, if the use of ENE is not prescribed (e.g. in a dispute resolution
+clause) and either party is unwilling, the process may not be effective. However, the impact of unwillingness to participate
+is not the same as in mediation. This is because, for a mediation to be successful, active engagement and concessions by
+both parties is required. In contrast, in ENE, it is possible for an evaluation to take place based on documentary evidence
+and limited submissions.
+In the same way that a lawyer could be asked to provide a confidential opinion or advice to an instructing party without any
+input from the opposing party, an ENE evaluator could provide their evaluation to both parties having received limited input
+from one party. Whilst this is not likely to be accepted by the reluctant party, there is still a good chance that it will serve to
+reset expectations and, as a result, bring a potential settlement closer.
+Absence of full disclosure
+4-007
+As ENE is normally attempted early in the dispute resolution process and is not governed by formal regulations, compared
+to litigation, ENE is likely to start without full disclosure and relatively limited discovery. This gives rise to the possibility
+that an evaluator could be instructed to make their assessment without access to all the facts.
+As a result, there is a risk that when the evaluation is provided, a party who feels that the evaluation is against them could
+effectively refuse to accept it and thereby eliminate the primary benefit of ENE in closing the gap. If the parties genuinely
+wish to settle without going through a binding process, in order to mitigate this potential risk, it is important that they agree
+that all relevant issues have been identified and relevant information has been disclosed.
+Perception of bias
+4-008
+As with any non-binding ADR process, the risk of a perception of bias affects the prospects of success. In the circumstances
+of a binding proceedings, be it arbitration or litigation, this can cause parties to consider an appeal. In the case of ENE, it
+will inevitably lead to the party who perceives bias to be tempted to ignore the evaluation and not to change their position.
+In order to maximise the benefit of ENE, it is important that every effort is made to ensure that the evaluator is unbiased
+and, equally importantly, is seen to be unbiased.
+
+Chapter 4 - Early Neutral Evaluation, UKBC-EFFDIS 549291544 (2025)
+© 2025 Thomson Reuters.
+6
+Apart from standard checks of previous connections between the evaluator and either of the parties, an important requirement
+is that the choice of the evaluator is made in a way that all parties have an input into the choice. In the event that they cannot
+agree, then it is normal to ask an institution to appoint an evaluator. 3
+Types of disputes suitable for ENE
+4-009
+The typical application areas cover a range of disputes including supply contracts, construction, engineering, information
+technology, insurance, rent reviews and valuation disputes. The common theme that makes these areas suitable is that they
+can give rise to disputes where the matrix of facts is agreed and the barrier(s) to settlement include a specialised or technical
+issue which the parties interpret differently. Similarly, any dispute where there is a disagreement over the application of the
+law, lends itself to judicial ENE.
+ENE can be particularly effective in circumstances where the parties have widely differing views of the merits of their case. In
+these situations, ENE has the potential to provide a reality check and encourage more realistic settlement discussions.
+Types of disputes less suitable for ENE
+4-010
+Independent of the commercial area, ENE is not suitable in circumstances where there are material disputes over facts that
+would require the court or tribunal to conduct a fact-find in order to determine the outcome. Depending on the nature of the
+disputed facts, it would be possible to ask an evaluator to make an assessment on the basis of different factual scenarios, but
+this would provide no real benefit in bringing the parties closer to a resolution.
+ENE is also not suitable for highly emotional disputes. Whilst the stereotypical view is that these off-limits cases are likely to
+be areas similar to family law cases, it is remarkably common to find that commercial disputes are also filled with emotion,
+with parties being driven by wanting their day in court and not being prepared to reach a pragmatic commercial solution.
+It is also worth noting that positions can become polarised over time to the point that parties’ recollections of events evolve
+in ways that reflect a repeatedly stated position rather than an accurate recollection of events. This important issue of memory
+fallibility is usefully discussed in the English law case of Gestmin v Credit Suisse. 4
+Drawing up an ENE agreement
+4-011
+An important characteristic that ENE has in common with other ADR processes is that, largely speaking, the parties have
+complete flexibility over the process. However, if they cannot agree, this potential benefit can quickly turn it a problem. As
+a result, it is important that, having appointed an evaluator, all the steps in the process are clear both to the parties and to the
+evaluator.
+An experienced evaluator should be able to provide a template confirming the process and the parties’ respective roles. The
+process can also be agreed (or modified) through discussions involving both parties and the evaluator. To reduce the risk of
+spin-off disagreements, the agreement should be as detailed as possible.
+The non-contentious essential elements of such an agreement should include: 5
+ 
+• the confidential and without prejudice nature of the process;
+
+Chapter 4 - Early Neutral Evaluation, UKBC-EFFDIS 549291544 (2025)
+© 2025 Thomson Reuters.
+7
+ 
+• the impartiality of the evaluator;
+ 
+• the scope of documents each side will be required to disclose;
+ 
+• the evaluator’s remit, and instructions relating to what elements of the dispute are to be considered;
+ 
+• whether the evaluator is required to explain the reasoning behind the evaluation;
+ 
+• responsibility for the evaluator’s fees;
+ 
+• the timetable for running the ENE; and
+ 
+• procedure for the ENE.
+Incorporating an ENE clause into a contract
+4-012
+In principle, an ENE clause can be incorporated into a multi-tier dispute resolution clause in the same way as negotiation and
+mediation. However, because it is flexible and because it can usefully fit anywhere from negotiation to the point where the
+escalation clause reaches its final binding stage, it is very difficult to determine the trigger and where it should be placed.
+As such, it is recommended not to include ENE as a required element in a contractual dispute resolution clause but for the clause
+to refer to ENE more as a reminder to the parties to consider it if appropriate.
+A simple standalone ENE clause that serves to remind parties could be worded like this:
+“The parties agree that before initiating any formal dispute resolution process (such as litigation or
+arbitration), they will consider participating in Early Neutral Evaluation (ENE) in a good faith attempt to
+resolve the dispute. The ENE process will be conducted in accordance with [specify any relevant rules or
+procedures].”
+What is the outcome of using ENE?
+4-013
+Although the evaluator will assess the case and comment on the merits, they have no power to impose any settlement and cannot
+force the parties to accept any proposed settlement terms.
+The process is usually conducted without prejudice, meaning the outcome cannot be disclosed to the courts without the consent
+of both parties. Despite this, the analysis made by the evaluator can be used by the parties to come to a settlement privately
+or used in mediation following the evaluation. Although it cannot be shown to court or a tribunal without the parties’ consent,
+as mediation is non-binding, there is no conceptual barrier to the parties showing the mediator a copy of the evaluation and
+summarising their position regarding the points raised.
+The key objective of the ENE process is to provide the parties with an impartial appraisal regarding the strengths and weaknesses
+of their case in the hope that this will help the parties adjust their position and close the gap.
+
+Chapter 4 - Early Neutral Evaluation, UKBC-EFFDIS 549291544 (2025)
+© 2025 Thomson Reuters.
+8
+Risks v benefits
+4-014
+It is key for the parties to understand that the primary benefit of ENE is that it is a quick process that helps parties evaluate
+the risks in pursuing a litigation or arbitration claim and, as a result of identifying weaknesses in their cases and gaps in their
+evidence, it can motivate parties to enter into settlement discussions or, equally valuable, it can encourage parties to adjust
+their starting points.
+Having narrowed the gap, whilst the ENE is confidential, this also has the potential to narrow the issues that need to be considered
+in a court or tribunal by identifying the central issues in the dispute.
+The main risk of an ENE is that a clear-cut outcome might make one party less willing to compromise. In turn, this could reduce
+the scope for settlement through negotiation. However, even if this risk exists, it is important to note that the evaluation might
+accurately predict the outcome of a costly legal process. Understanding that risk could still motivate an out-of-court settlement,
+saving everyone time and money spent on legal fees.
+Footnotes
+1
+W.D. Brazil et al., “Early Neutral Evaluation: an experimental effort to expedite dispute resolution” (1986) 69(5)
+Judicature 279–285.
+2
+Brazil et al., “Early Neutral Evaluation: an experimental effort to expedite dispute resolution” (1986) 69(5) Judicature
+279–285, 279.
+3
+Examples of institutions offering to select an expert for the purposes of ENE: Academy of Experts; ADR Group;
+Centre for Effective Dispute Resolution (CEDR); City Disputes Panel (CDP); Chartered Institute of Arbitrators (CIArb);
+London Court of International Arbitration (LCIA); and Royal Institute of Chartered Surveyors (RICS).
+4
+Gestmin SGPS SA v Credit Suisse (UK) Ltd [2013] EWHC 3560 (Comm); [2020] 1 C.L.C. 428 at [15]–[23], per Leggatt J.
+5
+Ian Carson, “Early neutral evaluation: what is it and how does it work?”, Harper James, https://harperjames.co.uk/article/
+guide-to-early-neutral-evaluation/.
+End of Document
+© 2025 SWEET & MAXWELL

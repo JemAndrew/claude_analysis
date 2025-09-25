@@ -1,0 +1,42 @@
+Non-delivery, UKBC-BULLENL 459372225 (2022)
+© 2025 Thomson Reuters.
+1
+Non-delivery
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part F - Business Law
+Chapter 25 - Supply of Goods and Digital Content
+Claims by the buyer
+Non-delivery
+25-20
+The most common remedy sought for non-delivery of goods is an action for damages for non-delivery and, as with damages for
+non-acceptance, the measure of damages will prima facie be the difference between the contract price and the market or current
+price of the goods at the time for delivery or of the refusal to deliver (SGA s.51). If delivery is simply delayed then the measure of
+damages will be the fall in the market or current value between the contractual time for delivery and the actual time of delivery. 9
+If the buyer has already paid all or part of the purchase price, the payment is recoverable either as damages for non-delivery
+or as money paid on a consideration which has wholly failed.
+The actual resale price of the goods by the buyer (as where the buyer has sub-sold in advance of delivery) may be irrelevant to
+the assessment of damages based on the market price on the delivery date 10  but if the seller has actual or imputed knowledge
+of the fact that the buyer has sub-sold or intends to sub-sell the goods, the actual loss sustained by the buyer on resale by way
+of lost profit or liability to the sub-buyer in damages may be recoverable as additional damages. 11
+In exceptional cases involving a failure to deliver specific and ascertained goods, the court may grant the buyer specific
+performance of the sale contract and compel the seller to deliver without giving him the option to retain the goods and pay
+damages (SGA s.52).
+Under the CRA s.28, if the trader refuses to deliver or fails to deliver at the agreed time (or deemed agreed time under CRA
+s.29(3) and (4) and time is of the essence, the buyer may treat the contract as at an end whereupon the trader must, without
+undue delay, reimburse all payments made under the contract (CRA s.29(9)). If the buyer does not treat the contract as at an
+end, he may still reject the goods and insist on re-delivery and, if he does, all payments must be reimbursed. The only exception
+is that if the goods form a “commercial unit” (i.e. division of the unit would “materially impair the value of the goods or the
+character of the unit” the buyer must reject all or none—CRA s.29(11) and (12). The right to damages in addition to rejection
+is preserved by s.29(13).
+Footnotes
+9
+See for example Koufos v C Czarnikow Ltd [1969] 1 A.C. 350.
+10
+See Williams Brothers v Ed T Agius Ltd [1914] A.C. 510.
+11
+See Hall v Pim [1927] 2 K.B. 535; Bence Graphics International Ltd v Fasson UK Ltd [1998] Q.B. 87; Total Liban
+SA v Vitol Energy SA [2001] Q.B. 643.
+End of Document
+© 2025 SWEET & MAXWELL

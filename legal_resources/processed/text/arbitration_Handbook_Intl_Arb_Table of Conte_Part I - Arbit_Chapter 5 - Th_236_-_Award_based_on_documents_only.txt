@@ -1,0 +1,80 @@
+Award based on documents only, UKBC-ICCARBN 474406903 (2022)
+© 2025 Thomson Reuters.
+1
+Award based on documents only
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+Award based on documents only
+30-52
+Under art.3(5) of App.VI, the Tribunal is expressly allowed, after consulting with the parties, to decide the dispute “solely on
+the basis of the documents submitted by the parties, with no hearing and no examination of witnesses or experts”. In accordance
+with art.26(1), when a hearing is to be held, the Tribunal may conduct it “by videoconference, telephone or other appropriate
+means of communication”. This provision differs from art.25(6) of the ICC Rules which allows the Tribunal to decide the case
+solely on documents “unless any of the parties request a hearing”. Indeed, under the Expedited Procedure Provisions, a party’s
+request for a hearing may no longer be sufficient to obtain an oral hearing. 671
+30-53
+Where the parties agree that the case should be decided on documents only, this provision will not create any issue. Where in
+turn both parties request a hearing, even when acting under the Expedited Procedure Provisions, the Tribunal will have to very
+carefully assess whether it should deny such a request. Admittedly, as per art.22(4) of the ICC Rules, the Tribunal must ensure
+that each party has a reasonable opportunity to present its case. However, a party’s entitlement to a reasonable opportunity to
+present its case does not necessarily oblige the Tribunal to hold a hearing, for instance to hear witnesses and experts. Indeed,
+in many jurisdictions, a party’s entitlement to a reasonable opportunity to present its case does not oblige a Tribunal to hear
+witnesses and experts, nor to hold a hearing even if a party requires so. 672
+30-54
+Whenever written witness statements or expert reports are on the record, and a party requests the possibility to cross-examine the
+witness or the expert, it may be necessary to hold a hearing, unless the Tribunal determines that the witness or expert testimony
+is not relevant. That would be the case if the dispute turns on facts that are sufficiently proven by documentary evidence. For the
+Tribunal to come to that conclusion, it would however need to conduct a very careful analysis of the entire case at the time of
+making the decision as to whether to allow or disallow a hearing. It would be unacceptable if a Tribunal subsequently dismissed
+a claim for lack of evidence, if the very evidence was based on witness or expert testimony.
+30-55
+If a party is not provided with the opportunity to cross examine a witness which it seeks to cross examine, in the authors’
+opinion, then it should be on the basis that the witness evidence is not material to the outcome of the case. To rely on such
+witness evidence after denying the possibility of cross examination would be a breach of due process.
+30-56
+Hearings under the Expedited Procedure Provisions remain possible, but are likely to be shorter than in the normal case. For
+instance, the Tribunal may forego opening statements, or limit them to a strict minimum, and may fix short time-limits for cross
+examination, or may even want to proceed itself with the examination of witnesses. To be in a position to do so, it will have
+to be very well prepared. In deciding whether to hold a hearing or not, the Tribunal will also have to consider the complexity
+of the case. For an arbitrator, having a hearing is often a unique and sole opportunity to ask questions and thus to test whether
+he or she has truly understood what the dispute is about. This opportunity has a price, and should not be too easily dismissed
+in favour of the time factor.
+30-57
+In any event, it follows now from art.26(1) of the ICC Rules, as modified with the 2021 version, that the Tribunal made decide
+to conduct hearings remotely rather than through physical attendance. For expedited procedures, that possibility had already
+
+Award based on documents only, UKBC-ICCARBN 474406903 (2022)
+© 2025 Thomson Reuters.
+2
+been expressly contemplated in App.VI of the 2017 ICC Rules. This possibility had been offered already expressly by art.3(5)
+of App.VI in its 2017 version, on the assumption that this was more compatible with the need of acting swiftly. Since the
+outbreak of the Covid-19 pandemic in 2020, remote hearings have become very popular, and are no longer reserved to “small”
+claims proceedings.
+Footnotes
+671
+Most expedited arbitration rules provide that either the arbitral tribunal may decide the case without a hearing or that the
+case will be decided without a hearing as a matter of principle with the possibility to decide otherwise. See, e.g., r.5.2.c of
+the SIAC Arbitration Rules; Swiss Rules, art.42(1)(c); CIETAC Rules art.60; SCC Expedited Arbitration Rules art.33;
+HKIAC Arbitration Rules art.41(2)(e); ICDR Expedited Rules art.1.4.
+672
+See e.g. French Supreme Court, Cass Civ 1e, No.08-10281, 6 May 2009, noting that the arbitration rules expressly
+contemplate the possibility for the arbitral tribunal not to hold a hearing; Paris Court of Appeal, 15 March (1984) Rev.
+Arb. 1985, p.285; Paris Court of Appeal, 21 June 1990, (1991) Rev. Arb., p.96; Dalma Dairy Industries v National Bank
+of Pakistan [1978] 2 Lloyd’s Rep. 223, 269; Iron Ore Company of Canada v Argonaut Shipping, Inc (SDNY 1985),
+(1987) ICCA Yearbook XII, p.173; Swiss Federal Supreme Court, 19 April 2011, ATF 4A_404/2010 (reason 519), Swiss
+Federal Supreme Court, 7 January 2004, 4P.196/2003/ech (reason 4.1); Swiss Federal Supreme Court. 1 July 1991,
+ATF 117 II 346 (reason 1b). See also von Segesser, Swiss Private International Law Act (Ch.12), art.182 [Procedure:
+principle] in Mistelis (ed), Concise International Arbitration, 2nd edn (Kluwer Law International, 2015), pp.1208–1213;
+C. Jermini, Note–Federal Tribunal, 7 January 2004 (4P.196/2003); Baizeau, “Award under expedited arbitration rules
+examined by the Swiss Supreme Court”, Kluwer arbitration blog, 6 April 2009; “Witnesses and the right to be heard
+in international arbitration: some remarks on recent decisions of the Swiss Federal Supreme Court”, [2004] ASA Bull.
+Vol.22 No.3, pp.605–609; in Germany the denial of the opportunity to comment on expert reports or oral statements
+was considered as a violation of due process rights in a 1978 decision: Federal Tribunal (Bundesgericht), 8 February
+1978, Chrome Resources v Leopold Lazarus, XI Yearbook Commercial Arbitration 541 (1986). In domestic arbitration
+proceedings, the French Supreme Court has decided that in the absence of express agreement by the parties, the absence
+of a hearing resulted in a violation of fundamental due process rights and of art.6 of European Convention on Human
+Rights (Cass Civ 1e, No.11-18.252, 6 June 2012).
+End of Document
+© 2025 SWEET & MAXWELL

@@ -1,0 +1,236 @@
+Section A. - Global Dispute Resolution, UKBC-REDFERN 530638603 (2025)
+© 2025 Thomson Reuters.
+1
+Section A. - Global Dispute Resolution
+Redfern and Hunter on International Arbitration 7th Ed.
+Mainwork
+Chapter 1 - Introduction
+Section A. - Global Dispute Resolution
+1. 01
+If international arbitration did not exist, it would be necessary to invent it. As investment, trade, and commerce continue to
+expand worldwide, agreements that cross national frontiers are a vital part of business and commercial life. Inevitably some
+of these transnational transactions and investments, whether they involve states, corporations, or individuals, will give rise to
+disputes. The most immediate solution is for the disputants to try to settle their differences by negotiation. No sensible business
+person, corporation, or state wants to spend time and money on legal proceedings if this can be avoided. Yet if the dispute
+cannot be settled, it is important that there should be a fair, reliable, and peaceful method of resolving it and enforcing the result,
+according to the provisions of the parties’ agreement and the applicable legal framework.
+1. 02
+When a dispute arises between parties who are based in the same country, those parties generally have a choice. They may take
+their dispute to their own national law courts. Or they may agree to resolve the dispute in private by incorporating an arbitration
+agreement into their contract. Such an arbitration would be a national or ‘domestic’ arbitration, governed by the rules agreed
+by the parties and by any mandatory provisions of the local law.
+1. 03
+The situation is very different when the dispute arises out of a cross-frontier (or transnational) business relationship. Unless
+there is an agreement to arbitrate, the aggrieved party will be obliged to take its dispute to a court of law. In that case, it will be
+necessary to identify the court that has jurisdiction over the potential defendant. This will usually be the national court in which
+the defendant has its place of residence or business—that is to say, the defendant’s home court, which immediately undermines
+the idea of a level playing field for the foreign claimant. That claimant may also find that the language of the defendant’s court
+is not the language of the contract, that its long-established domestic procedures are not suitable for international disputes, and
+that the judges themselves have little or no experience of handling such disputes. It makes sense to avoid such risks by providing
+that any disputes arising out of or in connection with such an international contract be referred to international arbitration.
+Indeed, in order to ensure an efficient and enforceable dispute resolution process in the transnational environment, international
+arbitration has been referred to as ‘the only game in town’. 1
+(a) The concept of arbitration
+1. 04
+International arbitration is a legal process in which parties to a dispute agree to refer that dispute to a tribunal of one or more
+independent and impartial arbitrators chosen by or on behalf of the parties to the exclusion of the domestic courts. The task of
+that tribunal is to give equal consideration to the claims and defences of the parties and to arrive at a decision on the dispute
+pursuant to the applicable legal framework. That decision is given in writing in the form of a binding award which the parties
+are obliged to perform without delay and which, in the absence of voluntary compliance, is underpinned by an international
+system of recognition and enforcement through local courts.
+1. 05
+Arbitration, as a method of settling trade and commercial disputes, has a very long history. In its early days, it was a simple and
+relatively informal process undertaken without the presence of lawyers. Two merchants or traders in dispute over the price or
+quality of goods delivered would agree to refer their dispute to a third merchant or trader, whose independence and judgement
+they trusted. The parties would abide by the decision of this honest and usually unpaid ‘arbitrator’, not because of any legal
+
+Section A. - Global Dispute Resolution, UKBC-REDFERN 530638603 (2025)
+© 2025 Thomson Reuters.
+2
+order or sanction, but because this was what was expected of them in the community in which they carried on their trade or
+business. 2  The decision itself would almost certainly take account of any relevant usages or customs of the particular trade
+concerned; and the arbitrator might well temper his decision in order to avoid undue hardship, if this seemed appropriate in
+all the circumstances of the case. In this sense, arbitration was indeed, as one author has noted, a ‘system of justice, born of
+merchants, which brings together law and respect for trade usage’. 3
+1. 06
+As international trade and commerce developed, arbitration inevitably became more formalised. Nevertheless, respect for trade
+usages remained. 4  The influence of chambers of trade and commerce in developing and promoting arbitration to resolve trade
+and commercial disputes was (and remains) important. In his classic treatise on ‘Arbitration in International Trade’, 5  Professor
+René David refers to the standard form of contract of the Liverpool Cotton Association which included an arbitration clause since
+1863. This was undoubtedly a masterstroke. It meant that parties who entered into the standard form contract expressly agreed
+that if any disputes arose under that contract, those disputes would not be dealt with by the courts of law but by arbitration under
+the aegis of the Cotton Association itself. According to Professor David, the example set by the Liverpool Cotton Association
+was quickly followed by the London Corn Trade Association and in Germany by the Cotton Exchange of Bremen, which began
+to administer arbitrations in 1872.
+1. 07
+Following these developments, the London Chamber of Arbitration was founded on 23 November 1892. 6  At the time it was
+said with an almost evangelical zeal that:
+The Chamber is to have all the virtues that the law lacks. It is to be expeditious where the law is slow, cheap where
+the law is costly, simple where the law is technical, a peacemaker instead of a stirrer-up of strife. 7
+1. 08
+The close association between chambers of commerce and international commercial arbitration has endured, and helps to ensure
+that international arbitration, and perhaps more importantly international commercial arbitrators, remain firmly connected to
+the realities of international trade and commerce.
+(b) The standard form clause
+1. 09
+The International Chamber of Commerce (ICC) in Paris 8  was the first chamber to concentrate solely on international
+commercial disputes. The story is best told by Johnny Veeder, a distinguished counsel and arbitrator with a passion for arbitral
+history. In an article 9  quizzically entitled ‘1922: The Birth of the ICC Arbitration Clause and the Demise of the Anglo-Soviet
+Urquart Concession’, Veeder refers to the ‘creation of ICC Arbitration in 1922’. This was the year in which the ICC’s Rules for
+Arbitration and Conciliation were first published. Veeder says: ‘If international commercial arbitration has a birthday, its year
+was undoubtedly 1922’; and he adds that in practice ‘the most significant advance was the standard form ICC arbitration clause
+incorporating by reference ICC arbitration rules as a near-comprehensive transnational procedural code’.
+1. 10
+Veeder’s comment is perceptive. It is a simple matter for parties to put an ‘oven-ready’ arbitration clause into their contract.
+The clause itself is usually a simple one. For example, the standard ICC Arbitration Clause reads:
+All disputes arising out of or in connection with the present contract shall be finally settled under the Rules of
+Arbitration of the International Chamber of Commerce by one or more arbitrators appointed in accordance with
+the said Rules.
+
+Section A. - Global Dispute Resolution, UKBC-REDFERN 530638603 (2025)
+© 2025 Thomson Reuters.
+3
+It is a simple clause; but it ensures that if there is an arbitration, it will be administered by the ICC and conducted in accordance
+with the set of procedural rules drawn up and promulgated by that organisation. These basic rules address how to commence
+and pursue an international arbitration and apply to the tribunal and the parties, who will not need to spend time and money at
+the outset of the arbitration in drawing up their own basic arbitral rules, as would happen in pure ad hoc arbitrations.
+1. 11
+The creation of a simple arbitration clause, together with procedural codes drawn up and adapted by arbitral institutions in light
+of their practical experience, has been a major driving force in making international arbitration attractive, as a dispute-resolution
+process that is in tune with evolving practice and technology. This is one of our themes in this chapter.
+(c) The business perspective
+1. 12
+Nation-states have quickly recognised the increased importance of international arbitration as the servant of international
+investment, business, and commerce. Countries around the world have either modernised their existing laws of arbitration or
+established new laws to govern and assist the conduct of international arbitrations on their territory. These new laws are often
+based on or incorporate the 1985 Model Law on International Commercial Arbitration of the United Nations Commission on
+International Trade Law (the ‘Model Law’) 10  which reflects arbitral best practice. A country that adopts the Model Law is
+generally seen as a country that is ‘arbitration friendly’ although it is important to review how the Model Law is in fact applied
+in practice through that country’s court system.
+1. 13
+The adoption by a country of a modern international arbitration law helps to reassure investors and to attract potentially profitable
+business, not least the business of arbitration itself. 11  Like a stone thrown into a pond, the ripples of an international arbitration
+spread in ever-widening circles. A former President of the Arbitration Committee of the ICC, in one of the first articles on
+the sociology of international arbitration, 12  referred to ‘the broad spectrum of persons who may be involved in arbitration
+proceedings’. In addition to the tribunal, the parties, and their representatives, he included the witnesses, the experts, the
+secretary, the translator-interpreter, and the relevant arbitral institution. Almost twenty years later, when Professor Emmanuel
+Gaillard gave his Freshfields lecture on the ‘Sociology of International Arbitration’, 13  he added to this cast-list third-party
+funders, publishers, and even public relations advisers. He also referred to the nation-states that enforce arbitral awards, courts
+that in their judgments help to set international standards, and organisations such as the International Bar Association (IBA)
+which, with its published rules and guidelines, helps both to formulate and to promote the ‘soft law’ of international arbitration.
+(d) Investment arbitration
+1. 14
+The growth of international arbitration in recent decades was primarily driven by disputes arising under contracts containing
+arbitration agreements. But, two decades ago, it was said that ‘explorers had set out to discover a new continent for international
+arbitration’. 14  This ‘new continent’ permitted a qualifying investor with a qualifying investment to commence an international
+arbitration against a sovereign state even if it did not have a contract with that sovereign. It was labelled ‘arbitration without
+privity’. The principal means to arrive at this new continent was via a network of bilateral and multilateral treaties 15  for the
+promotion and protection of investment (including investment chapters in free trade agreements). These treaties revolutionised
+international law. They empowered an aggrieved investor to claim directly against a host state (without the intervention of that
+investor’s home state) if the investor considered that the host state was in breach of the substantive protections contained in
+the relevant investment treaty.
+1. 15
+
+Section A. - Global Dispute Resolution, UKBC-REDFERN 530638603 (2025)
+© 2025 Thomson Reuters.
+4
+The number of arbitrations against states under investment treaties (known generally as ‘investment arbitration’) has grown
+extraordinarily. 16  Many of these cases raise issues of public importance and are not subject to the same presumptions of privacy
+and confidentiality as ‘commercial’ or ‘contractual’ arbitration. They have also led to procedural developments that are having
+an impact on the law and practice of international arbitration more generally, including the admission of amicus curiae briefs
+and increased transparency. In the light of the importance of investment arbitration in the world of international arbitration, it
+is addressed as a separate topic in Chapter 8.
+(e) Other specialist forms of arbitration
+1. 16
+The success of international arbitration as a method of neutral international dispute resolution away from national courts has
+led to its adoption in a growing number of specialist areas. One notable expansion took place in June 1984 when the Court
+of Arbitration for Sport (CAS) was established in Lausanne, Switzerland. The idea was to provide a means for the resolution
+of disputes related to sport and in particular to offer where necessary (for instance, during the Olympic Games) a rapid and
+relatively inexpensive procedure for resolving disputes on such issues as that of an athlete’s entitlement to compete. The work
+of the CAS has expanded to include commercial disputes (including, for example, those arising from licensing agreements with
+television companies).
+1. 17
+The expansion of international arbitration continues. Another example of its prospective future use is in the resolution of disputes
+under Bilateral Tax Treaties. For example, ‘The Multilateral Convention to Implement Tax Treaty Related Measures to Prevent
+Base Erosion and Profit Shifting’ includes an optional ‘Mandatory Binding Arbitration’ process for resolving disputes. 17  This
+option is intended to bring a neutral determinative end to the current unsatisfactory Mutual Assistance Process, which requires
+the agreement of the tax authorities of the contracting states for a dispute to be resolved.
+(f) An arbitration bar
+1. 18
+A final indication of the way in which international arbitration has developed and expanded is that there is now a large and
+growing ‘arbitration bar’ of specialist arbitration lawyers and advocates located throughout the world, whether in São Paolo,
+Moscow, or Washington. Each of these practitioners is regulated by their own national professional code of behaviour. There
+is not at present a universally binding international code governing the practice of international arbitration, nor is there any
+international governing body. Nevertheless, the existence of a specialist set of lawyers, whether as part of the dispute resolution
+group of a major law firm or as a specialist ‘boutique’ law firm dealing only with international arbitration, is testimony to the
+growth of international arbitration.
+Footnotes
+1
+Toby Landau KC used this analogy in ‘Arbitral lifelines: The protection of jurisdiction by arbitrators’, in van den Berg
+(ed.) International Arbitration 2006: Back to Basics? (Kluwer Law International, 2007), pp. 282–287; and so did Jan
+Paulsson when he said: ‘In the transnational environment, international arbitration is the only game. It is a de facto
+monopoly.’ (Paulsson, International Arbitration is not Arbitration, Vol. 2 (Stockholm International Arbitration Review,
+2008), p. 2.
+2
+After referring to ‘the dispute resolution mechanisms of the post-classical mercantile world’ that were adopted in
+particular trades or trading centres, Lord Mustill comments: ‘Within such communities, external sanctions would have
+been largely redundant, even if a legal framework had been available to bring them into play, which in the main it
+was not.’ See Mustill, ‘Is it a bird …’, in Reymond (ed.) Liber Amicorum (Litec, 2004), p. 209. To similar effect, see
+
+Section A. - Global Dispute Resolution, UKBC-REDFERN 530638603 (2025)
+© 2025 Thomson Reuters.
+5
+Paulsson, The Idea of Arbitration (Oxford University Press, 2013), p. 1, where he says: ‘The idea of arbitration is that
+of the binding resolution of disputes accepted with serenity by those who bear its consequences because of their special
+trust in chosen decision-makers.’
+3
+Serge Lazareff used this illuminating phrase, which describes how arbitration was seen as a way of settling disputes
+by reconciling legal principle with equity. See Lazareff, ‘L’arbitre singe ou comment assassiner l’arbitrage’, in Aksen
+(ed.) Global Reflections in International Law, Commerce and Dispute Resolution: Liber Amicorum in Honour of Robert
+Briner (ICC, 2005), p. 478.
+4
+Indeed, the present Rules of Arbitration of the ICC still require an arbitral tribunal to take account ‘of any relevant trade
+usages’: see the ICC Rules, Art. 21.
+5
+See David, Arbitration in International Trade (Kluwer, 1985), p. 38.
+6
+The London Chamber of Arbitration was the predecessor of the LCIA, one of the leading international arbitral
+institutions.
+7
+Manson (1893) IXLQR, cited in Veeder and Dye, ‘Lord Bramwell’s Arbitration Code’ (1992) 8 Arb Intl 330.
+8
+Arbitral institutions, including the ICC, are discussed later in this chapter.
+9
+See ‘Global Reflections in Law, Commerce and Dispute Resolution’ ICC Publication 693, at pp. 881–901.
+10
+The Model Law has been highly successful and has now been adopted by over eighty-five states worldwide. Even
+countries that have not explicitly adopted the Model Law have been careful to take full account of it. In England, e.g.,
+the departmental committee that advised on what became the Arbitration Act 1996 explicitly stated that any new statute
+should ‘so far as possible have the same language and structure as the Model Law, so as to enhance its accessibility
+to those who are familiar with the Model Law’: see the report of the Departmental Committee on the Arbitration Bill
+1996, at para. 1(7).
+11
+In a tribute to Johnny Veeder, Professor Park as General Editor referred to the foundation of the journal Arbitration
+International in 1984 by Veeder and others and said: ‘At that moment, for better or for worse, international arbitration
+found itself moving into the realm of serious big business, leaving behind its earlier status as a “cottage industry”
+permeated by the culture of French and Swiss legal artisans or specialists working in particular fields such as insurance
+or construction’ (2020) 36 Arb Intl 1.
+12
+Glossner, ‘Sociological aspects of international commercial arbitration’, in Schultz and van den Berg (eds) The Art of
+Arbitration (Kluwer, 1982), pp. 143–152.
+13
+Gaillard, ‘Sociology of international arbitration’ (2015) 31 Arb Intl 1.
+14
+J. Paulsson, ‘Arbitration Without Privity’ (1995) 10(2) ICSID Review Foreign Investment Law Journal 232.
+15
+One example of a multilateral investment treaty is the Energy Charter Treaty which has been ratified by over fifty
+countries.
+16
+Statistics reported by ICSID show that 469 cases were registered under the ICSID Convention and Additional Facility
+Rules between 2012 and 30 June 2021, compared to 274 cases registered between 2002 and 2011. See ICSID Caseload
+—Statistics (ICSID, 2021), p. 7.
+17
+See Mooij, ‘Tax treaty arbitration’ (2019) 35 Arb Intl 195.
+End of Document
+© NIGEL BLACKABY KC, CONSTANTINE PARTASIDES
+KC, ALAN REDFERN

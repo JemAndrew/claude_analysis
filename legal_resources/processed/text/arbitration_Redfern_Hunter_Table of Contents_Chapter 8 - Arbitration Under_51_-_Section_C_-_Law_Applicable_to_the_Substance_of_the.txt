@@ -1,0 +1,258 @@
+Section C. - Law Applicable to the Substance of the Dispute, UKBC-REDFERN...
+© 2025 Thomson Reuters.
+1
+Section C. - Law Applicable to the Substance of the Dispute
+Redfern and Hunter on International Arbitration 7th Ed.
+Mainwork
+Chapter 8 - Arbitration Under Investment Treaties
+Section C. - Law Applicable to the Substance of the Dispute
+8. 64
+Investment treaties do not always contain specific provisions on the law to be applied by arbitral tribunals appointed under
+their provisions. Those treaties that do contain applicable law provisions often list both international law and domestic law,
+without indicating which is pre-eminent or how they are to be combined. By way of example, Article 10.6 of the Ukraine–
+Turkey BIT 141  provides that:
+The arbitral tribunal shall take its decisions in accordance with the provisions of this Agreement, the laws and
+regulations of the Contracting Party involved in the dispute on which territory the investment is made (including
+its rules on the conflict of laws) and the relevant principles of international law as accepted by both Contracting
+Parties.
+8. 65
+Where the investment treaty is silent as to the applicable law, other instruments may provide guidance. Article 35.1 of the
+UNCITRAL Rules provides that, failing a designation of the applicable law by the parties, ‘the arbitral tribunal shall apply the
+law which it determines to be appropriate’. 142  Article 42 of the ICSID Convention provides that, in the absence of an agreement
+on the applicable law, ‘the Tribunal shall apply the law of the Contracting State party to the dispute (including its rules on the
+conflict of laws) and such rules of international law as may be applicable’.
+8. 66
+Ultimately, however, whether or not a treaty specifies the applicable law, the tribunal will apply and accord a controlling role
+to international law. 143  Because treaties are international law instruments, international law is applicable by virtue of the
+1969 Vienna Convention on the Law of Treaties, which provides that treaties are ‘governed by international law’ and must be
+interpreted in the light of ‘any relevant rules of international law applicable’. 144
+8. 67
+In this regard, in the AAPL v Sri Lanka case, 145  which was brought under the Sri Lanka–United Kingdom BIT, 146  the tribunal
+held the BIT to be the ‘primary source of the applicable legal rules’ and added that the BIT was not a ‘closed legal system’ but
+had to be seen in the ‘wider juridical context’ of international law. This led the tribunal to apply general international law to
+complement the provisions of the BIT. Similarly, the annulment committee in the Vivendi case held that:
+[I]n respect of a claim based upon a substantive provision of that BIT [ … ] the inquiry which the ICSID tribunal
+is required to undertake is one governed by the ICSID Convention, by the BIT and by applicable international
+law. Such an inquiry is neither in principle determined, nor precluded, by any issue of municipal law [ … ] 147
+8. 68
+International law provides the standard by reference to which the legality of the conduct of the host state is to be assessed. 148
+This is made clear by Article 3 of the International Law Commission’s Articles on State Responsibility, 149  which provides that
+the ‘characterisation of an act of a State as internationally wrongful is governed by international law’.
+8. 69
+
+Section C. - Law Applicable to the Substance of the Dispute, UKBC-REDFERN...
+© 2025 Thomson Reuters.
+2
+In this sense, it may be necessary to refer to international law in order to interpret the terms of an investment treaty. For instance,
+while investment treaties generally include provisions regarding the expropriation of investments, they typically do not define
+the term ‘expropriation’. Tribunals can therefore refer to the concept of expropriation under customary international law in
+order to interpret the scope and content of the investment treaty. 150  The application of international law, however, does not
+allow claimants to assert claims under customary international law as an independent cause of action. 151
+8. 70
+The applicable law provisions in investment contracts or other agreements forming part of the background of the dispute do not
+preclude the application of international law. In Wena Hotels Ltd v Egypt, 152  the annulment committee rejected the argument
+that the applicable law clauses of the lease agreements between Wena Hotels and an Egyptian state authority, which selected
+Egyptian law, applied to the BIT dispute:
+The leases deal with questions that are by definition of a commercial nature. The [BIT] deals with questions
+that are essentially of a governmental nature, namely the standards of treatment accorded by the State to foreign
+investors. It is therefore apparent that Wena and EHC agreed to a particular contract, the applicable law and the
+dispute settlement arrangement in respect of one kind of subject, that relating to commercial problems under the
+leases. It is also apparent that Wena as a national of a contracting state could invoke the [BIT] for the purpose
+of a different kind of dispute, that concerning the treatment of foreign investors by Egypt. This other mechanism
+has a different and separate dispute settlement arrangement and might include a different choice of law provision
+or make no choice at all.
+[ … ]
+This Committee accordingly concludes that the subject matter of the lease agreements submitted to Egyptian law
+was different from the subject matter brought before ICSID arbitration under the [BIT]. 153
+8. 71
+This approach does not ignore domestic law or the text of Article 42(1) of the ICSID Convention set out earlier. 154  However,
+it should be remembered that the Convention was itself drafted principally with investor–state contracts in mind, in which
+domestic law would play the critical, if not exclusive, role. 155  Treaty interpretation, however, calls for a different approach.
+If a domestic legal system were to provide rules of decision, then a state could simply legislate itself out of a breach of treaty,
+contrary to Article 27 of the Vienna Convention (‘[a state] may not invoke the provisions of its internal law as justification for
+its failure to perform a treaty’). As the tribunal held in the Santa Elena case:
+To the extent that there may be any inconsistency between the two bodies of law, the rules of public international
+law must prevail. Were this not so in relation to takings of property, the protection of international law would be
+denied to the foreign investor and the purpose of the ICSID Convention would, in this respect, be frustrated. 156
+8. 72
+This does not mean that the domestic law of the host state does not have a role to play. The domestic law of the host state will
+be taken into consideration to establish the facts to be analysed in determining whether the state is liable under the investment
+treaty. For instance, a tribunal will consider domestic law in determining whether particular assets or rights constituting an
+alleged investment exist and in whom they vest; the question of whether these assets or rights constitute an investment under
+the treaty will, however, be a question governed by the treaty and international law.
+8. 73
+Similarly, the domestic law of the host state will typically constitute evidence of the measures taken by the state that are alleged
+to be in breach of the treaty, since the misconduct of the state will usually manifest itself through internal legal acts. The analysis
+of whether these acts or measures engage the host state’s liability under the treaty will, however, be governed by the terms of
+the treaty and international law.
+
+Section C. - Law Applicable to the Substance of the Dispute, UKBC-REDFERN...
+© 2025 Thomson Reuters.
+3
+8. 74
+The practice of BIT tribunals has been summarised by one commentator as follows:
+The principle that treaties are on the plane of international law is too well established to warrant much argument.
+Therefore, alleged breaches of a BIT by a state are prima facie governed by international law. Be that as it may,
+the complex questions that arise in foreign investment disputes cannot simply be answered by a prior assumption
+of the sole applicability of international law. As is always the case, foreign investments are intrinsically connected
+to the national law of the host state. Suffice to say that questions as to whether an investment is properly made or
+whether a measure or regulation taken by a state meets the threshold of treaty violation may not be disposed of
+without a thorough examination of that state’s national law. Even if the relevant treaty does not provide for a choice
+of substantive law, arbitrators still have the obligation to consider the relevant national laws of the host state, with
+the caveat that such law may not be applicable if it is contrary to the obligations assumed by the state under the
+treaty—the principle that a state cannot rely on its internal laws to derogate from or modify its treaty obligations.
+To that extent, it is conceded that the arbitrators may have a certain margin and power of interpretation. 157
+8. 75
+Potential conflicts between international and domestic law often fall away when tribunals take note that international legal
+principles and treaties are in any event frequently incorporated into domestic law, as the tribunal noted in BG Group PLC v
+Argentina:
+[T]he challenge of discerning the role that international law ought to play in the settlement of this dispute, vis-à-vis
+domestic law, disappears if one were to take into account that the BIT and underlying principles of international
+law, as ‘the supreme law of the land’, are incorporated into Argentine domestic law, superseding conflicting
+domestic statutes. 158
+8. 76
+As for conflicts between two international law instruments, these may fall away if it is possible to interpret both instruments
+harmoniously. Such issues have arisen in the context of BITs entered into by a non-EU member state with an EU member
+state when the former accedes to the European Union. The newly acceded states have argued that their BIT obligations were
+terminated, or modified, as a result of their accession. For instance, in Achmea BV v Slovak Republic, 159  the Slovak Republic
+argued that the dispute settlement clause in the Netherlands–Slovakia BIT was inapplicable as a consequence of Slovakia’s
+accession to the European Union, because the BIT was incompatible with Slovakia’s obligations under EU law. The tribunal
+disagreed, holding that the BIT established rights that were neither duplicated by nor incompatible with EU law. The tribunal
+also held that the fact that it was bound to apply EU law to the extent that it formed part of the applicable laws did not deprive
+it of jurisdiction.
+8. 77
+However, the tribunal’s view of the compatibility between the two instruments was questioned by the Slovak Republic before
+the German courts (the courts of the seat of the arbitration). Upon referral from the German courts, the Court of Justice of
+the European Union (CJEU) considered that the dispute resolution clause in the BIT was inconsistent with the Treaty on
+the Functioning of the European Union (TFEU) and therefore invalid. 160  This ultimately led (at the call of the European
+Commission) to an Agreement for the Termination of all Intra-EU BITs signed by 23 Member States of the European Union on 5
+May 2020. Arbitral tribunals have, however, not considered themselves bound by the Achmea decision and have predominantly
+held that the BIT obligations are not inconsistent with the obligations of the host state under the TFEU. For example, in GPF
+GP S.à.r.l v Poland, the tribunal found that, despite the termination of the Belgium–Luxembourg Economic Union–Poland
+BIT, resulting from Poland’s accession to the European Union, the substantive protections afforded under the BIT were not
+incompatible with EU law, nor did EU law deprive the tribunal of jurisdiction. 161  Some fifty tribunals have refused to follow
+the logic of the Achmea decision and have upheld the right to arbitrate under intra-EU BITs.
+8. 78
+
+Section C. - Law Applicable to the Substance of the Dispute, UKBC-REDFERN...
+© 2025 Thomson Reuters.
+4
+Finally, it should be noted that although there is ‘a progressive emergence of rules through lines of consistent cases on certain
+issues’, 162  there is no doctrine of precedent in investment treaty arbitration. 163  Therefore while investment treaty case law
+may be a subsidiary means for the determination of rules of international law, 164  tribunals are not bound by the decisions of
+other tribunals. Commenting on this issue, the tribunal in the SGS Société Générale de Surveillance SA v Philippines case noted:
+Moreover there is no doctrine of precedent in international law, if by precedent is meant a rule of the binding effect
+of a single decision. There is no hierarchy of international tribunals, and even if there were, there is no good reason
+for allowing the first tribunal in time to resolve issues for all later tribunals. It must be initially for the control
+mechanisms provided for under the BIT and the ICSID Convention, and in the longer term for the development
+of a common legal opinion or jurisprudence constante, to resolve the difficult legal questions [ … ] 165
+8. 79
+The consequences of failing to identify and apply the applicable law may be grave. It can expose the tribunal’s award to a
+challenge, or even annulment. Indeed, in the ICSID context, ad hoc committees annulled the awards rendered in Helnan v
+Egypt, Enron v Argentina, and Sempra v Argentina on the basis that the arbitral tribunals exceeded their powers by failing to
+apply the applicable law. 166
+Footnotes
+141
+Agreement between the Government of the United Kingdom of Great Britain and Northern Ireland and the Government
+of the Argentine Republic for the Promotion and Protection of Investments, signed on 11 December 1990, entered into
+force on 19 February 1993.
+142
+This stands in contrast to the less flexible approach set out in the 1976 UNCITRAL Rules, Art. 33.1 which provided that
+‘failing such designation by the parties, the arbitral tribunal shall apply the law determined by the conflict of laws rules
+which it considers applicable’. See Caron and Caplan, The UNCITRAL Arbitration Rules (2nd edn, Oxford University
+Press, 2013), p. 112.
+143
+Lidercón, SL v Republic of Peru, ICSID Case No. ARB/17/9, Award, 6 March 2020, at [177]; Middle East Cement
+Shipping and Handling Co. SA v Arab Republic of Egypt, ICSID Case No. ARB/99/6, Award, 12 April 2002, at [86].
+See also Kjos, Applicable Law in Investor-State Arbitration: The Interplay Between National and International Law
+(Oxford University Press, 2013).
+144
+Vienna Convention on the Law of Treaties, opened for signature 23 May 1969, Arts 2(1)(a) and 31(3)(c), 1155 United
+Nations Treaty Series 331, reprinted in 8 ILM 679 (1969).
+145
+Asian Agricultural Products Ltd (AAPL), fn. 15, at [20]–[21].
+146
+Agreement between the Government of the United Kingdom of Great Britain and Northern Ireland and the Government
+of Sri Lanka for the Promotion and Protection of Investments, signed on 13 February 1980, entered into force on 18
+December 1980.
+147
+Compañía de Aguas del Aconquija, fn. 114, at [102]. See also Crystallex International Corporation v Bolivarian
+Republic of Venezuela, Award, ICSID Case No. ARB(AF)/11/2, Award, 4 April 2016, at [474].
+148
+See Parra, ‘Applicable law in investor-state arbitration’, in Rovine (ed.) Contemporary Issues in International Arbitration
+and Mediation: The Fordham Papers (Brill, 2008), p. 11. See also Electrabel SA v Republic of Hungary, ICSID Case
+No. ARB/07/19, Decision on Jurisdiction, Applicable Law and Liability, 25 November 2015, at [4.128]–[4.129]; CMC
+Africa Austral et al., Republic of Mozambique, ICSID Case No. ARB/17/23, Award, 24 October 2019, at [220].
+149
+See the ICSID Annulment Committee’s reliance on this provision in Compañía de Aguas del Aconquija, fn. 114, at
+[95]–[96].
+150
+Accession Mezzanine Capital LP v Republic of Hungary, ICSID Case No. ARB/12/3, Decision on Respondent’s Objection
+under Arbitration Rule 41(5), 16 January 2013, at [68]–[70]. See also 2012 United States Model BIT, Annex B,
+which states the ‘shared understanding’ of the parties that expropriation (Art. 6(1)) ‘is intended to reflect customary
+international law concerning the obligation of States with respect to expropriation’.
+151
+Generation Ukraine Inc. v Ukraine, ICSID Case No. ARB/00/9, Award, 16 September 2003, at [11.3]; Emmis
+International Holding, BV et al., ICSID Case No. ARB/12/2, Decision on Respondent’s Objection Under ICSID
+Arbitration Rule 41(5), 11 March 2013, at [84]; Accession Mezzanine Capital LP, fn. 150, at [72].
+
+Section C. - Law Applicable to the Substance of the Dispute, UKBC-REDFERN...
+© 2025 Thomson Reuters.
+5
+152
+Wena Hotels Ltd v Arab Republic of Egypt, ICSID Case No. ARB/98/4, Decision on Annulment Application, 5 February
+2002.
+153
+Ibid., at [31]–[36].
+154
+See paragraph 8.65.
+155
+See Autopista Concessionada de Venezuela CA v Bolivarian Republic of Venezuela, ICSID Case No. ARB/00/5, Award,
+23 September 2003, at [102]: ‘[T]his Tribunal believes that there is no reason in this case, especially considering that it
+is a contract and not a treaty arbitration, to go beyond the corrective and supplemental functions of international law.’
+156
+Compañía del Desarrollo de Santa Elena SA v Republic of Costa Rica, ICSID Case No. ARB/96/1, Award, 17 February
+2000, at [64]. See also Pac Rim Cayman LLC v Republic of El Salvador, ICSID Case No. ARB/09/12, Award, 14 October
+2016, at [5.62]; LG&E Energy Corporation and ors v Argentine Republic, ICSID Case No. ARB/02/1, Decision on
+Liability, 3 October 2006, at [98].
+157
+Igbokwe, ‘Determination, interpretation and application of substantive law in foreign investment treaty
+arbitrations’ (2006) 23 J Intl Arb 267, at 297–298. See also Vestey Group Ltd v Bolivarian Republic of Venezuela, ICSID
+Case No. ARB/06/4, Award, 15 April 2016, at [116]–[117]; El Paso Energy International Co. v Argentine Republic,
+ICSID Case No. ARB/03/15, Award, 30 October 2011, at [129].
+158
+BG Group PLC, fn. 121, at [97]. See also Siemens AG v Argentine Republic, ICSID Case No. ARB/02/8, Award, 6
+February 2007, at [78]–[79].
+159
+Achmea BV (formerly known as Eureko BV) v Slovak Republic, UNCITRAL, PCA Case No. 2008-13 (2010), Award on
+Jurisdiction, Arbitrability and Suspension, 26 October 2010, at [244]–[246].
+160
+Case C-284/16 Slovak Republic v Achmea BV, 6 March 2018.
+161
+SCC Case No. 2014/168, Final Award, 29 April 2020, at [363]–[380].
+162
+Kaufmann-Kohler, ‘Arbitral precedent: Dream, necessity or excuse? The 2006 Freshfields Lecture’ (2007) 23 Arb Intl
+357. See also Daimler Financial Services, fn. 128, at [52].
+163
+Indeed, tribunals have reached different conclusions based on the same facts and law. See, e.g., the decisions in CME
+Czech Republic BV (The Netherlands) v Czech Republic, UNCITRAL, Partial Award, 13 September 2001, IIC 61 (2001);
+Ronald S Lauder, fn. 118, in which claims were brought under two different treaties based on identical facts. In Lauder,
+the case was dismissed. In CME, the Czech state was ordered to pay over US$300 million. On legal issues, there has
+been a clear split on the scope of the so-called umbrella clause in the cases of Bureau Veritas, Inspection, Valuation,
+Assessment and Control, BIVAC BV v Republic of Paraguay, ICSID Case No. ARB/07/9, Decision on Jurisdiction, 9
+October 2012, and SGS Société Générale de Surveillance SA v Republic of Paraguay, fn. 96. Both cases were based
+on nearly identical facts.
+164
+ICJ Statute, Art. 38(d).
+165
+SGS Société Générale de Surveillance SA v Republic of the Philippines, ICSID Case No. ARB/02/6, Decision on
+Jurisdiction, 29 January 2004, at [97]. See also Suez, Sociedad General de Aguas de Barcelona SA and InterAguas
+Servicios Integrales del Agua SA v Argentine Republic, fn. 127, at [189].
+166
+Helnan International Hotels AS v Arab Republic of Egypt, ICSID Case No. ARB/05/19, Decision of the ad hoc
+Committee, 14 June 2010; Enron Creditors Recovery Corporation (formerly Enron Corporation) and Ponderosa Assets
+LP v Argentine Republic, ICSID Case No. ARB/01/3, Decision on Application for Annulment, 30 July 2010; Sempra
+Energy International v Argentine Republic, ICSID Case No. ARB/02/16, Decision on Annulment, 29 June 2010.
+End of Document
+© NIGEL BLACKABY KC, CONSTANTINE PARTASIDES
+KC, ALAN REDFERN

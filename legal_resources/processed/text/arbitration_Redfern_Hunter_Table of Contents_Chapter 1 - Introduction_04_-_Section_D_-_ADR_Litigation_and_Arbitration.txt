@@ -1,0 +1,450 @@
+Section D. - ADR, Litigation, and Arbitration, UKBC-REDFERN 530638598 (2025)
+© 2025 Thomson Reuters.
+1
+Section D. - ADR, Litigation, and Arbitration
+Redfern and Hunter on International Arbitration 7th Ed.
+Mainwork
+Chapter 1 - Introduction
+Section D. - ADR, Litigation, and Arbitration
+1. 112
+When parties are negotiating an international agreement, the last thing on their minds is probably the question of how to resolve
+any potential disputes. It is nonetheless a question that needs to be addressed; and it is probably best addressed by the parties
+during the contract negotiations, whilst relations are good and the prospect of any dispute appears remote.
+1. 113
+There are a variety of options to be considered, starting with those that come under the general heading of ADR, the acronym
+for Alternative Dispute Resolution. 95
+(a) Mediation
+1. 114
+One of the most effective forms of ADR is mediation. A mediator is someone who has no connection with the parties or their
+contract, but who is engaged to help them to resolve their differences. To do this in an international commercial dispute, the
+mediator will usually study the relevant evidence and documents and listen to the parties’ complaints and arguments, including
+their commercial objectives. The mediator will then, as an observer with an objective understanding of what is in issue, attempt
+to persuade the parties to reach an amicable settlement of their dispute by focusing on their real commercial interests, rather than
+on what they perceive to be their legal entitlement. Unlike an arbitrator, a mediator cannot issue a binding decision but merely
+acts as a facilitator with a view to promoting an agreement between the parties and, for that reason, has complete flexibility with
+regard to procedure. Indeed, unlike an arbitration, in mediation it is common for mediators to meet with each party separately
+(as well as together) in order to try and broker an acceptable agreement.
+1. 115
+In the past, the terms ‘mediator’ and ‘conciliator’ were frequently used as if they were interchangeable (as evidenced by the
+2002 UNCITRAL ‘Model Law on International Conciliation’). However, the term ‘mediator’ has now prevailed in general
+use and practice.
+1. 116
+The time taken by an international arbitration and its expense have led to a renewed interest in the development of mediation as a
+tool for dispute resolution in international contracts. In that context, UNCITRAL updated its 2002 ‘Model Law on International
+Conciliation’ with the 2018 ‘UNCITRAL Model Law on International Commercial Mediation and International Settlement
+Agreements Resulting from Mediation’. In its own terms, ‘The Model Law is designed to assist States in reforming and
+modernizing their laws on mediation procedure. It provides uniform rules in respect of the mediation process and aims at
+encouraging the use of mediation and ensuring greater predictability and certainty in its use.’
+1. 117
+Contemporaneously with the publication of the 2018 Model Law, UNCITRAL Working Group II (dispute resolution) developed
+the Convention on International Settlement Agreements resulting from Mediation, which was adopted on 20 December 2018
+by the General Assembly of the United Nations and entered into force on 12 September 2020. As of April 2022, the Convention
+(referred to as the Singapore Convention) has been signed by fifty-five states and ratified by only nine states. 96  The Convention
+requires states to recognise and enforce international settlement agreements resulting from mediation that have been concluded
+in writing. It deliberately excludes any settlement agreement enforceable as an arbitral award (which would usually be a consent
+
+Section D. - ADR, Litigation, and Arbitration, UKBC-REDFERN 530638598 (2025)
+© 2025 Thomson Reuters.
+2
+award) to avoid overlap with the New York Convention. As a consequence, covered settlement agreements no longer have to be
+enforced in member states as a simple contract in accordance with domestic court procedures but are rather directly recognised
+and enforced.
+1. 118
+If parties wish to include mediation as a preliminary tool in the dispute resolution provision of their international contract, then
+it would be appropriate to incorporate language noting that they will first attempt to resolve any dispute for a fixed period
+(perhaps sixty or ninety days) by good faith negotiations, if necessary with the assistance of a neutral mediator to be selected
+by the parties (with a fallback institutional nomination), failing which the dispute will be referred to binding arbitration under
+a set of institutional rules. 97
+(b) Multi-tiered dispute resolution provisions
+1. 119
+Many international agreements are for long-term projects. There might, for instance, be an agreement between a state and a
+major engineering company for the construction of a dam or a motorway; or a long-term agreement for the production and
+shipping of LNG from the gas supplier to a power plant several hundred miles away. It is important that if a dispute arises it
+should not hold up the work of construction, with perhaps hundreds of workers on site, or the delivery of the cargoes of liquid
+gas, with gas tankers at sea. What is needed is a dispute resolution provision that allows the work or transport to continue whilst
+the dispute is resolved.
+1. 120
+Many standard form contracts used on major engineering or construction contracts now contain provisions for some form of
+multi-tiered resolution of the dispute. 98  These include ‘mandatory negotiation’, which obliges the senior management of the
+disputants to meet and try to negotiate a settlement by taking an overall view of the case, rather than by adhering to an entrenched
+position that was perhaps adopted by the participants at site level. They also include provisions for the interim determination of
+the dispute by a ‘Disputes Resolution Board’ 99  or a ‘Panel of Experts’, who will act in a quasi-judicial role and whose decision
+will be binding on the parties, unless it is reversed by an agreement between the parties or by a subsequent reference to a national
+court or to international arbitration. For example, the ‘World Bank Standard Bidding Documents for the Procurement of Works’
+generally follows the provisions of the FIDIC Red Book providing that any dispute, including a dispute as to the engineer’s
+evaluation of the work, is to be referred for decision to a Dispute Avoidance/Adjudication Board (DAAB) constituted by the
+parties themselves. 100  That decision will be binding on the parties unless revised by a subsequent amicable settlement by the
+parties, which should take place before any reference to arbitration. If any party is still dissatisfied, the dispute will be referred
+to arbitration under the rules of arbitration agreed by the parties or, if there is no agreement, under the ICC Rules of Arbitration.
+1. 121
+The use of ADR provisions in standard form or model contracts promoted by multilateral financial institutions and professional
+organisations is an indication of their success in the resolution of disputes. However, parties may go through the ADR process
+and still remain persuaded that their evidence or their arguments have not received the attention they deserve or that insufficient
+attention has been paid to the facts or the law. If so, the next decision for the aggrieved party is (depending on its contract)
+whether to take its grievance to the national courts or to international arbitration.
+(c) The advantage of arbitration
+(i) ‘The only game in town’
+1. 122
+
+Section D. - ADR, Litigation, and Arbitration, UKBC-REDFERN 530638598 (2025)
+© 2025 Thomson Reuters.
+3
+The model and the standard forms of international contract to which reference has been made above provide for international
+arbitration as the final part of the dispute resolution process. They do so for good reason. International arbitration gives
+the parties the opportunity of resolving their dispute: (i) in a neutral place of arbitration; (ii) by a tribunal of experienced,
+independent, and impartial arbitrators; (iii) selected by or on behalf of the parties themselves for their suitability for the task;
+(iv) working in the language of the contract and of the frequently voluminous documents that form part of that contract;
+and (v) in a manner which will result in a binding decision that is internationally enforceable. In the international context,
+there is really no competition from the local courts. International arbitration may well be described, as stated earlier, as ‘the
+only game in town’.
+1. 123
+In addition to the points already made about neutrality, and the ability of the parties to select a tribunal of arbitrators who
+are skilled in their work as well as being independent and impartial, there are other advantages to international arbitration
+that should be briefly touched upon.
+(ii) Enforcement
+1. 124
+First and foremost is the fact that the awards of international arbitral tribunals are enforceable by courts worldwide because
+of a network of international treaties and conventions, of which the New York Convention is still the most important. These
+treaties and conventions have greater acceptance internationally than treaties for the reciprocal enforcement of judgments. 101
+(iii) Privacy and confidentiality
+1. 125
+A distinction needs to be made between privacy and confidentiality. Proceedings in an international arbitration are usually
+private. There is no public gallery for spectators, no journalists or reporters publishing details of the proceedings in the
+public press. It used to be possible to say that arbitrations were also confidential such that the evidence, the arguments, the
+submissions of the parties, and the awards of the arbitrators were only made known if the parties agreed or if there was
+some public duty to disclose them. This once general principle of confidentiality has been partially eroded in the quest for
+transparency, although the evidence is that where confidentiality exists it is still greatly valued by the parties, particularly in
+international commercial arbitrations. In international investment arbitrations, transparency has gained most traction since
+the matters at issue usually involve reviewing the legality of state measures and the possible payment of damages from the
+public purse. In those circumstances, there has been great pressure to open up the system to the public (and the taxpayer)
+who have an interest in calling their governments to account and in seeing the operation of a process where their taxpayer
+funds are employed. The consequence of this increased demand for transparency in the field of investment arbitration is
+addressed in detail in Chapter 8.
+1. 126
+An important question is to what extent the move for transparency is likely to ‘spill-over’ from investment arbitration to
+international commercial arbitration, which is based on private contracts rather than on public treaties and does not involve
+the disbursement of public funds. At present, the demarcation line between the two types of arbitration seems to be observed.
+For example, in 2010 Australia adopted a rule that proceedings would not be confidential unless the parties ‘opted in’ to such
+confidentiality. 102  This rule proved so unpopular that it was reversed by legislation in 2015. Now confidentiality is once
+again the rule in Australia, with the parties free to ‘opt out’ of that rule if they wish to do so. 103  It has been clear for some
+years that the privacy and confidentiality of arbitral proceedings, which together were regarded as considerable advantages
+of international commercial arbitration, can no longer be taken for granted. The debate as to privacy and confidentiality is
+one of increasing importance. It is more fully explored in the next chapter.
+
+Section D. - ADR, Litigation, and Arbitration, UKBC-REDFERN 530638598 (2025)
+© 2025 Thomson Reuters.
+4
+(iv) Adaptability
+1. 127
+Arbitration is an extremely adaptable process, as its history shows. Arbitration can equally well resolve the value of a piece of
+jewellery in a dispute between two merchants as it can a billion-dollar dispute between two multinational corporations. There
+are certain basic principles to be followed in the course of an arbitration (for instance that of treating the parties equally and
+giving them an opportunity to state their case) but there is no code of civil procedure to be followed. In short, an arbitration
+can be tailored to meet the specific requirements of the dispute, rather than being treated as if ‘one-size-fits-all’. 104  It has
+been said that every arbitration is a ‘microcosm of potential procedural reform’.
+(v) Finality of the award
+1. 128
+The decision of a court of law may be subject to an appeal first to a court of appeal and then to a supreme court. This is
+no doubt good for the development of a country’s legal system (as well as for its lawyers). It helps to build a known and
+reasonably predictable code of law. It is less useful for the individual corporations or individuals who have to finance the
+process and wait, possibly for years, for its final outcome. Subject to very limited grounds for review of an arbitral award
+discussed in Chapter 10, the award marks the end of the dispute. There is usually no ladder of appeals to be climbed.
+(d) Disadvantages of international arbitration
+(i) Multiparty arbitrations, joinder, and consolidation
+1. 129
+There are inevitably disadvantages to international arbitration. For a start, any arbitration, whether national or international,
+is based on the consent of the parties. Without consent, there is no valid arbitration.
+1. 130
+There are cases, for example, where the parties to an arbitration may wish to add (or join) a third party who is in some way
+involved in the dispute, such as a parent company, a subcontractor or an insurer. It may often make sense to add (or join)
+this third party, so as to resolve all outstanding disputes consistently in the same forum. However, in arbitration there may
+be problems in doing so absent demonstration of consent by the third party.
+1. 131
+Alternatively, there may be two arbitrations between the same parties based on essentially the same facts, but with the claimant
+in the first arbitration being named as the respondent in the second. It would make sense to consolidate the two arbitrations
+(that is, to bring them before the same arbitral tribunal) but, again, there may be problems in doing this.
+1. 132
+Problems such as these (multiparty arbitrations, the joinder of additional parties, the consolidation of arbitrations, and so
+forth) have troubled the users of arbitration for many years. In the celebrated Dutco case, 105  there were two respondents
+who each wanted to nominate an arbitrator. Under the former ICC Rules, they could not do this. They were instead required
+to nominate one arbitrator between them. They did so under protest—but a complaint was made to the French court, which
+said that the right of each party to nominate an arbitrator was part of French public policy and could not be waived. As
+a consequence, the ICC had to devise new rules to deal with such a situation. These new Rules state that where there are
+
+Section D. - ADR, Litigation, and Arbitration, UKBC-REDFERN 530638598 (2025)
+© 2025 Thomson Reuters.
+5
+multiple claimants or multiple respondents and the parties are unable to agree on a method for the constitution of the arbitral
+tribunal, the ICC Court itself may appoint each member of the tribunal and designate one as president. 106
+1. 133
+As international trade, commerce, and investment become more complex and global, there are an increasing number of
+multiparty disputes. For example, a car manufacturer based in Germany may have contracts with suppliers in other countries
+for the manufacture and supply of components. Any defects in the final product may mean that the German manufacturer will
+have claims against several suppliers in different locations and subject to different contracts, as it seeks to establish liability
+for the defects and compensation for its losses.
+1. 134
+The leading arbitral institutions are well aware of the different problems that might arise and they have taken (or are taking)
+action to address them, so far as this is possible within the limits of ‘party consent’. 107  For example, the ICC Rules give the
+arbitral tribunal (in Article 7.5) the authority to decide (under certain conditions) whether or not a party should be joined to
+the proceedings in response to a request for joinder. Similarly, the LCIA Rules contain provisions (in Article 22A) that give
+an arbitral tribunal (under certain conditions and subject to the approval of the LCIA Court) the power to consolidate any
+other arbitrations that are subject to the LCIA Rules. These provisions, and other developments of the powers of the arbitral
+institutions to consolidate, are considered in Chapter 2.
+(ii) Non-signatories
+1. 135
+The problem of the so-called non-signatory occurs when a claimant wishes to include a person or a legal entity that is not
+formally a signatory to the arbitration agreement as a corespondent or (less commonly) where an entity wishes to start a claim
+pursuant to a contract in which it has an interest but has not signed. A common example is that of a claimant with a dispute
+under a contract between itself and a thinly capitalised local subsidiary of a major international corporation. The contract
+contains an arbitration clause and so arbitration can be compelled against the subsidiary company—but the claimant would
+like to add the parent company to the arbitration, so as to improve its chances of being paid if it succeeds in its claim. Is it
+possible to do this, if the parent company is not a signatory to the contract?
+1. 136
+At this point it is sufficient to say (in very general terms) that the key issue is whether there is any ‘deemed’ or ‘assumed’,
+consent to arbitration. Various legal theories or doctrines have been developed to try to establish such assumed consent,
+including the ‘group of companies’ doctrine, the ‘reliance’ theory, the concept of agency, and the US concept of ‘piercing
+the corporate veil’ (so that, for example, a parent company may be taken to be responsible for the actions of a subsidiary that
+is a mere shell and, accordingly, be treated as if it were a party to any contract made by that subsidiary). 108  This problem
+is discussed in more detail later, in Chapter 2.
+(iii) Conflicting awards
+1. 137
+There is no system of binding precedent in international arbitration—that is, there is no rule that an award on a particular issue,
+or a particular set of facts, is binding on different parties or arbitrators confronted with similar issues or similar facts. 109  Each
+award stands on its own. An arbitral tribunal that is required (for example) to interpret a particular reinsurance policy may
+arrive at a different conclusion from that of another tribunal faced with the same question. If the award of the first tribunal
+is known (and it may not be known, because of confidentiality), it may be of persuasive effect, but no more. The issue is
+even more acute in investment arbitration where two tribunals constituted to hear the claims of two shareholders in the same
+company subject to the same state measures may reach diametrically opposed solutions. 110
+1. 138
+
+Section D. - ADR, Litigation, and Arbitration, UKBC-REDFERN 530638598 (2025)
+© 2025 Thomson Reuters.
+6
+The problem of conflicting decisions is a real one. One proposed solution is to create a new international court for resolving
+disputes over the enforcement of arbitral awards. But this has been described as ‘the impossible dream’. 111  Proposals for a
+broader appeal mechanism have been made in relation to investment arbitration to ensure consistency between decisions. 112
+Indeed, the EU has incorporated arbitral appeal mechanisms into some Investment Protection Agreements. 113  This may suit
+lawyers and arbitrators, who might welcome consistency of decisions, but it might not suit business people who are looking
+for a rapid solution to their dispute, rather than for the opportunity to contribute at their own expense to the development
+of the law.
+(iv) Judicialisation
+1. 139
+There has been for many years a continuing discussion about the increasing ‘judicialisation’ of international arbitration:
+meaning both that arbitrations tend to be conducted more frequently with the procedural intricacy and formality
+more native to litigation in national courts and that they are more often subjected to judicial intervention and
+control. 114
+1. 140
+The problem is most evident in the United States, 115  where there is a tradition of broad-ranging ‘discovery’ in civil litigation.
+The US practice of ‘discovery’ describes seeking out and collecting pre-trial evidence. Such evidence takes two forms:
+witness testimony and the production of documents.
+1. 141
+If US-style witness depositions are ordered in an arbitration, witnesses may be required to give oral testimony and to be cross-
+examined on oath by the parties’ counsel. Their responses are recorded in a transcript which is then made available for use
+in the arbitration proceedings as a ‘pre-trial deposition’. So far as the production of documents is concerned, 116  the parties
+to an arbitration may be ordered to disclose generally documents that are relevant and material to the issues in dispute, even
+if the party that has possession, custody, or control of the documents does not wish to produce them. In a major arbitration,
+the task of tracing and assembling these documents may take months and cost considerable sums of money, with phrases
+such as ‘warehouse discovery’ only palely reflecting the scope of the work to be done. Since the term ‘documents’ includes
+emails and other electronically stored information (ESI), the time and costs involved in tracing and assembling the relevant
+material has increased dramatically. 117  One US lawyer summed up the position in an article, whose title says it all: ‘How
+the creep of United States litigation-style discovery and appellate rights affects the efficiency and cost-efficacy of arbitration
+in the United States’. 118
+1. 142
+This trend towards ‘judicialisation’ is not confined to the United States. The artisanal approach of the arbitration practitioner
+as master craftsman has undergone something of an industrial revolution. As previously stated, arbitration has become big
+business undertaken by large teams of lawyers who produce voluminous work product. Inevitably, this increases the workload
+of the arbitral tribunal: in reaching its decision, the tribunal must give proper consideration to the documents and evidence
+before it, as part of its duty to proceed judicially—giving each party a proper opportunity to present its case and treating each
+party equally, on pain of having the arbitral award set aside for procedural irregularity. 119
+1. 143
+Various ways of dealing with the resulting growth in complexity, cost, and procedural schedules have been canvassed. For
+example, there has been a proposal for a return to ‘first principles’, so that the arbitral tribunal would ask in respect of each
+particular arbitration:
+ 
+(i)what is the best way of dealing with this case?
+ 
+(ii)do the parties want a full trial of their dispute whatever it costs? or
+
+Section D. - ADR, Litigation, and Arbitration, UKBC-REDFERN 530638598 (2025)
+© 2025 Thomson Reuters.
+7
+ 
+(iii)to save time and money would they be prepared to accept a shortened procedure, recognising that this would limit
+their opportunity to develop their respective cases as meticulously as they might wish? 120
+(v) Costs
+1. 144
+International arbitration was once a relatively inexpensive method of dispute resolution. It is no longer so. First, the fees
+and expenses of the arbitrators (unlike the salary of a judge) must be paid by the parties—and in international arbitrations
+of any significance, these charges are likely to be substantial. Secondly, it may be necessary to pay the administrative fees
+and expenses of an arbitral institution—and these too may be substantial (and it may also be necessary to appoint a secretary
+or ‘administrative assistant’ to administer the proceedings). Finally, in the event of physical hearings it will be necessary to
+hire rooms and associated facilities rather than make use of the public facilities of the courts of law. In the event of virtual
+hearings, IT specialists will usually have to be hired to manage the complexities of conducting a hearing virtually from
+multiple countries through a single platform.
+1. 145
+But the fees of the arbitrators and of the arbitral institutions, the charges for room hire, the costs of court reporters and IT
+specialists, and other such expenses are usually a drop in the ocean compared with the fees and expenses of the parties’
+legal advisers and expert witnesses. In a major arbitration, these may easily run into several million dollars. 121  This means
+that international arbitration is not likely to be cheaper than proceedings in domestic courts, unless there is a very conscious
+effort to make it so. 122
+1. 146
+One point that should not be forgotten in considering the cost of arbitration, however, is that it is a form of ‘one-stop shopping’.
+Although the initial cost may not be less than that of proceedings in court, the award of the arbitrators is unlikely to be
+followed by a series of costly appeals to superior local courts.
+(vi) Delay
+1. 147
+Finally, a major complaint is that of delay, particularly at the beginning and at the end of the arbitral process. At the beginning,
+the complaint is of the time that it may take to constitute an arbitral tribunal, so that the arbitral process can start to move
+forward. 123  At the end of the arbitration, the complaint is of the time that some arbitral tribunals take to issue their award,
+with months (and sometimes a year or more) passing between the submission of post-hearing briefs and the delivery of the
+long-awaited decision. 124
+(vii) Summary
+1. 148
+As the debate about costs and delay continues, it is important to remember that the aim of international arbitration is not
+simply to determine a dispute as quickly and cheaply as possible. If the parties agreed, that could be done with the spin of a
+coin. The aim of international arbitration is to arrive at a fair and reasoned decision on a dispute, based on a proper evaluation
+of the relevant contract, the facts, and the law. As Professor Park has written:
+Much of the criticism of arbitration’s costs and delay thus tells only half the story, often with subtexts portending
+a cure worse than the disease. An arbitrator’s main duty lies not in dictating a peace treaty, but in delivery of
+an accurate award that rests on a reasonable view of what happened and what the law says. Finding that reality
+in a fair manner does not always run quickly or smoothly. Although good case management values speed and
+
+Section D. - ADR, Litigation, and Arbitration, UKBC-REDFERN 530638598 (2025)
+© 2025 Thomson Reuters.
+8
+economy, it does so with respect for the parties’ interest in correct decisions. The parties have no less interest in
+correct decisions than in efficient proceedings. An arbitrator who makes the effort to listen before deciding will
+enhance both the prospect of accuracy and satisfaction of the litigant’s taste for fairness. In the long run, little
+satisfaction will come from awards that are quick and cheap at the price of being systematically wrong. 125
+1. 149
+At one time, the comparative advantages and disadvantages of international arbitration versus litigation were much
+debated. 126  That debate should now be over. Opinion has moved strongly in favour of international arbitration for the
+resolution of international disputes.
+Footnotes
+95
+A clear and concise guide to the various forms of ADR is provided in Jenkins, International Construction Arbitration
+Law (3rd edn, Wolters Kluwer, 2021), pp. 141–165.
+96
+As of April 2022, the states who have ratified the Convention are Singapore, Fiji, Qatar, Saudi Arabia, Belarus, Ecuador,
+Honduras, Georgia and Turkey.
+97
+Model clauses for the appointment of a mediator are provided by various institutions, including arbitral institutions such
+as the ICC and specialist institutions such as the ‘Centre for Effective Dispute Resolution’ (CEDR), which focuses on
+mediation for the resolution of commercial disputes and also runs training courses for potential mediators.
+98
+‘Tiered Dispute Resolution Precedents’ are fully and helpfully discussed in Jenkins, International Construction
+Arbitration Law (3rd edn, Wolters Kluwer, 2021), pp. 66–99 under the title of ‘Dispute Avoidance and Resolution’.
+99
+See ibid., at pp. 121–140.
+100
+See Standard Bidding Documents, Procurement of Works (World Bank, 2020), p. 145; Conditions of Contract for
+Construction for Building and Engineering Works Designed by the Employer (2nd edn, FIDIC, 2017), pp. 100–107.
+101
+There is a multilateral treaty for the recognition and enforcement of court judgments made in the EU member states
+and Switzerland: Council Regulation (EC) No. 44/2001 of 22 December 2000 on jurisdiction and the recognition and
+enforcement of judgment in civil and commercial matters, OJ L 12/1, 16 January 2001 (formerly the Brussels and Lugano
+Conventions). The Common Market of the South (Mercado Común del Sur, or Mercosur), comprising Argentina, Brazil,
+Paraguay, and Uruguay, has also established the Las Leñas Protocol for the mutual recognition and enforcement of
+judgments from Mercosur states within the region. The Hague Conference on Private International Law has drawn up
+a Convention on Choice of Court Agreements, under which a judgment by the court of a contracting state designated
+in an exclusive ‘choice of court agreement’ would be recognised and enforced in other contracting states. At time of
+writing, the Convention has been signed by the European Union (EU), China, Israel, Montenegro, the Republic of
+North-Macedonia, Singapore, Ukraine, and the United States, and entered into force on 1 October 2015 (see https://
+www.hcch.net/en/instruments/conventions/status-table/?cid=98).
+102
+See the International Arbitration Amendment Act 2010, s. 22(3).
+103
+See the International Arbitration Amendment Act 1947, as amended, ss. 22–23.
+104
+Chapter 6, which deals amongst other things with the use of fast-track procedures, has more to say on this topic.
+105
+BKMI and Siemens v Dutco, French Cass. Civ. 1ere, 7 January 1992, [1992] Bull Civ 1. This case is discussed more
+fully in Chapter 2.
+106
+This provision of the ICC Rules, first adopted in 1998, works reasonably well in practice, although it removes the right
+of the parties to nominate an arbitrator if they are unable to agree how this should be done. Interestingly, this is the very
+issue on which the French court took its stand, the ‘fundamental’ right of a party to nominate its own arbitrator! Other
+institutional rules contain similar provisions.
+107
+Problems of multi-party arbitrations, joinder, and consolidation are considered in more detail in Chapter 2.
+108
+See Hanotiau, Complex Arbitrations: Multi-party, Multi-contract, Multi-issue—A Comparative Study (2nd edn,
+International Law Library, 2020), pp. 95–196.
+109
+See Kaufmann-Kohler, ‘Arbitral precedent: Dream, necessity or excuse? The 2006 Freshfields Lecture’ (2007) 23 Arb
+Intl 357.
+110
+For instance, in Ronald Lauder v Czech Republic, Final Award, UNCITRAL, 3 September 2001 and in CME v Czech
+Republic, Final Award, UNCITRAL, 14 March 2003, two claims brought in respect of a single dispute, involving virtually
+
+Section D. - ADR, Litigation, and Arbitration, UKBC-REDFERN 530638598 (2025)
+© 2025 Thomson Reuters.
+9
+undisputed facts, produced conflicting awards from arbitral tribunals in London and Stockholm, as well as giving rise
+to litigation in the Czech Republic, the United States, and Sweden: see Brower, Brower II, and Sharpe, ‘The coming
+crisis in the global adjudication system’ (2003) 19 Arb Intl 424; Cremades and Madalena, ‘Parallel proceedings in
+international arbitration’ (2008) 24 Arb Intl 507. See also Professor Kaj Hobér’s review: Hobér, ‘Res judicata and lis
+pendens in international arbitration’, in Hague Academy of International Law, Collected Courses of the Hague Academy
+of International Law, Vol. 366 (Martinus Nijhoff, 2014), pp. 99-406.
+111
+Howard M. Holtzmann, cited in Brower, Brower II, and Sharpe, ‘The coming crisis in the global adjudication
+system’ (2003) 19 Arb Intl 424, at 435.
+112
+See, e.g., Potesta and Kaufmann-Kohler, ‘Can the Mauritius Convention serve as a model for the reform of investor-state
+arbitration in connection with the introduction of a permanent investment tribunal or an appeal mechanism?—Analysis
+and roadmap, (3 June 2016). Available at SSRN: https://ssrn.com/abstract=3455511 or http://dx.doi.org/10.2139/
+ssrn.3455511. The issue is also discussed in Platt, ‘The appeal of appeal mechanisms in international arbitration:
+Fairness over finality?’ (2013) 30(5) J Intl Arb 531.
+113
+See Chapter Three of the EU–Vietnam Investment Protection Agreement which entered into force on 1 August 2020
+and incorporates an arbitration appeal provision for investment arbitrations at Art. 3.39.
+114
+Brower, ‘W(h)ither international commercial arbitration?’ (2008) 24 Arb Intl 181, at 183.
+115
+See, e.g., Seidenberg, ‘International arbitration loses its grip: Are US lawyers to blame?’ (2010) ABA Journal 51:
+‘Arbitration was supposed to be the solution for international companies seeking to resolve disputes without expensive
+and drawn-out court battles. But it is starting to look more like the problem [ … ] Arbitration of international commercial
+disputes has taken on many of the characteristics of litigation in US Courts. And this has upset many companies that
+rely on arbitration to resolve cross-border business disputes.’
+116
+In English High Court litigation, the term ‘Discovery’ is used to cover only the production of documents.
+117
+The problem posed by ESI has been addressed, amongst many others, by the British Chartered Institute of Arbitrators
+(CIArb), with its 2008 Protocol for E-Disclosure in Arbitration. The 2020 IBA Rules on the Taking of Evidence in
+International Arbitration provide for targeted disclosure of documents, rather than warehouse discovery.
+118
+Rievman, Paper presented at a conference sponsored by the Centre for International Legal Studies, February 2005; see
+also Baker, ‘At what price perfect justice?’, Presented as part of a coursebook for the 2009 Annual Meeting of the
+International Institute for Conflict Prevention and Resolution, New York, 15–16 January 2009.
+See, e.g., Redfern, ‘Stemming the tide of judicialisation in international arbitration’ (2008) 2 World Arb & Med Rev 21,
+at 24: ‘It would be comforting, at least for non US lawyers, if it could be assumed that the blight of increasing expense and
+delay in international arbitration is unique to the United States. It would be wrong, however, to make this assumption.’
+119
+For instance, under New York Convention, Art. V, or Model Law, Art. 36.
+120
+See, e.g., Rivkin, ‘Towards a new paradigm in international arbitration: The town elder model revisited’ (2008) 24 Arb
+Intl 3, at 378.
+121
+There are many reasons for this, including (i) the considerable sums of money that are often at stake; (ii) the
+increasing professionalism of lawyers, accountants, and others engaged in the arbitral process, with a determination to
+leave no stone unturned (which may lead to excessively lengthy and repetitive submissions); and (iii) the increasing
+‘judicialisation’ of international arbitration, which has been discussed earlier.
+122
+One of the objectives of this book is to show how this can be achieved by skilled and effective case management.
+123
+For example, under the ICDR Rules, forty-five days may elapse after receipt of the notice of arbitration before the
+administrator is requested to appoint the arbitrator(s) and designate the presiding arbitrator, and this process may take
+further time, with the need to find suitable candidates who have no conflict of interest: see ICDR Rules 2021, Art. 13.3.
+124
+One of the reasons for delay is the workload of the chosen arbitrators, particularly if they have other professional
+commitments, e.g. as counsel or as university professors. Ever more frequent challenges to arbitral awards have also
+provoked extreme caution from arbitrators resulting in ever more detailed reasoning and description of the steps taken in
+the arbitral process. Where awards have to be simultaneously issued in more than one language is also a source of delay.
+125
+Park, ‘Arbitration and accuracy’ (2010) 1 J Intl Disp Settlement 27.
+126
+For one of the most effective, and certainly the most entertaining, critiques of arbitration see Kerr, ‘Arbitration v
+litigation: The Macao Sardine case’, in Kerr, As Far As I Remember (Hart Publishing, 2002), Annex.
+End of Document
+© NIGEL BLACKABY KC, CONSTANTINE PARTASIDES
+KC, ALAN REDFERN

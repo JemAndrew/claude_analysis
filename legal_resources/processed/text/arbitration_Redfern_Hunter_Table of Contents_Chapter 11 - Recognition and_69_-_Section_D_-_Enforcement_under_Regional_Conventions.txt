@@ -1,0 +1,197 @@
+Section D. - Enforcement under Regional Conventions, UKBC-REDFERN 530638675...
+© 2025 Thomson Reuters.
+1
+Section D. - Enforcement under Regional Conventions
+Redfern and Hunter on International Arbitration 7th Ed.
+Mainwork
+Chapter 11 - Recognition and Enforcement of Arbitral Awards
+Section D. - Enforcement under Regional Conventions
+(a) Middle Eastern and North African Conventions and enforcement
+regimes
+11. 139
+The Riyadh Arab Agreement on Judicial Cooperation, known as the ‘Riyadh Convention’, entered into force in 1985, has twenty
+signatory states, and provides for the enforcement in one signatory state of an award rendered in another signatory state. 223
+Importantly, however, and unlike the New York Convention, the Riyadh Convention requires that, to enforce an award made
+in another Arab country, leave to enforce must be obtained in the country in which the award was made. 224  In the same way,
+the Agreement on the Execution of Rulings, Requests of Legal Assistance and Judicial Notices, entered into by the Gulf Co-
+operation Council in 1995 and known as the ‘GCC Convention’, 225  has the same requirement, and while it does not specifically
+refer to arbitral awards, it is considered applicable to them. 226
+11. 140
+States in this region have also entered into regional investment agreements—notably, the Agreement for Promotion, Protection
+and Guarantee of Investments, entered into by the Organisation of Islamic Cooperation member states and thus known as
+the ‘OIC Agreement’, 227  and the Unified Agreement for the Investment of Arab Capital in the Arab States, entered into
+by the member states of the Arab League (hence the ‘Arab League Investment Agreement’). 228  These agreements provide
+for the settlement of investor–state disputes by international arbitration. If an arbitral award rendered under the Arab League
+Investment Agreement is not implemented, or if the parties fail to resort to arbitration, or the tribunal fails to render an award
+within a prescribed period of time, the dispute shall be heard by a permanent Arab Investment Court. The decisions of arbitral
+tribunals under the OIC Agreement and of the Arab Investment Court under the Arab League Agreement are, like ICSID
+awards, enforceable as though they were final and enforceable decisions of national courts of the state in which enforcement
+is sought. 229
+11. 141
+The enforcement regime in the United Arab Emirates has attracted much attention in recent years. The United Arab Emirates is
+a civil law jurisdiction, but to promote business it has established two autonomous, English-speaking, common law ‘off-shore’
+jurisdictional enclaves, namely the Dubai International Financial Centre (DIFC) and the Abu Dhabi Global Market (ADGM).
+These ‘off-shore’ jurisdictions have their own civil and commercial laws, including their own arbitration laws based on the
+Model Law. The former Chief Justice of the DIFC courts was a leading Singaporean international arbitrator, Dr Michael Hwang,
+who described the DIFC as ‘a common law island in a civil law ocean’. 230
+11. 142
+In a notable series of judgments from 2014 to 2016, the DIFC courts held that, under the DIFC arbitration law, the DIFC could
+be used as a so-called ‘conduit jurisdiction’ for the enforcement of arbitral awards in the on-shore United Arab Emirates, given
+the automatic recognition of DIFC judgments in the rest of the United Arab Emirates. 231  This was so even in circumstances
+where the award debtor had no presence or assets in the DIFC itself. This, in effect, allowed award creditors to bypass the often
+uncertain and lengthy process of enforcing arbitral awards directly in the on-shore United Arab Emirates, which in turn led to
+a clash of jurisdictions between the off-shore DIFC courts and the on-shore United Arab Emirates regimes. In light of this, in
+June 2016, the Ruler of Dubai established the Dubai–DIFC Joint Judicial Committee responsible for determining conflicts of
+
+Section D. - Enforcement under Regional Conventions, UKBC-REDFERN 530638675...
+© 2025 Thomson Reuters.
+2
+jurisdiction between the on-shore Dubai courts and the DIFC courts. 232  The Joint Judicial Committee, which comprises four
+on-shore judges and only three DIFC judges, has since handed down a number of decisions that favoured the jurisdiction of the
+on-shore Dubai courts, thereby gradually curtailing the award creditors’ ability to use the DIFC courts as a ‘conduit jurisdiction’
+to enforce arbitral awards in the on-shore United Arab Emirates. 233
+11. 143
+In addition to the DIFC courts, the DIFC–LCIA Arbitration Centre was established in 2008 as a joint venture between the DIFC
+and the LCIA to administer arbitration proceedings under its own rules. On 20 September 2021, the Ruler of Dubai issued
+Decree No. (34) of 2021 dissolving the DIFC–LCIA Arbitration Centre (and the Emirates Maritime Arbitration Centre) and
+transferring their staff and their assets to the Dubai International Arbitration Centre (DIAC) with a new arbitration court to be
+established. 234  It remains to be seen whether this and other changes will impact the enforceability of awards in the United
+Arab Emirates.
+(b) Panama Convention
+11. 144
+In January 1975, following the Inter-American Conference on Private International Law in Panama, the Panama Convention was
+signed by twelve South American states. 235  The Convention represented a significant shift away from former Latin American
+hostility towards international arbitration, as reflected in the Calvo doctrine. 236
+11. 145
+The Panama Convention recognises an agreement to submit existing or future disputes to arbitration, 237  and it also provides
+for the reciprocal enforcement of arbitral awards in member states as if the award were a judgment of a court in the place of
+enforcement:
+An arbitral decision or award that is not appealable under the applicable law or procedural rules shall have the force
+of a final judicial judgment. Its execution or recognition may be ordered in the same manner as that of decisions
+handed down by national or foreign ordinary courts, in accordance with the procedural laws of the country where
+it is to be executed and the provisions of international treaties. 238
+The Convention speaks of ‘execution’ of an award rather than ‘enforcement’, but in practice there is no difference.
+11. 146
+Recognition and execution of an award may be refused, at the request of the party against which it is made, only if that party is
+able to prove to the competent authority of the state in which recognition and execution is sought that one of the five grounds
+for refusal laid down in Article 5(1) of the Panama Convention applies. Those five grounds closely follow the five grounds set
+out in Article V(1) of the New York Convention, and include: (i) incapacity, or invalid arbitration agreement; (ii) no proper
+notice of appointment of arbitrator or of the proceedings, or lack of due process; (iii) lack of jurisdiction; (iv) composition of
+arbitral tribunal or procedure not in accordance with arbitration agreement or the relevant law; and (v) award not yet binding
+on the parties, or annulled or suspended at the seat of arbitration. 239  In the same way, and following Article V(2) of the New
+York Convention, under Article 5(2) of the Panama Convention, recognition and execution of an award may also be refused if
+the competent authority of the state in which recognition and execution is sought, finds that: the subject matter of the dispute
+cannot be settled by arbitration under the law of that state; or that recognition or execution of the decision would be contrary
+to the public policy (‘ordre public’) of that state. 240
+11. 147
+Where an application has been made to annul or suspend the award, the authority before which recognition and execution is
+sought may, 241  under the Panama Convention, postpone its decision; at the request of the party seeking execution, it may also
+instruct the other party to provide appropriate guarantees. 242
+
+Section D. - Enforcement under Regional Conventions, UKBC-REDFERN 530638675...
+© 2025 Thomson Reuters.
+3
+11. 148
+It is evident that the Panama Convention was strongly influenced by the provisions of the New York Convention. Indeed,
+many of the provisions of the former have been copied more or less word for word from the latter. According to one informed
+commentator, the Panama Convention nevertheless has had ‘a tremendous and vital significance’. 243  Certainly, whether because
+of the Convention or because of other influences—such as the Model Law—arbitration is becoming a more acceptable way
+of settling disputes in Latin America.
+(c) Moscow Convention
+11. 149
+The Moscow Convention was signed on 26 May 1972, the original signatories being those Eastern Bloc states that were grouped
+together under the leadership of the Soviet Union in the now defunct Council for Mutual Economic Assistance (known in
+English as the Comecon). Now that the German Democratic Republic has ceased to exist and Poland, the Czech Republic, and
+Hungary have withdrawn, it applies only to Bulgaria, Cuba, Mongolia, Romania, and Russia, although there is little evidence
+of any current usage.
+11. 150
+The Convention regulates the settlement by arbitration of disputes ‘resulting from economic and scientific-technical
+cooperation’ within the member states. It provides that arbitration awards ‘shall be final and binding’, 244  and they are to be
+‘voluntarily’ enforced by the parties, failing which they may be enforced in the same way as final decisions made in the courts
+of the country of enforcement. 245  Enforcement proceedings must be brought within two years of the date of the award, and
+the three grounds of refusal of enforcement closely parallel those in the New York Convention—namely, lack of jurisdiction,
+denial of a fair hearing, and when the award has been set aside. 246
+(d) Other regional conventions
+11. 151
+This review of various regional conventions is not intended to be exhaustive. Parties or lawyers who are concerned with the
+recognition and enforcement of arbitration agreements or arbitral awards would be well advised to consider whether there are
+any regional conventions that may be both relevant and helpful.
+Footnotes
+223
+The following countries are signatories to the Riyadh Convention: Algeria, Bahrain, Djibouti, Iraq, Jordan, Kuwait,
+Lebanon, Libya, Mauritania, Morocco, Oman, Palestine, Qatar, Saudi Arabia, Somalia, Sudan, Syria, Tunisia, UAE,
+and Yemen.
+224
+See Riyadh Convention, Art. 37.
+225
+The following countries are party to the GCC Convention: Bahrain, Kuwait, Oman, Qatar, Saudi Arabia, and UAE.
+226
+GCC Convention, Art. 7.
+227
+The following countries have ratified the OIC Agreement: Burkina Faso, Cameroon, Egypt, Gabon, Gambia, Guinea,
+Indonesia, Iran, Iraq, Jordan, Kuwait, Lebanon, Libya, Mali, Mauritania, Morocco, Oman, Pakistan, Palestine, Qatar,
+Saudi Arabia, Senegal, Somalia, Sudan, Syria, Tunisia, Turkey, Uganda, and the UAE. The following countries have
+signed but not yet ratified the OIC Agreement: Afghanistan, Albania, Bangladesh, Benin, Comoros, Cote d’Ivoire,
+Djibouti, Guinea-Bissau, Malaysia, Niger, Nigeria, Sierra-Leone, Tajikistan, and Yemen.
+
+Section D. - Enforcement under Regional Conventions, UKBC-REDFERN 530638675...
+© 2025 Thomson Reuters.
+4
+228
+The following countries are party to the Arab League Agreement: Algeria, Bahrain, Comoros, Djibouti, Egypt, Iraq,
+Jordan, Kuwait, Lebanon, Libya, Mauritania, Morocco, Oman, Palestine, Qatar, Saudi Arabia, Somalia, Sudan, Syria
+(temporarily suspended at the time of writing), Tunisia, UAE, and Yemen.
+229
+OIC Agreement, Art. 17(d); Arab League Agreement, Art. 34(3).
+230
+See Hwang, ‘The courts of the Dubai International Finance Centre—A common law island in a civil law ocean’, in
+Selected Essays in Dispute Resolution (Academy Publishing, 2018), p. 51.
+231
+See, e.g., Banyan Tree Corporate PTE Ltd v Meydan Group LLC (Claim No: ARB-003-2013) and DNB Bank ASA v
+Gulf Eyadah (Claim No: CA-007-2015).
+232
+Dubai Decree No. 19 of 2016, ‘Concerning the establishment of a Judicial Tribunal for the Dubai Courts and DIFC
+Courts’.
+233
+See, e.g., Daman Real Capital Partners Company LLC v Oger Dubai LLC (Cassation No. 1/2016), where the Joint
+Judicial Committee ruled that the DIFC courts should ‘cease to entertain’ an action to enforce an award rendered in on-
+shore Dubai because of the existence of parallel annulment proceedings in the on-shore Dubai courts. In Gulf Navigation
+Holding P.S.C v Jinhai Heavy Industry Co. Limited (Formerly Zhoushan Junhaiwan Shipyard Co Ltd) (Cassation
+No. 1/2017), the Joint Judicial Committee went a step further and ordered the DIFC courts to cease entertaining the
+enforcement of a foreign arbitral award, on the basis that the award creditor had filed a new claim related to the same
+contract in dispute before the Amicable Settlement of Disputes Centre of the Dubai courts.
+234
+The Dubai government’s media release can be found online at https://mediaoffice.ae/en/news/2021/September/18-09/
+Mohammed-bin-rashid
+235
+The text of the Convention appears in (1978) III YBCA 15 and in (1975) 14 ILM 336. See also Blackaby, Lindsey, and
+Spinillo (eds) International Arbitration in Latin America (Kluwer Law International, 2002), pp. 3-6. The Convention
+came into effect in the United States on 27 October 1990.
+236
+At time of writing, nineteen states had ratified this Convention, including the United States: see online at http://
+www.oas.org/juridico/english/sigs/b-35.html. For a commentary on US participation, see Lowry, ‘The United States
+joins the Inter-American Arbitration Convention’ (1990) 7 J Intl Arb 83.
+237
+Panama Convention, Art. 1. Unlike the New York Convention, however, it does not deal with the problem of enforcing
+an arbitration agreement if one of the parties takes court proceedings notwithstanding the agreement to arbitrate.
+238
+Panama Convention, Art. 4.
+239
+Panama Convention, Art. 5(1).
+240
+Panama Convention, Art. 5(2).
+241
+Panama Convention Art. 6.
+242
+This provision follows the New York Convention, Art. V(I).
+243
+Norberg, ‘General introduction to inter-American commercial arbitration’ (1978) III YBCA 1, at 13.
+244
+Moscow Convention, Art. IV(1).
+245
+Moscow Convention, Art. IV(2).
+246
+Moscow Convention, Art. V(1).
+End of Document
+© NIGEL BLACKABY KC, CONSTANTINE PARTASIDES
+KC, ALAN REDFERN

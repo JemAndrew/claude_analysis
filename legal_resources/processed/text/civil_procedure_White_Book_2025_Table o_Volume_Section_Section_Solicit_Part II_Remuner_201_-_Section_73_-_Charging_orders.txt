@@ -1,0 +1,93 @@
+Section 73. - Charging orders, UKBC-WHITEBK 458578214 (2025)
+© 2025 Thomson Reuters.
+1
+Section 73. - Charging orders
+White Book 2025  | Commentary last updated April 20, 2011
+Volume 2
+Section 7 - Legal Representatives—Costs and Litigation Funding
+Section 7C - The Solicitors Act 1974
+Solicitors Act 1974
+Section 73
+Part III Remuneration of Solicitors
+Remuneration—General
+73.— Charging orders
+7C-135
+(1) Subject to subsection (2) any court in which a solicitor has been employed to prosecute or defend any suit, matter
+or proceeding may at any time—
+(a) declare the solicitor entitled to a charge on any property recovered or preserved through his instrumentality
+for his assessed costs in relation to that suit, matter or proceeding; and
+(b) make such orders for the assessment of those costs and for raising money to pay or for paying them out of
+the property recovered or preserved as the court thinks fit;
+and all conveyances and acts done to defeat, or operating to defeat, that charge shall, except in the case of a conveyance
+to a bona fide purchaser for value without notice, be void as against the solicitor.
+(2) No order shall be made under subsection (1) if the right to recover the costs is barred by any statute of limitations.
+Note
+7C-135.
+1
+Amended by the Legal Services Act 2007 Sch.16 para.68, with effect from 1 January 2010 (SI 2009/3250).
+“taxed costs”
+7C-136 The court has jurisdiction to make a charging order over costs recoverable in an action by a client company where that company
+has become dormant and incapable of acting or unwilling to act further, even though the order for costs contains no direction
+that the costs be assessed and the costs have not been assessed.
+The court is not bound to order that the costs in question be assessed as between solicitor and client (Fairfold Properties Ltd
+v Exmouth Docks Company Ltd (No.2) [1993] 2 W.L.R. 241).
+
+Section 73. - Charging orders, UKBC-WHITEBK 458578214 (2025)
+© 2025 Thomson Reuters.
+2
+“Taxed costs” in this context must refer to costs which have been assessed by detailed assessment.
+The provisions of s.73(1) are plainly directed to cases in which the court has made an order for costs; where the question of costs
+was dealt with in a compromise agreement there was therefore no power to continue a freezing order or to make a declaration
+under s.73(1): Al-Abbas v Al-Dabbagh [2002] EWCA Civ 1962.
+The court has no jurisdiction to make a charging order absolute where sums claimed are unassessed costs which were not the
+subject of a judgment or order which required the debtor to pay a sum of money to another person. The sums claimed were not, at
+the time the charging order was made, monies due, or to become due, under an order of the court. There was thus no jurisdiction
+to make the charging order: Monte Developments Ltd v Court Management Consultants Ltd [2010] EWHC 3071 (Ch) Floyd J.
+The taking of a legal charge by a firm of solicitors over the property of former clients to secure legal costs does not necessarily
+waive the rights of the firm under the Solicitors Act 1974, s.73. Although it is well established that in certain circumstances the
+taking of security by a solicitor would be treated as a waiver of his right to a common law lien, the court had not been referred
+to any case indicting that the taking of a charge on an unrelated asset was inconsistent with a possessory lien or a solicitor’s
+right to apply for a charge on different property. It was at least arguable that the grant of the legal charge was not inconsistent
+or incompatible with the exercise by the solicitors of its right to apply for a charge under s.73. Clifford Harris & Co v Solland
+International Ltd [2004] EWHC 2488, (Ch), Richards J.
+In proceedings for infringement of a patent the claimant was unsuccessful in respect of part of the claim and a declaration of
+non infringement was made in favour of the defendant. The claimant paid £75,000 costs into a joint account of the parties’
+solicitors pending appeal. The defendant subsequently went into administrative receivership. The defendants’ solicitors obtained
+a charging order over the £75,000 under s.73 of the Solicitors Act 1974 in order to protect their fees. The claimants’ appeal
+was dismissed but the claimant then sought judgment in default and costs in respect of the defendant’s non compliance with the
+court’s directions in respect of the remaining part of the claim. The claimants sought to set off those costs against the £75,000
+held in the joint account. Although the court gave judgment in default to the claimants it did not allow set off of the cost to
+be awarded so as to defeat the charging order. Whilst there was no direct prejudice to the defendant in allowing a set off, the
+existence of the charging order meant there would be prejudice to the defendant’s solicitors. The protection afforded by the
+charging order should be upheld unless there were good reasons to come to a contrary decision: Rhom & Hass Co v Collag
+Ltd [2002] B.P.I.R. 837 (Ch), Pumfrey J.
+Where a district judge of the County Court granted a charging order over land which had been the subject of litigation for costs
+to be assessed by the court it was held that the detailed assessment had to take place at the SCCO since the bill fell outside the
+parameters laid down in s.69(3): Jones v Twinsectra Ltd [2002] EWCA Civ 668, 16 April 2002.
+Where solicitors took out a charge on the freehold property of their clients as security for fees and disbursements, the question
+arose whether, in taking the charge, the solicitors had waived their rights under s.73 of the Solicitors Act 1974 as the security was
+inconsistent with the original lien. The court held that the taking of any alternative security by a solicitor would not necessarily
+waive his lien, the lien was only waived if the security taken was inconsistent with it. The solicitor could not enforce a stipulation
+for interest markedly higher than would ever be allowed by the court under s.35A of the Senior Courts Act 1981 unless he
+established that the client had been informed that the law would not otherwise enable the solicitor to claim interest at that rate.
+A solicitor who took security confirming a right to interest that he did not otherwise possess, waived his right to a lien unless it
+was expressly reserved. The same principle applied to the solicitors in the present case and their rights under s.73 which they
+had waived by taking the charge. Once the rights were waived there had to be a fresh agreement between solicitor and client
+that the rights were to be exercisable thereafter. The solicitors could not revive their s.73 right simply by making it clear to the
+client that they expected to look to any recoveries under the settlement. If, however, the client was able to have the security
+avoided then the solicitors s.73 rights would revive, as they would be entitled to be put back in the same position they would
+have been in had the security never been granted. On the facts the court found that there was an equitable charge over the
+settlement monies in favour of the solicitors: Clifford Harris & Co v Solland International Ltd [2005] EWHC 141; [2005] 2
+All E.R. 34, Christopher Nugee Q.C.
+The power of the court under s.35A of the Senior Courts Act 1981 to award interest on damages is a remedy and does not create
+a substantive right to interest. The power under s.35A to award interest only arises in connection with legal proceedings, and,
+although exercised in accordance with well established principles, is one which can take into account a variety of factors. The
+requirement in s.35A(2) to award interest on damages for personal injury or death, save where there were special reasons not
+
+Section 73. - Charging orders, UKBC-WHITEBK 458578214 (2025)
+© 2025 Thomson Reuters.
+3
+to do so, merely constrain the exercise of discretion, and did not detract from the conclusion that s.35A was a remedy: Maher
+v Groupama Est [2009] EWCA Civ 1191.
+End of Document
+© 2025 SWEET & MAXWELL

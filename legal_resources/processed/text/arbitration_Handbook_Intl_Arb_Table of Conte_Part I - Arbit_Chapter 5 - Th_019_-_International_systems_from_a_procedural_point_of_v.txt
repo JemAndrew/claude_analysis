@@ -1,0 +1,478 @@
+International systems from a procedural point of view, UKBC-ICCARBN 474406953 (2022)
+© 2025 Thomson Reuters.
+1
+International systems from a procedural point of view
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+International systems from a procedural point of view
+18-2
+ICC arbitration is a private form of justice, which is always linked to a national legal system, particularly as regards the conduct
+of the proceedings and the enforcement of the arbitral award. 26  However, international arbitration is not necessarily linked to
+a national legal system as regards the substantive law that the Tribunal applies to determine the merits of the case. 27
+18-3
+The main link between arbitral proceedings and a national legal system is through the place of arbitration. The courts of the
+place of arbitration are the courts that deal with issues such as difficulties in the constitution of the Tribunal, challenges to
+arbitrators, requirements of due process, the annulment and sometimes also enforcement of arbitral awards and remission of
+the award to the Tribunal. 28  As expressly foreseen in French arbitration law, they are the supporting court (juge d’appui) for
+international arbitrations taking place in France. Article V(1)(a) of the New York Convention requires that an award complies
+with “the law of the country where the Award was made”, thus rendering the law of the place of arbitration relevant to the
+enforcement proceedings in another country.
+18-4
+Under the New York Convention, it is important to determine the place of arbitration as art.I(1) of that Convention sets out
+the basic rule that it applies to “arbitral awards made in the territory of a State other than the state where the recognition and
+enforcement of such awards are sought” 29  and art.I(3) of the New York Convention provides that “any State may on the basis
+of reciprocity declare that it will apply the Convention to the recognition and enforcement of awards made only in the territory
+of another Contracting State”. 30
+18-5
+Although it is a main link between private ICC arbitration and a legal system, the role of the law of the place of arbitration has
+evolved over time. In major centres of arbitration, the relevant arbitration law does not seek to prescribe or unduly influence
+the method in which the proceedings are conducted. Instead, the law of the place of arbitration sets out minimum procedural
+standards for the arbitrators and the procedure and certain principles that are applicable to the jurisdiction of the Tribunal.
+18-6
+However, as discussed beginning at para.6-6, the place of arbitration may have a role in determining the law applicable to the
+arbitration agreement. Where the place of arbitration is in France, French courts will generally assume that it is the principles
+applicable under French law that are applicable to the arbitration agreement, notwithstanding the fact that the contract of which
+it is part is subject to another law. 31  Under Swiss law, an arbitration agreement is valid if valid under the governing law of the
+contract or under Swiss law if the place of arbitration is in Switzerland. 32  Under English law, the situation is more complex as
+the governing law of the contract will generally be considered applicable to the arbitration agreement but this can be overridden
+for example where the place of arbitration is in another jurisdiction and that jurisdiction requires that the arbitration agreement
+be subject to the law of that jurisdiction or if the arbitration agreement would be significantly undermined if governed by the
+law governing the contract. 33
+18-7
+The place of arbitration or “where the Award was made” is a legal concept. It provides the seat of the Tribunal and, under art.32(3)
+it is the place where the award was “deemed to be made”. The hearings, deliberations and the signing of the arbitral award
+
+International systems from a procedural point of view, UKBC-ICCARBN 474406953 (2022)
+© 2025 Thomson Reuters.
+2
+may all occur at the place of arbitration, in particular if all relevant participants reside there. However, these more frequently
+take place in various jurisdictions. Regarding the conduct of physical hearings, the starting point for determining the place of
+substantive hearings is the place of arbitration. With the surge of virtual hearings following the global outbreak of the Covid-19
+pandemic in 2020, it became impossible or at least impractical to hold physical meetings or hearings at the place of arbitration.
+Virtual hearing protocols established by Tribunals in agreement, or at least in consultation, with the parties, often mention that
+the virtual hearing or meeting is deemed to take place at the place of arbitration, or that the fact that the hearing is taking place
+virtually does not affect the seat of the arbitration.
+18-8
+The influence of the law of the place of arbitration is also felt indirectly as it may well affect the procedural approach chosen by
+the arbitrators under art.19 even if it does not amount to a choice of that law as the procedural law. 34  However, as noted in the
+discussion with respect to that article, the weight that the law of the place of arbitration should have is a matter of discussion.
+18-9
+The approach of national courts to ICC arbitration varies considerably. There has also been an evolution of the case law in many
+national courts to further support arbitration. Therefore, in applying the ICC Rules, it is essential to keep in mind the principles
+applicable under the law of the place of arbitration and the legal principles applicable at the place of enforcement. The most
+striking aspect is the approach of national courts to awards that have been annulled at the place of arbitration. In France, for
+example, annulment at the place of arbitration as such has no effect on the award and the French courts review whether, under
+French legal principles, the award should be enforced or not notwithstanding the fact that it has been annulled. 35  The US courts
+have tended in the same direction, although it now appears that they will only do so in exceptional cases. On 2 August 2016, the
+United States Court of Appeals for the Second Circuit affirmed a lower court decision confirming an arbitral award rendered
+in Mexico. The award was confirmed notwithstanding that it had been annulled by a Mexican court. The court stated that it:
+“exercised its discretion in confirming the award because giving effect to the subsequent nullification of the award
+in Mexico would run counter to United States public policy and would (in the operative phrasing) be ‘repugnant
+to fundamental notions of what is decent and just’ in this country.” 36
+The English courts have also rejected recently the existence of the “ex nihilo nil fit” principle. 37  In other countries, it is not
+possible to enforce an award annulled at the place of arbitration. In Brazil, for instance, the Brazil Superior Tribunal of Justice
+considered in a 2015 decision that “… due to the fact that the award was annulled in Argentina by a court decision issued in
+that country, it is not possible to have it recognized in Brazil”. 38
+18-10
+For 2020 the places of arbitration for ICC arbitrations were as follows 39 :
+COUNTRY
+PLACE
+CHOSEN
+BY THE
+PARTIES
+PLACE
+FIXED BY
+THE COURT
+TOTAL
+Albania
+1
+0
+1
+Algeria
+1
+0
+1
+Argentina
+6
+0
+6
+Australia
+1
+0
+1
+Austria
+11
+2
+13
+Belgium
+5
+1
+6
+Benin
+1
+0
+1
+
+International systems from a procedural point of view, UKBC-ICCARBN 474406953 (2022)
+© 2025 Thomson Reuters.
+3
+Bolivia
+1
+0
+1
+Brazil
+29
+10
+30
+Canada
+11
+0
+11
+Chile
+3
+0
+3
+China (Hong Kong)
+16
+3
+19
+China (Macau)
+1
+0
+1
+Chinest Taipei
+1
+0
+1
+Colombia
+1
+0
+1
+Costa Rica
+1
+0
+1
+Curacao
+0
+1
+1
+Cyprus
+1
+0
+1
+Czech Republic
+1
+0
+1
+Denmark
+1
+0
+1
+Egypt
+1
+1
+2
+Fiji
+1
+0
+1
+Finland
+3
+0
+3
+France
+80
+8
+88
+Germany
+14
+2
+16
+Greece
+14
+0
+14
+Guatemala
+2
+0
+2
+India
+6
+1
+7
+Ireland
+1
+0
+1
+Israel
+4
+0
+4
+Italy
+10
+1
+11
+Japan
+2
+0
+2
+Jordan
+1
+1
+2
+Kenya
+1
+0
+1
+Lebanon
+2
+0
+2
+Luxembourg
+2
+0
+2
+Malaysia
+2
+0
+2
+Malta
+1
+0
+1
+Mexico
+18
+0
+18
+Mongolia
+1
+0
+1
+Mozambique
+0
+1
+1
+Netherlands
+19
+2
+21
+New Zealand
+1
+0
+1
+Nigeria
+1
+0
+1
+Norway
+1
+0
+1
+
+International systems from a procedural point of view, UKBC-ICCARBN 474406953 (2022)
+© 2025 Thomson Reuters.
+4
+Oman
+1
+1
+2
+Panama
+4
+0
+4
+Poland
+4
+0
+4
+Portugal
+6
+2
+8
+Qatar
+17
+5
+2
+Romania
+4
+0
+4
+Saudi Arabia
+3
+0
+3
+Serbia
+1
+0
+1
+Singapore
+24
+2
+26
+South Africa
+2
+0
+2
+South Korea
+2
+1
+3
+Spain
+11
+0
+11
+Sweden
+8
+0
+8
+Switzerland
+98
+6
+108
+Tanzania
+1
+0
+1
+Thailand
+3
+1
+4
+Turkey
+7
+2
+9
+United Arab Emirates
+20
+7
+27
+United Kingdom
+80
+5
+85
+Uruguay
+2
+0
+2
+USA
+73
+15
+88
+18-11
+In 2012, the major countries in ICC arbitration were France (101), Switzerland (122), the UK (71), the USA (41) and Singapore
+(36). Singapore is a UNCITRAL Model Law jurisdiction as are other countries that have also been widely used for ICC
+arbitration such as Germany (19/21). 40  In 2017 the major countries in ICC arbitration were France (121), Switzerland (90),
+followed by the UK (73), the USA (51), Singapore (38), Brazil (28), and Germany (24). 41  In 2020, the order was slightly
+changed with Switzerland (104) coming first, followed by France (88), the USA (88) and the United Kingdom (85); and other
+countries have also been widely used for ICC arbitration such as Brazil (30), the United Arab Emirates (27), Singapore (26),
+Qatar (22), the Netherlands (21), China-Hong-Kong (19), Mexico (18) and Germany (16). 42
+18-12
+Parties usually agree upon the place of arbitration. Pursuant to the ICC statistics, in 2012 and 2020, they did so in 90% of cases,
+leaving the ICC Court to fix the place of arbitration for only 10% of the cases under art.18(1). 43  In 2020, the ICC Court decided
+to fix the place of arbitration in the USA in 15 cases, in France in eight cases and in the United Arab Emerates in seven cases. 44
+18-13
+Therefore, with respect to issues such as challenges to arbitrators (see above, art.14), the due process requirements (see below,
+art.22) and annulment of awards (see below, art.35), the authors have set out the basic principles by way of a general overview
+with respect in particular to France, Switzerland, England and the United States. With respect to other jurisdictions, the issue
+is how they deal with issues related to international arbitration.
+
+International systems from a procedural point of view, UKBC-ICCARBN 474406953 (2022)
+© 2025 Thomson Reuters.
+5
+18-14
+The list of places of arbitration is noteworthy with respect to various countries. The large number of arbitrations in France,
+Switzerland and the UK reflects not only historic tradition and their reputations as centres of arbitration, but also the fact that
+in many European countries the use of ICC arbitration clauses continues to be widespread. In the case of France, where Paris is
+mostly chosen as place of arbitration, its choice can easily be explained by the presence of the ICC in Paris. In many contract
+negotiations, Paris appears to be an easy compromise for the parties for that reason. As to Switzerland, its reputation of neutrality
+and the large pool of experienced arbitration lawyers remain key factors in the choice of its cities as places of arbitration. As
+to the UK and in particular London, one can think of many factors in addition to its role as major business and finance centre,
+such as the excellency of its legal profession, its geographic location and simply the fact that English is spoken in that city.
+The liberal arbitration laws and generally rather arbitration-friendly approach of the courts in these countries help parties in
+making these choices.
+18-15
+Singapore is an UNCITRAL Model Law country where arbitration activity has been, for a number of years, increasingly
+significant. 45  Although Brazil is not considered by UNCITRAL as such to be a Model Law country, it has a modern arbitration
+law 46  and that may explain why the number of cases in which the parties have chosen Brazil have increased. 47
+Footnotes
+26
+This point has been well made by Goode as follows: “One can begin with the simple proposition relating to substantive
+rights that a contract is not law, and no award can be binding simply by virtue of the parties’ agreement to be bound.
+A contract depends for its force on recognition by law. The point was made by Dr Francis Mann in characteristically
+trenchant style in a passage from his seminal piece ‘Lex Facit Arbitrum’, which has been cited on countless occasions
+but is worth repeating: No one has ever or anywhere been able to point to any provision or legal principle which would
+permit individuals to act outside the confines of a system of municipal law; even the idea of the autonomy of the parties
+exists only by virtue of a given system of municipal law and in different systems may have different characteristics and
+effects. Similarly, every arbitration is necessarily subject to the law of a given State. No private person has the right or
+the power to act on any level other than that of municipal law. Every right or power a private person enjoys is inexorably
+conferred by or derived from a system of municipal law which may conveniently and in accordance with tradition be
+called the lex fori, though it would be more exact (but also less familiar) to speak of the lex arbitri or, in French, la loi
+d’arbitrage.”, cited at para.18-1, fn.25.
+27
+See the discussion at para.21-45 and following on the lex mercatoria and the UNIDROIT Principles.
+28
+See Webster, “Review of Substantive Reasoning of International Arbitral Awards by National Courts: Ensuring One-
+Step Adjudication” (2006) Arbitration Int. Vol.22 No.3, p.431.
+29
+The last sentence of art.I(1) of the New York Convention also provides that “[i]t shall also apply to arbitral awards
+not considered as domestic awards in the State where the recognition and enforcement are sought”. Therefore, in some
+countries it may be applicable to international awards rendered within the state.
+30
+78 States out of the 167 States that had ratified the Convention by April 2021 have adopted this “reciprocity” requirement.
+31
+See para.6-15.
+32
+See para.6-14.
+33
+See para.6-8.
+34
+With reference to the seat under the “applicable procedural law” and connected problems, see ICC Case No.1512 (1971)
+in Collection of ICC Arbitral Awards 1974–1985, Vol.1, op. cit., p.3; see also ICC Case No.5485 (1987), 18 August
+1987, (1989) YBCA Vol.XIV p.156; ICC Case No.4589 (1984) (Interim Award), (1986) YBCA Vol.XI p.148; ICC Case
+No.5080 (1985), (1987) YBCA Vol.XII p.124; ICC Case No.5073 (1986) (Partial Award), (1988) YBCA Vol.XIII p.53;
+ICC Case No.5460 (1987), (1988) YBCA Vol.XIII p.104.
+35
+See the Putrabali case at para.0-57.
+36
+US 2d Cir, 2 August 2016, F.3d, WL Case No.13-4022, Corporación Mexicana De Mantenimiento Integral, S. DE R.L.
+De C.V. (COMMISA) v Pemex-Exploración Y Producción (PEP) p.5; See Baker Marine (Nig) Ltd v Chevron (Nig) Ltd,
+191 F.3d 194 (2d Cir. 1999) and TermoRio SA ESP v Electranta SP, 487 F.3d 928 (DC Cir 2007); Getma International
+
+International systems from a procedural point of view, UKBC-ICCARBN 474406953 (2022)
+© 2025 Thomson Reuters.
+6
+v Republic of Guinea, 862 F.3d 45, 49 (D.C. Cir. 2017) Thai-Lao Lignite (Thailand) Co Ltd v Government of the Lao
+People’s Democratic Republic, 864 F.3d 172, 187 (2d Cir. 2017) where the US courts refused to enforce awards annulled
+at the place of arbitration; Sci. Applications Int'l Corp v Hellenic Republic 18 Misc. 327 (AT) (GWG) (S.D.N.Y. 2019)
+where the US courts held that the possibility that an award may be annulled at the seat of arbitration does not prevent
+automatically the enforcement of the award in the US.
+37
+High Court, decision rendered by Mr. Justice Simon on 3 July 2014, [2014] EWHC 2188 (Comm) Yukos Capital v
+OJSC Oil Company Rosneft; see also Maximov v OJSC “Novolipetsky Metallurgichesky Kombinat” [2017] EWHC 1911
+(Comm).
+38
+Brazil Superior Tribunal of Justice, 2 December 2015, SEC No.5.782/AR, EDF International S/A v Endesa
+LatinoAmérica S/A and YPF S/A, p.19. See also in Luxembourg, Court of Appeal, 27 April 2017, XLII Y.B. Comm.
+Arb. 433.
+39
+2019 ICC Statistical Report [2020] ICC DR Bull. No.2, p.25 and following.
+40
+ICC Statistical Report 2012, p.16.
+41
+2017 ICC Statistical Report [2018] ICC DR Bull. No.2, p.51 and following.
+42
+ICC 2020 Statistics, p.1 and see annex - table 09, p.30.
+43
+2017 ICC Statistical Report [2018] ICC DR Bull. No.2, p.51 and following.
+44
+ICC 2020 Statistics, p.1.
+45
+See ranking in para.0-58.
+46
+Brazil’s Arbitration Act, which was enacted on 24 September 1996, and altered by Act No.13.129, enacted on 26 May
+2015.
+47
+In addition, the ICC now permits filing of cases in Brazil and uses local currency to determine the amount in dispute
+and the amount of the advances on costs to the ICC. See [2017] ICC DR Bull. Vol.1, p.95.
+End of Document
+© 2025 SWEET & MAXWELL

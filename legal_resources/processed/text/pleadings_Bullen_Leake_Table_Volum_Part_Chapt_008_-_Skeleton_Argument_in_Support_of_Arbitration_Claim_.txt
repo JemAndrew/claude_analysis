@@ -1,0 +1,103 @@
+Skeleton Argument in Support of Arbitration Claim Form, UKBC-BULLENL 459370723...
+© 2025 Thomson Reuters.
+1
+Skeleton Argument in Support of Arbitration Claim Form
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part A - Arbitration
+Chapter 3 - Appeals on Points of Law (Section 69)
+Skeleton Argument in Support of Arbitration Claim Form
+3-A2
+Claim No. [–]
+IN THE HIGH COURT OF JUSTICE
+BUSINESS AND PROPERTY COURTS OF ENGLAND AND WALES
+COMMERCIAL COURT (QBD)
+In an arbitration claim between
+[COMPANY A]
+Claimant
+-and-
+[COMPANY B]
+Defendant
+Claimant’s Skeleton Argument
+Introduction
+1.
+This skeleton argument is served by the Claimant in support of its application pursuant to s.69 of the Arbitration Act 1996
+(the “Act”) for permission to appeal on a question of law arising out of an arbitration award (the “Award”) made by the
+arbitral tribunal (the “Tribunal”). The Claimant respectfully invites the Court to grant the permission that is sought and to
+allow it an extension of time pursuant to s.80(5) of the Act and/or CPR, r.62.9, within which to appeal.
+2.
+The dispute which forms the subject of the underlying arbitration proceedings relates to a Sales and Purchase Agreement
+dated 15 January 2015 for 100,000MT of coal on FOB Balikpapan, Indonesia terms entered into between the Claimant as
+seller and the Defendant as buyer (the “Contract”).
+3.
+The Defendant repudiated the Contract and the Claimant was forced to sell the coal to another purchaser at a considerably
+lower price, suffering a loss of profit in the sum of £1 million in the process. The Tribunal found the Defendant in
+repudiatory breach but refused to award damages to the Claimant for loss of profit on the basis that this was excluded
+by clause 32.1 of the Contract.
+
+Skeleton Argument in Support of Arbitration Claim Form, UKBC-BULLENL 459370723...
+© 2025 Thomson Reuters.
+2
+4.
+The Claimant estimate that it will take the Court approximately two hours to decide, on paper, the applications for
+permission to appeal and for an extension of time.
+Application for Permission to Appeal
+5. Question of law is one which Tribunal was asked to determine (s.69(3)(b))
+The question of law to which this appeal relates and for which permission is sought relates to the proper construction of
+clause 32.1 of the Contract, which provides as follows: “Neither party shall be liable to the other for loss of profit or any
+other indirect loss or consequential damage as a result of a breach of this Agreement regardless of the cause thereof.”
+6.
+The Tribunal was asked to construe clause 32.1 and its meaning is therefore a question which the Tribunal was asked to
+determine. The findings made by arbitral tribunals as to the meaning of the contractual clauses are matters of law: see
+Lesotho Highlands Development Authority v Impregilo SpA [2006] 1 AC 221, per Lord Steyn at para.31.
+7. Obviously wrong construction of clause 32.1(s.69(3)(c)(i))
+The Tribunal had construed clause 32.1 of the Contract so as to find that the Claimant’s claim for loss of profit was excluded
+thereby. Its finding in this regard is obviously wrong as the lost profit which the Claimant is seeking recovery of is a direct
+loss. The clause should be read disjunctively by reason of the use of the word “or” such that only loss of profit which is
+to be regarded as indirect loss or consequential damage is excluded.
+8. Rights will be substantially affected by determination of the question (s.69(3)(a))
+The question as to the proper construction of clause 32.1 of the Contract is one which substantially affects the rights of the
+parties as it relates to the Claimant’s entitlement to recover loss of profit in the sum of £1 million: see Malone 1st, para.6.
+9. Just and proper for the Court to determine the question (s.69(3)(d))
+It is just and proper in all the circumstances for the Court to determine the question on which this appeal is predicated. It
+concerns a point of construction for which no evidence of factual matrix had been adduced in the arbitration and which
+the Court is therefore as well-placed as the Tribunal to determine. To the extent that permission is granted, the appeal
+is capable of being resolved following a short hearing, but the outcome of which would have a substantial effect on the
+rights of the parties.
+Application for Extension of Time
+10.
+The Award is dated 20 April 2015, which means that the 28-day period within which appeals are to be brought fell due
+on 18 May 2015. The Award was circulated by e-mail but it was inadvertently sent by the Tribunal to the wrong e-mail
+and postal addresses for the Claimant.
+11.
+The mistake was not discovered until 20 May 2015: see Malone 1st, para 8. The Claimant was thus unable to appeal against
+the Award prior to expiry of the relevant period. The fact that the applications for permission to appeal were not brought
+within the statutory time limit is inadvertent and not intentional.
+12.
+Notwithstanding this, the Claimant acted reasonably and with appropriate expedition as soon as it became aware of the
+Award. The arbitration claim form was issued within 48 hours of receipt of the Award: see Malone 1st, para.10.
+
+Skeleton Argument in Support of Arbitration Claim Form, UKBC-BULLENL 459370723...
+© 2025 Thomson Reuters.
+3
+13.
+Applying the criteria laid down in Terna Bahrain Holding Company WLL v Al Shamsi [2013] 1 Lloyd’s Rep 86, per
+Popplewell J at para.27, the Claimant respectfully invites the Court to grant the extension of time which is being sought,
+pursuant to s.80(5) of the Act and/or CPR, r.62.9 for the following reasons: (a) the circumstances which led to the delay
+in this appeal being brought was not due to fault on the part of the Claimant; (b) the Claimant acted reasonably and with
+appropriate expedition as soon as the Award was received; (c) resulting in the arbitration claim form being issued within
+48 hours on receipt of the Award; (d) the Defendant will suffer no irremediable prejudice if the application is allowed; and
+(e) by contrast, it would be unfair to the Claimant to be denied the opportunity of having its application for permission
+to be determined.
+Conclusion
+14.
+For the reasons set out in this skeleton argument, the Court is asked to grant the extension of time sought by the Claimant
+and to grant it permission to appeal the Tribunal’s determination of the construction of clause 32.1 of the Contract.
+LEARNED COUNSEL
+ESSEX COURT CHAMBERS
+24 LINCOLN’S INN FIELDS
+LONDON WC2A 3EG
+22 May 2015
+End of Document
+© 2025 SWEET & MAXWELL

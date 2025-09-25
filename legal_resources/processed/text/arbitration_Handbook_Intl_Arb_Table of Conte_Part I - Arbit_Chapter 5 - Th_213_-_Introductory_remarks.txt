@@ -1,0 +1,92 @@
+Introductory remarks, UKBC-ICCARBN 474407001 (2022)
+© 2025 Thomson Reuters.
+1
+Introductory remarks
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+Introductory remarks
+30-1
+Article 30 is the gateway for the resolution of “small” claims together with Appendix VI of the 2021 Rules. 635  The 2017 ICC
+Rules of arbitration had adopted the new provisions for expedited procedures with the objective of having final awards issued
+by sole arbitrators six months after the first case management conference. Article 30 and the Expedited Procedure Rules in
+App.VI are defined in art.30(1) as the Expedited Procedure Provisions.
+30-2
+Subject to the conditions discussed below, for arbitrations commenced after 1 January 2021, the Expedited Procedure Provisions
+apply whenever the value of the claims in question does not exceed US$3 million, which is roughly one third of ICC arbitrations.
+The parties can opt in or opt out of the expedited procedures provisions, partially or totally, regardless of the amount in
+dispute. 636  The ICC has summarized the use of the Expedited Procedures as follows in its statistical report for 2020 637 :
+“To date, 261 cases have been or are being conducted under the EPP. The EPP applied automatically in 178 cases
+(i.e. in cases not exceeding the monetary threshold and based on contracts concluded on or after entry in force of
+the EPP). There have been 291 requests to opt-in to the EPP, of which 83 agreed to by the other party(ies).”
+30-3
+The decision to institutionalise expedited procedures in the 2017 Rules was an implicit admission that the objectives of the 2012
+Rules have not been met when it came to improving the time- and cost-efficiency of smaller ICC arbitrations. The new provisions
+offer users of ICC arbitration (who are concerned about increased time and costs) an alternative to expedite the resolution of
+their disputes. The provisions of art.30 should be read in the light of the requirements of art.22 in particular and the requirements
+of applicable law. In practice, expedited procedures may increase due process challenges by dissatisfied litigants, before and
+after awards are issued. For these reasons, more than before, selecting a pro-arbitration place of arbitration will be important.
+30-4
+In 2002, the ICC Secretariat issued a practical “Note on Expedited ICC Arbitration Procedure”, 638  for parties wishing to
+organise an expedited ICC arbitration procedure pursuant to art.32 of the 1998 ICC Rules. That article explicitly allowed parties
+to shorten the time limits set out in the ICC Rules. In that note, the ICC reminded users that “expedited or fast-track arbitration
+proceedings have always been possible” under the ICC Rules. 639  Indeed, the concept of expedited procedures has not been
+foreign to ICC arbitrations, even before the provision allowing parties to shorten deadlines was introduced. Between 2000
+and 2005, in the face of mounting criticism about time and costs spent in arbitration proceedings, the ICC Commission on
+Arbitration set up a Task Force, which eventually led to the publication in 2007 of its report on “Techniques for Controlling
+Time and Costs in Arbitration”. 640  The report recommended the use of various techniques for parties, counsel and arbitrators
+to better control time and costs throughout the arbitration process.
+30-5
+Prior to adopting the 2012 Rules, careful consideration had been given to these issues within the ICC Court and its Secretariat,
+and in particular at the ICC Commission. Many debates and enquiries had taken place before coming to the conclusion that no
+special rules should be introduced into the ICC Rules for “small” claims. Instead, the ICC adopted two new provisions meant
+to address the need of the users when it came to small claims. On the one hand, art.22 required arbitrators and parties to make
+every effort to conduct the arbitration in an expeditious and cost-effective manner, having regard to the complexity and value
+
+Introductory remarks, UKBC-ICCARBN 474407001 (2022)
+© 2025 Thomson Reuters.
+2
+of the dispute. On the other hand, art.24 required arbitrators to convene a case management conference at the early stage of
+the arbitration and to consult the parties regarding the procedural measures, in particular on the basis of the case management
+techniques listed in the newly drafted App.IV to the ICC Rules. This approach put flexibility in how to best address the issues
+in each case, as well as trust in the ability of arbitrators and parties to make good use of these guidelines, at the forefront.
+30-6
+The Expedited Procedure Provisions have proven useful in practice. By the end of 2020, 261 cases had been or were being
+conducted under the Expedited Procedure Provisions. 641  At the end of 2020, 90 final awards had been rendered under the
+Expedited Procedure Provisions. 642  Compared to the overall number of cases registered by the ICC since 2017, the Expedited
+Procedure Provisions have not been used as extensively as anticipated—whether they were applied automatically or through
+the opt-in provision. 643  This may incidentally be one of the reasons that motivated the ICC to raise the benchmark amount
+to US$3 million in the 2021 Rules.
+Footnotes
+635
+The 2021 Rules have left art.30 unchanged; arts 1-2 of App.VI was however amended as regards the threshold up to
+which the Expedited Procedure Provisions are applicable.
+636
+For a comprehensive review and critical discussion of these provisions, see Buhler & Heitzmann, “The 2017 ICC
+Expedited Rules: From Softball to Hardball?”, (2017) J. Int. Arb. Vol.34 No.2. For a view from the point of view of the
+former Deputy General Counsel, see Feris, “The 2017 ICC Rules of Arbitration and the New ICC Expedited Procedure
+Provisions: A View from Inside the Institution” [2017] ICC DR Bull. No.1, p.64.
+637
+ICC 2020 Statistics, p.18.
+638
+“Note on Expedited ICC Arbitration Procedure”, [2002] ICC ICArb. Bull. Vol 13 No.1, p.29.
+639
+One should however distinguish expedited procedures, which normally leave arbitrators several months to analyse
+submissions and issue their award, and fast-track arbitration, which are administered in a much shorter period of time
+(usually between one to three months), and basically require counsel and arbitrators to dedicate their entire time to
+the case during that short period. In 1992, the ICC Court Bulletin published a special report on fast-track arbitration
+after parties conducted successfully ICC arbitration proceedings in less than two months; see “Fast-Track Arbitration:
+Different Perspectives”, [1992] ICC ICArb. Bull. Vol.3, p.17.
+640
+“Techniques for Controlling Time and Costs in Arbitration”, ICC publication No.843 (2007).
+641
+ICC 2020 Statistics, p.18.
+642
+[2020] ICC DR Bull. Vol.3, p.7.
+643
+Hennessee, "Change for the Sake of Change: Does the Explosion in Recent Arbitral Innovations Actually Deliver on the
+User’s Expectations?”, [2020] Int. J. Arb. Mediation and Disp. Management Vol.86 No.3, pp.254-269; see also Bühler/
+Heitzmann, op. cit., pp.122–149.
+End of Document
+© 2025 SWEET & MAXWELL

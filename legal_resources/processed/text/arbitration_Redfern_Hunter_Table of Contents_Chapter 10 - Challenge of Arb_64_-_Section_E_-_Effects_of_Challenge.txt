@@ -1,0 +1,38 @@
+Section E. - Effects of Challenge, UKBC-REDFERN 530638669 (2025)
+© 2025 Thomson Reuters.
+1
+Section E. - Effects of Challenge
+Redfern and Hunter on International Arbitration 7th Ed.
+Mainwork
+Chapter 10 - Challenge of Arbitral Awards
+Section E. - Effects of Challenge
+10. 89
+The effects of a successful challenge differ depending upon the grounds of the challenge, the relevant law, and the decision of
+the court that dealt with it. The court’s decision may take several forms. The court may decide to confirm the award, refer the
+award back to the arbitral tribunal for reconsideration, vary the award, or set the award aside, in whole or in part.
+10. 90
+When an award is set aside, it is unenforceable in the country in which it was made, and it will usually be unenforceable
+elsewhere. 149  In this situation, the party that won the arbitration, but lost the challenge, is in an unenviable position. If, for
+example, the award has been set aside completely on the basis that the arbitration agreement was null and void, a further resort
+to arbitration (on the basis of the void agreement) would be out of the question. Resort to litigation might be considered, but
+there could be problems of statute of limitations, to say nothing of more substantive difficulties.
+10. 91
+If the award has been set aside for procedural defects (e.g. lack of due process), the party who won the arbitration, but lost the
+challenge, will have to resubmit the dispute to arbitration and the process will start over again. This is a daunting prospect for
+even the most resilient claimant.
+10. 92
+A successful party does not wish to be deprived of victory because of a procedural failure on the part of the arbitral tribunal. As
+the practice of international arbitration becomes increasingly litigious, a party that expects to be on the losing side may seek,
+during the course of the proceedings, to lay the basis for a claim that the hearing was not conducted fairly. This point should be
+kept well in mind by parties to an arbitration (usually the claimants) who consider that the arbitral tribunal is being too generous
+to their opponents on procedural questions. In order to minimise the risk of challenges to the award based on the alleged unfair
+conduct of the hearing, arbitrators often ask the parties to confirm after the last oral hearing whether they have been satisfied
+with the conduct of the hearing, in order to protect the eventual award from challenge. If a party then declares a concern, there
+is still time for the tribunal to address it before issuing the final award.
+Footnotes
+149
+But see fn. 8 above and the discussion in Chapter 11 relating to cases in which an award has been set aside at the seat
+of the arbitration but has nevertheless been enforced in another country.
+End of Document
+© NIGEL BLACKABY KC, CONSTANTINE PARTASIDES
+KC, ALAN REDFERN

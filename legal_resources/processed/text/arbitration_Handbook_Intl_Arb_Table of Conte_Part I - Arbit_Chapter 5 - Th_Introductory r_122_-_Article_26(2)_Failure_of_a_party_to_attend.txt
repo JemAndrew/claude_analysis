@@ -1,0 +1,86 @@
+Article 26(2): Failure of a party to attend, UKBC-ICCARBN 474406889 (2022)
+© 2025 Thomson Reuters.
+1
+Article 26(2): Failure of a party to attend
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+Introductory remarks
+Article 26(2): Failure of a party to attend
+“If any of the parties, although duly summoned, fails to appear without valid excuse, the arbitral tribunal shall have the
+power to proceed with the hearing.”
+26-18
+Article 26(2) permits the Tribunal to hold the hearing in case of default by one party. A party is in default when it does not
+attend the hearing, although duly summoned by the Tribunal to do so. A “valid excuse” within the meaning of the article would
+generally be expected to be an event beyond the control of the party involved.
+26-19
+If a party is prevented from attending by a legal impediment, then there may be an issue of whether that is truly independent
+of the party or not. For example, if a party has created or contributed to the impediment, the Tribunal may decide that the
+excuse is not valid.
+26-20
+It is difficult to see a financial issue as giving rise to a “valid excuse”, unless the issue is such as to virtually render the arbitration
+agreement unconscionable. In the case of virtual hearings, a party’s inability to connect to the videoconference or to maintain
+stable connection may be a valid excuse as well. In some countries, Wi-Fi connections do not provide the sufficient bandwidth
+for having stable videoconferences. While these issues can and should be tested prior to the hearing, there exists no guarantee
+that on the day of the hearing the internet connections fail at the place of one of the parties.
+26-21
+In the case of insolvency proceedings, it may be that, under the law of the place of incorporation of the insolvent party, the
+proceedings are stayed or stayed pending completion of certain formalities as a result of the insolvency. 414  However, the general
+trend is to seek to continue arbitration proceedings even in such a case. The trustee in bankruptcy or receiver of the insolvent
+company should have some funding to deal with outstanding issues, although the trustee may seek a delay to decide on whether
+to appear and what resources to commit to the hearing. Basically, however, the bankruptcy of a party should not deprive the
+other party of being able to proceed with the arbitration within a reasonable time period taking into account the circumstances,
+provided that the arbitration may continue under applicable law. In such cases, Tribunals can sometimes use various methods
+to ensure that the parties are able to present their case in a cost-effective manner.
+26-22
+In an analysis of the ICC awards regarding insolvency, a commentator has noted in an article summarising a number of awards
+that:
+“Another practical consequence if the Arbitral Tribunal decides to continue the proceedings is the need to keep
+informed and to consider as a participant in the arbitral proceedings the trustee in bankruptcy or any other person
+designated as legal representative in the insolvency proceedings. Particular attention should be paid to respect of
+due process as commencement of insolvency proceedings frequently results in the temporary disorganization of
+the insolvent party due to the change in its representatives.” 415
+
+Article 26(2): Failure of a party to attend, UKBC-ICCARBN 474406889 (2022)
+© 2025 Thomson Reuters.
+2
+26-23
+ICC arbitration does not permit default awards but allows the Tribunal to proceed if one of the parties fails to appear or participate
+in the proceedings. 416  Therefore, if a party fails to attend, the Tribunal should exercise maximum care to avoid any possible
+due process concern. It is the duty of the Tribunal to review the evidence and question the witness to satisfy itself that the case
+has been proven and, to specify the circumstances in the text of the award.
+Footnotes
+414
+For a discussion under American and French law see for example Rosell and Prager, “International Arbitration
+and Bankruptcy: United States, France and the ICC” (2001) J. Int. Arb. Vol.18 No.4, p.417; see also Fouchard,
+“Arbitrage et faillite” (1998) Rev. Arb. No.3, p.471; For Swizerland, see Lévy, “Insolvency in Arbitration (Swiss
+Law)” (2005) Int. A.L.R. Issue No.1, p.23; Brown-Berset and Lévy, “Faillite et arbitrage” [1998] ASA Bull. Vol.16 No.4,
+p.664; Kaufmann-Kohler and Lévy “Insolvency and International Arbitration” in The Challenge of Insolvency Law
+Reform in 21st Century (Zurich: Schulthess, 2006), p.257; Mantilla-Serrano, “International Arbitration and Insolvency
+Proceedings” (1995) Arbitration Int. Vol.11 No.1, p.51; Croze and Reinhard, “Procédures collectives et arbitrage:
+Conseils pratiques aux parties et aux arbitres” (2005) JCP Entreprises et Affaires No.14, p.614; see also Cass Com,
+14 January 2004, Prodim v Logidis (2004) Rev. Arb. No.3, p.591, note Ancel; Cass Com, 2 June 2004, Gaussin v
+Société Alstom Power Turbomachines and Industry v Société Alstom Power Turbomachines (2004) Rev. Arb. No.3, p.596,
+note Ancel. Vorburger, International Arbitration and Cross-Border Insolvency: Comparative Perspectives (Kluwer Law
+International, 2014) Vol.31, Ch.6: “Specific Effects of a Commencement of an Insolvency on International Arbitration”,
+p.97; Cagnoli, “Arbitrage et Insolvabilité”, (2017) Revue des procédures collectives No.2, comm.9; Naegeli, Ch.III:
+“The Award and the Courts Bankruptcy and Arbitration—What Should Prevail? The Impact of Bankruptcy on Pending
+Arbitral Proceedings”, in Klausegger, Klein, et al (eds), Austrian Yearbook on International Arbitration, Vol.2010,
+pp.193–207; Draguiev, “The Effect of Insolvency on Pending International Arbitration: What Is and What Should Not
+Be”, (2015) J. Int. Arb. Vol.32 No.5, p.511; Naegeli & Vorburger, Ch.III: “The Award and the Courts, When a Party to
+an International Arbitration Goes Bankrupt: A Swiss Perspective”, in Klausegger, Klein, et al (eds), Austrian Yearbook
+on International Arbitration, Vol.2016, p.143.
+415
+Authors’ translation. E. Jolivet, “Quelques exemples de traitement du droit des procédures collectives dans l’arbitrage”,
+Cahiers l’Arbitrage 2006, Vol.3, p.15. See also Vidal, “Arbitration and Insolvency Proceedings: Comments on ICC
+Awards and Other Recent Decisions”, [2009] ICC ICArb. Bull. Vol.20 No.1.
+416
+More generally, see for example Lew, Mistelis & Kroll, Comparative International Commercial Arbitration, op. cit.,
+p.544. See also Madaus, “The (Underdeveloped) Use of Arbitration in International Insolvency Proceedings” [2020] J.
+Int. Arb. Vol.37 No.4, pp.449-478; Bamforth & Woods, “Insolvency and Arbitration”, [2020] Insolvency Intelligence
+Vol.29 No.33; Chan et al., “Cross-Border Insolvency and Its Impact on Arbitration”, [2014] SAcLJ No.26 (2014); Dirix,
+“Bankruptcy, Arbitration Agreements and the Access to Justice”, [2015] NIBLeJ Vol.3 No.6; Albertini, “Arbitration in
+Bankruptcy: Which Way Forward”, [2016] Am. Bankr. L. J. No.90.
+End of Document
+© 2025 SWEET & MAXWELL

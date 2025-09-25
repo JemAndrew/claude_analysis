@@ -1,0 +1,73 @@
+Limited submissions and document disclosure process, UKBC-ICCARBN 474406946...
+© 2025 Thomson Reuters.
+1
+Limited submissions and document disclosure process
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+Limited submissions and document disclosure process
+30-46
+Pursuant to art.3(4) of App.VI, the Tribunal shall have discretion to adopt such procedural measures as it considers appropriate.
+The language sounds familiar to practitioners of ICC arbitration, although it is not identical with the one of art.22(2) of the Rules.
+Under that latter provision, the Tribunal’s discretion is to be exercised: (i) “in order to ensure effective case management”; and
+(ii) after consulting the parties, but expressly limited by (iii) any agreement of the parties to the contrary. While repeating the
+purpose of effective case management was indeed not necessary, and while it seems clear that in practice a Tribunal will always
+consult the parties before adopting procedural measures, the deletion of the reference to the parties’ agreement to the contrary
+seems questionable. It may be explained by the second sentence of art.3(4) of App.VI, which states that:
+“[i]n particular, the arbitral tribunal may, after consultation with the parties, decide not to allow requests for
+document production or to limit the number, length and scope of written submissions and written witness evidence
+(both fact witnesses and experts).”
+30-47
+Thus, it would seem that it may be enough for the Tribunal to give the parties an opportunity to state their views, but that it
+would not be bound by a joint request of the parties (and thus their agreement) to have, for instance, a hearing (and not just
+documents) or to have two rounds of written submissions (instead of a single round).
+30-48
+ICC arbitrations involving “small” claims and thus conducted on an expedited basis may lead to requests for document
+disclosure, significant detailed written submissions and the need to discharge the burden of proof by submitting fact witness
+and/or expert evidence. Seeking to limit or even ban requests for document disclosure, limiting the number, length and scope
+of written submissions and written witness evidence will invariably lead to tensions with at least one of the parties. It will
+argue that such limitations conflict with its fundamental right to present its case and are contrary to due process. 669  However,
+by accepting the ICC Rules and not excluding the application of the Expedited Procedure Provisions for their claims, parties
+cannot reasonably raise due process arguments at a later stage when confronted with the application of the said rules, absent
+extraordinary circumstances.
+30-49
+An experienced arbitrator should be in a position to have the parties adopt “reasonable” positions, so that the “small claims”
+arbitrations may be conducted “in an expeditious and cost-effective manner, having regard to the complexity and value of the
+dispute,” as commanded by art.22(1) of the Rules.
+30-50
+As mentioned above, given the time constraints to complete expedited arbitration proceedings, there may be one single exchange
+of written submissions on the merits following the case management conference allowing the claimant to reply to the Answer
+to the Request for arbitration and the respondent to rebut the claimant’s reply brief. In case of a counterclaim, Tribunals may
+need to mandate the simultaneous submissions of the claimant and counter-claimant.
+30-51
+Limiting the length and scope of submissions is a practice often discussed in connection with post-hearing briefs, but rather
+rare with respect to pre-hearing briefs. For the Tribunal and the parties to find common ground, in particular when only one
+
+Limited submissions and document disclosure process, UKBC-ICCARBN 474406946...
+© 2025 Thomson Reuters.
+2
+round of written pleadings is foreseen, may be challenging. The imposition of a page-limit by the Tribunal may be viewed as
+arbitrary and unfair, even in an expedited procedure. In reality, however, parties will have limited time to submit their written
+submissions, which in itself limits the ability to make lengthy written submissions. The sole arbitrator will need to address
+the issue of the length of submissions with certain care, by looking at the specific circumstances of the case. The decision to
+curtail the length of the parties’ submissions. 670  Such a decision may be counterproductive, if it prevents the presentation of
+arguments or evidence which could be useful for deciding the case. Parties will no doubt prefer to present their case without
+having to comply with limits on the length and scope of submissions. Claimants will argue that since they do not know what
+the other side’s defence arguments will be, it needs to cover all points. Brevity of its submission is then not to be expected.
+Footnotes
+669
+Numerous examples of due process arguments are mentioned by Trappe, “The Arbitration Proceedings: Fundamental
+Principles and Rights of the parties”, (1998) J. Int. Arb. Vol.15 No.3, p.98. On that subject see also Ferguson Reed,
+“Ab(use) of due process: sword vs shield”, [2017] Arb. Int. Vol.33 No.3 pp.361–377; Metsch & Gerbay, “Prospect
+Theory and due process paranoia: what behavioural models say about arbitrators' assessment of risk and uncertainty”,
+[2020] Arb. Int. Vol.36 No.2 pp.233–252; Sharma, “Due Process “Paranoia”: Turning Away from Judicial Attitudes and
+Looking for Answers Within”, [2018] Int. J. Arb. Mediation & Dispute Resolution Vol.84 No.4 pp.314–325; Cremades
+Sanz Pastor, “The Use and Abuse of “Due Process” in International Arbitration”, [2016] Arbitraje: Revista de Arbitraje
+Comercial y de Inversiones Vol.9 No.3 pp.661–676; Polkinghorne & Ainsley Gill, “Due Process Paranoia: Need We Be
+Cruel to Be Kind?”, [2017] J. Int. Arb. Vol.34 No.6 pp.935–946.
+670
+The party making submissions in a foreign language, which is so often the case in international arbitration may be at a
+true disadvantage here. Being a native language speaker helps in making concise and precise submissions.
+End of Document
+© 2025 SWEET & MAXWELL

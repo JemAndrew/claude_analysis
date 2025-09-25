@@ -1,0 +1,46 @@
+Awards and procedural orders, UKBC-ICCARBN 474406994 (2022)
+© 2025 Thomson Reuters.
+1
+Awards and procedural orders
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+Awards and procedural orders
+28-65
+Article 28(1) leaves open the possibility of use by the Tribunal of a reasoned procedural order or an award for a conservatory or
+interim relief. 522  In the final award in ICC Case No.14287, the Tribunal expressed the opinion that, as a general rule, Tribunals
+should issue procedural orders and not awards with respect to requests for interim or conservatory measures due the possibility
+of prejudgment of issues in the case. 523  The authors agree. One of the major problems that can arise with partial awards is that
+they decide issues that affect subsequent awards. Therefore, where, as in art.28, the Tribunal has the option between issuing a
+procedural order and an award, except in exceptional circumstances, it should avoid issuing an award.
+28-66
+The distinction between final and conservatory or interim measures is not always easy to define. For example, an order for the
+production of documents may constitute a final or provisional matter. If a party has a contractual right to inspect documents,
+then the Tribunal’s decision with respect to that contractual right involves the interpretation and enforcement of that right. 524
+If, on the other hand, a party is seeking a procedural order of disclosure that is not based on the contract, it is arguably seeking
+an interim measure. Nevertheless, the decision to use a procedural order or an award on provisional measures is left to the
+appreciation of the Tribunal subject to the final control on the nature of such decision by the national court. 525
+28-67
+The distinction is important for two reasons: first, if the decision takes the form of an award, it will have to undergo the scrutiny
+and notification process of awards pursuant to arts 34 and 35. Secondly, an award, unlike a procedural order, can be enforced
+with the help of the courts, in particular under the New York Convention.
+Footnotes
+522
+Similarly, see art.17(2) of the UNCITRAL Model Law.
+523
+Final award in ICC Case No.14287 (June 2008) (Extract), Part IV.12 para.3 in Special Supplement 2011: Interim,
+Conservatory and Emergency Measures in ICC Arbitration, 74.
+524
+See Webster, “Obtaining Documents from Adverse Parties in International Arbitration”, op. cit., p.41.
+525
+See art.12(2) of the French CPC: “He [The judge] must give or restore their proper legal definitions to the
+disputed facts and deeds notwithstanding the denominations given by the parties.” See also Bensaude, “SA Otor
+Participations v S.A.R.L. Carlyle (Luxembourg) Holdings 1: Interim awards on Provisional Measures in International
+Arbitration” (2005) J. Int. Arb. Vol.22 No.4, p.357; Jacquet, “Qualification et conséquences des mesures provisoires
+prises par un tribunal arbitral” (2005) JCP G No.22, 1 June 2005, p.1027. See also Paris, 4 April 2002 (Nafimco case)
+and 11 April 2002 (ABC International case), (2003) Rev. Arb. No.1 p.130, note Bensaude; Paris, 1 July 1999, Braspetro
+Oil Services Company (Brasoil) v The Management and Implementation Authority of the Great Man-Made River Project
+(GMRA), [2000] ASA Bull. Vol.18 No.2, p.376.
+End of Document
+© 2025 SWEET & MAXWELL

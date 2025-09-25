@@ -1,0 +1,38 @@
+Correspondence with description, UKBC-BULLENL 459372294 (2022)
+© 2025 Thomson Reuters.
+1
+Correspondence with description
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part F - Business Law
+Chapter 25 - Supply of Goods and Digital Content
+Action for breach of condition or warranty
+Correspondence with description
+25-25
+SGA s.13 implies into a contract for the sale of goods by description a condition that the goods will correspond with the
+description. In practice, most sales are sales by description; the problem in pleading a sale by description is to formulate with
+precision the description applied to the goods in question. There can also be difficulties where the seller has made statements
+about the goods prior to purchase, in determining what statements form part of the contractual description and what are pre-
+contractual representations not subsequently incorporated into the contract. 14  It is worth noting that selling a work of art as by
+a named artist is not necessarily a sale by description. 15
+A sale is not precluded, however, from being a sale by description by the fact that the goods are exposed for sale or hire and
+are selected by the buyer (SGA s.13(3)). There will often be an overlap between breach of the condition of correspondence
+with description and breach of the conditions of reasonable fitness, satisfactory quality and correspondence with sample: where
+appropriate, each condition should be pleaded. It should be noted that, unlike SGA s.14 this condition is not confined to sales
+in the course of a business.
+The addition of SGA s.14(2D) for consumer sales (see para.25-27) had the effect of widening the definition of what constitutes
+a “description” in such sales.
+For consumer sales after 1 October 2015 the CRA substitutes much lengthier provisions in s.11. The section reiterates the rule
+that any sale by description includes a term that the goods will match the description. The section also sweeps up sale by sample
+(see para.25-30). The sale is not precluded from being a sale by description just because the goods are exposed for supply
+and selected by the buyer—s.11(3). Section 11(4) incorporates the information that must be supplied about the goods under
+the Consumer Contracts (Information, Cancellation and Additional Charges) Regulations 2013 (SI 2013/3134) and makes that
+information into a term of the contract. These terms also cannot be excluded—CRA s.31.
+Footnotes
+14
+See for example Oscar Chess Ltd v Williams [1957] 1 W.L.R. 370.
+15
+Harlingdon and Leinster Enterprises Ltd v Christopher Hull Fine Art Ltd [1991] 1 Q.B. 564.
+End of Document
+© 2025 SWEET & MAXWELL

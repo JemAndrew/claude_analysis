@@ -1,0 +1,1340 @@
+Section H. - Challenge and Replacement of Arbitrators, UKBC-REDFERN 530638622...
+© 2025 Thomson Reuters.
+1
+Section H. - Challenge and Replacement of Arbitrators
+Redfern and Hunter on International Arbitration 7th Ed.
+Mainwork
+Chapter 4 - Establishment and Organisation of an Arbitral Tribunal
+Section H. - Challenge and Replacement of Arbitrators
+(a) Introduction
+4. 102
+Challenges to arbitrators were, at one time, a rare event. If a vacancy occurred, it was usually because of the death or resignation
+of an arbitrator. However, modern international arbitrations often involve vast sums of money and the parties have become
+more inclined to engage specialist lawyers, who are expert in manoeuvres designed to obtain a tactical advantage, or at least to
+minimise a potential disadvantage. 133  Statistics on arbitrator challenges are available from most of the main institutions, 134
+and some commentators have concluded that the practice has increased to the extent that it might affect the efficiency and
+legitimacy of the process. 135  This is particularly noteworthy in investment arbitrations. 136  In short, as the scope of international
+arbitration widens, and as claims for damages or compensation frequently run into millions of dollars, parties, courts, and arbitral
+institutions are facing an increasing number of challenges to arbitrators for alleged lack of independence or impartiality. 137
+4. 103
+Some challenges are undoubtedly meritorious. In other cases, however, challenges are made to obtain a tactical advantage, for
+example, at the start of an arbitration, to hinder the formation of the tribunal; or, in the course of an arbitration, because the
+party making the challenge suspects that the arbitrator who is the target of the challenge is not persuaded of the merits of the
+challenging party’s case. 138  Such challenges cause delay and add to expense, since the parties, the challenged arbitrator(s), and
+the other members of the tribunal will be given time to comment upon the challenges before the relevant institution or individual
+makes a decision; and indeed, in some institutions the proceedings will be automatically stayed pending resolution. 139
+4. 104
+Traditionally, institutions have categorised decisions on challenges as administrative in nature and have not provided reasons for
+their decisions. However, given the important impact such a decision will have on the arbitral process (often affecting the right
+of one of the parties to have the ‘judge of their choice’), there have been ever-stronger demands for institutions to publish and
+provide reasons for their decisions in order to clarify, both for arbitrators and for parties, the standards applied by the institutions
+themselves, thus assisting uniformity in the practice of disclosure. This has caused institutions to abandon their traditional
+reticence and publish the reasons for such decisions. In 2011, the LCIA led the way by publishing its decisions in redacted
+form. 140  In 2015, the ICC changed its practice to provide reasons, if any party so requested in advance of the decision. 141  The
+practice of ICSID has been to publish reasons for decisions on challenges and those decisions have become an important point
+of reference when considering the scope of independence and impartiality under the ICSID Convention and rules. 142
+(b) Grounds for challenge
+4. 105
+Before a challenge can be considered, the applicable rules need to be established. In the event of an arbitration taking place in
+accordance with institutional rules, the test will be set out in those rules, with a challenge being made to the relevant institution,
+or (in the case of UNCITRAL) to the appointing authority designated by the parties or, in the absence of such designation, by
+the appointing authority chosen by the PCA. 143  In the event of a pure ad hoc arbitration (that is, one with no chosen set of
+
+Section H. - Challenge and Replacement of Arbitrators, UKBC-REDFERN 530638622...
+© 2025 Thomson Reuters.
+2
+rules), the test will be set out in the local arbitration law of the seat of the arbitration. In the absence of any designated appointing
+authority, a challenge will be decided by the judicial courts of the seat.
+(i) Arbitral rules and the ICSID Convention
+4. 106
+In general, the parties may challenge an arbitrator only where they have reasonable doubts as to his or her impartiality or
+independence. However, the arbitral rules provide their own tests, which may vary from each other.
+4. 107
+For instance, Article 12 of the UNCITRAL Rules provides:
+1. Any arbitrator may be challenged if circumstances exist that give rise to justifiable doubts as to the
+arbitrator’s impartiality or independence.
+2. A party may challenge the arbitrator appointed by him only for reasons of which he becomes aware
+after the appointment has been made. [ … ]
+Commentators on the UNCITRAL Rules note that the inclusion of the word ‘justifiable’ in Article 12.1 to define the kind
+of doubt required to sustain a challenge reflects UNCITRAL’s clear intention of establishing an objective standard for
+impartiality and independence. 144
+4. 108
+The relevant case law supports this position. 145  The appointing authority in the challenge decision filed in the UNCITRAL
+case Nord Stream 2 v EU noted that:
+[T]he doubts as to the arbitrator’s impartiality or independence must be justifiable pursuant to an analysis of
+all relevant circumstances from the perspective of an objective, reasonable, and informed third party. Further,
+a challenge may succeed on the basis of an appearance of bias without requiring proof of actual bias. 146
+4. 109
+The ICC Rules are succinct on the issue. Article 14.1 simply notes that:
+A challenge of an arbitrator, whether for an alleged lack of impartiality, or independence or otherwise, shall be
+made by submission to the Secretariat of a written statement specifying the facts and circumstances on which
+the challenge is based. [Emphasis added]
+4. 110
+The breadth of this provision is striking. It would appear to grant the ICC Court considerable discretion to remove an
+arbitrator. 147  However, as noted above, since 2015 the Court will communicate the reasons for its decision on the challenge
+to an arbitrator to the parties upon request of any party. 148  This gives the parties an insight into the reasoning behind the
+decision.
+4. 111
+The LCIA Rules are more explicit. Article 10.1 states that the LCIA Court may revoke any arbitrator’s appointment if:
+‘circumstances exist that give rise to justifiable doubts as to that arbitrator’s impartiality or independence’. The ICDR, SCC,
+SIAC, and HKIAC Arbitration Rules also adopt a ‘justifiable doubts’ test. 149
+
+Section H. - Challenge and Replacement of Arbitrators, UKBC-REDFERN 530638622...
+© 2025 Thomson Reuters.
+3
+4. 112
+The ICSID Convention states that:
+A party may propose to a Commission or Tribunal the disqualification of any of its members on account of any
+fact indicating a manifest lack of the qualities required by paragraph (1) of Article 14. A party to arbitration
+proceedings may, in addition, propose the disqualification of an arbitrator on the ground that he was ineligible
+for appointment to the Tribunal under Section 2 of Chapter IV. 150
+The qualities required by Article 14.1 include the ability to ‘exercise independent judgment’ in the English version, whereas
+the Spanish version of the same article refers to a person who ‘inspires full confidence in their impartiality of judgment’. 151
+Since both versions of the ICSID Convention are equally authentic, Article 14.1 has been applied to require arbitrators to be
+both impartial and independent. 152  As defined by the Chair of the ICSID Administrative Council, ‘Impartiality refers to the
+absence of bias or predisposition towards a party. Independence is characterized by the absence of external control’. 153  The
+Authoritative Notes to the ICSID Rules explain the effect of the independence provision:
+[A]n arbitrator is to [resign] if, for instance, he may have an interest in the result of the dispute. In fact, in view
+of the qualities he is required to possess, a candidate is unlikely to accept an appointment as arbitrator where
+his personal interest is involved and, if he realises such involvement after the appointment, he may be trusted to
+resign. The experience of other international arbitration bodies has, in this respect, apparently been reassuring;
+it therefore seems unnecessary to particularise grounds for resignation. 154
+The second part of Article 14.1 refers to grounds on which an arbitrator is ‘ineligible for appointment’. This refers to the
+nationality provisions, which are designed to ensure that (unless the parties agree otherwise) the majority of arbitrators are
+not of the nationality of either of the parties. 155
+4. 113
+As noted by the deciding arbitrators in one case, the ICSID Rules establish an objective standard:
+The legal standard applied to a proposal to disqualify an arbitrator is an ‘objective standard based on a reasonable
+evaluation of the evidence by a third party.’ As a consequence, the subjective belief of the party requesting the
+disqualification is not enough to satisfy the requirements of the Convention. 156
+In other words, the challenging party must rely on established facts and ‘not on any mere speculation or inference’. 157
+4. 114
+The interpretation of the requirement in Article 57 that the arbitrator must have a ‘manifest’ lack of the qualities established
+by Article 14 has been equivocal. To some tribunals, it has referred ‘not to the seriousness of the allegation but to the ease
+with which [the allegation] may be perceived’. 158  Other tribunals have taken the view that ‘manifest’ must relate to the
+substance of the conflict itself such that, from the perspective of an informed reasonable person, established facts ‘make
+it obvious and highly probable, not just possible, that the challenged arbitrator is a person who may not be relied upon to
+exercise independent and impartial judgment’. 159
+(ii) National laws
+4. 115
+National laws on arbitration contain tests that operate in the case of a pure ad hoc arbitration with a seat in the country. For
+example, the Swiss PIL provides that an arbitrator may be challenged if circumstances exist that give rise to justifiable doubts
+as to his or her impartiality or independence. 160
+
+Section H. - Challenge and Replacement of Arbitrators, UKBC-REDFERN 530638622...
+© 2025 Thomson Reuters.
+4
+4. 116
+Section 24(1) of the English Arbitration Act 1996 is more comprehensive:
+Section 24:(1)
+(1) A party to arbitral proceedings may (upon notice to the other parties, to the arbitrator concerned and
+to any other arbitrator) apply to the court to remove an arbitrator on any of the following grounds:
+(a) that circumstances exist that give rise to justifiable doubts as to his impartiality;
+(b) that he or she does not possess the qualifications required by the arbitration agreement;
+(c) that he or she is physically or mentally incapable of conducting the proceedings or there are
+justifiable doubts as to his capacity to do so;
+(d) that he or she has refused or failed—
+(i) properly to conduct the proceedings, or
+(ii) to use all reasonable despatch in conducting the proceedings or making an award,
+(iii) and that substantial injustice has been or will be caused to the applicant. 161
+The UK Supreme Court considered this standard of disqualification and found that the relevant test is an objective one,
+namely ‘whether the fair-minded and informed observer, having considered the facts, would conclude that there was a real
+possibility that the tribunal was biased’. 162
+4. 117
+In the United States, the duty of avoiding evident partiality is established by section 10(a) of the Federal Arbitration Act
+of 1925 (FAA):
+(a) In any of the following cases the United States court in and for the district wherein the award was made
+may make an order vacating the award upon the application of any party to the arbitration—
+close … ]
+ 
+(1) Where the award was procured by corruption, fraud, or undue means;
+ 
+(2) where there was evident partiality or corruption in the arbitrators, or either of them;
+close … ]
+This section has been interpreted as including a strict duty of disclosure. The US Supreme Court set a high standard in
+Commonwealth Coatings by requiring disclosure of any dealings that might create an impression of bias. In that case, an
+arbitral award was set aside for failure to disclose business connections with one of the parties, even though the award was
+unanimous and the Court found that there was no actual bias. 163  Yet US courts have been divided over the precise standard
+required to show evident partiality. Whereas several circuits have generally held that bias is found where a reasonable person
+would have to conclude that an arbitrator was partial, 164  other circuits have held that a reasonable impression of partiality
+would suffice. 165
+4. 118
+
+Section H. - Challenge and Replacement of Arbitrators, UKBC-REDFERN 530638622...
+© 2025 Thomson Reuters.
+5
+In France, Article 1456 of the Code of Civil Procedure explicitly states that before accepting appointment an arbitrator shall
+disclose any circumstance that may affect his or her independence or impartiality’. 166  If one party considers that the arbitrator
+is not independent or impartial, the issue shall be resolved by the institution administering the arbitration or, where there is
+no such institution, by the judge acting in support of the arbitration to whom application must be made within one month
+following the disclosure or the discovery of the fact at issue. 167
+(c) Procedure for challenge
+4. 119
+The procedure for challenge of an arbitrator appears in the applicable arbitration rules or, in the event of an ad hoc arbitration, in
+the arbitration law at the seat of arbitration. Where a challenge falls to be dealt with by the courts, the procedure to be followed
+is specified in the applicable procedural law. Where the rules of an arbitral institution apply, the procedure is normally that a
+complaint should be made in the first instance either to the arbitral institution or to the arbitral tribunal itself. 168
+4. 120
+Most national laws provide for a challenge to an arbitrator to be made promptly during the arbitration. 169  The inevitable delays
+to the conduct of the arbitration may be minimised by provisions that require the challenge to be made within a specified time of
+becoming aware of the grounds for that challenge, or by provisions that permit the arbitration to continue whilst the challenge
+is pending. Such provisions are to be found, for example, in the Model Law and the English Arbitration Act 1996. 170
+4. 121
+A curious gap in the FAA leaves the parties no avenue of judicial review of an arbitrator appointment in an ad hoc arbitration
+until after an award has been rendered, unless the rules of procedure adopted by the parties provide for earlier review. 171  This
+means that a party with a valid objection to the composition of the tribunal would have to make an objection ‘on the record’
+and then wait until the end of the case before challenging the award. In Sussex, the US Court of Appeals for the Ninth Circuit
+reasoned that court intervention mid-arbitration should occur only in extreme cases and that the challenge to an arbitrator for
+an apparent conflict of interest was ‘emphatically’ not an extreme case. 172
+(i) ICC challenge procedure
+4. 122
+Article 14 of the ICC Rules provides that a party seeking to challenge an arbitrator must do so within thirty days of the date of
+notification of the appointment or the date on which that party became aware of the circumstances giving rise to the challenge.
+The challenge must be made in writing, specifying the facts and circumstances on which it is based. The ICC Court will then
+decide on the challenge after the Secretariat has afforded an opportunity to the arbitrator concerned, the other party, and the
+other members of the tribunal to comment. 173  Those comments are to be communicated to the parties and to the arbitrators.
+4. 123
+Article 11.4 of the 2012 ICC Rules expressly stated that the reasons for the challenge decision would not be communicated. 174
+As noted above, since 2015, the ICC has changed its practice and now, under Article 5 of Appendix II and upon request of
+any party, the Court will communicate the reasons for its decisions on challenges to arbitrators. 175
+(ii) LCIA challenge procedure
+4. 124
+Under the LCIA Rules, a party who intends to challenge an arbitrator must send a written statement of the reasons for
+challenge to the LCIA Court, the arbitral tribunal, and all other parties, within fourteen days of the establishment of the
+
+Section H. - Challenge and Replacement of Arbitrators, UKBC-REDFERN 530638622...
+© 2025 Thomson Reuters.
+6
+arbitral tribunal, or within fourteen days of becoming aware of the circumstances justifying the challenge. 176  The LCIA
+Court will give the other parties and the challenged arbitrator a chance to comment on the challenge. Unless the challenged
+arbitrator withdraws (or the other party agrees to the challenge) within fourteen days of receipt of the written statement of
+reasons, the LCIA Court will decide on the challenge. 177  The LCIA Rules expressly require that the decision of the LCIA
+Court—which, in practice, may be represented by the President, the Vice President, Honorary or former Vice Presidents,
+or any three members of the LCIA Court—shall be made in writing, with reasons. 178  Indeed, if the parties so request, the
+division may even hold an oral hearing in this regard.
+(iii) UNCITRAL challenge procedure
+4. 125
+Under the UNCITRAL Rules, any challenge must be notified to the other party and to the members of the arbitral tribunal,
+including the challenged arbitrator. 179  The time limit for submitting a challenge is fifteen days. 180  The merits of challenges
+are decided by the appointing authority, 181  and whether reasons will accompany the challenge decision will depend upon
+the identity of the appointing authority.
+(iv) ICSID challenge procedure
+4. 126
+Any ‘proposal for disqualification’ of an arbitrator (terminology used by the ICSID Rules) must be filed with the Secretary-
+General of ICSID within twenty-one days of either (a) the constitution of the tribunal; or (b) the date on which the party
+proposing the disqualification first knew or should have known of the facts on which the proposal is based. 182  The party
+proposing the disqualification of an arbitrator must state the grounds on which it is based and a statement of relevant facts,
+law, and arguments plus supporting documents. 183  The other party must file its response to the proposal for disqualification
+within twenty-one days. 184  The challenged arbitrator may make a statement limited to factual information relating to the
+challenge within a further five day period. 185  Each party is then permitted to file a final simultaneous statement seven days
+following the arbitrator’s statement. 186
+4. 127
+If the challenge is directed against one arbitrator in an arbitral tribunal of three, the decision is taken by the other two
+arbitrators. 187  If they cannot agree, the decision will be made by the Chair of the ICSID Administrative Council. 188  The
+decision will also be made by the Chair if the challenge is directed against a sole arbitrator, or against the majority of the
+arbitral tribunal. 189  The decision will be reasoned. 190  For as long as the constitution of the arbitral tribunal is in doubt because
+of a challenge to one or more of the arbitrators, the arbitral proceedings are suspended unless the parties agree otherwise. 191
+If the challenge is upheld, a vacancy is created in the arbitral tribunal, which must be filled before the proceedings resume.
+If the challenge is rejected, the arbitration proceeds.
+(d) Principal bases for challenge
+4. 128
+In order to understand how challenge decisions are taken, in this section we will consider some of the responses given by the
+decision-making bodies in contexts such as:
+ 
+• where there is an alleged connection between the arbitrator and one of the parties;
+ 
+• where there is an alleged connection between the arbitrator and counsel for one of the parties (which can include, by way
+of example, where the arbitrator and counsel belong to the same barristers’ chambers);
+
+Section H. - Challenge and Replacement of Arbitrators, UKBC-REDFERN 530638622...
+© 2025 Thomson Reuters.
+7
+ 
+• where the arbitrator acts as counsel for a third party in a dispute involving similar issues, in which he or she is advancing
+a case contrary to that of one of the parties to the dispute before him or her as arbitrator (the so-called double-hat dilemma);
+and
+ 
+• where the arbitrator makes a statement that is alleged to involve a pre-judgment of an issue in the dispute.
+(i) Connection with one of the parties
+4. 129
+A connection with one of the parties can arise in different scenarios. The IBA Guidelines provide detailed guidance on
+a range of specific disqualifying connections. We have already addressed the question of the connection established by
+repeat appointments by the same party and the risks that such appointments raise. 192  Separately, an arbitrator should not be
+acting simultaneously as counsel in separate proceedings involving one of the parties. For example, in ICS Inspection and
+Control Services Limited v Argentina I, 193  the appointing authority deemed that a challenged arbitrator who was serving as
+counsel in an arbitration against the same respondent was in a situation of adversity towards the respondent and that, absent
+circumstances that would eliminate any justifiable doubts as to the challenged arbitrator’s impartiality and independence, the
+challenge should be sustained. 194
+4. 130
+If the arbitrator (or a close family member 195 ) has a significant financial interest in one of the parties, or in the subject
+matter in dispute in the arbitration, a challenge would be upheld. 196  In one UNCITRAL case, the respondent challenged the
+claimant’s party-appointed arbitrator due to his connections with a financing partner of the claimant on the project that formed
+part of the subject matter of the arbitration. 197  It was not disputed that the challenged arbitrator had been the legal director and
+a member of the executive committee of that financing partner prior to the arbitration (and was expected to receive a pension
+from the company as a result of his services) nor that he was a shareholder of the company. The Secretary-General of the
+PCA first determined that the financing partner had a material participation in the project and concluded that the arbitrator’s
+relationship with the financing partner (even though not a party to the arbitration) was enough to give rise to justifiable
+doubts as to his impartiality or independence in a dispute involving the project. The Secretary-General concluded that these
+circumstances were enough for an informed and objective third party to find justifiable doubts as to the challenged arbitrator’s
+impartiality and independence. A similar conclusion was reached by the LCIA Court when it concluded that a reasonable
+and objective third party would have justifiable doubts as to the co-arbitrator’s independence based on the following facts:
+(1) the arbitrator was employed by and taught at a university; (2) the chair of the board of the respondent was a member of
+the university’s Board of Trustees; (3) the university had a cooperation agreement with the respondent; and (4) the claimant
+in the arbitration expected to refer to decisions approved by members of the board of the respondent in the arbitration. 198
+4. 131
+However, the connection with one of the parties needs to be material. In Suez et al. v Argentina, disqualification was sought
+in an ICSID case by the respondent based on the fact that one arbitrator was a non-executive director of an investment bank
+that held a small participation in two of the claimant companies, principally as a portfolio investor on behalf of others. 199
+The other members of the tribunal considered it to be a remote connection that could not be sufficient in and of itself to
+justify a disqualification. 200
+4. 132
+As defined by the tribunal in that case, a further step is required: the alleged connection must be evaluated qualitatively in
+order to decide whether it constitutes a fact indicating a manifest lack of independence of judgement and impartiality. This
+was addressed by means of a four-point test.
+ 
+oProximity
+How closely connected is the challenged arbitrator to one of the parties? The closer the connection between the arbitrator
+and a party, the more likely it is that the relationship may influence an arbitrator’s independence and impartiality.
+
+Section H. - Challenge and Replacement of Arbitrators, UKBC-REDFERN 530638622...
+© 2025 Thomson Reuters.
+8
+ 
+oIntensity
+How intense and frequent are the interactions between the arbitrator and one of the parties? The more frequent and
+intense the interaction, the more likely it is that the arbitrator’s independence and impartiality will be affected.
+ 
+oDependence
+To what extent is the challenged arbitrator dependent on one of the parties for benefits? The more dependent the arbitrator
+is on a relationship for benefits or advantages, the more likely it is that the relationship may influence the arbitrator’s
+independence and impartiality.
+ 
+oMateriality
+To what extent are any benefits accruing to the arbitrator as a result of the alleged connection significant? Significant
+benefits derived from a relationship will be more likely to influence an arbitrator’s independence and impartiality than
+negligible or insignificant benefits. 201
+4. 133
+A connection can also exist if an arbitrator has acted as counsel on unrelated matters to one of the parties. 202  In a novel
+UNCITRAL case, the respondent challenged the claimant’s party-appointed arbitrator on the basis that the arbitrator had acted
+as counsel for the challenging party. The appointing authority considered that the challenging party could not demonstrate
+how the independence of the arbitrator would be in question as he did not have a personal interest in the dispute. However,
+the appointing authority concluded that an objective observer would have justified doubts as to the arbitrator’s impartiality
+considering the frequency with which the challenged arbitrator had acted as counsel for the respondent (and curiously the
+challenging party). 203  In a similar vein, the Paris Court of Appeal set aside an ICC award on the basis that the arbitral
+tribunal was not properly constituted since the arbitrator in question had failed to disclose existing links between his law firm
+and entities linked to one of the parties during the course of the proceedings. The Court concluded that these circumstances
+created a reasonable doubt as to the arbitrator’s independence and impartiality. 204
+(ii) Connection with counsel or experts
+4. 134
+A connection with counsel can arise in a variety of ways. Unless the parties give their specific agreement, an arbitrator
+cannot sit in a case in which he or she has a financial relationship with one of the lawyers involved. Most obviously, this
+will arise if they are colleagues in the same law firm. 205  Similarly, an arbitrator who receives a significant number of repeat
+appointments from the same law firm could be said to have developed a financial relationship with that firm. 206  Yet, in
+two recent ICSID cases, the Chair of the Administrative Council dismissed a challenge based on an alleged history of cross-
+appointments between the claimant’s counsel and the claimant’s party-appointed arbitrator, ruling that ‘without something
+more’ the history of cross-appointments was not enough to question the arbitrator’s independence and impartiality. 207
+4. 135
+Under the same logic, in Tecso, 208  the French courts decided a challenge to an award based on an arbitrator’s failure to
+disclose a shared history with the law firm in which a lawyer for one of the parties practised. The arbitrator had left the
+law firm in question before the lawyer representing the party began working for the firm, although the arbitrator had since
+provided the firm with two or three legal opinions. The Court of Appeal in Paris set aside the award for the failure of the
+arbitrator to disclose this connection, but its decision was later reversed by the Court of Cassation. 209
+4. 136
+A similar issue arose in the ICSID case of Owens-Illinois v Venezuela. Venezuela challenged the claimant-appointed arbitrator
+on the basis of an alleged connection between the arbitrator and his former law firm, which had not represented any of the
+parties to the arbitration, but had acted in several domestic litigations and arbitrations against Venezuela and/or related state
+entities. The respondent argued that the challenged arbitrator had relied upon the services of lawyers employed at his former
+
+Section H. - Challenge and Replacement of Arbitrators, UKBC-REDFERN 530638622...
+© 2025 Thomson Reuters.
+9
+law firm as assistants to tribunals in cases in which he had served as president. The other arbitrators dismissed the challenge,
+reasoning that the challenged arbitrator had no financial interest in the services rendered by his former law firm and that the
+lawyers in question had acted as secretaries in cases unrelated to Venezuela. However, the deciding arbitrators also noted their
+decision would have been different had the challenged arbitrator continued to have a financial interest in the law firm. 210
+4. 137
+England’s divided legal profession, comprising solicitors and barristers, poses a particular question when it comes to
+considering an arbitrator’s connection with counsel. Unlike partners and associates at law firms, barristers within chambers
+work as sole practitioners, sharing operating expenses, but not income or case information. For this reason, in English court
+proceedings, there is no constraint preventing barristers from appearing against each other in the same case nor, indeed, before
+a former member of their chambers who is now a judge. The situation is less straightforward in international arbitration
+proceedings, which will generally involve lawyers and parties who are far less familiar with the role and workings of
+barristers’ chambers.
+4. 138
+In Hrvatska Elektroprivreda v Republic of Slovenia, 211  the respondent state communicated the addition of a barrister to its
+legal team at a very late stage of the proceedings. The barrister in question was a member of the same chambers as the chair
+of the arbitral tribunal, which led to an objection by the claimant and its non-English legal counsel. Exercising its inherent
+powers, the tribunal decided that the best way to safeguard the proceedings was to order the counsel in question to withdraw
+from the respondent’s legal team. In so ordering, the tribunal began its discussion by observing that ‘[b]arristers are sole
+practitioners’ and ‘chambers are not law firms’—but it observed that ‘[i]t is, however, equally true that this practice is not
+universally understood let alone universally agreed, and that Chambers themselves have evolved in the modern market place
+for professional services with the consequence that they often present themselves with a collective connotation’. 212  Taking
+into account the fact that the claimant was entirely unfamiliar with the barristers’ chambers system of England and Wales, that
+the respondent had consciously decided not to disclose the identity of the barrister until a very late stage in the proceedings,
+and that the respondent refused to reveal the extent of that barrister’s participation, the tribunal found it necessary for counsel
+to step down in order to ‘dispel’ the ‘atmosphere of apprehension and mistrust’. 213
+4. 139
+In Rompetrol Group NV v Romania, the tribunal considered an application to exclude claimant’s counsel for having been
+formerly employed at the same law firm as the claimant’s party-appointed arbitrator. The tribunal dismissed the challenge
+applying the standard set by the UK House of Lords (now the UK Supreme Court) in Porter v Magill: the facts should raise a
+‘real possibility that the tribunal was biased’. The tribunal considered that the association between counsel and the arbitrator
+raised no issue as to either person having a present or future financial or material interest in the other’s professional activity.
+Furthermore, the tribunal concluded that ‘the Hrvatska Decision might better be seen as an ad hoc sanction for the failure to
+make proper disclosure in good time than as a holding of more general scope’. 214
+4. 140
+In A and others v B and another, the English Commercial Court considered an application to remove an arbitrator on the
+ground that there were justifiable doubts as to his impartiality because he was appointed as solicitor by claimant’s counsel
+to defend one of its clients in a local litigation. The Court did not consider that a fair-minded and informed observer, who is
+presumed to know how the legal profession in the country works, would conclude that there was a real possibility of apparent
+bias merely because the arbitrator acted as counsel for one of the firms acting in the arbitration. The Court also dismissed the
+challenging party’s reliance on the IBA Guidelines and made clear that if there was no apparent or unconscious bias, applying
+the English common law test, the guidelines could not alter the conclusion. 215  Similarly, in Brescla Calcio SpA v West Ham
+United FC Plc, 216  the Board of the International Council of Arbitration for Sport (ICAS) upheld a challenge against the
+respondent’s party-appointed arbitrator because counsel for the respondent was from the same chambers. In the view of the
+Italian claimant, this circumstance ‘cast some doubts, at least in appearance, as to the arbitrator’s independence’. 217  The
+ICAS Board applied an objective test and referred explicitly to the IBA Guidelines, noting that it was convinced that the
+arbitrator in question was independent and impartial. In 2010, the ICC upheld a challenge to the claimant-appointed arbitrator
+on the basis that she was a member of the same barristers’ chambers as two members of the claimant’s counsel. 218  As the
+IBA Guidelines make clear, it is undoubtedly necessary for disclosure to take place if the arbitrator and another arbitrator, or
+the counsel for one of the parties, are members of the same barristers’ chambers. 219
+
+Section H. - Challenge and Replacement of Arbitrators, UKBC-REDFERN 530638622...
+© 2025 Thomson Reuters.
+10
+4. 141
+It is noteworthy that, following the Hrvatska case, 220  English arbitrators began to insert provisions into procedural orders
+or terms of reference requiring notification of the names of counsel representing the parties and authorising the tribunal
+to reject counsel to whom there was a reasonable objection in order ‘to maintain the integrity of the arbitral process’. An
+increasing number of arbitration rules now follow this practice by requiring the parties to identify their representatives and
+authorising the tribunal to dismiss counsel from the case if the tribunal considers this necessary to maintain the integrity of
+the proceedings. For example, the LCIA has included a provision in Article 18.4 requiring approval of the arbitral panel for
+changes of legal counsel during the course of the arbitration. 221  Similarly, the IBA Guidelines require a party to disclose the
+identity of its counsel ‘on its own initiative’ and ‘at the earliest opportunity’. 222  The IBA Rules on Party Representation in
+International Arbitration provide that, after the constitution of the tribunal, no person should accept representation of a party
+where there is a conflict of interest with one of the arbitrators and permit the tribunal to take measures necessary to safeguard
+the integrity of the proceedings, including by excluding the new party representative. 223
+4. 142
+An additional concern has arisen when there is a connection between a member of the arbitral tribunal and the party-appointed
+experts in the case. In Eiser v Spain, an award was annulled for improper constitution of the tribunal and for a serious departure
+from a fundamental rule of procedure, based on one arbitrator’s close ties with a party-appointed valuation expert. Spain
+challenged the award after it became aware of the relationship between the claimant’s party-appointed arbitrator and the
+claimant’s damages experts in that case, which had not been disclosed in a timely manner by the arbitrator. The annulment
+committee reasoned that there were several past and present professional connections and interactions in various capacities
+between the arbitrator (as such and formerly as counsel in his prior law firm) and the expert. 224  The annulment committee
+first determined that the arbitrator had failed to comply with his obligation to disclose the relationship and then concluded
+that the arbitral tribunal had not been properly constituted. 225
+(iii) Issue conflict
+4. 143
+The notion of issue conflict is not a universal one and does not have a settled definition. Broadly, an issue conflict may
+arise when (i) an arbitrator has already decided in a previous case an issue arising in a later arbitration; (ii) an arbitrator has
+previously published views on an issue arising in a later arbitration; and/or (iii) an arbitrator is a member of or is associated
+with a law firm representing clients facing the same or similar issues as those on which the arbitrator will rule—the so-
+called ‘double-hat’ dilemma (see further below at 4.151). 226  In CC/Devas v India Judge Peter Tomka, former president of
+the International Court of Justice, stated his understanding of issue conflict in the following terms: 227
+The conflict is based on a concern that an arbitrator will not approach an issue impartially, but rather with a
+desire to conform to his or her own view. In this respect [ … ] some challenge decisions and commentators
+have concluded that knowledge of the law or views expressed about the law are not per se sources of conflict
+that require removal of an arbitrator; likewise, a prior decision in a common area of law does not automatically
+support a view that an arbitrator may lack impartiality. Thus, to sustain any challenge brought on such a basis
+requires more than simply having expressed any prior view; rather, I must find, on the basis of the prior view
+and any other relevant circumstances, that there is an appearance of prejudgment of an issue likely to be relevant
+to the dispute on which the parties have a reasonable expectation of an open mind.
+4. 144
+The Report of the ASIL-ICCA Joint Task Force on Issue Conflicts in Investor–State Arbitration explained that questions
+arising under the rubric of ‘issue conflict’ go to the arbitrator’s state of mind, something that is often dependent on context
+and is not readily susceptible to measurement with mechanical rules, so that ‘whatever the precise term used, we must revert
+to the central question, which is when does a predisposition become inappropriate?’ 228
+
+Section H. - Challenge and Replacement of Arbitrators, UKBC-REDFERN 530638622...
+© 2025 Thomson Reuters.
+11
+4. 145
+Challenges in investment arbitrations have been mounted on the basis of prior arbitrations where the challenged arbitrator
+expressed his or her views on similar legal concepts and/or publication by an arbitrator of opinions that pertain to an issue
+in dispute in the arbitration. 229  Generally, challenges based on the arbitrator’s past expressions in scholarly or professional
+writings have not been accepted. 230  The tribunal in Urbaser v Argentina 231  set a high threshold for a challenge based on such
+grounds to succeed: ‘there must be a showing that such opinion or position is supported by factors related to and supporting a
+party to the arbitration (or a party closely related to such party), by a direct or indirect interest of the arbitrator in the outcome
+of the dispute, or by a relationship with any other individual involved, such as a witness or arbitrator’. 232  In a UNCITRAL
+case, the respondent challenged the presiding arbitrator and claimant’s party-appointed arbitrator, arguing that the challenge
+was not based on a lack of independence or inappropriate action but on an ‘issue conflict’. The respondent alleged that both
+arbitrators had ‘strongly held and articulated positions’ on the interpretation of the ‘essential security interests’ provision in
+two prior cases in which they had sat together, and that the party-appointed arbitrator had further defended his position in a
+book chapter he authored. The decision defined the standard for an ‘issue conflict’ as follows:
+[T]o sustain any challenge brought on such a basis requires more than simply having expressed any prior
+view; rather, I must find, on the basis of the prior view and any other relevant circumstances, that there is an
+appearance of pre-judgment of an issue likely to be relevant to the dispute on which the parties have a reasonable
+expectation of an open mind. 233
+4. 146
+The appointing authority upheld the challenge against the party-appointed arbitrator and dismissed the challenge against the
+presiding arbitrator. When applying the above standard, the appointing authority considered decisive that the party-appointed
+arbitrator had already pronounced his views on the same legal concept in four prior arbitrations and had later defended his
+position in an article analysing the decision by three different annulment committees which had annulled his decisions on
+those cases. The appointing authority considered that the respondent was entitled to have its arguments heard and ruled upon
+by arbitrators with an ‘open mind’ and that a reasonable observer would not believe that the respondent had a chance to
+convince the arbitrator to change his mind on that legal concept. On the other hand, the appointing authority considered
+that the participation of the presiding arbitrator in two of the same cases as the party-appointed arbitrator was not enough to
+disqualify him, as the presiding arbitrator had not separately expressed his views on this subject and therefore could approach
+the matter with an open mind and give it full consideration. 234
+4. 147
+Similarly, in the ICSID arbitration KS Invest and TLS Invest v Spain, the Chair of the ICSID Administrative Council reaffirmed
+that the circumstance that an arbitrator had expressed his views on issues of law or fact common to two or more parallel
+arbitrations was not enough evidence of partiality or the appearance thereof. 235  The Chair noted that the two cases in which
+the challenged arbitrator was acting involved different investments by unrelated companies, made at different times, and in
+different sectors. Further, the Chair affirmed that ‘even in cases where issues could be similar, the arguments and the manner
+in which they are presented by different parties could differ depending on the particularities of each case’. 236  Based on
+this, and the fact that Spain had not raised concerns about the appointment of the challenged arbitrator at the time of his
+appointment (when it already knew about his appointment in the parallel arbitration), the Chair dismissed the challenge. 237
+4. 148
+Similarly, in another ICSID arbitration, the tribunal found that the mere fact that the challenged arbitrator had previously
+argued the same or similar issues raised by the respondent state in prior arbitrations acting as counsel (for a different
+respondent state) did not mean that the arbitrator was going to necessarily take the same stance in the present case. 238
+4. 149
+The situation was different in Perenco Ecuador Ltd v Ecuador & Empresa Estatal Petróleos del Ecuador, 239  where the
+challenge arose out of a published interview with the arbitrator, in which he made various comments about Ecuador’s
+disobedient behaviour, including Ecuador’s refusal to comply with orders for provisional measures. The Secretary-General
+of the PCA found that, although the arbitrator did not specifically refer to the arbitration, his combination of chosen words
+
+Section H. - Challenge and Replacement of Arbitrators, UKBC-REDFERN 530638622...
+© 2025 Thomson Reuters.
+12
+and the context in which he used them had the overall effect of painting an unfavourable view of Ecuador (which had brought
+the challenge) in such a way as to give a reasonable and informed third party justifiable doubts as to his impartiality. 240
+4. 150
+After analysing several challenge decisions based on ‘issue-conflicts’, the ASIL-ICCA Task Force identified three prongs to
+analyse whether an arbitrator could be considered impartial: (i) the degree of commitment to the arbitrator’s prior views; (ii)
+the concurrency of the arbitrator’s position as both counsel and arbitrator in matters involving the same party or otherwise
+related matters; and (iii) the specificity or proximity to the current case. 241
+(iv) Double-hatting
+4. 151
+A particular scenario may arise where a lawyer is sitting in one case as an arbitrator in which a point of law is being argued,
+whilst acting in another case as counsel to a party arguing that same point of law. There is no suggestion of any links with the
+parties, but rather an allegation that the arbitrator will not be able to be impartial with regard to a decision on a point of law
+that may be determinative in the case in which he or she is defending the interests of a client as counsel. 242  This scenario
+—sometimes referred to as the ‘double-hat dilemma’—is particularly prevalent in investment arbitration cases, given the
+discrete number of recurring legal concepts at issue, 243  the publicity of the investment arbitration awards (and sometimes
+even the pleadings of the parties), and the repeat participation by well-known international lawyers as counsel and arbitrator.
+4. 152
+This arose in the Telekom Malaysia arbitration 244  where, by reason of the arbitrator’s role as counsel to an investor in a similar
+investment arbitration, Ghana challenged his appointment. Ghana argued that, given that the arbitrator was simultaneously
+acting for an investor in relation to similar points of law, he would be likely to adopt a position favourable to the claimant,
+Telekom Malaysia. As a result, Ghana argued, the arbitrator lacked independence and impartiality. 245  While the other
+members of the tribunal and the Secretariat of the PCA rejected the challenge, Ghana brought the matter for review to
+the Dutch courts, The Hague being the agreed seat of the arbitration. The District Court of The Hague emphasised the
+‘incompatibility’ of the arbitrator’s role as attorney and arbitrator, placing much weight on the appearance, rather than the
+actual existence of bias: 246
+Even if this arbitrator were able to sufficiently distance himself in chambers from his role as attorney in the
+reversal proceedings [ … ] account should be taken of the appearance of his not being able to observe the said
+distance. Since he has to play these two parts, it is in any case impossible for him to avoid the appearance of
+not being able to keep these two parts strictly separated. 247
+4. 153
+To avoid giving rise to ‘justifiable doubts’ as to the arbitrator’s impartiality and independence, the Court permitted him to
+continue serving on the tribunal, on the condition that he resign as counsel in the other arbitration within ten days. 248
+4. 154
+In KS Invest and TLS Invest v Spain, 249  the respondent state challenged the claimant’s party-appointed arbitrator on several
+grounds, including his role as counsel in a parallel arbitration in which respondent’s right to regulate was being contested.
+The Chair of the ICSID Administrative Council dismissed the challenge, noting that the arbitration in which the challenged
+arbitrator was acting as counsel concerned different claimants, different respondents, different subsectors of the energy
+industry, and different measures. Given the multiple differences between the two cases, the Chair considered that a reasonable
+evaluation from a third party could not conclude that the arbitrator manifestly lacked the qualities required under Article
+14(1) of the ICSID Convention.
+4. 155
+
+Section H. - Challenge and Replacement of Arbitrators, UKBC-REDFERN 530638622...
+© 2025 Thomson Reuters.
+13
+The issue of double-hatting continues to create concern and is far from settled. In an effort to provide some certainty on the
+issue, the Draft Code of Conduct for Adjudicators in Investor–State Dispute Settlement, prepared by the Secretariats of ICSID
+and UNCITRAL, provides a series of options from an outright prohibition to informed consent of the disputing parties. 250
+However, some law firms active as counsel in investment arbitrations have been self-policing and adopted internal policies
+prohibiting lawyers at the firm from acting as arbitrators in investment disputes.
+(v) Pre-judgment
+4. 156
+In one UNCITRAL case, the respondent state challenged one of the arbitrators based on comments made during the hearing,
+alleging that the arbitrator’s comments pre-judged one of the issues in the arbitration. 251  During the cross-examination of an
+expert, the arbitrator had made a comment that could be interpreted as suggesting that the respondent had caused compensable
+damage to the claimant. The challenge was heard by a division of the LCIA Court, by agreement of the parties. The LCIA
+admitted that, in isolation, the statement in question could lead a reasonable third person to believe that the arbitrator was
+pre-judging an issue. However, the LCIA noted that, immediately after the comment in question, the arbitrator clarified that
+he was posing hypothetical questions to the expert, which from a reasonable point of view eliminated any appearance of
+pre-judgment. 252
+4. 157
+Even when comments made by an arbitrator do reveal an evolving thought process, the courts have made it clear that this is a
+natural result of evaluating evidence. For example, in Fairchild & Co. Inc. v Richmond, 253  the DC District Court held that:
+[An arbitrator’s] legitimate efforts to move the proceedings along expeditiously may be viewed as abrasive or
+disruptive to a disappointed party [ … ] such displeasure does not constitute grounds for vacating an arbitration
+award [ … ] [E]vident partiality is not demonstrated where an arbitrator consistently relies upon the evidence
+and reaches the conclusions favourable to one party [ … ] The mere fact that arbitrators are persuaded by one
+party’s arguments and choose to agree with them is not of itself sufficient to raise a question as to the evident
+partiality of the arbitrators.
+4. 158
+Conversely, the LCIA Court upheld a challenge and removed an arbitrator after he prematurely expressed his views on the
+merits of the case. The LCIA Court reasoned that the arbitrator ‘conveyed the impression to an objective and informed
+observer that he had prejudged the merits of the counterclaims at the jurisdictional phase, creating thereby an appearance
+of bias’. 254
+(e) Conflict waiver
+4. 159
+A question arises concerning the obligation of a party to raise promptly any objection concerning the independence or
+impartiality of an arbitrator (or any other ground of challenge) when the facts upon which the challenge is based come to its
+attention.
+4. 160
+In the ICSID Rules, Rule 28 (‘Waiver’) states clearly that a party who fails to object promptly to an alleged violation of a relevant
+rule or a decision of the Tribunal or Secretary-General is deemed to have waived its right to object. Similarly, under Article 40
+of the ICC Rules, Article 31 of the ICDR Rules, Article 32.1 of the LCIA Rules, 255  and Article 40.1 of the SIAC Rules, 256  a
+party who does not promptly raise objections to any non-compliance with such rules will be treated as having waived its right
+to object. 257  Further, Article 14.2 of the ICC Rules provides that a challenge must be made within the prescribed time limit
+
+Section H. - Challenge and Replacement of Arbitrators, UKBC-REDFERN 530638622...
+© 2025 Thomson Reuters.
+14
+for it to be admissible. 258  Under Article 13(2) of the Model Law, challenges related to impartiality or independence must be
+filed with the arbitral tribunal within fifteen days of the party becoming aware of the circumstances giving rise to justifiable
+doubts. 259  The question then arises if the same objection can be raised later in a challenge to the award or on enforcement
+proceedings. Whilst this question has not been resolved definitively, the better view is that a failure to comply with the time
+limits to challenge an arbitrator should bar any attack of the award on this basis.
+4. 161
+In common law jurisdictions, the concept of waiver is well established: a party may not ‘lie in ambush’ with an objection to await
+the decision of the tribunal. In A.S.M Shipping Ltd of India v T.T.M.I Ltd of England, the English Commercial Court ruled that:
+It is unacceptable to write making further objections after the hearing was concluded. X KC had made his decision
+not to recuse himself, rightly or wrongly, at the beginning of the third day. Owners were faced with a straight
+choice: come to the court and complain and seek his removal as a decision maker or let the matter drop. They
+could not get themselves into a position whereby if the award was in their favour they would drop their objection
+but make it in the event that the award went against them. A ‘heads we win and tails you lose’ position is not
+permissible in law as section 73 makes clear. The threat of objection cannot be held over the head of the tribunal
+until they make their decision and could be seen as an attempt to put unfair and undue pressure upon them. 260
+4. 162
+Similarly, the United States Court of Appeals for the Third Circuit, 261  considered that a respondent had waived its right to
+challenge an award based on an arbitrator’s alleged insufficient disclosure because it had constructive knowledge of such
+disclosure at the time of the appointment and failed to challenge the arbitrator at that time. The Court strongly affirmed that:
+This is the paradigmatic case of the ‘sore loser,’ so to speak, trying for a second bite at the apple—and the exact
+type of case the law disfavors. A party should not be permitted to game the system by rolling the dice on whether
+to raise the challenge during the proceedings or wait until it loses to seek vacatur on the issue. Nor should a party
+‘wait[] until [it] los[es] and then almost immediately beg[i]n scouring the internet for anything that might suggest
+one arbitrator or another was biased against it.’ This is all to say, under the constructive knowledge standard, a
+party may not conduct a background investigation on an arbitrator after the award with the sole motivation to
+seek vacatur. If it were any other way, arbitrations would cease to have finality and result in endless hearings
+within hearings. 262
+4. 163
+The concept of waiver is also known in civil law countries. A challenge to an arbitrator under the Swiss PIL must be brought
+within thirty days since the requesting party became aware or should have been aware of the ground for challenge and it must be
+communicated to the other members of the tribunal within the same time limit. 263  Under French law, parties have one month
+from discovery of the fact at issue to file a challenge. 264  The Court of Cassation has consistently dismissed cases where the
+facts upon which the challenge was based were publicly accessible and were not brought in a timely manner. For example, in
+2016 the Court of Cassation rejected an appeal by the challenging party based on an alleged connection between an arbitrator
+and the other party’s legal expert as it considered that, through simple research on publicly accessible websites, the challenging
+party could have made itself aware of those relationships. As such, the Court confirmed that parties have a duty to investigate
+in order to identify publicly available information about the arbitrators that may call into question their independence and
+impartiality. 265  Similarly, in 2017, the Court of Cassation upheld a decision of the Court of Appeal in Paris not to set aside
+an award on the ground that the arbitral tribunal had been unlawfully constituted, noting that the documents relied upon by the
+challenging party had been in the public domain since the appointment of the arbitrator and the challenging party could have,
+but failed, to raise its objection within the 30-day time limit. 266  However, it should be stressed that a party can only be deemed
+to have waived its rights to challenge based on facts that it was aware of or should have reasonably been aware of. 267
+4. 164
+Finally, it is noteworthy that the community of arbitration specialists recognises the importance of prompt action when a ground
+for challenge is asserted. In the IBA Guidelines, with the exception of red list conflicts, General Standard 4(a) requires a party
+
+Section H. - Challenge and Replacement of Arbitrators, UKBC-REDFERN 530638622...
+© 2025 Thomson Reuters.
+15
+to make an explicit objection within thirty days of any disclosure by the arbitrator, or of a party, of facts or circumstances that
+could constitute a potential conflict of interest, otherwise the party is deemed to have waived the potential conflict.
+4. 165
+A discussion of waiver is incomplete without a consideration of the emerging phenomenon of ‘advance’ waivers. Since a
+considerable number of arbitrators work at large law firms, there is a practice whereby such arbitrators send advance waivers to
+the parties prior to accepting an appointment. Such waivers vary in form, but typically amount to a request for advance clearance
+from the parties to the effect that the acceptance of the arbitral appointment will not inhibit other lawyers from the same law firm
+from acting for or against any party involved in the arbitration, as long as such separate mandate is unrelated to the arbitration.
+Advance waivers raise questions of party autonomy and informed consent. The approach of the leading institutions regarding
+such waivers is inconsistent. The ICC issued a Note on Conflict Disclosures by Arbitrators in which it expressed that ‘[a]lthough
+an advance declaration or waiver in relation to possible conflicts of interest arising from facts and circumstances that may arise
+in the future may or may not in certain circumstances be taken into account by the Court, such advance declaration or waiver
+does not discharge an arbitrator from his or her ongoing duty to disclose’. 268  For its part, the IBA Guidelines acknowledge the
+increasing use of such advanced waivers, and also confirm that they do not discharge an arbitrator’s ongoing duty of disclosure,
+but do not take a position on their validity and effect. 269
+(f) Conclusion on challenges
+4. 166
+A prospective arbitrator should carefully consider whether to accept an appointment. The prospective arbitrator should not
+accept the appointment if there is reason to believe that either party will genuinely feel that he or she is not independent or
+impartial. Where a party objects after the arbitrator has been appointed and both parties agree that the arbitrator should resign,
+then this is determinative—the arbitrator should resign. The arbitrator should also resign if it seems, on reflection, that the
+objection is, or appears to be, well founded, whether or not the parties agree. 270
+4. 167
+However, if the objection appears to be without merit, the traditional view is that the arbitrator should not resign but should
+usually wait for the matter to be resolved through the relevant challenge procedure, in order to discourage unmeritorious
+disruptive tactics. This is seen as a matter of principle: if a party nominates a perfectly acceptable arbitrator (the ‘judge of its
+choice’) and wishes that arbitrator to remain even though an objection has been made, that arbitrator should remain in place
+unless the appropriate authority rules to the contrary. However, if the issue becomes unnecessarily acrimonious and drawn-
+out, a challenged arbitrator may decide to resign rather than fight on a matter of principle (particularly where the case is at
+an early stage).
+(g) Filling a vacancy
+4. 168
+A replacement arbitrator must be appointed where a member of a three-person tribunal resigns or is successfully challenged
+and the other two members do not proceed as a truncated tribunal. 271  If the arbitration is being conducted under institutional
+rules, in a seat with a sophisticated arbitration law, or under a properly drawn submission agreement, the procedure for replacing
+an arbitrator will be specified. 272  In general, the new appointment is made in the same way as the original appointment. 273
+However, Article 15.4 of the ICC Rules and Article 11.1 of the LCIA Rules, grant discretion to the appointing authority in
+deciding whether to select a replacement arbitrator following the original procedure. 274
+4. 169
+Problems are likely to arise in replacing an arbitrator in pure ad hoc arbitrations. The parties themselves may be able to reach
+an agreement as to the method by which the arbitrator should be replaced and this approach should certainly be attempted first.
+However, if the parties cannot agree, either on the choice of a replacement arbitrator or on the way of making that choice, then
+
+Section H. - Challenge and Replacement of Arbitrators, UKBC-REDFERN 530638622...
+© 2025 Thomson Reuters.
+16
+an approach to the relevant national court must be considered. Since an arbitral tribunal is already in existence and the place of
+arbitration will almost certainly have been decided, the request for the appointment of a replacement arbitrator should be made
+to the courts at the seat of arbitration. It is necessary to ensure that the court has the power to make the appointment, but most
+developed national systems of law confer such powers. 275  Nevertheless, it is best not to rely upon recourse to the courts if it
+can be avoided. To that end, the following guidelines are suggested:
+ 
+• Where provision is to be made for an arbitration to be conducted according to the rules of an arbitral institution, those
+rules should be checked to make sure that they contain adequate provision for the filling of a vacancy.
+ 
+• Where an arbitration is to be conducted ad hoc under the terms of a submission agreement, adequate provisions for the
+filling of any vacancy should be written into the submission agreement.
+ 
+• Where an arbitration is to be conducted ad hoc without any formal submission agreement, it should be held only in a
+country in which the local law contains adequate provision for filling any vacancy that may arise. 276
+(h) Truncated tribunals
+4. 170
+Most party-appointed arbitrators act properly and in good faith. It occasionally happens, however, that a party-appointed
+arbitrator refuses to participate in the arbitration or submits a resignation without sufficient reason. If this happens early in
+the proceedings or if the case is one in which the interests of justice do not require a quick decision, a replacement may be
+appointed. 277
+4. 171
+Appointing a new arbitrator may, however, be impractical when the resignation, or refusal to participate, occurs late in
+the proceedings. Finding and appointing a replacement and allowing the new arbitrator to become familiar with the case,
+inevitably causes delay. This is particularly aggravated if the arbitrator chooses to resign or refuses to participate at the stage of
+deliberations. In such cases, and when a quick conclusion to the arbitration is essential, the only sensible course may be for the
+two remaining arbitrators to continue with the proceedings and to render an award without the participation of the third arbitrator.
+4. 172
+A number of celebrated cases provide examples of situations in which arbitral tribunals have continued proceedings and
+rendered awards as truncated tribunals. 278  Most of these have been pure ad hoc arbitrations, but there have been cases under
+the UNCITRAL Rules 279  and the ICC Rules. 280
+4. 173
+One US commentator has written:
+I find it very hard to imagine that, even in the absence of an express rule or agreement, a modern court in a state
+that otherwise has a public policy of supporting international commercial arbitration would invalidate an award
+issued by a majority of arbitrators because a party-appointed arbitrator, in an effort to frustrate the arbitration,
+chooses to absent himself at a late stage of the proceedings, or refuses to sign an award. National laws that refer
+to participation by three arbitrators should be interpreted to have been satisfied, as Professor Gaillard suggests,
+when all three have had a fair and equal opportunity to participate. 281
+4. 174
+Most of the world’s leading international arbitral institutions followed this rule, originally adopted by the AAA. 282  The LCIA
+has followed the philosophy of leaving the question of whether to proceed on a truncated basis entirely to the discretion of the
+remaining arbitrators, subject to approval by the LCIA Court. 283  For its part, the ICC adopted a more restrictive approach:
+
+Section H. - Challenge and Replacement of Arbitrators, UKBC-REDFERN 530638622...
+© 2025 Thomson Reuters.
+17
+Subsequent to the closing of the proceedings, instead of replacing an arbitrator who has died or been removed
+by the Court pursuant to Articles 15(1) and 15(2), the Court may decide, when it considers it appropriate, that
+the remaining arbitrators shall continue the arbitration. In making such determination, the Court shall take into
+account the views of the remaining arbitrators and of the parties and such other matters that it considers appropriate
+in the circumstances. 284
+Thus, not only does the ICC limit the possibility of a truncated tribunal to the deliberations phase, but also it is the ICC Court
+that makes the decision, rather than the remaining members of the tribunal.
+4. 175
+Several cases in which arbitral tribunals have decided to proceed in truncated form have come into the public domain. The
+most sensational involved the government of a country in south-east Asia, which exerted considerable pressure to withdraw
+on the arbitrator whom it had appointed. The final award contains a passage stating comprehensively the relevant facts and
+analysing the legal consequences. The conclusion of the two remaining arbitrators, relying on the published works of a well-
+known international jurist, was that it could— and indeed should—proceed in truncated form to render a final award. 285
+4. 176
+So far as the UNCITRAL Rules are concerned, 286  there is respectable authority supporting the legitimacy of an award issued by
+a truncated tribunal, where appropriate. In pure ad hoc arbitrations in which the parties have not chosen the UNCITRAL Rules,
+it is wise for the remaining arbitrators to proceed with caution; at the very least, they should review any relevant provisions of
+the lex arbitri and (if they are aware of it) the law of the place of likely enforcement of the award.
+4. 177
+In sum, the option of proceeding as a truncated tribunal, rather than as a reconstituted full tribunal, will remain as an exceptional
+measure to be adopted only when the arbitration is nearing its end and where there is clear evidence that the arbitrator concerned,
+voluntarily or involuntarily, has likely been associated with an abuse of the process. 287
+(i) Procedure following the filling of a vacancy
+4. 178
+An important practical question arises when a vacancy in the arbitral tribunal is filled: to what extent must the newly constituted
+arbitral tribunal retrace its steps? This will depend on the applicable institutional rules. The UNCITRAL Rules provide that,
+where an arbitrator is replaced, ‘the proceedings shall resume at the stage where the arbitrator who was replaced ceased to
+perform his or her functions, unless the arbitral tribunal decides otherwise’. 288  The ICC Rules provide that the reconstituted
+tribunal will determine, after having invited the parties to comment, whether and to what extent any prior proceedings shall be
+repeated. However, if the parties agree on a solution, the tribunal will usually follow such agreement. 289  For its part, Article
+34 of the WIPO Rules provides that ‘[w]henever a substitute arbitrator is appointed, the Tribunal shall, having regard to any
+observations of the parties, determine in its sole discretion whether all or part of any prior hearings are to be repeated’. 290  The
+2020 version of the LCIA Rules contains broadly similar provisions. 291
+4. 179
+In national arbitration laws, the approaches vary. The Model Law is silent on this issue, thus leaving the question to the tribunal’s
+discretion. US courts have abandoned their previous stance requiring that the proceedings were repeated. 292  However, there is
+no consensus on this matter as some national laws require the repetition of all prior proceedings while others do not. 293
+4. 180
+Given that most rules grant a considerable discretion to the tribunal on the extent of a rehearing, how should that discretion be
+exercised? If the oral hearings have not begun when the vacancy arises, it is sufficient for the replacement arbitrator to be given
+
+Section H. - Challenge and Replacement of Arbitrators, UKBC-REDFERN 530638622...
+© 2025 Thomson Reuters.
+18
+time to read the pleadings and other documents exchanged between the parties, to consider any procedural directions given
+by the former arbitral tribunal, and to signify his or her assent to them (in writing). However, if the vacancy is filled after the
+oral proceedings have begun, the question arises as to whether evidence that has already been heard and legal arguments that
+have already been advanced orally should be repeated for the benefit of the replacement arbitrator. Such repetition is both time-
+consuming and expensive. It is in the interests of all parties to try to avoid it, if at all possible.
+4. 181
+Where a transcript is available, it should be sufficient for the replacement arbitrator to read the transcript and so bring himself
+or herself up to date with the proceedings. If, as a result of such reading, the replacement arbitrator wishes to have a particular
+witness recalled, or a particular argument explained in more detail, it may be in the interests of all parties to agree that this
+should be done in the most economic form possible (for example, by a remote hearing of such witness), rather than run the risk
+of having to start the oral proceedings again from the beginning. Where there is no transcript of the oral hearing, the extent to
+which oral evidence and argument already presented needs to be repeated is a question that can be resolved only by discussion
+between the members of the arbitral tribunal (including the replacement member), the parties, and their legal advisers.
+Footnotes
+133
+Excessive use of arbitrator challenges as a form of guerrilla tactic has become quite widespread amongst arbitration
+counsel. See Horvath and Wilske, ‘Guerrilla tactics in international arbitration’ (2013) 28 IALL (Kluwer Law
+International) 42. In one extreme case reported by the ICC, a party filed 29 successive challenges against all members
+of the tribunal, all of which were dismissed. See ICC Dispute Resolution 2020 Statistics, ICC Publication No. DRS
+895ENG, 2020 (ICC 2020 Statistics), p. 13, fn.13 available online at http://www.iccwbo.org/dr-stat.
+134
+According to the statistics published by the ICC, the number of challenges to arbitrators filed between 2015 and 2020 has
+more than doubled. In 2020, there were 92 challenges of which five were accepted by the Court. ICC Dispute Resolution
+2020 Statistics, fn. 133, p. 13. In 2020, among the 407 cases registered with the LCIA, only six challenges were heard by
+the LCIA Court (1.5% of these cases) and only one challenge was successful. See LCIA, Annual Casework Report 2020,
+p. 22, available online at https://www.lcia.org/News/lcia-news-annual-casework-report-2020-and-changes-to-the-lcia-
+c.aspx. ICSID also reports a very low rate of success for arbitrator challenges: https://icsid.worldbank.org/cases/content/
+tables-of-decisions/disqualifcation.
+135
+For a specific and more recent analysis of challenges in both international commercial arbitrations and investment treaty
+arbitrations, see Ali, Wessel, et al., ‘The International Arbitration Rulebook: A guide to arbitral regimes’, in Ali, Wessel,
+et al. (eds) The Arbitral Tribunal (Kluwer Law International, 2019), pp. 321–333; Sabahi, Rubins, et al., Investor-State
+Arbitration (2nd edn, Oxford University Press, 2019), pp. 227–288.
+136
+By way of example, a respondent state filed six challenges to the same arbitrator in the same arbitration. All were
+dismissed. In the same arbitration, the respondent state filed a proposal for disqualification of the Annulment Committee,
+which was also rejected. ConocoPhillips Petrozuata BV and ors v Bolivarian Republic of Venezuela, ICSID Case
+No. ARB/07/30. See the details and relevant decisions of this case at https://www.italaw.com/cases/321. Since most
+arbitration rules provide for the automatic suspension of the arbitral proceedings whilst the challenge is resolved
+(irrespective of the merits of the challenge), some challenges are tactically brought on the eve of a long-planned hearing
+resulting in the necessary abandonment of hearing dates.
+137
+See Malintoppi and Carlevaris, ‘Challenges to Arbitrators, Lessons from the ICC’, in Giorgetti (ed.), Challenges and
+Recusals of Judges and Arbitrators in International Tribunals (Brill, 2015), p. 141; SCC Practice Note: SCC Board
+Decisions on Challenges to Arbitrators 2016–2018 (2019), p. 9.
+138
+Repsol, SA and Repsol Butano, SA v Argentine Republic, ICSID Case No. ARB/12/38, Decision on Application for
+Challenge to the Majority of the Tribunal, 13 December 2013, at [85]–[86]; Quiborax SA and Non Metallic Minerals
+SA v Plurinational State of Bolivia, ICSID Case No. ARB/06/2, Award, 16 September 2015, at [595].
+139
+See, e.g., ICSID Rules, r. 22(2) which provide for automatic suspension unless the parties agree otherwise.
+140
+The LCIA automatically publishes the challenge decisions online unless the parties agree to the contrary. See https://
+www.lcia.org/challenge-decision-database.aspx. See, e.g., Challenge to arbitrator’s appointment pursuant to Article 10.3
+of the LCIA Rules, based on Article 10.1 (justifiable doubts as to arbitrator’s independence and impartiality), LCIA Case
+Reference No. 173566, Decision Rendered 21 July 2017.
+
+Section H. - Challenge and Replacement of Arbitrators, UKBC-REDFERN 530638622...
+© 2025 Thomson Reuters.
+19
+141
+See Note to Parties and Arbitral Tribunals on the Conduct of the Arbitration under the 2012 ICC Rules of Arbitration,
+8 October 2015, paras 20–22. This change was integrated into the rules from 2017—see, e.g., 2021 ICC Rules, Art.
+14 and Appendix II, Art. 5.
+142
+See, e.g., Burlington Resources Inc. v Republic of Ecuador, ICSID Case No. ARB/08/5, Decision on the Proposal for
+Disqualification of Francisco Orrego Vicuna, 13 December 2013.
+143
+See, e.g., Serafín García Armas and Karina García Gruber v Bolivarian Republic of Venezuela, PCA Case No. 2013-03,
+Decision on the Disqualification of the Members of the Tribunal, 5 July 2017.
+144
+Caron and Caplan, The UNCITRAL Arbitration Rules: A Commentary (2nd edn, Oxford University Press, 2013), p. 208.
+145
+ICS Inspection, fn. 101, at [22.2].
+146
+Nord Stream 2 v EU, PCA, Decision on the Challenge to Mr. Peter Rees KC, 9 December 2019, at [30]. See also Merck
+Sharpe & Dohme (I.A.) LLC v Republic of Ecuador, PCA Case No. 2012-10, Decision on Challenge to Arbitrator Judge
+Stephen M. Schwebel, 8 August 2012.
+147
+The Court can replace an arbitrator on its own initiative ‘when it decides that the arbitrator is prevented de jure or de
+facto from fulfilling the arbitrator’s functions, or that the arbitrator is not fulfilling those functions in accordance with the
+Rules or within the prescribed time limits’. ICC Rules, Art. 15.2. Upon request of any party, the Court will communicate
+the reasons for its decision. ICC Rules, Appendix II, Art. 5.
+148
+ICC Rules, Art. 14 and Appendix II, Art. 5.
+149
+See SCC Rules, Art. 19.1; ICDR Rules, Art. 14.1; SIAC Rules, Art. 11.1; HKIAC Rules, Art. 11.6.
+150
+ICSID Convention, Art. 57.
+151
+The original Spanish text reads: ‘[ … ] inspira plena confianza en su imparcialidad de juicio’.
+152
+Raiffeisen Bank International AG and Raiffeisenbank Austria d.d. v Republic of Croatia, ICSID Case No. ARB/17/34,
+Decision on the Proposal to Disqualify Stanimir Alexandrov, 17 May 2018, at [81]. See also Repsol, fn. 138, at [70].
+153
+Raiffeisen Bank International, fn. 152, at [81].
+154
+ICSID Rules, r. 8, n. C.
+155
+ICSID Convention, Arts 38 and 39.
+156
+Raiffeisen Bank International, fn. 152, at [84]. This objective standard has been applied consistently by ICSID tribunals,
+e.g. in ConocoPhillips Petrozuata BV and ors v Bolivarian Republic of Venezuela, ICSID Case No. ARB/07/30, Decision
+on the Proposal to Disqualify L. Yves Fortier, KC, Arbitrator, 27 February 2012, at [54]–[56]; Abaclat and others v
+Argentine Republic, Recommendation on Proposal for Disqualification of Prof. Pierre Tercier and Prof. Albert Jan van
+den Berg, ICSID Case No. ARB/07/05, 19 December 2011, at [54]–[65].
+157
+KS Invest GmbH and TLS Invest GmbH v Kingdom of Spain, ICSID Case No. ARB/15/25, Decision on the Proposal to
+Disqualify Gary Born, 30 April 2018, at [44].
+158
+EDF International SA v Argentina, Challenge Decision regarding Professor Gabrielle Kaufmann-Kohler of 25 June
+2008, at [65]–[69].
+159
+Suez, Sociedad General de Aguas de Barcelona SA v Argentine Republic, ICSID Cases Nos. ARB/03/17 and ARB/03/19,
+Decision on Second Proposal for Disqualification, at [29]; Canepa Green Energy Opportunities I, Sarl. and Canepa
+Green Energy Opportunities II, Sarl v Kingdom of Spain, ICSID Case No. ARB/19/4, Decision on the Second Proposal
+to Disqualify Mr. Peter Rees KC, 10 February 2020, at [52].
+160
+An arbitrator may also be challenged (i) if he or she does not meet the qualifications agreed upon by the parties, or (ii)
+if a ground for challenge exists under the arbitration rules agreed upon by the parties. See Swiss PIL, art. 180. The same
+rule is contained in, for instance, the Dutch Arbitration Act 2015, s. 1033.
+161
+This has been held to import a ‘fair-minded and reasonable observer’ test and to require a demonstration of a real
+possibility of apparent bias, rather than a real possibility of unconscious bias: see A v B and X [2011] EWHC 2345
+(Comm).
+162
+Halliburton Company v Chubb Bermuda Insurance Ltd & Ors [2018] EWCA Civ 817, at [52].
+163
+However, Justice White noted that an arbitrator, who must not be held to the same standard as a judge, has no duty to
+disclose ‘remote commercial connections [ … ] He cannot be expected to provide the parties with his complete and
+unexpurgated business biography’: Commonwealth Coatings Corporation v Continental Casualty Co., 393 U.S. 145,
+151 (1968). Lower courts have tended to follow this approach: see, e.g., Positive Software Solutions, Inc. v New Century
+Finance Corporation, 476 F.3d 278, 281–82 (5th Cir. 2007).
+164
+See, e.g., UBS Financial Servs., Inc. v Asociacion de Empleados del Estado Libre Asociado de Puerto Rico, 997 F.3d
+15, 19 (1st Cir. 2021); JCI Commc’ns, Inc. v Int’l Brotherhood of Elec. Workers, Local, 103, 324 F.3d 42, 51 (1st Cir.
+2003); Certain Underwriting Members of Lloyds of London v Fla., Dep’t of Fin. Servs., 892 F.3d 501, 505–06 (2d Cir.
+2018); Morelite Constr. Corp. v N.Y.C. Dist. Council Carpenters Ben. Funds, 748 F.2d 79, 84 (2d Cir. 1984); Freeman
+v Pittsburgh Glass Works, LLC, 709 F.3d 240, 253 (3d Cir. 2013); Kaplan v First Options of Chicago, Inc., 19 F.3d
+
+Section H. - Challenge and Replacement of Arbitrators, UKBC-REDFERN 530638622...
+© 2025 Thomson Reuters.
+20
+1503, 1523 n.30 (3d Cir. 1994); ANR Coal Co., Inc. v Cogentrix of North Carolina, Inc., 173 F.3d 493, 500 (4th Cir.
+1999); Peoples Sec. Life Ins. Co. v Monumental Life Ins. Co., 991 F.2d 141, 146 (4th Cir. 1993); OOGC Am., L.L.C.
+v Chesapeake Exploration, L.L.C., 975 F.3d 449, 453 (5th Cir. 2020); Positive Software Solutions, Inc. v New Century
+Mortg. Corp., 476 F.3d 278, 282–83 (5th Cir. 2007); Uhl v Komatsu Forklift Co., Ltd., 512 F.3d 294, 306–07 (6th Cir.
+2008); Nationwide Mut. Ins. Co. v Home Ins. Co., 429 F.3d 640, 645 (6th Cir. 2005).
+165
+See, e.g., Monster Energy Co. v City Beverages, LLC, 940 F.3d 1130, 1135–36 (9th Cir. 2019); Woods v Saturn
+Distribution Corp., 78 F.3d 424, 427 (9th Cir. 1996); Aviles v Charles Schwav & Co., Inc., 435 F. App’x 824, 828–29
+(11th Cir. 2011); Middlesex Mut. Ins. Co. v Levine, 675 F.2d 1197, 1200–02 (11th Cir. 1982).
+166
+French Code of Civil Procedure. See Cohen, ‘Indépendence des arbitres et conflits d’intérêts’ [2011] Rev Arb 614.
+167
+See Art. 1456(3) of the Code of Civil Procedure.
+168
+English Arbitration Act 1996, s. 24(2).
+169
+English Arbitration Act 1996, s. 24; Model Law, Art. 13; Swiss PIL, Ch. 12, s. 180; Dutch Arbitration Act 2015, s. 1033.
+170
+Model Law, Art. 13; English Arbitration Act 1996, s. 24(3).
+171
+Gulf Guaranteed Life Insurance Co. v Connecticut General Life Insurance Co., 304 F.3d 476, 490 (5th Cir. 2002), in
+which the court held that ‘there is no authorisation under the FAA’s express terms for a court to remove an arbitrator
+from service. Rather, even where arbitrator bias is at issue, the FAA does not provide for removal of an arbitrator from
+service prior to an award, but only for potential vacatur of any award’ (emphasis original).
+172
+In re Sussex, 781 F.3d 1065, 1075 (9th Cir. 2015).
+173
+ICC Rules, Art. 14.2 and 14.3.
+174
+This rule led to a claim by a respondent state against the ICC in its own courts. Recourse filed by the Argentine Republic
+against the ICC on 8 February 2006, requesting that the ICC’s decision (as appointing authority) be overturned for failure
+to provide reasons. Two preliminary injunctions were granted by the National Contentious-Administrative Court of
+Appeals of Argentina in Estado Nacional—Procuración del Tesoro de la Nación v Cámara de Comercio Internacional,
+dated 3 July 2007 and 17 July 2008, available online at http://fallos.diprargentina.com/2009/07/procuracion-del-tesoro-
+c-camara-de.html.
+175
+ICC Rules, Art. 15.2 and Appendix II, Art. 5.
+176
+LCIA Rules, Art. 10.3.
+177
+LCIA Rules, Art. 10.3–10.6.
+178
+LCIA Rules, Arts 3.1 and 10.6. The LCIA was one of the first institutions that started publishing decisions on challenges
+in a suitably redacted form, since 2006, leading other institutions to then adopt the same approach.
+179
+UNCITRAL Rules, Art. 13.
+180
+This time limit is applied strictly. For an attempt by a party to challenge facts after expiry of the fifteen-day time limit,
+see AWG Group v Argentine Republic, Challenge Decision of 22 October 2007, at [21], reported as part of the challenge
+decision in the parallel ICSID case of Suez and others v Argentine Republic.
+181
+UNCITRAL Rules, Art. 13. If the appointing authority fails to decide on a challenge to an arbitrator within a reasonable
+time, any party may request the Secretary General of the PCA to designate a substitute appointing authority. UNCITRAL
+Rules, Art. 6.4.
+182
+ICSID Rules, r. 22(1)(a). If the grounds for challenge become known only when the proceedings are closed, then the
+remedy is a request for an annulment of the award under r. 50.
+183
+Ibid, r. 22(1)(b).
+184
+ICSID Rules, r. 22(1)(c).
+185
+Ibid, r. 22(1)(d).
+186
+Ibid, r. 22(1)(e).
+187
+Ibid, r. 23(1).
+188
+Ibid, r. 23(2)(a) and ICSID Convention, Art. 58.
+189
+ICSID Convention, Art. 58.
+190
+Although Art. 58 of the ICSID Convention does not explicitly require a challenge decision to state reasons, in practice,
+these decisions are reasoned. For instance, the annulment committee in Azurix v Argentina II, Annulment Decision of 1
+September 2009, at [290], held that ‘a duty to state reasons for a decision under Article 58 might be considered implicity
+[sic]’. ICSID challenge decisions are usually published. For recent examples, see Landesbank Baden-Württemberg and
+ors v Kingdom of Spain, ICSID Case No. ARB/15/45, Decision on the Second Proposal to Disqualify All Members of
+the Tribunal, 15 December 2020; Vattenfall AB and ors v Federal Republic of Germany II, ICSID Case No. ARB/12/12,
+Recommendation on the Second Proposal to Disqualify the Tribunal, 6 July 2020.
+191
+ICSID Rules, r. 22(2) .
+
+Section H. - Challenge and Replacement of Arbitrators, UKBC-REDFERN 530638622...
+© 2025 Thomson Reuters.
+21
+192
+See paragraphs 4.87–4.100.
+193
+ICS Inspection, fn. 101, at [22.2].
+194
+Ibid., at [22.4].
+195
+The IBA Guidelines define ‘close family member’ as a spouse, sibling, child, parent, or life partner, in addition to any
+other family member with whom a close relationship exists.
+196
+See para. 1.3 of the Non-Waivable Red List (for the arbitrator) and para. 2.2.2 of the Waivable Red List (for close family
+members) of the IBA Guidelines.
+197
+Nord Stream 2, fn. 146, at [31]–[35].
+198
+LCIA Reference No. 142862, 2 June 2015.
+199
+Suez, Sociedad General de Aguas de Barcelona SA, and Vivendi Universal SA v Argentine Republic, Decision on a
+Second Proposal for the Disqualification of a Member of the Arbitral Tribunal, ICSID Case No. ARB/03/17, 12 May
+2008, at [41]–[44].
+200
+Ibid., at [32]. The decision was confirmed by the US District Court for the District of Columbia in 2016. Republic of
+Argentina v AWG Grp. LTD., 894 F.3d 327, 339 (D.C. Cir. 2018) UNCITRAL, Memorandum Opinion of the US District
+Court for the District of Columbia, 30 September 2016.
+201
+Suez, Sociedad General de Aguas de Barcelona SA, and Vivendi Universal SA v Argentine Republic, Decision on a
+Second Proposal for the Disqualification of a Member of the Arbitral Tribunal, ICSID Case No. ARB/03/17, 12 May
+2008, at [35].
+202
+The fact that an arbitrator regularly advises the appointing party or an affiliate of the appointing party and he or she
+(or his or her firm) derives significant financial income from such advice is on the Non-Waivable Red List (para. 1.4).
+Also on the Red List, although capable of being waived by express agreement of the parties, are instances in which an
+arbitrator has previously given legal advice or provided an expert opinion to one of the parties or an affiliate of one of
+the parties (para. 2.1.1), or in which he or she is currently representing or advising one of the parties or an affiliate of
+one of the parties (para. 2.3.1).
+203
+Exeteco International Company S.L. v Republic of Peru, PCA Case No. AA 535, Decision on Challenge to Arbitrator
+Mario Castillo Freyre, 28 October 2014, at [83]–[88]. In Compañía de Aguas del Aconquija SA and Vivendi Universal
+v Argentina, ICSID Case No. ARB/97/3, Decision on the Challenge to the President of the Committee, 3 October 2001,
+at [26], the respondent state challenged the president of an ad hoc annulment committee based on the fact that another
+partner in his law firm had given limited advice to one of the parties in an unrelated area, which advice was continuing,
+but nearing completion. The fact had been disclosed by the president, who had no personal involvement in the advice
+in question. The remaining panel members therefore dismissed the challenge.
+204
+See Paris cour d’appel, 27 March 2018, Case No. 16/09386. The cour de cassation confirmed the Paris cour d’appel’s
+decision setting aside the award on 3 October 2019. Cass. Civ. 1, 3 October 2019, Case No. 18-15.756.
+205
+The situation of an arbitrator and counsel for one of the parties being at the same law firm is on the Waivable Red List,
+at para. 2.3.3.
+206
+In this regard, as previously stated, para. 3.3.8 of the Orange List encourages arbitrators to disclose if they have ‘within
+the past three years received more than three appointments by the same counsel or the same law firm’.
+207
+Raiffeisen Bank International, fn. 152, at [93]–[95]; Ayat Nizar Raja Sumrain and others v State of Kuwait, ICSID
+Case No. ARB/19/20, Decision on the Claimants Proposal to Disqualify Prof. Zachary Douglas and Mr V.V. Veeder,
+2 January 2020.
+208
+Tecso, Case No. 11-20.299, Cass. Civ. 1, 10 October 2012.
+209
+Professor Thomas Clay has argued that the language used by the cour de cassation simply states that the burden lies
+with that party which doubts the arbitrator’s independence to substantiate such doubts: see Clay, ‘Arbitrage et modes
+alternatifs de règlement des litiges’ [2012] Recueil Dalloz 2991. Other scholars, such as Prof. Christophe Seraglini and
+Laura Weiller, consider that this decision marked a return to a more stringent control on the alleged lack of independence:
+see Henry, ‘Devoir de révélation de l’arbitre: Consécration du critère de l’incidence raisonnable sur l’indépendance et
+l’impartialité de l’arbitre’ (2012) 46 La Semaine Juridique 1675; Weiller, ‘Rejet de la prétendue faute de l’arbitre’ (2012)
+10 Procédures, comm. 284.
+210
+Fábrica de Vidrios Los Andes, CA and Owens-Illinois de Venezuela, CA v Bolivarian Republic of Venezuela, ICSID
+Case No. ARB/12/21, Reasoned Decision on the Proposal to Disqualify L Yves Fortier, KC, arbitrator, 28 March 2016.
+In the same vein, Universal Compression International Holdings, SLU v Bolivarian Republic of Venezuela, ICSID Case
+No. ARB/10/9, Decision on the Proposal to Disqualify Prof. Brigitte Stern and Prof. Guido Santiago Tawil, arbitrators,
+20 May 2011, at [52]. See also Conocophillips Petrozuata BV and ors v Bolivarian Republic of Venezuela, ICSID Case
+No. ARB/07/30, Decision on the Proposal to Disqualify L Yves Fortier KC, arbitrator, 15 March 2016, at [1]–[3].
+211
+Hrvatska Elektroprivreda v Republic of Slovenia, Tribunal’s Ruling on the Participation of Counsel, ICSID Case No.
+ARB/05/24, 6 May 2008.
+
+Section H. - Challenge and Replacement of Arbitrators, UKBC-REDFERN 530638622...
+© 2025 Thomson Reuters.
+22
+212
+Ibid., at [17]–[18].
+213
+Ibid.
+214
+Rompetrol Group NV v Romania, ICSID Case No. ARB/06/3, Decision of the Tribunal on the Participation of a Counsel,
+14 January 2010, at [25].
+215
+A and others v B and another [2011] EWHC 2345 (Comm).
+216
+(2012) 3 ISLR 40.
+217
+Ibid., at 52.
+218
+ICC Case No. 16553/GZ. See Cleis, The Independence and Impartiality of ICSID Arbitrators, Nijhoff International
+Investment Law Series (Brill, 2017), p. 139.
+219
+IBA Guidelines , at [3.3.2]. The Bar Council of England and Wales issued an information note regarding barristers in
+international arbitration and, in so doing, avoided a blanket ban on members of the same chambers appearing in the
+same case as counsel and arbitrator. According to the Bar Council:
+As a matter of English and Welsh law, there is no prohibition against an advocate appearing before an
+arbitration tribunal which includes a member of his or her chambers [ … ] Nevertheless, good practice
+would dictate that in circumstances where a barrister comes to understand that he or she has been instructed
+in an arbitration where one or more of the members of the Tribunal are barristers in the same set of
+chambers, prompt disclosure ought to be made by those instructing the barrister advocate to the legal
+representatives of the other side. This will ensure as far as possible that the guidance set out in the IBA
+Guidelines on Conflicts of Interest in International Arbitration is followed (see further below). A failure
+to make prompt disclosure, could ultimately, lead to a challenge to the independence of the member(s)
+of the Tribunal in question.
+See Bar Council of England and Wales, Information Note Regarding Barristers In International Arbitration, 6 July 2015,
+pp. 4–5.
+220
+See paragraph 4.138.
+221
+LCIA Rules, Art. 18.4.
+222
+IBA Guidelines, Guideline 7(b).
+223
+IBA Guidelines on Party Representation, Guidelines 5 and 6.
+224
+Eiser Infrastructure, fn. 108, at [218] (‘the Committee has taken particular note of four instances where [the arbitrator]
+and [the expert] worked for the same party, as counsel and expert respectively. In two of those cases, [the arbitrator],
+as counsel, was interacting with [the expert], at the same time that he was acting in this case as an arbitrator and [the
+expert] as a damages expert of one of the parties. This was in addition to the longstanding relationship between the [the
+expert’s firm] and [the arbitrator]’s then law firm [ … ], and included another concurrent case—Bear Creek—in which
+[the arbitrator] was working as counsel with [the expert’s firm]’).
+225
+Ibid., at [225], [228], [241]–[242].
+226
+Report of the ASIL-ICCA Joint Task Force on Issue Conflicts in Investor–State Arbitration, International Council for
+Commercial Arbitration, 17 March 2016 (the ‘ASIL-ICCA Joint Task Force’), at [8].
+227
+CC/Devas (Mauritius) Ltd. and ors v Republic of India, PCA Case No. 2013-09, Respondent’s Challenge to the Hon.
+Marc Lalonde as Presiding Arbitrator and Prof. Francisco Orrego Vicuna as Co-Arbitrator, 30 September 2013, at [58].
+228
+The ASIL-ICCA Joint Task Force, at [17]–[19].
+229
+It is questionable, however, if such issue conflicts will exist more broadly in purely commercial cases in which the
+applicable legal systems, facts, and legal issues are varied, and the ultimate awards rarely published.
+230
+The ASIL-ICCA Joint Task Force, at [45]–[52].
+231
+Urbaser SA and others v Argentine Republic, Decision on Claimants’ Proposal to Disqualify Professor Campbell
+McLachlan, Arbitrator, ICSID Case No. ARB/07/26, 12 August 2010, at [44]–[45]. The tribunal found that the taking
+of a general position on an issue raised in the arbitration was not sufficient to establish bias, or even the appearance
+of bias, since a reasonable person would consider that the arbitrator would still give proper consideration to the facts,
+circumstances, and arguments presented by the parties in the particular case.
+232
+Ibid. See also Repsol v Argentine Republic, ICSID Case No. ARB/12/38, Decision on the Request for Disqualification
+of the Majority of the Tribunal, at [26]–[30].
+233
+CC/Devas (Mauritius) , fn. 227, at [58].
+234
+Ibid., at [64]–[66].
+235
+KS Invest GmbH and TLS Invest GmbH v Kingdom of Spain, ICSID Case No. ARB/15/25, Decision on the Proposal to
+Disqualify Prof. Kaj Hobér, 15 May 2020, at [89].
+
+Section H. - Challenge and Replacement of Arbitrators, UKBC-REDFERN 530638622...
+© 2025 Thomson Reuters.
+23
+236
+Ibid., at [90].
+237
+Ibid., at [89]–[93].
+238
+St. Gobain Performance Plastics v Bolivarian Republic of Venezuela, ICSID Case No. ARB/12/13, Decision on
+Claimant’s Proposal to Disqualify Mr Bottini, 27 February 2013, at [77], [80]–[81].
+239
+Perenco Ecuador Ltd v Republic of Ecuador & Empresa Estatal Petróleos del Ecuador, ICSID Case No. ARB/08/6, PCA
+Case No. IR-2009/1, Decision on Challenge to Arbitrator, 8 December 2009.
+240
+Ibid., at [48].
+241
+Report of the ASIL-ICCA Joint Task Force, at [65]–[70].
+242
+The CAS has amended its rules to prohibit arbitrators from serving as counsel at the same time in CAS cases. See Code
+of Sports-related Arbitration, s. 18.
+243
+International investment law applied as the substantive law in these arbitrations is largely focused on specific legal
+concepts of expropriation, fair and equitable treatment, and unreasonable or discriminatory measures. See Chapter 8
+for more details.
+244
+Telekom Malaysia Berhad v Republic of Ghana, District Court of The Hague, Decision No. HA/RK2004.667, 18 October
+2004.
+245
+Levine, ‘Dealing with arbitrator “issue conflicts” in international arbitration’ (2006) 3 Disp Res J 60, at 62; Peterson,
+‘Dutch Court finds arbitrator in conflict due to role of counsel to another investor’, Investment Law and Policy Weekly
+News Bulletin, 17 December 2004.
+246
+District Court of The Hague, Civil Law Section, Provisional Measures Judge, Challenge No. 13/2004, Petition No. HA/
+RK2004/667, Decision of 18 October 2004.
+247
+Ibid., at [63].
+248
+Similarly, in ICS v Argentina, Argentina sought the removal of the investor-appointed arbitrator, who was also acting
+as counsel for another investor in ICSID annulment proceedings involving Argentina. In response, ICS argued that the
+annulment proceedings would soon be completed and that the arbitrator would therefore not be arguing for his investor
+client at the same time as he would be entertaining the instant arbitration. The appointing authority was unconvinced by
+such temporal distinctions and, referring to the IBA Guidelines, held that the conflict was ‘sufficiently serious to give
+rise to objectively justifiable doubts as to [the arbitrator’s] impartiality and independence’. UNCITRAL, PCA Case No.
+2010-9, Challenge Decision, 17 December 2009. See also Blue Bank International & Trust (Barbados) Ltd v Bolivarian
+Republic of Venezuela, ICSID Case No. ARB/12/20, Decision on the Parties’ Proposal to Disqualify a Majority of the
+Tribunal, 12 November 2013.
+249
+KS Invest, fn. 235, at [83]–[84].
+250
+Draft Code of Conduct for Adjudicators in Investor–State Dispute Settlement, Version Three, September 2021,
+comments by State/Commenter as of 3 November 2021, p. 8.
+251
+National Grid PLC v Argentine Republic, LCIA Case No. UN7949, Decision on the Challenge dated 3 December 2007,
+at [38].
+252
+Ibid., at [95]–[96].
+253
+Fairchild & Co. Inc. v Richmond F & PR Co., 516 F. Supp 1305, 1313 (DDC 1981).
+254
+LCIA Reference No. 1322498, 24 December 2014.
+255
+ICC Rules, Art. 40.
+256
+SIAC Rules, Art. 40.1.
+257
+ICDR Rules, Art. 31.
+258
+ICC Rules, Art. 14.2.
+259
+Model Law, Art. 13(2). See also ICDR Rules, Art. 14.
+260
+ASM Shipping Ltd of India v TTMI Ltd of England, 2005 WL 3157679, at [49].
+261
+Goldman, Sachs & Co. v Athena Venture Partners, L.P., 803 F.3d 144, 150 (3d Cir. 2015). See also Larison v Magnotti,
+37 NYS.2d 207 (NY Sup Ct 2016).
+262
+Goldman, Sachs & Co. v Athena Venture Partners, L.P., 803 F.3d 144, 150 (3d Cir. 2015).
+263
+Swiss PIL, art. 180(a). See Judgment of 30 April 2018, 37 ASA Bull. 694 (Swiss Fed. Trib.) (2019); Decision 4A_14/2012,
+Swiss Supreme Court, available online at https://www.swissarbitrationdecisions.com. See also Judgment of 30 April
+2018, 37 ASA Bull. 694, 695 (2019) (Swiss Fed. Trib.).
+264
+French Code of Civil Procedure, art. 1456(3).
+265
+NMLK v M.X, Cass. Civ. (1e chambre civile), 25 May 2016, Case No. 14-20532.
+266
+Cass. Civ. (1e chambre civile), 15 June 2017, Case No. 16-17108.
+
+Section H. - Challenge and Replacement of Arbitrators, UKBC-REDFERN 530638622...
+© 2025 Thomson Reuters.
+24
+267
+Gerbay and Cooper, ‘Annulment and enforcement of arbitral awards in England’, in Annulment and Enforcement of
+Arbitral Awards from a Comparative Law Perspective (Wolters Kluwer, 2018), pp. 81–106. See also Schwartz and
+Derains, Guide to the ICC Rules of Arbitration (2nd edn, Kluwer Law International, 2005), pp. 375–386.
+268
+Note to Parties and Arbitral Tribunals on the conduct of the Arbitration under the ICC Rules of Arbitration, 1 January
+2021, available online at https://iccwbo.org/content/uploads/sites/3/2020/12/icc-note-to-parties-and-arbitral-tribunals-
+on-the-conduct-of-arbitration-english-2021.pdf.
+269
+IBA Guidelines, General Standard 3(b). The explanation of General Standard 3(b) provides that the Guidelines ‘do not
+otherwise take a position as to the validity and effect of advance declarations or waivers, because the validity and effect
+of any advance declaration or waiver must be assessed in view of the specific text of the advance declaration or waiver,
+the particular circumstances at hand and the applicable law’.
+270
+SolEs Badajoz GmbH v Kingdom of Spain, ICSID Case No. ARB/15/38, Award, 31 July 2019, at [40]–[41].
+271
+Exceptionally, in the case of a three-member arbitral tribunal, the arbitration may proceed with the two remaining
+members. See the discussion of truncated tribunals at paragraphs 4.170ff.
+272
+The Model Law, for instance, provides in its Art. 15 that ‘a substitute arbitrator shall be appointed according to the rules
+that were applicable to the appointment of the arbitrator being replaced’.
+273
+A notable exception arises under the ICSID Rules, r. 26(3)(a), where, in order to prevent abuse, a party-nominated
+arbitrator who resigns will be replaced by a person nominated by the chair of the Administrative Council of ICSID
+rather than by the relevant party, unless the remaining members of the arbitral tribunal have consented to the resignation,
+under r. 25(2).
+274
+ICC Rules, Art. 15.4 (‘the Court has discretion to decide whether or not to follow the original nominating process’);
+LCIA Rules, Art. 11.1 (‘the LCIA Court may determine whether or not to follow the original nominating process for
+such arbitral appointment’).
+275
+For example, in English law, the court has wide powers to give directions as to the making of any appointments and,
+indeed, to make any necessary appointments itself: English Arbitration Act 1996, s. 18.
+276
+See Model Law, Art. 15.
+277
+In which case, the procedures for filling vacancies would apply as described above.
+278
+These cases were discussed at the 1990 ICCA Congress: see Schwebel and Böckstiegel, ‘Preventing delay or disruption
+of arbitration’ (1991) 5 ICCA Congress Series 241, at 270–274; Maniruzzaman, ‘The authority of a truncated arbitral
+tribunal—Straight path or puzzle?’, Kluwer Arbitration Blog, 15 July 2012.
+279
+See, e.g., Order of 17 May 1985, in Sedco Inc. v National Iranian Oil Co., Case No. 129, reprinted in (1985) 8 Iran–
+US CTR 34, with concurring opinion of Judge Brower at 40; Uiterwiyk Corporation v Islamic Republic of Iran, Award
+No. 375–381–1, 6 July 1988, (1988) 19 Iran–US CTR 107, at 116; also dissenting letter and supplemental opinion in
+(1988) 19 Iran–US CTR 107, at [161], [169].
+280
+See Schwebel and Böckstiegel, fn. 278.
+281
+See Holtzmann, ‘How to prevent delay and disruption of arbitration: Lessons of the 1990 ICCA Stockholm
+Congress’ (1991) 5 ICCA Congress Series 28 (emphasis original).
+282
+AAA Rules, r. R-20(b).
+283
+LCIA Rules, Art. 12. See also WIPO Rules, Art. 35(a).
+284
+ICC Rules, Art. 15.5.
+285
+Himpurna California Energy Ltd v Republic of Indonesia (2000) XXV YBCA 186, citing Schwebel’s Cambridge
+Lauterpacht lectures, in which he referred to Republic of Colombia v Cauca Co., the French-Mexican Claims
+Commission cases, the Lena Goldfields arbitration, the Sabotage cases, and the Advisory Opinion of the International
+Court of Justice (ICJ) in Interpretation of Peace Treaties with Bulgaria, Hungary, and Romania.
+286
+UNCITRAL Rules, Art. 14.2. The appointing authority, if the hearings were closed, may authorise the other arbitrators
+to proceed with the arbitration and make any decision or award.
+287
+For consideration of the treatment of truncated tribunals by various institutions’ rules, see Maniruzzaman, ‘The authority
+of a truncated arbitral tribunal: Straight path or puzzle?’ (2012) 90 Amicus Curiae 22.
+288
+UNCITRAL Rules, Art. 15.
+289
+ICC Rules, Art. 15.4. See also Daele, fn. 95, para. 4.103.
+290
+WIPO Rules, Art. 34.
+291
+LCIA Rules, Art. 11.3 (‘[s]ave for any award rendered, the Arbitral Tribunal (when reconstituted) shall determine
+whether, and if so to what extent, the previous proceedings in the arbitration shall stand’).
+292
+Wellpoint, Inc. v John Hancock Life Ins. Co., 576 F.3d 643, 647 (7th Cir. 2009).
+
+Section H. - Challenge and Replacement of Arbitrators, UKBC-REDFERN 530638622...
+© 2025 Thomson Reuters.
+25
+293
+Egyptian Arbitration Law, art. 19(3); Indonesian Arbitration and ADR Law, art. 26(4); Dutch Arbitration Act, art.
+1030(3).
+End of Document
+© NIGEL BLACKABY KC, CONSTANTINE PARTASIDES
+KC, ALAN REDFERN

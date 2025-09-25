@@ -1,0 +1,72 @@
+Article 18(2), UKBC-ICCARBN 474407089 (2022)
+© 2025 Thomson Reuters.
+1
+Article 18(2)
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+International systems from a procedural point of view
+Article 18(2)
+“The arbitral tribunal may, after consulting the parties, conduct hearings and meetings at any location it considers
+appropriate, unless otherwise agreed by the parties.”
+18-40
+Whatever the place of arbitration may be, the Tribunal may hold hearings elsewhere in accordance with art.18(2) unless the
+parties agree otherwise.
+18-41
+The initial and normally first meeting of the parties is the case management conference. 65  In addition, there may be subsequent
+meetings and hearings to deal with procedural issues. The main hearing is the evidentiary hearing or hearings. In addition, there
+may be a hearing for legal argument. Due in particular to issues of timing, case management conferences and other procedural
+hearings are usually, although not always, held by telephone or by video conferencing.
+18-42
+Prior to the global outbreak of the Covid-19 pandemic in 2020, the usual practical assumption was that evidentiary hearing
+would generally be held in the (physical) presence of the parties and that this would happen at the place of arbitration. However,
+art.18(2). expressly provides that the Tribunal may decide to hold hearings at places other than the place of arbitration unless
+otherwise agreed by the parties. There may be an issue as to whether the parties have agreed on the place of hearings. In some
+instances, parties may argue that the arbitration clause is phrased in a way that provides not only the place of arbitration, but also
+the place for the hearings. This is not the case under the standard ICC arbitration clause and is rather rare. In other instances,
+the parties may argue that if the choice of the place of arbitration is to best serve its purpose, then meetings and hearings with
+the Tribunal should also take place there. This would always be a fair, although not necessarily compelling, point to make.
+18-43
+Article 18(2) is subject to the law of the place of arbitration. Therefore, it is conceivable that the law of the place of arbitration
+requires that some or all hearings be held at the place of arbitration. However, the laws of the major centres of arbitration do
+not appear to contain any such requirement and in some cases expressly permit the holding of hearings elsewhere than at the
+place of arbitration. Article 20 of the UNCITRAL Model Law provides a good example for that approach.
+18-44
+There are various reasons for holding physical hearings and meetings at a place other than the place of arbitration. Where the
+place of arbitration was agreed upon by the parties, a Tribunal will have to consider that the so agreed place was probably the
+result of a bargain between the parties at the time the arbitration clause was negotiated. Arbitrators should therefore always
+have due regard to the parties’ reasonable and legitimate expectations, 66  although that should of course be balanced against
+concern that the Tribunal may have as to interference by local courts. 67  In the same way, the Tribunal should take into account
+sensitivities of the parties.
+18-45
+
+Article 18(2), UKBC-ICCARBN 474407089 (2022)
+© 2025 Thomson Reuters.
+2
+When considering whether to meet at a place other than the place of arbitration, the Tribunal should explain to the parties why
+it considers its decision is appropriate. Costs saving and/or the convenience of the Tribunal, the parties and/or the witnesses
+are usually the most common reasons invoked although the list is not exhaustive. Another reason may be scheduling. Some
+arbitrators or lawyers may only be able to attend a hearing or meeting if it is held in a particular city due to other commitments.
+Usually, the parties are flexible about most hearings, although, with respect to the evidentiary hearings, the prevailing practice
+seems to be to hold the hearings at the place of arbitration.
+18-46
+Related to the issue of the place for holding physical hearings is the alternative means of communication, such as the use of
+video conferencing or telephone conferences. This is expressly anticipated in art.24(4) for the case management conference. The
+use of videoconferences as a substitute of physical hearing this technology with respect to fact-finding is discussed under art.25
+and art.26(1) 68  and is the subject of the ICC’s Checklist for a Protocol on Virtual Hearings set out in Part II at Document 9.2.
+Footnotes
+65
+Unless it is held by telephone or videoconference instead of a physical meeting, see at para.24-5.
+66
+See Lalive, Poudret & Reymond, op. cit., p.297; Poudret & Besson, op. cit., p.111; Redfern & Hunter with Blackaby
+& Partasides, op. cit., p.86.
+67
+This risk may be heightened when the place of arbitration is in the State of a party, which itself is a party of the arbitration,
+Scherer, para.18-38 fn.64. In ICC Case No.17734, for example, at a hearing in Paris, the lawyer for a French government
+defence entity threatened criminal proceedings against witnesses. The Tribunal did not react. The opposing party ignored
+the threat but insisted that the subsequent hearing be held outside France.
+68
+See paras 25-25 and 26-5, 26-15.
+End of Document
+© 2025 SWEET & MAXWELL

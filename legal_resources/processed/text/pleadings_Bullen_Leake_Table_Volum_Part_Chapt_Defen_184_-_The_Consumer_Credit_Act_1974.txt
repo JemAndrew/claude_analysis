@@ -1,0 +1,55 @@
+The Consumer Credit Act 1974, UKBC-BULLENL 459371790 (2022)
+© 2025 Thomson Reuters.
+1
+The Consumer Credit Act 1974
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part F - Business Law
+Chapter 20 - Credit, Finance and Leasing
+Defences
+The Consumer Credit Act 1974
+20-54
+The formalities required for the formation and enforcement of a regulated agreement are so complex that there is a high risk of
+the creditor or owner infringing the rules and opening the way for the debtor or hirer to claim that the agreement is unenforceable.
+The fact that there are now three different sets of rules governing the form and content of regulated agreements has only added
+to the problem.
+It must be emphasised, however, that the CCA has not done away with the need to consider contractual defences in cases
+involving agreements regulated by the CCA, and such defences will frequently be more important than the technical defences.
+Even where the debtor or hirer may have a defence arising from a breach of the CCA, if there is a defence on the real merits
+of the action, it is always wise to give such a defence prominence because there is a natural reluctance on the part of judges to
+accede to strictly technical defences when the defendant is otherwise wholly unmeritorious.
+Defences under the CCA fall into five main areas:
+ 
+1.Defences arising out of events before the contract is made (e.g. that the creditor or credit-broker was not the holder of
+the proper licence or FCA authorisation) or that the creditor failed to provide the requisite pre-contract information).
+ 
+2.Defences arising out of the making of the agreement, in particular defences arising out of non-compliance with the
+regulations concerning the form and content of regulated agreements, failure to give notices such as cancellation notices
+and failure to provide the correct copies.
+ 
+3.Defences arising out of events after the making of the contract such as those based on failure by the creditor to provide
+statutory statements (much strengthened by the 2006 Act and by the implementation of the Directive) and default notices
+(prior to enforcement notices) introduced by the 2006 Act.
+ 
+4.Defences arising from breaches of the rules governing enforcement by the creditor such as those prescribing the form
+and content of default notices and statement of the time given to the debtor to comply.
+ 
+5.Extortionate credit bargains and unfair relationships.
+Time orders
+20-55
+Even where the defendant has no defence to the claim either on its merits or on technical grounds under the CCA, he may be able
+to seek a time order under the CCA 1974 s.129. Whether or not the creditor’s claim is admitted, it would seem good practice
+for the debtor to include the application for such an order in a counterclaim. This is subject to procedural rules whether made
+as a free-standing claim by the debtor or hirer, or in proceedings brought against him by the creditor or owner (see para.20-47,
+under Category 5).
+
+The Consumer Credit Act 1974, UKBC-BULLENL 459371790 (2022)
+© 2025 Thomson Reuters.
+2
+Time orders were enlarged by the 2006 Act. The new requirements for the creditor or owner to serve a notice of default once
+the debtor or hirer reaches specified levels of default (even if he does not intend to enforce the agreement at that stage) mean
+that a debtor or hirer who is served with such a notice may pre-empt enforcement by making his own application for a time
+order under s.129A of the CCA (introduced by s.16 of the 2006 Act).
+End of Document
+© 2025 SWEET & MAXWELL

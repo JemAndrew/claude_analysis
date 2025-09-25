@@ -1,0 +1,97 @@
+Section 58AA. - Damages-based agreements, UKBC-WHITEBK 458578170 (2025)
+© 2025 Thomson Reuters.
+1
+Section 58AA. - Damages-based agreements
+White Book 2025  | Commentary last updated July 31, 2023
+Volume 2
+Section 7 - Legal Representatives—Costs and Litigation Funding
+Section 7A - Litigation Funding after 1 April 2013
+Courts and Legal Services Act 1990
+Section 58aa
+58AA.— Damages-based agreements
+7A-7
+(1) A damages-based agreement which satisfies the conditions in subsection (4) is not unenforceable by reason only
+of its being a damages-based agreement.
+(2) But (subject to subsection (9)) a damages-based agreement which does not satisfy those conditions is
+unenforceable.
+(3) For the purposes of this section—
+(a) a damages-based agreement is an agreement between a person providing advocacy services, litigation services
+or claims management services and the recipient of those services which provides that—
+(i) the recipient is to make a payment to the person providing the services if the recipient obtains a specified
+financial benefit in connection with the matter in relation to which the services are provided, and
+(ii) the amount of that payment is to be determined by reference to the amount of the financial benefit
+obtained.
+(4) The agreement—
+(a) must be in writing;
+(aa) must not relate to proceedings which by virtue of section 58A(1) and (2) cannot be the subject of an
+enforceable conditional fee agreement or to proceedings of a description prescribed by the Lord Chancellor;
+(b) if regulations so provide, must not provide for a payment above a prescribed amount or for a payment above
+an amount calculated in a prescribed manner;
+(c) must comply with such other requirements as to its terms and conditions as are prescribed; and
+(d) must be made only after the person providing services under the agreement has complied with such
+requirements (if any) as may be prescribed as to the provision of information.
+(5) Regulations under subsection (4) are to be made by the Lord Chancellor and may make different provision in
+relation to different descriptions of agreements.
+(6) Before making regulations under subsection (4) the Lord Chancellor must consult—
+(a) the designated judges,
+(b) the General Council of the Bar,
+
+Section 58AA. - Damages-based agreements, UKBC-WHITEBK 458578170 (2025)
+© 2025 Thomson Reuters.
+2
+(c) the Law Society, and
+(d) such other bodies as the Lord Chancellor considers appropriate.
+(6A) Rules of court may make provision with respect to the assessment of costs in proceedings where a party in whose
+favour a costs order is made has entered into a damages-based agreement in connection with the proceedings.
+(7) In this section—
+ 
+“payment” includes a transfer of assets and any other transfer of money’s worth (and the reference in subsection
+(4)(b) to a payment above a prescribed amount, or above an amount calculated in a prescribed manner, is to be
+construed accordingly);
+ 
+“claims management services” has the same meaning as in the Financial Services and Markets Act 2000 (see
+section 419A of that Act).
+(7A) In this section (and in the definitions of “advocacy services” and “litigation services” as they apply for
+the purposes of this section) “proceedings” includes any sort of proceedings for resolving disputes (and not just
+proceedings in a court), whether commenced or contemplated.
+(8) Nothing in this section applies to an agreement entered into before the coming into force of the first regulations
+made under subsection (4).
+(9) Where section 57 of the Solicitors Act 1974 (non-contentious business agreements between solicitor and client)
+applies to a damages-based agreement other than one relating to an employment matter, subsections (1) and (2) of
+this section do not make it unenforceable.
+(10) For the purposes of subsection (9) a damages-based agreement relates to an employment matter if the matter
+in relation to which the services are provided is a matter that is, or could become, the subject of proceedings before
+an employment tribunal.
+(11) Subsection (1) is subject to section 47C(8) of the Competition Act 1998.
+Note
+7A-8
+Inserted by the Coroners and Justice Act 2009 s.154(2) from 12 November 2009. Amended (with effect from 1 April 2013) by
+the Legal Aid, Sentencing and Punishment of Offenders Act 2012 s.45; and by the Consumer Rights Act 2015 Sch.8(3) para.37
+with effect from 1 October 2015 subject to transitional provisions and savings specified in SI 2015/1630 arts 6–8. Subsection
+(7) amended by the Financial Services and Markets Act 2000 (Claims Management Activity) Order 2018 (SI 2018/1253) art.90,
+with effect from 29 November 2018 for the limited purposes specified in SI 2018/1253 art.1(2); 1 April 2019 otherwise subject
+to transitional provisions specified in SI 2018/1253 Part 3.
+Editorial note
+7A-9
+Damages-based agreements (“DBAs”) are a type of contingency fee agreement under which a lawyer can recover a percentage
+of the client’s damages if the case is won. Agreements that defendants will pay their lawyers a percentage of the sums or assets
+
+Section 58AA. - Damages-based agreements, UKBC-WHITEBK 458578170 (2025)
+© 2025 Thomson Reuters.
+3
+which they resist paying or transferring are not DBAs: Candey v Tonstate Group Ltd [2022] EWCA Civ 936. As first enacted,
+solicitors and barristers were not permitted to act under DBAs in civil litigation, but solicitors were permitted to act under DBAs
+in non-contentious business, including cases before employment tribunals. The Damages-Based Agreements Regulations 2010
+(SI 2010/1206) were made by the Lord Chancellor in exercise of powers conferred by s.58AA.
+The effect of the amendments by the Legal Aid, Sentencing and Punishment of Offenders Act 2012 s.45 is to enable the use
+of DBAs in most civil litigation by persons providing advocacy services, litigation services or claims management services.
+As a consequence of the amendments, new regulations, the Damages-Based Agreements Regulations 2013 have been made
+by the Lord Chancellor. The former regulations (SI 2010/1206) continue to have effect in respect of any DBA signed before
+1 April 2013.
+Regulation 5(2)(c)(i) of the 2013 Regulations was amended by the Legal Aid, Sentencing and Punishment of Offenders Act
+2012 (Consequential, Transitional and Saving Provisions) (Amendment) Regulations 2013 (SI 2013/534) (as amended by SI
+2013/621) to take account of the new arrangements made for legal aid introduced by Pt 1 of the 2012 Act.
+The provision of litigation funding has been held to be “claims management services”: R. (PACCAR Inc) v Competition Appeal
+Tribunal [2023] UKSC 28
+End of Document
+© 2025 SWEET & MAXWELL

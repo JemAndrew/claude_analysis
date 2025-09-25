@@ -1,0 +1,214 @@
+Section G. - Defective Arbitration Clauses, UKBC-REDFERN 530638606 (2025)
+© 2025 Thomson Reuters.
+1
+Section G. - Defective Arbitration Clauses
+Redfern and Hunter on International Arbitration 7th Ed.
+Mainwork
+Chapter 2 - Agreement to Arbitrate
+Section G. - Defective Arbitration Clauses
+2. 218
+The principal defects found in arbitration clauses are those of inconsistency, uncertainty, and inoperability. The argument as to
+whether an arbitration clause suffers from one or more of these defects is likely to be raised where, for example, a party takes
+action in a national court in relation to a dispute and the defendant seeks a stay of the proceedings on the basis of the existence
+of the arbitration clause. In such circumstances, the application for a stay may be opposed on the basis that the arbitration
+agreement was ‘inoperative or incapable of being performed’. 336
+(a) Inconsistency
+2. 219
+Where there is an apparent inconsistency in the clause, most national courts usually attempt to give a meaning to it, in order to
+give effect to the general intention of the parties, which was to submit disputes to arbitration. This is the case in England, where
+the courts uphold a clause and strike out an inconsistent provision if it is clear that the ‘surviving clause’ carries into effect the
+real intention of the parties and the ‘discarded clause’ would defeat the object of the agreement. 337  Of course, much depends
+on the words chosen by the parties. In Kruppa v Benedetti, 338  an English court considered a clause in which the parties agreed
+that, in the event of a dispute, they would ‘endeavour to first resolve the matter through Swiss arbitration’ and, ‘[s]hould a
+resolution not be forthcoming’, the English courts would thereafter possess non-exclusive jurisdiction. 339  The Court observed
+that ‘[i]t is logically not possible to have an effective multi-tier clause consisting of one binding tier (i.e. arbitration) followed
+by another binding tier (i.e. litigation)’ 340  and, furthermore, it remained for the parties to agree ‘on the number and identity
+of the arbitrators or upon the [Swiss] cantonal court which would appoint arbitrators in default’. 341  The Court thus construed
+the clause in such a way so as to avoid an inconsistency: the parties were not bound to resolve disputes by arbitration; rather,
+they were obliged to ‘endeavour’ to refer disputes to arbitration—failing which the English courts would have jurisdiction on
+a non-exclusive basis. 342
+(b) Uncertainty
+2. 220
+Similarly, as regards uncertainty, the courts of most countries have for many years attempted to uphold an arbitration
+provision 343  unless the uncertainty is such that it is difficult to make sense of it. By way of example, the German courts have
+shown themselves time and again ready to give effect to clauses that are a long way from certain. In 2006, the Stuttgart court
+found that a clause referring disputes ‘without resource [sic] to the ordinary court to Stockholm, Sweden’ to be a reference to
+arbitration under the Stockholm Chamber of Commerce. 344  In the same year, the Oldenburg court held that a reference to ‘the
+International Court of Arbitration (Internationales Schiedsgericht) in Austria’ was a reference to the international arbitration
+centre of the Austrian Federal Economic Chamber. 345  The Singapore courts have recently made sense of and upheld an
+agreement to refer and resolve disputes ‘by arbitration as per Singapore Contract Rules’. 346  In the same way, institutions
+have generally attempted to give effect to arbitration agreements, notwithstanding a degree of uncertainty arising from the
+language chosen by the parties. For its part, the ICC has in the past accepted the following vague and imprecise formulations as
+
+Section G. - Defective Arbitration Clauses, UKBC-REDFERN 530638606 (2025)
+© 2025 Thomson Reuters.
+2
+references to the ICC Court: ‘the official Chamber of Commerce in Paris, France’, ‘the Arbitration Commission of the Chamber
+of Commerce and Industry of Paris’, and ‘a Commission of Arbitration of French Chamber of Commerce, Paris’. 347
+2. 221
+From time to time, however, courts and institutions are confronted with clauses that simply fail for lack of certainty. 348  Examples
+are:
+ 
+(1)‘In the event of any unresolved dispute, the matter will be referred to the International Chamber of Commerce’;
+ 
+(2)‘All disputes arising in connection with the present agreement shall be submitted in the first instance to arbitration.
+The arbitrator shall be a well-known Chamber of Commerce (like the ICC) designated by mutual agreement between both
+parties’;
+ 
+(3)‘Any and all disputes arising under the arrangements contemplated hereunder [ … ] will be referred to mutually agreed
+mechanisms or procedures of international arbitration, such as the rules of the London Arbitration Association’; and
+ 
+(4)‘For both parties is a decision of Lloyd or Vienna stock exchange binding and both will subjugate to the International
+Chamber of Commerce’.
+The problem with the first example is that even if the broad reference to the ICC is taken to be a reference to the ICC Court
+in Paris, the clause by itself does not stipulate whether the unresolved dispute is to be settled by arbitration or by conciliation
+or by some other procedure. The second example provides for arbitration ‘in the first instance’, but fails to provide intelligibly
+for the appointment of an arbitral tribunal. Even if the parties were to agree upon ‘a well-known Chamber of Commerce’ as
+arbitrator, this would be of no avail, since arbitrators must be individuals. The third example requires the future agreement of
+the parties on ‘mutually agreed mechanisms or procedures’. The fourth is simply meaningless.
+2. 222
+Further examples of what have been referred to as ‘pathological arbitration clauses’ are to be found in Craig, Park, and Paulsson’s
+commentary on ICC arbitration. 349  Two of the more flagrant examples include:
+ 
+(1)‘In case of dispute (contestation), the parties undertake to submit to arbitration but in case of litigation the Tribunal de
+la Seine shall have exclusive jurisdiction’; 350  and
+ 
+(2)‘Disputes hereunder shall be referred to arbitration, to be carried out by arbitrators named by the International Chamber
+of Commerce in Geneva in accordance with the arbitration procedure set forth in the Civil Code of Venezuela and in the
+Civil Code of France, with due regard for the law of the place of arbitration’. 351
+The latter clause is given as an example of a ‘disastrous compromise’, which might lead to extensive litigation (unrelated to the
+merits of the dispute) to sort out any contradictions in the various laws stated to be applicable. 352
+(c) Inoperability
+2. 223
+Article II(3) of the New York Convention states that:
+The court of a Contracting State, when seized of an action in a matter in respect of which the parties have made
+an agreement within the meaning of this article, shall, at the request of one of the parties, refer the parties to
+arbitration, unless it finds that the said agreement is null and void, inoperative or incapable of being performed. 353
+The reference to the agreement being ‘null and void’ refers to the arbitration agreement itself, since, as seen in the discussion
+of the principle of separability, in most countries the nullity of the main contract does not necessarily affect the validity of the
+arbitration agreement. An arbitration agreement is ‘null and void’ if it is ‘devoid of legal effect’, for example owing to mistake,
+duress, or fraud. 354
+
+Section G. - Defective Arbitration Clauses, UKBC-REDFERN 530638606 (2025)
+© 2025 Thomson Reuters.
+3
+2. 224
+At first sight, it is difficult to see a distinction between the terms ‘inoperative’ and ‘incapable of being performed’. However,
+an arbitration clause is inoperative where it has ‘ceased to have legal effect’ 355  as a result, for example, of a failure by
+the parties to comply with a time limit, or where the parties have repudiated, 356  or by their conduct impliedly revoked, the
+arbitration agreement. 357  By contrast, the expression ‘incapable of being performed’ appears to refer to more practical aspects
+of the prospective arbitration proceedings. It applies, for example, if it is for some reason impossible to establish the arbitral
+tribunal. 358  Courts tend to construe these provisions narrowly, to avoid offering a ‘back door’ for a party wishing to escape
+the arbitration agreement. 359
+2. 225
+An inability to pay advances on the costs of the arbitration, 360  or to make payment of an award, 361  should not mean that an
+arbitration clause is inoperative or incapable of being performed. However, in India, it has been held in the past that a stay
+of court proceedings should be refused on the grounds that exchange control regulations would prevent payments in foreign
+currency to the arbitrators and other overseas expenses of those participating in a foreign arbitration. 362
+Footnotes
+336
+These terms are used in the New York Convention, Art. II(3), and in the Model Law, Art. 8(1). For a discussion of
+the approach of national courts to the interpretation of defective arbitration clauses generally, see Auchie, ‘The liberal
+interpretation of defective arbitration clauses in international commercial contracts: A sensible approach?’ [2007] Intl
+Arb L Rev 206. See also Mistelis and Lew, Pervasive Problems in International Arbitration (Kluwer Law International,
+2006), pp. 163–165.
+337
+See Central Meat Products Ltd v JV McDaniel Ltd [1952] 1 Lloyd’s Rep 562; note also EJR Lovelock Ltd v Exportles
+[1968] 1 Lloyd’s Rep 163, in which inconsistencies and uncertainties were exposed in the clause itself. See too
+Mangistaumunaigaz Oil v United World Trade Inc. [1995] 1 Lloyd’s Rep 617, in which the arbitration clause provided
+for ‘arbitration, if any, by ICC Rules in London’. The words ‘if any’ could be rejected as surplussage. See also Braes
+of Doune Wind Farm v Alfred McAlpine [2008] EWHC 426 (TCC) and the decision of the Swiss Federal Tribunal in
+Case No. 4A_376/2008 of 5 December 2008, discussed by Scherer, ‘Introduction to the case law section’ (2009) 4 ASA
+Bulletin 735.
+338
+Kruppa v Benedetti [2014] EWHC 1887.
+339
+Ibid., at [2].
+340
+Ibid., at [12].
+341
+Ibid., at [11].
+342
+Ibid., at [15].
+343
+See Star Shipping AS v China National Foreign Trade Transportation Corporation [1993] 2 Lloyd’s Rep 445 (CA);
+Nokia Maillefer SA v Mosser, Tribunal Cantonal (Court of Appeal), 30 March 1993, (1996) XXI YBCA 681, (1995) 1 ASA
+Bulletin 64; Associated British Ports v Tata Steel UK Ltd [2017] EWHC 694 (Ch), at [26]–[27], where in the context of
+upholding an allegedly uncertain arbitration clause, the English High Court observed that, although each case in which
+a clause is challenged as being void for uncertainty is to be decided on its own facts, many of the cases ‘stress that the
+courts should strive to give some meaning to contractual clauses agreed by the parties if it is at all possible to do so’.
+344
+[2006] OLG Report Stuttgart 685.
+345
+[2006] Schieds VZ 223 (OLG Oldenburg).
+346
+The Singapore High Court held that, notwithstanding the parties’ reference to a set of non-existent rules and their failure
+to designate the seat or governing law of the arbitration, their agreement evinced a clear intention to settle any disputes
+by arbitration and was therefore binding and enforceable: KVC Rice Intertrade Co Ltd v Asian Mineral Resources Pte
+Ltd [2017] SGHC 32. See also HKL Group Co. Ltd v Rizq International Holdings Pte Ltd [2013] SGHC 5, in which
+the Singapore High Court upheld an agreement to refer disputes to ‘the Arbitration Committee at Singapore under the
+rules of the International Chamber of Commerce’, concluding that it was open to the parties to approach any arbitral
+institution in Singapore to administer the arbitration, applying the ICC Rules. See also, by way of contrast, TMT v RBS
+
+Section G. - Defective Arbitration Clauses, UKBC-REDFERN 530638606 (2025)
+© 2025 Thomson Reuters.
+4
+[2017] SGHC 21, in which the Singapore High Court held that the parties’ dispute, which arose from trades of forward
+freight agreements and options through a clearing house, did not fall within the scope of their agreement to refer any
+disputes to arbitration under ‘the arbitration rules of the relevant exchange or any other organization as the relevant
+exchange may direct and both parties agree to’.
+347
+Derains and Schwartz, A Guide to the ICC Rules of Arbitration (2nd edn, Kluwer Law International, 2005), p. 86.
+348
+For a recent example, see the Swiss Federal Tribunal’s Decision No. 4A_279/2010 of 25 October 2010, in which it
+refused to uphold an arbitration clause that referred disputes to ‘The American Arbitration Association or to any other US
+court’. The tribunal held that it was impossible to ascertain whether the parties had agreed to arbitrate to the exclusion of
+the state courts’ primary jurisdiction. Another recent example, which is perhaps less easy to comprehend, is a decision by
+the Russian Supreme Court in Case No. A40-176466/17, in which it held that an arbitration clause was uncertain given
+that, although it specified the ICC Rules applied, it failed to specify the institution that would administer the arbitration.
+349
+Craig, Park, and Paulsson, International Chamber of Commerce Arbitration (3rd edn, Oceana, 2000), pp. 127–135.
+350
+Ibid., at p. 128.
+351
+Ibid., at pp. 132–133.
+352
+Ibid.
+353
+Similar words are contained in the Model Law, Art. 8(1).
+354
+See, e.g., Rhone Mediterranee v Achille Lauro, 712 F.2d 50 (3d Cir.1983); Albon v Naza Motor Trading Sdn Bhd [2007]
+EWHC 665 (Ch). See also ICCA, ‘Request for the enforcement of an arbitration agreement’, in ICCA (ed.) ICCA’s
+Guide to the Interpretation of the 1958 New York Convention: A Handbook for Judges (ICCA, 2011), pp. 51–52.
+355
+Albon v Naza Motor Trading Sdn Bhd [2007] EWHC 665 (Ch).
+356
+Downing v Al Tameer Establishment [2002] EWCA Civ 721.
+357
+Corcoran v Ardra Insurance Co. Ltd, 842 F.2d 31 (2d Cir. 1988), also reported in (1989) XIV YBCA 773. For the
+continuation of the saga, see (1991) XVI YBCA 663 and (1992) XVII YBCA 666. See also Pryles, ‘Inoperative and
+operative arbitration agreements: Developments in Australian law’ (2006) 23 J Intl Arb 227.
+358
+In Aminoil v Government of Kuwait (1982) XXI ILM 976, the original arbitration clause provided that the third arbitrator
+was to be appointed by the ‘British Political Resident in the Gulf’, an official whose post had ceased to exist at the
+time that the dispute arose; this defect was, in the event, cured by the conclusion of a new submission agreement. See
+also Control Screening LLC v Tech. Application & Prod. Co. (Tecapro), 687 F.3d 163 (3d Cir. 2012), where the arbitral
+institution specified in the arbitration clause (‘International Arbitration Center of European Countries’) did not exist,
+and the US District Court held that the arbitration should proceed in New Jersey.
+359
+See, e.g., the decision of the Supreme Court of Canada in Seidel v Telus Communications Inc. [2011] 1 SCR 531. See
+also Bauhinia Corp. v China Nat’l Mach. & Equip. Imp. & Exp. Corp., 819 F.2d 247 (9th Cir. 1987), where the US Court
+of Appeals for the 9th Circuit designated the AAA to administer the arbitration, notwithstanding that the arbitration
+clause at issue was ambiguous on the choice of forum.
+360
+See El Nasharty v J Sainsbury plc [2007] EWHC 2618 (Comm), at [4].
+361
+See The Rena K [1979] QB 377. See also Amparo Directo 465/2005, Tercer Tribunal Colegiado en Materia Civil del
+Primer Circuito, Servicios Administrativos de Emergencia, 2 September 2005, in which the Mexican courts held that an
+arbitration agreement cannot be ‘inoperative’ as a result of external factors that do not pertain to the agreement itself,
+such as the financial situation of the parties.
+362
+See van den Berg, The New York Arbitration Convention of 1958 (Kluwer Law International, 1981), p. 160.
+End of Document
+© NIGEL BLACKABY KC, CONSTANTINE PARTASIDES
+KC, ALAN REDFERN

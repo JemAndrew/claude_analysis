@@ -1,0 +1,110 @@
+Measure of damages, UKBC-BULLENL 459371171 (2022)
+© 2025 Thomson Reuters.
+1
+Measure of damages
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part E - Banking and Financial Services
+Chapter 16 - Sale of Shares
+Measure of damages
+Against the vendor
+16-03
+Although shares are not within the definition of “goods” in the Sale of Goods Act 1979 s.62 (because they are “things in action”),
+the measure of damages for non-delivery of goods has long been taken as the measure of damages for non-delivery of shares
+by the vendor. 20  The measure of damages is the market value of the shares on the date they should have been delivered and
+that value is the purchase price of the shares at that date. 21  Prices paid by a third party to the vendor or by the purchaser for
+replacement shares may be evidence of the value if there is no market, but these prices are generally irrelevant to ascertaining
+the market value.
+ 
+(1)Where the market price rises between the date of breach and the date of judgment, Parke B in Shaw v Holland held that
+the date of judgment was not relevant, since “the plaintiff has his money in his possession, and might have gone into the
+market and bought other shares as soon as the contract was broken”. If the purchaser has already paid the price, this reason
+falls away: moreover the purchaser of shares can sue for specific performance as soon as the date for delivery arrives. The
+modern law is stated in Johnson v Agnew, 22  especially at 401, per Lord Wilberforce:
+“The general principle for the assessment of damages is compensatory … Where the contract is one of sale
+this principle normally leads to assessment at the date of the breach—a principle recognised and embodied in
+s.51 of the Sale of Goods Act 1893. But this is not an absolute rule: if to follow it would give rise to injustice,
+the court has power to fix such other date as may be appropriate in the circumstances.”
+ 
+(2)Where the date for completion is postponed at the request of the vendor justice will normally require that the value of
+the shares at the end of the period of postponement is the measure of loss, and it was so held prior to Johnson v Agnew:
+Wilson v London & Globe Finance Corp. 23
+ 
+(3)Where the sale is of shares not issued at the date of the contract, the subject-matter of the sale may be the letter of
+allotment or other contractual document issued by the company rather than the shares. If so, it has been held that the
+purchaser must measure his loss by the value of the letter of allotment at the date for delivery of it, and not the value of
+the shares when issued 24 ; but if this decision is treated as establishing a general principle in such cases, it is submitted
+that it cannot stand in the light of Johnson v Agnew.
+A purchaser who successfully sues for specific performance and therefore takes delivery of shares later than the contractual
+date will usually claim that remedy only if the market price has risen since the contract: the damages will then be nominal. If
+the shares are shares in a private company of which the purchaser wishes to obtain control in order to benefit himself by earning
+directors fees or remuneration, however, the damages may be substantial even if their value in the open market is less than the
+contract price (as may well be the case if the shares are a minority shareholding in a private company); to recover such damages,
+the purchaser would have to show that the vendor knew what losses were likely to accrue to the purchaser in consequence of
+
+Measure of damages, UKBC-BULLENL 459371171 (2022)
+© 2025 Thomson Reuters.
+2
+late delivery under the second limb of Hadley v Baxendale. 25  In all cases of late delivery, however, the purchaser ought to be
+able to recover dividends paid to the vendor and interest for late payment to him. 26
+If the shares delivered are not as represented, the vendor may be liable for damages for breach of (in effect) a warranty of
+quality; so a purchaser recovered damages where shares were sold as fully paid but were in fact only partly paid. 27
+The normal measure of damages where the shares delivered are not as represented is the difference between the value of the
+shares as warranted and the value of the shares in fact. 28
+Against the purchaser
+16-04
+The normal measure of damages is the contract price less the market value of the shares at the date for acceptance. 29  The
+principles stated in Johnson v Agnew ought, it is submitted, to apply to breach by the purchaser. The damages ought not, however,
+to be decreased if the market price of the shares has risen again after the date for acceptance; “if the seller retains the shares
+after the breach, the speculation as to the way the market will go is the speculation of the seller, not of the buyer”. 30
+Lending contracts
+16-05
+Stock lending has become, after a long period when the practice was uncommon, a recognised and frequent commercial practice.
+However, this practice led to difficulties in establishing ownership of loan stock when the global investment bank, Lehman
+Brothers, collapsed. 31
+Lending without transfer of the title to the stock by transfer of possession to a borrower who has no notice of any defect in
+title of the lender will confer a valid right to possession of the certificates, and the beneficial owner of the shares as against
+the lender has no claim for conversion. 32  The measure of damages for failure to deliver the stock to be lent is the price of the
+stock at the time for replacement or the price at the date of trial, at the election of the claimant. 33  A mortgagor is entitled to
+set off the value of shares which the mortgagee is unable to return, by way of damages, ascertained at the date when the shares
+should have been restored. 34
+Footnotes
+20
+Shaw v Holland (1846) 15 M. &W. 136.
+21
+Williams Bros v Ed T Agius Ltd [1914] A.C. 510. See also Oxus Gold Plc v Templeton Insurance Ltd [2007] EWHC
+770 (Comm).
+22
+Johnson v Agnew [1980] A.C. 367.
+23
+Johnson v Agnew [1980] A.C. 367; Wilson v London & Globe Finance Corp (1897) 14 T.L.R. 15.
+24
+Tempest v Kilner (1846) 3 C.B. 249 at 253.
+25
+Hadley v Baxendale (1854) 9 Ex. 341.
+26
+See Sri Lanka Omnibus Co v Perera [1952] A.C. 76.
+27
+Re Government Security Fire Insurance, Mudford’s Claim (1880) 14 Ch. D. 634; Ex p. Appleyard (1881) 18 Ch. D. 587.
+28
+Ageas (UK) Ltd v Kwik-Fit (GB) Ltd [2014] EWHC 2178 (QB); Hut Group Ltd v Nobahar-Cookson [2014] EWHC
+3842 (QB); and Bir Holdings Ltd v Mehta [2014] EWHC 3903 (Ch).
+
+Measure of damages, UKBC-BULLENL 459371171 (2022)
+© 2025 Thomson Reuters.
+3
+29
+Jamal v Moolla Dawood [1916] 1 A.C. 175.
+30
+Jamal v Moolla Dawood [1916] 1 A.C. 175 at 179, per Lord Wrenbury.
+31
+See Re Lehman Brothers International (Europe) In Administration [2010] EWHC 2914 (Ch).
+32
+MCC Proceeds Inc v Lehman Bros International (Europe) [1998] 4 All E.R. 675; on appeal [1999] C.L.C. 417.
+33
+Shepherd v Johnson (1802) 2 East 211.
+34
+Ellis & Co’s Trustee v Dixon-Johnson [1924] 1 Ch. 342.
+End of Document
+© 2025 SWEET & MAXWELL

@@ -1,0 +1,104 @@
+Section C. - Emergency Arbitrators, UKBC-REDFERN 530638626 (2025)
+© 2025 Thomson Reuters.
+1
+Section C. - Emergency Arbitrators
+Redfern and Hunter on International Arbitration 7th Ed.
+Mainwork
+Chapter 4 - Establishment and Organisation of an Arbitral Tribunal
+Section C. - Emergency Arbitrators
+4. 11
+As discussed later in this chapter, it takes time to constitute an arbitral tribunal and a party to the prospective arbitration may
+be in a position in which it cannot afford to wait. For example, it may need to take urgent action to prevent evidence being
+concealed or destroyed, or to stop an unjustified call on a bank guarantee or to prevent the transfer of assets out of the jurisdiction
+in which they are situated. To cater for such situations, if such relief is required prior to an arbitral tribunal being constituted, the
+main institutional arbitration rules provide for the appointment of Emergency Arbitrators as an alternative to the parties seeking
+interim relief from national courts. For example, the ICC, 14  the LCIA, 15  the International Centre for Dispute Resolution
+(ICDR), 16  the Swiss Arbitration Centre, 17  the Stockholm Chamber of Commerce (SCC), 18  the Hong Kong International
+Arbitration Centre (HKIAC), 19  the Singapore International Arbitration Centre (SIAC), 20  the International Institute for Conflict
+Prevention and Resolution (CPR) Rules, 21  and the Milan Chamber of Arbitration 22  all provide for Emergency Arbitrator
+appointments.
+4. 12
+Recent changes to these rules ensure that they now apply automatically and do not require a specific opt-in, which had previously
+limited their scope.
+4. 13
+In general, the rules allow parties to appoint an Emergency Arbitrator to determine applications for interim relief as soon as a
+request for arbitration has been filed or, in some cases, even earlier. 23  Indeed, some institutional rules now give the Emergency
+Arbitrator the power to order ex parte relief, subject to the other party being heard immediately after the preliminary order is
+granted. 24
+4. 14
+A useful example of the appointment mechanism is set out in the ICC Rules, under which a party may ask the ICC to
+consider the appointment of an Emergency Arbitrator by sending an application to the Secretariat, together with the relevant
+supporting documentation and payment of the prescribed fee. 25  If the application is made before the applicant files its Request
+for Arbitration, such a Request must be sent to the Secretariat within ten days to avoid the termination of the emergency
+proceedings. 26  The Emergency Arbitrator will normally be appointed within two days of the application and must make an
+order within fifteen days of receiving the file (although this can be extended by the President of the ICC Court pursuant to a
+reasoned request from the Emergency Arbitrator or if deemed necessary). 27  However, the procedure will not be available if: (a)
+the arbitration agreement between the parties was concluded before the date on which Emergency Arbitrator provisions were
+introduced into the Rules (January 2012); or (b) the parties have agreed to opt out of these provisions; or (c) the arbitration
+agreement upon which the application is based arises from a treaty. 28
+4. 15
+Under most rules, including the ICC Rules, the Emergency Arbitrator’s decision is interim in nature and will not bind the arbitral
+tribunal. 29  Although Article 29.2 of the ICC Rules requires the parties to undertake to comply with any order made by the
+Emergency Arbitrator, the consequences of non-compliance are uncertain. Parties will still need to rely on the support of the
+national courts to enforce interim measures granted by an Emergency Arbitrator and it is not yet clear whether such enforcement
+will be granted, given that an interim ‘order’ is unlikely to qualify as an award and therefore be enforceable under the New
+
+Section C. - Emergency Arbitrators, UKBC-REDFERN 530638626 (2025)
+© 2025 Thomson Reuters.
+2
+York Convention. 30  However, in some jurisdictions, specific legislative changes have been introduced to ensure that the orders
+of Emergency Arbitrators are treated in the same way as those of an arbitral tribunal. 31
+Footnotes
+14
+ICC Rules, Art. 29 and Appendix V.
+15
+In addition to providing for the expedited formation of the arbitral tribunal (Art. 9A), the LCIA Rules provide for
+the appointment of an emergency arbitrator at any time prior to the formation or expedited formation of the arbitral
+tribunal (Art. 9B). Any such application must set out the specific grounds for requiring the appointment of an emergency
+arbitrator and the specific claim for emergency relief. Importantly, the Rules provide that any such application will not
+prejudice a party’s right to apply to a national court for interim or conservatory measures before the formation of the
+arbitral tribunal (Art. 9B.13).
+16
+ICDR Rules, Art. 7.
+17
+Swiss Rules, Art. 43.
+18
+SCC Rules, Appendix II.
+19
+HKIAC Rules, Art. 23; Sch. 4.
+20
+SIAC Rules, Art. 30.2; Sch. 1.
+21
+International Institute for Conflict Prevention and Resolution (CPR) Rules, r. 14.
+22
+Milan Chamber of Arbitration Rules, Art. 44. However, because Italian law does not allow arbitrators to issue interim
+orders (Italian Code of Civil Procedure, art. 818), provisional measures ordered by Emergency Arbitrators have a
+contractual nature.
+23
+The LCIA Rules (Art. 9B), ICC Rules (Art. 29.1), SCC Rules (see Appendix II, Art. 9.4.iii), and the Swiss Rules (Art.
+43) permit the appointment of an Emergency Arbitrator before the notice of arbitration is filed. Others, including the
+SIAC (Sch. 1, Art. 1), ICDR (Art. 7.1 in fine), and ACICA Rules (Art. 33; Sch. 1, Art. 1.1.2.b), require that it be filed
+with or after the notice of arbitration.
+24
+For example, Swiss Rules, Arts 43.1 and 26.3.
+25
+ICC Rules, Art. 29 and Appendix V, Art. 1.3. The costs of an Emergency Arbitrator Proceeding is set out in Appendix
+V, Art. 7.1. By the year 2020, the ICC had received more than 140 applications for the appointment of an Emergency
+Arbitrator.
+26
+ICC Rules, Appendix V, Art. 1.6.
+27
+ICC Rules, Appendix V, Arts 2.1 and 6.4.
+28
+ICC Rules, Art. 29.6.
+29
+ICC Rules, Art. 29.3.
+30
+See Raid Abu-Manneh, ‘Emergency Arbitrators: the Case for Enforcement’, IBA Arbitration Committee (2021),
+available online at https://www.ibanet.org/LPD/Dispute_Resolution_Section/Arbitration/Publications.aspx.
+31
+For example, the Singapore International Arbitration Act 2012 (art. 2.1) was amended so that the definition of ‘arbitral
+tribunal’ included Emergency Arbitrators.
+End of Document
+© NIGEL BLACKABY KC, CONSTANTINE PARTASIDES
+KC, ALAN REDFERN

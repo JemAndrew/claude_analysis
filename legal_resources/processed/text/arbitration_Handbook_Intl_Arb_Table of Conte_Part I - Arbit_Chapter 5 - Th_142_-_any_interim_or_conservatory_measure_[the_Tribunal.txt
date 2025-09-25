@@ -1,0 +1,116 @@
+“any interim or conservatory measure [the Tribunal] deems..., UKBC-ICCARBN...
+© 2025 Thomson Reuters.
+1
+“any interim or conservatory measure [the Tribunal] deems
+appropriate”
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+“any interim or conservatory measure [the Tribunal] deems appropriate”
+28-24
+There is no set list of interim or conservatory measures that are available under the Rules. At the risk of some oversimplification,
+one can distinguish three basic categories of conservatory and interim measures: (1) evidentiary measures; (2) financial measures
+(including in particular security for costs); and (3) standstill measures. 476  These categories, which are referred to below, are
+similar to those adopted in art.17 of the amended UNCITRAL Model Law. 477  This being said, there is no fixed list of provisional
+and conservatory measures as stated in a procedural order of 2000 by the Tribunal in ICC case No.9691:
+“[t]he categories of provisional or conservatory measures which may be granted in international arbitration are
+not closed. These are broad and flexible remedies which may be tailored to meet the needs of parties in a wide
+range of circumstances, particularly in the context of ICC arbitration.” 478
+28-25
+A Tribunal may only grant interim or conservatory measures that it is entitled to grant under the law of the place of arbitration
+and any procedural order or award with respect to such measures will include an analysis of the lex arbitri. However, laws of
+various countries are generally permissive in this respect. France, 479  Switzerland 480  and England 481  all provide for interim
+relief. The US Federal Arbitration Act provides for measures to obtain evidence. 482
+28-26
+The authors are not aware of any case in which a Tribunal’s procedural order for interim relief or award for interim relief in
+an ICC arbitration was successfully challenged in a state court. Nevertheless, if a Tribunal refuses to grant such relief, a party
+may seek that relief or other relief from state courts under art.28(2). In addition, there is an issue of compliance with any order
+or award for interim relief.
+28-27
+As regards the requirements for granting interim or conservatory measures under art.28(1), in the authors’ opinion a Tribunal
+should ensure that the following conditions have been satisfied before it decides that the applicant deserves provisional
+protection:
+ 
+(a)There has been a request by a party setting out the reasons and providing adequate evidence for the relief sought against
+another party to the arbitration;
+ 
+(b)The Tribunal is satisfied that it has prima facie jurisdiction over both parties, based on the existence of a valid agreement
+to arbitrate;
+ 
+(c)The applicant has established the prima facie basis of a valid claim on the merits and there is therefore a likelihood of
+success on the merits; 483
+ 
+(d)There is a risk of imminent irreparable or substantial harm, which cannot be compensated by a subsequent award
+damages; 484  and
+
+“any interim or conservatory measure [the Tribunal] deems..., UKBC-ICCARBN...
+© 2025 Thomson Reuters.
+2
+ 
+(e)The granting of the measure would not result in a pre-judgement of the case. 485
+28-28
+Set out below is a discussion of various interim and conservatory measures by category based on recent experience and materials.
+However, as noted above, there is wide variation in the type of interim and conservatory measures that may be granted under
+art.28.
+Footnotes
+476
+More generally, see Poudret & Besson, op. cit., para.6.3, p.518; Lew, “Commentary on Interim and Conservatory
+Measures in ICC Arbitration Cases” [2000] ICC ICArb. Bull. Vol.11 No.1, p.28; Yesilirmak, “Interim and Conservatory
+Measures in ICC Arbitration Cases” [2000] ICC ICArb. Bull. Vol.11 No.1, p.31 including Extracts from ICC Awards
+referring to Interim and Conservatory Measures; Reiner, “Les mesures provisoires et conservatoires et l’arbitrage
+international notamment l’arbitrage CCI” (1998) JDI, p.853; Besson, Arbitrage international et mesures provisoires–
+Etude de droit comparé (Schulthess, 1998); Goldman, “Provisional Measures in International Arbitration” (1993)
+RDAI/IBLJ No.1, p.3; Giardina, “Provisional Measures in Europe—Some Comparative Observations” in Etudes de
+droit international en l’honneur de Pierre Lalive, op. cit., p.499; Schwartz, “The practices and experience of the ICC
+Court” [1993] ICC ICArb. Bull., Special Supplement, p.45.
+477
+Article 17(2) of the UNCITRAL Model Law provides the following definition: “(2) An interim measure is any temporary
+measure, whether in the form of an award or in another form, by which, at any time prior to the issuance of the award
+by which the dispute is finally decided, the arbitral tribunal orders a party to: (a) Maintain or restore the status quo
+pending determination of the dispute; (b) Take action that would prevent, or refrain from taking action that is likely
+to cause, current or imminent harm or prejudice to the arbitral process itself; (c) Provide a means of preserving assets
+out of which a subsequent award may be satisfied; or (d) Preserve evidence that may be relevant and material to the
+resolution of the dispute.”
+478
+Procedural Order No.7 of 2000 at para.43, which contained the following footnote: “S. Besson, Arbitrage international
+et mesures provisoires, Zürich (1998) at pp.264–265; P. Lalive, J.-F. Poudret, C. Reymond, Le droit de l’arbitrage–
+interne et international en Suisse, Lausanne (1989) at pp.362–365.”
+479
+In France, for example, art.1468 of the French CPC provides that: “[t]he arbitral tribunal may order upon the parties any
+conservatory or provisional measures that it deems appropriate, set conditions for such measures and, if necessary, attach
+penalties to such order. However, only courts may order conservatory attachments and judicial security. The arbitral
+tribunal has the power to amend or add to any provisional or conservatory measure that it has granted” Translated by
+Emmanuel Gaillard, Nanou Leleu-Knobil and Daniela Pellarini of Shearman & Sterling LLP. More generally, see Clay,
+op. cit., pp.150–152.
+480
+In Switzerland, art.183(1) of the Swiss PILA provides that “[u]nless the parties have agreed otherwise,
+the Arbitral tribunal may, at the request of a party, order provisional or conservatory measures”.
+(Translation from: https://www.arbitration-ch.org/en/asa/asa-news/details/1086.english-translations-of-the-revised-
+swiss-arbitration-act-and-associated-provisions-of-the-code-of-civil-procedure-in-force-on-1-january-2021.html
+[accessed 17 August 2021]).
+481
+In England, s.38(4) of the English Arbitration Act 1996 provides that:“(4) The tribunal may give directions in relation
+to any property which is the subject of the proceedings or as to which any question arises in the proceedings, and which
+is owned by or is in the possession of a party to the proceedings–(a) for the inspection, photographing, preservation,
+custody or detention of the property by the tribunal, an expert or a party, or (b) ordering that samples be taken from, or
+any observation be made of or experiment conducted upon, the property.”
+482
+In the US, s.7 of the Federal Arbitration Act provides that: “[t]he arbitrators selected either as prescribed in this title or
+otherwise, or a majority of them, may summon in writing any person to attend before them or any of them as a witness
+and in a proper case to bring with him or them any book, record, document, or paper which may be deemed material
+as evidence in the case.”
+483
+See art.17(A)(1)(b) of the UNCITRAL Model Law.
+484
+See art.17(A)(1)(a) of the UNCITRAL Model Law. Although a party’s prospective inability to satisfy a damage award
+should be considered a factor.
+
+“any interim or conservatory measure [the Tribunal] deems..., UKBC-ICCARBN...
+© 2025 Thomson Reuters.
+3
+485
+Final award in ICC Case No.14287 (June 2008) (Extract), Part IV.11 paras 3 and 5 in Special Supplement 2011: Interim,
+Conservatory and Emergency Measures in ICC Arbitration, 74.
+End of Document
+© 2025 SWEET & MAXWELL

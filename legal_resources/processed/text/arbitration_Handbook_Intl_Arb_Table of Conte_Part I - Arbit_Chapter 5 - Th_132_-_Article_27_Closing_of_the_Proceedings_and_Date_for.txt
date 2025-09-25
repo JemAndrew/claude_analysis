@@ -1,0 +1,255 @@
+Article 27 Closing of the Proceedings and Date for..., UKBC-ICCARBN...
+© 2025 Thomson Reuters.
+1
+Article 27 Closing of the Proceedings and Date for Submission of
+Draft Awards
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+Article 27 Closing of the Proceedings and Date for Submission of Draft Awards
+As soon as possible after the last hearing concerning matters to be decided in an award or the filing of the last authorized
+submissions concerning such matters, whichever is later, the arbitral tribunal shall:
+ 
+a) declare the proceedings closed with respect to the matters to be decided in the award; and
+ 
+b) inform the Secretariat and the parties of the date by which it expects to submit its draft award to the Court for
+approval pursuant to Article 34.
+After the proceedings are closed, no further submission or argument may be made, or evidence produced, with respect to
+the matters to be decided in the award, unless requested or authorized by the arbitral tribunal.
+27-1
+Article 27 deals with the final phase of the arbitration, which is evidenced by the closing of the arbitral proceedings, and which
+will lead the Tribunal to issue its (final) award. 436  Before it can do so, it must submit the draft of this award for scrutiny and
+approval by the ICC Court. Article 27 organizes the procedure for doing so.
+27-2
+ICC arbitration is intended to be cost-effective. Accordingly, art.25 requires the Tribunal to establish the facts of the case “within
+as short a time as possible”. Article 31(1) provides that ICC arbitrations are to be completed in six months, unless an extension
+is granted. Under the Expedited Procedure Provisions, the award is to be issued within six months after the date of the case
+management conference. To finalise the award, the Tribunal must be able to impose a cut-off on submission of evidence and
+argument by the parties. That is what art.27 is designed to provide. By agreeing to ICC arbitration, the parties are accepting
+this basic rule that is typical of civil law systems. The purpose of art.27 is to streamline the proceedings, and also to protect the
+arbitral process from being interrupted by late (and unexpected) submissions of a party. Both parties will be advised that they
+will, as of the time of the closing of the proceedings, have to expect a decision from the Tribunal.
+27-3
+Article 27 provides, unlike its predecessor under the 1998 Rules, that the proceedings shall be closed as soon as possible after
+the last hearing or last set of authorised submissions. This change was made in the 2012 Rules to expedite proceedings and to
+avoid having the Tribunal wait until it finalised an award to close the proceedings. The determination of when it is possible to
+close the proceedings will vary. Nevertheless, there is a tendency to only close the proceedings once the Tribunal has had initial
+deliberations. Prior to closing the proceedings, the Tribunal should ensure that it has all of the evidence and legal authorities
+that the Tribunal considers it needs to finalise an award. This approach is not required by or in conformity with the spirit of
+the Rules. A Tribunal may always re-open the proceedings under art.27 if, during deliberations, the Tribunal considers that it
+does not have sufficient evidence or legal authority on a point.
+27-4
+Article 27 also provides that the Tribunal may close the proceedings with respect to the matters to be decided in the award.
+Therefore, if the award is to decide solely jurisdictional issues, the Tribunal may close the proceedings with respect to the
+jurisdictional issues.
+
+Article 27 Closing of the Proceedings and Date for..., UKBC-ICCARBN...
+© 2025 Thomson Reuters.
+2
+27-5
+In addition, art.27 provides that the Tribunal shall inform the parties as well as the Secretariat of the date by which it anticipates
+submitting a draft award for scrutiny pursuant to art.34. A well-organized Tribunal will look into that issue well before the
+final hearing or the parties’ final submissions to ensure that it will be able to send sufficient time aside for drafting the award.
+To inform the parties of the approximate date of transmittal of the draft award is not only important for managing the parties’
+expectations, but also for the Tribunal itself, as it requires it to set realistic milestones. The drafting of an award is normally
+the most difficult and time-consuming task for a Tribunal.
+27-6
+Article 27 relates directly to art.22(4). The Tribunal shall declare the proceedings closed when it is satisfied that each party
+has had “a reasonable opportunity to present its case”. Prior to closing the proceedings, the Tribunal should ensure that the due
+process requirements of the Rules and the place of arbitration are respected. As discussed under arts 18 and 22, the perception
+of what will constitute a reasonable opportunity to present a case will depend to a certain extent on the approach of the national
+courts.
+27-7
+In many instances, especially with smaller or mid-size arbitrations, oral submissions are made and the hearings are closed at the
+end of the hearing. In other instances, the parties submit post-hearing briefs either reflecting their final positions or responding
+to specific points that have been raised by the Tribunal. In such cases, the Tribunal frequently announces that the proceedings
+are closed subject to the submission of the post-hearing briefs and the submissions on costs. Post-hearing briefs are normally
+not allowed to contain new factual evidence, but Tribunals may allow and sometimes even solicit legal material in support of
+the parties’ legal submissions. Many Tribunals find it helpful to have the post-hearing briefs submitted promptly after the oral
+hearings so that the members of the Tribunal can recall it in more detail and (hopefully) get a good analysis of the dispositive
+issues and a good basis to structure their award. Frequently, the Tribunal will close the procedure at the end of the evidentiary
+hearings and oral argument. At that time, the Tribunal will usually invite the parties to submit their costs at a later date in the
+arbitration, as is discussed under art.38.
+27-8
+With respect to post-hearing briefs, for the authors the best approach is for the Tribunal to put very specific questions to the
+parties either immediately after the evidentiary hearings or, if need be, after initial post-hearing submissions. This approach
+permits the parties to focus on arguments they may not have sufficiently anticipated or to allow them to clarify a point for the
+Tribunal. For the Tribunal to be able to issue such questions, it must, of course already have a clear understanding of the issues
+and must have deliberated at least as to the questions to ask.
+27-9
+Article 27 requires no specific form for closing the proceedings. The Tribunal will normally record its decision in writing, in a
+Procedural Order or simply in a letter to the parties. The same result would be achieved if at the end of the hearing the Tribunal
+declares the proceedings closed and such declaration is recorded, for instance, by a court reporter’s verbatim transcript. In
+practice, it often happens that the Secretariat invites the Tribunal to close the proceedings, once it has received the draft award
+from the Tribunal. Such practice defeats somewhat the purpose of art.27. Ideally, however, the Secretariat would be asking
+Tribunals at a much earlier point in time whether they consider that the proceedings should be closed, and in the affirmative
+to require the Tribunal to inform the parties accordingly.
+27-10
+Prior to closing the proceedings, many Tribunals ask the parties if they have any objection to the way the proceedings have been
+conducted and whether they accept that the proceedings now be closed. This question is intended to cover whether the parties
+feel that they have had a reasonable opportunity to present their cases, but also to give the possibility to correct any deficiency
+in the proceedings before the award is rendered. 437  If the parties do not object, then they will usually be deemed to have waived
+their right to object under art.40. This confirmation may in fact even cover objections that were made prior to the oral hearings.
+As the US Court of Appeals for the Fifth Circuit said in the Karaha Bodas case: 438
+“In the final award, issued in December 2000, the Tribunal stated that all parties had ‘waived their respective
+requests for discovery’ at the conclusion of the hearing. Pertamina asserts that it did not waive its requests for
+discovery because the Tribunal denied the request before the hearing, when the discovery could have been of use.
+
+Article 27 Closing of the Proceedings and Date for..., UKBC-ICCARBN...
+© 2025 Thomson Reuters.
+3
+Pertamina ignores the fact that in international commercial arbitration, it is not uncommon to ask for additional
+discovery or information after a hearing, to request additional sessions of a hearing to submit more evidence, or
+to file posthearing submissions. Rather than renew its requests for discovery into FPL’s willingness to finance
+the project or to assert a request for discovery into FPL’s political risk insurance, Pertamina’s counsel expressly
+stated that the record had been ‘fully made’ and that he was ‘prepared to rest on the record.’ The record supports
+the Tribunal’s conclusion that the discovery requests made before the hearing had been waived. Pertamina did
+not ask for discovery into political risk insurance until it filed its Rule 60(b) motion in the district court. The
+Tribunal’s denial of a continuance and additional discovery did not prevent Pertamina from presenting its case, so
+as to deprive it of a fair hearing. Pertamina presented ample evidence in support of its position that KBC would be
+unable to find financing. The Tribunal considered Pertamina’s evidence and gave it considerable weight, awarding
+KBC damages substantially lower than the amount it sought.”
+27-11
+In the Karaha Bodas case, the party’s confirmation therefore covered not only the conduct of the hearings, but arguably the
+discovery request prior to the hearings. This type of confirmation of the parties is particularly relevant if a party later argues that
+it could have submitted additional evidence or additional argument. The confirmation is less useful if the party subsequently
+alleges bias in the conduct of the proceedings, as a party may only waive what the party knows of and some forms of bias
+that are not subject to waiver. 439  In addition, such a confirmation places counsel in an awkward position with respect to the
+Tribunal. It is submitted that one way to deal with this situation is for counsel to respond confirming that there is no objection
+to the conduct of the oral hearings if that is its case, but that counsel maintain its position with respect to procedural matters
+that were raised prior to the hearing. 440
+27-12
+Article 27 provides that parties may make submissions when requested or authorised by the Tribunal. The need for further
+submissions may sometimes appear to the Tribunal on very specific points that it is able to fully consider only during the
+deliberation stage. It may concern clarification of a factual or legal point. Any such submissions must be made in a manner
+that ensures that the other party has the right to comment on them in accordance with due process. The Tribunal is not required
+as a general matter to hold further hearings after such submission. If, as may happen in very exceptional circumstances, the
+additional submission contains a factual witness statement, then the other party should have the right to test that witness
+statement and, depending on the circumstances and the importance of the evidence, a further hearing may be appropriate.
+However, in organising a further hearing, the practicalities and costs should be taken into account. Therefore, it may be that a
+hearing by video conference or by telephone is adequate and that a hearing in person is not required.
+27-13
+The circumstances in which the Tribunal may decide to reopen the proceedings and authorise further submissions are varied. 441
+With regards to requests by the parties to consider further submissions, the Tribunal will wish to consider the nature and type
+of documents, the time that has elapsed since the closing of the proceedings, the reasons for the late submission, and the impact
+the admission of the new documents may have on the proceedings, when deciding to reopen the proceedings with respect to
+such documents. The classic circumstance where late-filed documents may be admitted is when new evidence arises that was
+not available to the parties previously and which is material to the resolution of the dispute. For example, in a case involving
+the validity of patented and unpatented technology, a Tribunal in an unreported award permitted further submissions after the
+patent had been held presumptively invalid. These further submissions should not permit a party to re-argue the entire case.
+In another unreported award, an arbitrator declined to permit expert evidence of damages when both parties had argued the
+damages point extensively in their memorials.
+27-14
+As mentioned, the Tribunal may, during its deliberations, conclude that certain matters have not been covered adequately for
+whatever reason. In such a case, the desire to do justice has to be reconciled with the need to complete the arbitration. Frequently,
+Tribunals resolve such issues based on the burden of proof: it is up to the party who has the burden of proof to satisfy that
+burden or its claim fails.
+27-15
+
+Article 27 Closing of the Proceedings and Date for..., UKBC-ICCARBN...
+© 2025 Thomson Reuters.
+4
+Moreover, when the Tribunal reopens the hearing on a given point at its own initiative, this may provide the parties a clear
+hint in what direction the Tribunal seems to be going. This route is therefore not always appropriate, but may nevertheless in
+some cases be the better course of action.
+27-16
+Article 27 requires the Tribunal to provide the Secretariat and the parties with an approximate date for the submission of the
+draft award for scrutiny when the proceedings are closed. Article 27 was inserted to permit the parties, Secretariat, and thus
+the ICC Court, to better monitor the progress in rendering the award, and the parties to know better by when they can actually
+expect the award. The Tribunal may inform the parties once it has sent its draft award to the Secretariat. Whether the Tribunal
+does or not, upon receipt of the draft award, the Secretariat will normally promptly inform the parties (and the Tribunal) that
+the draft will now be scrutinized at one of the Court’s next Sessions. The Secretariat never commits at which session this will
+be the case, although it endeavours to have it scrutinized within three to four weeks of its receipt. If the draft is to be submitted
+to a Special Committee, which typically are held once a month on the last Thursday of the month, the delay may be somewhat
+longer. 442  After scrutiny, the Secretariat then informs the parties and the Tribunal that the award was approved, or, as the case
+may be, that it will be further scrutinized at one of the Court’s next Sessions. 443
+27-17
+In a laudable effort to apply the same rigor that it is expecting from arbitrators to itself, the Court may decide to reduce its
+administrative expenses by up to 20 per cent if the scrutiny process is delayed for reasons other than by circumstances that are
+beyond the Court’s control. 444
+27-18
+There is no sanction for failing to submit an award by the date indicated by the Tribunal. 445  However, due to ongoing pressure
+in the arbitral community as to the delays of arbitrators in handing their draft awards to the ICC, 446  the ICC Court has taken
+steps under the chairmanship of President Alexis Mourre that may penalise arbitrators financially if they delay the submission
+of the draft award. As such, sole arbitrators are expected to submit a draft award within two months and three-member tribunals
+within three months after the last substantive hearing, on matters to be decided in the award or the filing of the last written
+submissions concerning such matters (excluding cost submissions), whatever is later. 447
+27-19
+Arbitrators were always expected to render their decisions expeditiously, but rarely if ever were they penalised in the past in
+case of substantial delays, and only rarely rewarded if they acted particularly swiftly. 448  The ICC Court has now acted to lower
+an arbitrator’s fees when the draft award is submitted after the applicable deadline. However, an arbitrator will not be penalised
+if the delay is attributable to factors beyond the arbitrator’s control or due to exceptional circumstances. 449
+27-20
+Admittedly, deliberations in a three-member Tribunal may prove to be difficult and may oblige the president to take a cautious
+approach as regards informing the Secretariat by which date the draft award will be submitted, as long as he has the support
+of the co-arbitrators in that respect. 450  The deliberations of the Tribunal are discussed in detail under art.32. 451  They may
+begin in an informal fashion during the evidentiary hearings when the Tribunal will discuss the evidence. Further deliberations
+may follow immediately after the hearings. Part of the deliberations must be with respect to the question whether to declare
+the proceedings closed, and if so as of when, as this is a basic decision of the Tribunal. Once the president of the Tribunal has
+provided a first draft of the co-arbitrators, the latter will review it and send their comments back to the president, who will
+generate then a second, but not necessarily the final draft. The arbitrators may of course still comment on any points that remain
+open at that stage. All in all, this can be a very time-consuming process, which should not be underestimated by the ICC Court
+and/or parties, nor by the president of the tribunal, who when preparing the first draft needs to build in sufficient time for his
+co-arbitrators to be in a position to react in a timely manner.
+Footnotes
+
+Article 27 Closing of the Proceedings and Date for..., UKBC-ICCARBN...
+© 2025 Thomson Reuters.
+5
+436
+The 2021 Rules have left art.27 unchanged from the 2017 Rules.
+437
+See Swiss Federal Supreme Court, decision 4A_544/2014 of 24 February 2015, [2017] ASA Bull. Vol.35 No.2, pp.443,
+448, which stated that it is an abuse of right to wait until the annulment action to raise a procedural objection that could
+have been raised during the arbitration, also available on https://www.swissarbitrationdecisions.com [accessed 28 April
+2021].
+438
+Karaha Bodas Co LLC v Perusahaan Pertambangan Minyak Dan Gas Bumi Negara, 364 F.3d 274 (5th Cir. 2004);
+(2004) YBCA Vol.XXIX, p.1262.
+439
+Parties may hesitate to raise procedural issues immediately prior to deliberation of the Tribunal on the merits. In some
+instances, the circumstances may act to vitiate any waiver argument. If the Tribunal has adopted a procedure with the
+consent of the parties, the situation is quite different from one where the Tribunal has adopted a procedure over the
+objection of the party and then seeks at the end of the proceedings a confirmation that the party has no objection to
+the procedure.
+440
+In the Karaha Bodas case, the discovery issue was apparently raised during the enforcement proceedings. If a party
+has made a disclosure request and the Tribunal has ruled and rejected it, then it is difficult to see a justification for the
+Tribunal to ask for a waiver of rights at the end of the hearing. The rejection was the Tribunal’s decision and the Tribunal
+is required to meet the requirements of due process.
+441
+For instance, art.38(2) of the ICSID Rules is rather specific on this point, when it states: “(2) Exceptionally, the Tribunal
+may, before the award has been rendered, reopen the proceeding on the ground that new evidence is forthcoming of
+such a nature as to constitute a decisive factor, or that there is a vital need for clarification on certain specific points”.
+More generally, see Taylor and Baruti, “Reopening The Case After The Hearing—To What Extent And Under What
+Circumstances Should It Be Allowed?” in ASA Special Series No.29, September 2007, The Resolution of the Dispute—
+from the Hearing to the Award, Conference of 26 January 2007 in Geneva, p.8 with references to cases of the Iran-United
+States Claims Tribunal. Kalderimis, Love, et al., “ICSID Arbitration Rules, Chapter IV, Arbitration Rule 38 [Closure of
+the proceeding]”, in Mistelis, Concise International Arbitration, 2nd edn (Kluwer Law International, 2015) p.316.
+442
+2021 ICC Note, para.168.
+443
+2021 ICC Note, para.166.
+444
+2021 ICC Note, para.170.
+445
+See Bühler & Jarvin, op. cit., para.17, at p.251.
+446
+On that point, see the proposals for fee reductions made in 2005 by Bühler, “Cost of arbitration: some further
+considerations” in Liber Amicorum in honour of Robert Briner, op. cit., at p.182. The author stated then that for a variety
+of reasons it was unlikely that the ICC Court would implement such a policy. It is gratifying to see that some 10 years
+later it did.
+447
+2021 ICC Note, para.153, Part IXA, Doc.3.1.
+448
+To the extent that the ICC Court has fixed the advance on costs on the basis of average fees, there is normally no money
+left for rewarding the arbitrator with fees exceeding the average.
+449
+2021 ICC Note, paras 152-156, which also detail how the penalty will be calculated, Part IX A.
+450
+See Reiner, “Le Règlement d’Arbitrage de la CCI, Version 1998” (1998) Rev. Arb. No.1, p.25 at p.60.
+451
+See para.32-4 and following.
+End of Document
+© 2025 SWEET & MAXWELL

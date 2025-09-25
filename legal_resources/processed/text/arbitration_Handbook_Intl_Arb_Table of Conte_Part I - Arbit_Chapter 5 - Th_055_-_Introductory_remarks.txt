@@ -1,0 +1,78 @@
+Introductory remarks, UKBC-ICCARBN 474407029 (2022)
+© 2025 Thomson Reuters.
+1
+Introductory remarks
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+Introductory remarks
+22-1
+Article 22 sets out the basic principles regarding the conduct of the arbitration. 186  Article 22 should be read in conjunction
+in particular with arts 23 (Terms of Reference), 24 (case management conference and Procedural Timetable), 25 (Establishing
+the Facts of the Case), 26 (Hearings) and 30 (Expedited Procedure Provisions). In addition, practitioners should keep in mind
+the provisions of Part VII D of the 2021 ICC Note on the Expeditious Determination of Manifestly Unmeritorious Claims
+or Defenses and the reference, which was added in the 2021 Rules to Appendix IV to the Rules regarding case management
+techniques.
+22-2
+Article 22 sets out two fundamental principles which are sometimes seen as competing in practice: the Tribunal “shall act fairly
+and impartially and ensure that each party has a reasonable opportunity to present its case” and the Tribunal shall act in “an
+expeditious and cost-effective manner”. Much of the discussion in arts 22–26 involves balancing these respective interests.
+22-3
+The Tribunal’s duty to act fairly and impartially has not given rise to much substantive discussion, as it is so basic and well-
+understood. Respecting that duty is important to ensure that the parties have an enforceable award. 187  The Tribunal’s duty to
+be expeditious and cost-effective has been the subject of considerable discussion. 188  In the ICC context, 189  this is reflected in
+particular in the report of the ICC Commission on “Techniques for Controlling Time and Costs in Arbitration” initially prepared
+in 2007 and revised in 2012. It has also resulted in the 2017 amendments to the Rules to shorten the basic time limit for the
+Terms of Reference to 30 days, to provide for the Expedited Procedure Provisions in art.30 and to monitor the arbitrators much
+more closely on their availability and the speed with which they carry out their duties, as is reflected in the 2021 ICC Note.
+22-4
+The 2021 ICC Note includes a series of provisions that are intended to make ICC arbitration more time and cost-effective all
+of which are intended to give substance to provisions of the Rules, and in particular art.22. Those provisions of the 2021 ICC
+Note include the following:
+ 
+-Part VII B on Expeditious and Efficient Conduct of the Arbitration
+ 
+-Part VII D on Expeditious Determination of Manifestly Unmeritorious Claims and Defenses
+ 
+-Part VIII on the Expedited Procedure Provisions
+ 
+-Part IX on the Efficiency in the Submission of Draft Awards to the ICC
+ 
+-Part XIV D on the Fixing of Fees (taking into account efficiency)
+ 
+-Part XXIV C on Sealed Offers
+22-5
+With the 2021 ICC Note, the ICC is seeking to prod parties and Tribunals into being more effective. The consequences, as
+discussed below are in particular to establish an entirely new and shorter procedure for smaller cases subject to the Expedited
+Procedure Provisions discussed in more detail under art.30, to encourage bifurcation of certain issues so that they can be dealt
+with at the outset, discussed under art.25, and to expedite drafting of awards as discussed under art.32. Nevertheless, these
+measures are not shortcuts. Article 22(4) states that “the arbitral tribunal shall act fairly and impartially and ensure that each
+
+Introductory remarks, UKBC-ICCARBN 474407029 (2022)
+© 2025 Thomson Reuters.
+2
+party has a reasonable opportunity to present its case”. As a result one of the issues discussed below and in the other articles
+dealing with the arbitration procedure is how to implement these changes while respecting this basic principle.
+Footnotes
+186
+The 2021 Rules have left art.22 unchanged from the 2017 Rules except for the addition of the last sentence in art.22(2)
+and a drafting change in art.22(2) of the 2021 Rules.
+187
+In the Queen Mary University/White & Case 2018 International Arbitration Survey the four most valuable
+characteristics of international arbitration were viewed by those surveyed as “enforceability of awards”, “avoiding
+specific legal systems/national courts”, “flexibility” and “ability of parties to select arbitrators”. See http://
+www.arbitration.qmul.ac.uk/research/2018/ [accessed 4 August 2021].
+188
+In the Queen Mary University/White & Case 2015 International Arbitration Survey the two worst characteristics of
+international arbitration were viewed by those surveyed as “cost” and “lack of effective sanctions during the arbitral
+process”. See http://www.arbitration.qmul.ac.uk/docs/164761.pdf, p.7.
+189
+The concerns about the delays and costs in international arbitration are not new, as can be seen from the fact that even
+legislators have identified the problem and sought to address it. Thus, as discussed below, as early as 1996, the English
+Arbitration Act included at s.33(b) explicit provisions towards increasing efficiency and speedy resolution of arbitral
+disputes. More recently, s.1464(3) of the French Decree of 13 January 2011 included a provision expressly requiring
+that “[b]oth parties and arbitrators shall act diligently and in good faith in the conduct of the proceedings”. (Translation
+by Paris, The Home of International Arbitration, The 13 January 2011 Decree. The New French Arbitration Law, p.33.)
+End of Document
+© 2025 SWEET & MAXWELL

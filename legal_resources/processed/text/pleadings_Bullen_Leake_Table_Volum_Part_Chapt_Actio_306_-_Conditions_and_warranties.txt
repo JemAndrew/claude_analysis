@@ -1,0 +1,31 @@
+Conditions and warranties, UKBC-BULLENL 459372228 (2022)
+© 2025 Thomson Reuters.
+1
+Conditions and warranties
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part F - Business Law
+Chapter 25 - Supply of Goods and Digital Content
+Action for breach of condition or warranty
+Conditions and warranties
+25-22
+In general whether an express or implied term of a sale contract is a condition or a warranty is, as with all contracts, a matter
+of construction of the contract (SGA s.11(3)) and where the SGA implied terms into a sale contract, it was careful to specify
+which are conditions and which warranties. Where there is a breach of condition, the buyer may treat the contract as repudiated
+or he may elect to treat the breach of condition as a breach of warranty and sue for damages (SGA s.11(2)) These rules remain
+unaltered by the CRA. In a non-severable contract where the buyer is not a consumer, once the buyer accepts all or part of
+the goods (in the absence of an express or implied term in the contract to the contrary), the buyer can no longer reject the
+goods but must treat the breach of condition as a breach of warranty (s.11(4)). This is, however, subject to the rule concerning
+partial rejection in s.35A, and to the right of the buyer to proper information before deciding whether to accept or reject—
+see para.25-12.
+In consumer sales, however, the range of new remedies available to the buyer has somewhat overtaken the often-mechanistic
+application of the rules relating to conditions and warranties. The law in this area remains the same for both categories of sale
+but the practical effect for consumers is greatly diminished. The CRA rejects the distinction between condition and warranty
+completely and simply uses the word “term”. It is important to note that, in addition to its other provisions about unfair contract
+terms, each of the chapters on goods, digital content and services contains a section setting out a list of the terms inserted into
+contracts by other sections of the chapter which cannot in any circumstances be excluded. In those circumstances, it has ceased
+to regard these terms as being ‘implied’ into a contract of supply: the reality is that they are imposed by law and the range of
+remedies under the CRA makes no distinction between conditions and warranties.
+End of Document
+© 2025 SWEET & MAXWELL

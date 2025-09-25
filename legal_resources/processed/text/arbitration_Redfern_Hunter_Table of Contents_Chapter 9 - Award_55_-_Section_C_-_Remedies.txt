@@ -1,0 +1,889 @@
+Section C. - Remedies, UKBC-REDFERN 530638657 (2025)
+© 2025 Thomson Reuters.
+1
+Section C. - Remedies
+Redfern and Hunter on International Arbitration 7th Ed.
+Mainwork
+Chapter 9 - Award
+Section C. - Remedies
+9. 41
+The arbitral tribunal’s power to grant appropriate relief is based on the arbitration agreement and on the relevant applicable law.
+While in principle an arbitration agreement could specify the remedial measures to be conferred upon the tribunal, the usual
+position is that the agreement is silent on that point. In such circumstances, the tribunal must look into the relevant arbitration
+rules or the applicable law. Arbitration awards may cover a range of remedies, including:
+ 
+•monetary compensation;
+ 
+•punitive damages and other penalties;
+ 
+•specific performance and restitution;
+ 
+•injunctions;
+ 
+•declaratory relief;
+ 
+•rectification;
+ 
+•filling gaps and adaptation of contracts;
+ 
+•interest; and
+ 
+•costs.
+(a) Monetary compensation
+9. 42
+The type of award most often made by an international arbitral tribunal is one that directs the payment of a sum of money by one
+party to the other. This payment may represent money due under a contract (debt), or compensation (damages) for loss suffered,
+or both. The sum of money awarded is usually expressed in the currency of the contract or the currency of the loss. In large
+transnational projects, however, it is not unusual for reference to be made to several different currencies—so that, for example,
+plant and equipment manufactured or purchased overseas may be paid for in US dollars, whilst labour, plant, and equipment
+made or purchased locally may be paid for in the local currency. In such cases, unless the parties agree, the arbitral tribunal
+must receive submissions and decide on the currency or currencies in which the award is to be made.
+9. 43
+Under many national arbitration laws, arbitral tribunals have discretion to make awards in any currency deemed appropriate. The
+Lesotho Highlands case is illustrative of both the exercise of such discretion and the potential consequences of doing so. The case
+concerned the construction of a dam in Lesotho by a consortium of foreign companies. The consortium claimed amounts that,
+had they been paid when due, would have been payable in Lesotho loti, as owed under the relevant contract. However, by the
+time the award was made, the value of the loti had diminished against international currency values. The consortium therefore
+claimed payment of the award in four European currencies contractually designated as currencies for non-loti payments. In
+rendering the award in the currencies requested, the arbitral tribunal invoked section 48 of the English Arbitration Act 1996,
+which allows a tribunal to order payment of an award in any currency (unless agreed otherwise by the parties).
+
+Section C. - Remedies, UKBC-REDFERN 530638657 (2025)
+© 2025 Thomson Reuters.
+2
+9. 44
+The employer challenged the award in the English courts, under section 68(2)(b), for excess of power. 54  In so doing, the
+employer contended that the provisions in the contract on currencies effectively excluded the tribunal’s power to select the
+currency of the award. On appeal to the House of Lords, the employer’s challenge was dismissed by a majority of four to one. 55
+Of the major institutional rules, the LCIA expressly permits an award to be expressed in any currency (unless the parties have
+agreed otherwise). 56  The ICDR Rules go further in granting the tribunal power to issue a monetary award in a currency other
+than that of the contract if it considers such alternative currency to be ‘more appropriate’. 57
+(b) Punitive damages and other penalties
+9. 45
+Punitive damages are not awarded to compensate the wronged party, but instead to punish and deter the wrongdoer. In general,
+punitive damages are an exceptional and extreme measure permitted only, for example, in cases of fraud and substantial
+malice. 58  In the context of awarding punitive damages, it is tempting to think that an arbitral tribunal has precisely parallel
+powers to those of a national court to award damages in accordance with the law applicable to the substantive merits of the
+dispute. However, the powers of an arbitral tribunal are not necessarily the same as those of a court.
+9. 46
+An arbitral tribunal may, in certain respects, have wider powers than those of a judge, because the tribunal’s powers flow from,
+inter alia, the arbitration agreement. Thus, in England, a court applying US law has no power to order the payment of triple
+damages—a power provided under US antitrust legislation. 59  But an arbitral tribunal sitting in England does have the power to
+award triple damages provided that the parties’ arbitration agreement is sufficiently wide to encompass the determination of US
+antitrust law claims—although, for public policy reasons, there may be problems of enforcement, as will be discussed later. 60
+9. 47
+To determine the power of an arbitral tribunal to award a particular remedy, it is necessary to look at the law applicable to the
+substance of the dispute, or the law of the seat of the arbitration, depending on the applicable conflict of laws rules applicable
+(often determined by the seat). In civil law countries, for example, the concept of punitive damages is almost unknown, whether
+in breach-of-contract cases or otherwise, with a limited exception in some countries where there has been a wilful intention to
+harm the claimant amounting, in effect, to fraud. 61  Under French law, punitive damages are not recoverable, although ‘moral
+damages’ (to reflect the tribunal’s disapproval) may be recoverable. Under English law, punitive damages may be awarded
+only in actions in tort—and even then only in three categories of case. 62  Punitive damages may not be awarded for breach of
+contract. 63  However, such claims are permissible in the United States, where statutes may provide expressly for the payment
+of multiple damages by one party to the other. 64
+9. 48
+With regard to enforcement, the key question is whether an award of punitive damages would be enforceable under the New
+York Convention in a country that does not itself recognise such a remedy. The ground for refusal of enforcement would be
+Article V(2) of the Convention, which allows refusal of recognition or enforcement of an award if recognition or enforcement
+would be contrary to public policy. For example, in a leading judgment rendered in Germany in 1992, the Federal Supreme
+Court (Bundesgerichtshof) refused to enforce part of a US court decision that provided for the recovery of punitive damages,
+on the grounds that such recovery was contrary to German public policy. 65  The authors are not aware of any German court
+decisions relating to attempts to enforce a foreign arbitral award providing for the recovery of punitive damages, but the same
+result is likely. 66
+9. 49
+In summary, it is suggested that arbitral tribunals should treat claims for punitive damages and other penalties with considerable
+caution. They should address themselves to the threshold question as to whether or not they have the power to make such an
+
+Section C. - Remedies, UKBC-REDFERN 530638657 (2025)
+© 2025 Thomson Reuters.
+3
+award, even if a claim for punitive damages is admissible under the law applicable to the substance of the dispute, by examining
+both the lex arbitri and the scope of the arbitration agreement. 67  If the remedy is permissible, it then becomes a question of
+enforcement, which is dealt with in Chapter 11.
+9. 50
+Problems concerning enforceability should be left for the courts at the place of enforcement. However, it is preferable for arbitral
+tribunals to treat any award in respect of punitive damages or any other penalties as an entirely separate claim, in order to ensure
+that the punitive portion of the award is severable in the event of a successful challenge in the courts at the place of enforcement.
+(c) Specific performance
+9. 51
+An arbitral tribunal may be authorised by the parties or by the applicable law (either the substantive law or the lex arbitri,) to
+order specific performance of a contract. An international arbitral tribunal sitting in the United States will have the power to
+award specific performance, 68  and English law empowers an arbitral tribunal sitting in England ‘to order specific performance
+of a contract (other than a contract relating to land)’ unless a contrary intention is expressed in the arbitration agreement. 69
+In civil law jurisdictions, specific performance is a primary remedy for breach of contract. Orders of specific performance are
+therefore not uncommon in international arbitration. 70
+(d) Restitution
+9. 52
+Restitution seeks to put the aggrieved party in the same position as that in which it would have been had the wrongful act
+not taken place. In common law terminology, it is a form of specific performance. By way of example, in England, unless the
+parties otherwise agree, an arbitral tribunal has the same powers as an English court ‘to order a party to do or refrain from
+doing anything’. 71
+9. 53
+An example of the use of this remedy in public international law is provided by the Temple of Preah-Vihear case, 72  in which
+the International Court of Justice (ICJ) ordered the government of Thailand to restore to Cambodia certain sculptures and
+other objects that it had removed from the temple on the border between the two countries. In 2003, the ICJ in its advisory
+opinion about Legal Consequences of the Construction of a Wall in the Occupied Palestinian Territory, 73  held that Israel had an
+obligation to return the ‘land, orchards, olive groves and other immovable property seized from any natural or legal person for
+purposes of construction of the wall in the Occupied Palestinian Territory’. 74  A further example in the investment treaty context
+is Von Pezold v Zimbabwe, where the tribunal granted claimants restitution of certain properties expropriated by the state. 75
+9. 54
+Even in the field of public international law, however, the remedy is less common than monetary compensation:
+The essential principle contained in the actual notion of an illegal act—a principle which seems to be established
+by international practice and in particular by the decisions of arbitral tribunals—is that reparation must, as far
+as possible, wipe out all the consequences of the illegal act and re-establish the situation which would, in all
+probability, have existed if that act had not been committed. Restitution in kind, or, if this is not possible, payment
+of a sum corresponding to the value which a restitution in kind would bear; the award, if need be, of damages for
+loss sustained which would not be covered by restitution in kind or payment in place of it—such are the principles
+which should serve to determine the amount of compensation due for an act contrary to international law. 76
+9. 55
+
+Section C. - Remedies, UKBC-REDFERN 530638657 (2025)
+© 2025 Thomson Reuters.
+4
+The relief sought and granted in the growing number of investment arbitrations confirms that, in practice, monetary
+compensation, rather than restitution, is the principal remedy sought and granted in international arbitration. By way of example,
+Article 1135 of Chapter 11 of the North American Free Trade Agreement (NAFTA) provides that although a tribunal may award
+‘restitution of property’, such awards ‘shall provide that the disputing party may pay monetary damages and any applicable
+interest in lieu of restitution’. Thus the host state of an investment that is condemned under a Chapter 11 arbitral award will
+always have the right to pay damages in place of restitution.
+9. 56
+In Occidental Petroleum Corporation and Occidental Exploration and Production Co. v Ecuador, 77  the tribunal refused to
+grant an order that Ecuador fully reinstate the claimants’ rights under the relevant contracts. In an interim award dated 17 August
+2007, 78  the tribunal refused to grant such relief partly on the basis that the claimants could not establish a right to an award
+of specific performance of the contracts. The tribunal held that an order reinstating the claimants’ contract could be made only
+if (a) it was not legally impossible to revive the contract, (b) such a remedy would not involve a disproportionate interference
+with state sovereignty, as compared to an award of damages, and (c) damages could not otherwise make the claimants whole
+for their losses. 79
+(e) Injunctions
+9. 57
+There is no objection in principle to an arbitral tribunal granting relief by way of injunction, if requested to do so, either on
+an interim basis or as final relief. Injunctive relief is addressed in detail in Chapter 7. For present purposes, it is sufficient to
+state that an arbitral tribunal is not usually empowered to make effective orders against third parties, and if injunctive relief
+against third parties is required, it is generally quicker and more effective to seek it directly from a national court. Most sets of
+international and institutional rules make it clear that an arbitration clause is not to be taken as excluding the jurisdiction of the
+relevant national court to make orders for interim measures of protection. 80  However, Article 26.3 of the UNCITRAL Rules,
+for example, contains the qualification requiring that an applicant must satisfy the tribunal that:
+[ … ]
+ 
+(i) harm not adequately reparable by an award of damages is likely to result if the measure is not
+ordered, and such harm substantially outweighs the harm that is likely to result to the party
+against whom the measure is directed if the measure is granted; and
+ 
+(ii) there is a reasonable possibility that the requesting party will succeed on the merits of the
+claim.
+9. 58
+In some jurisdictions, there was previously doubt as to whether the power of national courts to grant interim relief in support
+of arbitration was limited to domestic seated arbitrations. For example, in India, following the Supreme Court’s 2012 decision
+in Balco, 81  no application for interim relief under section 9 of the 1996 Indian Arbitration Act was available from Indian
+courts in support of international arbitrations seated outside India. 82  However, following significant amendments to India’s
+Arbitration Act in 2015, it is now clear that interim relief from Indian courts is available in respect of foreign seated ‘international
+commercial arbitrations’ (subject to any agreement to the contrary). 83  A recent decision of the Supreme Court has clarified that
+the phrase ‘international commercial arbitration’ in this context also captures an arbitration between two Indian parties with a
+foreign seat (which was previously a somewhat vexed issue as a matter of Indian law). 84
+
+Section C. - Remedies, UKBC-REDFERN 530638657 (2025)
+© 2025 Thomson Reuters.
+5
+(f) Declaratory relief
+9. 59
+An arbitral tribunal may be asked to make an award that is simply declaratory of the rights of the parties. Modern arbitration
+legislation 85  often makes express provision for the granting of declaratory relief. Even when there is no such express provision,
+however, there is no reason in principle why an arbitral tribunal should not grant such relief. Indeed, declaratory relief has
+become a common remedy in international arbitration, with requests for contractual damages usually coupled with a request
+for a declaration that there has been a breach of contract.
+9. 60
+The Aramco arbitration provides a classic example of an arbitration in which the parties only claimed declaratory relief. 86
+Aramco claimed that its exclusive right to transport oil from its concession area in Saudi Arabia had been infringed by the
+agreement made between the Saudi Arabian government and the late Aristotle Onassis, the Greek shipping magnate, and his
+company, the Saudi Arabian Maritime Tankers Company. The dispute was significant—but neither party wished it to jeopardise
+their trading relationship, which was a continuing relationship dating back many years. 87  Accordingly, it was agreed that the
+dispute should be referred to an ad hoc tribunal of three arbitrators based in Geneva. It was further agreed that the award should
+be of declaratory effect only, with neither of the parties claiming damages for any alleged injury. The arbitral tribunal said:
+There is no objection whatsoever to Parties limiting the scope of the arbitration agreement to the question of what
+exactly is their legal position. When the competence of the arbitrators is limited to such a statement of the law
+and does not allow them to impose the execution of an obligation on either of the Parties, the Arbitration Tribunal
+can only give a declaratory award. 88
+9. 61
+A declaratory award establishes the legal position definitively and has a binding effect as between the parties. It is a useful
+device, particularly where the parties have a continuing relationship and want to resolve a dispute without the risk of damaging
+that relationship by a demand for monetary compensation. In England, an award containing a negative declaration is capable
+both of recognition and enforcement (depending on the terms of the order in question). 89
+(g) Rectification
+9. 62
+Rectification essentially is a common law equitable remedy, and is virtually unknown in civil law countries, where it tends to be
+treated in the same sense as adaptation of contracts and ‘filling gaps’. In common law countries, these concepts are considered
+separately. However, in general, an arbitral tribunal may make an order for rectification of a contract if empowered to do so
+by the parties.
+9. 63
+In England, any doubt about the position was resolved by the Arbitration Act 1996: an arbitral tribunal has the power ‘to order
+the rectification, setting aside or cancellation of a deed or other document’, unless the parties agree otherwise. 90
+(h) Filling gaps and adaptation of contracts
+9. 64
+An arbitral tribunal does not, in general, have power to create, or write, a contract between the parties. Its role in a contractual
+dispute is usually to interpret the contract as signed by the parties. However, almost anything is possible by clear consent of
+
+Section C. - Remedies, UKBC-REDFERN 530638657 (2025)
+© 2025 Thomson Reuters.
+6
+the parties. 91  In particular, it is now generally accepted that an arbitral tribunal has implied consent to ‘fill gaps’ by making a
+determination as to the presumed intention of the parties in order to make a contract operable. In England, a relatively mature
+authority for this proposition may be found in the famous ‘chickens’ case, 92  to which reference is still made from time to time
+by the English courts.
+9. 65
+The principle was clarified and expanded in the later Mamidoil line of cases. In Mamidoil, 93  the English Court of Appeal stated:
+[ … ]
+ 
+(vi)Particularly in the case of contracts for future performance over a period, where the parties may desire
+or need to leave matters to be adjusted in the working out of their contract, the courts will assist the parties
+to do so, so as to preserve rather than destroy bargains, on the basis that what can be made certain is itself
+certain. Certum est quod certum reddi potest.
+[ … ]
+ 
+(viii)For these purposes, an express stipulation for a reasonable fair measure or price will be a sufficient
+criterion for the courts to act on. But even in the absence of express language, the courts are prepared to
+imply an obligation in terms of what is reasonable.
+[ … ]
+ 
+(x)The presence of an arbitration clause may assist the courts to hold a contract to be sufficiently certain
+or to be capable of being rendered so, as indicating a commercial and contractual mechanism which can be
+operated with the assistance of experts in the field, by which the parties, in the absence of agreement, may
+resolve their dispute.
+9. 66
+A similar position exists in civil law countries, where the courts appear to go directly to what they call the ‘intention of
+the parties’, rather than use the ‘implied term’ device that is a feature of English contractual interpretation. In a note on
+‘L’Interpretation Arbitrale’, 94  a distinguished Swiss commentator suggested that, in French law, the arbitrator takes account
+of the commercial context in which an agreement is made—but if the parties have omitted an important provision from their
+contract on a particular point, it is perhaps because they prefer to leave it open, rather than not to agree upon a contract at all.
+9. 67
+A more difficult question is whether or not an arbitral tribunal has power to change the unambiguous terms of a contract. This
+is certainly possible where the relevant contract contains a provision authorising the arbitral tribunal to do so. Such provisions
+are commonly found in long-term gas contracts. Many such contracts contain clauses that provide for price reviews. Indeed,
+these have led to a whole wave of price review arbitrations in recent years, which have focused on often complex price review
+formulae and that are heavy on economic expert evidence. 95
+9. 68
+A device once used was reliance on the so-called ‘hardship clause’. The 1978 ICC Rules for the Adaptation of Contracts, the
+1994 Model Exploration and Production Sharing Agreement of Qatar and Principles 6.2.2 and 6.2.3 of the 2004 UNIDROIT
+Principles of International Commercial Contracts 96  served as a ‘blueprint’ for such provisions. However, an express provision
+in the relevant contract was required to bring them into operation and in practice ‘hardship clauses’ are rarely seen in modern
+contracts. What happens instead is that commercial parties (or their lawyers) insert tailor-made price-review, ‘balancing’, or
+‘economic equilibrium’ provisions in long-term supply contracts, so as to enable mediators and/or arbitral tribunals to adapt
+their contracts when circumstances change in a manner that was unforeseen when the contract was signed. 97
+9. 69
+
+Section C. - Remedies, UKBC-REDFERN 530638657 (2025)
+© 2025 Thomson Reuters.
+7
+Occasionally, arbitral tribunals issue awards that have the effect of changing the express terms of a contract in which there is no
+clear provision authorising them to do so. Where the applicable substantive law is that of a civil law jurisdiction, the justification
+usually given is the application of the doctrine of rebus sic stantibus. In the common law world, the parties’ legal representatives
+and arbitrators tend to place reliance on ‘implied terms’ to the effect that this is what the parties must have intended to happen
+in the new circumstances that have arisen.
+(i) Interest
+9. 70
+The payment of interest on a loan, or in respect of money that is paid later than it should have been, is a common feature of
+modern business relationships, and the award of compensatory interest in international arbitration has likewise become routine.
+Indeed, it has become rare for interest not to be awarded where an award provides for the payment of monies due. As one
+international arbitrator has said:
+In all international commercial arbitrations where a claim for the payment of money is advanced, whether debt
+or damages, it is highly probable that the claimant has also suffered a financial loss resulting from late payment
+of the principal amount. That loss can amount to a significant proportion of the total claim; and in certain cases,
+it can exceed the principal amount. In a modern arbitration régime, it is unthinkable that a claimant should not
+have the right to recover that loss in the form of interest. 98
+9. 71
+However, the situation is different in some Muslim countries—such as Saudi Arabia 99 —in which the law against usury (riba)
+prevents the levying of interest:
+The proposition of interest, strictly applied in Hanbali law (Saudi Arabia, Qatar) and Zayydi law (North Yemen)
+is linked in the minds of Muslim lawyers and economists with the rejection of the idea of the homo economicus
+as devised by the West, and with the integration of religious principles into the commercial life of the Muslim
+businessman, while the businessman should be solvent he should also conform to Qur’anic teaching, for although
+the Prophet did not condemn profit arising from sale or from a partnership he did prohibit the charging of interest
+on a loan [ … ] 100
+(i) Basis upon which interest can be awarded
+9. 72
+While the availability of interest in international arbitration is for the large part uncontroversial, the basis upon which interest
+is awarded varies. Most institutional rules of arbitration do not contain express provisions for the payment of interest, largely
+because it was assumed that an arbitral tribunal had the power to make an award in respect of interest, in just the same way as
+it has the power to make an award in respect of any other claims submitted to it. 101  The right to interest will therefore flow
+from the parties’ underlying contract (that is, from a contractual provision for the levying of interest for late payment), or by
+virtue of the applicable law. 102  The laws that govern the power of a tribunal to award interest also vary. In some jurisdictions,
+for example Bermuda, Hong Kong, England, and Scotland, the power to award interest is governed by the law of the place
+of arbitration. 103  In others, for example under German conflict-of-laws rules, the liability to pay interest is a question of
+substantive law and thus governed by the law of the contract. 104
+(ii) How much interest to award
+9. 73
+
+Section C. - Remedies, UKBC-REDFERN 530638657 (2025)
+© 2025 Thomson Reuters.
+8
+More problematic in practice than the question of whether an arbitral tribunal can award interest in principle are questions
+concerning the rate of interest to be awarded, from which start date, and in which currency. Most applicable laws leave these
+questions to the tribunal’s discretion. Thus the English Arbitration Act 1996 empowers a tribunal seated in England to award
+interest ‘from such dates, at such rates and with such rests as it considers meets the justice of the case’. 105  Similarly, the law
+of Australia permits a tribunal to award interest ‘at such reasonable rate as the tribunal determines for the whole or any part
+of the money, for the whole or any part of the period between the date on which the cause of action arose and the date on
+which the award is made’, and thereafter ‘from the day of the making of the award or such later day as the tribunal specifies,
+on so much of the money as is from time to time unpaid’. 106  Other jurisdictions, such as Hong Kong, India, and Singapore,
+have also enacted laws that give arbitrators similar discretion in the award of interest. 107
+9. 74
+In exercising this discretion, the tribunal will typically invite submissions and evidence from the parties on these issues
+in the same way as it would in respect of any other request for relief. Parties will thus usually have an opportunity to set
+out their respective positions on the rate of interest to be applied, the period for which it should be applied, and whether a
+different rate (such as a statutory legal interest rate) should be applied for the period following the rendering of an award until
+payment. In making such submissions, parties would do well to make it as easy as possible for a tribunal to award interest
+by providing the calculations upon which such an award would be based (for example, in any damages model prepared by
+a party’s quantum expert). 108
+(iii) Compound interest
+9. 75
+Most systems of national law expressly permit arbitral tribunals to award some form of interest on the amount awarded in
+respect of a claim or counterclaim, whether the amount awarded is due under a contract or as compensation or as restitution.
+However, whether there is a power to award compound (as opposed to simple) interest remains less clear. 109  Although the
+Model Law does not contain any express provisions concerning interest, arbitration legislation in common law jurisdictions
+such as England, Ireland, Hong Kong, and Bermuda give arbitral tribunals express power to award compound interest. Thus
+section 49 of the English Arbitration Act 1996 provides that, unless otherwise agreed by the parties, the tribunal may award
+simple or compound interest. This is, however, by no means a feature of all common law jurisdictions: in Canada and the
+United States, the power to award compound interest varies from state to state and province to province; in Australia and
+New Zealand, the power to award compound interest is strictly limited.
+9. 76
+In civil law jurisdictions, arbitral tribunals typically have the power to award a statutory (or legal) rate of interest, which is
+simple interest at a rate defined by statute. Like the common law, however, there are once again exceptions to the rule: the
+Dutch and Japanese civil codes provide, for example, that statutory interest is automatically capitalised at the end of each
+year. 110  An ICC arbitral tribunal in Geneva once awarded compound interest in a dispute between a state and a French entity
+on the basis of trade usage under Article 13 of the ICC Rules. 111  Sources of international law are no clearer. Article 38 of the
+International Law Commission’s Draft Articles on ‘Responsibility of States for Internationally Wrongful Acts’ 112  provides
+simply that ‘interest shall be payable on any principal sum when necessary in order to ensure full reparation’.
+9. 77
+Although the law on this issue varies from jurisdiction to jurisdiction, awards of compound interest appear to have become
+more common. In the Santa Elena arbitration, 113  an international tribunal found that although simple interest seemed, at
+that time, to be awarded more frequently than compound interest, ‘no uniform rule of law has emerged from the practice
+in international arbitration as regards the determination of whether compound or simple interest is appropriate in any given
+case’. 114  In Wena Hotels, 115  an ICSID tribunal went further and found that an award of compound interest is generally
+appropriate in modern arbitration. In recent years, the approach in the Santa Elena and Wena Hotels arbitrations has been
+followed by a large number of arbitral tribunals, such that the award of compound interest is no longer an exception. 116  In
+fact, studies have shown that ICSID awards issued subsequent to Santa Elena have more often than not awarded compound
+interest. 117
+
+Section C. - Remedies, UKBC-REDFERN 530638657 (2025)
+© 2025 Thomson Reuters.
+9
+9. 78
+The reason for this change is that, where the applicable law allows, international arbitral tribunals are reaching the same view
+as that reached nearly 40 years ago by Judge Howard Holtzmann in his dissenting opinion in Starrett Housing Corporation v
+Iran 118 —namely, that simple interest may not always, in the language of Article 38 of the Draft Articles on Responsibility
+of States, ‘ensure full reparation of loss suffered’. As a leading academic in this field has observed:
+[A]lmost all financing and investment vehicles involve compound interest [ … ] if the claimant could have
+received compound interest merely by placing its money in a readily available and commonly used investment
+vehicle, it is neither logical nor equitable to award the claimant only simple interest. 119
+(iv) Enforcing awards that carry interest
+9. 79
+It has already been seen that an award of interest (whether simple or compound) may be prohibited by the relevant national
+law. If this is the law of the arbitration agreement, or of the contract under which the dispute arose, it seems that an arbitral
+tribunal has no option but to apply it. Where parties to a contract have chosen (or are deemed to have chosen) as the substantive
+law of their agreement a law that prohibits the payment of interest, they can scarcely complain if interest is not payable.
+9. 80
+If the law of the place of arbitration (the lex arbitri) forbids the payment of interest, it may theoretically be possible for the
+arbitral tribunal to disregard this local law and apply the substantive law of the contract. But if the provisions of the local
+law are mandatory, there is a risk that the award could be attacked and rendered invalid under the law of the place where it
+was made. It follows that an arbitral tribunal sitting, for example, in Saudi Arabia but applying French law as the substantive
+law of the contract, should be cautious when considering an award in respect of interest, even though this is permitted by
+the substantive law of the contract. Certainly, any award of interest should be clearly separated from the other parts of the
+award. 120
+9. 81
+What of the law of the place of enforcement? At the time of the arbitration, it is hardly possible for an arbitral tribunal to do
+more than make an informed guess as to the likely place of enforcement of its eventual award—and even this will be difficult
+until the arbitral tribunal has formed a view as to which party is likely to win the arbitration. It is suggested that, in deciding
+whether or not to award interest, an arbitral tribunal cannot be expected to take into account the likely consequences of such
+an award in a potential place of enforcement unless the point is expressly brought to its attention by one or both of the parties,
+in which case the point would have to be considered.
+(v) Post-award interest
+9. 82
+In general, it is also open to arbitrators to set a rate of post-award interest at any reasonable percentage that they deem
+appropriate. 121  This is often the rate that would apply to a judgment in the country in which the award is made. But, in
+modern practice, arbitral tribunals often decline to distinguish between pre- and post-award interest; instead, arbitral tribunals
+often award a single rate of interest to run for the whole period from a certain date (which may include the date of the breach,
+or the date on which the loss was suffered, or the date of the request for arbitration, depending on the applicable law and on the
+way in which the arbitral tribunal decides to exercise any discretion available to it) up to the date of payment of the award. 122
+9. 83
+In some instances, once an arbitral award is enforced in a particular country as a judgment of a court, the post-award
+interest rate may be replaced by the rate applicable to civil judgments. 123  In England, however, section 49(3) of the English
+Arbitration Act 1996 permits the arbitral tribunal to exercise its discretion to award interest up to the date of payment.
+
+Section C. - Remedies, UKBC-REDFERN 530638657 (2025)
+© 2025 Thomson Reuters.
+10
+(j) Costs
+9. 84
+A claim in respect of the costs incurred by a party in connection with an international arbitration is, in principle, no different
+from any other claim, except that it is not usually quantified until the end of the arbitral proceedings.
+9. 85
+Given the growing scale and costs of many international arbitrations, it is not surprising that the allocation of costs as between
+the parties is an increasingly important feature of any proceeding.
+9. 86
+The world’s major arbitral institutions generally distinguish between the ‘costs of the arbitration’ and ‘costs of the parties’.
+These are broad summaries of the terminology used in the UNCITRAL Rules, 124  the ICC Rules, 125  the ICDR Rules, 126  SCC
+Rules, 127  the Rules of the SIAC, 128  and the LCIA Rules. 129  However, as in the previous edition of this book, this section
+addresses three separate categories for the purpose of discussing claims in respect of costs:
+ 
+•‘costs of the tribunal’ (that is, the fees and expenses of the tribunal);
+ 
+•‘costs of the arbitration’ (including the charges for administration of the arbitration by an arbitral institution, the hiring of
+hearing rooms, interpreters and transcript preparation, amongst other things); and
+ 
+•‘costs of the parties’ (including the costs of legal representation, expert witnesses, witness and other travel-related
+expenditure, amongst other things).
+Each of these categories is now considered in turn.
+(i) Costs of the tribunal
+9. 87
+The costs of the tribunal usually include not only the fees, and travel-related and other expenses, payable to the individual
+members of the arbitral tribunal itself, but also any directly related expenses, such as the fees and expenses of any experts
+appointed by the arbitral tribunal. Also included in the tribunal costs are the fees and expenses of any administrative secretary
+or registrar, 130  and any other incidental expenses incurred by the arbitral tribunal for the account of the case. In institutional
+arbitration, the costs of the tribunal are usually fixed or approved by the relevant institution pursuant to its rules. Some
+institutions, as already stated, adopt an ad valorem system of remuneration; others adopt a time/cost system, with an hourly
+rate that will be fixed by the institution, and will usually be subject to an upper limit. The UNCITRAL Rules require
+the tribunal to inform the parties of the methodology that it proposes to use in determining its costs and expenses. This
+methodology is then subject to challenge by the parties. Thereafter, in any award rendered, the tribunal must fix its costs and
+expenses consistently with this methodology, and any party may request the appointing authority or the Secretary-General
+of the Permanent Court of Arbitration (PCA) to review the calculations. 131
+(ii) Costs of the arbitration
+9. 88
+The costs of the arbitration include the charges for administration of the arbitration by an arbitral institution (if the arbitration
+is administered), the costs of hiring rooms for hearings, as well as the fees and expenses of court reporters and interpreters and,
+where appropriate, those who provide remote hearing services. These costs, except those of the arbitral institution, are usually
+paid directly by the parties in equal shares, pending the tribunal’s determination regarding allocation of costs in its final
+
+Section C. - Remedies, UKBC-REDFERN 530638657 (2025)
+© 2025 Thomson Reuters.
+11
+award. Occasionally, where the arrangements are made by the chairman of the tribunal, or by an administering institution,
+such costs are paid from the deposits held by the arbitral tribunal or the institution.
+(iii) Costs of the parties
+9. 89
+The costs of the parties include not only the fees and expenses of the legal representatives engaged to represent the parties
+at the arbitration hearing, but also the costs incurred in the preparation of the case. There will also be other professional fees
+and expenses, such as those of accountants or expert witnesses, as well as the hotel and travelling expenses of the lawyers,
+witnesses, and others involved in the case as well as copying and printing charges, telephone, email, and other data expenses.
+All of these costs are likely to be substantial in a major case.
+9. 90
+The parties also incur costs that may be considerable in terms of the time spent on the case by senior officials, directors, or
+employees of the parties themselves, to say nothing of the indirect costs of disruption to their ordinary business. In a major
+arbitration, a small management team may be constituted to take charge of the case, liaising with the lawyers and reporting
+back to senior management. The cost of such ‘executive’, or ‘management’, time may be high. This poses an important
+question. If it is possible to recover the legal costs and expenses of bringing or defending a claim in arbitration, should it be
+possible to recover the cost of executive time, particularly if this includes—as it often does—the cost of in-house counsel?
+9. 91
+Traditionally, such costs have been regarded as part of the normal cost of running a business enterprise or a government
+department, rather than the recoverable costs of the winning party. 132  The UNCITRAL Rules, for example, do not include
+such costs in the definition of what constitutes the ‘costs of the arbitration’. 133  It may be possible to include them, however,
+as part of a claim for the damages caused, for example, by the respondent’s breach of contract, although this would pose
+questions as to whether or not such losses were too remote to be recoverable.
+9. 92
+Parties to international arbitrations are increasingly making use of third-party funding, which in turn is leading to claims for
+the award of such costs as part of the ‘other costs’ incurred in connection with the arbitration. There is authority in England
+that an arbitrator’s general power to award costs includes the power to award the costs of third-party funding as ‘other costs’
+of a party, 134  and given the increasing use of such funding in international arbitration it seems certain that such claims will
+become more common in the future.
+(iv) Assessment
+9. 93
+In assessing how costs should be allocated, many institutional rules expressly adopt the principle that ‘costs follow the
+event’ 135  (which used to mean ‘winner takes all’ but now means, more appropriately, that the allocation of costs between the
+parties should reflect their relative success or failure in the arbitration). Other rules, however, are less explicit. For example,
+the SIAC Rules, while recognising the tribunal’s power to determine the apportionment of costs, provide no guidance on how
+it should do so. 136  In the authors’ experience, it is increasingly common for arbitral tribunals broadly to adopt the principle
+that ‘costs follow the event’ as a starting point, thereafter adjusting the allocation of costs as necessary depending on the
+specific circumstances of the case. 137
+9. 94
+Many sets of arbitration rules provide further guidance on the circumstances a tribunal may take into account in allocating
+costs. For example, the ICC Rules indicate that the tribunal may consider such circumstances as it considers relevant
+(including the extent to which each party has conducted the arbitration in an expeditious and cost-effective manner) before
+making a decision on the amount of costs to be awarded. 138  A similar provision appears in the 2020 version of the LCIA
+
+Section C. - Remedies, UKBC-REDFERN 530638657 (2025)
+© 2025 Thomson Reuters.
+12
+Rules. 139  The UNCITRAL Rules adopt a more conservative approach: while recognising that the arbitral tribunal may
+take into account the circumstances of the case when allocating costs between the parties, they do not explicitly mention
+cooperative or disruptive behaviour of the parties as a factor.
+9. 95
+Claims for recovery of parties’ legal costs usually set out the time spent on the case by individual lawyers within the parties’
+legal team, together with a note of their individual ‘chargeout’ rates as fixed by their particular firm. It is then a simple matter
+of multiplication to arrive at a figure for the total costs of the legal fees. However, there is no necessary correlation between
+the time spent by a lawyer on a particular line of enquiry, research, or argument and the value of that time, in terms of the end
+result. Even if it is assumed that every minute spent on the case was of value—a somewhat brave assumption—the hourly
+‘charge-out rate’ of the lawyers concerned will almost certainly vary from one country to another, and from place to place
+within the same country. In consequence, the tribunal will need to exercise its own judgement and experience in deciding (in
+retrospect) broadly how much time should reasonably have been spent on the case and what hourly rates should reasonably
+have been charged.
+9. 96
+A less difficult problem is that of deciding when the assessment of costs should be made. Arbitration rules, such as those of
+UNCITRAL 140  and the SCC, 141  give their answer, providing for the costs of the arbitration to be fixed in the award. The
+ICC Rules 142  provide differently, permitting the tribunal to make decisions as to costs at any time during the arbitration.
+This means that if there is, for instance, an application to stop the arbitration on the grounds of lack of jurisdiction and this
+application is refused, the arbitral tribunal, in giving its decision, would be entitled to order the unsuccessful applicant to pay
+the costs of the application. In practice, most tribunals prefer not to spend time dealing with applications for costs during the
+course of the proceedings, but leave it to their final award.
+9. 97
+In the authors’ experience, there is very much more concern by lawyers and their clients than was once the case, about the
+money they have spent and are spending on the arbitration and the likelihood of recovering some, if not all, of that money.
+This is not surprising, given the very substantial costs that may be incurred, with the total sum in high profile cases running
+into many millions of dollars. This emphasis on costs places an additional burden on the tribunal, in deciding what specific
+items of costs to award and how to allocate them as between the parties.
+9. 98
+In previous editions of this book, the authors suggested that most international arbitral tribunals that make an award of costs
+in favour of the winning party tend to adopt a ‘broad-brush’ approach in assessing the amount to be paid, rather than going
+through the bill item by item as a trained and experienced costs assessor would do. Based on our experience both as counsel
+and as arbitrator, we still think this is the case. However, we then went on to commend the approach of Judge Holtzmann,
+an experienced US arbitrator who, in a case in the Iran–United States Claims Tribunal, proposed criteria that included the
+following questions for the tribunal to ask itself:
+ 
+•Is the amount of the costs claimed reasonable?
+ 
+•Are the circumstances of the particular case such as to make it reasonable to apportion such costs?
+9. 99
+On the criteria of reasonableness, Judge Holtzmann said:
+The classic test of reasonableness is not, however, an invitation to mere subjectivity. Objective tests of
+reasonableness of lawyers’ fees are well known. Such tests typically assign weight primarily to the time spent
+and complexity of the case. In modern practice, the amount of time required to be spent is often a gauge
+of the extent of the complexities involved. Where the Tribunal is presented with copies of bills for services,
+or other appropriate evidence, indicating the time spent, the hourly billing rate, and a general description
+of the professional services rendered, its task need be neither onerous nor mysterious. The range of typical
+hourly billing rates is generally known and, as evidence before the Tribunal in various cases including this one
+indicates, it does not greatly differ between the US and countries of Western Europe, where both claimants and
+respondents before the Tribunal typically hire their outside counsel. Just how much time any lawyer reasonably
+needs to accomplish a task can be measured by the number of issues involved in a case and the amount of
+
+Section C. - Remedies, UKBC-REDFERN 530638657 (2025)
+© 2025 Thomson Reuters.
+13
+evidence requiring analysis and presentation. While legal fees are not to be calculated on the basis of the pounds
+of paper involved, the Tribunal by the end of a case is able to have a fair idea, on the basis of the submissions
+made by both sides, of the approximate extent of the effort that was reasonably required. Nor should the Tribunal
+neglect to consider the reality that legal bills are usually first submitted to businessmen. The pragmatic fact that
+a businessman has agreed to pay a bill, not knowing whether or not the Tribunal would reimburse the expenses,
+is a strong indication that the amount billed was considered reasonable by a reasonable man spending his own
+money, or the money of the corporation he serves. 143
+9. 100
+A number of subsequent Iran–United States Claims Tribunal awards have referred to, and adopted, this test as a guide. 144
+Furthermore, in the more recent, much publicised, and very substantial Yukos cases, 145  a highly distinguished tribunal, also
+applying the UNCITRAL Rules, adopted a similar approach. Judge Holtzmann’s statement, made over thirty years ago, has
+stood the test of time well. However, there are now two comments which we think we should make. First, whilst the fees
+charged by US lawyers in international arbitrations are perhaps, as Judge Holtzmann says, still comparable ‘to those charged
+in countries of Western Europe’, this may not be correct for all of the rest of the world; secondly, whilst the fact that the client
+(‘a businessman’) has agreed to the amount of the fees is certainly a factor to be taken into consideration, it may not be a
+‘strong indication’ that those fees are reasonable, but merely that the businessman concerned is accustomed to a level of fees
+that may well be very much higher than other businessmen, states, or corporations can afford.
+(k) Requirements imposed by national law
+9. 101
+Most national legislation is silent concerning awards of costs in international arbitrations. 146  The Model Law also does not
+address this question. Some states that have adopted the Model Law have added provisions regarding awards of the costs of
+arbitration, but not many. 147  As with interest, and indeed all other matters concerning the powers of the tribunal, any specific
+provisions of the lex arbitri concerning costs must be respected. However, the practices of national courts in following their own
+rules in relation to awarding costs do not appear to be an appropriate guide for the way in which an international tribunal should
+exercise the discretion granted to it under either the relevant set of rules or the lex arbitri. 148  It is suggested that international
+tribunals, wherever the seat of arbitration, should be guided by the lex arbitri and by the applicable substantive law as to the
+scope of its discretion, and by the applicable arbitration rules (if any) as to the exercise of that discretion.
+Footnotes
+54
+Lesotho Highlands Development Authority v Impregilo SpA and ors [2003] EWCA Civ 1159.
+55
+Lesotho Highlands Development Authority v Impregilo SpA and ors [2005] UKHL 43.
+56
+LCIA Rules, Art. 26.3.
+57
+ICDR Rules, Art. 34.4.
+58
+Lew, Mistelis, and Kröll, Comparative International Commercial Arbitration (Kluwer Law International, 2003), p. 651.
+59
+British Airways Board v Laker Airways Ltd [1985] AC 58 (HL).
+60
+See paragraph 9.161. It would lead to an absurd result if an arbitral tribunal applying US antitrust law could determine the
+issue of liability under that law, but not award the mandatory remedy provided for in that law. The point was considered
+by a US court in PPG Inc v Pilkington Plc (1995) XX YBCA 885.
+61
+In ICC Case No. 5946 (1991) XVI YBCA 97, at 113, an ICC arbitration held in Geneva, a claim was made for exemplary
+damages, but this claim was refused on the basis that: ‘damages that go beyond compensatory damages to constitute
+a punishment of the wrongdoer [… punitive or exemplary damages], are considered contrary to Swiss public policy,
+which must be respected by an arbitral tribunal sitting in Switzerland even if the arbitral tribunal must decide a dispute
+according to a law that may allow punitive or exemplary damages as such: see Art 135(2) Switzerland’s Federal Code
+
+Section C. - Remedies, UKBC-REDFERN 530638657 (2025)
+© 2025 Thomson Reuters.
+14
+on Private International Law of December 1987, which refuses to allow enforcement of a judgment awarding damages
+that cannot be awarded in Switzerland [ … ]’.
+62
+See Rookes v Barnard [1964] AC 1129. The three categories are: (a) abuse of power by servants of the government;
+(b) conduct that was motivated by the pursuit of profits; and (c) where punitive, or ‘exemplary’, damages expressly
+authorised by statute.
+63
+For contract cases, see Addis v Gramophone Co. Ltd [1909] AC 488, with exceptions to the general rule at 495. For
+actions in tort, see Rookes v Barnard [1964] AC 1129, [1967] 1 Lloyd’s Rep 28 (HL).
+64
+Examples of statutes that provide for multiple damages in the United States are the Racketeer Influenced and Corrupt
+Organizations Act of 1970 (RICO) and antitrust laws that provide for triple damages.
+65
+Bundesgerichtshof (Neue Juristische Wochenschrift, 1992), at 3096ff. The Court has affirmed it in two more recent
+decisions: BVerfG, Beschluß vom 24.01.2007—2 BvR 1133/04; BVerfG, Beschluß vom 14.06.2007—2 BvR 2247/06.
+66
+Similarly, Dutch courts have held that a judgment to pay punitive damages cannot be recognised and enforced in the
+Netherlands without further enquiry: see the decision of the District Court of Rotterdam, 17 February 1995, [1996]
+NIPR 205, at 207.
+67
+For a comprehensive review of the powers of arbitrators to award punitive damages, see Gotanda, Supplemental
+Damages in Private International Law (Kluwer Law International, 1998), pp. 226–229.
+68
+While neither the US Federal Arbitration Act of 1925 (FAA) nor the Uniform Arbitration Act of 1955, as amended
+(UAA), expressly specifies the remedies available in international arbitrations taking place in the United States (e.g.,
+the UAA, s. 21, empowers arbitrators to ‘order such remedies as the arbitrator considers just and appropriate under the
+circumstances of the arbitration proceeding’), courts have confirmed that arbitrators have the power to award specific
+performance even if the arbitration agreement does not specify this remedy: see, e.g., Brandon v MedPartners Inc., 203
+FRD 677, 686 (SD Fla. 2001).
+69
+English Arbitration Act 1996, s. 48(5)(b).
+70
+Where enforcement takes place in a New York Convention State, there is nothing in the New York Convention that gives
+the court power to resist enforcement simply on the basis that the award contains an order for specific performance.
+71
+English Arbitration Act 1996, s. 48(5)(a).
+72
+Cambodia v Thailand [1962] ICJ Rep 6.
+73
+Legal Consequences of the Construction of a Wall in the Occupied Palestinian Territory, Advisory Opinion [2004] ICJ
+Rep 136.
+74
+Ibid., at [153].
+75
+Bernhard von Pezold and others v Republic of Zimbabwe, ICSID Case No. ARB/10/15, Award, 28 July 2015, at [744].
+In this case, the tribunal considered that, in order to achieve full reparation, it was also necessary to award claimants
+compensation for losses incurred as a result of the expropriations.
+76
+Case Concerning the Factory at Chorzów (Claim for Indemnity) (Germany v Poland) (the Chorzów Factory case) [1928]
+PCIJ Series A No. 17, at 47 (emphasis added).
+77
+ICSID Case No. ARB/06/11, Decision on Provisional Measures, 17 August 2007, IIC 305 (2007).
+78
+IIC 305 (2007).
+79
+See also RREEF v Kingdom of Spain, ICSID Case No. ARB/13/30, at 473 (in which the tribunal held that restitution
+would not be an appropriate remedy as it would imply ‘repealing laws and regulations’ and would accordingly amount
+to a disproportionate interference with Spain’s sovereignty). To the same effect, see also Antin v Kingdom of Spain,
+ICSID Case No. ARB/13/3, at 636 and Masdar v Kingdom of Spain, ICSID Case No. ARB/14/1, at 559.
+80
+See, e.g., ICC Rules, Art. 28.2; UNCITRAL Rules, Art. 26. See paragraphs 7.28ff.
+81
+Bharat Aluminium Co. v Kaiser Aluminium Technical Services Inc. (2012) 9 SCC 552.
+82
+This prior rule was applicable only in respect of proceedings pursuant to arbitration agreements executed after 6
+September 2012. In respect of arbitration agreements executed prior to this date, the pre-Balco regime as set out in
+Bhatia International v Bulk Trading S.A. (2002) 4 SCC 105 applied. Under the rule in Bhatia, interim relief from Indian
+courts was available in respect of foreign seated arbitrations.
+83
+Indian Arbitration and Conciliation Act 1996, s. 2(2) (as amended).
+84
+PASL Wind Solutions v GE Power Conversion India, Civil Appeal No. 1647 of 2021, 20 April 2021.
+85
+See, e.g., the English Arbitration Act 1996, s. 48(3).
+86
+For further discussion of this arbitration, see Chapter 3.
+87
+The original concession was granted by King Saud of Saudi Arabia in 1933, for a period of sixty years.
+88
+Saudi Arabia v Arabian American Oil Co. (Aramco) (1963) 27 ILR 117, at 145.
+
+Section C. - Remedies, UKBC-REDFERN 530638657 (2025)
+© 2025 Thomson Reuters.
+15
+89
+See West Tankers Inc v Allianz Spa and another [2012] EWCA Civ 27 (in which the English Court of Appeal confirmed
+that the phrase ‘enforced in the same manner as a judgment to the same effect’ in the English Arbitration Act, s. 66(1),
+allows a court to give leave for a declaratory award to be enforced as a judgment). As is clear from the judgment, however,
+this is not a blanket rule and it will be necessary to satisfy the court that such enforcement is appropriate in each case.
+90
+English Arbitration Act 1996, s. 48(5)(c). See also the discussion of the scope of the arbitration clause in Chapter 2,
+paragraphs 2.70–2.80.
+91
+Provided that it is not unlawful or contrary to public policy.
+92
+F & G Sykes (Wessex) Ltd v Fine Fare Ltd [1967] 1 Lloyd’s Rep 53. See also Veeder, ‘England’, in Paulsson and
+Bosman (eds) ICCA International Handbook on Commercial Arbitration (Kluwer Law International, 1984).
+93
+Mamidoil-Jetoil Greek Petroleum Co. SA v Okta Crude Oil Refinery AD [2001] 2 All ER (Comm) 193, at 215.
+94
+Levy, ‘L’interprétation arbitrale’ (2013–14) 4 Rev Arb 861.
+95
+See Anway and von Mehren, ‘The evolution of gas price review arbitrations’, in Rowley KC, Bishop, and Kaiser (eds)
+The Guide to Energy Arbitrations (4th edn, Global Arbitration Review, 2020).
+96
+Available online at http://www.unidroit.org/english/principles/contracts/principles2004/blackletter2004.pdf.
+97
+Unlike classic ‘freezing’ clauses, such provisions are not designed to freeze the legal regime applicable to a contract.
+Rather, they attempt to deal with the consequences of change by providing for the negotiation of contractual amendments
+to reinstate the initial economic balance of the contract (see Partasides and Martinez, ‘Of taxes and stabilization’, in
+Rowley et al. (eds) The GAR Guide to Energy Arbitrations (3rd edn, Global Arbitration Review, 2019)).
+98
+Veeder, ‘Whose arbitration is it anyway: The parties’ or the arbitration tribunal’s? An interesting question?’, in Newman
+and Hill (eds) The Leading Arbitrators’ Guide to International Arbitration (2nd edn, Juris, 2008), p. 344. See also Brower
+and Sharpe, ‘Awards of compound interest in international arbitration: The Aminoil non-precedent’ (2006) 3 TDM 5.
+99
+The approach to interest in Saudi Arabia appears to be the most restrictive amongst Islamic jurisdictions (Saudi
+Arbitration Law, art 55(2)(b); see also Al-Ammari, ‘Arbitration in the Kingdom of Saudi Arabia’ (2014) 30 Arb Intl 387,
+at 406). In contrast, arbitral awards dealing with interest under Shari’ah law in other Islamic jurisdictions have shown
+that it is possible to grant interest, or something akin to interest under another name (see ICC case 7373, Final Award,
+(2004) 15(1) ICC International Court of Arbitration Bulletin 72, in which the tribunal noted that ‘numerous statute laws
+of the Islamic world permit the tribunal to award interest to compensate financial damages. It is well known that Islamic
+banks grant interest to their clients without using the word “interest” ’). See also the decision of the English courts in
+Sanghi Polyesters Ltd (India) v The International Investor KCFC (Kuwait) [2000] 1 Lloyd’s Rep 480.
+100
+Saleh, ‘The recognition and enforcement of foreign arbitral awards in the states of the Arab Middle East’, in Lew (ed.)
+Contemporary Problems in International Arbitration (CCLS/Kluwer, 1986), pp. 348–349.
+101
+Exceptionally, the LCIA Rules, Art. 26.4, provides that the arbitral tribunal may award simple or compound interest up
+to the date of compliance with the award, and without being bound by the rates of interest practised by any state court
+or other legal authority. See also SIAC Rules, r. 32.9. For a discussion of compound interest, see paragraphs 9.75ff.
+102
+See Gotanda, ‘Awarding interest in international arbitration’ (1996) 90 Am J Intl L 40, at 50ff; Gotanda, ‘A study of
+interest’, Villanova University School of Law Working Paper Series No. 83 (August 2007), available online at http://
+digitalcommons.law.villanova.edu/wps/art83/, pp. 3ff.
+103
+See, e.g., the English Arbitration Act 1996, s. 49.
+104
+Accordingly, under German conflict-of-laws rules, if an arbitral tribunal sitting in Germany were to conclude that the
+substantive law of the contract was English, it would apply not only those rules of English law governing interest that
+English law classifies as substantive, but also those rules that English law classifies as procedural, because a court or
+arbitral tribunal sitting in Germany would classify such procedural rules as being of a substantive nature for this purpose.
+105
+English Arbitration Act 1996, s. 49(3). Almost identical provisions are found in the Irish Arbitration (International)
+Commercial Act 1998, s. 10(2), and the Singapore International Arbitration Act, s. 20(1).
+106
+Australian International Arbitration Acts 1974–1989, ss. 25(1) and 26; equivalent provisions are also found in the
+Maltese Arbitration Act 1996, ss. 63(1) and 64.
+107
+Hong Kong Arbitration Ordinance 1997, Ch. 341, ss. 2GH and 2GI; Indian Arbitration and Conciliation Act 1996, s.
+31(7)(a) and (b); Singapore International Arbitration Act (Ch. 143A) 2002, ss. 12(5)(b) and 20.
+108
+As Professor Park observed in his 2002 Freshfields Lecture, there are, in theory, three kinds of arbitrator—namely,
+those who can count and those who cannot: see Park, ‘Arbitration’s Protean nature: The value of rules and the risks
+of discretion’ (2003) 19 Arb Intl 279.
+109
+For the avoidance of doubt, compounding interest involves capitalising interest and accruing further interest on such
+capitalised interest. The difference between simple and compound interest can be significant where the amount in dispute
+is large and the time periods involved are lengthy.
+110
+See also French Civil Code, Art. 1343-2 (providing for the capitalisation of judgment debts after one year); and Brazilian
+Civil Code, Art. 591 (permitting the annual compounding of interest on certain outstanding debts).
+
+Section C. - Remedies, UKBC-REDFERN 530638657 (2025)
+© 2025 Thomson Reuters.
+16
+111
+Arnaldez, Derains, and Hascher, Collection of ICC Arbitral Awards 1991–1995 (Kluwer Law International, 1997), p.
+459.
+112
+Official Records of the General Assembly, F50, 6th Session, Supplement No. 10 (AR/56/10), Ch. IV, E.1.
+113
+Compañía del Desarollo de Santa Elena SA v Republic of Costa Rica (2000) 39 ILM 1317, at [103].
+114
+The tribunal in Santa Elena set out a number of reasons why compound interest may be justified on an expropriation
+award, including in order to ensure full reparation under international law (see Secomb, Interest in International
+Arbitration (Oxford University Press, 2019), at 4.133–4.141).
+115
+Wena Hotels Ltd v Egypt, ICSID Case No. ARB/98/4, Award; IIC 273 (2000), (2002) 41 ILM 896.
+116
+With respect to NAFTA claims, see Pope Talbot v Government of Canada, Award on Damages, Ad hoc UNCITRAL, IIC
+195 (2002); SD Myers Inc. v Government of Canada, Second Partial Award, Ad hoc UNCITRAL, IIC 250 (2002). Other
+awards include Middle East Cement Shipping and Handling G SA v Arab Republic of Egypt, ICSID Case No. ARB/99/6,
+Award, IIC 169 (2002); CME Czech Republic BV v Czech Republic, Ad hoc UNCITRAL, Final Award and Separate
+Opinion, IIC 62 (2003); Azurix Corporation v Argentine Republic, ICSID Case No. ARB/01/12, Award, IIC 24 (2006);
+ADC Affiliate Ltd, ADC & ADMC Management Ltd v Republic of Hungary, ICSID Case No. ARB/03/16, Award, IIC
+1 (2006); UAB E Energija (Lithuania) v Republic of Latvia, ICSID Case No. ARB/12/33, Award, 22 December 2017;
+Gavrilovic and Gavrilovic d.o.o. v Republic of Croatia, ICSID Case No. ARB/12/39, Award, 26 July 2018; RREEF
+Infrastructure (G.P.) Limited and RREEF Pan-European Infrastructure Two Lux S.à r.l. v Kingdom of Spain, ICSID
+Case No. ARB/13/30, Award, 11 December 2019. All of these decisions are in the public domain and can be found online
+at http://icsid.worldbank.org.
+117
+Uchkunova and Temnikov, ‘A procrustean bed: Pre- and post-award interest in ICSID arbitration’ (2014) 29 ICSID Rev
+648, at 659 (finding that only 10 out of 42 awards post Saint Elena applied simple interest).
+118
+Iran–US CTR 122, 269 (1983).
+119
+Gotanda, ‘Awarding interest in international arbitration’ (1996) 90 Am J Intl L 40, at 61.
+120
+Commentators recommend that awards that might potentially be enforced in Saudi Arabia should contain separate
+dispositions for compensation and interest respectively (see Secomb, Interest in International Arbitration (Oxford
+University Press, 2019), at 2.136).
+121
+For a comprehensive review of the power of arbitrators to award post-award interest, see Gotanda, Supplemental
+Damages in Private International Law (Kluwer Law International, 1998), pp. 85–93.
+122
+Sometimes tribunals may impose a higher rate for post-award interest than pre-award interest (see, e.g., Gold Reserve
+Inc. v Venezuela, ICSID Case No. ARB(AF)/09/1, Award of 22 September 2014, at [856]). This approach is intended
+to incentivise the award-debtor to satisfy the award promptly. In the investment treaty context, however, this approach
+has been criticised as unjustifiably ‘imply[ing] that there are reasons to believe that the State will not fulfil its
+international obligation to comply promptly’ (see, e.g., Antin Infrastructure Services Luxembourg S.à.r.l. and Antin
+Energia Termosolar B.V. v Kingdom of Spain, ICSID Case No. ARB/13/31, Award, 15 June 2018, at [733]).
+123
+In respect of the US see, e.g., Carte Blanche (Singapore) Pte Ltd v Carte Blanche Intl Ltd, 888 F2d 260 (2d Cir 1989)
+268–70 (holding that the relevant statutory rate was mandatory once the award was submitted to court for enforcement).
+124
+UNCITRAL Rules, Art. 40.1 and 40.2.
+125
+ICC Rules, Art. 38.1.
+126
+ICDR Rules, r. 34.
+127
+SCC Rules, Arts 49 and 50.
+128
+SIAC Rules, Art. 35.1 and 35.2.
+129
+LCIA Rules, Art. 28.1.
+130
+LCIA Rules, Art. 14.13; SIAC Rules, Art. 35.2.c.
+131
+UNCITRAL Rules, Art. 41.3 and 41.4.
+132
+See Gotanda, Supplemental Damages in Private International Law (Kluwer Law International, 1998), p. 191.
+133
+UNCITRAL Rules, Art. 40.
+134
+Essar Oilfields Services Limited v Norscot Rig Management PVT Limited [2016] EWHC 2361 (dismissing a serious
+irregularity challenge under the English Arbitration Act, s. 68(2)(b) to an ICC award in which the arbitrator awarded
+Norscot the £1.94 million costs of third-party funding it had obtained in order to bring the arbitration).
+135
+CIETAC Rules, Art. 52(2); DIS Rules, Art. 35.2; LCIA Rules, Art. 28.4; PCA Rules, Art. 42(1); UNCITRAL Rules,
+Art. 42(1).
+136
+SIAC Rules, rr. 35.2, 37.
+137
+Decisions on Costs in International Arbitration, 2015(2) ICC Dispute Resolution Bulletin, para. 13.
+138
+ICC Rules, Art. 38.5.
+
+Section C. - Remedies, UKBC-REDFERN 530638657 (2025)
+© 2025 Thomson Reuters.
+17
+139
+LCIA Rules, Art. 28.4.
+140
+UNCITRAL Rules, Art. 40.
+141
+SCC Rules, Art. 49.5.
+142
+ICC Rules, Art. 38.3.
+143
+Separate opinion of Judge Holtzmann, reported in [1985] Iranian Assets Litigation Reporter 10860, at 10863; (1985)
+8 Iran–US CTR 329, at 332–333.
+144
+For a detailed review of the practices of the Iran–United States Claims Tribunal, see van Hof, Commentary on the
+UNCITRAL Arbitration Rules (Kluwer Law International, 1991), pp. 293-311.
+145
+For example, see Yukos Universal Ltd (Isle of Man) v The Russian Federation, PCA Case No. AA 227, UNCITRAL,
+18 July 2014, at [1887].
+146
+By way of exception, see the English Arbitration Act, s. 61.
+147
+Born, International Commercial Arbitration (2nd edn, Kluwer Law International, 2014), p. 3087.
+148
+For a comprehensive review of the practices of international tribunals concerning the award of costs, see Gotanda,
+Supplemental Damages in Private International Law (Kluwer Law International, 1998), pp. 173-192.
+End of Document
+© NIGEL BLACKABY KC, CONSTANTINE PARTASIDES
+KC, ALAN REDFERN

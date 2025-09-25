@@ -1,0 +1,73 @@
+Article 25(4): Tribunal’s right to require additional evidence, UKBC-ICCARBN 474406985...
+© 2025 Thomson Reuters.
+1
+Article 25(4): Tribunal’s right to require additional evidence
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+Article 4 of the IBA Rules on Evidence
+Article 25(4): Tribunal’s right to require additional evidence
+“At any time during the proceedings, the arbitral tribunal may summon any party to provide additional evidence.”
+25-54
+Article 25(4) refers to requests by the Tribunal to provide evidence. In most instances, the request to provide documents is
+initiated by the opposing party in the proceedings.
+25-55
+The issue of whether, when and under what conditions a Tribunal should require production of documents from a party in
+international arbitration has been a matter of much debate, and is a matter of great concern to many parties. 380  The origin of the
+debate is the difference in practice between common law countries and civil law countries with respect to providing evidence.
+For American litigators, documentary discovery, interrogatories and deposition discovery are an integral part of the judicial
+fact-finding process. 381  In addition, in American procedure, third parties can be required to provide evidence with respect to
+court proceedings. English court procedure provides for documentary disclosure of documents by one party to the other party if
+the documents relate to the matters in issue in the case and, in exceptional cases, for disclosure by third parties. These common
+law approaches have been contrasted with the civil law approach, where it is basically up to each party to obtain and submit
+the evidence on which it relies. 382  However, in considering these approaches, it should be noted that American courts and
+English law both favour limited discovery in arbitration, 383  although the difficulty lies in the practical application of this rule
+to concrete requests for document production.
+25-56
+The IBA Rules on Evidence set out what is meant to be a compromise between the common and civil law approaches as regards
+documentary disclosure. Tribunals (and parties) often decide not to adopt the Rules as such, but to agree that the principles in
+the IBA Rules on Evidence will be a point of reference for the Tribunal in considering issues such as requirements that the
+parties disclose documents. In this respect, the approach of the Tribunal in the Reineccius case appears to reflect the practice
+of some international arbitrators to refer to the IBA Rules on Evidence as guidelines. 384  In addition, even if the IBA Rules on
+Evidence have not been accepted as such by the Tribunal, parties dealing with international Tribunals use them. 385
+Footnotes
+380
+Lionnet, “Once Again: Is Discovery of Documents Appropriate in International Arbitration?” in Liber Amicorum Robert
+Briner, op. cit., p.492; Kaufman-Kohler, “Discovery in International Arbitration: How Much is Too Much?” (Jan./
+Feb. 2004) SchiedvsVZ, p.13; Bernini, “The civil law approach to discovery: a comparative overview of the taking of
+evidence in the anglo-american and continental arbitration systems” in The Leading Arbitrators’ Guide in International
+Arbitration, op. cit., p.269; Brower and Sharpe, “Determining the extent of discovery and dealing with request for
+discovery: perspectives from the common law” in The Leading Arbitrators’ Guide in International Arbitration, op. cit.,
+
+Article 25(4): Tribunal’s right to require additional evidence, UKBC-ICCARBN 474406985...
+© 2025 Thomson Reuters.
+2
+p.307; King and Bosman “Rethinking Discovery in International Arbitration: Beyond the Common Law, Civil Law
+Divide” [2001] ICC ICArb. Bull. Vol.12 No.1, p.24; Cremades, “Powers of the arbitrators to decide on the admissibility
+of evidence and to organise the production of evidence” [1999] ICC ICArb. Bull. Vol.10 No.1, p.49; Goldman, “Instance
+judiciaire et instance arbitrale internationale” in Etudes offertes à Pierre Bellet, op. cit., p.219; Briner, “The Evaluation
+of Evidence: Some Observations Based on the Practice of the Iran-United States Claims Tribunal” in Liber Amicorum
+Thomas Bär and Robert Karrer (1997), p.41.
+381
+Deposition discovery involves questioning of a witness by the opposing lawyer, under oath and almost invariably not
+in the presence of the judge or arbitrator.
+382
+This is not to say that judges in civil law countries cannot provide a party significant assistance in obtaining documents,
+although not as a matter of routine and in specific circumstances only.
+383
+See for example, COMSAT Corp v NSF, 190 F.3d 269 (4th Cir., 1999): “Parties to a private arbitration agreement forego
+certain procedural rights attendant to formal litigation in return for a more efficient and cost-effective resolution of their
+disputes” cited by Webster, “Party Control in International Arbitration”, op. cit., p.125, n.15; see also s.33 of the English
+Arbitration Act 1996.
+384
+See Reineccius case, para.25-74; Procedural Order No.3 of that arbitration appears to be based on the IBA Principles
+and the Tribunal ordered that any objection to production be filed with reference to the grounds set out in art.9.2 of
+the IBA Rules on Evidence.
+385
+The IBA Rules on Evidence may be of less weight when the parties and the Tribunal all originate from common law
+countries (in which case they may be viewed as permitting too narrow disclosure) or if all arbitrators have a similar
+civil law tradition (in which case they may be viewed as permitting too broad disclosure). However, this is not always
+or even usually the case.
+End of Document
+© 2025 SWEET & MAXWELL

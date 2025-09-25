@@ -1,0 +1,208 @@
+Article 25(3): Appointment by Tribunal of an expert, UKBC-ICCARBN 474407064 (2022)
+© 2025 Thomson Reuters.
+1
+Article 25(3): Appointment by Tribunal of an expert
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+Article 4 of the IBA Rules on Evidence
+Article 25(3): Appointment by Tribunal of an expert
+“The arbitral tribunal, after consulting the parties, may appoint one or more experts, define their terms of reference and
+receive their reports. At the request of a party, the parties shall be given the opportunity to question at a hearing any such
+expert.”
+25-44
+In many ICC arbitrations involving technical matters and/or quantification issues, the parties designate experts as expressly
+foreseen by art.25(2) and submit expert reports. As discussed below, the Tribunal may designate an expert as well, but in ICC
+arbitration Tribunals seldom do so. This is the case whether the parties originate in common law or civil law jurisdictions. The
+most common procedure is to have party-appointed experts. 370
+25-45
+Article 25(3) therefore deals with a situation, which in the practice of ICC arbitration has become the exception. Usually, the
+appointment of an expert by the Tribunal will be at the request of one or both parties and if one or both parties agree to bear
+the cost. 371  If the Tribunal refuses a request to appoint an expert, it should justify that decision in a Procedural Order or in the
+award to avoid due process issues. 372  Rarely will a Tribunal in an ICC arbitration appoint an expert on its own initiative. 373
+25-46
+One of the basic issues with a Tribunal-appointed expert is the selection of the appropriate person. 374  The Tribunal has recourse
+to an expert because of a lack of expertise in an area. The parties frequently have this expertise. Therefore, a Tribunal may find
+it useful to request from the parties either a list of potential experts or an agreement on the name of an expert to be appointed
+by the Tribunal.
+25-47
+The Tribunal may consult the ICC International Centre for Expertise to locate an expert. The Centre forms part of the ICC’s
+International Center for ADR 375  and is part of the ICC headquarters in Paris and has an informal list of potential experts in
+various areas, and enjoys contacts with experts and technical institutions all over the world that may assist it in identifying the
+proper expert. 376  A flat fee of US$5,000 is charged by the Centre to appoint or propose an expert. However, Tribunals that act
+under the ICC Rules are exempt from such charge for the proposal of an expert.
+25-48
+The costs of the expert are dealt with in art.1(12) of App.III of the Rules which provides:
+“Before any expertise ordered by the arbitral tribunal can be commenced, the parties, or one of them, shall pay
+an advance on costs fixed by the arbitral tribunal sufficient to cover the expected fees and expenses of the expert
+as determined by the arbitral tribunal. The arbitral tribunal shall be responsible for ensuring the payment by the
+parties of such fees and expenses.”
+
+Article 25(3): Appointment by Tribunal of an expert, UKBC-ICCARBN 474407064 (2022)
+© 2025 Thomson Reuters.
+2
+25-49
+The costs of the expert are not part of the general costs of the arbitration and the advance on costs of the expert must be paid
+prior to commencement of the expert’s work. 377
+25-50
+The Tribunal drafts the terms of reference for the expert. Whether the obligation to consult the parties applies grammatically to
+the terms of reference (as well as the appointment) of the expert is not clear. 378  However, Tribunals would usually consult the
+parties to ensure that the expert will deal with all technical issues that the parties reasonably deem appropriate.
+25-51
+Article 25(3) does not deal with how the expert conducts his or her activities. Article 6 of the IBA Rules on Evidence provides
+again useful guidelines as to current practice with respect to Tribunal-appointed experts:
+ 
+“1.The Arbitral Tribunal, after consulting with the Parties, may appoint one or more independent Tribunal-
+Appointed Experts to report to it on specific issues designated by the Arbitral Tribunal. The Arbitral Tribunal
+shall establish the terms of reference for any Tribunal-Appointed Expert Report after consulting with the
+Parties. A copy of the final terms of reference shall be sent by the Arbitral Tribunal to the Parties.
+…
+ 
+4.The Tribunal-Appointed Expert shall report in writing to the Arbitral Tribunal in an Expert Report.
+The Expert Report shall contain:
+ 
+(a)the full name and address of the Tribunal Appointed Expert, and a description of his or her
+background, qualifications, training and experience;
+ 
+(b)a statement of the facts on which he or she is basing his or her expert opinions and conclusions;
+ 
+(c)his or her expert opinions and conclusions, including a description of the methods, evidence and
+information used in arriving at the conclusions. Documents on which the Tribunal-Appointed Expert
+relies that have not already been submitted shall be provided;
+ 
+(d)if the Expert Report has been translated, a statement as to the language in which it was originally
+prepared, and the language in which the Tribunal-Appointed Expert anticipates giving testimony at the
+Evidentiary Hearing;
+ 
+(e)an affirmation of his or her genuine belief in the opinions expressed in the Expert Report;
+ 
+(f)the signature of the Tribunal-Appointed Expert and its date and place; and
+ 
+(g)if the Expert Report has been signed by more than one person, an attribution of the entirety or specific
+parts of the Expert Report to each author.
+ 
+5.The Arbitral Tribunal shall send a copy of such Expert Report to the Parties. The Parties may examine
+any information, Documents, goods, samples, property, machinery, systems, processes or site for inspection
+that the Tribunal-Appointed Expert has examined and any correspondence between the Arbitral Tribunal and
+the Tribunal-Appointed Expert. Within the time ordered by the Arbitral Tribunal, any Party shall have the
+opportunity to respond to the Expert Report in a submission by the Party or through a Witness Statement
+or an Expert Report by a Party-Appointed Expert. The Arbitral Tribunal shall send the submission, Witness
+Statement or Expert Report to the Tribunal-Appointed Expert and to the other Parties.
+ 
+6.At the request of a Party or of the Arbitral Tribunal, the Tribunal-Appointed Expert shall be present at an
+Evidentiary Hearing. The Arbitral Tribunal may question the Tribunal-Appointed Expert, and he or she may
+be questioned by the Parties or by any Party-Appointed Expert on issues raised in his or her Expert Report,
+
+Article 25(3): Appointment by Tribunal of an expert, UKBC-ICCARBN 474407064 (2022)
+© 2025 Thomson Reuters.
+3
+the Parties’ submissions or Witness Statement or the Expert Reports made by the Party-Appointed Experts
+pursuant to Article 6.5.”
+25-52
+As art.6(7) of the IBA Rules on Evidence states, it is up to the Tribunal and not the expert to decide the issues. The expert,
+whether party-appointed or Tribunal-appointed, is intended to provide a technical opinion. The drafters of the Rules may have
+seen no need to state the obvious, but it cannot hurt to sometimes reiterate a basic point of procedure, as does art.6(7) of the
+IBA Rules on Evidence.
+25-53
+In ICC Case No.12131, a Tribunal sitting in Switzerland set out its position as to the respective roles of the Tribunal and the
+Tribunal-appointed expert in the following terms:
+ 
+“207.Given the Arbitral Tribunal did not have the specialized knowledge with respect to the technical issues
+raised by the determination of each item of the claimed X know- how set forth in Claimant’s Annex A, it
+appointed upon Claimant’s request and notwithstanding Respondent’s objection thereto a tribunal-appointed
+expert …
+ 
+209.In terms of weighing the evidence, one should bear in mind that the Tribunal is not bound by the Expert’s
+finding. However, should the arbitrators decide to have differing opinions from those of the Expert, they
+ought to provide grounds for their solution in order to preclude any oversight or violation of the right to be
+heard (see Poudret/Besson, Droit comparé de l’arbitrage international, ed.2002, p.595). In other words, there
+are no reasons for the Arbitral Tribunal to divert from the Expert’s findings, unless there is an objectively
+justified material and different solution …” 379
+Footnotes
+370
+With respect to party-appointed experts, art.5(2) of the IBA Rules on Evidence states that the report of the expert shall
+contain: “(a) the full name and address of the Party-Appointed Expert, a statement regarding his or her present and past
+relationship (if any) with any of the Parties, their legal advisors and the Arbitral Tribunal, and a description of his or her
+background, qualifications, training and experience; (b) a description of the instructions pursuant to which he or she is
+providing his or her opinions and conclusions; (c) a statement of his or her independence from the Parties, their legal
+advisors and the Arbitral Tribunal; (d) a statement of the facts on which he or she is basing his or her expert opinions
+and conclusions; (e) his or her expert opinions and conclusions, including a description of the methods, evidence and
+information used in arriving at the conclusions. Documents on which the Party-Appointed Expert relies that have not
+already been submitted shall be provided; (f) if the Expert Report has been translated, a statement as to the language in
+which it was originally prepared, and the language in which the Party Appointed Expert anticipates giving testimony at
+the Evidentiary Hearing; (g) an affirmation of his or her genuine belief in the opinions expressed in the Expert Report;
+(h) the signature of the Party-Appointed Expert and its date and place; and (i) if the Expert Report has been signed by
+more than one person, an attribution of the entirety or specific parts of the Expert Report to each author.”
+371
+See Voser and Mueller, “Appointment of Experts by the Arbitral Tribunal: the Civil Law Perspective” (2006) Business
+Law International Vol.7 No.1, p.73; For examples of a Tribunal appointed expert, see ICC Case No.6057 (1990), (1993)
+J. Int. Arb. No.4 p.1067, and ICC Case No.6673 (1992), (1992) J. Int. Arb. No.4 p.992, note Hascher. Regarding the
+consequences of failure of one party to cooperate with the Tribunal appointed expert, see ICC Case No.6497 (1994),
+(1999) YBCA Vol.XXIV p.71. For an example of a Tribunal appointed expert and a discussion of his procedure and report
+in the context of the Iran-US Claims Tribunal, see Ebrahimi v Iran Award in Cases Nos 44 46 47 (560–44/46/47–3) of 12
+October 1994, 30 Iran-US C.T.R. 170. See decision of Swiss Federal Supreme Court 4A_617/2010, the Swiss Federal
+Supreme Court dismissed an appeal to set aside an arbitral award holding that the right to the appointment of an expert
+by the Tribunal is not violated where the respective request was not made in a timely manner; Dougherty, Sblendorio
+and Diana, “The Use of Tribunal-Appointed Experts in International commercial Arbitration: Practical Observations
+and a Proposal for Ensuring Fairness” (2017), TDM, Vol.14 No.2, p.6.
+
+Article 25(3): Appointment by Tribunal of an expert, UKBC-ICCARBN 474407064 (2022)
+© 2025 Thomson Reuters.
+4
+372
+See ICC Case No.13772 (2006) (Procedural Order), unreported (refusal of the Tribunal to appoint an expert upon
+request of a party) (“[32]. There is very little in the ICC Rules and the Terms of Reference upon which to ground the
+proposition that the tribunal-appointed experts are subsidiary to an obligation upon the parties themselves to put forth
+the evidence they wish to rely on and make their case … [35]. The leading commentaries on the ICC Rules provide
+support for the proposition that in ICC arbitrations the appointment of an expert by the arbitral tribunal is subsidiary to an
+obligation upon the parties themselves to put forth the evidence they wish to rely on and make their case. [36]. Bühler and
+Webster state that: The usual procedure is to have party-appointed experts. Article 25(4) therefore deals with a situation,
+which in practice has probably become the exception. [37]. Derains and Schwartz affirm in relation to Article 25(4) of
+the ICC Rules that: The [tribunal- appointed] expert also should not be used to discharge either party of any obligation
+that it may have to prove its case, although the extent of a party’s related burden may be perceived differently in various
+legal systems … [39]. In this case Respondents have not provided a statement from an accountant or auditor at arm’s
+length from Respondents. That is the nature of the expert whom Respondents would have the Arbitral Tribunal appoint
+in the Request. [40]. Respondents have contended that the Confidentiality Agreement entails a material restriction on
+an expert of this nature appointed by Respondents from having access to Claimant’s documents and that a tribunal-
+appointed expert would be better positioned to do so. [41]. This is, however, not the case … [44]. Again, Respondent
+could commission an expert from outside of their organizations … The Arbitral Tribunal is of the view that Respondents
+are at no material disadvantaged in obtaining their own expert’s report on the matters indicated in the Request. In view
+of the subsidiarity of the tribunal- appointed experts, this is a sufficient ground upon, which to reject the Request …”);
+ICC Case No.4629 (1989), (1993) YBCA Vol.XVIII p.11. In this case, the Tribunal denied a request for a second expert in
+the following terms: “[t]he arbitrators are at liberty to decide whether such an appointment is necessary for the solution
+of the case. Such an expert may be useful or even necessary for technical questions. In the present situation, such utility
+is in no way established. On the contrary, the questions which are typically in the field of activity of an expert have
+already been covered by the [first expert’s] report. This report describes the work done by the defendant party and is
+necessary for the determination of the payment claimed by the Claimants. Other questions such as the ones quoted by
+Respondent are to be resolved by the arbitrators. Moreover, it is their duty to interpret the contractual documents and
+evidences filed by the parties. Appointing a second expert would lead to a replacement of the arbitrators by an expert.
+Therefore, independently from the question of the cost of an expertise, the request of Respondent is to be dismissed.”
+See also Fouchard, Gaillard & Goldman, op. cit., para.1290, at pp.703–704 (“… the arbitral tribunal is never required
+to grant a party’s request for the appointment of an expert. In its 1980 decision in the Air Intergulf v S.E.C.A. case, the
+Paris Court of Appeal held that where the tribunal considers that it has sufficient information to make its decision, its
+refusal to order … the expert investigation requested by a party does not contravene the rights of defense”).
+373
+Article 3.2.b. of the Prague Rules expressly contemplates this possibility, as part of the proactive role that the Tribunal
+is encouraged to take in establishing the facts pursuant to art.3.1.
+374
+In national court proceedings, this seems to be a lesser issue, as there are lists of approved experts and there is generally
+no or a much lesser concern about neutrality of the nationality of the expert.
+375
+The ICC International Center for Expertise was created in 1976, and administers the procedures described in the ICC
+Expert Rules (in force as from 1 February 2015): https://iccwbo.org/content/uploads/sites/3/2015/01/2015-ICC-Expert-
+Rules-ENGLISH-version-1.pdf [accessed 28 April 2021].
+376
+Wolrich, “ICC Expertise—The New, Revised ICC Rules for Expertise: A presentation and Commentary” [2002] ICC
+ICArb. Bull. Vol.13 No.2, p.11, See Section XXVI(B) of the 2021 ICC Note, Doc.3.1.
+377
+Otherwise the arbitrator engages his personal liability. The arbitrator can open a separate trust account, into which the
+advance to cover the expert’s costs can be paid, or have it deposited into an account held by the ICC, see 2021 ICC
+Note, para.247, Doc.3.1.
+378
+It would not make sense to require consultation with the parties prior to receiving the expert report. Therefore,
+grammatically the consultation requirement appears to solely apply to the appointment of the expert.
+379
+ICC Case No.12131 (2006) (Partial Award), unreported.
+End of Document
+© 2025 SWEET & MAXWELL

@@ -1,0 +1,72 @@
+Section 65. - Security for costs and termination of retainer, UKBC-WHITEBK 458578218...
+© 2025 Thomson Reuters.
+1
+Section 65. - Security for costs and termination of retainer
+White Book 2025  | Commentary last updated November 5, 2012
+Volume 2
+Section 7 - Legal Representatives—Costs and Litigation Funding
+Section 7C - The Solicitors Act 1974
+Solicitors Act 1974
+Section 65
+Part III Remuneration of Solicitors
+Contentious business
+65.— Security for costs and termination of retainer
+7C-91
+(1) A solicitor may take security from his client for his costs, to be ascertained by assessment or otherwise, in respect
+of any contentious business to be done by him.
+(2) If a solicitor who has been retained by a client to conduct contentious business requests the client to make a
+payment of a sum of money, being a reasonable sum on account of the costs incurred or to be incurred in the conduct
+of that business and the client refuses or fails within a reasonable time to make that payment, the refusal or failure
+shall be deemed to be a good cause whereby the solicitor may, upon giving reasonable notice to the client, withdraw
+from the retainer.
+Note
+7C-91. 0 Amended by the Legal Services Act 2007 Sch.16 para.61, with effect from 1 January 2010 (SI 2009/3250).
+“Good reason” for terminating a retainer
+7C-91. 1 The question arose whether a solicitor had “good reason” for terminating a retainer, where the client insisted on putting forward
+a case and instructing counsel to argue it which was bound to fail. The Court of Appeal accepted that it may be difficult to draw
+the line between an argument which can properly be articulated, and put forward, even with little prospect of success, and one
+which cannot properly be articulated and which is believed to be bound to fail. In the particular case the client wished to put
+forward grounds which counsel advised were “outside the scope which the law allows” and were “wrong in law”. Solicitors, as
+officers of the court, would understand that they were under a professional duty not to include in the court documents that they
+drafted any contention that they did not consider to be properly arguable; and not to instruct counsel to advance contentions
+that they did not consider to be properly arguable. On the facts, it would be improper in a statutory planning appeal to advance
+
+Section 65. - Security for costs and termination of retainer, UKBC-WHITEBK 458578218...
+© 2025 Thomson Reuters.
+2
+an argument based on the merits of the decision by the inspector which was hopeless and not genuinely arguable. The solicitors
+accordingly had “good reason” for terminating the retainer. The retainer was an entire contract that had not been completed,
+but, since it had been terminated for good reason, the solicitors were entitled to their proper costs: Richard Buxton (Solicitors)
+v Mills Owens [2010] EWCA Civ 122.
+Section 65(2) of the Solicitors Act 1974 provides that in respect of contentious business, solicitors may request a client to pay a
+reasonable sum on account, and failure to do so is good cause for the solicitors to withdraw from the retainer. Where solicitors
+terminate an entire contract before completion for good reason, they are entitled to be paid for the work done (see Richard
+Buxton v Mills-Owen) [2010] EWCA Civ 122; [2010] 1 W.L.R. 977). In deciding whether solicitors had wrongly terminated
+their retainer, the Court of Appeal found that the vital question was whether the solicitors were entitled to and had suspended the
+retainer, or whether they had wrongly terminated their engagement. Suspension and termination were different concepts, thus
+where the solicitors had refused to carry out any further work without payment of bills (in excess of their earlier estimate) the
+court found that the solicitors had not terminated their services but had suspended them pending provision of the fees. The client
+informed the solicitors that he had lost confidence in them, and they took immediate steps to apply to come off the record. The
+client’s termination of the retainer absolved the solicitors from any further performance of the contract, but did not absolve the
+client from paying the costs properly incurred to that date: Cowdery Kaye Fireman & Taylor v Minkin [2012] EWCA Civ 546.
+A building contractor instructed three firms of solicitors in succession to advise on and draft contract specific and bespoke
+amendments to use with standard JSB forms on subcontracts. Having suffered losses as a result of the way in which the contracts
+had been drawn, the Claimant alleged professional negligence against its latest solicitors on the basis that the firm was successor
+in practice to the previous two firms. The previous two firms had been merged and subsequently incorporated into a limited
+liability partnership with the later firm. The claimant argued that the relationship between it and the three firms in succession was
+in fact a single contract retainer. The court held that this argument was unsustainable. A solicitor’s functions and responsibilities
+had primarily to be determined by its retainer, and there was no suggestion or assertion that there was any express agreement
+by which the single contract between the claimant and each of the three firms was concluded. The fact that the same people
+within each of the firms had contact with and gave advice to the claimant did not give rise to there being some general retainer.
+Shepherd Construction Ltd v Pinsent Masons LLP [2012] EWHC 43 (TCC), Akenhead J.
+Where a client complained about the individual conduct of a solicitor at a firm, the firm, by agreement, continued to act at
+a case management conference the following day. Following further complaints the solicitors wrote to the client stating that,
+in view of the complaints, it was unsuitable for them to continue to act for her. A bill of costs was served, which the client
+resisted. The client would not grant a charge over her property, and the solicitors accordingly exercised a lien over the papers.
+The court held that there had been a breakdown of confidence between client and solicitor, the retainer had not been terminated
+irregularly by the solicitors. Either the client had terminated the retainer by making the complaints, or the firm had terminated
+it by giving reasonable notice following the loss of confidence by the client: French v Carter Lemon Camerons LLP [2011]
+EWHC 3252 (QB), John Bowers QC. On appeal, the Court of Appeal concluded that the client had terminated the retainer:
+[2012] EWCA Civ 1180.
+End of Document
+© 2025 SWEET & MAXWELL

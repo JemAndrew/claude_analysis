@@ -1,0 +1,116 @@
+Trade usages, if any, UKBC-ICCARBN 474407051 (2022)
+© 2025 Thomson Reuters.
+1
+Trade usages, if any
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+Trade usages, if any
+21-60
+The reference in art.21(2) to “relevant trade usages” means that the parties to an ICC arbitration are accepting the application of
+such usages, if any, 166  by agreeing to ICC arbitration. 167  The term “trade usage” is itself given different meanings in different
+legal systems. However, in accepting the Rules, the parties are agreeing to an international interpretation of the term. The
+UNIDROIT Principles provide for example in art.1.9(1) that:
+ 
+“(1)The Parties are bound by any usage to which they have agreed and by any practices which they have
+established between themselves.”
+21-61
+Where the Vienna Convention applies to the parties’ sales contract, they are bound “by any usage to which they have agreed
+and by any practices which they have established between themselves” pursuant to art.9(1) CISG. Article 9(2) CISG provides
+that the parties are
+“considered, unless otherwise agreed, to have impliedly made applicable to their contract … a usage of which the
+parties knew or ought to have known and which in international trade is widely known to, and regularly observed
+by, parties to contracts of the type involved in the particular trade concerned.”
+21-62
+The term “usage” is not defined in the CISG. It must be interpreted internationally and autonomously, without recourse to
+preconceived domestic notions. 168  A similar approach is required in relation to the interpretation of “trade usages” under the
+ICC Rules. There is no reason to believe that the term “trade usages” under the ICC Rules means anything different to the term
+“usages” under the CISG.
+21-63
+Definitions of “usages” or “trade usages” in legal commentary and international arbitral awards relating to the CISG and the
+ICC Rules show a number of significant similarities:
+ 
+(a)“all those actions or modes of behaviour (including omissions) that are generally and regularly observed in the course
+of business transactions in a specific area of trade and/or a certain trade center,” 169
+ 
+(b)“rules of commerce which are regularly observed by those involved in a particular industry or market place,” 170
+ 
+(c)“a method of dealing or a way of conduct generally observed by in a particular line of business with such regularity that
+it is accepted as binding by those engaged in that line of business,” 171  and
+ 
+(d)“Naturally, all of this applies only when there are true usages, i.e. usages widely known and regularly observed in the
+sector considered: consequently it is necessary to establish that these are rules that the parties engaged in international trade
+(and particularly in the sector in question) consider applicable with no need for an explicit reference, because they have
+become mandatory as a consequence of steady, widespread usage.” 172
+
+Trade usages, if any, UKBC-ICCARBN 474407051 (2022)
+© 2025 Thomson Reuters.
+2
+21-64
+This consensus is reflected in the UNIDROIT Principles which provide in art.19(2) that:
+“[t]he parties are bound by a usage that is widely known to and regularly observed in international trade by parties
+in the particular trade concerned except where the application of such a usage would be unreasonable.”
+21-65
+The principal test is one of general acceptance by the relevant business community. 173  It is not necessary for all members of
+the relevant business community to be aware of the usage, but it must be known and observed by the majority and there must
+be no considerable group that is unaware of the usage. 174  In addition, the usage must be shown to have existed at the time
+the contract is concluded. 175
+21-66
+The requirement of party knowledge (express or imputed) under art.9(2) of CISG is a corollary of the requirement that a usage
+be widely known and regularly observed in the relevant business community. As explained in the aforementioned ICC award:
+“Obviously, that judgement call [whether a trade usage exists] must be made with prudence, in order to prevent
+the parties from being subject to rules that they could not reasonably expect to apply.” 176
+21-67
+Unlike the Vienna Convention and the UNIDROIT Principles, art.21 does not refer to “practices”. Such practices are based
+on certain behaviour and conduct of the parties which they have observed in their relations over time. They do not amount
+to trade usages.
+21-68
+One of the arguments for arbitration is that its actors, in particular, the arbitrators, are in closer contact with the business
+community than national courts. In choosing arbitrators, frequently prior experience is sought in the particular area of business.
+Therefore, it is not surprising that relevant trade usages are expressly referred to in the Rules.
+21-69
+Article 21(2) appears to place “trade usages” on the same level as the contract. In practice, the impact is more limited if one is to
+judge from the pleadings made by parties and/or the reasons given for awards. Indeed, Tribunals tend to rely on provisions of a
+contract rather than trade usages and it is questionable whether a trade usage can override the express provisions of a contract. At
+most, a trade usage has the same force as an implied term of the contract. Besides, for parties, the difficulty lies often in proving
+the existence of a given trade usage. However, arguably a Tribunal may apply a relevant trade usage pursuant to art.21(2) even
+if the usage does not meet the requirements of custom under national law. The reason appears to be straightforward. Under
+national legal systems, custom must in some instances reach the level of justifying the use of the custom as an implied term of
+the contract. If the parties have agreed on ICC arbitration, they have automatically agreed to art.21(2). Therefore, relevant trade
+usages have become part of the parties’ contract by incorporation of the Rules.
+Footnotes
+166
+The words “if any” were inserted to better fit the situation in investment disputes, where there would normally not be
+such usages.
+167
+Erdem, “The Role of Trade Usages in ICC Arbitration” in Liber Amoricum Lazareff (2011), p.247.
+168
+Kröll, Mistelis, Perales Viscasillas, UN Convention on Contracts for the International Sales of Goods (CISG), (2018),
+p.161, para.20, see also Schlechtriem/Schwenzer, Commentary on the UN Convention on the International Sale of Goods
+(CISG), (2014), 4th edn, C.H. Beck, art.187, para.11.
+
+Trade usages, if any, UKBC-ICCARBN 474407051 (2022)
+© 2025 Thomson Reuters.
+3
+169
+Ferrari, Flechtner, Brand, Draf Digest and Beyond (2003), p.194, quoted with approval in Kröll, Mistelis, Perales
+Viscasillas, op. cit., p.162, para.22.
+170
+Schlechtriem, Schwenzer, op. cit., p.187, para.11.
+171
+C. Schmitthoff, International Trade Usages (1987), ICC Publication No 440/4, p.14, para.12.
+172
+ICC Case No.8873(1997), published in: Collection of ICC Arbitral Awards 1996–2000, (2003), Kluwer/ICC Publishing,
+p.500 at 501/502 (original text in French). See also final award in ICC Case No.8502 (extract) [1999] ICC IntCArb.
+Bull. Vol.10 No.2, 72 (reference to the CISG and UNIDROIT Principles with respect to trade usages).
+173
+Schmitthoff, op. cit., p.51, para.6.
+174
+Schlechtriem/Schwenzer, op. cit., p.190, para.16.
+175
+Schlechtriem/Schwenzer, op. cit., p.190, para.15.
+176
+ICC Case No.8873 (1997).
+End of Document
+© 2025 SWEET & MAXWELL

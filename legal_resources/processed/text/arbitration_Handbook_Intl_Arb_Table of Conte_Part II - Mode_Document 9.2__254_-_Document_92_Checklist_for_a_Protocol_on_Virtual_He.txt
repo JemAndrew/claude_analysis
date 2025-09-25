@@ -1,0 +1,310 @@
+Document 9.2: Checklist for a Protocol on Virtual Hearings..., UKBC-ICCARBN...
+© 2025 Thomson Reuters.
+1
+Document 9.2: Checklist for a Protocol on Virtual Hearings and
+Suggested Clauses for Cyber-Protocols and Procedural Orders
+Dealing with the Organisation of Virtual Hearings
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part II - Models, Precedents and Examples
+Document 9.2: Checklist for a Protocol on Virtual Hearings and Suggested Clauses for Cyber-Protocols and
+Procedural Orders Dealing with the Organisation of Virtual Hearings 1
+II-9. 2
+This document sets out in Annex I, a Checklist for a Protocol on Virtual Hearings (“Checklist”), and in Annex II, Suggested
+Clauses for Cyber-Protocols and Procedural Orders Dealing with the Organisation of Virtual Hearings (“Cyber-Protocol”).
+The Annexes previously formed part of the ICC Guidance Note on Possible Measures Aimed at Mitigating the Effects of
+the COVID-19 Pandemic, dated 9 April 2020. The guidance on virtual hearings provided in the latter are now included
+in section VII(C) of the Note to Parties and Arbitral Tribunals on the Conduct of the Arbitration under the ICC Rules of
+Arbitration, dated 1 January 2021.
+Annex I — Checklist for a Protocol on Virtual Hearings
+A. Pre-Hearing Plan, Scope and Logistics
+ 
+(i)Identifying whether and which issues are essential to be on a hearing agenda and which can be dealt with on
+“documents only”;
+ 
+(ii)Agreeing the number and list of participants (arbitrators, parties, counsel, witnesses, experts, administrative
+secretaries, interpreters, stenographers, technicians, etc.);
+ 
+(iii)Agreeing the number of participants per virtual room and whether a 360º view for all participating rooms is
+required or necessary;
+ 
+(iv)Agreeing regarding virtual rooms that will permit the arbitrators, and each side in the case, to confer privately
+amongst themselves during the hearing;
+ 
+(v)Identifying all log-in locations and points of connection;
+ 
+(vi)Agreeing that each individual present in each virtual room will be identified at the start of the videoconference; and
+ 
+(vii)In light of the above, consulting and agreeing among parties and tribunal on the hearing date, duration and daily
+timetable taking into account the different time zones.
+B. Technical Issues, Specifications, Requirements and Support Staff
+ 
+(i)Consultation between the tribunal and the parties regarding:
+ 
+o the preferred platform and technology to be used (including legal access to such platform and technology);
+ 
+o the minimum system specifications and technical requirements for smooth connectivity (audio and video),
+adequate visibility and lighting in each location;
+
+Document 9.2: Checklist for a Protocol on Virtual Hearings..., UKBC-ICCARBN...
+© 2025 Thomson Reuters.
+2
+ 
+o whether certain equipment is required in each location (phones, back-up computers, connectivity boosters/
+extenders, any other equipment or audio-visual aids as deemed necessary by the parties);
+ 
+(ii)Preliminary check on compatibility of selected platform and technology to be used;
+ 
+(iii)Considering the need for tutorials for participants who are not familiar with the technology, platform, applications
+and/or equipment to be used in the hearing;
+ 
+(iv)Consultation between the tribunal and the parties regarding the contingency measures to be implemented in case
+of sudden technical failures, disconnection, power outages (alternative communication channels and virtual technical
+support for all participants); and
+ 
+(v)Running a minimum of two mock sessions within the month preceding the hearing to test connectivity and
+streaming, with the last session being held one day before the hearing to ensure everything is in order.
+C. Confidentiality, Privacy and Security
+ 
+(i)Consultation between the tribunal and the parties on whether the virtual hearing will remain private and confidential
+to participants;
+ 
+(ii)Agreeing an access and confidentiality undertaking that binds all participants;
+ 
+(iii)Consultation between the tribunal and the parties on:
+ 
+o the recording of the virtual hearing (audio-visual recording, confidentiality of the recording and value of
+recording compared to any produced written transcript, etc.);
+ 
+o any overriding privacy requirements or standards that may impact access or connectivity of certain participants;
+and
+ 
+o the minimum requirements of encryption to safeguard the integrity and security of the virtual hearing against
+any hacking, illicit access, etc.
+D. Online Etiquette and Due Process Considerations
+ 
+(i)Consultation between the tribunal and the parties on the practices needed to safeguard the rights and obligations of
+participants in a virtual environment. This includes: identifying lead speakers, non-interruption, observing reasonable
+and responsible use of the platform and bandwidth, avoiding use of equipment that interferes with connectivity or
+allows illicit recording, agreeing a procedure for objections, etc.;
+ 
+(ii)Obtaining written statements from the parties/counsel that the tested platform and technology are adequate as tested
+by the parties;
+ 
+(iii)Confirming the parties’ agreement on proceeding with a virtual hearing or identifying the legal basis for proceeding
+with a virtual hearing absent such agreement by the parties; and
+ 
+(iv)Advising the parties on their duty to cooperate on technical matters prior to and during the virtual hearing.
+E. Presentation of Evidence and Examination of Witnesses and Experts
+ 
+(i)Consultation between the tribunal and the parties on the organisation and presentation of oral pleadings;
+
+Document 9.2: Checklist for a Protocol on Virtual Hearings..., UKBC-ICCARBN...
+© 2025 Thomson Reuters.
+3
+ 
+(ii)Identifying whether counsel will be using multi-screens for online pleadings, presentation of evidence and agreeing
+the modalities for submitting and showing demonstrative exhibits in a virtual environment;
+ 
+(iii)Consultation between the tribunal and the parties on the examination of witnesses and experts (order of calling
+and examining witnesses/experts, connection time and duration of availability, virtual sequestration, the permission/
+prohibition of synchronous or asynchronous communications between witnesses and parties/counsel in chat rooms
+or through concealed channels of communications, interaction between the examiner and the witness/expert in an
+online environment, etc.); and
+ 
+(iv)Consultation between the tribunal and the parties on virtual transcription and the use of stenographers and
+interpreters that are capable and able to deliver the necessary level of service in a virtual environment.
+Annex II — Suggested Clauses for Cyber-Protocols and Procedural Orders Dealing with the Organisation of
+Virtual Hearings
+I. Participants
+“The tribunal confirms and directs that the hearing scheduled for (insert date and time) shall be conducted by
+videoconference.
+Based on the information currently provided by the parties, the following participants (“Participants”) shall take part in
+the hearing from the locations specified herein below:
+ 
+a. Claimant
+(List names and log-in location(s) and point of connection)
+ 
+b. Claimant’s Counsel
+(List names and log-in location(s) and point of connection)
+ 
+c. Respondent
+(List names and log-in location(s) and point of connection)
+ 
+d. Respondent’s Counsel
+(List names and log-in location(s) and point of connection)
+ 
+e. Tribunal
+(List names of members of the tribunal and their location(s) and point of connection)
+ 
+f. Witnesses / Experts / Transcription Provider / Support Staff & Technicians / Other participants (as
+applicable)
+(List names and log-in location(s) and point of connection)
+Each Participant will promptly notify, by email communication circulated to all Participants, any change to their log-in
+location or connection details.”
+II. Technical Issues, Specifications, Requirements and Support Staff
+“The parties shall each secure a reliable video link connection of sufficient quality that will enable all Participants to
+participate effectively in the hearing through the chosen platform. The parties shall discuss amongst themselves and shall
+furnish the tribunal with a joint list of agreed providers of reliable video conferencing services within .......... days from
+the date hereof, and the tribunal shall consult the parties on their preferred choice from the list of agreed providers prior
+to selecting a provider.
+
+Document 9.2: Checklist for a Protocol on Virtual Hearings..., UKBC-ICCARBN...
+© 2025 Thomson Reuters.
+4
+The parties shall consult and seek to agree on the following within .......... days from the date hereof:
+ 
+(i)the minimum system specifications and technical requirements for continuous and adequate audio-visual
+connectivity (types of operating systems to be used, processors’ speeds, RAM capacity, transmission speeds, network
+bandwidth, etc.);
+ 
+(ii)any hardware, equipment (display screens, high-resolution webcams, noise cancelling microphones or headphones,
+phones, back-up computers, connectivity boosters/extenders, any other equipment or audio-visual aids as deemed
+necessary by the parties) and software applications required for the hearing; and
+ 
+(iii)any location-specific requirements with respect to any location from which a connection is initiated.
+If no agreement is reached regarding the points listed above, the parties shall communicate to the tribunal their separate
+proposals together with an explanation of technical reasons for the specifications and requirements they contend are
+reasonably required for the selected videoconference provider/platform within .......... days from the expiry of the date set
+in the prior paragraph. The parties’ separate proposals shall be submitted to the tribunal in the format attached to this PO
+No. .......... as Annex (1).
+The tribunal shall consider the parties’ joint proposal or separate proposals and confirm or determine the reasonable
+requirements and technical specifications to be adopted for the hearing. In determining the said reasonable requirements
+and specifications the tribunal may be assisted by two party nominated IT experts or a tribunal appointed expert (at the
+parties’ cost), acting independently and objectively assist the tribunal to facilitate the determination of the reasonable
+requirements and specifications. If needed, the tribunal shall, following consultation with the parties, issue any necessary
+protocol to set out the work and assistance to be provided by the IT experts.
+When agreeing all or part of the specifications and requirements listed above, or when the parties communicate to
+the tribunal their separate proposals, the parties shall consider the compatibility of their reasonable requirements and
+specifications with (i) any requirements of the selected provider/platform and (ii) any location-specific requirements for
+all other participants.
+Any tutorials needed for effective and efficient utilisation of the services of the selected video conference service shall be
+promptly scheduled. The parties shall furnish to the tribunal, within .......... days from the date of selection of the video
+conference provider/platform, a proposed schedule for such tutorials. The said tutorials will provide an overview of the
+features and tools available to Participants.
+The parties shall consult and agree (or make separate proposals) on detailed contingency measures to be followed in case
+of technical failures, disconnection, power outages, or other interruptions to the hearing within .......... days from the date
+hereof.
+Representatives of the parties, each of the members of the tribunal and any other Participants in the hearing shall participate
+in a minimum of two test runs to (i) establish that the equipment and technical requirements adopted for the hearing are
+functional and adequate, and (ii) simulate the connections for hearing conditions within the month preceding same. The
+parties shall coordinate and agree with the tribunal the dates, times and duration of such test runs.
+For the avoidance of doubt, it is understood and agreed that the parties, in fulfilling their obligations herein, shall use
+competent support staff possessing the requisite expertise.
+The above requirements shall apply regardless of the type of videoconferencing used, including point-to-point
+videoconferencing, multi-point video conferencing, web-based videoconferencing, videoconferencing over ISDN, etc.).”
+III. Confidentiality, Privacy and Security
+“As a matter of principle, attendance at the hearing will be restricted to the Participants identified in this PO No. .......... or in
+accordance with its terms. For the avoidance of doubt, any technical consultants/support staff working with the Participants
+to facilitate the conduct of the hearing shall also be considered to be attending the hearing and shall be identified as
+Participants. In the event that a party wishes any other person to attend any portion of the hearing, it shall raise a request
+
+Document 9.2: Checklist for a Protocol on Virtual Hearings..., UKBC-ICCARBN...
+© 2025 Thomson Reuters.
+5
+well in advance with the reasons such attendance is necessary or desirable. The parties shall attempt to reach agreement
+on such requests, failing which the tribunal shall decide whether to authorise the request.
+No recording of any part of the hearing (including the audio track) may be made unless authorised in advance by the
+tribunal. An audio recording of the hearing shall be made by the stenographers retained for the purposes of preparing a
+common transcript. Any other proposed recording shall be requested at least 48 hours in advance of the relevant portion
+of the hearing.
+In any event, the official record of the hearing shall be the written transcript as corrected or commented upon by the parties.
+The parties are responsible for jointly considering and raising well in advance of the hearing (no less than two weeks) any
+laws applicable at the location of any Participant that may present an obstacle or issue of legal compliance with privacy,
+confidentiality, data protection and security requirements. After consulting the parties, the tribunal shall decide on what
+measures, if any, to take to address any applicable privacy and security requirements or standards that may impact the
+access or connectivity of any of the Participants.
+In the event that any party considers that further security measures are required to safeguard the integrity of the hearing
+or reduce the risk of cyber attacks, infiltration or unauthorised access to the hearing, that party must raise such concerns
+immediately upon learning of the reason for such concerns. After consulting the parties, the tribunal shall decide what
+further measures, if any, shall be taken in this regard.”
+IV. Online Etiquette and Due Process Considerations
+“To achieve the necessary level of cooperation and coordination for a successful hearing by videoconference, each
+Participant undertakes to observe the following:
+ 
+(i)identify its lead speaker(s);
+ 
+(ii)refrain from interrupting any speaker;
+ 
+(iii)reasonable and responsible use of the video conference facilities;
+ 
+(iv)avoid using equipment that interferes with connectivity;
+ 
+(v)refrain from any unauthorised recording;
+ 
+(vi)avoid wasting time during the hearing;
+ 
+(vii)mute microphones when not speaking;
+ 
+(viii)require the Participants which it brings to the hearing to observe the same obligations; and
+ 
+(ix)take whatever measures or practices are necessary to support the procedural efficiency of the hearing.
+The tribunal - in consultation with the parties - shall set the mechanism for objections on the first hearing day during the
+introductory discussion of housekeeping matters.
+The parties shall each, within .......... days from the date hereof, confirm in writing that (i) they have conducted the test
+runs envisaged above and (ii) the service provider, equipment, technical specifications and requirements are adequate for
+their participation in the hearing.”
+V. Presentation of Evidence and Examination of Witnesses and Experts
+“The tribunal understands that the parties’ oral pleadings will include the use of demonstrative exhibits and presentation of
+certain evidence on record. Accordingly, the parties should ensure that the demonstrative exhibits will be clear and visible
+on a screen to all tribunal members, the other party [parties] and any Participants authorised to attend that portion of the
+hearing. If multi-screens are required for the presentation of demonstrative exhibits and evidence, the parties should ensure
+that such multi-screens are included in the list of required equipment.
+
+Document 9.2: Checklist for a Protocol on Virtual Hearings..., UKBC-ICCARBN...
+© 2025 Thomson Reuters.
+6
+The parties shall coordinate amongst themselves, with a view to agreeing the following within .......... days from the date
+hereof:
+ 
+(i)order of calling and examining witnesses/experts;
+ 
+(ii)connection time and duration of availability for each witness/expert;
+ 
+(iii)modalities for virtual sequestration of witnesses/experts (if any);
+ 
+(iv)permissibility/prohibition of synchronous or asynchronous communications between witnesses/experts and
+parties/counsel in chat rooms or through concealed channels of communications;
+ 
+(v)whether the witness/expert will be sitting in his/her location together with anyone else and whether he/she will be
+assisted by anyone whilst giving his/her testimony; and
+ 
+(vi)whether a witness/expert will require the assistance of an interpreter and the arrangements needed to ensure that the
+interpreter is able to provide his/her services virtually, and whether interpretation will be simultaneous or consecutive,
+and whether certain additional equipment is needed to ensure that the examination process is efficiently well managed.
+In case no agreement is reached regarding any or all of the items listed above, the parties shall communicate to the tribunal
+their separate proposals within .......... days from the expiry of the date set above.
+The tribunal shall consider the parties’ joint proposal or separate proposals with a view to making its determination.
+The parties agree that the hearing shall be transcribed and the parties undertake to jointly propose a virtual transcription
+provider/stenographer who is capable and able to promptly deliver its service via video conference. If the use of
+transcription requires further additional equipment, then parties shall agree with the tribunal on the additional equipment
+which shall be included in the list of required equipment established per the above.
+The tribunal may agree with the parties or require them to make their witnesses/experts available for a hot-tubbing session.
+If so agreed or required, the parties should ensure that their witnesses/experts are readily available at the time and for the
+duration of the hot-tubbing and the process shall proceed as instructed by the tribunal.”
+Annex to Procedural Order
+Technical/Technological Requirements
+[to be discussed/agreed with the parties – case specific]
+PARTY XXX
+PARTY YYY
+PROVIDER/PLATFORM
+REQUIREMENTS
+TRIBUNAL’S
+DETERMINATION
+System Specifications
+Connection Requirements
+Hardware & Equipment
+Software Applications
+Other Requirements
+
+Document 9.2: Checklist for a Protocol on Virtual Hearings..., UKBC-ICCARBN...
+© 2025 Thomson Reuters.
+7
+Footnotes
+1
+© International Chamber of Commerce (ICC). Reproduced with kind permission of ICC. The text reproduced here is
+valid at the time of reproduction in July 2021. As amendments may be made to the text, please refer to the website
+https://iccwbo.org/dispute-resolution-services for the latest version and for more information on ICC dispute resolution
+services. Also available in the ICC Digital Library at http://library.iccwbo.org.
+End of Document
+© 2025 SWEET & MAXWELL

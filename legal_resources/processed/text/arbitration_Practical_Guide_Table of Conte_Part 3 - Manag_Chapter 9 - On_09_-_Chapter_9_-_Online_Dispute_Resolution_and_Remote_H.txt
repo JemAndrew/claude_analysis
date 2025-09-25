@@ -1,0 +1,504 @@
+Chapter 9 - Online Dispute Resolution and Remote Hearings, UKBC-EFFDIS 549291549...
+© 2025 Thomson Reuters.
+1
+Chapter 9 - Online Dispute Resolution and Remote Hearings
+A Practical Guide to Effective Dispute Resolution: Methods & Clauses 1st Ed.
+Mainwork
+Part 3 - Managing Disputes Effectively: Strategic Insights and Technological Advances
+Chapter 9 - Online Dispute Resolution and Remote Hearings
+Online dispute resolution
+9-001
+For the purposes of this chapter, online dispute resolution (ODR) is used as an overarching term encompassing the use of
+technology to facilitate dispute resolution. This covers more than just real-time video or audio conferencing (sometimes referred
+to by IT specialists as synchronous communication) and includes online forms, discussion boards and, most importantly,
+automated tools to guide negotiation or mediation.
+To put the timeline for the development of ODR into context, following the establishment of the World Wide Web and the very
+first website being launched on 20 December 1990, a significant milestone in e-commerce came with the launch of Amazon
+and e-Bay in 1995. 1  The first articles about ODR appeared in 1996 2  and were focused on the resolution of disputes that had
+arisen online (for example, as a result of e-commerce activities).
+The first significant ODR projects launched in around 1996 included the Virtual Magistrate and the Online Ombuds Office. 3
+These projects had limited success, partly due to the challenges of early scepticism facing what was effectively online, automated
+arbitration.
+In 1998, CyberSettle was launched offering a form of automated online mediation that started with the claimant party logging
+in and providing their identity, contact information and details of the claim including the maximum amount they were claiming.
+The system then issued an invitation to the responding party to participate in what was referred to as an “out-of-court blind-
+bidding” process. An offer-phase then started with the system collecting offers but not disclosing these to the other party. The
+parties were allowed to make up to three proposals in total and were informed on each round if their offers did not match. If the
+offers eventually matched, the matching offer would be presented. If there was no consensus, the parties never became aware
+of the other offer and the dispute could then go to court. In the event of failure, the portal offered additional services in the form
+of support from a mediator. 4  In the light of current artificial intelligence (AI) enabled tools, this early version of CyberSettle
+was basic but effective with the primary value being in the connecting and facilitation of a series of offers with the added value
+that the offers remained confidential, unless they reached the point where there was a mutually acceptable offer.
+Soon after CyberSettle was launched, as it became clear that the volume of claims/disputes arising from the growing field of e-
+commerce could not be handled manually, another ODR platform, SquareTrade, was developed to manage disputes from eBay.
+The SquareTrade process was initiated by the buyer or seller filing a complaint, outlining their issues, and providing relevant
+details. In a similar way to CyberSettle, SquareTrade then notified the other party and gave them a set time frame to try and
+resolve the issue whilst facilitating communication between the parties. In this sense, the first stage could be described as a
+form of facilitated negotiation.
+If the parties failed to reach agreement after a set timeframe, then, rather than handing over to a human mediator (per
+CyberSettle), SquareTrade’s system would step in and start an automated evaluative mediation process. This involved
+SquareTrade using algorithms to analyse the information provided, including the original transaction details and any eBay
+policies, and to suggest potential resolutions based on its analysis. If the automated mediation proved unsuccessful, either party
+could request a human mediator to step in.
+The use of this system increased to 60 million disputes per year by 2010 and it has been reported that SquareTrade was able to
+resolve 80% of disputes in this way without any human intervention. 5
+
+Chapter 9 - Online Dispute Resolution and Remote Hearings, UKBC-EFFDIS 549291549...
+© 2025 Thomson Reuters.
+2
+In around 2006, CyberSettle faced challenges as ODR became more mainstream and it was eventually acquired by another
+ODR provider, Modria, with the technology being adopted and developed for use in state courts and city/council enforcement
+departments. The further development of Modria is described in Chapter Ten.
+In around 2007, eBay shifted their approach and moved away from using SquareTrade as an outsourced dispute resolution
+service to bring their dispute resolution processes in-house. This gave them greater oversight and control over the user experience
+and, with millions of transactions, also reduced their costs. As the process was for resolving disputes between buyers and sellers
+(and not against eBay), this did not create any concerns about the fairness of the process.
+Behind this, eBay obtained a further benefit from bringing the dispute resolution in-house in that they could also collect vast
+amounts of data on disputes. This has underpinned eBay’s ability to refine its tools and, more recently, to use AI at various
+stages to try and simplify and speed up the resolution process.
+Taking a different approach, Smartsettle was launched in around 1999 and focused on negotiation as its primary form of dispute
+resolution. Whilst starting with a similar blind-bidding approach where the bids are concealed, it also used algorithms to analyse
+case data and settlement patterns to provide probability estimates of outcomes, which were intended to manage the parties’
+realistic expectations and to guide them towards reaching agreements.
+In this sense it was providing a form of evaluative mediation and/or early neutral evaluation. As with other early attempts
+at ODR, it acknowledged the importance of human-centred processes and started integrating its tools with more traditional
+mediation and arbitration processes.
+It currently offers a range of tools, including tools developed to resolve issues with a single monetary figure as the disputed
+outcome, as well as modelling tools to allow parties to assess their own strategies and model opposing positions and an
+“augmented intelligence” product that allows a negotiator to model more complex multi-dimensional disputes. This approach
+leaves the final decision firmly in the hands of the parties but uses technology to try and enhance the approach to making offers.
+More details on Smartsettle are given in Chapter Ten.
+The proposition of an efficient ODR tool for consumers appeared attractive and has been adopted in various forms across the
+world. However, there are also examples of attempts to introduce national platforms that have failed to develop.
+An example of this is the EU Online Dispute Resolution Platform 6  which was launched in 2016 and worked alongside the
+EU ADR directive (Directive 2013/11/EU) to facilitate communication between the consumer and trader, allowing the trader to
+select an approved local alternative dispute resolution (ADR) institution to help resolve the dispute. One of the objectives was
+to help facilitate digital trade across the EU but, after five years of use, a review showed that although two million consumers
+visited the platform, only 200,000 complaints were filed, and it was determined that the platform was effectively redundant. This
+is reported to be because effective private tools had been developed by the major online traders. As a result, the EU Commission
+is proposing to repeal the ODR Regulation that enabled the platform. 7
+Whilst CyberSettle and SquareTrade were consumer facing ODR tools, the success of their development provided a lesson to
+the developers of B2B commercial dispute resolution tools that the swift, efficient resolution of a dispute is just as valuable
+for business. Hence B2B tools also focus on streamlining processes that prioritise quick resolution without sacrificing fairness.
+Whilst the same eBay ODR model is not suitable for B2B contractual disputes, the learning from the eBay in-house tool (and
+CyberSettle’s merger with Modria) also highlighted the importance of the ODR solution being customised (or provide the
+flexibility) to suit different disputes taking into account complexity, the value at stake, and the parties’ preferences.
+Whilst commercial parties are unlikely to experience the frequency of disputes that eBay does, the potential value of the data
+that might be submitted to an ODR platform needs to be considered when making a choice about which tool to use. As B2B
+disputes often involve sensitive commercial information, ODR platforms must have robust security measures and offer private
+communication and negotiation spaces. Encryption and strict data protection protocols are equally important if not crucial.
+User-friendly interfaces that clearly outline the procedures are also just as important in the B2B context as in the consumer
+one. The platform must be intuitive for business representatives, who are not likely to be dispute resolution experts, as well as
+providing clarity as to what stage the process is at and what the time and format of subsequent stages is likely to be. In contrast to
+simple consumer complaints along the lines of “my toaster didn’t work”, B2B disputes often involve more complex contractual
+relationships, technical details and potentially higher stakes. As such, a B2B ODR platform is also likely to need to be able to
+handle complex documents and, if necessary, to allow expert involvement as needed.
+
+Chapter 9 - Online Dispute Resolution and Remote Hearings, UKBC-EFFDIS 549291549...
+© 2025 Thomson Reuters.
+3
+One of the distinctive benefits of using alternative methods of resolution and not resorting to litigation is the greater potential
+to preserve business relationships. This is likely to be of greater value in commercial transactions and, as such, a preferred
+ODR platform should deliver a process that maintains commercial relationships whenever possible and not just seek speedy
+settlements.
+Trust and confidence
+9-002
+As ODR is still relatively new for commercial dispute resolution, there is a need to take care to establish trust and confidence in
+the process and the fairness of the outcome. This is no different to conventional approaches to negotiation and mediation, but
+the challenges presented by engaging in an online process (as opposed to just engaging in a remote hearing) can be significant.
+One of the obvious issues is that ODR tools remove or reduce access to the non-verbal cues that are typically present in face-to-
+face interactions. The upside of this is that, whilst it might reduce emotional tension, a problem can arise from the possibility that
+a party might misread subtle emotions, or interpret intent, through a lens of bias that may itself lead to an escalation of conflict. In
+circumstances where communication is purely text-based, this has the additional potential complication of creating a perception
+of a party (or both parties) appearing to be cold and impersonal. This can potentially hinder trust and impede rapport building.
+If the ODR process is asynchronous, the resulting time lag, coupled with a system-generated response, can also create a
+perception that the process is indifferent to a party’s anxieties and urgency. This can be a double-edged sword in that it can also
+take the edge off the pace and intensity of an in-person engagement that has the potential to escalate emotions. The psychology
+of effective dispute resolution is considered in Chapter Eleven.
+Whilst there are constraints, a well-designed ODR platform can mitigate distractions and negativity that can fuel conflict in
+traditional settings. Given the importance of this, an ODR tool that has been designed to provide flexibility to the parties
+stands a greater chance of dealing with the issue of emotion through personalising the process and accommodating diverse
+communication styles and preferences.
+A tool with the ability to tailor the functionality and interface has the potential to lead to a more effective process than the in-
+person alternative. Starting with the opening aesthetics, a design that feels approachable and professional, not cold and sterile,
+can have a significant impact. If the platform is not designed with this in mind, it is analogous to a third-party facilitator not
+smiling or having a closed body language that, in turn, can be mirrored by the parties.
+One of the distinct downsides of a purely on-line tool is that there can be limited opportunity for a participant, be they a party
+to the dispute or a third-party, to say the equivalent of “can we step outside and have a quick word”. Depending on the type
+of tool, this is where a designer has the potential to enhance the effectiveness by enabling secure private messaging or private
+spaces for the parties and a mediator to meet and build rapport.
+It is surprisingly uncommon but, in any lengthy engagement, an effective system should also provide the opportunity for parties
+to provide feedback on the process. This does not need to wait until the end of the process as there are quite often small issues
+that, if raised early, can be dealt with before they have a chance to infect the process.
+Cultural differences affecting ODR
+9-003
+There are many reports on the impact of cultural differences in dispute resolution that pre-date ODR. 8  It is difficult to provide an
+all-encompassing definition of “culture” as it encompasses norms, beliefs, behaviours and values, and can include subtle “micro-
+cultures”. 9  In the context of effective dispute resolution, key differences across cultures can also affect critical elements of any
+negotiation strategy such as persuasion via rationality versus emotionality, motivation, attributions for negotiators’ behaviours,
+communication, individualist versus collectivist approaches, and confrontation. 10  Particularly relevant to international in-
+
+Chapter 9 - Online Dispute Resolution and Remote Hearings, UKBC-EFFDIS 549291549...
+© 2025 Thomson Reuters.
+4
+person negotiation and arbitration engagements are also a range of simple elements that, when combined, can conspire to defeat
+any attempts to resolve a dispute through negotiation and mediation. These include interpersonal characteristics such as manner
+of address, “face” (respect of self), body language and mannerisms, introductions, time, and attire. 11
+It is therefore no surprise that the effectiveness of ODR can be significantly affected by cultural differences, although there
+are some signs that the global evolution of an international online culture has the potential to smooth over traditional cultural
+differences. In any event, as with in-person attempts at dispute resolution, users of any ODR platform must still navigate between
+enforcing agreements and respecting the communication preferences of different cultures.
+The basic demands on an effective cross-cultural ODR platform are to help facilitate the universal need to establish trust and
+respect whilst facilitating effective communication. This has to be carefully considered by the designers of any ODR platform,
+as it is relatively easy to sacrifice building empathy and trust in pursuit of speed and efficiency.
+Recent years have witnessed significant advancements in ODR technology, including the integration of AI and blockchain. AI,
+for instance, has found applications in enhancing decision-making processes, analysing large datasets to identify patterns, and
+assisting in the negotiation and mediation processes by generating and providing possible outcomes based on historical data.
+Blockchain technology, on the other hand, has introduced novel dispute resolution processes such as automated negotiation and
+crowd-sourced decision-making, pushing the boundaries of traditional dispute resolution methods.
+The evolution and development of generative AI tools in dispute resolution is covered in further detail in Chapter Ten.
+Remote hearings
+9-004
+References to “remote hearings” in this book are to the use of online video, audio, or virtual reality to facilitate the entire dispute
+resolution process without any in-person component. This specifically involves use of video conferencing to conduct mediation
+sessions or arbitration hearings, as well as the electronic submission of evidence.
+This form of hearing is also sometimes referred to as a “virtual hearing” in the sense that the hearing is taking place in a simulated
+meeting room and the experience that is created by technology is not an exact replica of a traditional in-person hearing. Perhaps
+subtly, the use of the word “remote” emphasises the distance between the parties, whilst the word “virtual” shifts the emphasis
+to the simulated nature of the environment including, for example, to be able to see the faces of all participants at the same time
+or to present evidence in a way that cannot easily be replicated in-person.
+The decision to refer to these hearings as “remote” in this book is because, as the use of technology in this way has grown,
+boosted by restrictions imposed by the COVID-19 pandemic, remote meetings have become more accepted as being “real”
+meetings with the only difference being that the parties are not in the same room. The ongoing development of virtual reality
+headsets has made it almost certain that, at some point, some arbitration hearings will be held in a virtual reality environment 12
+and this will bring new challenges. 13  For simplicity, these are still referred to as “remote hearings”, but it is clear that virtual
+reality technology has the potential to transform the nature and experience of hearings and raises the possibility of completely
+new ways for parties to present evidence, especially in the area of construction and technical disputes.
+As always, global numbers are difficult to come by, but, as an indication of the significance of the increase in remote hearings
+or meetings for dispute resolution, the Centre For Effective Dispute Resolution (CEDR) biennial mediation audit, 14  records
+that the instances of online mediation increased from a level of around 10% in 2019 (pre-COVID-19) to 89% in 2020 (during
+COVID-19), whilst falling back to 64% in 2023.
+This increase in online mediation during the COVID-19 restrictions was consistent with reports from His Majesty’s Courts &
+Tribunals Service (HMCTS) which showed that remote hearings (both video and telephone) in May 2020 were around 85%,
+dropping to around 50% by May 2021. 15  Whilst noting the recent trends, for the reasons set out in para.9-005, it is also clear that
+the benefits of using remote hearings can be counterbalanced by the existence of some practical disadvantages and, ultimately,
+a human preference to be in the same physical space as others. These factors, including possible cultural differences, may also
+explain why, in some regions, the use of remote hearings has continued to reduce post-COVID-19. 16
+
+Chapter 9 - Online Dispute Resolution and Remote Hearings, UKBC-EFFDIS 549291549...
+© 2025 Thomson Reuters.
+5
+From the early days of using Skype, basic video conferencing for individuals and small businesses were popularised but often
+lacked the security, reliability, and features needed for high-stakes interactions like court hearings or sensitive mediation. Spurred
+on by the global impact of COVID-19 in March 2020, specialised video platforms emerged, and the use of Zoom became
+ubiquitous during the pandemic due to ease of use. The further development of application platforms such as Microsoft Teams,
+with an emphasis on security and integration with the Microsoft Office suite, along with the development on some platforms
+of features like breakout rooms for complex negotiations, continued to enhance the use of virtual dispute resolution.
+Hardware and connectivity
+9-005
+It might seem obvious when arranging a multi-party remote hearing, but unequal bandwidth, video and microphone quality and
+availability can have a dramatic effect on the success of a remote hearing. The ideal configuration is where every party has a
+multi-screen desktop/laptop with a separate 4K webcam and stand-alone microphone all connected to fibre-optic broadband
+connection with all users located in a quiet room with a white screen/wall behind them. This situation almost never occurs.
+Instead, it is not unusual to find that one or more parties has decided that they will connect using their mobile phone whilst
+travelling or on a noisy station platform without the ability to see any documents. This may be fine for an internal meeting, but
+it is not acceptable for any serious attempt to engage in effective dispute resolution through a remote hearing. As such, prior to
+the first such meeting, it is essential to check that all parties have suitable access.
+Whilst high-quality video is still important to provide the best opportunities for parties to be able to see facial expressions and
+documents, it has been established that if there is a trade-off between the quality of audio and video, then audio should be given
+the priority. 17  This is because our brains process audio cues as being essential for understanding speech and conversational
+patterns and when audio is intermittent, this places a higher burden on the brain to compensate. In addition, mismatches between
+audio and visual cues are extremely noticeable and can be very disconcerting. As such, because audio data has a smaller
+transmission footprint than video, it is better to turn off the video if the available bandwidth does not support both. 18
+Key functionality
+9-006
+When considering which platform to use, key considerations include whether the platform offers enhanced security, breakout
+rooms, screen-sharing and document collaboration, recording, close-captioning, voice-recognition/capture and discussion
+analysis.
+For most commercial negotiations/mediations, confidentiality is a basic requirement. At a very high level, the parties will agree
+to keep the discussions confidential, but a critical consideration should also be whether there is password protection for access,
+waiting rooms, end-to-end encryption and possible considerations regarding compliance with data privacy regulations. If a
+meeting is recorded, it is important to ensure that all parties are aware of this and consent to being recorded. They should also
+be informed of what will happen to the recording and whether it will be made available.
+For one-to-one remote negotiations, the range of tools is relatively wide but, when it comes to meetings including more than
+two participants, especially for mediation, then the availability of breakout rooms becomes essential. The absence of this option
+can lead to parties agreeing to stay connected but to close their video and microphones whilst speaking to each other by phone
+or some smartphone-based tool. Great care needs to be taken if this option is chosen as it is not unheard of for a party to think
+they have turned their microphone off only to find when they rejoin that their entire conversation has been heard by all parties
+on the call.
+Most remote hearing tools have screen sharing options. Again, this sounds simple in concept, but care needs to be taken. Before
+offering or attempting to share documents online, a party should make sure they have tested how this works. The ideal screen
+share tool should allow you to have a document open on your own screen(s) and to easily identify which document you want to
+
+Chapter 9 - Online Dispute Resolution and Remote Hearings, UKBC-EFFDIS 549291549...
+© 2025 Thomson Reuters.
+6
+share. It is not uncommon for a party to offer to share a document only to find that they are sharing their email inbox or a picture
+of their partner on a beach. Taking care over these practical, even mundane, things can seem trivial but in remote hearings the
+difference between someone who knows what they are doing appearing smooth and professional, whilst someone who does not
+can quickly get frustrated by the technology appearing to get in the way.
+In contrast to litigation, where courts may record hearings in order to provide transcripts if necessary and private recordings are
+forbidden, the question of whether to record or not record remote hearings can inadvertently raise a lot of tension. If a decision
+is taken to record when one or more parties seems reluctant, this can serve to inhibit their contribution. No matter what is agreed
+regarding the formal recording of the discussions using the tools available on the platform, the safest thing to assume is that
+one or more of the parties may record the audio using their phone. This may not be done with malicious intent but simply to
+serve as a record of what was discussed.
+Whilst there are a number of companies providing a transcription service focused on legal proceedings, 19  on the subject of
+providing a record of the meeting, there are an increasing range of quality audio-to-text tools that will effectively transcribe the
+meeting as it is happening. As soon as the meeting is finished, the more advanced tools can then use AI to provide a summary
+of the meeting and/or a variation on bullet-point minutes highlighting the main topics discussed.
+For clear audio in ideal conditions, the accuracy of such auto transcription (referred to as the word error rate) can be in excess
+of 95%, 20  but will depend on a good audio with minimal background noise and without any party having any particularly
+strong regional accent. It can also be difficult for such tools to distinguish between different speakers, especially if they talk
+over each other but, if parties are encouraged to mute their microphones unless speaking, this can dramatically improve the
+quality of the audio. Coupled with the development of AI, it is not inconceivable that the auto-transcription (possibly including
+auto-translation) tools will develop to the point of being considered to be equivalent to human transcription within a few years.
+Once the transcription can be regarded as reliable and accurate, the use of AI enabled tools to provide minutes, summaries,
+analysis and actions will follow. This has the potential to reduce the problems that can arise when parties leave a dispute
+resolution meeting and return to debrief/discuss the next steps. Apart from basic memory, there are many psychological
+phenomena that can lead to inaccurate recollections or records of what was discussed during negotiations. These are discussed
+in Chapter Eleven but, it is almost self-evident that if both parties had the same sense or recollection of what was said, agreed
+or conceded during a meeting, this would increase the efficiency of the dispute resolution process.
+Choosing a remote hearing platform
+9-007
+For anyone who uses an up-to-date version of Microsoft Office suite, they are likely to be familiar with the use of Microsoft
+Teams for remote meetings. However, noting that all tools are under regular development, one of the distinctive things missing
+from Microsoft Teams is breakout rooms. In contrast, these are a key feature of Zoom that makes it particularly attractive for
+formal online mediation meetings. Whatever tool is selected, it is important to check or confirm the version being used. There
+is nothing more annoying than reaching a critical point of a negotiation only to find that the meeting suddenly ends because
+the free 40 minutes is up.
+It is recommended that, prior to deciding which tool to use, a conscious assessment of specific needs is made. This should
+consider the functions set out above, as well as the friendliness of the user interface before deciding. It is also worth consulting
+all parties involved in the meeting whether they are happy to use a particular solution or if they have any preferences. This is
+to avoid the situation where, come the time of the meeting, one of the parties discovers that they have to download and install
+an app, or they cannot get the tool to recognise their camera or microphone.
+Virtual reality
+9-008
+
+Chapter 9 - Online Dispute Resolution and Remote Hearings, UKBC-EFFDIS 549291549...
+© 2025 Thomson Reuters.
+7
+Although under development, virtual reality (VR) headsets have the potential to provide a more immersive simulation of a
+physical courtroom or negotiation space and, in future, with lifelike representations of parties. The benefit does not come from
+allowing people to view themselves (and others) as cartoon-like avatars of varying qualities, but from the ability to be shown
+evidence in VR. In particular, this will enhance the effectiveness of expert testimony as it will be possible to give the tribunal
+a near-real walk through and exposure to see issues with construction or equipment. This use of 3D models, simulations or
+virtual walkthroughs of relevant scenes will aid understanding of complex issues or testimony that are spatial in nature (e.g.
+construction disputes, accident reconstruction).
+However, despite the potential, there are currently some significant challenges that are likely to limit the use of VR in facilitating
+virtual dispute resolution. These limiting factors include both the cost and the limitations in technology. VR headsets, and the
+required infrastructure, can be expensive. Additionally, a high level of technical expertise is currently needed to set up and
+manage VR environments. Recent developments in VR have also highlighted that prolonged VR use can lead to fatigue, nausea
+or headaches for some individuals. Before it can be used for extended sessions, the user interfaces and design still need to be
+optimised. Further problems arise from the issue of accessibility with issues arising from people with certain disabilities or lack
+of digital literacy potentially finding VR environments challenging or even exclusionary.
+Arbitration rules
+9-009
+If it is intended to conduct an arbitration via remote hearings, it is important to check whether there are any restrictions arising
+either from the law of the chosen seat or, more likely, from the institution that may have been chosen to administer the arbitration.
+A review of the main institutions shows that most have rules expressly providing for arbitration via a remote hearing, but this
+can require the express consent of the parties and not on the whim of an arbitrator:
+ 
+Article 19.2 of the LCIA Arbitration Rules 2020 now provides that “a hearing may take place in person, or virtually by
+conference call, videoconference or using other communications technology with participants in one or more geographical
+places (or in a combined form)”.
+ 
+Article 26.1 of the new ICC Arbitration Rules 2021 provides that “[t]he arbitral tribunal may decide, after consulting the
+parties, and on the basis of the relevant facts and circumstances of the case, that any hearing will be conducted by physical
+attendance or remotely by videoconference…”.
+ 
+Rule 32(2) of the ICSID Rules 2022 determines that “The President of the Tribunal shall determine the date, time and
+method of holding a hearing after consulting with the other members of the Tribunal and the parties”.
+ 
+Rule 21.2 of the SIAC Rules 2016, 6th edition, sets out that “The Tribunal may hold hearings and meetings by any means
+it considers expedient or appropriate and at any location it considers convenient or appropriate”. This wording is repeated
+in the draft 7th edition expected to come into force in 2024. In 2020, SIAC also provided detailed guidelines for best
+practice in remote hearings. 21
+Whilst not necessarily administering arbitrations, other institutions also provide guidelines for remote hearings. 22
+Care needs to be taken if one party is reluctant to engage in arbitration via remote hearings but feels pressured into this. This
+is because there is a possibility that, when it comes to enforcement, a party could argue that they had not had their “right to be
+heard” respected. 23  It would be easy to respond/think that being “heard” is literal but, it is possible that a complaining party
+could take a position that they were put at a disadvantage by having a remote hearing. The disadvantage could arise from a
+technical inequality or simply that they could not participate fully remotely as they were missing the full experience of an in-
+person hearing, including body language and the ability to gain the empathy of an arbitrator.
+A substantial survey was carried out by the International Council for Commercial Arbitration in 2020/2021 and a report produced
+in 2022. 24  The key findings of this report were that, according to the 78 national reports that were considered, no jurisdiction
+explicitly provided a universal right to a physical hearing in their arbitration laws. Most jurisdictions gave the arbitral tribunal
+significant discretion in deciding the format of hearings, including whether they are physical, remote or hybrid. The overall
+
+Chapter 9 - Online Dispute Resolution and Remote Hearings, UKBC-EFFDIS 549291549...
+© 2025 Thomson Reuters.
+8
+conclusion was that holding a hearing remotely does not inherently conflict with international norms or the accepted standards
+for fair hearings and access to justice.
+Drafting dispute resolution clauses facilitating online resolution
+9-010
+In order to ensure mutual understanding regarding the option to use online resolution and/or remote hearings, the parties should
+include a reference to this in the dispute resolution clause that expressly agrees on the use of online resolution, either as the
+primary or the alternative method of resolving their disputes. The parties should also specify the scope and extent of online
+resolution, such as whether it applies to all or some types of disputes, and whether it is conducted fully online or in a hybrid way.
+When discussing if reference to online resolution should be included, the parties should consider what suits their needs, taking
+into account the nature, complexity and value of their disputes, as well as the availability and reliability of online or remote
+platforms.
+If the parties have selected an institution to administer their arbitration, they should refer to the relevant rules and standards
+that govern the procedural, technical and legal aspects. Even if the choice is to conduct ad hoc arbitration, it is still possible to
+adopt similar standards of online resolution developed by reputable organisations. These can also be tailored to suit the specific
+needs and circumstances of the parties.
+As the use of remote hearings becomes more widespread, in order to avoid inadvertently creating an issue with regard to
+enforcement, the parties should also review whether the decision to conduct a remote hearing affects the validity, enforceability
+and recognition of the dispute resolution agreement, process and outcome. This review should include the applicable law and
+jurisdiction, as well as the selection, appointment and qualification of the neutral third parties. Particular emphasis should be
+given to the notification, communication and exchange of information and documents, as well as the conduct and management
+of remote hearings.
+In order to avoid any last-minute objections, it can also help to agree the admissibility of the evidence presented or exchanged
+online, the recording and transcription of remote hearings, and the costs and fees of online resolution. If a dispute arises, having
+agreed to remote hearings, as the parties might still decide to hold a hearing in person, the wording in the dispute resolution
+agreement should always provide for remote hearings as an option rather than being compulsory.
+Practical considerations for remote hearings
+9-011
+An in-person hearing or meeting of any kind has a subtle but distinctive characteristic that a person can only see the person they
+are facing. This means that, if a person is in a conventionally configured room where they are facing the tribunal or judge, they
+are unlikely to be able to see the faces of any other attendees. This may have the unfortunate consequence of not being able to
+see the faces of the tribunal, whilst questioning a witness and rarely, if ever, being able to see the face of any opposing counsel.
+In this sense, remote hearings open up a whole new world of being able to see everyone at the same time. This means that
+it is possible to catch a grimace on the face of the opposing counsel or a frown cross the brow of a member of the tribunal
+when asking a witness to answer a tough question. This can work for or against the person asking the questions depending on
+whether they are observing or, on the other side, trying to mask their delight or concern at a particular point being put. Once
+aware of this, with a bit of conscious effort, it can be worth masking expressions, whilst more carefully watching, or scanning,
+the expressions on the faces of key parties.
+Other side effects arise from the fact that, by looking directly at your camera, you are simultaneously staring into the eyes of
+everyone in the remote hearing. In contrast to in-person hearings, where looking down at your papers is not seen as significant,
+if a person is always looking left, right, or down, this can serve to disengage and reduce the empathy connection with the party
+they are speaking to. A conscious reminder to look directly at the lens of the camera when speaking can be helpful, although
+this can reduce the benefit of being able to watch the other parties.
+
+Chapter 9 - Online Dispute Resolution and Remote Hearings, UKBC-EFFDIS 549291549...
+© 2025 Thomson Reuters.
+9
+It is not uncommon for a remote hearing platform to display the person’s own image in a separate small window to the top-
+right of the screen or bottom of the screen. Depending on the platform, it may be possible to move this self-image but, wherever
+it is, it can tend to trigger an instinctive reaction for a participant to look at their own image. It is fine for someone to check
+that they are appearing on camera, but it is surprisingly common to find parties constantly looking away from the camera. This
+could be because they are accessing a document from a separate screen, or it could be because they are staring at themselves
+on the screen. If this happens, it is one of those other small effects that can serve to reduce engagement and interfere with the
+development of empathy. To mitigate against this problem, one of the simplest things to do is to move the image or the document
+they are reading from to the centre of the screen, immediately under the camera.
+The future
+9-012
+The incorporation of technological advances in the dispute resolution process has created new opportunities and challenges for
+the parties and the neutral third parties. Broad ODR platforms continue to develop, and it is highly likely that the impact of AI
+will enhance the use of platforms where the technology moves beyond enabling or enhancing communication towards playing
+a more active part in the parties determining what is an acceptable resolution.
+The benefits of time and cost savings are clear for resolution meetings that take less than a day, particularly when the parties are
+geographically remote. However, careful thought has to be given to whether a remote hearing is suitable for a complex dispute
+involving a large number of witnesses and the display of documentary or physical evidence. The most important thing is that
+the parties mutually agree and respect each other’s concerns if there is any reluctance. If this is considered at the outset, then
+remote hearings have the potential to play a significant role in effective dispute resolution.
+Footnotes
+1
+James Roper, The Rise of E-Commerce: From Dot to Dominance (Barnsley, England: Pen & Sword History, 2023).
+2
+Ethan Katsh, “Dispute Resolution in Cyberspace” (1996) 28 Conn. L. Rev. 953; E. Casey Lide, “ADR and Cyberspace:
+The Role of Alternative Dispute Resolution in Online Commerce, Intellectual Property and Defamation” (1996) 12 Ohio
+St. J. On Disp. Resol. 193.
+3
+Ethan Katsh, “Chapter 1: ODR: A Look at History” in Daniel Rainey et al. (eds), Online Dispute Resolution: Theory
+and Practice: A Treatise on Technology and Dispute Resolution, 2nd edn (The Hague: Eleven International Publishing,
+2021).
+4
+Karolina Mania, “Online Dispute Resolution: The Future of Justice” (2015) 1(1) International Comparative
+Jurisprudence 76.
+5
+Orna Rabinovich-Einy and Ethan Katsh, “Chapter 3: Lessons from Online Dispute Resolution for Dispute Systems
+Design, Section 2 Lessons of ODR: DSD Meets Technology” in Rainey, et al. (eds), Online Dispute Resolution: Theory
+and Practice: A Treatise on Technology and Dispute Resolution, 2nd edn (2021).
+6
+Filip Tereszkiewicz, “The EU Online Dispute Resolution Platform for Consumer Disputes: A Step Towards an EU
+Digital Single Market” (2016), Judicium, https://www.judicium.it/wp-content/uploads/2016/11/FT.pdf.
+7
+Report From the Commission to the European Parliament, the Council and the European Economic and Social
+Committee on the application of Directive 2013/11 on alternative dispute resolution for consumer disputes and
+Regulation 524/2013 on online dispute resolution for consumer disputes, COM(2019) 425 final.
+8
+Michelle J. Gelfand and Jeanne M. Brett (eds), The Handbook of Negotiation and Culture (Stanford University Press,
+2004).
+9
+Daniel Rainey and Alma Abdul-Hadi Jadallah, Chapter 8: ODR and Cultural Components of Dispute Engagement,
+Rainey et al. (eds), Online Dispute Resolution: Theory and Practice: A Treatise on Technology and Dispute Resolution,
+2nd edn (2021).
+10
+Michelle Brett and Jeanne Gelfand (eds), “A Cultural Analysis of the Underlying Assumptions of Negotiation Theory”
+in Negotiation Theory and Research, 1st edn (Psychology Press, Taylor & Francis, 2006), Ch.9.
+
+Chapter 9 - Online Dispute Resolution and Remote Hearings, UKBC-EFFDIS 549291549...
+© 2025 Thomson Reuters.
+10
+11
+Karen Mills, Cultural Differences & Ethnic Bias in International Dispute Resolution: An Arbitrator/ Mediator’s
+Perspective, Chartered Institute of Arbitrators, International Arbitration Conference (2006).
+12
+Jeremy N. Bailenson et al. (eds), Courtroom Applications of Virtual Environments, Immersive Virtual Environments,
+and Collaborative Virtual Environments (Department of Communication, Stanford University, 2020), https://
+web.stanford.edu/~bailenso/papers/Courtroom%20VR.pdf.
+13
+Elizabeth 
+Chan 
+and 
+Graham 
+Rhodes, 
+“Arbitration 
+Tech 
+Toolbox: 
+Lessons 
+from 
+the 
+First 
+Ever
+International 
+Arbitration 
+Gathering 
+in 
+Virtual 
+Reality” 
+(6 
+February 
+2022), 
+Kluwer 
+Arbitration
+Blog, 
+https://arbitrationblog.kluwerarbitration.com/2022/02/06/arbitration-tech-toolbox-lessons-from-the-first-ever-
+international-arbitration-gathering-in-virtual-reality/.
+14
+CEDR, The Ninth Mediation Audit (May 2021), p.20; CEDR, The Tenth Mediation Audit (February 2023), p.3.
+15
+HMCTS, “HMCTS weekly use of remote audio and video technologies May 2020 to May 2021” (June 2021).
+16
+Fabiane Verçosa, Remote Hearings, Arbitration, Breakfast, and Cyber Security, CAM-CCBC/VIAC Meeting, 31st Vis
+Moot, Vienna, 26 March 2024, Cafè Prückel, Vienna.
+17
+Kandaraj Piamrat et al., Quality of Experience Measurements for Video Streaming over Wireless Networks, Sixth
+International Conference on Information Technology: New Generations (2009).
+18
+M. Seufert et al, “A Survey on Quality of Experience of HTTP Adaptive Streaming” (2015) 17(1) Technical Report in
+IEEE Communications Surveys & Tutorials, https://dl.acm.org/doi/10.1109/comst.2014.2360940.
+19
+Examples of transcription services provided to courts and institutions include Opus 2 and Epiq.
+20
+Korbinian Kuhn et al., “Measuring the Accuracy of Automatic Speech Recognition Solutions” (2024) 16(4) ACM
+Transactions on Accessible Computing, article 25, https://doi.org/10.1145/3636513.
+21
+SIAC, SIAC Guides: Taking Your Arbitration Remote (2020).
+22
+CIArb, Guidance Note on Remote Dispute Resolution Proceedings (2020); AAA-ICDR, AAA-ICDR Model Order and
+Procedures for a Virtual Hearing via Videoconference (2021); AAA-ICDR, AAA-ICDR Virtual Hearing Guide for
+Arbitrators and Parties (2021).
+23
+Fabiane Verçosa, Audiência Remota de Instrução na Arbitragem à luz do Contraditório e de Outros Princípios
+Processuais (Remote Evidentiary Hearing in Arbitration. An Analysis vis-à-vis the Right to be Heard and Other
+Procedural Principles), (São Paulo, Revista dos Tribunais, 2022).
+24
+James Hosking, et al., Does a Right to a Physical Hearing Exist in International Arbitration? Investigating the Legal,
+Conceptual and Practical Implications of Remote Hearings in International Arbitration (ICCA, 2022), The ICCA Reports
+No. 10.
+End of Document
+© 2025 SWEET & MAXWELL

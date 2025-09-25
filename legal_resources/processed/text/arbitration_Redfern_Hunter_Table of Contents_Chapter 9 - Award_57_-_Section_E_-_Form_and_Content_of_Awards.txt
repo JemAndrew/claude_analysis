@@ -1,0 +1,442 @@
+Section E. - Form and Content of Awards, UKBC-REDFERN 530638658 (2025)
+© 2025 Thomson Reuters.
+1
+Section E. - Form and Content of Awards
+Redfern and Hunter on International Arbitration 7th Ed.
+Mainwork
+Chapter 9 - Award
+Section E. - Form and Content of Awards
+(a) Generally
+9. 141
+The best awards are short, reasoned, and simply written in clear, unambiguous language. An arbitral tribunal should aim at
+rendering a correct, valid, and enforceable award. Under some systems of law, it may have to do so as a matter of legal
+obligation; 196  or it may be required to do so under the applicable institutional rules. Whether or not there is a legal obligation,
+the arbitral tribunal will want to do its best, as a matter of professional pride, to ensure that the award is enforceable: having
+been entrusted with the duty of determining a dispute for the parties, it will naturally wish to ensure that its duty is properly
+and effectively discharged.
+9. 142
+A distinguished arbitrator has suggested that:
+A valid yardstick for assessing the diligence shown by the arbitrators in drawing up an arbitral award that is
+enforceable and likely to be recognised, is to apply the criteria established under the New York Convention, since
+compliance therewith will enable recognition and enforcement of the arbitral award in all the signatory countries.
+Consequently, no arbitral tribunal could be held responsible in a case where its decision was not recognised in a
+given country for failing to fulfil some mandatory requirement imposed by that country’s domestic law, unless the
+parties had expressly advised the tribunal of this circumstance, which should rightly have been taken into account
+when the arbitral award was drawn up. 197
+9. 143
+The award of an international arbitral tribunal may be challenged in the courts of the seat of arbitration; 198  and recognition
+and enforcement of the award may be refused by a competent court in the place(s) in which such recognition or enforcement
+is sought. This subject is discussed in detail later. 199  The point to be made here is that an arbitral tribunal should bear the
+possibilities of challenge and post-award recourse in mind when drawing up its award. Against this background, the validity of
+an award must be considered under two headings: form and content.
+(b) Form of the award
+9. 144
+In general, the requirements of form are dictated by the arbitration agreement (including the rules of any arbitral institution
+chosen by the parties) and the law governing the arbitration (the lex arbitri).
+(i) Arbitration agreement
+9. 145
+
+Section E. - Form and Content of Awards, UKBC-REDFERN 530638658 (2025)
+© 2025 Thomson Reuters.
+2
+It is necessary to check whether the arbitration agreement specifies any particular formalities for the award. In practice, this
+means examining any set of rules that the parties have adopted. The UNCITRAL Rules, for example, lay down the following
+requirements:
+ 
+•the award shall be made in writing;
+ 
+•the reasons upon which the award is based shall be stated (unless otherwise agreed);
+ 
+•the award shall be signed by the arbitrators, and shall contain the date on which and the place where it was made; and
+ 
+•where there are three arbitrators and one of them fails to sign, the award shall state the reason for the absence of the
+signature. 200
+9. 146
+The only arbitral institution that sets out the detailed obligations for an arbitrator when writing an award is ICSID. Rule 47
+of the ICSID Rules states:
+ 
+(1) The award shall be in writing and shall contain:
+ 
+(a) a precise designation of each party;
+ 
+(b) a statement that the Tribunal was established under the Convention, and a description
+of the method of its constitution;
+ 
+(c) the name of each member of the Tribunal, and an identification of the appointing
+authority of each;
+ 
+(d) the names of the agents, counsel and advocates of the parties;
+ 
+(e) the dates and place of the sittings of the Tribunal;
+ 
+(f) a summary of the proceeding;
+ 
+(g) a statement of the facts as found by the Tribunal;
+ 
+(h) the submissions of the parties;
+ 
+(i) the decision of the Tribunal on every question submitted to it, together with the reasons
+upon which the decision is based; and
+ 
+(j) any decision of the Tribunal regarding the cost of the proceeding.
+ 
+(2) The award shall be signed by the members of the Tribunal who voted for it; the date of each
+signature shall be indicated.
+ 
+(3) Any member of the Tribunal may attach his individual opinion to the award, whether he
+dissents from the majority or not, or a statement of his dissent. (Emphasis added)
+9. 147
+These two examples, drawn from institutional rules of arbitration, indicate the importance for the arbitral tribunal of checking
+the form (and contents) of its award against the relevant rules.
+(ii) Law governing the arbitration
+9. 148
+The requirements of form imposed by national systems of law vary from the comprehensive to the virtually non-existent.
+The Swiss Code of Civil Procedure, under Part III, which govern domestic arbitrations in Switzerland, lays down detailed
+
+Section E. - Form and Content of Awards, UKBC-REDFERN 530638658 (2025)
+© 2025 Thomson Reuters.
+3
+requirements, 201  but for international cases, these are narrowed to just four—namely, that the award be in writing, reasoned,
+dated, and signed. 202  Section 52 of the English Arbitration Act 1996 follows the same lines:
+Section 52
+(1) The parties are free to agree on the form of an award.
+(2) If or to the extent that there is no such agreement, the following provisions apply.
+(3) The award shall be in writing signed by all the arbitrators or all those assenting to the award.
+(4) The award shall contain the reasons for the award unless it is an agreed award or the parties have
+agreed to dispense with reasons.
+(5) The award shall state the seat of the arbitration and the date when the award is made.
+(iii) Introductory section of an award
+9. 149
+Awards will usually begin by setting out the names and addresses of the parties, and the names and contact details of their
+representatives and of the tribunal, and any tribunal secretary. The award will then usually contain a brief, preliminary
+narrative setting out the background to the dispute between the parties. This preliminary narrative should include an
+identification of the arbitration agreement or document containing the arbitration clause, which it is usual to set out in detail,
+since it is the foundation on which the arbitration is built. It will then usually be followed by a brief outline of the dispute
+or disputes that have arisen between the parties, the relief claimed (including interest and costs, if claimed, as they normally
+would be), the dates on which the arbitrator or arbitrators were appointed, and by whom this was done.
+9. 150
+This will then generally be followed by the procedural history of the arbitral proceedings, which ideally will serve to show
+that the parties were treated equally and had a reasonable opportunity to present their cases to the tribunal. There will then
+usually follow a discussion of the merits of the issues in dispute, where the tribunal will do its best to summarise the evidence
+and arguments of the parties as briefly but as accurately as possible. This summary will generally be followed by the tribunal’s
+detailed analysis of the parties’ evidence and argument, and a ‘discussion’ of its conclusions and of its reasons for reaching
+those conclusions. Finally, the tribunal will then record its decisions on the issues before it, including any claims for interest
+and costs, in the final, dispositive section of its award.
+9. 151
+We started this discussion of the form and content of an award by stating that the best awards are short, reasoned, and simply
+written, in clear and unambiguous language. This remains true. It must be admitted, however, that in all but the very simplest
+of cases, it is difficult now to produce an award that is short. In part, this is due to the increasing number of challenges to
+awards, so that tribunals feel obliged to enter into more detail than they would have done in the past about the procedure that
+has been followed, the arguments that have been raised, and the way in which those arguments have been dealt with. In part
+too, it is due to the requirements of the arbitral institutions. They are naturally concerned about the quality of awards issued
+under their rules, by arbitrators coming from all kinds of professional and cultural backgrounds, and they want to ensure that
+essential points are not overlooked.
+9. 152
+The ICC, for example, issues arbitrators with an ‘ICC Award Checklist’ which provides guidance on the drafting of an ICC
+award. This checklist itself is a detailed document, with guidance on such matters as page and paragraph numbering and, more
+importantly, with seven major headings. These include identifying the parties and their representatives, with their correct
+names and addresses; quotation of the entire arbitration agreement and any relevant choice of law clause; a history of the
+arbitral proceedings, including details of the appointment of the tribunal, again with correct names and addresses; a note
+
+Section E. - Form and Content of Awards, UKBC-REDFERN 530638658 (2025)
+© 2025 Thomson Reuters.
+4
+on the jurisdiction of the tribunal, if it was at issue; costs; and a dispositive section, dealing with all the parties’ issues and
+claims, including the most recent claims for relief, and noting the place of arbitration, the date on which the award is made,
+and the signatures of the members of the tribunal. In a world in which awards are increasingly subject to challenge, it is
+right for a tribunal to check carefully that it has done all that is required in drafting its award, in terms both of form and of
+substance. But it is difficult to do this briefly.
+(iv) Signatures
+9. 153
+Some national systems of law require all arbitrators to sign the award in order for it to be valid. Formalities with regards to
+signature still exist in the United Arab Emirates (UAE), for example, and are important to follow. A decision by the Dubai
+Court of Cassation in 2009 203  distinguished between awards in which the grounds were included in the same document as
+the award itself and awards in which the grounds and the award were in separate documents. It was held that arbitrators could
+sign the final page on which the award appears, if it is attached to the grounds; if they are in separate documents, then the
+Court held that the page with the grounds must be signed, as well as each page of the award by all of the arbitrators. 204  In
+practice, arbitrators sitting in arbitration proceedings in the UAE normally sign every page of the award.
+9. 154
+The major institutional rules all deal expressly or impliedly with signature of the award. The ICC Rules, as already noted,
+make it clear that the award must be signed, but the award of a majority of the arbitrators or, if there is no majority, the award
+of the presiding arbitrator alone is effective. 205  As noted above, a similar provision is found in the LCIA Rules. 206
+(v) Language of the award
+9. 155
+The award will normally be rendered in the language of the arbitration. Nevertheless, it is a condition of recognition and
+enforcement under the New York Convention that a foreign arbitral award must be accompanied by an officially certified
+translation into the language of the place in which recognition or enforcement of the award is sought, when this is not the
+language of the award. 207
+(c) Contents of the award
+9. 156
+The contents of an award, like its form, are dictated primarily by the arbitration agreement and the law governing the arbitration
+(the lex arbitri).
+(i) Arbitration agreement
+9. 157
+Arbitration agreements usually provide that the award is to be final and binding upon the parties. It follows that the award
+should deal with all matters referred to arbitration, insofar as they have not been dealt with by any interim or partial awards.
+However, arbitration agreements rarely go on to describe the content of the award; the nearest they get is to incorporate a
+set of arbitration rules. Such rules invariably also provide that the award should deal with such matters as the costs of the
+arbitration 208  and the payment of interest. The rules may also provide that the award shall state the reasons upon which it is
+based. 209  Even if not specifically required, the giving of reasons is a practice that should be followed unless there is some
+very good reason why it should not be (for example, because the parties have agreed to dispense with reasons). 210
+
+Section E. - Form and Content of Awards, UKBC-REDFERN 530638658 (2025)
+© 2025 Thomson Reuters.
+5
+(ii) Unambiguous
+9. 158
+Most national systems of law require an award to be unambiguous and dispositive. Ambiguity is often capable of being cured,
+either by the arbitral tribunal interpreting the award at the request of the parties (or occasionally at the request of only one
+of them), 211  or by an application to the relevant national court for an order that the award should be remitted to the arbitral
+tribunal for clarification. 212  The position is similar where the award contains provisions that are inconsistent.
+(iii) Determination of the issues
+9. 159
+An award must also be dispositive, in that it must constitute an effective determination of the issues in dispute. It is not
+sufficient for the arbitral tribunal to issue a vague expression of opinion. The award must be formulated in an imperative
+tone: ‘we award’, ‘we direct’, ‘we order’, or the equivalent.
+9. 160
+Equally, if there is more than one respondent and a monetary award is made in favour of the claimant, it is essential for the
+arbitral tribunal to make it clear whether one of the respondents, and if so, which one, has the obligation to make the payment,
+or whether the obligation is joint and several.
+9. 161
+An award should not direct the parties to perform an illegal act or require the parties to do anything that may be considered
+contrary to public policy, 213  nor should the award contain any directions that are outside the scope of authority of the arbitral
+tribunal.
+(iv) Reasons
+9. 162
+The way in which reasons are given in arbitral awards varies considerably. Sometimes, the reasoning, or ‘motivation’, is set
+out with extreme brevity. However, a mere statement that the arbitral tribunal accepted the evidence of one party and rejected
+the evidence of the other, which was common practice for some arbitrators, has fallen into disrepute.
+9. 163
+Even today, there are arbitrations in which providing reasons is likely to seem unnecessary. An arbitrator in a quality
+arbitration, for example, who is asked to decide whether goods supplied do or do not correspond to sample, can hardly do
+much more than answer ‘yes’ or ‘no’. That said, for the vast majority of international arbitrations, a reasoned award is not
+only appropriate, but will probably be obligatory under the applicable arbitration rules or the lex arbitri.
+9. 164
+The ICSID Convention, as already stated, calls for a reasoned award, without any exceptions; 214  and in practice, the ICC
+Court considers awards that are insufficiently reasoned to be defective as to form. They are therefore sent back to the arbitral
+tribunal for amendment, before they can be approved. The UNCITRAL Rules take the same approach as the Model Law:
+reasons should be given, unless the parties agree otherwise. 215  The requirement that an award be reasoned is also commonly
+found in national laws governing arbitrations. 216
+9. 165
+
+Section E. - Form and Content of Awards, UKBC-REDFERN 530638658 (2025)
+© 2025 Thomson Reuters.
+6
+The New Zealand Court of Appeal, in setting aside an award in which the reasoning comprised only five paragraphs, explained
+that reasons ‘must be coherent and comply with an elementary level of logic of adequate substance to enable the parties to
+understand how and why [the tribunal reached its decision]’. It went on to hold that the extent of the reasons to be given will
+be dictated by context and ‘must reflect the importance of the arbitral reference and the panel’s conclusion’. 217  In contrast,
+the English Commercial Court recently held that a failure to provide adequate reasons cannot amount to a serious irregularity
+under section 68(2)(c) or 68(2)(h) of the English Arbitration Act. 218
+(d) Time limits
+9. 166
+A limit may be imposed as to the time within which the arbitral tribunal must make its award. When this limit is reached, the
+authority or mandate of the arbitral tribunal is at an end and it no longer has jurisdiction to make a valid award. This means
+that, where a time limit exists, care must be taken to see that either the time limit is observed, or that the time limit is extended
+before it expires. The purpose of time limits is to ensure that the case is dealt with speedily. Such limits may be imposed on the
+arbitral tribunal by the rules of an arbitral institution, by the lex arbitri, or by agreement of the parties.
+9. 167
+The laws of a number of countries provide for the time limits within which an award must be made, sometimes starting from
+the date upon which the arbitration itself commenced. In India, 2015 amendments to the Arbitration and Conciliation Act
+1996 imposed an obligation on arbitral tribunals to render an award within twelve months from the date of the tribunal’s
+constitution (which time limit could be extended by a further six months only). 219  This reform was subject to widespread
+criticism, particularly given its one-size-fits-all approach. Accordingly, the Indian Act was further amended in 2019 to clarify
+that international commercial arbitrations seated in India are not subject to strict application of the twelve-month time limit. 220
+In the United States, the position varies from state to state. In some states, the limit is thirty days from the date on which the
+hearings are closed. However, time limits in the United States may also be extended by mutual agreement of the parties or
+by court order.
+9. 168
+In the institutional context, the ICC ‘expects arbitral tribunals to render awards within six months from the establishment of
+the Terms of Reference, or within the time limit fixed by the Court’. 221  In the authors’ experience, however, this time limit
+is routinely extended by the Court. The ICC does, however, employ a ‘stick and carrot’ approach to incentivise efficiency.
+For example, if a tribunal exceeds the agreed time limit for rendering an award, the ICC may lower the tribunal’s fees. 222
+Conversely, if the tribunal conducts the arbitration expeditiously, the ICC may increase its fees. 223
+9. 169
+It is important that a fixed time limit for rendering the award should not enable one of the parties to frustrate the arbitration. This
+might happen if a fixed limit were to run from the date of the appointment of the arbitral tribunal, rather than, for example, that
+of the end of the hearings. If a court has no power to intervene on the application of one party alone and the time limit can be
+extended only by agreement of the parties, a party might frustrate the proceedings simply by refusing to agree to any extension
+of time. However, the courts of many countries would be reluctant to invalidate a late award in such a case. For example, in
+New York, it was held that an untimely award was not a nullity, even though the issue of timeliness was properly raised: the
+court stated that, without a finding of prejudice, there was no justification for denying confirmation of the award. 224
+(i) Disadvantages of mandatory time limits
+9. 170
+It is rare to find time limits for delivery of the award in non-institutional rules. Where such limits are imposed, it may be by
+the national law although it is usually by an express agreement between the parties, contained in the arbitration clause or the
+submission agreement. Undoubtedly, such a provision is inserted with the intention of putting pressure on the arbitral tribunal
+
+Section E. - Form and Content of Awards, UKBC-REDFERN 530638658 (2025)
+© 2025 Thomson Reuters.
+7
+to complete its work with due despatch and in order to minimise the opportunities for delaying the resolution of disputes by
+the parties themselves. However, it is a strategy that may well prove to be counterproductive. In most substantial international
+cases before an arbitral tribunal consisting of three arbitrators, it is usually impracticable to complete the arbitration within
+such a short period of time as six months. The result is that the arbitral tribunal may be forced into a situation in which, in
+order to comply with the time limit, it must issue its award without giving the respondent a proper opportunity to present
+its case. Such an award is vulnerable to an action for nullity or to a successful defence to enforcement proceedings. Thus
+the successful party finds that, far from the time limit having assisted in a speedy resolution of the dispute, it contributes to
+overall delay and ineffectiveness in the arbitral process. 225  In addition, a number of arbitral institutions have now introduced
+expedited procedures for the conduct of an international arbitration, and a standard feature of these procedures is a provision
+for the award to be made within a relatively short time. 226
+9. 171
+In general, it is preferable that no time limit should be prescribed for the making of the award in an arbitration clause or
+submission agreement. However, if the parties consider it desirable to set a limit, or if it is necessary to do so under the
+applicable law, the time limit should, if possible, be related to the closure of the hearings and not to the appointment of the
+arbitral tribunal, or to some other stage in the arbitration at which the respondent will have opportunities to create delay. A
+provision that the award must be issued within a certain time after the closure of the hearings helps to ensure that the arbitral
+tribunal proceeds diligently with its task. It is frustrating for the parties if the arbitral tribunal takes many months to deliberate
+and to issue its award. However, any time limit should be realistic and not merely one that incites the arbitral tribunal to make
+the award in too great a hurry, thus potentially exposing the award to a successful challenge.
+(ii) Non-mandatory provisions
+9. 172
+Perhaps the best way in which the parties can put time pressure on an arbitral tribunal, without placing the effectiveness
+of the proceedings at risk, is to insert some form of non-mandatory provision. In one ICC case, 227  the arbitration clause
+contained a provision to the effect that ‘the parties wish that the award shall be issued within five months of the date of the
+appointment of the third arbitrator’.
+9. 173
+The arbitral tribunal considered it necessary to clarify the position and, at its request, the parties confirmed that this provision:
+ 
+•superseded the provision of Article 18.1 of the then applicable 1998 ICC Rules, which provided that the award was to
+be made within six months of the signing of the terms of reference; and
+ 
+•did not affect the power of the ICC Court to extend the time limit provided for by the parties, in accordance with Article
+18.2 of the then applicable 1998 ICC Rules.
+9. 174
+In effect, therefore, the parties set a target for the arbitral tribunal in their arbitration agreement, without imposing any
+mandatory provision that might have placed at risk the effectiveness of that agreement.
+(e) Notification of awards
+9. 175
+International and institutional rules of arbitration generally make provision for the notification of the award to the parties. The
+UNCITRAL Rules provide, at Article 34.6, that ‘[c]opies of the award signed by the arbitrators shall be communicated to the
+parties by the arbitral tribunal’. However, no time limit is imposed within which this must be done. The position is similar
+under the ICSID Rules, Rule 48.1 of which merely states that a certified copy of the award (including individual opinions and
+statements of dissent) will be sent to the parties ‘promptly’ when the last arbitrator has signed it. Article 35.1 of the ICC Rules
+provides that the Secretariat will notify the parties once an award has been made, provided that the costs have been fully paid. 228
+
+Section E. - Form and Content of Awards, UKBC-REDFERN 530638658 (2025)
+© 2025 Thomson Reuters.
+8
+9. 176
+That party which expects to have won the case will invariably make it its business to obtain a copy of the award as soon
+as practicable, either directly from the arbitral tribunal or from the relevant arbitral institution. If that party has won, it will
+immediately communicate the award to the unsuccessful party. The time limit within which a party may apply to the appropriate
+court for recourse against the award may run from the date of communication of the award and not from the making of the
+award itself. However, the position should be checked under the law of the place in which recourse may be sought, which is
+normally the place of arbitration.
+(f) Registration or deposit of awards
+9. 177
+In some countries, registration for the purposes of recognition by the courts is unnecessary or optional. In others, it may be a
+necessary prelude to enforcement of a foreign award. In such cases, there may be an element of ‘double exequatur’, which has
+been strongly criticised by the draftsmen of the New York Convention, amongst others. 229  The principle on which the New
+York Convention is based is that the award needs only to be binding on the parties in order for it to be enforceable. Nonetheless,
+registration is a matter that may affect the validity of the award if the mandatory provisions of the place in which the arbitration
+is held require it. 230  Where the requirement is mandatory, it must be deposited in order to protect the validity of the award.
+9. 178
+Even when it is not mandatory, registration or deposit of an award may be desirable in order to put pressure on the unsuccessful
+party. In some cases, registration of the award is relevant for the purposes of the time limit within which any application
+for annulment of the award must be made. Although registration will not necessarily assist the successful party in relation
+to enforcement actions in other countries, it may protect the award from any further challenge in the country in which the
+arbitration took place.
+Footnotes
+196
+See Chapter 5.
+197
+Cremades, ‘The arbitral award’, in Newman and Hill (eds) The Leading Arbitrators’ Guide to International Arbitration
+(2nd edn, Juris, 2008), p. 500.
+198
+Or, exceptionally, if the parties have agreed to subject the arbitration to the law of a ‘foreign’ country, in the courts
+of that country.
+199
+See Chapter 11, paragraphs 11.54 to 11.105.
+200
+UNCITRAL Rules, Art. 34. See also Swiss Rules, Art. 32.
+201
+Swiss Code of Civil Procedure, Pt. III, Art. 384.
+202
+Swiss PIL, Ch. 12, s. 189(2).
+203
+Dubai Court of Cassation, Petition No. 156/2009 (considering the signature requirement under Art. 212(5) of the former
+UAE Arbitration Chapter).
+204
+In a recent ruling (14 June 2020), the Dubai Court of Cassation confirmed that the position remains the same under
+UAE’s new federal arbitration law, which entered into force in June 2018 (see Ali & Sons Marine Engineering Factory
+LLC v E-Marine FZC, Civil Cassation Appeal No. 1083/2019). In this case, rather than accede to the applicant’s request
+to annul the award on the ground that the arbitrators had not signed the pages of the award containing the grounds or
+the operative part of the award, the Court of Cassation instead directed the matter to be remitted to the tribunal so that
+this clerical error could be rectified.
+205
+ICC Rules, Art. 32.1.
+206
+LCIA Rules, Art. 26.5.
+207
+New York Convention, Art. IV(2).
+
+Section E. - Form and Content of Awards, UKBC-REDFERN 530638658 (2025)
+© 2025 Thomson Reuters.
+9
+208
+See, e.g., UNCITRAL Rules, Art. 40; ICC Rules, Art. 38; LCIA Rules, Art. 28.
+209
+See, e.g., UNCITRAL Rules, Art. 34.3; ICSID Rules, r. 47.1.i.
+210
+For further discussion on this topic, see paragraphs 9.162–9.165.
+211
+See paragraphs 9.193 and 9.196-9.200.
+212
+See, e.g., English Arbitration Act, s. 57(3) (permitting a party to apply for correction of an award to ‘clarify or remove
+any ambiguity’).
+213
+However, since public policy considerations vary from country to country, it may be difficult to avoid this in all cases,
+e.g. an award of interest may be acceptable in the country in which the award is made, but not in the country of eventual
+enforcement (which will often be difficult for the tribunal to predict at the time of issuing its award).
+214
+ICSID Convention, Art. 48(3).
+215
+UNCITRAL Rules, Art. 34.3. See also LCIA Rules, Art. 26.2.
+216
+See, e.g., English Arbitration Act, s. 52(4) and New Zealand Arbitration Act 1996, s. 31(2).
+217
+Ngāti Hurungaterangi & Ors v Ngāti Wahiao [2017] NZCA 429, New Zealand Court of Appeal.
+218
+Islamic Republic of Pakistan v Broadsheet LLC [2019] EWHC 1832 (Comm).
+219
+If the arbitral tribunal failed to issue an award within the maximum available period of 18 months, its mandate was to
+stand terminated unless the court, either prior to or after expiry of the specified period, extended the period on a showing
+by a party of ‘sufficient cause’ (Indian Arbitration and Conciliation (Amendment) Act 2015, s. 15).
+220
+Indian Arbitration and Conciliation (Amendment) Act 2019, s. 6 (revising s. 29A of the Act). These reforms also
+provided that the twelve-month time limit now commences from the date of completion of pleadings and not from the
+Tribunal’s constitution.
+221
+ICC Note to Parties and Arbitral Tribunals, 1 January 2021, at 152.
+222
+Ibid., at 155.
+223
+Ibid., at 154.
+224
+State of New York Department of Taxation and Finance v Valenti 57 AD 2d 174, 393 NYS 2d 797 (1977). In contrast,
+the Belgian Supreme Court annulled an award issued only eight days after the deadline fixed by the parties on the basis
+that the late issuance amounted to an excess of powers (X. v Y., Court of Cassation of Belgium, Third Civil Law Chamber,
+Case No. C.13.0264.N., 26 October 2015).
+225
+For a potential horror story, see Staatsrechtliche v ICC Schiedsgerichtsentschied, Bundesgericht, I. Zivilabteilung
+(Federal Court, First Civil Division), 24 March 1997, (1997) 2 ASA Bulletin 316. For commentary, see Kreindler and
+Kautz, ‘Agreed deadlines and the setting aside of arbitral awards’ (1997) 4 ASA Bulletin 576.
+226
+See Chapters 1 and 6.
+227
+ICC Case No. 5051.
+228
+The potential problems with delayed notification have been obviated in recent years by the increasing facilitation in
+institutional rules of electronic notification of awards (with original copies to follow by courier). For example, the LCIA
+Rules make clear that the transmission of an award to parties by the LCIA Court ‘may be made by any electronic
+means’ (Art. 26.7). Similarly, ICC guidance notes that, ‘subject to any applicable mandatory law requirements’, any
+award may be ‘notified to the parties by the Secretariat by email or any other means of telecommunication that provides
+a record of the sending’ (ICC Note to Parties and Arbitral Tribunals, 1 January 2021, at 199).
+229
+See Chapter 11, paragraph 11.90.
+230
+This must be considered separately from any requirement for the deposit of the award with an arbitral institution.
+End of Document
+© NIGEL BLACKABY KC, CONSTANTINE PARTASIDES
+KC, ALAN REDFERN

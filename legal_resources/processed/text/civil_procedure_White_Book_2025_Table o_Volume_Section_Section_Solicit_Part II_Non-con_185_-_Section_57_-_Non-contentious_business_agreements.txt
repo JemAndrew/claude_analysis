@@ -1,0 +1,101 @@
+Section 57. - Non-contentious business agreements, UKBC-WHITEBK 458578224 (2025)
+© 2025 Thomson Reuters.
+1
+Section 57. - Non-contentious business agreements
+White Book 2025  | Commentary last updated November 11, 2022
+Volume 2
+Section 7 - Legal Representatives—Costs and Litigation Funding
+Section 7C - The Solicitors Act 1974
+Solicitors Act 1974
+Section 57
+Part III Remuneration of Solicitors
+Non-contentious business
+57.— Non-contentious business agreements
+7C-54
+(1) Whether or not any order is in force under section 56, a solicitor and his client may, before or after or in the
+course of the transaction of any non-contentious business by the solicitor make an agreement as to his remuneration
+in respect of that business.
+(2) The agreement may provide for the remuneration of the solicitor by a gross sum, or by reference to an hourly rate,
+or by a commission or percentage, or by a salary, or otherwise, and it may be made on the terms that the amount of
+the remuneration stipulated for shall or shall not include all or any disbursements made by the solicitor in respect of
+searches, plans, travelling, taxes, fees or other matters.
+(3) The agreement shall be in writing and signed by the person to be bound by it or his agent in that behalf.
+(4) Subject to subsections (5) and (7) the agreement may be sued and recovered on or set aside in the like manner and
+on the like grounds as an agreement not relating to the remuneration of a solicitor.
+(5) If on any assessment of costs the agreement is relied on by the solicitor and objected to by the client as unfair or
+unreasonable, the taxing officer may enquire into the facts and certify them to the court, and if from that certificate
+it appears just to the court that the agreement should be set aside, or the amount payable under it reduced, the court
+may so order and may give such consequential directions as it thinks fit.
+(6) Subsection (7) applies where the agreement provides for the remuneration of the solicitors to be by reference to
+an hourly rate.
+(7) If, on the assessment of any costs, the agreement is relied on by the solicitor and the client objects to the amount
+of the costs (but is not alleging that the agreement is unfair or unreasonable), the costs officer may enquire into—
+(a) the number of hours worked by the solicitor; and
+(b) whether the number of hours worked by him was excessive.
+
+Section 57. - Non-contentious business agreements, UKBC-WHITEBK 458578224 (2025)
+© 2025 Thomson Reuters.
+2
+Note
+7C-55
+Amended by the Courts and Legal Services Act 1990 s.98; and by the Legal Services Act 2007 Sch.16 para.55, with effect
+from 1 January 2010 (SI 2009/3250).
+Subsection (1)—“Non-contentious business”
+7C-56
+See s.87 for the meaning of the term. Work done in respect of claims brought through the pre-action portals where no County
+Court proceedings have been issued is non-contentious: Belsner v Cam Legal Services Ltd [2022] EWCA Civ 1387.
+Subsection (3)—“Agreement”
+7C-57
+It is not essential for a retainer to be in writing. The giving of instructions by a client to a solicitor constitutes the retainer.
+Although the Solicitors Code of Conduct 2007 (now the SRA Code of Conduct) required certain matters to be provided in
+writing, the 2007 Guidance explained that it was not envisaged that a breach would invariably render a retainer unenforceable.
+The retainer creates the solicitor’s right to be paid. In determining whether a retainer has come into existence the general
+principles of contract law apply. In a case where the client did not sign and return the letter of engagement, a written retainer
+never came into existence, but the court held that a personal retainer was agreed orally and implied by the client’s conduct in
+employing the solicitor to carry out the work as requested. The terms of the retainer were also varied by oral agreement and
+evidenced by the conduct of the parties, that variation did not need to be in writing. Fladgate LLP v Lee Harrison [2012] EWHC
+67 (QB) Lang J. It is not clear quite how this decision fits in with earlier authorities.
+The agreement need not be signed by both parties, but only by the party to be charged (Re Frape [1893] 2 Ch. 284). As to what
+amounts to a signature, see ibid. All the terms of the agreement must be found in the document itself, which must sufficiently
+identify the costs (Re Frape). The solicitor cannot rely on an unwritten agreement (Re West, King & Adams [1892] 2 Q.B. 102
+at 106) nor can the client (Re A Solicitor (No.2) [1956] 1 Q.B. 155) and a cash account signed by the client containing an item
+for “costs as agreed” pursuant to a verbal agreement only, is not a sufficient agreement in writing (Re Baylis [1896] 2 Ch. 107).
+An agreement to employ solicitors in work which might extend over a period of years and involve non-contentious business of
+various kinds, but for which it was contemplated that bills would be rendered and paid as matters proceeded, is not an entire
+contract, and the client can determine the retainer at any time on giving notice (J. H. Milner and Son v Percy Bilton Ltd [1966]
+1 W.L.R. 1582; [1966] 2 All E.R. 894).
+Subsection (5)—“On any taxation of costs”
+7C-58
+Although the Court has power to refer an agreement within the section to the costs judge on the ground that it is unfair and
+unreasonable, yet such an order should not be made if unsupported by evidence leading to such conclusion. See Re Palmer
+(1890) L.R. 45 Ch D 291; Re Frape [1893] 2 Ch. 284. In Re A & B (1900) 44 S.J. 315, delivery of a bill was ordered after a
+delay of eight years, and the costs judge ordered to certify if the agreement was fair and reasonable, the agreed sum being prima
+facie unreasonable and no statute of limitations being applicable. In Rutter v Sheridan-Young [1958] 1 W.L.R. 44; [1958] 2 All
+E.R. 13, the Court of Appeal ordered delivery of an itemised bill and detailed assessment, where the agreement for a gross sum
+
+Section 57. - Non-contentious business agreements, UKBC-WHITEBK 458578224 (2025)
+© 2025 Thomson Reuters.
+3
+followed an erroneous statement by the solicitor as to the basis on which he was permitted to charge. On the other hand, in Re
+Gray (1886) 30 S.J. 551, the court thought the matter more fit to be decided in an action than by a reference to the costs judge.
+The amount payable under an agreement cannot be included in a cash account on the detailed assessment of other bills under
+an order of course (Re Templeton and Cox (1909) 101 L.T. 144, CA).
+Taxation of costs is now referred to as detailed assessment of costs.
+Subsection (5)—“Unfair or unreasonable”
+7C-58. 1 See para.7C-83.
+Non-professional work
+7C-59
+Where an agreement has been made for the remuneration of a solicitor, and the solicitor alleges the remuneration was for non-
+professional work, the person chargeable cannot obtain the common order for delivery and detailed assessment of a bill of costs:
+the question of fact must first be decided (Re Inderwick (1884) L.R. 25 Ch D 279; Re Fanshawe [1905] W.N. 64).
+For instances of unreasonable agreements, see Re Montague Scott [1889] W.N. 40; Mearns v Knapp (1889) 37 W.R. 585; and
+cf. Re Haslam & Hier-Evans [1902] 1 Ch. 765; and notes to s.61, paras 7C-81 to 7C-85.
+As to whether an agreement between a mortgagee or lessor and his solicitor is binding on the mortgagor or lessee, see Hester
+v Hester (1887) L.R. 34 Ch D 607 at 617; Re Gray [1901] 1 Ch. 239 at 245. See further para.7C-126.
+An agreement by a mortgagor to pay a lump sum for mortgagor’s and mortgagee’s costs to a common solicitor is within the
+section (Re Palmer (1890) L.R. 45 Ch D 291).
+Interest
+7C-60
+See Walton v Egan.
+End of Document
+© 2025 SWEET & MAXWELL

@@ -1,0 +1,191 @@
+Section 67 Arbitration Act 1996, UKBC-BULLENL 459370707 (2022)
+© 2025 Thomson Reuters.
+1
+Section 67 Arbitration Act 1996
+Bullen & Leake & Jacob's Precedents of Pleadings 19th Ed.
+Original Mainwork
+Volume 1
+Part A - Arbitration
+Chapter 2 - Jurisdiction and Serious Irregularity
+Section 67 Arbitration Act 1996
+Introduction
+2-01
+Section 67 of the Arbitration Act 1996 Act provides one of the limited grounds on which a party can challenge all or part of
+an award 1  rendered by an arbitral tribunal seated in England and Wales. It entitles a party to arbitral proceedings to apply to
+the court to set aside an award on the grounds that the tribunal lacked substantive jurisdiction. 2  Section 67 is a mandatory
+provision in the 1996 Act and cannot be contracted out of by the parties. 3  Section 70(2) provides that an application under s.67
+may not be brought if the claimant has not first exhausted any available arbitral process of appeal or review and any available
+recourse under s.57. 4
+Substantive jurisdiction
+2-02
+Section 67 is limited to challenges to an award on the grounds that the tribunal lacked “substantive jurisdiction”. Section
+82(1) of the 1996 Act defines “substantive jurisdiction” by reference to the matters specified in s.30 thereof. Section 30
+defines substantive jurisdiction to mean: (a) whether there is a valid arbitration agreement; (b) whether the tribunal is properly
+constituted and (c) what matters have been submitted to arbitration in accordance with the arbitration agreement. Section 30
+supplies an exhaustive definition of jurisdictional matters. 5
+Awards on jurisdiction/awards on merits
+2-03
+A jurisdictional challenge can be brought either against an award that addresses only the question of substantive jurisdiction
+(see s.67(1)(a)) or against an award that addresses both substantive jurisdiction and the merits (see s.67(1)(b)). This is partly
+a function of the fact that, in the absence of agreement between the parties, the tribunal can determine whether to hear the
+jurisdictional objection as a self-standing issue or deal with it in an award on the merits. 6
+A rehearing and not a review
+2-04
+
+Section 67 Arbitration Act 1996, UKBC-BULLENL 459370707 (2022)
+© 2025 Thomson Reuters.
+2
+It is clear that the court’s approach under s.67 is to conduct a de novo rehearing of the question of jurisdiction, rather than
+merely to conduct a review of the tribunal’s findings. In other words, the question for the court is not whether the tribunal was
+entitled to reach the decision it reached but whether that decision was correct. As such, the court is not bound by the findings
+made by the tribunal and approaches the matter completely afresh. 7
+Additional evidence
+2-05
+One consequence of the fact that the court conducts a rehearing is that, in principle, additional evidence that was not before the
+tribunal is admissible before the court, albeit subject to limits delineated in a series of first instance decisions. In particular, the
+court has been careful to regulate the timing and manner in which a party may introduce new evidence. 8
+However, this is not to say that where a party has participated in the arbitration and challenged the tribunal’s jurisdiction, it will
+be entitled to run entirely new grounds of challenge before the court. It is likely that in those circumstances the applicant will
+face an objection that it has lost the right to object on the new ground it seeks to introduce, pursuant to s.73 of the 1996 Act. 9
+The grounds of a s.67 challenge
+2-06
+It is important for a party seeking to challenge an award under s.67 to set out (if at all possible) all of its various heads of
+challenge in its Arbitration Claim Form and to file its claim within the 28-day period permitted by the 1996 Act (see below).
+Otherwise, it runs the risk of not being allowed to rely upon any additional head of challenge which it later seeks to introduce.
+The actual grounds for a challenge will of course depend on the circumstances of each individual case. Typically, a challenge
+to substantive jurisdiction will involve some form of allegation that the arbitration agreement is invalid or ineffective (at least
+vis-à-vis the claimant in question) or that, even if the arbitration agreement is valid and binding, the disputes presented to and
+ruled upon by the tribunal fall outside the scope of that arbitration agreement. 10  This is not the place for a detailed discussion
+of the approach of the English court to such arguments, which can be found in the detailed works on this topic. 11
+However, even if the grounds are made out, the judge has discretion whether to grant any relief and may refuse to do so if there
+are good reasons for that refusal. Any submissions about the exercise of that discretion should be made during argument or,
+at the latest, immediately following judgment. 12
+Timing of challenge
+2-07
+The challenge must be brought within 28 days of the date of the award, unless there is an available arbitral process of appeal
+or review or—provided any corrections are material to the challenge in question—the available recourse under s.57. 13  In that
+latter case, the application must be brought within 28 days of the date when the applicant is notified of the result of that process
+of appeal/review or the result of the recourse under s.57. It is possible for an applicant to seek an extension of time to file a
+challenge pursuant to s.80(5) of the 1996 Act. 14
+
+Section 67 Arbitration Act 1996, UKBC-BULLENL 459370707 (2022)
+© 2025 Thomson Reuters.
+3
+Procedure
+2-08
+The procedure for bringing a s.67 claim is fairly straightforward and seeks to promote the general scheme and purpose of the
+Arbitration Act 1996, which is to achieve speed and finality. It requires the claimant to file an Arbitration Claim Form together
+with a witness statement which supplies the evidence supporting its claim that the tribunal lacked substantive jurisdiction. The
+claim is usually commenced in the Commercial Court or in the Technology and Construction Court. 15
+In a run-of-the mill case, there is no pleadings phase. Instead, the CPR provides a set of automatic directions which apply once
+the claimant has filed its Arbitration Claim Form together with its evidence. Thereafter, the defendant is obliged to respond by
+way of a witness statement within 21 days of the date on which it was required to acknowledge service or, if no acknowledgement
+of service was required, within 21 days from service of the Arbitration Claim Form. The claimant is then provided with only
+seven days to respond by way of reply evidence. 16
+If the case is more complicated, and in particular if it raises issues of fact or foreign law which would benefit from the precise
+identification of issues through further statements of case, it is possible for the parties either (a) to agree to this approach or
+(b) for the claimant (or even the defendant, if it considers it appropriate) to seek non-standard directions from the court. A
+suggested formulation for such a case is included in the precedent.
+Service
+2-09
+An important feature of an application using an Arbitration Claim Form is that, unlike a Part 7 Claim Form, the Arbitration
+Claim Form must be served on the defendant within one month from the date of issue. 17  In circumstances where it is anticipated
+that service will take considerably longer (e.g. if the defendant is a sovereign state) it is advisable to apply for an extension of
+time for service at the same time as the s.67 application is issued.
+Finally, one useful provision to note is para.3.1 of PD 62. In circumstances where the defendant to the s.67 application was
+represented by English solicitors in the arbitration, it is standard practice for the court to give the claimant permission, pursuant
+to CPR r.6.15, to serve the Arbitration Claim Form on the defendant by way of service on the defendant’s English solicitors.
+Appeals
+2-10
+The permission of the court is required under s.67(4) for an appeal. A number of Court of Appeal decisions have made it clear
+that, subject to one very narrow exception, permission to appeal can only be granted by the first instance judge, and not by
+the Court of Appeal. 18
+The Court of Appeal has no jurisdiction to hear an appeal on grounds that were not raised in the s.67 application. 19  If a judge
+makes a decision that he has no jurisdiction to make and then refuses permission to appeal, the Court of Appeal has jurisdiction
+to declare that the judge acted without jurisdiction. 20
+Footnotes
+
+Section 67 Arbitration Act 1996, UKBC-BULLENL 459370707 (2022)
+© 2025 Thomson Reuters.
+4
+1
+As to the difference between an award and a procedural decision, see the non-exhaustive list of characteristics set out in
+the judgment of Cockerill J in ZCCM Investment Holdings Plc v Kansanshi Holdings Plc [2019] EWHC 1285 (Comm);
+[2019] 2 Lloyd’s Rep. 29 at [40].
+2
+Section 67(3) provides that the court can on an application under s.67 confirm, vary, or set aside the award in whole
+or in part. The usual application under s.67 will be to set aside the award in whole or in part. Although the applicant
+usually contends that the tribunal had no jurisdiction, it is open to a party to complain under section 67(1)(a) that the
+tribunal did have jurisdiction and was wrong to hold that it did not (see, e.g., Integral Petroleum Ltd v Melars Group
+Ltd [2016] EWCA Civ 108; [2016] 2 Lloyd’s Rep. 141).
+3
+In unusual cases where court’s supervisory jurisdiction is invoked over issues that are also the subject of subsequent
+arbitral proceedings, the court may exercise its inherent power to stay the s.67 application: Minister of Finance v
+International Petroleum Investment Co [2019] EWHC 1151 (Comm); [2019] Bus. L.R. 1827 (appeal outstanding).
+4
+Which provides for a default regime for the correction of awards or issue of additional awards.
+5
+Union Marine Classification Services LLC v The Government of the Union of Comoros [2015] EWHC 508 (Comm);
+[2015] 2 Lloyd’s Rep. 49 (permission to appeal refused: [2016] EWCA Civ 239; [2016] 2 Lloyd’s Rep. 193); C v D1,
+D2 and D3 [2015] EWHC 2126 (Comm) at [135]; and Soletanche Bachy France SAS v Aqaba Container Terminal (Pvt)
+Co. [2019] EWHC 362 (Comm); [2019] 1 Lloyd’s Rep. 423 at [60].
+6
+See s.31(4).
+7
+See Dallah Real Estate and Tourism Holding Co v Ministry of Religious Affairs of the Government of Pakistan [2010]
+UKSC 46; [2011] 1 A.C. 763 at [25]–[26], [96] and Azov Shipping Co v Baltic Shipping Co [1999] 1 All E.R. 476.
+8
+See Electrosteel Castings Ltd v Scan-Trans Shipping & Chartering SDN BHD [2002] EWHC 1993 (Comm); [2003] 1
+Lloyd’s Rep. 190 and Central Trading & Exports Ltd v Fioralba Shipping Co [2014] EWHC 2397 (Comm); [2014] 2
+Lloyd’s Rep. 449. In Fioralba, Males J explained that the court had a discretion to admit evidence not put before the
+arbitrators, a discretion which was to be exercised in accordance with the court’s rules of procedure.
+9
+See the approach of Colman J in JSC Zestafoni G Nikoladze Ferroalloy Plant v Ronly Holding Ltd [2004] EWHC 245
+(Comm); [2004] 2 Lloyd’s Rep. 335 and the judgment of Hamblen J in Habas Sinai Ve Tibbi Gazlar Istihsal Endustrisi
+AS v VSC Steel Company Ltd [2013] EWHC 4071 (Comm); [2014] 1 Lloyd’s Rep. 479 at [84] onwards.
+10
+See Premium Nafta Products Ltd v Fili Shipping Ltd (Fiona Trust) [2007] UKHL 40; [2007] 4 All E.R. 951, the leading
+authority on the English law approach to construction of arbitration agreements. A number of subsequent Court of
+Appeal and first instance authorities have applied or considered Fiona Trust in different contractual settings. Where the
+arbitration agreement derives from international law, e.g. when it is concluded by an investor’s acceptance of a state’s
+offer to arbitrate under a bilateral investment treaty, that agreement must be construed under international law (see, e.g.,
+GFP GP SARL v Poland [2018] EWHC 409 (Comm); [2018] Bus L.R. 1203). Similarly, where jurisdiction is founded on
+a foreign statute it will be interpreted according to the relevant principles of statutory interpretation (see, e.g., Kyrgyzstan
+v Stans Energy Corp [2017] EWHC 2359 (Comm); [2018] 1 Lloyd’s Rep. 66).
+11
+See e.g. Merkin on Arbitration (Looseleaf) (Merkin).
+12
+Integral Petroleum [2016] 2 Lloyd’s Rep. 141.
+13
+Daewoo Shipbuilding and Marine Engineering Co Ltd v Songa Offshore Equinox Ltd [2018] EWHC 538 (Comm);
+[2018] 1 Lloyd’s Rep. 443.
+14
+The factors which the court will consider when determining an extension application were set out by Popplewell J in
+Terna Bahrain Holding Co WLL v Al-Shamsi [2012] EWHC 3283 (Comm); [2013] 1 Lloyd’s Rep. 86 and have been
+considered in a number of subsequent cases. See also Merkin at para.9.13 onwards. For a detailed discussion of the
+operation of s.80(5), see Merkin at para.20.40 onwards.
+15
+See PD 62.3 paras 2.2–2.3. The claim must in any event be commenced in accordance with High Court and County
+Courts (Allocation of Arbitration Proceedings) Order 1996. Arbitrations concerning the welfare of a child should be
+issued in the Commercial Court with a simultaneous request for transfer to the Family Division: Practice Guidance
+(Children: Arbitration) [2018] 1 W.L.R. 4155.
+16
+This default timetable is set out in PD 62 para.6.1 onwards. For details of what the claim form and supporting witness
+statements should contain, see mutatis mutandis the guidance cited in fn.34 to para.2-16, on s.68.
+17
+CPR r.62.4(2).
+18
+See Athletic Union of Constantinople (AEK) v National Basketball Association [2002] EWCA Civ 830; [2002] 1 W.L.R.
+2863 and the cases discussed in Merkin at para.9.20. The narrow exception is if the judge considering the application for
+permission to appeal has acted so unfairly or in such a manner that his or her decision cannot properly be considered a
+valid decision at all. Unsurprisingly, this narrow exception will only conceivably apply in the most exceptional of cases.
+19
+Yegiazaryan v Smagin [2016] EWCA Civ 1290; [2017] 1 Lloyd’s Rep. 102.
+20
+Integral Petroleum [2016] 2 Lloyd’s Rep. 141.
+
+Section 67 Arbitration Act 1996, UKBC-BULLENL 459370707 (2022)
+© 2025 Thomson Reuters.
+5
+End of Document
+© 2025 SWEET & MAXWELL

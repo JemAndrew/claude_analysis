@@ -1,0 +1,80 @@
+Section 58C. - Recovery of insurance premiums by way of costs, UKBC-WHITEBK...
+© 2025 Thomson Reuters.
+1
+Section 58C. - Recovery of insurance premiums by way of costs
+White Book 2025  | Commentary last updated May 1, 2016
+Volume 2
+Section 7 - Legal Representatives—Costs and Litigation Funding
+Section 7A - Litigation Funding after 1 April 2013
+Courts and Legal Services Act 1990
+Section 58c
+58C.— Recovery of insurance premiums by way of costs
+7A-11
+(1) A costs order made in favour of a party to proceedings who has taken out a costs insurance policy may not include
+provision requiring the payment of an amount in respect of all or part of the premium of the policy, unless such
+provision is permitted by regulations under subsection (2).
+(2) The Lord Chancellor may by regulations provide that a costs order may include provision requiring the payment
+of such an amount where—
+(a) the order is made in favour of a party to clinical negligence proceedings of a prescribed description,
+(b) the party has taken out a costs insurance policy insuring against the risk of incurring a liability to pay for
+one or more expert reports in respect of clinical negligence in connection with the proceedings (or against that
+risk and other risks),
+(c) the policy is of a prescribed description,
+(d) the policy states how much of the premium relates to the liability to pay for an expert report or reports in
+respect of clinical negligence (“the relevant part of the premium”), and
+(e) the amount is to be paid in respect of the relevant part of the premium.
+(3) Regulations under subsection (2) may include provision about the amount that may be required to be paid by the
+costs order, including provision that the amount must not exceed a prescribed maximum amount.
+(4) The regulations may prescribe a maximum amount, in particular, by specifying—
+(a) a percentage of the relevant part of the premium;
+(b) an amount calculated in a prescribed manner.
+(5) In this section—
+ 
+“clinical negligence” means breach of a duty of care or trespass to the person committed in the course of the
+provision of clinical or medical services (including dental or nursing services);
+ 
+“clinical negligence proceedings” means proceedings which include a claim for damages in respect of clinical
+negligence;
+ 
+“costs insurance policy” , in relation to a party to proceedings, means a policy insuring against the risk of the
+party incurring a liability in those proceedings;
+
+Section 58C. - Recovery of insurance premiums by way of costs, UKBC-WHITEBK...
+© 2025 Thomson Reuters.
+2
+ 
+“expert report” means a report by a person qualified to give expert advice on all or most of the matters that
+are the subject of the report;
+ 
+“proceedings” includes any sort of proceedings for resolving disputes (and not just proceedings in court),
+whether commenced or contemplated.
+Note
+7A-12
+Inserted by the Legal Aid, Sentencing and Punishment of Offenders Act 2012 s.46(1) with effect from 1 April 2013, except in
+respect of claims for damages in respect of diffuse mesothelioma, certain insolvency proceedings and publication and privacy
+proceedings: The Legal Aid, Sentencing and Punishment of Offenders Act 2012 (Commencement No.5 and Saving Provision)
+Order 2013, SI 2013/77. Subsequently, the saving in relation to insolvency proceedings was removed, with effect from 6 April
+2016, by the Legal Aid, Sentencing and Punishment of Offenders Act 2012 (Commencement No.12) Order 2016 (SI 2016/345)
+(see further Vol.1 para.48.0.2.4). The insertion of this section by the Legal Aid, Sentencing and Punishment of Offenders Act
+2012 s.46(1) was brought into force for certain purposes by the Legal Aid, Sentencing and Punishment of Offenders Act 2012
+(Commencement No.12) Order 2016 (SI 2016/345) art.2, with effect from 6 April 2016.
+Editorial note
+7A-13
+The Access to Justice Act 1999 s.29 (Recovery of insurance premiums by way of costs) is revoked by the Legal Aid, Sentencing
+and Punishment of Offenders Act 2012 s.46(2) with effect from 1 April 2013, subject to savings in ss.46(3) and 48. Costs
+orders made in favour of a party to proceedings who took out a costs insurance policy in relation to the proceedings before
+the commencement day are not affected by the repeal (s.46(3)). The repeal is postponed in respect of proceedings relating to
+claims for damages for diffuse mesothelioma pending a review by the Lord Chancellor (s.48). By the Legal Aid, Sentencing
+and Punishment of Offenders Act 2012 (Commencement No.5 and Saving Provision) Order 2013 (SI 2013/77) the amendments
+made by the 2012 Act were not brought into force in relation to certain insolvency proceedings and publication and privacy
+proceedings, but subsequently the exception in relation to insolvency proceedings was removed, with effect from 6 April 2016,
+by the Legal Aid, Sentencing and Punishment of Offenders Act 2012 (Commencement No.12) Order 2016 (SI 2016/345) (see
+further Vol.1 para.48.0.2.4).
+The effect of s.58C is that the cost of any insurance policy taken out by a party to insure against the risk of having to
+pay their opponent’s costs and their own disbursements if they lose cannot be recovered from a losing party except in
+limited circumstances in clinical negligence proceedings. The Recovery of Costs Insurance Premiums in Clinical Negligence
+Proceedings (No.2) Regulations 2013 (SI 2013/739) permit the recovery of that part of a premium which insures against the
+liability to pay for experts’ reports on liability and causation in clinical negligence proceedings if the financial value of the
+claim for damages exceeds £1,000.
+End of Document
+© 2025 SWEET & MAXWELL

@@ -1,0 +1,472 @@
+Chapter 8 - Choosing Effective Dispute Resolution..., UKBC-EFFDIS...
+© 2025 Thomson Reuters.
+1
+Chapter 8 - Choosing Effective Dispute Resolution Strategies
+After a Dispute Arises
+A Practical Guide to Effective Dispute Resolution: Methods & Clauses 1st Ed.
+Mainwork
+Part 3 - Managing Disputes Effectively: Strategic Insights and Technological Advances
+Chapter 8 - Choosing Effective Dispute Resolution Strategies After a Dispute Arises
+Introduction
+8-001
+After a dispute arises, the parties can be tempted to exacerbate the issue, and their relationship, by referring the case to dispute
+resolution lawyers and pursuing binding dispute resolution methods as soon as contractually possible. A natural reaction to
+what may be seen as an aggressive act is to push back equally strongly and, as a result, this approach does not normally lead
+to the dispute being resolved quickly or in the most cost-effective way.
+Generally, a litigious approach is likely to lead to escalation of the dispute, with significant costs being consumed by the process
+as a result of lengthy and time-consuming litigation or arbitration processes being followed, with subsequent enforcement being
+pursued, not necessarily within one jurisdiction. Although the winning party may get something out of this process, it may still
+lose on costs and the result may only be achieved in a much longer timeframe with business resources being tied up during the
+process. Another significant downside is that this process is likely to result in the business relationship being destroyed beyond
+repair, with any future business opportunities being lost.
+Acknowledging that it can involve a difficult cultural shift in an organisation, a more strategic approach from both sides would
+be to adopt a long-term perspective on emerging disputes and prioritise alternative dispute resolution (ADR) methods over
+immediate litigation or arbitration. By conducting a thorough dispute analysis and selecting the most appropriate resolution
+technique, or techniques, to employ, parties can save costs and time, ultimately leading to more effective and satisfactory
+outcomes.
+The parties should consider utilising multiple non-court-based dispute resolution techniques either consecutively or in tandem
+and to ensure that those techniques best suit the nature of the dispute, the timing of the intervention and the relationship between
+the parties.
+Dispute analysis and an outcome-focused approach
+8-002
+The first thing to determine is whether there is a pre-existing dispute resolution clause or agreement in the contract. If there
+is, then one needs to consider whether the procedure prescribed is suitable to deal with the dispute in question. If there is no
+dispute resolution clause, or the clause only provides for court jurisdiction without considering any other methods, it is important
+to consider whether the best option to achieve the designed outcome really is litigation without attempting any other dispute
+resolution method.
+Although it is unlikely that immediately resorting to litigation would be optimal in most situations, there are some important
+exceptions. These include where interim measures, like a freezing order over assets that can be dissipated, are required; serious
+allegations of fraud, which are unlikely to be resolved by a non-binding method of dispute resolution; and scenarios where the
+other side is not willing to communicate. There are also some circumstances, for example, where the limitation period is about to
+expire, where the prompt commencement of proceedings is important for reasons that are not related to the dispute or the parties.
+
+Chapter 8 - Choosing Effective Dispute Resolution..., UKBC-EFFDIS...
+© 2025 Thomson Reuters.
+2
+In summary, it is important to analyse the dispute and consider the dispute resolution strategy including all of the techniques
+available from direct negotiations and dialogue through to third-party determination. Another way of looking at this is to make
+ADR the default position unless clear reasons exist that exclude ADR.
+Often mediation occurs too late in the life of a dispute. By the time the parties mediate, they have become too focused on their
+legal rights and are increasingly polarised. By focusing on rights-based arguments and the adversarial legal process (pleadings,
+discovery, briefs, etc.), little or no time is given to identifying and exploring underlying needs and interests.
+When considering a dispute resolution strategy, it is important to take an outcome-focused approach. A party needs to consider
+what they want to achieve from the dispute resolution process and what outcome would be acceptable to them. This means
+focusing their mind on the interests involved, rather than their legal rights. 1
+Adopting a mediation-mindset from the start, including considering options to compromise, can help parties see a dispute in a
+different way and, in so doing, to follow a more collaborative approach. Choosing this, rather than immediately opting for an
+adversarial approach, means that an outcome-focused approach shifts the focus from merely winning the case and defeating the
+other side, to achieving solutions that align with both parties’ goals and ultimately preserve good will and relationship between
+the parties.
+It is important for the parties to consider not only what their own interests and desired outcome is but also what outcome the
+other side may want and what their interests are. In this analysis, putting a mediator’s hat on may help the party to understand
+the nature of the dispute better, where the other side is coming from and what the range of solutions could be.
+To prepare for mediation, or other non-binding dispute resolution processes, parties need to carefully consider the needs and
+interests of the other side, or sides. If this is not done, it is unlikely they will be able to come up with creative solutions, because
+they will only focus on their own argument and their own interests. For example, when parties know what each other’s interests
+are, they can sort them into three types: shared, different or conflicting. Shared interests help parties to cooperate (just like shared
+values do). Different interests over the same issue, or asset, create opportunities for creative exchanges and value creation.
+Conflicting interests need to be resolved.
+If the parties do not prepare well and think about each other’s positions, interests and needs, the dispute resolution process is
+less likely to succeed, and the range of possible solutions will be restricted as a result of each party only suggesting options
+that favour their own position.
+Why do parties not always engage in ADR?
+Introduction
+8-003
+The benefits of this approach may seem obvious but, as it does not happen as much as it should, it is worth exploring the
+reasons why ADR may not be adopted. Understanding these reasons requires examining factors related to emotions, legal
+culture, strategic considerations and information asymmetry.
+Emotion
+8-004
+One of the most common factors is the emotion that can develop if a material dispute arises after a long-term relationship.
+These emotions, including frustration, perceived violations of trust and a sense of justice/being wronged can quickly lead to
+parties becoming less willing to compromise and more focused on seeking “just” outcomes through formal legal proceedings.
+Once steps are taken down this path, a compounding factor can be the approach taken by legal advisers if they are also of
+a litigation mindset.
+
+Chapter 8 - Choosing Effective Dispute Resolution..., UKBC-EFFDIS...
+© 2025 Thomson Reuters.
+3
+The dispute itself can also damage the trust that was previously present in the relationship. If trust fails, the willingness to
+work collaboratively toward mutually agreeable solutions also often declines. When trust fails in the dispute (as it often does),
+it can be replaced by a detailed, step-by-step settlement agreement that spells out in precise detail what each party is to do and
+when. These detailed milestones can be used in the place of trust. With time, provided the parties see each other as meeting
+the milestones, a degree of trust may be re-established.
+Depending on the nature of the dispute, if there have been other, more subtle, negative changes in the relationship over time,
+especially if there has been a change in the personnel involved, a party might also perceive the dispute as a form of straw/
+trigger that prompts a sense of requiring vindication via a formal court or arbitration judgment rather than a swift, practical
+resolution.
+A potentially significant problem is that once a party sets out and communicates their view of their legal position and takes
+a particular stance, entrenchment can quickly set in, so that it becomes difficult for a party to change their position without
+losing face.
+Legal and strategic motivation
+8-005
+In some cases, a party could have encountered similar disputes in other contractual relationships and have determined that
+it would help to establish a legal precedent. In this context, the benefit of the confidentiality offered by resolving disputes
+through ADR can actually be seen by that party as a negative in that, whilst ADR prioritises amicable outcomes, it does not
+tend to create any legal precedent.
+Similarly, if a party has been successful in previous litigation relating to a similar issue, the resulting confidence in the strength
+of their legal position might make them less inclined to settle by ADR which would inevitably require them to compromise.
+If either of the parties have no experience of ADR, then uncertainty about the process can nudge them towards seeking advice
+from their normal legal advisors (both in-house and external) and cause them to take the first step on the path to litigation
+in the belief that the outcome will be more certain and/or enforceable.
+Perceived power imbalance
+8-006
+It is not uncommon for the larger party, who may have deeper pockets, an in-house litigation team or a litigation culture, to
+have a reduced sense of the benefits of ADR as they believe that will get a more favourable outcome by forcing the process
+into litigation or arbitration. Larger parties can also have a lower perception of the risk and consequence of losing.
+A party might also fear that suggesting ADR will signal weakness or give the other party a sense that they have a weak case
+and are unwilling to pursue legal action or defend their position. This fear of perceived weakness can encourage aggressive
+posturing rather than collaborative problem-solving.
+An apparent reluctance to participate in ADR can be a mix of all of these factors and it can be a mistake to make assumptions
+that the reason is x, y or z. Instead, the best option for a party who is prepared to explore the benefits of ADR is to make a
+proposal and, if this is rejected outright, to push for reasons. If the dispute still ends up going to a binding stage, this list can
+still be helpful if the issue of the absence of ADR is raised in court.
+Parties should not forget to include the above considerations in their dispute analysis matrix and to remind themselves that
+parties who are driven by an emotional need to have their day in court often get what they perceive to be an unfair outcome by
+virtue of losing the case or even if winning the case, do so after spending a lot of time and cost (the classic Pyrrhic victory).
+It cannot be overemphasised that, instead of being carried away by emotions and ending up in court, it is worth recognising
+this emotional response from the start and proactively building this into the dispute resolution strategy. The bottom-line is
+
+Chapter 8 - Choosing Effective Dispute Resolution..., UKBC-EFFDIS...
+© 2025 Thomson Reuters.
+4
+that there are other methods of dispute resolution than litigation, in particular mediation, which are much better suited for
+dealing with parties’ emotions and relationship.
+Either way, it is important to balance legal and interpersonal or inter-party considerations, recognising not only the legal and
+factual aspects of the dispute, but also the relationship dynamics. After all, if the parties had a business relationship before
+the dispute, this may be more important to preserve rather than have it permanently destroyed in court. That is why, focusing
+on the outcome at the start and adopting a more strategic mindset to the resolution of the dispute is more important than
+following a formalistic approach to what precisely is written in the contract or what the law says on this.
+How to choose the most effective method to resolve a particular dispute
+and hybrid alternatives
+8-007
+In the event that a dispute arises in the absence of an agreed dispute resolution clause, the parties still have an opportunity to
+try and resolve the dispute using individual or hybrid non-binding methods. However, as there is no express dispute resolution
+clause, attempts to resolve the dispute have to be made under the cloud of what is likely to happen if one or other of the parties
+decide not to engage.
+A second factor is that, as there is no obligation to participate in ADR, this can tend to polarise the positions of the parties and
+make ADR more difficult. In circumstances where either party feels they have a strong legal case or, indeed, a heightened sense
+of injustice, this can push them towards litigation even if only to have their day in court.
+Whilst there may be psychological barriers, one of the important considerations in the dispute resolution strategy is which
+method or methods to choose to attempt to resolve the dispute. In the absence of a dispute resolution clause in the existing
+contract, there will be no automatic escalation clause and it is important for both parties to give sufficient thought to methods
+that can be attempted to resolve the dispute.
+Broadly speaking, the parties could firstly attempt to resolve the dispute without the assistance of a third-party neutral. This
+is likely to be through direct negotiation. However, if negotiation is attempted first without adopting a more cooperative and
+open stance, one party, or both, may start negotiations with an adversarial tone or have a power struggle. This situation may
+quickly lead to the end of any attempts to settle by consent and the matter would move to litigation, or arbitration if agreed,
+where parties are likely to continue their battle using all available means, incurring a lot of cost and time.
+An effective strategy for this kind of situation could be to involve a neutral third-party early in the dispute resolution process,
+who can help the parties develop a more collaborative mindset and try to find a way to resolve the dispute without using binding
+methods. Some litigation teams who have experience with, and appreciate the advantages of, non-binding dispute resolution
+options will now select a neutral mediator as soon as they get instructions. That mediator can then help the parties not only
+with settlement, but also with the procedural steps in either litigation or arbitration. This can help the parties to communicate
+in a more cooperative way on matters such as disclosure, evidence and issues. This technique gets the parties more accustomed
+to negotiating through a neutral third-party at an earlier stage, which can, and often does, speed up settlement discussions and
+increase the chances of a mutual resolution to the dispute.
+Mediation
+8-008
+Mediation is an obvious choice for a process to be attempted first and is actively encouraged by the court system. A more
+detailed review is given in Chapter Three of this book. Considering its application post-dispute in the absence of a mandatory
+clause, a key benefit is the possibility of developing a more cooperative and open-minded tone to communications between the
+parties and to focus their attention on their long-term interests, rather than their opening positions. If successful, this will divert
+the parties away from a more legalistic approach and encourage them to think about solutions, rather than problems.
+
+Chapter 8 - Choosing Effective Dispute Resolution..., UKBC-EFFDIS...
+© 2025 Thomson Reuters.
+5
+Even if the mediation process itself does not lead to a binding settlement between the parties, it is very common for parties to
+continue their discussions post-mediation with a more cooperative tone. If the mediation has been done effectively, even if it
+does not result in a full resolution of the dispute, the issues may have crystallised, and the parties’ interests may have become
+clearer. The hope is that the mediator would have helped the parties change their respective positions and to start viewing the
+dispute through a more cooperative lens, taking into account the other party or parties’ needs and interests.
+The outcomes of mediation are therefore more nuanced than simply thinking of it in a binary sense: success or failure.
+Traditionally mediation was viewed as “successful” if it ended in the resolution of all matters. That focus is limiting and ignores
+the other significant benefits of mediation, including more collaborative dialogue, refining of issues, settlement of some issues,
+establishing a consensual framework to address matters, such as expert evidence, preservation of relationships, etc. Even if
+some aspects of the dispute need to be determined by a third party, the use of mediation throughout the dispute (once or on a
+number of occasions) can still lead to significant time, cost and relationship savings. Mediation even has its benefits post-receipt
+of the award or judgment, where payment issues may need to be negotiated. Even here there are opportunities to improve the
+relationship between the parties.
+Early neutral evaluation
+8-009
+If either mediation or negotiation does not lead to a settlement, it can be beneficial to add non-binding early neutral evaluation
+(ENE) into the mix. Having a dispute evaluated by an authoritative neutral party can often help provide the parties with a reality
+check of their positions and, in so doing, speed up the process of finding a solution that both parties may be able to settle upon.
+In this context, ENE should be considered to be an enabler that allows the parties to come back to the negotiation table equipped
+with an improved understanding of their own and the other party’s case and facilitate further attempts to reach a settlement.
+More detail about ENE is provided in Chapter Four.
+As an aside, if an ENE is strongly in one parties’ favour, it should be noted that there is always a chance that it may actually
+encourage a party to become more entrenched and happier to go to court as they will believe even more that they will win.
+Assuming that the ENE evaluation is well-founded, this effect should also be seen as positive in that it should encourage a
+weaker party to settle for less (or conversely to pay more if they are the defendant/respondent) than they originally aspired to,
+whilst still delivering the benefit of reducing the potential costs of litigation and any costs award that might follow.
+It is worthwhile considering all possible options before moving to a binding dispute resolution process. This is especially true
+if the remaining option involves litigation. This is because the parties are likely to spend much more time and costs on arguing
+issues in court, rather than paying for a neutral party to help them to resolve their dispute.
+The other factor is that, depending on the nature of the business and the relationship, it may ultimately cost more for the parties
+to lose the business with each other. It is important to realise that if it is decided to take the dispute to court, such a fight is
+likely to fracture the business relationship beyond repair.
+Hybrid options
+8-010
+Given the flexibility that non-binding dispute resolution methods bring, it is both possible and, in fact, encouraged, to mix and
+match them during the dispute resolution process. The selection of the process (or processes) should be considered from the
+perspective of the outcome, not what the party, or more often their advisers, typically do. The non-binding dispute resolution
+techniques to be employed should be based upon the nature of the dispute, including all other relevant matters such as the
+relationship between the parties. It is recognised that settlement through a non-binding route will always require parties to
+compromise in one sense or another. In this way, the development of a dispute resolution strategy can incorporate various
+methods and ways to achieve the ultimate goal, namely a cost-effective resolution that maintains the relationship.
+
+Chapter 8 - Choosing Effective Dispute Resolution..., UKBC-EFFDIS...
+© 2025 Thomson Reuters.
+6
+A flexible hybrid dispute resolution strategy can include an iterative combination of mediation, cooperative negotiation, ENE
+and, if necessary, arbitration. At each stage of such a dispute resolution process, it is more likely that the issues between the
+parties will crystallise, and either be resolved or narrowed down to the point of reducing the time that a final selected binding
+dispute resolution process could take.
+To be truly flexible, these hybrid options should, where necessary, include a determinative step. Typically, this is arbitration.
+For example, the parties may make significant progress with a dispute during direct negotiations or mediation but get stuck on a
+technical issue or point of interpretation. That issue could then be taken to FastTrack arbitration for determination. 2  Following
+the award on that matter, the parties can continue with the mediation armed with a binding answer on that particular point (or
+points). This blended approach (often referred to as Med-Arb or Med-Arb-Med) can be used throughout the life of the dispute
+and each component of the process (mediation or arbitration) can be employed several times in order to move the parties towards
+the final resolution on all matters in dispute.
+In turn, this can save the parties costs and time on reaching a final resolution when compared to the default alternative of a
+binding method.
+How to choose between binding methods of dispute resolution and what
+form they could take?
+8-011
+Of the binding methods of dispute resolution, court litigation is probably the least flexible and the most formal. The parties have
+little choice in terms of procedure (normally, it is prescribed by the civil procedure rules of the local court) and their tribunal
+(in terms of their decision to choose a particular judge). The courts may also refuse jurisdiction on the basis of local laws, or
+the jurisdiction may be prescribed.
+Depending on the jurisdiction in question, the parties may need to find qualified lawyers in that jurisdiction to pursue matters
+further. There may be little control over the length of time the matter may be listed in front of the court and how long the
+proceedings may last. As a result, the costs may become very high depending on the demands of a particular jurisdiction.
+Overall, once a matter reaches court, litigation tends to offer the parties very little control over the dispute resolution process.
+In contrast to litigation, arbitration offers more flexibility over the process. This is because the process is determined by the
+agreement of the parties and dependent on what was pre-agreed between the parties in an arbitration agreement and whether the
+parties are happy to vary that agreement. If so, the parties can select their tribunal (ensuring equality in this process), procedural
+rules and what the tribunal needs to decide. They can also mutually agree on deviations from this process including, abridging
+proceedings, tailoring them to the needs of the parties or a particular dispute, and setting specific time limits to speed it up.
+Parties agreeing on certain time limits and abridged procedures can ask the tribunal to make a procedural order in this regard and
+to follow this further in the proceedings. The arbitral tribunal may also suggest that the parties agree on those points anyway.
+Parties with a cooperative and proactive approach will be able to ensure that the arbitral proceedings are conducted in the most
+cost effective and time efficient manner.
+In this way, if earlier non-binding stages have allowed the parties to close the gap but not fully resolve the dispute, the parties
+can still use arbitral proceedings to resolve the remaining issues between them. This can avoid embarking on a very costly and
+lengthy process of litigation or protracted arbitral proceedings, where the parties try to raise every point or oppose the same,
+adopting a traditional adversarial approach.
+Having adopted a cooperative approach from the start of the dispute resolution process through engaging in mediation or
+cooperative negotiation, the parties are in a good position to resolve any remaining issues swiftly through arbitration, if the
+same approach is brought to the arbitration proceedings.
+
+Chapter 8 - Choosing Effective Dispute Resolution..., UKBC-EFFDIS...
+© 2025 Thomson Reuters.
+7
+Arbitration on particular issues
+8-012
+There is also a possibility to have an arbitration on particular issues or a narrow arbitration clause. This is where parties limit
+the scope of arbitral proceedings to specific unresolved issues identified during mediation or collaborative negotiations. The
+provisions for a narrow scope arbitration can be agreed in advance (before a dispute arises) or after a dispute arises, even
+amending the previous arbitration agreement by narrowing the issues for the arbitral tribunal to decide.
+One of the advantages of narrowing the issues is that it is possible to select an arbitrator who has expertise in the specific
+area relating to the issues in question. The fact that the arbitration proceedings will focus solely on the issues identified in the
+arbitration agreement (agreed between the parties after the dispute has arisen) should reduce the time and costs of the arbitration
+proceedings.
+At the same time, parties pursuing this approach need to be careful to manage any further issues that could arise and inadvertently
+further escalate costs and time. In particular, unless carefully considered, the limited scope of arbitration might result in an
+incomplete resolution of the overall dispute. There may also be other interconnected issues that would not be addressed in
+the arbitration award that could cause further dispute or proceedings. Having narrowed the issues for arbitration, if an award
+considers additional issues and the increased scope was not agreed by the parties, this may result in challenges to the award
+itself during the enforcement stage on the basis of the scope of jurisdiction of the tribunal.
+Parties may be able to mitigate this risk by clearly defining and identifying the unresolved issue or issues. They may also include
+the issues that were resolved in the common grounds (the areas or points agreed between the parties and presented to the tribunal
+as non-contentious and not requiring any decision by the tribunal). Alternatively, they may ask the tribunal to incorporate the
+agreement on those issues in the arbitration award. Either option ensures that the award has as complete a record as possible
+of the issues that have arisen in the dispute and how those issues have been dealt with. Including these matters in any award
+would also be of benefit for the full and final resolution of the dispute (any potential res judicata issues) and for enforcement.
+There is also a possibility to provide for a narrow scope arbitration before a dispute arises, for example, at the time of the writing
+of the arbitration clause. However, the risk is that this approach may later limit the parties’ choices, as well as possibly invite
+further unnecessary proceedings in relation to other issues of the same dispute which, by default, may end up in litigation.
+As previously discussed, arbitration agreements are typically drafted as wide as possible. This is to ensure that all matters that
+are arbitrable in a given jurisdiction will be determined in arbitration and not litigation. It would therefore be unusual to see an
+arbitration agreement limited to dealing with specific types of disputes or issues. However, it may be worthwhile providing for
+a flexibility provision to allow for adjustments to be made to the arbitration agreement, so that the parties could later consider
+how best to tailor the arbitration process to suit their needs and the dispute in question.
+A flexibility provision in an arbitration agreement could also provide for alternative procedures to deal with a particular dispute
+by mutual agreement. Even if this is optional and not put into a formal multi-tier escalation agreement, it can still serve to
+encourage the parties to tailor the process to the specific needs and requirements of a particular dispute.
+Given that a fundamental basis for arbitration is party autonomy, the parties are free to modify their arbitration agreement later
+by mutual agreement or conversely to agree on how they are going to address a particular dispute, without the need to modify
+the arbitration agreement. This is the case even in the absence of specific flexibility provisions. However, the advantages of
+including a flexibility provision in the original agreement are that it could potentially help clarify the parties’ intentions and
+expectations regarding the ability to modify the arbitration process. It could also encourage parties’ cooperation by building
+flexibility into the dispute resolution process, as well as streamlining and expediting the process of making adjustments later.
+Med-Arb or Arb-Med-Arb
+8-013
+
+Chapter 8 - Choosing Effective Dispute Resolution..., UKBC-EFFDIS...
+© 2025 Thomson Reuters.
+8
+There is a possibility for the parties to engage in blended Med-Arb or Arb-Med-Arb dispute resolution processes. Med-Arb
+traditionally is done by starting the process of dispute resolution with a mediator but if the mediation is unsuccessful in whole
+or in part, the process will transform into an arbitration, and the original mediator may or may not take on the dual role of also
+being the arbitrator. Conversely, a different neutral can be appointed to act as arbitrator. This is a point much debated globally
+—whether one person can be both mediator and arbitrator in the same dispute. This process is not often applied in common law
+jurisdictions but adopted in some civil law jurisdictions. For common law lawyers, it may appear controversial—particularly,
+when one neutral takes on both roles. However, given the time and cost pressure on all forms of determinative dispute resolution,
+blended processes are going to be used more frequently in the future.
+As mentioned above, one of main controversies surrounding this process is whether a mediator and an arbitrator can be the
+same person. From one side, most international arbitration rules expressly require neutrality and fairness in both arbitration and
+mediation proceedings. From the other side, there is a clear difference in their role in both processes.
+One of the main differences between the role of a mediator and an arbitrator is that, in mediation, the parties can give the
+mediator confidential information about their positions that cannot be given to the other party without consent. It follows from
+this that complications will arise if a mediator were to act as an arbitrator in the same proceedings. 3  Parties may also be reluctant
+to reveal their confidential information to the mediator in case they become an arbitrator in the same dispute. The simplest way
+to deal with these complications is to ensure that a different neutral or neutrals are used for the mediation and arbitration roles.
+Another possibility is to consider Arb-Med-Arb. The most prominent example of this process is provided in the Arb-Med-Arb
+Protocol for proceedings originally commenced in the Singapore International Arbitration Centre (SIAC), which will then be
+stayed, and the case file will be transferred to the Singapore International Mediation Centre (SIMC) for mediation. In the case
+that the matter is not settled by mediation, the arbitration proceedings will resume. If the matter is settled, the parties’ agreement
+can form part of a consent arbitration award. The difference here is that the arbitral tribunal and a mediator are different third-
+party neutrals and appointed separately, which avoids the controversy of joined Med-Arb proceedings.
+Even in the absence of an Arb-Med-Arb clause or joined administration by SIAC-SIMC, the parties can still replicate the same
+process in a more flexible way. Nothing prohibits them from agreeing to mediate after arbitration proceedings have already
+commenced. The parties can request the arbitral tribunal to stay arbitration proceedings pending their further attempts to settle
+the dispute by way of mediation. If it is mutually agreed, this is unlikely to be denied. If the parties decide to settle the proceedings
+following mediation, a consent award can be made by the tribunal later that reflects this, and the parties would benefit from the
+enforceability provided by virtue of the United Nations Convention on the Recognition and Enforcement of Foreign Arbitral
+Awards (1958) (New York Convention).
+In this way, the parties are able to “mix and match” the dispute resolution methods and processes and tailor them to their needs
+and the requirements of the dispute involved. This approach provides the most effective way to dispute resolution and the best
+way to achieve the optimum outcome.
+Expert determination
+8-014
+Where a dispute involves technical issues, it is also possible that the parties decide that the issues are best suited for expert
+determination which would bring a binding resolution to those clearly identified issues. They can request an expert to determine
+particular issues and settle the rest of the dispute by other methods depending on the outcome of the expert determination. It may
+well be that expert determination, whilst not originally included in the dispute resolution clause, becomes the most appropriate
+method to resolve particular technical issues. In this regard, by mutually agreeing to go for post-dispute expert determination
+agreement, the parties may save a lot of time and costs, rather than pursuing the case elsewhere in litigation.
+Expert determinations can be binding or non-binding depending on the wishes of the parties.
+Thus, in order to ensure that the dispute is resolved in the most cost-effective and time efficient manner, with preservation of the
+business relationship between the parties, all options need to be considered in a flexible and cooperative “outcome focussed”
+approach between the parties.
+
+Chapter 8 - Choosing Effective Dispute Resolution..., UKBC-EFFDIS...
+© 2025 Thomson Reuters.
+9
+Blended methods of resolving disputes
+8-015
+The phrase “blended” dispute resolution is a dispute resolution process which combines different dispute resolution methods. For
+example, as described above, starting with an initial mediation, proceeding later to collaborative negotiation and/or interjecting
+ENE at some point of time in this process, offering some insight and a reality check, that can later be used for further round
+of negotiations. As explained above, this process can precede a recourse to binding methods, such as arbitration, which can
+also be interrupted by a further round of mediation or negotiation. This process is referred to as a blended or hybrid dispute
+resolution process.
+Another interpretation of “blended” dispute resolution process can also include blended methods of resolving disputes. Unlike
+the process described above, such blended methods can combine in themselves various elements of dispute resolution. For
+example, negotiations can have the assistance of a third-party neutral facilitator. 4  The real opportunity for parties who are not
+already bound by a formalised binding hierarchy of escalation is to actively consider such blended options in their strategy
+for resolving a dispute.
+During this process it is important that the spirit of collaboration, effective communication, preservation of business relationships
+and an interests-oriented and solution-based approach are adopted to guide their actions. 5
+Given that parties may be culturally pre-conditioned to adopt a more adversarial and less cooperative approach, it can be difficult
+for them to change. One element of motivation for such a change is the understanding that a dispute resolution process benefits
+from flexibility and adaptability. Coupled with a neutral facilitator’s ability to encourage creative problem-solving, along with
+their subject-matter expertise and experience in comparable situations, it can significantly enhance the likelihood of effective
+dispute resolution.
+The facilitator’s role can vary depending on the process, what the parties want, and the dispute itself. Generally, a neutral
+facilitator will be involved in guiding the negotiation process and create a structured, constructive and collaborative environment
+for the parties to discuss their issues and interests. As explained in Chapter Three, both facilitative and evaluative mediation
+involve the facilitator helping the parties identify their underlying interests, rather than their positions. This allows them to
+refine their goals and explore each parties’ perspective.
+The facilitator will be able to suggest potential solutions to the identified issues, which would aim to bridge gaps, find common
+ground and move the negotiation process forward. However, the facilitator will have to be careful, when suggesting solutions,
+not to be perceived as imposing them or favouring one party or the other in the process.
+If the facilitator loses the perception of neutrality in the eyes of one or both of the parties, the prospects for reaching agreement
+rapidly diminish. 6  One reason for this is that, if a party believes a facilitator is biased, they are less likely to engage fully. This
+can include limiting self-disclosure and/or being less receptive to ideas from the other side. As a result, perceived bias can fuel
+distrust, causing parties to dig in their heels and making it harder to reach a settlement. It is important to understand that, even
+if a facilitator is not biased, the perception of bias alone can damage the perceived legitimacy of the process and any outcomes.
+Whilst brainstorming ideas, evaluating options and suggesting a number of possible solutions will be part of the process, the
+parties’ autonomy in deciding on those ideas, options and solutions must still be preserved.
+In the tailored, blended process, there may be iteration with ongoing feedback, evolving dynamics, and further adjustments being
+made to the process. Unlike mediation, which usually takes one day, a blended process may require a number of sessions spread
+over days, weeks, if not months, where the parties can exchange key information, identify issues, improve their negotiation
+techniques, explore options, solutions and the remaining unresolved issues. The aim is to find a mutually acceptable resolution
+to the dispute.
+Although one may see this process as lengthy and costly, compared to litigation itself, this process will still take less time, be
+much less resource consuming, significantly cheaper, and preserve or even improve relationships. This can lead to much more
+favourable and acceptable outcomes, with the reduction of risks that litigation or traditional arbitration often entail. If there
+are issues that remain unresolved, the matter could then proceed, as explained above, to the issue arbitration, where it can also
+iterate between arbitration and facilitated negotiations, with the tribunal consisting of different neutral parties—arbitrators.
+
+Chapter 8 - Choosing Effective Dispute Resolution..., UKBC-EFFDIS...
+© 2025 Thomson Reuters.
+10
+If all participants of the process understand their roles and are guided by a focus on the outcome (resolving the dispute) rather
+than following the formalities of each of the separate processes, the achieved outcome may be much more satisfactory. By
+giving the parties more control over the full process, such an outcome can also preserve the parties’ relationship despite possibly
+involving binding dispute resolution processes. At the end of the matter, satisfaction with the success of the process may bring
+the parties more value than winning the case at the expense of legal costs and the resources and distraction of the time spent on it.
+Facilitating the process of dispute resolution in the most efficient and
+cost-effective way
+8-016
+In summary, facilitating the dispute resolution process in the most efficient and cost-effective way requires the right mindset of
+the parties, their lawyers and the third party neutral, which is directed towards cooperation, open mindedness, flexibility and
+a goal-oriented approach in order to find a solution to the dispute in question, rather than simply adopt an adversarial way of
+dealing with disputes, which often happens, if parties end up in court.
+It is sometimes put forward by parties that there is no point in attempting to resolve a dispute by any means other than litigation
+or arbitration, as it is likely to be a waste of time and costs. What these parties do not always take into account is that they
+were going to spend much more time and legal costs from the point of initiating legal proceedings to the point when one of
+them finally succeeds in getting something out of this process (in the majority of cases the result will be a money equivalent
+of what they are allowed to get in legal terms).
+At the same time, on the way, they may lose their business partner, their reputation, business opportunities, time on arguing
+the case and waiting for it to be heard along with the money spent on legal costs, not all of which may be recoverable. This is
+assuming they are successful, and the money is paid post judgment. If there is an appeal and/or enforcement stage, they may
+end up getting much less than the value of the claim, if anything at all. In addition, the losing side may get nothing and be faced
+with paying not only its own legal costs, but the costs of the other side.
+There is no such thing as a 100% probability of success in any litigation and, whilst there is no scientifically precise answer, the
+chances of success are often much less than that. This means that, when entering into litigation proceedings, parties are running
+a risk of losing a lot. The stark fact is that somebody will have to lose for the other side to win. A party who is confident and
+goes to litigation is still running a risk that they are investing money and time with no guarantee of return and the potential
+detriment of lost relationships at the end of it.
+This risk can be mitigated by parties engaging in out-of-court dispute resolution processes from the start. Not only can it lead to
+the resolution of the matter one way or the other, but there is also an opportunity to avoid the risk of litigation by not participating
+in it at all. It is far better to consider other, more effective, ways to resolve the dispute.
+Whist there are a great variety of existing methods of dispute resolution, a party does not need to be bound by one or the
+other. They can be combined or blended in one process, and as long as it makes sense and runs reasonably cooperatively and
+efficiently, it does not really matter what it is called.
+Participation of a third-party neutral can ensure that the process is streamlined, and that there is someone who can look
+objectively at the issues in dispute and help the parties understand better the other side’s case. It can also help develop a more
+cooperative mindset for all those who are involved. Ultimately, it may help to find solutions to the problem and settle the case
+more quickly than the alternative.
+A binding option of resolving the dispute is always there as the default for parties who are unable to reach a settlement. However,
+it is important that other options are properly considered, attempted and pursued. The law does not always have the answer and
+rarely will it give everything a party wants. If a party is prepared to compromise and give up on wishful thinking, this provides
+the best basis for achieving the most effective and, ultimately, more satisfactory outcome.
+
+Chapter 8 - Choosing Effective Dispute Resolution..., UKBC-EFFDIS...
+© 2025 Thomson Reuters.
+11
+Footnotes
+1
+Paul Sills, From Litigation to Resolution and Back Again, Arbitrators & Mediators Institute of New Zealand (AMINZ)
+Conference 2014.
+2
+Irene Welser and Christian Klausegger, “Fast Track Arbitration: Just fast or something different?” (2009) Austrian
+Yearbook on international Arbitration 2009 259, 260.
+3
+Gao Haiyan v Keeneye Holdings Ltd [2011] HKEC 514.
+4
+Sills, From Litigation to Resolution and Back Again, AMINZ Conference 2014.
+5
+See also Paul Sills, Alternative dispute resolution needs an alternative, Australian National Mediation Conference 2016,
+for more discussion on collaborative dispute resolution.
+6
+A.J. Lee, “Implicit Bias in Mediation: Strategies for Mediators to Engage Constructively with ‘Incoming’ Implicit
+Bias” (2019–2020) 25 Harv. Negot. L. Rev. 167.
+End of Document
+© 2025 SWEET & MAXWELL

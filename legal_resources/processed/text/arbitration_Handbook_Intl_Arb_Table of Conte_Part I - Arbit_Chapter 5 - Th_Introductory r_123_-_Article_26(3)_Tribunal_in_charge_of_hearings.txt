@@ -1,0 +1,77 @@
+Article 26(3): Tribunal in charge of hearings, UKBC-ICCARBN 474407047 (2022)
+© 2025 Thomson Reuters.
+1
+Article 26(3): Tribunal in charge of hearings
+Handbook of ICC Arbitration: Commentary and Materials 5th Ed.
+Mainwork
+Part I - Arbitration Rules
+Chapter 5 - The Arbitral Proceedings
+Introductory remarks
+Article 26(3): Tribunal in charge of hearings
+“The arbitral tribunal shall be in full charge of the hearings, at which all the parties shall be entitled to be present. Save
+with the approval of the arbitral tribunal and the parties, persons not involved in the proceedings shall not be admitted.”
+26-24
+The basic principle is that the Tribunal is responsible for the conduct of proceedings. Usually, after consulting the parties, the
+Tribunal will set out in advance the way in which it intends to conduct the hearings, either in writing or through a telephone or
+video conference with the parties, followed by a procedural order. 417  The hearings usually have two main objectives, to hear
+the arguments of the parties and the evidence of the witnesses.
+26-25
+If there is to be only one set of hearings, the parties may each present a brief introduction on the first day and closing statements
+on the last day of the hearings, but neither are required in an ICC arbitration. If separate hearings or post-hearing briefs are
+scheduled for legal argument, there is generally no oral argument at the end of the evidentiary hearings. Arbitral hearings are less
+formal than court hearings. In small and medium-sized arbitrations, physical hearings may be held in a conference room with
+the parties and the counsel seated at a conference table. Where more persons are present, there is usually a separate conference
+table for the Tribunal and for the parties. 418  In either case, there is direct personal interaction between the Tribunal, the parties
+and witnesses, which personalises the impact of allegations in witness statements, for example.
+26-26
+With regard to time allocation, frequently one member or the secretary (if any) of the Tribunal (as well as the lawyers for the
+parties) keeps a record of the time used by each party and provides that summary to the parties on a daily basis. This enables
+the Tribunal to pay overall attention to equitable use of time although it should be made clear in the procedural order that there
+is no commitment to more than rough equality as to the allocation of time. In this respect, one issue that sometimes arises is
+unequal numbers of witnesses on each side. If the claimant calls one witness for example and the respondent calls eight, then
+the claimant will usually argue that it needs more time for cross examination. Usually, the issue is resolved with a compromise
+solution that reflects the number of witnesses to be cross examined on each side but also the scope of the cross examination for
+each witness (which will naturally be broader for the claimant’s sole witness in this example).
+26-27
+During the hearings, procedural issues may arise that the Tribunal will have to decide rapidly, and often on the spot. Therefore,
+it is not infrequent for the Tribunal to issue procedural orders during the hearings, first orally, and sometimes subsequently in
+written form. No formal requirement exists under the Rules, and the best way to proceed will be left to the Tribunal. It would
+normally be sufficient if the minutes of the hearing, or a verbatim hearing transcript records the Tribunal’s order.
+26-28
+If factual witnesses and experts testify, then there is an initial issue as to how such questioning will be carried out and by whom.
+The civil law approach in national court proceedings is to have questioning mainly by the judge. The common law approach
+is generally to have questioning mainly by the lawyers.
+
+Article 26(3): Tribunal in charge of hearings, UKBC-ICCARBN 474407047 (2022)
+© 2025 Thomson Reuters.
+2
+26-29
+These differences in approach have been very much attenuated in international arbitration. 419  However, they are subject to
+certain recent developments, such as “witness conferencing”, that are briefly discussed below. But either way, as stated by
+art.5.9 of the Prague Rules, it is generally admitted in international arbitrations that “the examination of any fact witness shall
+be conducted under the direction and control of the arbitral tribunal”. In practice, this happens to various degrees, depending
+very much on the personal style of a sole or presiding arbitrator, but also the level of preparation of the Tribunal. Interestingly,
+when comparing the IBA Rules on Evidence and the Prague Rules in relation to the Tribunal’s conduct at the hearing, there
+exist no material differences. 420
+26-30
+The evidence submitted to a Tribunal is generally not subject to any specific rules of evidence. As noted for example in the IBA
+Rules on Evidence, it is up to the Tribunal to decide the weight to be given to particular items of evidence.
+Footnotes
+417
+On the power of the Tribunal to organise the proceedings and the binding nature of its procedural orders, see for example
+Karrer, “Freedom of an arbitral tribunal to conduct proceedings” [1999] ICC ICArb. Bull. Vol.10 No.1, p.14; Orrego
+Vicuna, “The binding nature of procedural orders in international arbitration” [1999] ICC ICArb. Bull. Vol.10 No.1,
+p.38; Donovan, “Powers of the arbitrators to issue procedural orders, including interim measures of protection, and the
+obligations of parties to abide by such orders” [1999] ICC ICArb. Bull. Vol.10 No.1, p.57; Böckstiegel, “Major Criteria
+for International Arbitrators in Shaping an Efficient Procedure” [1999] ICC ICArb. Bull., Special Supplement, p.49.
+Born, International Commercial Arbitration, op.cit., pp.2120 and following.
+418
+Where there is a court reporter, he or she may sit next to the Tribunal or between the Tribunal and the witnesses.
+419
+See, for example, Elsing & Townsend, “Bridging the Common-Law Civil Divide in Arbitration” (2002) Arbitration Int.
+Vol.1 No.1, p.59.
+420
+Compare in particular art.8.2 of the IBA Rules on Evidence with art.5.9 of the Prague Rules (as to the latter see
+para.25-42).
+End of Document
+© 2025 SWEET & MAXWELL
