@@ -1,4 +1,4 @@
-# api_client.py - Simple version with cost tracking
+# api_client.py - FIXED VERSION with correct settings access
 """
 Simplified Claude API client with cost tracking for Opus 4.1.
 Tracks spending continuously and makes it easy to monitor costs.
@@ -60,59 +60,52 @@ class CostTracker:
             except:
                 pass  # Start fresh if can't load
     
-    def track_call(self, phase: str, model: str, input_tokens: int, output_tokens: int) -> Dict:
-        """Track an API call and return cost info"""
+    def track_call(self, phase: str, model: str, input_tokens: int, output_tokens: int) -> float:
+        """Track an API call and return cost"""
         
-        # Get pricing for this model
+        # Calculate cost
         pricing = self.model_pricing.get(model, self.model_pricing["claude-opus-4-1-20250805"])
-        
-        # Calculate costs
         input_cost = (input_tokens / 1000) * pricing["input"]
         output_cost = (output_tokens / 1000) * pricing["output"]
-        call_cost = input_cost + output_cost
+        total_cost = input_cost + output_cost
         
         # Update totals
-        self.total_cost += call_cost
+        self.total_cost += total_cost
         self.total_input_tokens += input_tokens
         self.total_output_tokens += output_tokens
         
-        # Record this call
-        call_data = {
+        # Add to history
+        self.call_history.append({
             'timestamp': datetime.now().isoformat(),
             'phase': phase,
             'model': model,
             'input_tokens': input_tokens,
             'output_tokens': output_tokens,
-            'cost_gbp': round(call_cost, 6)
-        }
-        self.call_history.append(call_data)
+            'cost_gbp': total_cost
+        })
         
-        # Save immediately
-        self._save_costs()
+        # Display cost info
+        model_name = "Haiku" if "haiku" in model else "Opus 4.1"
+        print(f"   💰 Cost: £{total_cost:.4f} ({model_name}: {input_tokens:,} in, {output_tokens:,} out)")
+        print(f"   📊 Total spend so far: £{self.total_cost:.4f}")
         
-        # Print cost update
-        print(f"\n💷 Cost Update:")
-        print(f"   This call: £{call_cost:.4f} ({input_tokens:,} in / {output_tokens:,} out)")
-        print(f"   Total spent: £{self.total_cost:.4f}")
-        print(f"   Total tokens: {self.total_input_tokens + self.total_output_tokens:,}")
+        # Save costs to disk
+        self.save_costs()
         
-        return call_data
+        return total_cost
     
-    def _save_costs(self):
-        """Save cost data to file"""
-        data = {
-            'total_cost_gbp': round(self.total_cost, 4),
-            'total_input_tokens': self.total_input_tokens,
-            'total_output_tokens': self.total_output_tokens,
-            'calls': self.call_history,
-            'last_updated': datetime.now().isoformat()
-        }
-        
+    def save_costs(self):
+        """Save current costs to file"""
         with open(self.costs_file, 'w') as f:
-            json.dump(data, f, indent=2)
+            json.dump({
+                'total_cost_gbp': self.total_cost,
+                'total_input_tokens': self.total_input_tokens,
+                'total_output_tokens': self.total_output_tokens,
+                'calls': self.call_history
+            }, f, indent=2)
     
     def get_phase_costs(self) -> Dict:
-        """Get breakdown by phase"""
+        """Get cost breakdown by phase"""
         breakdown = {}
         for call in self.call_history:
             phase = call['phase']
@@ -146,13 +139,13 @@ class CostTracker:
 class ClaudeAPIClient:
     """Simple API client with your settings"""
     
-    def __init__(self, settings_path: str = "./config/settings.json"):
-        """Initialise the API client"""
+    def __init__(self, api_key: Optional[str] = None, settings_path: str = "./config/settings.json"):
+        """Initialise the API client - FIXED to handle both api_key and settings_path"""
         
-        # Load API key (already loaded at module level, but check again)
-        self.api_key = os.getenv('ANTHROPIC_API_KEY')
+        # Load API key (use provided or get from environment)
+        self.api_key = api_key or os.getenv('ANTHROPIC_API_KEY')
         if not self.api_key:
-            # Try one more time with explicit path
+            # Try loading from .env
             load_dotenv(dotenv_path='./config/.env', override=True)
             self.api_key = os.getenv('ANTHROPIC_API_KEY')
             
@@ -166,52 +159,65 @@ class ClaudeAPIClient:
         self.client = anthropic.Anthropic(api_key=self.api_key)
         
         # Load settings
-        if not settings_path:
-            settings_path = Path("config/settings.json")
-        
-        # Load settings with proper error handling
+        settings_path = Path(settings_path)
         if settings_path.exists():
             with open(settings_path, 'r') as f:
                 self.settings = json.load(f)
         else:
-            print("Warning: settings.json not found, using defaults")
-            self.settings = {
-                "investigation": {
-                    "max_tokens": 4000,
-                    "haiku_max_tokens": 2000
-                },
-                "model_config": {
-                    "temperature": {
-                        "phase_0a": 0.3,
-                        "phase_0b": 0.3,
-                        "phase_1": 0.3,
-                        "phase_2": 0.3,
-                        "phase_3": 0.3,
-                        "phase_4": 0.4,
-                        "phase_5": 0.4,
-                        "phase_6": 0.5,
-                        "phase_7": 0.7
-                    },
-                    "haiku_phases": ["phase_0a", "phase_0b", "phase_1"],
-                    "opus_phases": ["phase_2", "phase_3", "phase_4", "phase_5", "phase_6", "phase_7"]
-                }
-            }
+            print(f"Warning: settings.json not found at {settings_path}, using defaults")
+            self.settings = self._get_default_settings()
         
-        # Get configuration
+        # FIXED: Correct access to settings structure
         self.investigation = self.settings['investigation']
-        self.model_config = self.settings['model']
-        self.opus_optimisations = self.settings.get('opus_41_optimizations', {})
+        self.model_config = self.settings['model']  # ✅ CORRECT - it's 'model' not 'model_config'
+        self.litigation_strategy = self.settings.get('litigation_strategy', {})
+        self.api_config = self.settings.get('api', {})
         
-        # Default model (Opus 4.1)
+        # Model names
         self.opus_model = self.model_config['primary']['name']
-        self.haiku_model = "claude-3-haiku-20240307"
+        self.haiku_model = self.model_config['secondary']['name']
         
         # Initialise cost tracker
         self.cost_tracker = CostTracker()
         
         print(f"\n✅ API Client Ready")
         print(f"   Primary Model: {self.opus_model}")
+        print(f"   Secondary Model: {self.haiku_model}")
         print(f"   Project: {self.investigation['project_name']}")
+    
+    def _get_default_settings(self):
+        """Provide default settings if file is missing"""
+        return {
+            "model": {
+                "primary": {
+                    "name": "claude-opus-4-1-20250805",
+                    "max_tokens": 4000
+                },
+                "secondary": {
+                    "name": "claude-3-haiku-20240307",
+                    "max_tokens": 2000
+                },
+                "temperature": {
+                    "phase_0a": 0.3,
+                    "phase_0b": 0.3,
+                    "phase_1": 0.3,
+                    "phase_2": 0.3,
+                    "phase_3": 0.4,
+                    "phase_4": 0.4,
+                    "phase_5": 0.5,
+                    "phase_6": 0.5,
+                    "phase_7": 0.7,
+                    "default": 0.3
+                },
+                "haiku_phases": ["phase_0a", "phase_0b", "phase_1"],
+                "opus_phases": ["phase_2", "phase_3", "phase_4", "phase_5", "phase_6", "phase_7"]
+            },
+            "investigation": {
+                "project_name": "Lismore Capital vs Process Holdings",
+                "max_tokens": 4000,
+                "haiku_max_tokens": 2000
+            }
+        }
     
     def analyse_documents(
         self,
@@ -234,20 +240,20 @@ class ClaudeAPIClient:
         """
         
         # Determine which model to use based on phase
-        if phase in ['phase_0a', 'phase_0b', 'phase_1']:
+        if phase in self.model_config.get('haiku_phases', ['phase_0a', 'phase_0b', 'phase_1']):
             # Use cheaper Haiku model for these phases
             model = self.haiku_model
-            max_tokens = 4096
+            max_tokens = self.investigation.get('haiku_max_tokens', 2000)
             print(f"\n📊 Phase {phase}: Using Haiku (economy mode)")
         else:
             # Use Opus 4.1 for everything else
             model = self.opus_model
-            max_tokens = self.settings['investigation']['max_tokens']
+            max_tokens = self.investigation.get('max_tokens', 4000)
             print(f"\n🚀 Phase {phase}: Using Opus 4.1 (maximum power)")
         
         # Get temperature for this phase
         temperatures = self.model_config.get('temperature', {})
-        temperature = temperatures.get(phase, 0.3) if phase else 0.3
+        temperature = temperatures.get(phase, temperatures.get('default', 0.3))
         
         # Build the prompts
         system_prompt = self._build_system_prompt(phase)
@@ -275,7 +281,12 @@ class ClaudeAPIClient:
                 output_tokens=response.usage.output_tokens
             )
             
-            return response.content[0].text
+            # Extract text from response safely
+            if response.content and len(response.content) > 0:
+                return response.content[0].text
+            else:
+                print("⚠️ Empty response from API")
+                return None
             
         except anthropic.RateLimitError:
             print("⏳ Rate limit hit - waiting 60 seconds...")
@@ -288,91 +299,42 @@ class ClaudeAPIClient:
     
     def _build_system_prompt(self, phase: str) -> str:
         """Build adversarial system prompt"""
-        return f"""You are a senior commercial litigation partner at a magic circle firm.
-    You are conducting {phase} for LISMORE CAPITAL against Process Holdings.
-
-    CRITICAL INSTRUCTIONS:
-    - You work exclusively FOR Lismore - be ruthlessly adversarial
-    - Find every weakness in Process Holdings' position
-    - Identify document gaps as evidence of deliberate withholding
-    - Write like you're preparing to destroy them at trial
-    - Use British English and UK legal terminology
-    - Be forensically aggressive - you're hunting for the kill shot
-
-    Current phase: {phase}"""
+        base_prompt = f"""You are a senior commercial litigation partner at a magic circle firm.
+You are conducting {phase if phase else 'analysis'} for LISMORE CAPITAL against Process Holdings.
+Your mandate is to find evidence that destroys Process Holdings' position.
+Be aggressive, thorough, and partisan for Lismore. Find every weakness."""
+        
+        # Add litigation strategy if available
+        if self.litigation_strategy:
+            objectives = self.litigation_strategy.get('primary_objectives', [])
+            if objectives:
+                base_prompt += f"\n\nPRIMARY OBJECTIVES:\n" + "\n".join(f"- {obj}" for obj in objectives)
+        
+        return base_prompt
     
-    def _build_user_message(
-        self,
-        documents: List[str],
-        prompt: str,
-        context: Optional[Dict]
-    ) -> str:
-        """Build the user message"""
+    def _build_user_message(self, documents: List[str], prompt: str, context: Optional[Dict]) -> str:
+        """Build user message with documents and context"""
         
         message_parts = []
         
-        # Add context if available
+        # Add context from previous phases if available
         if context:
-            message_parts.append("KNOWLEDGE FROM PREVIOUS PHASES:")
-            # Limit context to avoid token overflow
-            context_str = json.dumps(context, indent=2)
-            if len(context_str) > 10000:
-                context_str = context_str[:10000] + "\n[...truncated...]"
+            message_parts.append("PREVIOUS PHASE KNOWLEDGE:")
+            # Truncate to avoid token limits
+            context_str = json.dumps(context, indent=2)[:10000]
             message_parts.append(context_str)
             message_parts.append("\n" + "="*50 + "\n")
+        
+        # Add the main prompt
+        message_parts.append("ANALYSIS TASK:")
+        message_parts.append(prompt)
+        message_parts.append("\n" + "="*50 + "\n")
         
         # Add documents
         message_parts.append("DOCUMENTS TO ANALYSE:")
         for i, doc in enumerate(documents, 1):
-            message_parts.append(f"\n[DOCUMENT {i}]")
             # Truncate very long documents
-            if len(doc) > 50000:
-                doc = doc[:45000] + "\n\n[...document truncated for length...]\n\n" + doc[-5000:]
-            message_parts.append(doc)
-        
-        # Add the analysis prompt
-        message_parts.append("\n" + "="*50)
-        message_parts.append("\nANALYSIS REQUIRED:")
-        message_parts.append(prompt)
+            doc_text = doc[:50000] if len(doc) > 50000 else doc
+            message_parts.append(f"\n--- Document {i} ---\n{doc_text}")
         
         return "\n".join(message_parts)
-    
-    def get_cost_summary(self):
-        """Get a summary of costs"""
-        self.cost_tracker.print_summary()
-        return {
-            'total_cost': self.cost_tracker.total_cost,
-            'total_tokens': self.cost_tracker.total_input_tokens + self.cost_tracker.total_output_tokens,
-            'phase_breakdown': self.cost_tracker.get_phase_costs()
-        }
-    
-    def estimate_cost(self, text: str, phase: str = "phase_4") -> Dict:
-        """Estimate the cost before making a call"""
-        
-        # Rough estimation: 1 token ≈ 4 characters
-        estimated_input_tokens = len(text) // 4
-        estimated_output_tokens = 3000  # Assume typical response
-        
-        # Determine model
-        if phase in ['phase_0a', 'phase_0b', 'phase_1']:
-            model = "claude-3-haiku-20240307"
-            pricing = self.cost_tracker.model_pricing[model]
-        else:
-            model = self.opus_model
-            pricing = self.cost_tracker.model_pricing["claude-opus-4-1-20250805"]
-        
-        input_cost = (estimated_input_tokens / 1000) * pricing["input"]
-        output_cost = (estimated_output_tokens / 1000) * pricing["output"]
-        total_cost = input_cost + output_cost
-        
-        print(f"\n💰 COST ESTIMATE for {phase}:")
-        print(f"   Model: {model}")
-        print(f"   Est. Input: {estimated_input_tokens:,} tokens (£{input_cost:.4f})")
-        print(f"   Est. Output: {estimated_output_tokens:,} tokens (£{output_cost:.4f})")
-        print(f"   Est. Total: £{total_cost:.4f}")
-        
-        return {
-            'model': model,
-            'estimated_cost_gbp': round(total_cost, 4),
-            'estimated_tokens': estimated_input_tokens + estimated_output_tokens
-        }

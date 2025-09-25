@@ -34,7 +34,7 @@ class DocumentProcessor:
     
     def __init__(self, api_key: Optional[str] = None):
         """Initialise the document processor"""
-        self.api_client = ClaudeAPIClient(api_key)
+        self.api_client = ClaudeAPIClient(api_key=api_key)
         self.knowledge_manage = KnowledgeManager()
         self.documents = []
         self.current_phase = None
@@ -83,7 +83,24 @@ class DocumentProcessor:
             "6": 250000,   # ~62k words
             "7": 250000
         }
-    
+        
+    def _build_full_prompt(self, master: str, phase_prompt: str, previous_knowledge: Dict) -> str:
+        """Build complete prompt with all context"""
+        prompt_parts = [master]
+        
+        if previous_knowledge:
+            prompt_parts.append("\nPREVIOUS PHASE KNOWLEDGE:")
+            # Include synthesis from each previous phase
+            for phase, knowledge in previous_knowledge.items():
+                if 'synthesis' in knowledge:
+                    prompt_parts.append(f"\nPhase {phase} Key Findings:")
+                    prompt_parts.append(knowledge['synthesis'][:2000])
+        
+        prompt_parts.append("\nCURRENT PHASE TASK:")
+        prompt_parts.append(phase_prompt)
+        
+        return "\n".join(prompt_parts)
+
     def load_documents_for_phase(self, phase_num: str) -> bool:
         """
         Load documents from the appropriate directory for the given phase
