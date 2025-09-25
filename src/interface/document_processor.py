@@ -1,7 +1,7 @@
 ﻿#!/usr/bin/env python3
 """
-Document Processor with Complete Legal Resource Loading
-Processes ALL documents in legal_resources for maximum knowledge transfer
+Complete Document Processor for Lismore vs Process Holdings
+Handles ALL phases (0A, 0B, 1-7) with maximum intelligence extraction
 """
 
 import json
@@ -12,15 +12,24 @@ from datetime import datetime
 from collections import defaultdict
 import re
 
-from ..core.api_client import ClaudeAPIClient
-from ..prompts.phase_prompts import get_phase_prompt, get_phase_prompt_enhanced
-from ..knowledge.knowledge_manage import KnowledgeManager  
-from ..selectors.document_selector import DocumentSelector
-from ..core.utils import load_documents, validate_documents
+# Use relative imports when running as module
+try:
+    from ..core.api_client import ClaudeAPIClient
+    from ..prompts.phase_prompts import get_phase_prompt, get_phase_prompt_enhanced
+    from ..knowledge.knowledge_manage import KnowledgeManager  
+    from ..selectors.document_selector import DocumentSelector
+    from ..core.utils import load_documents, validate_documents
+except ImportError:
+    # Fallback to absolute imports
+    from core.api_client import ClaudeAPIClient
+    from prompts.phase_prompts import get_phase_prompt, get_phase_prompt_enhanced
+    from knowledge.knowledge_manage import KnowledgeManager
+    from selectors.document_selector import DocumentSelector
+    from core.utils import load_documents, validate_documents
 
 
 class DocumentProcessor:
-    """Document processor that loads ALL legal resources for complete knowledge"""
+    """Complete document processor for all phases with maximum intelligence"""
     
     def __init__(self, api_key: Optional[str] = None):
         """Initialise document processor"""
@@ -29,157 +38,181 @@ class DocumentProcessor:
         self.document_registry = self._load_all_documents()
         self.document_selector = DocumentSelector(self.document_registry)
         
-        # Three-directory structure
+        # Phase configuration
         self.PHASE_DIRECTORIES = {
-            "0A": "legal_resources",           
-            "0B": "case_context",              
-            "1": "documents",   
-            "2": "documents",   
-            "3": "documents",   
-            "4": "documents",   
-            "5": "documents",   
-            "6": "documents",   
-            "7": "documents"    
+            "0A": "legal_resources",     # Legal framework
+            "0B": "case_context",        # Case background
+            "1": "documents",            # Phases 1-7 use main documents
+            "2": "documents",
+            "3": "documents",
+            "4": "documents",
+            "5": "documents",
+            "6": "documents",
+            "7": "documents"
         }
         
-        self.disclosure_cache = None
         self.current_phase = None
         
     def _load_all_documents(self) -> Dict:
-        """Load all documents ONCE into registry"""
+        """Load all documents from all directories"""
         registry = {}
         doc_id = 0
         
-        # Load from all directories
-        directories = [
-            "legal_resources/processed/text",
-            "legal_resources/rule_cards",
-            "legal_resources/playbooks",
-            "case_context/raw",
-            "documents/raw",
-            "documents/processed/text"
-        ]
-        
-        for dir_path in directories:
-            path = Path(dir_path)
-            if path.exists():
-                # Handle different file types
-                if "rule_cards" in dir_path:
-                    # Load JSON rule cards
-                    for json_file in path.glob("*.json"):
+        # Load from all possible directories
+        for dir_name in ["legal_resources", "case_context", "documents"]:
+            path = Path(dir_name)
+            if not path.exists():
+                continue
+            
+            # Handle different subdirectory structures
+            if dir_name == "legal_resources":
+                # Load rule cards
+                rule_cards_dir = path / "rule_cards"
+                if rule_cards_dir.exists():
+                    for json_file in rule_cards_dir.glob("*.json"):
                         doc_id += 1
-                        with open(json_file, 'r', encoding='utf-8') as f:
-                            content = json.load(f)
-                            registry[f"DOC_{doc_id:04d}"] = {
-                                'content': f"[RULE CARD - {json_file.stem}]\n" + json.dumps(content, indent=2),
-                                'filepath': str(json_file),
-                                'filename': json_file.name,
-                                'doc_id': f"DOC_{doc_id:04d}",
-                                'source_dir': dir_path
-                            }
-                    print(f"📁 Loaded {len(list(path.glob('*.json')))} rule cards from {dir_path}")
-                    
-                elif "playbooks" in dir_path:
-                    # Load playbook files
-                    for playbook_file in path.glob("*"):
-                        if playbook_file.is_file():
-                            doc_id += 1
-                            with open(playbook_file, 'r', encoding='utf-8') as f:
+                        try:
+                            with open(json_file, 'r', encoding='utf-8') as f:
+                                content = json.load(f)
                                 registry[f"DOC_{doc_id:04d}"] = {
-                                    'content': f"[PLAYBOOK - {playbook_file.stem}]\n" + f.read(),
-                                    'filepath': str(playbook_file),
-                                    'filename': playbook_file.name,
+                                    'content': json.dumps(content, indent=2),
+                                    'filepath': str(json_file),
+                                    'filename': json_file.name,
                                     'doc_id': f"DOC_{doc_id:04d}",
-                                    'source_dir': dir_path
+                                    'source_dir': str(rule_cards_dir)
                                 }
-                    print(f"📁 Loaded playbooks from {dir_path}")
-                    
-                else:
-                    # Load regular documents (PDFs/text)
-                    docs = load_documents(str(path))
-                    for doc in docs:
+                        except Exception as e:
+                            print(f"⚠️ Error loading {json_file}: {e}")
+                
+                # Load processed texts
+                text_dir = path / "processed" / "text"
+                if text_dir.exists():
+                    for txt_file in text_dir.glob("*.txt"):
                         doc_id += 1
-                        doc['doc_id'] = f"DOC_{doc_id:04d}"
-                        doc['source_dir'] = dir_path
-                        registry[doc['doc_id']] = doc
-                    print(f"📁 Loaded {len(docs)} documents from {dir_path}")
+                        try:
+                            with open(txt_file, 'r', encoding='utf-8') as f:
+                                content = f.read()
+                                if content.strip():
+                                    registry[f"DOC_{doc_id:04d}"] = {
+                                        'content': content,
+                                        'filepath': str(txt_file),
+                                        'filename': txt_file.name,
+                                        'doc_id': f"DOC_{doc_id:04d}",
+                                        'source_dir': str(text_dir)
+                                    }
+                        except Exception as e:
+                            print(f"⚠️ Error loading {txt_file}: {e}")
+            
+            elif dir_name == "documents":
+                # Load processed documents
+                processed_dir = path / "processed" / "text"
+                if processed_dir.exists():
+                    for txt_file in processed_dir.glob("*.txt"):
+                        doc_id += 1
+                        try:
+                            with open(txt_file, 'r', encoding='utf-8') as f:
+                                content = f.read()
+                                if content.strip():
+                                    registry[f"DOC_{doc_id:04d}"] = {
+                                        'content': content,
+                                        'filepath': str(txt_file),
+                                        'filename': txt_file.name,
+                                        'doc_id': f"DOC_{doc_id:04d}",
+                                        'source_dir': str(processed_dir)
+                                    }
+                        except Exception as e:
+                            print(f"⚠️ Error loading {txt_file}: {e}")
+            
+            else:
+                # Load any documents from case_context
+                docs = load_documents(str(path))
+                for doc in docs:
+                    doc_id += 1
+                    doc['doc_id'] = f"DOC_{doc_id:04d}"
+                    doc['source_dir'] = str(path)
+                    registry[doc['doc_id']] = doc
         
         print(f"📚 Total documents in registry: {len(registry)}")
         return registry
     
     def process_phase(self, phase_num: str) -> Dict:
-        """Process phase with maximum optimisation"""
+        """Process any phase (0A, 0B, 1-7)"""
         print(f"\n{'='*60}")
         print(f"🎯 PHASE {phase_num}: PROCESSING")
         print(f"{'='*60}")
         
         self.current_phase = phase_num
+        relevant_docs = []
         
-        # Phase 0A: Load ALL legal resources for complete knowledge
+        # Phase-specific document selection
         if phase_num == "0A":
-            print("📚 Loading COMPLETE legal framework for maximum knowledge...")
-            relevant_docs = []
+            # Load ALL legal resources
+            print("📚 Loading COMPLETE legal framework...")
+            relevant_docs = [doc for doc in self.document_registry.values() 
+                           if 'legal_resources' in doc.get('source_dir', '')]
             
-            # Get ALL documents from legal_resources (everything!)
-            for doc_id, doc in self.document_registry.items():
-                if 'legal_resources' in doc.get('source_dir', ''):
-                    relevant_docs.append(doc)
-            
-            # Count by type
-            rule_cards = sum(1 for d in relevant_docs if 'RULE CARD' in d.get('content', '')[:50])
-            playbooks = sum(1 for d in relevant_docs if 'PLAYBOOK' in d.get('content', '')[:50])
-            treatises = len(relevant_docs) - rule_cards - playbooks
+            # Count document types
+            rule_count = sum(1 for d in relevant_docs if 'rule_cards' in d.get('source_dir', ''))
+            text_count = sum(1 for d in relevant_docs if 'processed/text' in d.get('source_dir', ''))
             
             print(f"📎 Loaded {len(relevant_docs)} total legal documents:")
-            print(f"   • {rule_cards} weaponised rule cards")
-            print(f"   • {treatises} treatise extracts") 
-            print(f"   • {playbooks} strategic playbooks")
+            if rule_count > 0:
+                print(f"   • {rule_count} weaponised rule cards")
+            if text_count > 0:
+                print(f"   • {text_count} treatise extracts")
             
         elif phase_num == "0B":
-            # Phase 0B: Case context documents
-            case_docs = [doc for doc in self.document_registry.values() 
-                        if 'case_context' in doc.get('source_dir', '')]
-            relevant_docs = case_docs
-            print(f"📎 Selected {len(relevant_docs)} case context documents")
+            # Load case context documents
+            print("📚 Loading case context...")
+            relevant_docs = [doc for doc in self.document_registry.values()
+                           if 'case_context' in doc.get('source_dir', '')]
+            print(f"📎 Loaded {len(relevant_docs)} case context documents")
             
         else:
-            # Phases 1-7: Use document selector
-            relevant_docs = self.document_selector.select_for_phase(
-                phase=phase_num,
-                phase_data=self.knowledge_manage.get_previous_knowledge(phase_num),
-                max_docs=50
-            )
+            # Phases 1-7: Use document selector on main documents
+            print(f"📚 Selecting documents for Phase {phase_num}...")
+            main_docs = [doc for doc in self.document_registry.values()
+                        if 'documents' in doc.get('source_dir', '')]
+            
+            if self.document_selector and main_docs:
+                relevant_docs = self.document_selector.select_for_phase(
+                    phase=phase_num,
+                    phase_data=self.knowledge_manage.get_previous_knowledge(phase_num),
+                    max_docs=50
+                )
+            else:
+                # Fallback: take first 50 documents
+                relevant_docs = main_docs[:50]
+            
             print(f"📎 Selected {len(relevant_docs)} documents for Phase {phase_num}")
         
         if not relevant_docs:
             print(f"⚠️ No relevant documents for Phase {phase_num}")
             return {}
         
-        # Build context from knowledge graph
+        # Build context
         context = self._build_comprehensive_context(phase_num)
         
-        # Execute single comprehensive analysis
+        # Execute analysis
         results = self._execute_single_comprehensive_analysis(
             phase_num, 
             relevant_docs, 
             context
         )
         
-        # Store in knowledge manager
-        self.knowledge_manage.store_phase_knowledge(phase_num, results)
-        
-        # Update knowledge graph
-        self._update_knowledge_graph(phase_num, results)
-        
-        print(f"✅ Phase {phase_num} complete - knowledge stored")
+        # Store knowledge
+        if results:
+            self.knowledge_manage.store_phase_knowledge(phase_num, results)
+            self._update_knowledge_graph(phase_num, results)
+            print(f"✅ Phase {phase_num} complete - knowledge stored")
         
         return results
     
     def _build_comprehensive_context(self, phase: str) -> Dict:
-        """Build rich context from knowledge graph"""
+        """Build context with all required keys initialised"""
         context = {
             'phase': phase,
-            'previous_phases': self.knowledge_manage.get_completed_phases(),
+            'previous_phases': [],
             'knowledge_graph': {},
             'accumulated_patterns': {},
             'contradictions': {},
@@ -187,30 +220,47 @@ class DocumentProcessor:
             'strategic_priorities': self._get_strategic_priorities(phase)
         }
         
-        # Safely get knowledge graph attributes
-        if hasattr(self.knowledge_manage, 'knowledge_graph'):
-            kg = self.knowledge_manage.knowledge_graph
-            context['knowledge_graph'] = kg
-            context['contradictions'] = kg.get('contradictions', {})
-            context['legal_weapons'] = kg.get('legal_weapons', {})
-            context['accumulated_patterns'] = kg.get('patterns', {})
+        # Safely get previous phases
+        try:
+            if hasattr(self.knowledge_manage, 'get_completed_phases'):
+                context['previous_phases'] = self.knowledge_manage.get_completed_phases()
+        except:
+            pass
+        
+        # Safely get knowledge graph
+        try:
+            if hasattr(self.knowledge_manage, 'knowledge_graph'):
+                kg = self.knowledge_manage.knowledge_graph
+                if isinstance(kg, dict):
+                    context['knowledge_graph'] = kg
+                    context['contradictions'] = kg.get('contradictions', {})
+                    context['legal_weapons'] = kg.get('legal_weapons', {})
+                    context['accumulated_patterns'] = kg.get('patterns', {})
+        except:
+            pass
         
         return context
     
     def _execute_single_comprehensive_analysis(self, phase: str, docs: List[Dict], context: Dict) -> Dict:
-        """Execute single Claude call for all analysis"""
+        """Execute analysis - batch if needed"""
         
-        # For Phase 0A with many documents, we may need to batch
-        if phase == "0A" and len(docs) > 100:
+        # For large document sets, batch them
+        if len(docs) > 100:
             print(f"📦 Processing {len(docs)} documents in batches...")
             return self._execute_batched_analysis(phase, docs, context)
+        else:
+            # Single call for smaller sets
+            return self._execute_single_call_analysis(phase, docs, context)
+    
+    def _execute_single_call_analysis(self, phase: str, docs: List[Dict], context: Dict) -> Dict:
+        """Execute single API call for analysis"""
         
-        # Build comprehensive prompt
+        # Build prompt
         master_prompt = self._build_comprehensive_phase_prompt(phase, context)
         
-        # Prepare documents for API
+        # Prepare documents
         doc_contents = []
-        for doc in docs[:50]:  # Limit for single call
+        for doc in docs[:50]:  # Safety limit
             doc_contents.append({
                 'content': doc.get('content', ''),
                 'metadata': {
@@ -231,10 +281,7 @@ class DocumentProcessor:
         
         # Parse response
         results = self._parse_comprehensive_response(response, phase)
-        
-        # Track costs
-        if hasattr(self.api_client, 'cost_tracker'):
-            print(f"💰 Phase {phase} cost: £{self.api_client.cost_tracker.total_cost:.2f}")
+        results['documents_analysed'] = len(doc_contents)
         
         return results
     
@@ -248,9 +295,14 @@ class DocumentProcessor:
             'documents_analysed': 0
         }
         
+        total_batches = (len(docs) - 1) // batch_size + 1
+        print(f"📦 Processing {len(docs)} documents in {total_batches} batches...")
+        
         for i in range(0, len(docs), batch_size):
             batch = docs[i:i+batch_size]
-            print(f"  Processing batch {i//batch_size + 1}/{(len(docs)-1)//batch_size + 1} ({len(batch)} docs)...")
+            batch_num = i // batch_size + 1
+            
+            print(f"  Processing batch {batch_num}/{total_batches} ({len(batch)} docs)...")
             
             # Build prompt for this batch
             master_prompt = self._build_comprehensive_phase_prompt(phase, context)
@@ -267,7 +319,7 @@ class DocumentProcessor:
             response = self.api_client.analyse_documents_batch(
                 documents=doc_contents,
                 prompt=master_prompt,
-                phase=f"phase_{phase}_batch_{i//batch_size}"
+                phase=f"phase_{phase}_batch_{batch_num-1}"
             )
             
             # Accumulate results
@@ -284,25 +336,78 @@ class DocumentProcessor:
                 time.sleep(2)
         
         # Synthesise all batch results
-        all_results['synthesis'] = self._synthesise_batch_results(all_results['combined_analysis'], phase)
+        if len(all_results['combined_analysis']) > 1:
+            all_results['synthesis'] = self._synthesise_batch_results(
+                all_results['combined_analysis'], 
+                phase
+            )
+        else:
+            all_results['synthesis'] = all_results['combined_analysis'][0] if all_results['combined_analysis'] else ""
         
         return all_results
     
+    def _update_context_with_findings(self, context: Dict, findings: Dict):
+        """Update context with findings - FIXED VERSION"""
+        if not findings:
+            return
+        
+        if not isinstance(findings, dict):
+            findings = {'analysis': str(findings)}
+        
+        # Define patterns BEFORE using it
+        patterns = findings.get('patterns', {})
+        
+        # Now safely check and process patterns
+        if patterns:
+            if isinstance(patterns, dict):
+                if 'accumulated_patterns' not in context:
+                    context['accumulated_patterns'] = {}
+                context['accumulated_patterns'].update(patterns)
+            elif isinstance(patterns, list):
+                if 'accumulated_patterns' not in context:
+                    context['accumulated_patterns'] = {}
+                for i, pattern in enumerate(patterns):
+                    context['accumulated_patterns'][f'pattern_{i}'] = pattern
+        
+        # Process contradictions
+        contradictions = findings.get('contradictions', {})
+        if isinstance(contradictions, dict) and contradictions:
+            if 'contradictions' not in context:
+                context['contradictions'] = {}
+            context['contradictions'].update(contradictions)
+        
+        # Process legal_weapons
+        weapons = findings.get('legal_weapons', {})
+        if isinstance(weapons, dict) and weapons:
+            if 'legal_weapons' not in context:
+                context['legal_weapons'] = {}
+            context['legal_weapons'].update(weapons)
+    
     def _synthesise_batch_results(self, batch_responses: List[str], phase: str) -> str:
-        """Synthesise multiple batch responses into unified analysis"""
+        """Synthesise multiple batch responses"""
+        if not batch_responses:
+            return ""
+        
         if len(batch_responses) == 1:
             return batch_responses[0]
         
         synthesis_prompt = f"""
 Synthesise these {len(batch_responses)} batch analyses from Phase {phase} into unified findings.
-Identify the most important patterns, weapons, and insights across all batches.
-Focus on what will destroy Process Holdings.
+
+For Lismore vs Process Holdings, identify:
+1. The most devastating legal weapons found
+2. Critical patterns across all batches
+3. Key contradictions and impossibilities
+4. Strategic opportunities for victory
 
 BATCH RESULTS:
 {"="*40}
 """
         for i, response in enumerate(batch_responses, 1):
+            # Include first 2000 chars of each batch
             synthesis_prompt += f"\nBATCH {i}:\n{response[:2000]}\n{'='*40}"
+        
+        synthesis_prompt += "\n\nProvide unified synthesis focusing on what destroys Process Holdings."
         
         # Make synthesis call
         synthesis = self.api_client.analyse_documents_batch(
@@ -314,131 +419,182 @@ BATCH RESULTS:
         return synthesis
     
     def _build_comprehensive_phase_prompt(self, phase: str, context: Dict) -> str:
-        """Build comprehensive prompt for phase"""
+        """Build phase-specific prompts"""
         
-        # Get base prompt
+        # Get base prompt from phase_prompts module
         base_prompt = get_phase_prompt(phase) if not context['previous_phases'] else get_phase_prompt_enhanced(phase, context)
         
-        # Enhance for Phase 0A
+        # Phase-specific enhancements
         if phase == "0A":
-            enhanced_prompt = f"""
-{base_prompt}
+            return """
+PHASE 0A: PURE LEGAL KNOWLEDGE EXTRACTION AND MEMORY BUILDING
 
-YOU ARE PROCESSING THE COMPLETE LEGAL FRAMEWORK FOR LISMORE vs PROCESS HOLDINGS.
+You are building a comprehensive legal knowledge base from these documents.
+This is NOT about any specific case - this is about learning and memorising legal principles.
 
-Extract and weaponise EVERYTHING:
-1. ALL legal doctrines that can destroy Process Holdings
-2. ALL procedural weapons for maximum damage
-3. ALL criminal crossover opportunities
-4. ALL settlement leverage points
-5. ALL arbitrator psychology insights
+EXTRACTION OBJECTIVES:
 
-From rule cards: Extract the nuclear options
-From treatises: Extract supporting law and precedents
-From playbooks: Extract strategic deployment tactics
+1. LEGAL DOCTRINES
+   - Extract every legal principle mentioned
+   - Note the full doctrine name and elements
+   - Understand when and how each applies
+   - Store exceptions and limitations
 
-Build the COMPLETE legal arsenal for total victory.
+2. CASE PRECEDENTS
+   - Identify all case citations
+   - Extract the legal principle from each case
+   - Note the ratio decidendi (binding element)
+   - Remember distinguishing factors
+
+3. PROCEDURAL RULES
+   - Extract all procedural requirements
+   - Time limits and deadlines
+   - Notice requirements
+   - Filing procedures
+   - Jurisdictional rules
+
+4. STATUTORY PROVISIONS
+   - All legislation references
+   - Specific section numbers
+   - Elements of statutory claims
+   - Defences available
+
+5. LEGAL CONCEPTS
+   - Burden of proof variations
+   - Standards of evidence
+   - Presumptions and inferences
+   - Equitable principles
+
+MEMORY FORMATION INSTRUCTIONS:
+- Create a structured mental map of all legal concepts
+- Build connections between related doctrines
+- Form hierarchies of principles (general → specific)
+- Identify doctrine families and variations
+- Remember practical applications
+
+OUTPUT STRUCTURE:
+Provide a comprehensive synthesis of ALL legal knowledge found, organised by:
+- Doctrine categories
+- Procedural frameworks  
+- Statutory schemes
+- Case law principles
+- Strategic applications
+
+This is pure knowledge building - no case analysis, just legal learning.
 """
-        else:
-            enhanced_prompt = f"""
+        
+        elif phase == "0B":
+            return f"""
 {base_prompt}
 
-CONTEXT FROM KNOWLEDGE GRAPH:
-Legal Weapons: {len(context.get('legal_weapons', {}).get('nuclear', []))} nuclear options available
-Previous Phases: {context.get('previous_phases', [])}
-Patterns Found: {len(context.get('accumulated_patterns', {}))}
+UNDERSTAND THE COMPLETE CASE CONTEXT:
+1. Key actors and their roles
+2. Timeline of events
+3. Business relationships
+4. Financial flows
+5. Communication patterns
+
+Identify vulnerabilities in Process Holdings' position.
+"""
+        
+        elif phase in ["1", "2", "3", "4", "5", "6", "7"]:
+            weapons_count = len(context.get('legal_weapons', {}).get('nuclear', []))
+            return f"""
+{base_prompt}
+
+CONTEXT FROM PREVIOUS PHASES:
+- Legal Weapons Available: {weapons_count} nuclear options
+- Previous Phases Completed: {context.get('previous_phases', [])}
+- Patterns Identified: {len(context.get('accumulated_patterns', {}))}
 
 Apply all accumulated intelligence to maximise damage to Process Holdings.
+Reference document IDs as [DOC_XXXX] for all findings.
 """
         
-        return enhanced_prompt
+        return base_prompt
     
     def _parse_comprehensive_response(self, response: str, phase: str) -> Dict:
-        """Parse Claude's response into structured results"""
+        """Parse response - always returns valid dict"""
         if not response:
-            return {}
-            
-        results = {
-            'phase': phase,
-            'timestamp': datetime.now().isoformat(),
-            'raw_analysis': response,
-            'documents_analysed': len(re.findall(r'\[DOC_\d{4}\]', response))
+            return {'analysis': 'No response received', 'patterns': {}, 'findings': []}
+        
+        if isinstance(response, dict):
+            return response
+        
+        # Try to extract JSON if present
+        try:
+            import json
+            import re
+            json_match = re.search(r'\{[\s\S]*\}', str(response))
+            if json_match:
+                parsed = json.loads(json_match.group())
+                if isinstance(parsed, dict):
+                    return parsed
+        except:
+            pass
+        
+        # Return structured dict from text response
+        return {
+            'analysis': str(response),
+            'synthesis': str(response),
+            'patterns': {},
+            'findings': [],
+            'weapons': [],
+            'contradictions': {},
+            'legal_weapons': {}
         }
-        
-        # Extract key sections using patterns
-        sections = {
-            'weapons': r'(?:WEAPON|NUCLEAR|DOCTRINE).*?(?=\n[A-Z]+:|\Z)',
-            'contradictions': r'(?:CONTRADICTION).*?(?=\n[A-Z]+:|\Z)', 
-            'patterns': r'(?:PATTERN).*?(?=\n[A-Z]+:|\Z)',
-            'strategy': r'(?:STRATEG).*?(?=\n[A-Z]+:|\Z)'
-        }
-        
-        for key, pattern in sections.items():
-            match = re.search(pattern, response, re.DOTALL | re.IGNORECASE)
-            if match:
-                results[key] = match.group(0)
-        
-        return results
-    
-    def _update_knowledge_graph(self, phase: str, results: Dict):
-        """Update knowledge graph with phase findings"""
-        
-        # For Phase 0A, extract legal weapons
-        if phase == "0A" and 'raw_analysis' in results:
-            self._extract_legal_weapons(results['raw_analysis'])
-        
-        # Update with any findings
-        if hasattr(self.knowledge_manage, 'add_phase_findings'):
-            self.knowledge_manage.add_phase_findings(phase, results)
-        
-        print(f"📊 Knowledge graph updated with Phase {phase} intelligence")
-    
-    def _extract_legal_weapons(self, analysis: str):
-        """Extract legal weapons from Phase 0A analysis"""
-        if not hasattr(self.knowledge_manage, 'knowledge_graph'):
-            return
-            
-        kg = self.knowledge_manage.knowledge_graph
-        
-        # Ensure structure exists
-        if 'legal_weapons' not in kg:
-            kg['legal_weapons'] = {'nuclear': [], 'high_impact': [], 'procedural': [], 'criminal': []}
-        
-        # Extract weapons by type
-        if 'NUCLEAR' in analysis.upper():
-            # Extract nuclear weapons
-            nuclear_pattern = r'NUCLEAR[:\s]+([^\n]+)'
-            for match in re.finditer(nuclear_pattern, analysis, re.IGNORECASE):
-                kg['legal_weapons']['nuclear'].append(match.group(1))
-        
-        # Extract other weapon types similarly
-        print(f"   Extracted {len(kg['legal_weapons']['nuclear'])} nuclear weapons")
-    
-    def _update_context_with_findings(self, context: Dict, findings: Dict):
-        """Update context with findings from batch"""
-        if 'patterns' in findings:
-            if 'accumulated_patterns' not in context:
-                context['accumulated_patterns'] = {}
-            context['accumulated_patterns'].update(findings.get('patterns', {}))
     
     def _get_strategic_priorities(self, phase: str) -> List[str]:
-        """Get strategic priorities for phase"""
-        priorities = {
-            "0A": ["Legal weapon extraction", "Criminal crossover identification", "Settlement leverage"],
-            "0B": ["Admission harvesting", "Position tracking", "Credibility gaps"],
-            "1": ["Document authentication", "Actor identification", "Timeline gaps"],
-            "2": ["Chronological impossibilities", "Pattern evolution", "Hidden events"],
-            "3": ["Contradiction matrix", "Admission hunting", "Missing documents"],
-            "4": ["Narrative construction", "Evidence packages", "Witness targeting"],
-            "5": ["Criminal elements", "Fraud indicators", "Settlement leverage"],
-            "6": ["Summary judgment", "Strike-out grounds", "Cost sanctions"],
-            "7": ["Nuclear options", "Case theory", "Closing strategy"]
+        """Get strategic priorities for each phase"""
+        priorities_map = {
+            '0A': ['extract_all_weapons', 'build_doctrine_matrix', 'identify_combinations'],
+            '0B': ['understand_case_context', 'identify_key_actors', 'map_relationships'],
+            '1': ['find_hot_documents', 'classify_evidence', 'identify_gaps'],
+            '2': ['build_timeline', 'find_impossibilities', 'identify_temporal_gaps'],
+            '3': ['find_contradictions', 'identify_lies', 'destroy_credibility'],
+            '4': ['construct_narrative', 'build_themes', 'create_winning_story'],
+            '5': ['identify_crimes', 'find_fraud', 'prepare_criminal_referral'],
+            '6': ['procedural_knockouts', 'technical_wins', 'jurisdiction_challenges'],
+            '7': ['deploy_nuclear_options', 'maximum_damage', 'total_victory']
         }
-        return priorities.get(phase, ["General analysis"])
+        return priorities_map.get(phase, ['maximise_damage', 'find_weaknesses', 'build_case'])
+    
+    def _update_knowledge_graph(self, phase: str, results: Dict):
+        """Update knowledge graph safely"""
+        try:
+            if not hasattr(self.knowledge_manage, 'knowledge_graph'):
+                self.knowledge_manage.knowledge_graph = {}
+            
+            if not isinstance(self.knowledge_manage.knowledge_graph, dict):
+                self.knowledge_manage.knowledge_graph = {}
+            
+            # Store phase results
+            self.knowledge_manage.knowledge_graph[f'phase_{phase}'] = {
+                'timestamp': datetime.now().isoformat(),
+                'results': results.get('synthesis', results.get('analysis', '')),
+                'documents_analysed': results.get('documents_analysed', 0)
+            }
+            
+            # Extract and store patterns
+            if 'patterns' in results and isinstance(results['patterns'], dict):
+                if 'patterns' not in self.knowledge_manage.knowledge_graph:
+                    self.knowledge_manage.knowledge_graph['patterns'] = {}
+                self.knowledge_manage.knowledge_graph['patterns'].update(results['patterns'])
+            
+            # Extract and store weapons
+            if 'legal_weapons' in results and isinstance(results['legal_weapons'], dict):
+                if 'legal_weapons' not in self.knowledge_manage.knowledge_graph:
+                    self.knowledge_manage.knowledge_graph['legal_weapons'] = {}
+                self.knowledge_manage.knowledge_graph['legal_weapons'].update(results['legal_weapons'])
+                
+        except Exception as e:
+            print(f"⚠️ Knowledge graph update failed: {e}")
     
     def generate_war_room_dashboard(self) -> str:
-        """Generate executive dashboard"""
+        """Generate strategic dashboard"""
         kg = getattr(self.knowledge_manage, 'knowledge_graph', {})
+        
+        completed = self.knowledge_manage.get_completed_phases() if hasattr(self.knowledge_manage, 'get_completed_phases') else []
         
         dashboard = f"""
 ╔════════════════════════════════════════════════════════════╗
@@ -446,39 +602,15 @@ Apply all accumulated intelligence to maximise damage to Process Holdings.
 ║              WAR ROOM DASHBOARD                           ║
 ╚════════════════════════════════════════════════════════════╝
 
-🎯 NUCLEAR OPTIONS: {len(kg.get('legal_weapons', {}).get('nuclear', []))}
-⚡ HIGH-IMPACT WEAPONS: {len(kg.get('legal_weapons', {}).get('high_impact', []))}
-📊 CONTRADICTIONS: {len(kg.get('contradictions', {}))}
-👥 KEY ACTORS: {len(kg.get('entities', {}))}
-
-PHASE STATUS:
-{self._get_phase_status()}
-
+🎯 PHASES COMPLETED: {len(completed)}/9
+📊 DOCUMENTS ANALYSED: {sum(kg.get(f'phase_{p}', {}).get('documents_analysed', 0) for p in completed)}
 💰 ESTIMATED DAMAGES: £127.5M
-⚖️ WIN PROBABILITY: {self._calculate_win_probability()}%
+
+INTELLIGENCE SUMMARY:
+• Nuclear Weapons: {len(kg.get('legal_weapons', {}).get('nuclear', []))}
+• Contradictions Found: {len(kg.get('contradictions', {}))}
+• Attack Patterns: {len(kg.get('patterns', {}))}
+
+STATUS: {'READY FOR BATTLE' if len(completed) >= 7 else 'GATHERING INTELLIGENCE'}
 """
         return dashboard
-    
-    def _get_phase_status(self) -> str:
-        """Get phase completion status"""
-        completed = self.knowledge_manage.get_completed_phases()
-        all_phases = ["0A", "0B", "1", "2", "3", "4", "5", "6", "7"]
-        
-        status = []
-        for phase in all_phases:
-            if phase in completed:
-                status.append(f"  Phase {phase}: ✅ Complete")
-            else:
-                status.append(f"  Phase {phase}: ⏳ Pending")
-        
-        return "\n".join(status)
-    
-    def _calculate_win_probability(self) -> int:
-        """Calculate win probability"""
-        kg = getattr(self.knowledge_manage, 'knowledge_graph', {})
-        
-        score = 50
-        score += len(kg.get('legal_weapons', {}).get('nuclear', [])) * 10
-        score += len(kg.get('contradictions', {})) * 2
-        
-        return min(95, score)

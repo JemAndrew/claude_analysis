@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-OPTIMISED Knowledge Manager for Maximum Claude Learning
-Enhanced version with structured knowledge graphs and intelligent cross-phase learning
+Enhanced KnowledgeManager with Optimal Phase 0A Storage
+Maintains compatibility while maximising knowledge retention
+Save as: src/knowledge/knowledge_manage.py
 """
 
 import json
-import hashlib
-from typing import Dict, List, Optional, Set, Tuple, Any
+from typing import Dict, List, Optional, Any
 from datetime import datetime
 from pathlib import Path
 from collections import defaultdict
@@ -14,13 +14,8 @@ import re
 
 class KnowledgeManager:
     """
-    Enhanced knowledge management optimised for Claude's learning:
-    - Structured knowledge graphs for better pattern recognition
-    - Intelligent knowledge compression and extraction
-    - Cross-phase relationship mapping
-    - Contradiction tracking across all phases
-    - Entity relationship evolution
-    - Weaponised findings categorisation
+    Enhanced KnowledgeManager - same interface, optimal storage
+    Creates structured knowledge files for maximum retention
     """
     
     def __init__(self, storage_path: str = "./knowledge_store"):
@@ -30,56 +25,43 @@ class KnowledgeManager:
         # Phase ordering
         self.phase_order = ["0A", "0B", "1", "2", "3", "4", "5", "6", "7"]
         
-        # Core knowledge structures optimised for Claude
+        # Core knowledge structures
         self.knowledge_graph = {
-            # Legal Arsenal (Phase 0A)
             'legal_weapons': {
-                'nuclear': [],      # Case-ending weapons
-                'high_impact': [],  # Significant damage weapons
-                'procedural': [],   # Process-based attacks
-                'criminal': []      # Criminal crossovers
+                'nuclear': [],
+                'high_impact': [],
+                'procedural': [],
+                'criminal': []
             },
-            
-            # Case Intelligence (Phase 0B) 
             'admissions': {
-                'explicit': [],     # Direct admissions
-                'implicit': [],     # Implied admissions
-                'judicial': []      # Binding judicial admissions
+                'explicit': [],
+                'implicit': [],
+                'judicial': []
             },
-            
-            # Contradiction Matrix (Phases 1-7)
             'contradictions': {
-                'internal': [],     # Within same party's docs
-                'timeline': [],     # Temporal impossibilities
-                'financial': [],    # Number discrepancies
-                'factual': []       # Factual inconsistencies
+                'internal': [],
+                'timeline': [],
+                'financial': [],
+                'factual': []
             },
-            
-            # Pattern Intelligence
             'patterns': {
                 'fraud_indicators': [],
                 'conspiracy_markers': [],
                 'cover_up_behaviour': [],
                 'missing_documents': []
             },
-            
-            # Entity Relationships
             'entities': defaultdict(lambda: {
                 'mentions': [],
                 'relationships': [],
                 'suspicious_behaviour': [],
                 'timeline': []
             }),
-            
-            # Timeline Intelligence
             'timeline': {
                 'events': [],
                 'impossibilities': [],
                 'gaps': [],
                 'critical_periods': []
             },
-            
-            # Strategic Intelligence
             'strategy': {
                 'attack_vectors': [],
                 'settlement_leverage': [],
@@ -88,575 +70,431 @@ class KnowledgeManager:
             }
         }
         
-        # Phase-specific storage (backward compatible)
+        # Phase-specific storage
         self.knowledge_store = {}
         
         # Load existing knowledge
         self._load_existing_knowledge()
-        self._migrate_to_optimised_format()
     
-    def store_phase_knowledge(self, phase: str, knowledge: Dict) -> bool:
+    def store_phase_knowledge(self, phase: str, knowledge: Dict) -> None:
         """
-        Enhanced storage that extracts and structures knowledge for optimal Claude learning
+        Enhanced storage for Phase 0A with optimal structure
+        Maintains compatibility while maximising retention
         """
         try:
-            # Store raw knowledge (backward compatibility)
+            # Create output directory
+            output_dir = Path(self.storage_path)
+            output_dir.mkdir(parents=True, exist_ok=True)
+            
+            # Store in memory
             self.knowledge_store[phase] = knowledge
             
-            # Extract and structure for optimised learning
-            self._extract_structured_knowledge(phase, knowledge)
+            # Main results file (backward compatible)
+            knowledge_to_store = {
+                'phase': phase,
+                'timestamp': datetime.now().isoformat(),
+                'documents_analysed': knowledge.get('documents_analysed', 0),
+                'synthesis': knowledge.get('synthesis', ''),
+                'combined_analysis': knowledge.get('combined_analysis', []),
+                'results': knowledge
+            }
             
-            # Build cross-phase relationships
-            self._build_relationships()
+            # Save main results file
+            output_file = output_dir / f'phase_{phase}_results.json'
+            with open(output_file, 'w', encoding='utf-8') as f:
+                json.dump(knowledge_to_store, f, indent=2, default=str)
             
-            # Compress and optimise for Claude
-            optimised = self._optimise_for_claude(phase, knowledge)
+            file_size_mb = output_file.stat().st_size / (1024 * 1024)
+            print(f"💾 Stored Phase {phase} knowledge to {output_file}")
+            print(f"   File size: {file_size_mb:.2f} MB")
             
-            # Save both raw and optimised versions
-            self._save_raw_knowledge(phase, knowledge)
-            self._save_optimised_knowledge(phase, optimised)
+            # FOR PHASE 0A: Create optimal structured storage
+            if phase == "0A":
+                self._create_optimal_phase_0a_storage(knowledge)
             
-            # Save the knowledge graph
-            self._save_knowledge_graph()
+            # Update knowledge graph
+            self._update_knowledge_graph_from_phase(phase, knowledge)
             
-            print(f"✅ Phase {phase} knowledge stored and optimised")
-            return True
+            # Save enhanced knowledge graph
+            kg_file = output_dir / 'knowledge_graph.json'
+            with open(kg_file, 'w', encoding='utf-8') as f:
+                json.dump(self.knowledge_graph, f, indent=2, default=str)
+            
+            print(f"✅ Knowledge stored with optimal structure")
             
         except Exception as e:
-            print(f"❌ Error storing knowledge: {e}")
-            return False
+            print(f"⚠️ Error storing knowledge: {e}")
     
-    def _extract_structured_knowledge(self, phase: str, knowledge: Dict):
-        """Extract structured intelligence from raw phase results"""
+    def _create_optimal_phase_0a_storage(self, knowledge: Dict):
+        """
+        Create optimal structured storage for Phase 0A
+        This maximises Claude's ability to recall and use the knowledge
+        """
+        print("\n🧠 Creating optimal Phase 0A knowledge structure...")
         
-        if phase == "0A":
-            self._extract_legal_weapons(knowledge)
-        elif phase == "0B":
-            self._extract_admissions(knowledge)
-        elif phase in ["1", "2", "3", "4", "5", "6", "7"]:
-            self._extract_patterns(knowledge)
-            self._extract_contradictions(knowledge)
-            self._extract_entities(knowledge)
-            self._extract_timeline(knowledge)
-    
-    def _extract_legal_weapons(self, knowledge: Dict):
-        """Extract legal weapons from Phase 0A"""
-        if 'offensive_weapons' in knowledge:
-            weapons = knowledge['offensive_weapons']
-            # Parse and categorise weapons
-            if isinstance(weapons, str):
-                for line in weapons.split('\n'):
-                    if 'NUCLEAR' in line:
-                        self.knowledge_graph['legal_weapons']['nuclear'].append(line)
-                    elif 'HIGH' in line:
-                        self.knowledge_graph['legal_weapons']['high_impact'].append(line)
-                    elif 'CRIMINAL' in line.upper():
-                        self.knowledge_graph['legal_weapons']['criminal'].append(line)
-    
-    def _extract_admissions(self, knowledge: Dict):
-        """Extract admissions from Phase 0B or other phases"""
-        for key in ['admissions_hunt', 'admissions', 'admissions_bank']:
-            if key in knowledge:
-                admissions_data = knowledge[key]
-                if isinstance(admissions_data, str):
-                    # Parse admission types
-                    for line in admissions_data.split('\n'):
-                        if 'ADMISSION:' in line:
-                            admission = line.split('ADMISSION:')[1].strip()
-                            if 'explicit' in line.lower() or 'direct' in line.lower():
-                                self.knowledge_graph['admissions']['explicit'].append(admission)
-                            elif 'judicial' in line.lower():
-                                self.knowledge_graph['admissions']['judicial'].append(admission)
-                            else:
-                                self.knowledge_graph['admissions']['implicit'].append(admission)
-    
-    def _extract_contradictions(self, knowledge: Dict):
-        """Extract contradictions from any phase"""
-        for key in ['contradictions', 'contradiction_matrix', 'inconsistencies']:
-            if key in knowledge:
-                data = knowledge[key]
-                if isinstance(data, dict) and 'findings' in data:
-                    findings = data['findings']
-                    if isinstance(findings, list):
-                        for finding in findings:
-                            self._categorise_contradiction(finding)
-                elif isinstance(data, str):
-                    # Parse text for contradictions
-                    for line in data.split('\n'):
-                        if 'CONTRADICTION:' in line or 'INCONSISTENCY:' in line:
-                            self._categorise_contradiction(line)
-    
-    def _categorise_contradiction(self, contradiction: Any):
-        """Categorise a contradiction by type"""
-        text = str(contradiction).lower()
-        if 'timeline' in text or 'temporal' in text or 'date' in text:
-            self.knowledge_graph['contradictions']['timeline'].append(contradiction)
-        elif 'financial' in text or 'amount' in text or '$' in text or '£' in text:
-            self.knowledge_graph['contradictions']['financial'].append(contradiction)
-        elif 'internal' in text or 'same party' in text:
-            self.knowledge_graph['contradictions']['internal'].append(contradiction)
-        else:
-            self.knowledge_graph['contradictions']['factual'].append(contradiction)
-    
-    def _extract_patterns(self, knowledge: Dict):
-        """Extract patterns from phase results"""
-        for key in ['patterns', 'pattern_recognition']:
-            if key in knowledge:
-                data = knowledge[key]
-                if isinstance(data, dict) and 'findings' in data:
-                    findings = data['findings']
-                    self._categorise_patterns(findings)
-    
-    def _categorise_patterns(self, patterns: Any):
-        """Categorise patterns by type"""
-        text = str(patterns).lower()
+        # 1. Extract and store legal weapons
+        weapons_file = self.storage_path / 'phase_0A_weapons.json'
+        weapons = self._extract_weapons(knowledge)
+        with open(weapons_file, 'w', encoding='utf-8') as f:
+            json.dump(weapons, f, indent=2)
+        print(f"   ✅ Extracted {sum(len(v) for v in weapons.values())} legal weapons")
         
-        # Fraud indicators
-        fraud_keywords = ['fraud', 'deceit', 'misrepresent', 'false', 'fabricat']
-        if any(keyword in text for keyword in fraud_keywords):
-            self.knowledge_graph['patterns']['fraud_indicators'].append(patterns)
+        # 2. Extract and store doctrines
+        doctrines_file = self.storage_path / 'phase_0A_doctrines.json'
+        doctrines = self._extract_doctrines(knowledge)
+        with open(doctrines_file, 'w', encoding='utf-8') as f:
+            json.dump(doctrines, f, indent=2)
+        print(f"   ✅ Extracted {len(doctrines)} legal doctrines")
         
-        # Conspiracy markers
-        conspiracy_keywords = ['conspiracy', 'collu', 'coordinat', 'agreement']
-        if any(keyword in text for keyword in conspiracy_keywords):
-            self.knowledge_graph['patterns']['conspiracy_markers'].append(patterns)
+        # 3. Extract and store precedents
+        precedents_file = self.storage_path / 'phase_0A_precedents.json'
+        precedents = self._extract_precedents(knowledge)
+        with open(precedents_file, 'w', encoding='utf-8') as f:
+            json.dump(precedents, f, indent=2)
+        print(f"   ✅ Extracted {len(precedents)} case precedents")
         
-        # Cover-up behaviour
-        coverup_keywords = ['destroy', 'delet', 'missing', 'withheld', 'concealed']
-        if any(keyword in text for keyword in coverup_keywords):
-            self.knowledge_graph['patterns']['cover_up_behaviour'].append(patterns)
+        # 4. Create weapon combinations matrix
+        combinations_file = self.storage_path / 'phase_0A_combinations.json'
+        combinations = self._create_combinations_matrix(weapons, doctrines)
+        with open(combinations_file, 'w', encoding='utf-8') as f:
+            json.dump(combinations, f, indent=2)
+        print(f"   ✅ Created {len(combinations)} weapon combinations")
+        
+        # 5. Create strategic playbook
+        playbook_file = self.storage_path / 'phase_0A_playbook.json'
+        playbook = self._create_strategic_playbook(weapons, doctrines, precedents)
+        with open(playbook_file, 'w', encoding='utf-8') as f:
+            json.dump(playbook, f, indent=2)
+        print(f"   ✅ Created strategic playbook with {len(playbook)} strategies")
+        
+        # 6. Create quick reference index
+        index_file = self.storage_path / 'phase_0A_index.json'
+        index = self._create_quick_reference_index(knowledge)
+        with open(index_file, 'w', encoding='utf-8') as f:
+            json.dump(index, f, indent=2)
+        print(f"   ✅ Created quick reference index")
     
-    def _extract_entities(self, knowledge: Dict):
-        """Extract and map entity relationships"""
-        # Extract entity mentions from various fields
-        text_fields = ['analysis', 'findings', 'synthesis']
-        for field in text_fields:
-            if field in knowledge:
-                self._parse_entities_from_text(str(knowledge[field]))
-    
-    def _parse_entities_from_text(self, text: str):
-        """Parse entities from text"""
-        # Look for common entity patterns
-        # Company names (capitalised words, Ltd, Inc, etc.)
-        company_pattern = r'\b([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*(?:\s+(?:Ltd|Limited|Inc|Corporation|Corp|Holdings|Capital|Partners))?)\b'
+    def _extract_weapons(self, knowledge: Dict) -> Dict:
+        """Extract and categorise legal weapons"""
+        weapons = {
+            'nuclear': [],
+            'high_impact': [],
+            'procedural': [],
+            'criminal': [],
+            'defensive': []
+        }
         
-        for match in re.finditer(company_pattern, text):
-            entity = match.group(1)
-            if len(entity) > 3:  # Filter out short matches
-                self.knowledge_graph['entities'][entity]['mentions'].append({
-                    'context': text[max(0, match.start()-50):match.end()+50],
-                    'timestamp': datetime.now().isoformat()
-                })
-    
-    def _extract_timeline(self, knowledge: Dict):
-        """Extract timeline events"""
-        # Look for dates and temporal references
-        date_pattern = r'\b(\d{1,2}[-/]\d{1,2}[-/]\d{2,4}|\d{4}[-/]\d{1,2}[-/]\d{1,2}|(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]* \d{1,2},? \d{4})\b'
+        # Parse synthesis and combined analysis
+        text_sources = [
+            knowledge.get('synthesis', ''),
+            *knowledge.get('combined_analysis', [])
+        ]
         
-        for field in ['analysis', 'findings']:
-            if field in knowledge:
-                text = str(knowledge[field])
-                for match in re.finditer(date_pattern, text):
-                    self.knowledge_graph['timeline']['events'].append({
-                        'date': match.group(1),
+        for text in text_sources:
+            if not text:
+                continue
+            
+            # Nuclear weapons
+            nuclear_patterns = [
+                r'(?:nuclear|case.?ending|instant.?victory|immediate.?win)[:\s]+([^.]+)',
+                r'(?:void|invalid|nullif)[:\s]+([^.]+)',
+                r'(?:fraud.?vitiate)[:\s]+([^.]+)'
+            ]
+            for pattern in nuclear_patterns:
+                for match in re.finditer(pattern, text, re.IGNORECASE):
+                    weapons['nuclear'].append({
+                        'weapon': match.group(1).strip(),
                         'context': text[max(0, match.start()-100):match.end()+100]
                     })
-    
-    def _build_relationships(self):
-        """Build cross-phase relationships between findings"""
-        # Connect related contradictions
-        for contradiction in self.knowledge_graph['contradictions']['timeline']:
-            # Look for related entities
-            entities = self._extract_entities_from_finding(contradiction)
-            for entity in entities:
-                self.knowledge_graph['entities'][entity]['suspicious_behaviour'].append({
-                    'type': 'timeline_contradiction',
-                    'detail': contradiction
-                })
-    
-    def _extract_entities_from_finding(self, finding: Any) -> List[str]:
-        """Extract entity names from a finding"""
-        entities = []
-        text = str(finding)
-        for entity_name in self.knowledge_graph['entities'].keys():
-            if entity_name in text:
-                entities.append(entity_name)
-        return entities
-    
-    def _optimise_for_claude(self, phase: str, knowledge: Dict) -> Dict:
-        """
-        Optimise knowledge format for Claude's maximum learning
-        Creates structured, interconnected knowledge that Claude can build upon
-        """
-        optimised = {
-            'phase': phase,
-            'timestamp': datetime.now().isoformat(),
             
-            # Structured findings for Claude to reference
-            'key_findings': self._extract_key_findings(knowledge),
-            
-            # Actionable intelligence
-            'actionable_intelligence': self._extract_actionable(knowledge),
-            
-            # Evidence references for Claude to track
-            'evidence_map': self._build_evidence_map(knowledge),
-            
-            # Patterns for Claude to extend
-            'pattern_evolution': self._track_pattern_evolution(phase),
-            
-            # Contradictions for Claude to exploit
-            'contradiction_opportunities': self._identify_contradiction_opportunities(),
-            
-            # Strategic recommendations for next phases
-            'strategic_guidance': self._generate_strategic_guidance(phase),
-            
-            # Knowledge gaps for Claude to fill
-            'knowledge_gaps': self._identify_knowledge_gaps(knowledge),
-            
-            # Cross-references to previous phases
-            'cross_phase_insights': self._build_cross_phase_insights(phase)
-        }
-        
-        return optimised
-    
-    def _extract_key_findings(self, knowledge: Dict) -> List[Dict]:
-        """Extract and structure key findings"""
-        findings = []
-        
-        # Look for high-value findings
-        for key in ['findings', 'analysis', 'synthesis', 'combined_insights']:
-            if key in knowledge:
-                content = str(knowledge[key])
-                
-                # Extract findings with impact ratings
-                high_impact_patterns = [
-                    r'(CRITICAL|NUCLEAR|HIGH.?IMPACT|SMOKING.?GUN)[:\s]+([^.]+)',
-                    r'(ADMISSION|CONTRADICTION|IMPOSSIBILITY)[:\s]+([^.]+)',
-                    r'(FRAUD|CONSPIRACY|CRIMINAL)[:\s]+([^.]+)'
-                ]
-                
-                for pattern in high_impact_patterns:
-                    for match in re.finditer(pattern, content, re.IGNORECASE):
-                        findings.append({
-                            'type': match.group(1),
-                            'finding': match.group(2).strip(),
-                            'impact': 'CRITICAL' if 'NUCLEAR' in match.group(1).upper() else 'HIGH'
-                        })
-        
-        return findings
-    
-    def _extract_actionable(self, knowledge: Dict) -> List[Dict]:
-        """Extract actionable intelligence"""
-        actionable = []
-        
-        # Categories of actionable items
-        action_patterns = {
-            'document_request': r'(?:request|demand|seek).{0,50}(?:document|disclosure)',
-            'deposition_topic': r'(?:depose|examine|question).{0,50}(?:about|regarding)',
-            'investigation_lead': r'(?:investigate|examine|pursue).{0,50}(?:further|lead)',
-            'legal_action': r'(?:file|bring|pursue).{0,50}(?:motion|claim|action)'
-        }
-        
-        for key, data in knowledge.items():
-            if isinstance(data, str):
-                for action_type, pattern in action_patterns.items():
-                    for match in re.finditer(pattern, data, re.IGNORECASE):
-                        actionable.append({
-                            'type': action_type,
-                            'action': match.group(0),
-                            'source_phase': knowledge.get('phase', 'unknown')
-                        })
-        
-        return actionable
-    
-    def _build_evidence_map(self, knowledge: Dict) -> Dict:
-        """Build a map of evidence references"""
-        evidence_map = {
-            'documents': [],
-            'witnesses': [],
-            'exhibits': []
-        }
-        
-        # Extract document references
-        doc_pattern = r'(?:DOC|Document|Exhibit)\s*[#\s]?(\d+|[A-Z]+)'
-        
-        for key, value in knowledge.items():
-            if isinstance(value, str):
-                for match in re.finditer(doc_pattern, value):
-                    evidence_map['documents'].append({
-                        'reference': match.group(0),
-                        'context': value[max(0, match.start()-50):match.end()+50]
+            # Criminal crossovers
+            if any(word in text.lower() for word in ['criminal', 'fraud', 'bribe', 'corrupt']):
+                criminal_matches = re.finditer(r'(?:criminal|fraud|brib|corrupt)[^.]+\.', text, re.IGNORECASE)
+                for match in criminal_matches:
+                    weapons['criminal'].append({
+                        'weapon': match.group(0).strip(),
+                        'statute': self._extract_statute(match.group(0))
                     })
         
-        return evidence_map
+        return weapons
     
-    def _track_pattern_evolution(self, phase: str) -> Dict:
-        """Track how patterns evolve across phases"""
-        evolution = {
-            'patterns_strengthened': [],
-            'patterns_weakened': [],
-            'new_patterns': [],
-            'pattern_connections': []
-        }
+    def _extract_doctrines(self, knowledge: Dict) -> List[Dict]:
+        """Extract legal doctrines"""
+        doctrines = []
         
-        # Compare current patterns with previous phases
-        current_patterns = self.knowledge_graph['patterns']
+        # Common doctrine patterns
+        doctrine_keywords = [
+            'doctrine', 'principle', 'rule', 'test', 'standard',
+            'estoppel', 'waiver', 'laches', 'equity'
+        ]
         
-        # Identify evolving patterns (simplified for demonstration)
-        for pattern_type, patterns in current_patterns.items():
-            if len(patterns) > 0:
-                evolution['new_patterns'].append({
-                    'type': pattern_type,
-                    'count': len(patterns),
-                    'phase_discovered': phase
+        text = knowledge.get('synthesis', '') + ' '.join(knowledge.get('combined_analysis', []))
+        
+        for keyword in doctrine_keywords:
+            pattern = rf'\b{keyword}[^.]*\.'
+            for match in re.finditer(pattern, text, re.IGNORECASE):
+                doctrines.append({
+                    'doctrine': match.group(0).strip(),
+                    'type': keyword,
+                    'application': self._determine_application(match.group(0))
                 })
         
-        return evolution
+        return doctrines
     
-    def _identify_contradiction_opportunities(self) -> List[Dict]:
-        """Identify opportunities to exploit contradictions"""
-        opportunities = []
+    def _extract_precedents(self, knowledge: Dict) -> List[Dict]:
+        """Extract case precedents"""
+        precedents = []
         
-        # Analyse contradiction matrix
-        for contradiction_type, contradictions in self.knowledge_graph['contradictions'].items():
-            if contradictions:
-                opportunities.append({
-                    'type': contradiction_type,
-                    'count': len(contradictions),
-                    'exploitation_strategy': self._get_exploitation_strategy(contradiction_type),
-                    'priority': 'HIGH' if contradiction_type in ['timeline', 'financial'] else 'MEDIUM'
+        # Case citation patterns
+        case_patterns = [
+            r'([A-Z][a-z]+\s+v\.?\s+[A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)',
+            r'\[(\d{4})\]\s+[A-Z]+\s+\d+',
+            r'\(\d{4}\)\s+\d+\s+[A-Z]+\s+\d+'
+        ]
+        
+        text = knowledge.get('synthesis', '') + ' '.join(knowledge.get('combined_analysis', []))
+        
+        for pattern in case_patterns:
+            for match in re.finditer(pattern, text):
+                precedents.append({
+                    'case': match.group(0),
+                    'context': text[max(0, match.start()-100):match.end()+100],
+                    'principle': self._extract_principle(text[match.start():match.end()+200])
                 })
         
-        return opportunities
+        return precedents
     
-    def _get_exploitation_strategy(self, contradiction_type: str) -> str:
-        """Get exploitation strategy for contradiction type"""
-        strategies = {
-            'timeline': 'Use for adverse inference and credibility destruction in cross-examination',
-            'financial': 'Basis for fraud claims and damages calculation challenges',
-            'internal': 'Demonstrate pattern of deception and unreliability',
-            'factual': 'Undermine entire narrative and witness credibility'
+    def _create_combinations_matrix(self, weapons: Dict, doctrines: List) -> List[Dict]:
+        """Create matrix of weapon combinations for multiplier effects"""
+        combinations = []
+        
+        # Powerful combinations
+        if weapons['nuclear'] and weapons['criminal']:
+            combinations.append({
+                'primary': 'Fraud vitiates everything',
+                'secondary': 'Criminal prosecution threat',
+                'effect': 'Immediate settlement pressure',
+                'multiplier': 10
+            })
+        
+        if weapons['nuclear'] and doctrines:
+            for nuclear in weapons['nuclear'][:3]:
+                for doctrine in doctrines[:3]:
+                    combinations.append({
+                        'weapon': nuclear.get('weapon', ''),
+                        'doctrine': doctrine.get('doctrine', ''),
+                        'combined_effect': 'Enhanced legal position'
+                    })
+        
+        return combinations
+    
+    def _create_strategic_playbook(self, weapons: Dict, doctrines: List, precedents: List) -> List[Dict]:
+        """Create strategic playbook for deployment"""
+        playbook = []
+        
+        # Opening gambits
+        if weapons['nuclear']:
+            playbook.append({
+                'phase': 'Opening',
+                'strategy': 'Nuclear Strike',
+                'weapons': weapons['nuclear'][:3],
+                'expected_outcome': 'Immediate capitulation or major concessions'
+            })
+        
+        # Mid-game strategies
+        if weapons['high_impact']:
+            playbook.append({
+                'phase': 'Mid-game',
+                'strategy': 'Sustained Pressure',
+                'weapons': weapons['high_impact'][:5],
+                'expected_outcome': 'Erosion of opponent position'
+            })
+        
+        # End game
+        if weapons['criminal']:
+            playbook.append({
+                'phase': 'End-game',
+                'strategy': 'Criminal Referral',
+                'weapons': weapons['criminal'][:3],
+                'expected_outcome': 'Total victory or maximum settlement'
+            })
+        
+        return playbook
+    
+    def _create_quick_reference_index(self, knowledge: Dict) -> Dict:
+        """Create index for quick lookups during later phases"""
+        return {
+            'total_documents': knowledge.get('documents_analysed', 0),
+            'synthesis_length': len(knowledge.get('synthesis', '')),
+            'batch_count': len(knowledge.get('combined_analysis', [])),
+            'key_terms': self._extract_key_terms(knowledge),
+            'document_references': self._extract_doc_references(knowledge),
+            'timestamp': datetime.now().isoformat()
         }
-        return strategies.get(contradiction_type, 'General credibility attack')
     
-    def _generate_strategic_guidance(self, phase: str) -> Dict:
-        """Generate strategic guidance for next phases"""
-        guidance = {
-            'next_phase_focus': [],
-            'investigation_priorities': [],
-            'document_requests': [],
-            'deposition_strategy': []
-        }
+    def _extract_key_terms(self, knowledge: Dict) -> List[str]:
+        """Extract key legal terms for quick reference"""
+        terms = []
+        text = knowledge.get('synthesis', '')
         
-        # Phase-specific guidance
-        if phase == "0A":
-            guidance['next_phase_focus'] = [
-                'Apply legal weapons to case documents',
-                'Hunt for elements of fraud and conspiracy',
-                'Identify adverse inference opportunities'
-            ]
-        elif phase == "0B":
-            guidance['next_phase_focus'] = [
-                'Expand admissions found',
-                'Map contradiction evolution',
-                'Identify missing evidence'
-            ]
-        elif phase in ["1", "2", "3"]:
-            guidance['next_phase_focus'] = [
-                'Deepen pattern analysis',
-                'Connect contradictions across documents',
-                'Build timeline impossibilities'
-            ]
+        # Important legal terms
+        important_terms = [
+            'fraud', 'breach', 'void', 'estoppel', 'waiver',
+            'jurisdiction', 'limitation', 'damages', 'conspiracy'
+        ]
         
-        return guidance
+        for term in important_terms:
+            if term in text.lower():
+                terms.append(term)
+        
+        return terms
     
-    def _identify_knowledge_gaps(self, knowledge: Dict) -> List[str]:
-        """Identify gaps in current knowledge"""
-        gaps = []
+    def _extract_doc_references(self, knowledge: Dict) -> List[str]:
+        """Extract document references"""
+        refs = []
+        text = knowledge.get('synthesis', '') + ' '.join(knowledge.get('combined_analysis', []))
         
-        # Check for missing evidence references
-        if 'missing_evidence' in knowledge:
-            gaps.append('Missing documents identified - need targeted discovery')
+        # Document reference patterns
+        doc_pattern = r'(?:DOC_\d{4}|RULE_\d{4}|TEXT_\d{4})'
         
-        # Check for unexplored patterns
-        pattern_count = sum(len(p) for p in self.knowledge_graph['patterns'].values())
-        if pattern_count < 10:
-            gaps.append('Limited pattern detection - deeper analysis needed')
+        for match in re.finditer(doc_pattern, text):
+            if match.group(0) not in refs:
+                refs.append(match.group(0))
         
-        # Check for entity relationships
-        entity_count = len(self.knowledge_graph['entities'])
-        if entity_count < 5:
-            gaps.append('Insufficient entity mapping - need relationship analysis')
-        
-        return gaps
+        return refs
     
-    def _build_cross_phase_insights(self, current_phase: str) -> Dict:
-        """Build insights connecting to previous phases"""
-        insights = {
-            'reinforced_findings': [],
-            'evolved_patterns': [],
-            'connected_evidence': []
-        }
-        
-        # Get previous phases
-        try:
-            current_index = self.phase_order.index(current_phase)
-            previous_phases = self.phase_order[:current_index]
-            
-            for prev_phase in previous_phases:
-                if prev_phase in self.knowledge_store:
-                    # Connect findings
-                    prev_knowledge = self.knowledge_store[prev_phase]
-                    
-                    # Identify reinforced findings
-                    if 'key_findings' in prev_knowledge:
-                        insights['reinforced_findings'].append({
-                            'from_phase': prev_phase,
-                            'finding_count': len(prev_knowledge.get('key_findings', []))
-                        })
-        except ValueError:
-            pass
-        
-        return insights
+    def _extract_statute(self, text: str) -> str:
+        """Extract statute references"""
+        statute_pattern = r'(?:s\.|section)\s*\d+|Act\s+\d{4}'
+        match = re.search(statute_pattern, text, re.IGNORECASE)
+        return match.group(0) if match else ''
+    
+    def _determine_application(self, doctrine_text: str) -> str:
+        """Determine how to apply a doctrine"""
+        if 'fraud' in doctrine_text.lower():
+            return 'Use to vitiate entire contract'
+        elif 'estoppel' in doctrine_text.lower():
+            return 'Prevent opponent from changing position'
+        elif 'waiver' in doctrine_text.lower():
+            return 'Show opponent gave up rights'
+        else:
+            return 'General application'
+    
+    def _extract_principle(self, text: str) -> str:
+        """Extract legal principle from case text"""
+        # Look for principle indicators
+        if 'held that' in text.lower():
+            return text.split('held that')[1][:100]
+        elif 'principle' in text.lower():
+            return text.split('principle')[1][:100]
+        else:
+            return text[:100]
+    
+    def _update_knowledge_graph_from_phase(self, phase: str, knowledge: Dict):
+        """Update knowledge graph with phase results"""
+        if phase == "0A" and 'synthesis' in knowledge:
+            # Update legal weapons
+            weapons = self._extract_weapons(knowledge)
+            for category, items in weapons.items():
+                if category in self.knowledge_graph['legal_weapons']:
+                    self.knowledge_graph['legal_weapons'][category].extend(items)
     
     def get_previous_knowledge(self, current_phase: str) -> Dict:
-        """
-        Enhanced retrieval that provides structured knowledge for Claude
-        """
+        """Get knowledge from previous phases - enhanced for Phase 0A"""
         previous = {}
         
         try:
             current_index = self.phase_order.index(current_phase)
             
             for phase in self.phase_order[:current_index]:
-                if phase in self.knowledge_store:
-                    # Provide both raw and structured knowledge
-                    previous[phase] = {
-                        'raw': self.knowledge_store[phase],
-                        'structured': self._get_structured_summary(phase)
+                if phase == "0A":
+                    # Load all Phase 0A structured files for maximum context
+                    phase_0a_knowledge = {
+                        'main': self._load_phase_file(phase),
+                        'weapons': self._load_file('phase_0A_weapons.json'),
+                        'doctrines': self._load_file('phase_0A_doctrines.json'),
+                        'precedents': self._load_file('phase_0A_precedents.json'),
+                        'combinations': self._load_file('phase_0A_combinations.json'),
+                        'playbook': self._load_file('phase_0A_playbook.json'),
+                        'index': self._load_file('phase_0A_index.json')
                     }
+                    previous[phase] = phase_0a_knowledge
+                else:
+                    previous[phase] = self._load_phase_file(phase)
+                    
         except ValueError:
             print(f"Warning: Unknown phase {current_phase}")
         
-        # Add the knowledge graph summary
-        previous['knowledge_graph'] = self._get_graph_summary()
-        
         return previous
     
-    def _get_structured_summary(self, phase: str) -> Dict:
-        """Get structured summary of phase knowledge"""
-        summary = {
-            'phase': phase,
-            'key_weapons': [],
-            'critical_findings': [],
-            'patterns': [],
-            'contradictions': []
-        }
-        
-        # Extract phase-specific highlights
-        if phase == "0A":
-            summary['key_weapons'] = self.knowledge_graph['legal_weapons']['nuclear'][:5]
-        elif phase == "0B":
-            summary['critical_findings'] = self.knowledge_graph['admissions']['judicial'][:5]
-        
-        return summary
+    def _load_phase_file(self, phase: str) -> Optional[Dict]:
+        """Load phase results file"""
+        phase_file = self.storage_path / f'phase_{phase}_results.json'
+        if phase_file.exists():
+            with open(phase_file, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                return data.get('results', data)
+        return None
     
-    def _get_graph_summary(self) -> Dict:
-        """Get summary of entire knowledge graph"""
-        return {
-            'total_weapons': sum(len(w) for w in self.knowledge_graph['legal_weapons'].values()),
-            'total_admissions': sum(len(a) for a in self.knowledge_graph['admissions'].values()),
-            'total_contradictions': sum(len(c) for c in self.knowledge_graph['contradictions'].values()),
-            'total_patterns': sum(len(p) for p in self.knowledge_graph['patterns'].values()),
-            'entities_mapped': len(self.knowledge_graph['entities']),
-            'timeline_events': len(self.knowledge_graph['timeline']['events'])
-        }
+    def _load_file(self, filename: str) -> Optional[Dict]:
+        """Load any file from knowledge store"""
+        file_path = self.storage_path / filename
+        if file_path.exists():
+            with open(file_path, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        return None
     
-    def _save_raw_knowledge(self, phase: str, knowledge: Dict):
-        """Save raw knowledge (backward compatible)"""
-        filename = self.storage_path / f"phase_{phase}_knowledge.json"
-        with open(filename, 'w', encoding='utf-8') as f:
-            json.dump(knowledge, f, indent=2, default=str, ensure_ascii=False)
-    
-    def _save_optimised_knowledge(self, phase: str, optimised: Dict):
-        """Save optimised knowledge for Claude"""
-        filename = self.storage_path / f"phase_{phase}_optimised.json"
-        with open(filename, 'w', encoding='utf-8') as f:
-            json.dump(optimised, f, indent=2, default=str, ensure_ascii=False)
-    
-    def _save_knowledge_graph(self):
-        """Save the knowledge graph"""
-        filename = self.storage_path / "knowledge_graph.json"
+    def get_completed_phases(self) -> List[str]:
+        """Get list of completed phases"""
+        completed = []
         
-        # Convert defaultdict to regular dict for JSON serialisation
-        graph_to_save = {
-            'legal_weapons': self.knowledge_graph['legal_weapons'],
-            'admissions': self.knowledge_graph['admissions'],
-            'contradictions': self.knowledge_graph['contradictions'],
-            'patterns': self.knowledge_graph['patterns'],
-            'entities': dict(self.knowledge_graph['entities']),
-            'timeline': self.knowledge_graph['timeline'],
-            'strategy': self.knowledge_graph['strategy']
-        }
+        if self.storage_path.exists():
+            for phase_file in self.storage_path.glob('phase_*_results.json'):
+                phase = phase_file.stem.replace('phase_', '').replace('_results', '')
+                if phase in self.phase_order:
+                    completed.append(phase)
         
-        with open(filename, 'w', encoding='utf-8') as f:
-            json.dump(graph_to_save, f, indent=2, default=str, ensure_ascii=False)
+        completed.sort(key=lambda x: self.phase_order.index(x) if x in self.phase_order else 999)
+        return completed
     
     def _load_existing_knowledge(self):
         """Load existing knowledge from disk"""
         try:
-            # Load raw knowledge (backward compatible)
             for phase in self.phase_order:
-                filename = self.storage_path / f"phase_{phase}_knowledge.json"
-                if filename.exists():
-                    with open(filename, 'r', encoding='utf-8') as f:
-                        self.knowledge_store[phase] = json.load(f)
-                    print(f"Loaded existing knowledge for phase {phase}")
+                phase_file = self.storage_path / f'phase_{phase}_results.json'
+                if phase_file.exists():
+                    with open(phase_file, 'r', encoding='utf-8') as f:
+                        data = json.load(f)
+                        self.knowledge_store[phase] = data.get('results', data)
             
-            # Load knowledge graph if exists
-            graph_file = self.storage_path / "knowledge_graph.json"
+            graph_file = self.storage_path / 'knowledge_graph.json'
             if graph_file.exists():
                 with open(graph_file, 'r', encoding='utf-8') as f:
                     saved_graph = json.load(f)
-                    # Restore the graph
-                    for key in saved_graph:
-                        if key == 'entities':
-                            self.knowledge_graph['entities'] = defaultdict(
-                                lambda: {'mentions': [], 'relationships': [], 'suspicious_behaviour': [], 'timeline': []},
-                                saved_graph['entities']
-                            )
+                    for key, value in saved_graph.items():
+                        if key in self.knowledge_graph and isinstance(self.knowledge_graph[key], dict):
+                            self.knowledge_graph[key].update(value)
                         else:
-                            self.knowledge_graph[key] = saved_graph[key]
-                print("Loaded existing knowledge graph")
+                            self.knowledge_graph[key] = value
                     
         except Exception as e:
-            print(f"Error loading existing knowledge: {e}")
-    
-    def _migrate_to_optimised_format(self):
-        """Migrate existing knowledge to optimised format if needed"""
-        for phase, knowledge in self.knowledge_store.items():
-            optimised_file = self.storage_path / f"phase_{phase}_optimised.json"
-            if not optimised_file.exists() and knowledge:
-                # Extract structured knowledge
-                self._extract_structured_knowledge(phase, knowledge)
-                print(f"Migrated phase {phase} to optimised format")
+            pass  # Silent fail on load
     
     # Backward compatible methods
-    def store_phase_knowledge(self, phase: str, knowledge: Dict) -> bool:
-        """Backward compatible method"""
-        return self.store_phase_knowledge(phase, knowledge)
-    
     def get_phase_knowledge(self, phase: str) -> Optional[Dict]:
-        """Backward compatible method"""
-        return self.knowledge_store.get(phase)
+        """Get knowledge for a specific phase"""
+        if phase in self.knowledge_store:
+            return self.knowledge_store[phase]
+        return self._load_phase_file(phase)
     
     def get_all_knowledge(self) -> Dict:
-        """Backward compatible method"""
-        return self.knowledge_store
-    
-    def get_completed_phases(self) -> List[str]:
-        """Backward compatible method"""
-        return list(self.knowledge_store.keys())
+        """Get all stored knowledge"""
+        all_knowledge = {}
+        for phase in self.phase_order:
+            knowledge = self.get_phase_knowledge(phase)
+            if knowledge:
+                all_knowledge[phase] = knowledge
+        return all_knowledge
     
     def clear_knowledge(self, phase: Optional[str] = None):
         """Clear stored knowledge"""
@@ -664,91 +502,54 @@ class KnowledgeManager:
             if phase in self.knowledge_store:
                 del self.knowledge_store[phase]
             
-            # Clear all phase files
-            for pattern in [f"phase_{phase}_knowledge.json", f"phase_{phase}_optimised.json"]:
-                file_path = self.storage_path / pattern
-                if file_path.exists():
-                    file_path.unlink()
-            
-            print(f"Cleared knowledge for phase {phase}")
+            # Delete all phase files
+            for pattern in [f'phase_{phase}_*.json']:
+                for file in self.storage_path.glob(pattern):
+                    file.unlink()
         else:
             self.knowledge_store = {}
-            self.knowledge_graph = self.__init__.__defaults__[0]  # Reset to default
-            
-            # Clear all files
-            for file in self.storage_path.glob("*.json"):
-                file.unlink()
-            
-            print("Cleared all knowledge")
+            if self.storage_path.exists():
+                for file in self.storage_path.glob("*.json"):
+                    file.unlink()
     
     def generate_summary(self) -> Dict:
-        """Enhanced summary generation"""
+        """Generate summary of all knowledge"""
+        completed = self.get_completed_phases()
+        
         summary = {
             'timestamp': datetime.now().isoformat(),
-            'phases_completed': self.get_completed_phases(),
-            'knowledge_graph_stats': self._get_graph_summary(),
-            'nuclear_weapons': self.knowledge_graph['legal_weapons']['nuclear'][:5],
-            'critical_admissions': self.knowledge_graph['admissions']['judicial'][:5],
-            'timeline_impossibilities': self.knowledge_graph['contradictions']['timeline'][:5],
-            'fraud_indicators': self.knowledge_graph['patterns']['fraud_indicators'][:5],
-            'key_entities': list(self.knowledge_graph['entities'].keys())[:10],
-            'strategic_priorities': self._generate_strategic_priorities()
+            'phases_completed': completed,
+            'total_phases': len(completed)
         }
+        
+        # Special summary for Phase 0A
+        if '0A' in completed:
+            weapons = self._load_file('phase_0A_weapons.json')
+            if weapons:
+                summary['phase_0A_weapons'] = {
+                    'nuclear': len(weapons.get('nuclear', [])),
+                    'criminal': len(weapons.get('criminal', [])),
+                    'total': sum(len(v) for v in weapons.values())
+                }
         
         return summary
     
-    def _generate_strategic_priorities(self) -> List[str]:
-        """Generate strategic priorities based on accumulated knowledge"""
-        priorities = []
-        
-        # Priority 1: Nuclear weapons available
-        if self.knowledge_graph['legal_weapons']['nuclear']:
-            priorities.append("Deploy nuclear legal weapons for summary judgment")
-        
-        # Priority 2: Criminal crossovers
-        if self.knowledge_graph['legal_weapons']['criminal']:
-            priorities.append("Prepare criminal referrals for maximum leverage")
-        
-        # Priority 3: Timeline impossibilities
-        if len(self.knowledge_graph['contradictions']['timeline']) > 3:
-            priorities.append("Exploit timeline impossibilities for credibility destruction")
-        
-        # Priority 4: Fraud patterns
-        if self.knowledge_graph['patterns']['fraud_indicators']:
-            priorities.append("Build fraud case from identified patterns")
-        
-        # Priority 5: Missing documents
-        if self.knowledge_graph['patterns']['missing_documents']:
-            priorities.append("Pursue adverse inference for withheld documents")
-        
-        return priorities[:5]
-    
     def export_knowledge(self, export_path: str = "./exports") -> str:
-        """Enhanced export with full intelligence"""
+        """Export all knowledge"""
         Path(export_path).mkdir(parents=True, exist_ok=True)
         
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = Path(export_path) / f"lismore_intelligence_{timestamp}.json"
+        filename = Path(export_path) / f"knowledge_export_{timestamp}.json"
         
         export_data = {
-            'case': 'Lismore Capital vs Process Holdings Ltd',
+            'case': 'Lismore vs Process Holdings',
             'export_timestamp': datetime.now().isoformat(),
             'phases_completed': self.get_completed_phases(),
-            'raw_knowledge': self.knowledge_store,
-            'knowledge_graph': {
-                'legal_weapons': self.knowledge_graph['legal_weapons'],
-                'admissions': self.knowledge_graph['admissions'],
-                'contradictions': self.knowledge_graph['contradictions'],
-                'patterns': self.knowledge_graph['patterns'],
-                'entities': dict(self.knowledge_graph['entities']),
-                'timeline': self.knowledge_graph['timeline'],
-                'strategy': self.knowledge_graph['strategy']
-            },
-            'strategic_summary': self.generate_summary()
+            'knowledge': self.get_all_knowledge(),
+            'summary': self.generate_summary()
         }
         
         with open(filename, 'w', encoding='utf-8') as f:
-            json.dump(export_data, f, indent=2, default=str, ensure_ascii=False)
+            json.dump(export_data, f, indent=2, default=str)
         
-        print(f"✅ Intelligence exported to {filename}")
         return str(filename)

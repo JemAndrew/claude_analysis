@@ -293,10 +293,10 @@ class ClaudeAPIClient:
         """
         
         if not documents:
-            return self._call_api([], prompt, context, phase)
+            return self._call_api_with_retry([], prompt, context, phase, batch_info={'size': 0})
         
         # Intelligent batching
-        from core.utils import batch_documents_for_api
+        from .utils import batch_documents_for_api
         batches = batch_documents_for_api(documents, self.batch_config['max_tokens_per_batch'])
         
         print(f"\n📦 Processing {len(documents)} documents in {len(batches)} batches")
@@ -363,7 +363,7 @@ Other batches will cover remaining documents.
         
         while retries < self.retry_config['max_retries']:
             try:
-                return self._call_api(documents, prompt, context, phase, batch_info)
+                return self._call_api_with_retry(documents, prompt, context, phase, batch_info)
                 
             except anthropic.RateLimitError as e:
                 retries += 1
@@ -480,6 +480,11 @@ You have expertise in:
     ) -> str:
         """Build sophisticated user message"""
         
+        
+        if documents is None:
+            documents = []
+        if not isinstance(documents, list):
+            documents = [documents] if documents else []
         parts = []
         
         # Add context if available
@@ -558,13 +563,15 @@ BATCH RESULTS TO SYNTHESISE:
         for i, result in enumerate(batch_results, 1):
             synthesis_prompt += f"\nBATCH {i}:\n{result[:5000]}\n{'='*40}"
         
-        # Use Opus for synthesis (highest quality)
-        return self._call_api(
+    
+        return self._call_api_with_retry(
             documents=[],
             prompt=synthesis_prompt,
-            context=None,
-            phase=f"{phase}_synthesis" if phase else "synthesis"
+            context=context,
+            phase=f"{phase}_synthesis" if phase else "synthesis",
+            batch_info={'size': 0}
         )
+
     
     def generate_cost_report(self) -> str:
         """Generate comprehensive cost report"""
