@@ -30,6 +30,14 @@ Case_Context/
 temp/
 Temp/
 tmp/
+logs/
+outputs/
+analysis/
+investigation/
+case_context/
+costs/
+
+
 
 # Analysis Outputs
 results/
