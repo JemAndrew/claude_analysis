@@ -1,13 +1,13 @@
-# api_client.py - FIXED VERSION with correct settings access
+#!/usr/bin/env python3
 """
-Simplified Claude API client with cost tracking for Opus 4.1.
-Tracks spending continuously and makes it easy to monitor costs.
+Enhanced Claude API client with sophisticated batching and document handling
+Optimised for maximum efficiency and cost control
 """
 
 import os
 import json
 import time
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional, Tuple, Any
 from datetime import datetime
 from pathlib import Path
 import anthropic
@@ -15,326 +15,557 @@ from dotenv import load_dotenv
 
 load_dotenv(dotenv_path='./config/.env')
 
+
 class CostTracker:
-    """Simple cost tracker that shows spending in real-time"""
+    """Enhanced cost tracking with phase analytics"""
     
     def __init__(self):
-        """Initialise cost tracking"""
         self.costs_file = Path("./costs/cost_tracking.json")
         self.costs_file.parent.mkdir(exist_ok=True)
         
-        # Pricing for models (in GBP per 1K tokens)
+        # Enhanced pricing with all models
         self.model_pricing = {
             "claude-opus-4-1-20250805": {
-                "input": 0.012,   # £0.012 per 1K input tokens
-                "output": 0.060   # £0.060 per 1K output tokens
+                "input": 0.012,
+                "output": 0.060,
+                "name": "Opus 4.1"
             },
             "claude-3-haiku-20240307": {
-                "input": 0.0002,  # £0.0002 per 1K input tokens
-                "output": 0.001   # £0.001 per 1K output tokens
+                "input": 0.0002,
+                "output": 0.001,
+                "name": "Haiku"
+            },
+            "claude-3-sonnet-20240229": {
+                "input": 0.003,
+                "output": 0.015,
+                "name": "Sonnet"
             }
         }
         
-        # Load existing costs or start fresh
+        # Enhanced tracking
         self.total_cost = 0.0
-        self.total_input_tokens = 0
-        self.total_output_tokens = 0
+        self.phase_costs = {}
+        self.model_usage = {}
         self.call_history = []
+        self.batch_stats = {
+            'total_batches': 0,
+            'avg_batch_size': 0,
+            'max_batch_size': 0
+        }
         
         self._load_existing_costs()
     
     def _load_existing_costs(self):
-        """Load any existing cost data"""
+        """Load existing cost data with migration support"""
         if self.costs_file.exists():
             try:
                 with open(self.costs_file, 'r') as f:
                     data = json.load(f)
                     self.total_cost = data.get('total_cost_gbp', 0.0)
-                    self.total_input_tokens = data.get('total_input_tokens', 0)
-                    self.total_output_tokens = data.get('total_output_tokens', 0)
+                    self.phase_costs = data.get('phase_costs', {})
+                    self.model_usage = data.get('model_usage', {})
                     self.call_history = data.get('calls', [])
+                    self.batch_stats = data.get('batch_stats', self.batch_stats)
                     
-                    print(f"═══════════════════════════════════════")
-                    print(f"  RESUMED SESSION - Current spend: £{self.total_cost:.4f}")
-                    print(f"═══════════════════════════════════════")
-            except:
-                pass  # Start fresh if can't load
+                    print(f"╔════════════════════════════════════════╗")
+                    print(f"║  COST TRACKER LOADED                   ║")
+                    print(f"║  Current spend: £{self.total_cost:.4f}        ║")
+                    print(f"║  Total calls: {len(self.call_history):4d}             ║")
+                    print(f"╚════════════════════════════════════════╝")
+            except Exception as e:
+                print(f"Starting fresh cost tracking: {e}")
     
-    def track_call(self, phase: str, model: str, input_tokens: int, output_tokens: int) -> float:
-        """Track an API call and return cost"""
+    def track_call(self, phase: str, model: str, input_tokens: int, 
+                   output_tokens: int, batch_size: int = 1) -> float:
+        """Track API call with batch statistics"""
         
-        # Calculate cost
+        # Get pricing
         pricing = self.model_pricing.get(model, self.model_pricing["claude-opus-4-1-20250805"])
         input_cost = (input_tokens / 1000) * pricing["input"]
         output_cost = (output_tokens / 1000) * pricing["output"]
-        total_cost = input_cost + output_cost
+        call_cost = input_cost + output_cost
         
         # Update totals
-        self.total_cost += total_cost
-        self.total_input_tokens += input_tokens
-        self.total_output_tokens += output_tokens
+        self.total_cost += call_cost
+        
+        # Update phase costs
+        if phase not in self.phase_costs:
+            self.phase_costs[phase] = {'cost': 0, 'calls': 0, 'tokens': 0}
+        self.phase_costs[phase]['cost'] += call_cost
+        self.phase_costs[phase]['calls'] += 1
+        self.phase_costs[phase]['tokens'] += input_tokens + output_tokens
+        
+        # Update model usage
+        model_name = pricing['name']
+        if model_name not in self.model_usage:
+            self.model_usage[model_name] = {'calls': 0, 'tokens': 0, 'cost': 0}
+        self.model_usage[model_name]['calls'] += 1
+        self.model_usage[model_name]['tokens'] += input_tokens + output_tokens
+        self.model_usage[model_name]['cost'] += call_cost
+        
+        # Update batch stats
+        self.batch_stats['total_batches'] += 1
+        self.batch_stats['max_batch_size'] = max(self.batch_stats['max_batch_size'], batch_size)
         
         # Add to history
         self.call_history.append({
             'timestamp': datetime.now().isoformat(),
             'phase': phase,
             'model': model,
+            'model_name': model_name,
             'input_tokens': input_tokens,
             'output_tokens': output_tokens,
-            'cost_gbp': total_cost
+            'cost_gbp': call_cost,
+            'batch_size': batch_size
         })
         
-        # Display cost info
-        model_name = "Haiku" if "haiku" in model else "Opus 4.1"
-        print(f"   💰 Cost: £{total_cost:.4f} ({model_name}: {input_tokens:,} in, {output_tokens:,} out)")
-        print(f"   📊 Total spend so far: £{self.total_cost:.4f}")
+        # Display
+        print(f"   💰 Cost: £{call_cost:.4f} ({model_name}: {input_tokens:,} in, {output_tokens:,} out)")
+        print(f"   📊 Phase {phase} total: £{self.phase_costs[phase]['cost']:.4f}")
+        print(f"   💸 Running total: £{self.total_cost:.4f}")
         
-        # Save costs to disk
         self.save_costs()
-        
-        return total_cost
+        return call_cost
     
     def save_costs(self):
-        """Save current costs to file"""
+        """Save enhanced cost data"""
         with open(self.costs_file, 'w') as f:
             json.dump({
                 'total_cost_gbp': self.total_cost,
-                'total_input_tokens': self.total_input_tokens,
-                'total_output_tokens': self.total_output_tokens,
-                'calls': self.call_history
+                'phase_costs': self.phase_costs,
+                'model_usage': self.model_usage,
+                'batch_stats': self.batch_stats,
+                'calls': self.call_history[-100:]  # Keep last 100 for history
             }, f, indent=2)
     
-    def get_phase_costs(self) -> Dict:
-        """Get cost breakdown by phase"""
-        breakdown = {}
-        for call in self.call_history:
-            phase = call['phase']
-            if phase not in breakdown:
-                breakdown[phase] = {'cost': 0, 'calls': 0}
-            breakdown[phase]['cost'] += call['cost_gbp']
-            breakdown[phase]['calls'] += 1
+    def generate_cost_report(self) -> str:
+        """Generate detailed cost report"""
+        report = []
+        report.append("\n" + "="*60)
+        report.append("💷 DETAILED COST ANALYSIS REPORT")
+        report.append("="*60)
         
-        return breakdown
-    
-    def print_summary(self):
-        """Print a nice summary of costs"""
-        print("\n" + "="*50)
-        print("💷 COST TRACKING SUMMARY")
-        print("="*50)
-        print(f"Total Spent: £{self.total_cost:.4f}")
-        print(f"Input Tokens: {self.total_input_tokens:,}")
-        print(f"Output Tokens: {self.total_output_tokens:,}")
-        print(f"Total API Calls: {len(self.call_history)}")
+        # Overall
+        report.append(f"\n📊 OVERALL STATISTICS:")
+        report.append(f"  Total Cost: £{self.total_cost:.4f}")
+        report.append(f"  Total API Calls: {len(self.call_history)}")
+        report.append(f"  Average Cost per Call: £{self.total_cost/max(len(self.call_history), 1):.4f}")
         
-        # Phase breakdown
-        phase_costs = self.get_phase_costs()
-        if phase_costs:
-            print("\nBy Phase:")
-            for phase, data in sorted(phase_costs.items()):
-                print(f"  {phase}: £{data['cost']:.4f} ({data['calls']} calls)")
+        # By Phase
+        report.append(f"\n📈 COST BY PHASE:")
+        for phase in sorted(self.phase_costs.keys()):
+            data = self.phase_costs[phase]
+            report.append(f"  {phase}:")
+            report.append(f"    Cost: £{data['cost']:.4f}")
+            report.append(f"    Calls: {data['calls']}")
+            report.append(f"    Tokens: {data['tokens']:,}")
         
-        print("="*50)
+        # By Model
+        report.append(f"\n🤖 MODEL USAGE:")
+        for model, data in self.model_usage.items():
+            report.append(f"  {model}:")
+            report.append(f"    Calls: {data['calls']}")
+            report.append(f"    Tokens: {data['tokens']:,}")
+            report.append(f"    Cost: £{data['cost']:.4f}")
+        
+        # Batch Statistics
+        report.append(f"\n📦 BATCH EFFICIENCY:")
+        report.append(f"  Total Batches: {self.batch_stats['total_batches']}")
+        report.append(f"  Max Batch Size: {self.batch_stats['max_batch_size']} docs")
+        
+        report.append("="*60)
+        return "\n".join(report)
 
 
 class ClaudeAPIClient:
-    """Simple API client with your settings"""
+    """Sophisticated API client with intelligent batching and error handling"""
     
     def __init__(self, api_key: Optional[str] = None, settings_path: str = "./config/settings.json"):
-        """Initialise the API client - FIXED to handle both api_key and settings_path"""
+        """Initialise enhanced API client"""
         
-        # Load API key (use provided or get from environment)
+        # API setup
         self.api_key = api_key or os.getenv('ANTHROPIC_API_KEY')
         if not self.api_key:
-            # Try loading from .env
             load_dotenv(dotenv_path='./config/.env', override=True)
             self.api_key = os.getenv('ANTHROPIC_API_KEY')
-            
             if not self.api_key:
-                print(f"Current working directory: {os.getcwd()}")
-                print(f"Looking for .env at: {Path('./config/.env').absolute()}")
-                print(f"File exists: {Path('./config/.env').exists()}")
-                raise ValueError("No ANTHROPIC_API_KEY found in .env file")
+                raise ValueError("No ANTHROPIC_API_KEY found")
         
-        # Initialise Anthropic client
         self.client = anthropic.Anthropic(api_key=self.api_key)
         
-        # Load settings
-        settings_path = Path(settings_path)
-        if settings_path.exists():
-            with open(settings_path, 'r') as f:
-                self.settings = json.load(f)
-        else:
-            print(f"Warning: settings.json not found at {settings_path}, using defaults")
-            self.settings = self._get_default_settings()
+        # Load settings with defaults
+        self.settings = self._load_settings(settings_path)
         
-        # FIXED: Correct access to settings structure
-        self.investigation = self.settings['investigation']
-        self.model_config = self.settings['model']  # ✅ CORRECT - it's 'model' not 'model_config'
-        self.litigation_strategy = self.settings.get('litigation_strategy', {})
-        self.api_config = self.settings.get('api', {})
+        # Enhanced configuration
+        self.models = {
+            'opus': self.settings['models']['opus'],
+            'haiku': self.settings['models']['haiku'],
+            'sonnet': self.settings['models'].get('sonnet', 'claude-3-sonnet-20240229')
+        }
         
-        # Model names
-        self.opus_model = self.model_config['primary']['name']
-        self.haiku_model = self.model_config['secondary']['name']
+        self.phase_config = self.settings.get('phase_config', self._get_default_phase_config())
         
-        # Initialise cost tracker
+        # Enhanced tracking
         self.cost_tracker = CostTracker()
+        self.retry_config = {
+            'max_retries': 3,
+            'retry_delay': 60,
+            'backoff_factor': 2
+        }
         
-        print(f"\n✅ API Client Ready")
-        print(f"   Primary Model: {self.opus_model}")
-        print(f"   Secondary Model: {self.haiku_model}")
-        print(f"   Project: {self.investigation['project_name']}")
+        # Document batching configuration
+        self.batch_config = {
+            'max_tokens_per_batch': 30000,
+            'max_docs_per_batch': 20,
+            'intelligent_batching': True
+        }
+        
+        print(f"\n✅ Enhanced API Client Ready")
+        print(f"   Models: Opus 4.1, Haiku, Sonnet")
+        print(f"   Intelligent Batching: Enabled")
+        print(f"   Cost Tracking: Enhanced")
     
-    def _get_default_settings(self):
-        """Provide default settings if file is missing"""
+    def _load_settings(self, settings_path: str) -> Dict:
+        """Load settings with migration support"""
+        path = Path(settings_path)
+        if path.exists():
+            with open(path, 'r') as f:
+                settings = json.load(f)
+                
+                # Migrate old settings format
+                if 'model' in settings:
+                    settings['models'] = {
+                        'opus': settings['model'].get('primary', {}).get('name', 'claude-opus-4-1-20250805'),
+                        'haiku': settings['model'].get('secondary', {}).get('name', 'claude-3-haiku-20240307'),
+                        'sonnet': 'claude-3-sonnet-20240229'
+                    }
+                
+                return settings
+        else:
+            return self._get_default_settings()
+    
+    def _get_default_settings(self) -> Dict:
+        """Enhanced default settings"""
         return {
-            "model": {
-                "primary": {
-                    "name": "claude-opus-4-1-20250805",
-                    "max_tokens": 4000
-                },
-                "secondary": {
-                    "name": "claude-3-haiku-20240307",
-                    "max_tokens": 2000
-                },
-                "temperature": {
-                    "phase_0a": 0.3,
-                    "phase_0b": 0.3,
-                    "phase_1": 0.3,
-                    "phase_2": 0.3,
-                    "phase_3": 0.4,
-                    "phase_4": 0.4,
-                    "phase_5": 0.5,
-                    "phase_6": 0.5,
-                    "phase_7": 0.7,
-                    "default": 0.3
-                },
-                "haiku_phases": ["phase_0a", "phase_0b", "phase_1"],
-                "opus_phases": ["phase_2", "phase_3", "phase_4", "phase_5", "phase_6", "phase_7"]
+            'models': {
+                'opus': 'claude-opus-4-1-20250805',
+                'haiku': 'claude-3-haiku-20240307',
+                'sonnet': 'claude-3-sonnet-20240229'
             },
-            "investigation": {
-                "project_name": "Lismore Capital vs Process Holdings",
-                "max_tokens": 4000,
-                "haiku_max_tokens": 2000
+            'investigation': {
+                'project_name': 'Lismore Capital vs Process Holdings',
+                'max_tokens': 4000
             }
         }
     
-    def analyse_documents(
+    def _get_default_phase_config(self) -> Dict:
+        """Phase-specific configuration"""
+        return {
+            '0A': {'model': 'haiku', 'max_tokens': 2000, 'temperature': 0.3},
+            '0B': {'model': 'haiku', 'max_tokens': 2000, 'temperature': 0.3},
+            '1': {'model': 'haiku', 'max_tokens': 3000, 'temperature': 0.3},
+            '2': {'model': 'opus', 'max_tokens': 4000, 'temperature': 0.4},
+            '3': {'model': 'opus', 'max_tokens': 4000, 'temperature': 0.4},
+            '4': {'model': 'opus', 'max_tokens': 4000, 'temperature': 0.5},
+            '5': {'model': 'opus', 'max_tokens': 4000, 'temperature': 0.5},
+            '6': {'model': 'opus', 'max_tokens': 4000, 'temperature': 0.6},
+            '7': {'model': 'opus', 'max_tokens': 4000, 'temperature': 0.7}
+        }
+    
+    def analyse_documents_batch(
         self,
-        documents: List[str],
+        documents: List[Dict],
         prompt: str,
         context: Optional[Dict] = None,
         phase: Optional[str] = None
     ) -> str:
         """
-        Analyse documents and track costs
+        Analyse documents with intelligent batching
         
         Args:
-            documents: List of document texts
-            prompt: The analysis prompt
+            documents: List of document dictionaries
+            prompt: Analysis prompt
             context: Previous phase knowledge
-            phase: Current phase (e.g., 'phase_0a', 'phase_1')
+            phase: Current phase identifier
             
         Returns:
-            Response text from Claude
+            Combined analysis from all batches
         """
         
-        # Determine which model to use based on phase
-        if phase in self.model_config.get('haiku_phases', ['phase_0a', 'phase_0b', 'phase_1']):
-            # Use cheaper Haiku model for these phases
-            model = self.haiku_model
-            max_tokens = self.investigation.get('haiku_max_tokens', 2000)
-            print(f"\n📊 Phase {phase}: Using Haiku (economy mode)")
+        if not documents:
+            return self._call_api([], prompt, context, phase)
+        
+        # Intelligent batching
+        from core.utils import batch_documents_for_api
+        batches = batch_documents_for_api(documents, self.batch_config['max_tokens_per_batch'])
+        
+        print(f"\n📦 Processing {len(documents)} documents in {len(batches)} batches")
+        
+        # Process batches
+        batch_results = []
+        for i, batch in enumerate(batches, 1):
+            print(f"\n  Batch {i}/{len(batches)}: {len(batch)} documents")
+            
+            # Build batch-specific prompt
+            batch_prompt = self._build_batch_prompt(prompt, i, len(batches))
+            
+            # Process batch
+            result = self._call_api_with_retry(
+                documents=batch,
+                prompt=batch_prompt,
+                context=context,
+                phase=phase,
+                batch_info={'current': i, 'total': len(batches), 'size': len(batch)}
+            )
+            
+            if result:
+                batch_results.append(result)
+            
+            # Brief pause between batches
+            if i < len(batches):
+                time.sleep(2)
+        
+        # Synthesise results if multiple batches
+        if len(batch_results) > 1:
+            print(f"\n🔄 Synthesising {len(batch_results)} batch results...")
+            return self._synthesise_batch_results(batch_results, phase)
+        elif batch_results:
+            return batch_results[0]
         else:
-            # Use Opus 4.1 for everything else
-            model = self.opus_model
-            max_tokens = self.investigation.get('max_tokens', 4000)
-            print(f"\n🚀 Phase {phase}: Using Opus 4.1 (maximum power)")
+            return "No results obtained from document analysis"
+    
+    def _build_batch_prompt(self, base_prompt: str, batch_num: int, total_batches: int) -> str:
+        """Build prompt for specific batch"""
+        if total_batches == 1:
+            return base_prompt
         
-        # Get temperature for this phase
-        temperatures = self.model_config.get('temperature', {})
-        temperature = temperatures.get(phase, temperatures.get('default', 0.3))
+        return f"""
+BATCH {batch_num} of {total_batches}
+
+{base_prompt}
+
+NOTE: This is a partial document set. Focus on extracting maximum intelligence from these specific documents.
+Other batches will cover remaining documents.
+"""
+    
+    def _call_api_with_retry(
+        self,
+        documents: List[Dict],
+        prompt: str,
+        context: Optional[Dict],
+        phase: Optional[str],
+        batch_info: Optional[Dict] = None
+    ) -> Optional[str]:
+        """API call with intelligent retry logic"""
         
-        # Build the prompts
-        system_prompt = self._build_system_prompt(phase)
-        user_message = self._build_user_message(documents, prompt, context)
+        retries = 0
+        delay = self.retry_config['retry_delay']
         
-        try:
-            print(f"   Calling API...")
-            
-            # Make the API call
-            response = self.client.messages.create(
-                model=model,
-                max_tokens=max_tokens,
-                temperature=temperature,
-                system=system_prompt,
-                messages=[
-                    {"role": "user", "content": user_message}
-                ]
-            )
-            
-            # Track the costs
-            self.cost_tracker.track_call(
-                phase=phase or 'general',
-                model=model,
-                input_tokens=response.usage.input_tokens,
-                output_tokens=response.usage.output_tokens
-            )
-            
-            # Extract text from response safely
-            if response.content and len(response.content) > 0:
-                return response.content[0].text
-            else:
-                print("⚠️ Empty response from API")
+        while retries < self.retry_config['max_retries']:
+            try:
+                return self._call_api(documents, prompt, context, phase, batch_info)
+                
+            except anthropic.RateLimitError as e:
+                retries += 1
+                print(f"⏳ Rate limit hit - waiting {delay} seconds (retry {retries}/{self.retry_config['max_retries']})")
+                time.sleep(delay)
+                delay *= self.retry_config['backoff_factor']
+                
+            except anthropic.APIError as e:
+                retries += 1
+                print(f"⚠️ API error: {e} (retry {retries}/{self.retry_config['max_retries']})")
+                time.sleep(10)
+                
+            except Exception as e:
+                print(f"❌ Unexpected error: {e}")
                 return None
-            
-        except anthropic.RateLimitError:
-            print("⏳ Rate limit hit - waiting 60 seconds...")
-            time.sleep(60)
-            return self.analyse_documents(documents, prompt, context, phase)
-            
-        except Exception as e:
-            print(f"❌ API Error: {e}")
-            return None
+        
+        print(f"❌ Max retries exceeded for phase {phase}")
+        return None
     
-    def _build_system_prompt(self, phase: str) -> str:
-        """Build adversarial system prompt"""
-        base_prompt = f"""You are a senior commercial litigation partner at a magic circle firm.
-You are conducting {phase if phase else 'analysis'} for LISMORE CAPITAL against Process Holdings.
-Your mandate is to find evidence that destroys Process Holdings' position.
-Be aggressive, thorough, and partisan for Lismore. Find every weakness."""
+    def _call_api(
+        self,
+        documents: List[Dict],
+        prompt: str,
+        context: Optional[Dict],
+        phase: Optional[str],
+        batch_info: Optional[Dict] = None
+    ) -> str:
+        """Core API call with enhanced configuration"""
         
-        # Add litigation strategy if available
-        if self.litigation_strategy:
-            objectives = self.litigation_strategy.get('primary_objectives', [])
-            if objectives:
-                base_prompt += f"\n\nPRIMARY OBJECTIVES:\n" + "\n".join(f"- {obj}" for obj in objectives)
+        # Get phase configuration
+        phase_key = phase.replace('phase_', '') if phase else 'default'
+        config = self.phase_config.get(phase_key, self.phase_config.get('1'))
         
-        return base_prompt
+        # Select model
+        model_key = config.get('model', 'opus')
+        model = self.models[model_key]
+        max_tokens = config.get('max_tokens', 4000)
+        temperature = config.get('temperature', 0.4)
+        
+        # Build messages
+        system_prompt = self._build_enhanced_system_prompt(phase)
+        user_message = self._build_enhanced_user_message(documents, prompt, context)
+        
+        # Make API call
+        print(f"   🤖 Calling {model_key.upper()} model...")
+        
+        response = self.client.messages.create(
+            model=model,
+            max_tokens=max_tokens,
+            temperature=temperature,
+            system=system_prompt,
+            messages=[{"role": "user", "content": user_message}]
+        )
+        
+        # Track costs
+        batch_size = batch_info['size'] if batch_info else len(documents)
+        self.cost_tracker.track_call(
+            phase=phase or 'general',
+            model=model,
+            input_tokens=response.usage.input_tokens,
+            output_tokens=response.usage.output_tokens,
+            batch_size=batch_size
+        )
+        
+        # Extract response
+        if response.content and len(response.content) > 0:
+            return response.content[0].text
+        else:
+            return "Empty response from API"
     
-    def _build_user_message(self, documents: List[str], prompt: str, context: Optional[Dict]) -> str:
-        """Build user message with documents and context"""
+    def _build_enhanced_system_prompt(self, phase: Optional[str]) -> str:
+        """Build sophisticated system prompt"""
         
-        message_parts = []
+        base = """You are a senior litigation partner at a magic circle law firm with 30 years' experience in complex commercial disputes.
         
-        # Add context from previous phases if available
+You are acting for LISMORE CAPITAL against Process Holdings in a high-stakes arbitration.
+
+Your approach is:
+- ADVERSARIAL: Find every weakness in Process Holdings' position
+- FORENSIC: Extract maximum intelligence from every document
+- STRATEGIC: Connect findings to winning legal strategies
+- PARTISAN: Everything you find must benefit Lismore
+
+You have expertise in:
+- Document forensics and pattern recognition
+- Contradiction hunting and timeline analysis
+- Financial fraud detection
+- Witness credibility assessment
+- Procedural warfare tactics"""
+        
+        # Add phase-specific expertise
+        if phase:
+            phase_key = phase.replace('phase_', '')
+            phase_expertise = {
+                '0A': "\n\nFor Phase 0A: Focus on weaponising legal doctrines into nuclear options.",
+                '0B': "\n\nFor Phase 0B: Identify vulnerabilities in their skeleton arguments.",
+                '1': "\n\nFor Phase 1: Map the document landscape and find hot documents.",
+                '2': "\n\nFor Phase 2: Build timeline and find impossibilities.",
+                '3': "\n\nFor Phase 3: Hunt contradictions relentlessly.",
+                '4': "\n\nFor Phase 4: Construct winning narrative.",
+                '5': "\n\nFor Phase 5: Identify criminal conduct.",
+                '6': "\n\nFor Phase 6: Find procedural knock-outs.",
+                '7': "\n\nFor Phase 7: Deploy nuclear options."
+            }
+            base += phase_expertise.get(phase_key, "")
+        
+        return base
+    
+    def _build_enhanced_user_message(
+        self,
+        documents: List[Dict],
+        prompt: str,
+        context: Optional[Dict]
+    ) -> str:
+        """Build sophisticated user message"""
+        
+        parts = []
+        
+        # Add context if available
         if context:
-            message_parts.append("PREVIOUS PHASE KNOWLEDGE:")
-            # Truncate to avoid token limits
-            context_str = json.dumps(context, indent=2)[:10000]
-            message_parts.append(context_str)
-            message_parts.append("\n" + "="*50 + "\n")
+            parts.append("="*60)
+            parts.append("ACCUMULATED INTELLIGENCE FROM PREVIOUS PHASES:")
+            
+            # Intelligently summarise context
+            if 'knowledge_graph' in context:
+                kg = context['knowledge_graph']
+                parts.append(f"Nuclear Weapons Available: {len(kg.get('nuclear', []))}")
+                parts.append(f"Contradictions Found: {len(kg.get('contradictions', []))}")
+                parts.append(f"Key Actors Identified: {len(kg.get('entities', []))}")
+            
+            if 'strategic_priorities' in context:
+                parts.append(f"Strategic Focus: {', '.join(context['strategic_priorities'][:3])}")
+            
+            parts.append("="*60 + "\n")
         
-        # Add the main prompt
-        message_parts.append("ANALYSIS TASK:")
-        message_parts.append(prompt)
-        message_parts.append("\n" + "="*50 + "\n")
+        # Add main prompt
+        parts.append("ANALYSIS REQUIREMENTS:")
+        parts.append(prompt)
+        parts.append("\n" + "="*60)
         
-        # Add documents
-        message_parts.append("DOCUMENTS TO ANALYSE:")
-        for i, doc in enumerate(documents, 1):
-            # Truncate very long documents
-            doc_text = doc[:50000] if len(doc) > 50000 else doc
-            message_parts.append(f"\n--- Document {i} ---\n{doc_text}")
+        # Add documents with metadata
+        if documents:
+            parts.append(f"\nDOCUMENTS FOR ANALYSIS ({len(documents)} documents):")
+            
+            for i, doc in enumerate(documents, 1):
+                # Add document header with metadata
+                metadata = doc.get('metadata', {})
+                doc_id = metadata.get('doc_id', f'DOC_{i:04d}')
+                
+                parts.append(f"\n{'='*40}")
+                parts.append(f"[{doc_id}] {doc.get('filename', 'Unknown')}")
+                
+                if metadata:
+                    parts.append(f"Classification: {metadata.get('classification', 'unknown')}")
+                    if metadata.get('entities', {}).get('people'):
+                        parts.append(f"Key People: {', '.join(metadata['entities']['people'][:3])}")
+                    if metadata.get('entities', {}).get('amounts'):
+                        parts.append(f"Amounts: {', '.join(metadata['entities']['amounts'][:3])}")
+                
+                parts.append(f"{'='*40}")
+                
+                # Add content (intelligently truncated)
+                content = doc.get('content', '')
+                if len(content) > 50000:
+                    # Smart truncation - keep beginning and end
+                    parts.append(content[:25000])
+                    parts.append("\n[... middle section truncated for length ...]\n")
+                    parts.append(content[-20000:])
+                else:
+                    parts.append(content)
+        else:
+            parts.append("\n[No documents provided for this analysis]")
         
-        return "\n".join(message_parts)
+        return "\n".join(parts)
+    
+    def _synthesise_batch_results(self, batch_results: List[str], phase: str) -> str:
+        """Synthesise multiple batch results into coherent analysis"""
+        
+        synthesis_prompt = f"""
+Synthesise these {len(batch_results)} batch analyses into a single comprehensive analysis.
+
+Combine all findings, eliminate duplicates, and present a unified analysis that:
+1. Preserves ALL unique findings from each batch
+2. Resolves any contradictions between batches
+3. Highlights the most important discoveries
+4. Maintains document references [DOC_XXXX]
+
+BATCH RESULTS TO SYNTHESISE:
+{'='*60}
+"""
+        
+        for i, result in enumerate(batch_results, 1):
+            synthesis_prompt += f"\nBATCH {i}:\n{result[:5000]}\n{'='*40}"
+        
+        # Use Opus for synthesis (highest quality)
+        return self._call_api(
+            documents=[],
+            prompt=synthesis_prompt,
+            context=None,
+            phase=f"{phase}_synthesis" if phase else "synthesis"
+        )
+    
+    def generate_cost_report(self) -> str:
+        """Generate comprehensive cost report"""
+        return self.cost_tracker.generate_cost_report()

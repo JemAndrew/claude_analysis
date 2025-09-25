@@ -1,0 +1,24 @@
+
+CORRECT IMPORT MAP FOR YOUR PROJECT:
+====================================
+
+# In main.py:
+from interface.document_processor import DocumentProcessor
+from knowledge.knowledge_manage import OptimisedKnowledgeManager
+from outputs.output_generator import OptimisedOutputGenerator
+
+# In output_generator.py:
+from knowledge.knowledge_manage import OptimisedKnowledgeManager
+from core.api_client import ClaudeAPIClient
+from prompts.output_prompts import OutputPrompts
+from outputs.report_formatter import ReportFormatter
+
+# In document_processor.py:
+from core.api_client import ClaudeAPIClient
+from prompts.phase_prompts import get_phase_prompt, get_phase_prompt_enhanced
+from knowledge.knowledge_manage import OptimisedKnowledgeManager
+from selectors.document_selector import DocumentSelector
+from core.utils import load_documents, validate_documents
+
+# In any file using the Fixed Document Processor:
+from core.document_processor import DocumentProcessor  # or wherever you put it

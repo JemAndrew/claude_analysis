@@ -1,4 +1,4 @@
-﻿# main.py - THREE DIRECTORY STRUCTURE
+﻿#!/usr/bin/env python3
 """
 Main script for Lismore litigation analysis
 Handles three-directory structure:
@@ -9,14 +9,24 @@ Handles three-directory structure:
 
 import argparse
 import sys
+import time
 from pathlib import Path
-sys.path.insert(0, str(Path(__file__).parent))
+from typing import List, Dict, Tuple
 
-from interface.document_processor import DocumentProcessor
-from knowledge.knowledge_manage import OptimisedKnowledgeManager
-from outputs.output_generator import OptimisedOutputGenerator
+# When running as module (python -m src.main)
+if __name__ == "__main__" and __package__:
+    from .interface.document_processor import DocumentProcessor
+    from .knowledge.knowledge_manage import KnowledgeManager
+    from .outputs.output_generator import OutputGenerator
+else:
+    # When running directly (python src/main.py)
+    sys.path.insert(0, str(Path(__file__).parent))
+    from interface.document_processor import DocumentProcessor
+    from knowledge.knowledge_manage import KnowledgeManager
+    from outputs.output_generator import OutputGenerator
 
-def verify_directories():
+
+def verify_directories() -> Tuple[Dict, bool]:
     """Verify all three document directories"""
     print("\n📁 DIRECTORY VERIFICATION")
     print("="*50)
@@ -27,11 +37,23 @@ def verify_directories():
     # Check legal_resources (Phase 0A)
     legal_dir = Path("legal_resources")
     if legal_dir.exists():
-        pdf_count = len(list(legal_dir.glob("*.pdf")))
-        status['legal_resources'] = pdf_count
-        print(f"✅ legal_resources/: {pdf_count} PDFs")
-        if pdf_count == 0:
+        # Check for rule cards
+        rule_cards_dir = legal_dir / "rule_cards"
+        if rule_cards_dir.exists():
+            json_count = len(list(rule_cards_dir.glob("*.json")))
+            status['legal_resources'] = json_count
+            print(f"✅ legal_resources/rule_cards/: {json_count} rule cards")
+        else:
+            # Check for PDFs or text files
+            pdf_count = len(list(legal_dir.glob("**/*.pdf")))
+            txt_count = len(list((legal_dir / "processed/text").glob("*.txt"))) if (legal_dir / "processed/text").exists() else 0
+            total = pdf_count + txt_count
+            status['legal_resources'] = total
+            print(f"✅ legal_resources/: {total} documents")
+        
+        if status['legal_resources'] == 0:
             print("   ⚠️  No legal framework documents for Phase 0A")
+            ready_for_analysis = False
     else:
         status['legal_resources'] = 0
         print("❌ legal_resources/ not found (needed for Phase 0A)")
@@ -40,7 +62,7 @@ def verify_directories():
     # Check case_context (Phase 0B)
     case_dir = Path("case_context")
     if case_dir.exists():
-        pdf_count = len(list(case_dir.glob("*.pdf")))
+        pdf_count = len(list(case_dir.glob("**/*.pdf")))
         status['case_context'] = pdf_count
         print(f"✅ case_context/: {pdf_count} PDFs")
         if pdf_count == 0:
@@ -48,7 +70,7 @@ def verify_directories():
     else:
         status['case_context'] = 0
         print("❌ case_context/ not found (needed for Phase 0B)")
-        ready_for_analysis = False
+        # Not critical if missing
     
     # Check disclosure documents (Phases 1-7)
     disclosure_ready = False
@@ -67,38 +89,38 @@ def verify_directories():
         raw_dir = Path("documents/raw")
         if raw_dir.exists():
             pdf_count = len(list(raw_dir.glob("*.pdf")))
-            if pdf_count >= 0:
+            if pdf_count > 0:
                 status['disclosure_raw'] = pdf_count
                 print(f"✅ documents/raw/: {pdf_count} PDFs")
                 disclosure_ready = True
     
     if not disclosure_ready:
-        print("❌ No disclosure documents found (needed for Phases 1-7)")
+        status['disclosure_raw'] = 0
+        status['disclosure_processed'] = 0
+        print("ℹ️  No disclosure documents (needed for Phases 1-7)")
         print("   Expected locations:")
         print("   - documents/processed/text/ (processed text files)")
         print("   - documents/raw/ (raw PDFs)")
-        ready_for_analysis = False
     
     print("="*50)
     
     return status, ready_for_analysis
 
-def estimate_cost(phases: list) -> float:
+
+def estimate_cost(phases: List[str], dir_status: Dict) -> float:
     """
     Estimate costs for the phases to run
     
     Args:
         phases: List of phases to run
+        dir_status: Directory status from verification
         
     Returns:
         Estimated cost in GBP
     """
-    processor = DocumentProcessor()
-    dir_status = processor.verify_setup()
-    
     BATCH_SIZES = {
-        "0A": 3, "0B": 3, "1": 5, "2": 5, 
-        "3": 5, "4": 7, "5": 7, "6": 10, "7": 10
+        "0A": 10, "0B": 10, "1": 20, "2": 20, 
+        "3": 20, "4": 25, "5": 25, "6": 30, "7": 30
     }
     
     total_cost = 0
@@ -108,26 +130,26 @@ def estimate_cost(phases: list) -> float:
     for phase in phases:
         # Determine document count based on phase
         if phase == "0A":
-            doc_count = dir_status['legal_resources']['count']
+            doc_count = dir_status.get('legal_resources', 0)
             source = "legal_resources"
         elif phase == "0B":
-            doc_count = dir_status['case_context']['count']
+            doc_count = dir_status.get('case_context', 0)
             source = "case_context"
         else:  # Phases 1-7
             # Use processed if available, otherwise raw
-            if dir_status['disclosure_processed']['count'] > 0:
-                doc_count = dir_status['disclosure_processed']['count']
+            if dir_status.get('disclosure_processed', 0) > 0:
+                doc_count = dir_status.get('disclosure_processed', 0)
                 source = "documents/processed/text"
             else:
-                doc_count = dir_status['disclosure_raw']['count']
+                doc_count = dir_status.get('disclosure_raw', 0)
                 source = "documents/raw"
         
         if doc_count == 0:
             print(f"  Phase {phase}: No documents in {source}/ - SKIPPED")
             continue
         
-        batch_size = BATCH_SIZES.get(phase, 5)
-        num_batches = (doc_count + batch_size - 1) // batch_size
+        batch_size = BATCH_SIZES.get(phase, 20)
+        num_batches = max(1, (doc_count + batch_size - 1) // batch_size)
         
         # Phases 0A, 0B, 1 use Haiku (cheaper)
         if phase in ["0A", "0B", "1"]:
@@ -150,14 +172,17 @@ def estimate_cost(phases: list) -> float:
     
     return total_cost
 
+
 def main():
     parser = argparse.ArgumentParser(
         description='Lismore Capital Litigation Analysis System'
     )
-    parser.add_argument('--phases', nargs='+', help='Specific phases to run (e.g., 0A 0B 1)')
+    parser.add_argument('--phase', type=str, help='Single phase to run (e.g., 0A)')
+    parser.add_argument('--phases', nargs='+', help='Multiple phases to run (e.g., 0A 0B 1)')
     parser.add_argument('--resume', action='store_true', help='Resume from last completed phase')
     parser.add_argument('--estimate-only', action='store_true', help='Only show cost estimate')
     parser.add_argument('--verify', action='store_true', help='Verify directory setup')
+    parser.add_argument('--dashboard', action='store_true', help='Generate war room dashboard')
     
     args = parser.parse_args()
     
@@ -176,15 +201,27 @@ def main():
             print("\n⚠️  Fix directory issues before running analysis")
         return 0
     
-    if not ready:
-        print("\n❌ Cannot proceed - fix directory issues first")
+    # Handle dashboard request
+    if args.dashboard:
+        print("\n📊 Generating War Room Dashboard...")
+        processor = DocumentProcessor()
+        dashboard = processor.generate_war_room_dashboard()
+        print(dashboard)
+        return 0
+    
+    # Check Phase 0A readiness
+    if not ready and "0A" in (args.phases or [args.phase] or ["0A"]):
+        print("\n❌ Cannot proceed - Phase 0A requires legal_resources/")
         return 1
     
     # Initialise processor
+    print("\n🔧 Initialising document processor...")
     processor = DocumentProcessor()
     
     # Determine phases to run
-    if args.phases:
+    if args.phase:
+        phases_to_run = [args.phase]
+    elif args.phases:
         phases_to_run = args.phases
     elif args.resume:
         knowledge_manager = KnowledgeManager()
@@ -198,7 +235,12 @@ def main():
         
         print(f"\n📌 Resuming from phase {phases_to_run[0]}")
     else:
-        phases_to_run = ["0A", "0B", "1", "2", "3", "4", "5", "6", "7"]
+        # Default to Phase 0A if legal resources exist
+        if dir_status.get('legal_resources', 0) > 0:
+            phases_to_run = ["0A"]
+        else:
+            print("\n❓ No phase specified. Use --phase 0A to start")
+            return 0
     
     print(f"\n📋 Phases to run: {', '.join(phases_to_run)}")
     
@@ -214,7 +256,7 @@ def main():
                 return 1
     
     # Estimate costs
-    estimated_cost = estimate_cost(phases_to_run)
+    estimated_cost = estimate_cost(phases_to_run, dir_status)
     print(f"\n{'='*50}")
     print(f"💰 TOTAL ESTIMATED COST: £{estimated_cost:.2f}")
     print(f"{'='*50}")
@@ -234,7 +276,11 @@ def main():
         results = {}
         
         for phase in phases_to_run:
-            # Process phase (documents loaded automatically per phase)
+            print(f"\n{'='*60}")
+            print(f"📍 Starting Phase {phase}")
+            print(f"{'='*60}")
+            
+            # Process phase
             result = processor.process_phase(phase)
             
             if not result:
@@ -252,46 +298,33 @@ def main():
                 print(f"   Remaining: {', '.join(phases_to_run[completed:])}")
             
             # Cost tracking
-            cost_tracker = processor.api_client.cost_tracker
-            print(f"💰 Total spent so far: £{cost_tracker.total_cost:.2f}")
+            if hasattr(processor.api_client, 'cost_tracker'):
+                cost_tracker = processor.api_client.cost_tracker
+                print(f"💰 Total spent so far: £{cost_tracker.total_cost:.2f}")
             
             # Pause between phases
             if remaining > 0:
                 print("⏱️  Pausing 5 seconds before next phase...")
-                import time
                 time.sleep(5)
         
         # Generate reports (only for phases 1-7)
         if any(phase not in ["0A", "0B"] for phase in phases_to_run):
             print(f"\n📄 Generating litigation reports...")
             
+            # Import only when needed
+            from outputs.output_generator import OutputGenerator
             output_gen = OutputGenerator(processor.knowledge_manage)
             
             # Register documents for referencing
-            if processor.disclosure_cache:
-                output_gen.register_documents(processor.disclosure_cache)
+            if hasattr(processor, 'document_registry') and processor.document_registry:
+                output_gen.register_documents(list(processor.document_registry.values()))
             
             # Generate phase-specific reports
             all_reports = {}
             for phase in phases_to_run:
                 if phase not in ["0A", "0B"]:  # No reports for knowledge phases
                     phase_data = results.get(phase, {})
-                    
-                    if phase == "1":
-                        reports = output_gen.generate_phase_1_reports(phase_data)
-                    elif phase == "2":
-                        reports = output_gen.generate_phase_2_reports(phase_data)
-                    elif phase == "3":
-                        reports = output_gen.generate_phase_3_reports(phase_data)
-                    elif phase == "4":
-                        reports = output_gen.generate_phase_4_reports(phase_data)
-                    elif phase == "5":
-                        reports = output_gen.generate_phase_5_reports(phase_data)
-                    elif phase == "6":
-                        reports = output_gen.generate_phase_6_reports(phase_data)
-                    elif phase == "7":
-                        reports = output_gen.generate_phase_7_reports(phase_data)
-                    
+                    reports = output_gen.generate_phase_reports(phase, phase_data)
                     all_reports[phase] = reports
             
             total_reports = sum(len(r) for r in all_reports.values())
@@ -304,16 +337,23 @@ def main():
         # Final summary
         print(f"\n📊 FINAL SUMMARY:")
         print(f"  Phases completed: {', '.join(results.keys())}")
-        print(f"  Total cost: £{processor.api_client.cost_tracker.total_cost:.2f}")
-        print(f"  Documents analysed:")
         
+        if hasattr(processor.api_client, 'cost_tracker'):
+            print(f"  Total cost: £{processor.api_client.cost_tracker.total_cost:.2f}")
+        
+        print(f"  Documents analysed:")
         for phase, result in results.items():
             doc_count = result.get('documents_analysed', 0)
-            source = result.get('source_directory', 'unknown')
-            print(f"    Phase {phase}: {doc_count} docs from {source}/")
+            print(f"    Phase {phase}: {doc_count} documents")
         
         print(f"\n📁 Outputs saved to: ./outputs/")
         print(f"📚 Knowledge stored in: ./knowledge_store/")
+        
+        # Generate war room dashboard if multiple phases completed
+        if len(results) > 1:
+            print(f"\n📊 Generating War Room Dashboard...")
+            dashboard = processor.generate_war_room_dashboard()
+            print(dashboard[:500] + "...")  # Show preview
         
         return 0
         
@@ -326,6 +366,7 @@ def main():
         import traceback
         traceback.print_exc()
         return 1
+
 
 if __name__ == "__main__":
     sys.exit(main())

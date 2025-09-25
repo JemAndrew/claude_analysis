@@ -12,7 +12,7 @@ from pathlib import Path
 from collections import defaultdict
 import re
 
-class OptimisedKnowledgeManager:
+class KnowledgeManager:
     """
     Enhanced knowledge management optimised for Claude's learning:
     - Structured knowledge graphs for better pattern recognition
