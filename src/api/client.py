@@ -388,9 +388,9 @@ Key Context:
         
         # Rough cost estimates (adjust based on actual pricing)
         costs = {
-            'claude-3-opus-20240229': {'input': 0.015, 'output': 0.075},
-            'claude-3-5-sonnet-20241022': {'input': 0.003, 'output': 0.015},
-            'claude-3-haiku-20240307': {'input': 0.00025, 'output': 0.00125}
+            'claude-3-opus-latest': {'input': 0.015, 'output': 0.075},
+            'claude-3-5-sonnet-latest': {'input': 0.003, 'output': 0.015},
+            'claude-3-haiku-latest': {'input': 0.00025, 'output': 0.00125}
         }
         
         total_cost = 0

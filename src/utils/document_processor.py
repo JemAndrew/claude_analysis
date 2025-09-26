@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """
 Enhanced Document Loader with Metadata Extraction
 Handles all document types for litigation intelligence

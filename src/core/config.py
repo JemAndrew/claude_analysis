@@ -54,19 +54,19 @@ class Config:
         
         # Primary models - Opus for maximum reasoning
         self.models = {
-            'primary': 'claude-3-opus-20240229',      # Maximum capability
-            'secondary': 'claude-3-5-sonnet-20241022', # Fallback
-            'quick': 'claude-3-haiku-20240307'        # Quick validation only
+            'primary': 'claude-3-opus-latest',      # Maximum capability
+            'secondary': 'claude-3-5-sonnet-latest', # Fallback
+            'quick': 'claude-3-haiku-latest'        # Quick validation only
         }
         
         # Phase-specific model selection
         self.phase_models = {
-            'knowledge_loading': 'claude-3-opus-20240229',  # Critical learning
-            'initial_analysis': 'claude-3-opus-20240229',   # Pattern recognition
-            'deep_investigation': 'claude-3-opus-20240229', # Complex reasoning
-            'contradiction_analysis': 'claude-3-opus-20240229', # Logic required
-            'synthesis': 'claude-3-opus-20240229',          # Strategic thinking
-            'quick_validation': 'claude-3-haiku-20240307'   # Simple checks only
+            'knowledge_loading': 'claude-3-opus-latest',  # Critical learning
+            'initial_analysis': 'claude-3-opus-latest',   # Pattern recognition
+            'deep_investigation': 'claude-3-opus-latest', # Complex reasoning
+            'contradiction_analysis': 'claude-3-opus-latest', # Logic required
+            'synthesis': 'claude-3-opus-latest',          # Strategic thinking
+            'quick_validation': 'claude-3-haiku-latest'   # Simple checks only
         }
         
         # Complexity triggers for automatic Opus upgrade

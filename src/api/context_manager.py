@@ -373,8 +373,9 @@ class ContextManager:
         return text[:max_chars] + "...[truncated]"
     
     def _estimate_tokens(self, text: str) -> int:
-        """Estimate token count"""
-        return len(text) // 4
+        # More accurate: ~1 token per 0.75 words
+        word_count = len(text.split())
+        return int(word_count * 1.3)
     
     def _record_context_usage(self, batches: List[Dict]):
         """Record context usage for optimisation"""

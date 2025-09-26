@@ -585,42 +585,207 @@ class PhaseExecutor:
     
     def _extract_contradictions(self, response: str) -> List:
         """Extract contradictions from response"""
+        from intelligence.knowledge_graph import Contradiction
+        import re
+        import hashlib
+        from datetime import datetime
         
-        # This would parse response for contradictions
-        # Returns list of Contradiction objects
-        return []
+        contradictions = []
+        
+        # Pattern matching for contradictions
+        patterns = [
+            r'\[CONTRADICTION\](.*?)(?=\[|$)',
+            r'contradicts?:?\s*(.*?)(?=\n|\[|$)',
+            r'inconsistent:?\s*(.*?)(?=\n|\[|$)'
+        ]
+        
+        for pattern in patterns:
+            matches = re.findall(pattern, response, re.IGNORECASE | re.DOTALL)
+            for match in matches:
+                # Extract severity if mentioned
+                severity_match = re.search(r'severity[:\s]+(\d+)', match, re.IGNORECASE)
+                severity = int(severity_match.group(1)) if severity_match else 7
+                
+                contradiction = Contradiction(
+                    contradiction_id=hashlib.md5(match.encode()).hexdigest()[:16],
+                    statement_a=match[:200],
+                    statement_b=match[200:400] if len(match) > 200 else "IMPLIED",
+                    doc_a='EXTRACTED',
+                    doc_b='EXTRACTED',
+                    severity=severity,
+                    confidence=0.8,
+                    implications=match[:500],
+                    investigation_priority=float(severity),
+                    discovered=datetime.now().isoformat()
+                )
+                contradictions.append(contradiction)
+        
+        return contradictions
     
     def _extract_patterns(self, response: str) -> List:
         """Extract patterns from response"""
+        from intelligence.knowledge_graph import Pattern
+        import re
+        import hashlib
+        from datetime import datetime
         
-        # This would parse response for patterns
-        # Returns list of Pattern objects
-        return []
+        patterns = []
+        
+        # Pattern markers
+        markers = [
+            r'\[PATTERN\](.*?)(?=\[|$)',
+            r'\[PATTERN-TEMPORAL\](.*?)(?=\[|$)',
+            r'\[PATTERN-FINANCIAL\](.*?)(?=\[|$)',
+            r'pattern:?\s*(.*?)(?=\n|\[|$)'
+        ]
+        
+        for marker in markers:
+            matches = re.findall(marker, response, re.IGNORECASE | re.DOTALL)
+            for match in matches:
+                pattern = Pattern(
+                    pattern_id=hashlib.md5(match.encode()).hexdigest()[:16],
+                    pattern_type='discovered',
+                    description=match[:500],
+                    confidence=0.7,
+                    supporting_evidence=[],
+                    contradicting_evidence=[],
+                    evolution_history=[{'timestamp': datetime.now().isoformat()}],
+                    investigation_spawned=False,
+                    discovered=datetime.now().isoformat()
+                )
+                patterns.append(pattern)
+        
+        return patterns
     
     def _extract_entities_and_relationships(self, response: str) -> tuple:
         """Extract entities and relationships from response"""
+        from intelligence.knowledge_graph import Entity, Relationship
+        import re
+        import hashlib
+        from datetime import datetime
         
-        # This would parse response for entities and relationships
-        # Returns (entities_list, relationships_list)
-        return [], []
+        entities = []
+        relationships = []
+        
+        # Entity patterns
+        entity_patterns = [
+            r'\[ENTITY-NEW\](.*?)(?=\[|$)',
+            r'entity:?\s*(.*?)(?=\n|\[|$)'
+        ]
+        
+        for pattern in entity_patterns:
+            matches = re.findall(pattern, response, re.IGNORECASE | re.DOTALL)
+            for match in matches:
+                # Simple entity extraction
+                entity = Entity(
+                    entity_id=hashlib.md5(match.encode()).hexdigest()[:8],
+                    entity_type='person',  # Would parse from match
+                    subtype='',
+                    name=match[:100].strip(),
+                    first_seen=datetime.now().isoformat(),
+                    confidence=0.7,
+                    properties={},
+                    discovery_phase='entity_phase'
+                )
+                entities.append(entity)
+        
+        # Relationship patterns
+        rel_patterns = [
+            r'\[RELATIONSHIP-HIDDEN\](.*?)(?=\[|$)',
+            r'relationship:?\s*(.*?)(?=\n|\[|$)'
+        ]
+        
+        for pattern in rel_patterns:
+            matches = re.findall(pattern, response, re.IGNORECASE | re.DOTALL)
+            for match in matches:
+                relationship = Relationship(
+                    relationship_id=hashlib.md5(match.encode()).hexdigest()[:16],
+                    source_entity='TBD',
+                    target_entity='TBD',
+                    relationship_type='discovered',
+                    confidence=0.6,
+                    evidence=[match[:200]],
+                    discovered=datetime.now().isoformat(),
+                    properties={}
+                )
+                relationships.append(relationship)
+        
+        return entities, relationships
     
     def _extract_financial_anomalies(self, response: str) -> List[Dict]:
         """Extract financial anomalies from response"""
+        import re
+        from datetime import datetime
         
-        # This would parse response for financial anomalies
-        return []
+        anomalies = []
+        
+        # Financial markers
+        markers = [
+            r'\[FINANCIAL\](.*?)(?=\[|$)',
+            r'anomaly:?\s*(.*?)(?=\n|\[|$)',
+            r'suspicious.*?payment.*?:(.*?)(?=\n|\[|$)'
+        ]
+        
+        for marker in markers:
+            matches = re.findall(marker, response, re.IGNORECASE | re.DOTALL)
+            for match in matches:
+                anomaly = {
+                    'type': 'financial_anomaly',
+                    'description': match[:500],
+                    'severity': 7,  # Default high
+                    'timestamp': datetime.now().isoformat()
+                }
+                anomalies.append(anomaly)
+        
+        return anomalies
     
     def _get_known_patterns(self) -> Dict:
         """Get known patterns from knowledge graph"""
+        import sqlite3
+        import json
         
-        # Query knowledge graph for existing patterns
-        return {}
+        conn = sqlite3.connect(self.orchestrator.knowledge_graph.db_path)
+        cursor = conn.cursor()
+        
+        cursor.execute("""
+            SELECT pattern_id, description, confidence 
+            FROM patterns 
+            WHERE confidence > 0.5
+            LIMIT 20
+        """)
+        
+        patterns = {}
+        for row in cursor.fetchall():
+            patterns[row[0]] = {
+                'description': row[1],
+                'confidence': row[2]
+            }
+        
+        conn.close()
+        return patterns
     
     def _get_known_entities(self) -> Dict:
         """Get known entities from knowledge graph"""
+        import sqlite3
         
-        # Query knowledge graph for existing entities
-        return {}
+        conn = sqlite3.connect(self.orchestrator.knowledge_graph.db_path)
+        cursor = conn.cursor()
+        
+        cursor.execute("""
+            SELECT entity_type, name 
+            FROM entities 
+            LIMIT 50
+        """)
+        
+        entities = {}
+        for row in cursor.fetchall():
+            entity_type = row[0]
+            if entity_type not in entities:
+                entities[entity_type] = []
+            entities[entity_type].append(row[1])
+        
+        conn.close()
+        return entities
     
     def _save_narrative(self, narrative: str):
         """Save narrative to file"""
