@@ -1,16 +1,10 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """
 Enhanced Document Loader with Metadata Extraction
 Handles all document types for litigation intelligence
 """
 
 from pathlib import Path
-from dotenv import load_dotenv
-import os
-
-env_path = Path(__file__).parent / '.env'
-load_dotenv(dotenv_path=env_path, override=True)
-
 from typing import Dict, List, Optional, Tuple, Any
 from datetime import datetime
 import hashlib

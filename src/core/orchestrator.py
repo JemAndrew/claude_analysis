@@ -20,6 +20,7 @@ from api.batch_manager import BatchManager
 from prompts.autonomous import AutonomousPrompts
 from prompts.recursive import RecursivePrompts
 from prompts.synthesis import SynthesisPrompts
+from utils.document_loader import DocumentLoader
 
 
 class LitigationOrchestrator:
@@ -483,32 +484,29 @@ class LitigationOrchestrator:
         return False
     
     def _load_documents(self, directory: Path) -> List[Dict]:
-        """Load documents from directory"""
+        """Load documents from directory using DocumentLoader"""
         
-        documents = []
+        loader = DocumentLoader(self.config)
         
-        if not directory.exists():
-            print(f"  Warning: Directory {directory} does not exist")
-            return documents
+        # Load all supported document types (PDFs, DOCX, TXT, etc.)
+        documents = loader.load_directory(
+            directory=directory,
+            doc_types=['.pdf', '.txt', '.docx', '.doc', '.json', '.html', '.md']
+        )
         
-        # Load all text files
-        for file_path in sorted(directory.glob("**/*.txt")):
-            try:
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    content = f.read()
-                    
-                documents.append({
-                    'id': hashlib.md5(str(file_path).encode()).hexdigest()[:8].upper(),
-                    'filename': file_path.name,
-                    'path': str(file_path),
-                    'content': content,
-                    'metadata': {
-                        'size': len(content),
-                        'modified': datetime.fromtimestamp(file_path.stat().st_mtime).isoformat()
-                    }
-                })
-            except Exception as e:
-                print(f"  Error loading {file_path}: {e}")
+        if not documents:
+            print(f"  Warning: No documents loaded from {directory}")
+        else:
+            print(f"  Loaded {len(documents)} documents from {directory}")
+            
+            # Show breakdown by type
+            by_type = {}
+            for doc in documents:
+                ext = doc['metadata'].get('extension', 'unknown')
+                by_type[ext] = by_type.get(ext, 0) + 1
+            
+            for ext, count in by_type.items():
+                print(f"    - {ext}: {count} documents")
         
         return documents
     
