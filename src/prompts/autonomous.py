@@ -17,12 +17,159 @@ class AutonomousPrompts:
     def __init__(self, config):
         self.config = config
     
+    def knowledge_synthesis_prompt(self,
+                                  legal_knowledge: List[Dict],
+                                  case_context: List[Dict],
+                                  existing_knowledge: str) -> str:
+        """
+        Phase 0: Synthesise legal knowledge ONLY
+        Build comprehensive understanding of legal framework
+        NO case analysis yet - pure legal learning
+        """
+        
+        prompt = f"""<mission>
+You're building complete legal knowledge for Lismore v Process Holdings arbitration.
+Master the legal weapons. Understand the battlefield. Prepare for war.
+</mission>
+
+<critical_security_note>
+YOU HAVE NO ACCESS TO THE INTERNET OR WEB SEARCH.
+Work ONLY with the documents provided below.
+Your knowledge is built EXCLUSIVELY from these documents.
+</critical_security_note>
+
+<approach>
+As you read legal documents, you're:
+1. Learning the legal weapons available (statutes, precedents, principles)
+2. Understanding applicable legal frameworks
+3. Identifying how to establish liability
+4. Mapping out damages frameworks
+5. Predicting their defence strategy
+6. Building counter-strategies
+</approach>
+
+{existing_knowledge}
+
+<legal_knowledge_documents>
+LEGAL FRAMEWORK DOCUMENTS (UK Law, Arbitration Principles):
+{self._format_documents(legal_knowledge[:30], doc_type="LEGAL")}
+</legal_knowledge_documents>
+
+<synthesis_requirements>
+Build comprehensive legal understanding that includes:
+
+LEGAL ARSENAL:
+- What laws/precedents can we weaponise?
+- What duties did Process Holdings breach?
+- What damages can we claim?
+- What defences must we anticipate?
+- What procedural advantages exist?
+
+BURDEN OF PROOF:
+- What must we establish?
+- What standard applies?
+- What evidence types are needed?
+- What presumptions help us?
+
+STRATEGIC LEGAL FRAMEWORK:
+- What's our strongest legal angle?
+- What are their weakest legal positions?
+- What legal principles favour Lismore?
+- What case law destroys their arguments?
+
+Mark critical insights:
+[STRATEGIC] - Strategic insight for litigation
+[WEAPON] - Legal principle we can use offensively
+[DEFENCE-KILLER] - Principle that destroys their defences
+[EVIDENCE-NEEDED] - Critical evidence type required
+</synthesis_requirements>
+
+<instruction>
+Absorb everything. Make connections. Think strategically.
+Show your reasoning. Mark critical insights.
+Build the legal framework that wins this case.
+
+Remember: We represent LISMORE. Master the law to strengthen our position.
+</instruction>"""
+        
+        return prompt
+    
+    def case_understanding_prompt(self,
+                                 case_documents: List[Dict],
+                                 legal_framework: str,
+                                 doc_count: int) -> str:
+        """
+        Phase 1: Complete case understanding (NEW - added for simplified system)
+        Claude reads ALL case documents for first time
+        Builds complete picture, marks everything interesting
+        """
+        
+        prompt = f"""<legal_framework>
+{legal_framework[:10000]}
+</legal_framework>
+
+<case_understanding_mission>
+You are reading {doc_count} case documents for the FIRST time.
+
+Your goal: Build COMPLETE understanding of Lismore v Process Holdings.
+
+WHAT TO UNDERSTAND:
+- What happened? (full chronology)
+- Who are the players? (all entities and their roles)
+- What's the timeline? (key events and dates)
+- Where are they vulnerable? (weaknesses in their case)
+- What evidence exists? (documents, testimony, facts)
+- What's missing? (gaps, inconsistencies, contradictions)
+- What patterns emerge? (suspicious behaviour, systematic issues)
+
+MARK EVERYTHING INTERESTING:
+- [NUCLEAR] - Case-ending discoveries (smoking gun evidence, fatal contradictions)
+- [CRITICAL] - Major strategic advantages (strong liability evidence, damages proof)
+- [INVESTIGATE] - Threads needing deep investigation (suspicious transactions, timeline gaps)
+- [SUSPICIOUS] - Anomalies worth exploring (unusual patterns, odd behaviours)
+- [PATTERN] - Recurring behaviours or themes (systematic concealment, consistent lies)
+- [CONTRADICTION] - Direct contradictions between statements
+- [MISSING] - Evidence that should exist but doesn't
+- [FINANCIAL] - Money trails or valuation issues
+</case_understanding_mission>
+
+<critical_security_note>
+NO WEB SEARCH AVAILABLE.
+Work ONLY with documents provided below.
+</critical_security_note>
+
+<all_case_documents count="{doc_count}">
+{self._format_documents(case_documents[:50])}
+</all_case_documents>
+
+<instruction>
+Read EVERYTHING thoroughly.
+Think freely about what matters.
+Mark ANYTHING worth investigating deeper.
+
+Structure your understanding:
+1. **CASE OVERVIEW**: What happened and why we'll win
+2. **KEY PLAYERS**: Who they are and their roles
+3. **TIMELINE**: Critical events in chronological order
+4. **THEIR VULNERABILITIES**: Where their case is weak
+5. **OUR STRENGTHS**: Evidence and arguments in our favour
+6. **GAPS & CONTRADICTIONS**: Inconsistencies to exploit
+7. **INVESTIGATION PRIORITIES**: What needs deeper analysis
+
+This is your foundation for destroying Process Holdings.
+Build the complete picture.
+
+Remember: We represent LISMORE. Every analysis strengthens our position.
+</instruction>"""
+        
+        return prompt
+    
     def investigation_prompt(self, 
                            documents: List[Dict],
                            context: Dict[str, Any],
                            phase: str) -> str:
         """
-        Generate completely open investigation prompt
+        Phase 2+: Completely open investigation prompt
         Maximum freedom for pattern recognition and discovery
         """
         
@@ -114,100 +261,13 @@ Remember: We represent LISMORE. Every analysis should identify how to strengthen
         
         return prompt
     
-    def knowledge_synthesis_prompt(self,
-                                  legal_knowledge: List[Dict],
-                                  case_context: List[Dict],
-                                  existing_knowledge: str) -> str:
-        """
-        Prompt for synthesising legal knowledge with case context
-        Builds comprehensive understanding in single phase
-        """
-        
-        prompt = f"""<mission>
-You're building a complete mental model for litigation.
-Absorb EVERYTHING. Make connections. See the battlefield.
-</mission>
-
-<critical_security_note>
-YOU HAVE NO ACCESS TO THE INTERNET OR WEB SEARCH.
-Work ONLY with the documents provided below.
-Your knowledge is built EXCLUSIVELY from these documents.
-</critical_security_note>
-
-<approach>
-As you read, you're simultaneously:
-1. Learning the legal weapons available (statutes, precedents, principles)
-2. Understanding the case landscape (players, timeline, relationships)
-3. Identifying vulnerabilities in Process Holdings' position
-4. Spotting opportunities for Lismore's attack
-5. Predicting their defence strategy
-6. Building counter-strategies
-</approach>
-
-{existing_knowledge}
-
-<legal_knowledge_documents>
-LEGAL FRAMEWORK DOCUMENTS (UK Law, Arbitration Principles):
-{self._format_documents(legal_knowledge[:30], doc_type="LEGAL")}
-</legal_knowledge_documents>
-
-<case_context_documents>
-CASE CONTEXT DOCUMENTS (Lismore v Process Holdings):
-{self._format_documents(case_context[:30], doc_type="CASE")}
-</case_context_documents>
-
-<synthesis_requirements>
-Build a comprehensive understanding that includes:
-
-LEGAL ARSENAL:
-- What laws/precedents can we weaponise?
-- What duties did Process Holdings breach?
-- What damages can we claim?
-- What defences must we anticipate?
-- What procedural advantages exist?
-
-CASE DYNAMICS:
-- Who are the key players and their motivations?
-- What's the real story of what happened?
-- Where are Process Holdings vulnerable?
-- What are they hiding?
-- What's Lismore's strongest position?
-
-CONNECTIONS:
-- How does the legal framework apply to these specific facts?
-- What patterns emerge between law and conduct?
-- Where does their behaviour violate legal principles?
-- What evidence would be devastating given the law?
-
-STRATEGIC SYNTHESIS:
-- What's our strongest line of attack?
-- What's their biggest weakness?
-- What evidence should we hunt for?
-- What questions destroy their case?
-
-Mark critical insights:
-[STRATEGIC] - Strategic insight for litigation
-[VULNERABILITY] - Their weakness we can exploit
-[WEAPON] - Legal principle we can use offensively
-[EVIDENCE-NEEDED] - Critical evidence to locate
-</synthesis_requirements>
-
-<instruction>
-Absorb everything. Make connections. Think strategically.
-Show your reasoning. Mark critical insights.
-Build the mental model that wins this case.
-
-Remember: We represent LISMORE. Identify how to strengthen Lismore's position.
-</instruction>"""
-        
-        return prompt
-    
     def pattern_discovery_prompt(self,
                                 documents: List[Dict],
                                 known_patterns: Dict,
                                 context: Dict) -> str:
         """
-        Prompt for aggressive pattern discovery across documents
+        Aggressive pattern discovery across documents
+        Can be called autonomously during investigations
         """
         
         prompt = f"""<pattern_recognition_mission>
@@ -305,7 +365,8 @@ Think laterally. The winning pattern might be subtle.
                                   known_entities: Dict,
                                   context: Dict) -> str:
         """
-        Prompt for mapping entity relationships and hidden connections
+        Map entity relationships and hidden connections
+        Can be called autonomously during investigations
         """
         
         prompt = f"""<entity_investigation>
@@ -392,102 +453,6 @@ Find them.
         
         return prompt
     
-    def document_organisation_prompt(self,
-                                    all_documents: List[Dict],
-                                    context: str) -> str:
-        """
-        Prompt for Claude to autonomously organise documents
-        """
-        
-        prompt = f"""<document_organisation_mission>
-You have {len(all_documents)} case documents to organise strategically.
-
-Your task: Create an organisation structure that maximises our ability to:
-1. Find devastating evidence against Process Holdings
-2. Identify missing documents they withheld
-3. Spot contradictions and lies
-4. Build Lismore's strongest case
-5. Expose their vulnerabilities
-</document_organisation_mission>
-
-<critical_security_note>
-NO WEB ACCESS.
-Work ONLY with the documents listed below.
-</critical_security_note>
-
-{context}
-
-<documents_overview>
-TOTAL DOCUMENTS: {len(all_documents)}
-
-SAMPLE DOCUMENTS (First 100):
-{self._format_document_list(all_documents[:100])}
-
-... and {max(0, len(all_documents) - 100)} more documents
-</documents_overview>
-
-<organisation_instructions>
-Create categories that make strategic sense. Consider:
-
-BY STRATEGIC VALUE:
-- Nuclear evidence (case-destroying for them)
-- Critical evidence (major advantage for us)
-- Important evidence (supporting arguments)
-- Background context
-
-BY DOCUMENT TYPE:
-- Contracts & agreements
-- Email communications
-- Financial records
-- Meeting minutes
-- Legal correspondence
-- Internal memos
-
-BY TIME PERIOD:
-- Pre-dispute
-- Dispute emergence
-- Arbitration phase
-- Post-award
-- Current litigation
-
-BY ENTITY:
-- Lismore documents
-- Process Holdings documents
-- VR Capital documents
-- Third-party documents
-
-BY EVIDENTIARY VALUE:
-- Smoking guns
-- Admissions against interest
-- Contradictions
-- Withholding evidence
-- Supporting documents
-
-BY INVESTIGATION PRIORITY:
-- Requires immediate deep dive
-- Standard analysis needed
-- Background review
-
-You have COMPLETE FREEDOM to create categories.
-Create as many as needed (up to 25).
-Documents can be in multiple categories.
-
-For each category, provide:
-CATEGORY: [Name]
-DESCRIPTION: [Why this category matters for Lismore]
-PRIORITY: [1-10, where 10 is most critical]
-CRITERIA: [What belongs here]
-STRATEGIC VALUE: [How this helps win]
-DOCUMENTS: [List document IDs]
-</organisation_instructions>
-
-<output_format>
-Provide your organisation structure clearly.
-Think strategically about what organisation would best reveal their deception.
-</output_format>"""
-        
-        return prompt
-    
     # ==================== FORMATTING HELPERS ====================
     
     def _format_documents(self, documents: List[Dict], doc_type: str = "GENERAL") -> str:
@@ -508,19 +473,6 @@ Content preview:
 {content}
 ---
 """)
-        
-        return "\n".join(formatted)
-    
-    def _format_document_list(self, documents: List[Dict]) -> str:
-        """Format document list (names only)"""
-        if not documents:
-            return "No documents"
-        
-        formatted = []
-        for i, doc in enumerate(documents):
-            filename = doc.get('filename', f'Document_{i}')
-            size = len(doc.get('content', ''))
-            formatted.append(f"[DOC_{i:04d}] {filename} ({size:,} chars)")
         
         return "\n".join(formatted)
     

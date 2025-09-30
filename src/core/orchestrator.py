@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Main Orchestration Engine for Litigation Intelligence
-Controls dynamic phase execution and investigation spawning
+Simplified for maximum Claude autonomy - 3-phase system
 British English throughout - Lismore v Process Holdings
 """
 
@@ -15,18 +15,17 @@ import hashlib
 from core.config import config
 from core.phase_executor import PhaseExecutor
 from intelligence.knowledge_graph import KnowledgeGraph
-from intelligence.memory_manager import MemoryManager
 from api.client import ClaudeClient
 from api.context_manager import ContextManager
 from api.batch_manager import BatchManager
 from prompts.autonomous import AutonomousPrompts
 from prompts.recursive import RecursivePrompts
-from prompts.synthesis import SynthesisPrompts
-from utils.document_processor import DocumentLoader
+from prompts.simplified import SimplifiedPrompts
+from utils.document_loader import DocumentLoader
 
 
 class LitigationOrchestrator:
-    """Main system orchestrator for maximum Claude utilisation"""
+    """Main system orchestrator for autonomous Claude investigation"""
     
     def __init__(self, config_override: Dict = None):
         """Initialise orchestrator with all components"""
@@ -40,7 +39,6 @@ class LitigationOrchestrator:
         
         # Initialise core components
         self.knowledge_graph = KnowledgeGraph(config)
-        self.memory_manager = MemoryManager(config)  # NEW
         self.api_client = ClaudeClient(config)
         self.context_manager = ContextManager(config)
         self.batch_manager = BatchManager(config)
@@ -49,10 +47,7 @@ class LitigationOrchestrator:
         # Initialise prompt systems
         self.autonomous_prompts = AutonomousPrompts(config)
         self.recursive_prompts = RecursivePrompts(config)
-        self.synthesis_prompts = SynthesisPrompts(config)
-        
-        # Document loader
-        self.document_loader = DocumentLoader()
+        self.simplified_prompts = SimplifiedPrompts(config)
         
         # Track system state
         self.state = {
@@ -66,110 +61,127 @@ class LitigationOrchestrator:
         
         # Load previous state if exists
         self._load_state()
-        
-        print("✅ Litigation Intelligence System initialised")
-        print(f"   Memory Manager: {self.memory_manager.expertise_level}")
-        print(f"   Previous phases completed: {len(self.state['phases_completed'])}")
     
     def execute_full_analysis(self, 
-                             start_phase: int = 0,
+                             start_phase: str = '0',
                              max_iterations: int = 10) -> Dict:
         """
-        Execute complete analysis with dynamic phase progression
+        Execute complete analysis with autonomous investigation
+        Phase 0: Legal knowledge
+        Phase 1: Case understanding
+        Phase 2+: Free investigation until convergence
         """
         
-        print("="*60)
-        print("LITIGATION INTELLIGENCE SYSTEM - FULL ANALYSIS")
-        print(f"Case: Lismore Capital v Process Holdings")
+        print("=" * 60)
+        print("LITIGATION INTELLIGENCE SYSTEM - AUTONOMOUS MODE")
+        print(f"Client: Lismore Capital v Process Holdings")
         print(f"Model: {self.config.models['primary']}")
         print(f"Starting at: {datetime.now().isoformat()}")
-        print("="*60)
+        print("=" * 60)
         
         results = {
             'phases': {},
             'investigations': [],
-            'convergence': {},
-            'final_synthesis': {}
+            'synthesis': {},
+            'metadata': {
+                'start_time': datetime.now().isoformat(),
+                'model': self.config.models['primary']
+            }
         }
         
-        # Execute Phase 0: Knowledge Foundation (if starting from beginning)
-        if start_phase == 0:
-            print("\n" + "="*60)
-            print("PHASE 0: KNOWLEDGE FOUNDATION")
-            print("="*60)
-            results['phases']['0'] = self._execute_knowledge_phase()
-            self.state['phases_completed'].append('0')
-            self._save_state()
-        
-        # Execute Phases 1-6
-        for phase_num in range(max(1, start_phase), 7):
-            print("\n" + "="*60)
-            print(f"PHASE {phase_num}: {self._get_phase_name(phase_num)}")
-            print("="*60)
+        try:
+            # Phase 0: Legal Knowledge
+            print("\n" + "=" * 60)
+            print("PHASE 0: LEGAL KNOWLEDGE MASTERY")
+            print("=" * 60)
             
-            # Execute phase
-            phase_results = self.execute_phase(str(phase_num))
-            results['phases'][str(phase_num)] = phase_results
+            phase_0_results = self.execute_phase('0')
+            results['phases']['0'] = phase_0_results
             
-            # Update memory with complete results
-            self.memory_manager.update_after_phase(phase_num, phase_results)
+            # Phase 1: Case Understanding
+            print("\n" + "=" * 60)
+            print("PHASE 1: COMPLETE CASE UNDERSTANDING")
+            print("=" * 60)
             
-            # Check if we should spawn investigations
-            self._check_and_spawn_investigations(phase_results)
+            phase_1_results = self.execute_phase('1')
+            results['phases']['1'] = phase_1_results
             
-            print(f"\n✅ Phase {phase_num} complete")
-            print(f"   Expertise level: {self.memory_manager.expertise_level}")
-            print(f"   New insights: {self.memory_manager.count_insights(phase_results)}")
-        
-        # Generate final synthesis
-        print("\n" + "="*60)
-        print("GENERATING FINAL SYNTHESIS")
-        print("="*60)
-        results['final_synthesis'] = self._generate_final_synthesis()
-        
-        # Save final results
-        self._save_final_results(results)
-        
-        print("\n" + "="*60)
-        print("✅ ANALYSIS COMPLETE")
-        print("="*60)
-        print(f"Total phases: {len(results['phases'])}")
-        print(f"Total investigations: {len(results['investigations'])}")
-        print(f"Final expertise: {self.memory_manager.expertise_level}")
-        
-        return results
+            # Phase 2+: Free Investigation Iterations
+            converged = False
+            iteration = 2
+            
+            while not converged and iteration < (2 + max_iterations):
+                print("\n" + "=" * 60)
+                print(f"PHASE {iteration}: FREE INVESTIGATION (Iteration {iteration - 1})")
+                print("=" * 60)
+                
+                phase_results = self.execute_phase(str(iteration))
+                results['phases'][str(iteration)] = phase_results
+                
+                # Check convergence
+                converged = phase_results.get('converged', False)
+                
+                if converged:
+                    print("\n✅ INVESTIGATION CONVERGED - No new critical discoveries")
+                    break
+                
+                iteration += 1
+            
+            # Final synthesis
+            print("\n" + "=" * 60)
+            print("FINAL SYNTHESIS")
+            print("=" * 60)
+            
+            synthesis = self._execute_synthesis(results)
+            results['synthesis'] = synthesis
+            
+            # Save complete results
+            self._save_results(results)
+            
+            # Print summary
+            self._print_summary(results)
+            
+            return results
+            
+        except Exception as e:
+            print(f"\n❌ ERROR: {e}")
+            import traceback
+            traceback.print_exc()
+            
+            # Save partial results
+            results['metadata']['error'] = str(e)
+            results['metadata']['error_time'] = datetime.now().isoformat()
+            self._save_results(results)
+            
+            raise
     
     def execute_phase(self, phase: str) -> Dict:
         """
-        Execute a single phase with memory context
+        Execute single phase
+        Delegates to phase_executor for actual work
         """
         
         self.state['current_phase'] = phase
         
-        print(f"\n🔍 Preparing Phase {phase}...")
+        print(f"\n📍 Executing Phase {phase}")
         
         # Backup knowledge graph before phase
-        print("  • Creating backup...")
         self.knowledge_graph.backup_before_phase(phase)
         
-        # Get complete context from memory manager
-        print("  • Loading complete context from memory...")
-        context = self.memory_manager.build_context_for_phase(int(phase))
+        # Get context from knowledge graph
+        context = self.knowledge_graph.get_context_for_phase(phase)
         
-        # Execute phase with full context
-        print(f"  • Executing phase with {self.memory_manager.expertise_level} expertise...")
+        # Execute phase via phase_executor
         results = self.phase_executor.execute(phase, context)
         
-        # Update knowledge graph with findings
-        print("  • Updating knowledge graph...")
-        self._update_knowledge_from_results(results, phase)
+        # Update knowledge graph with findings (if phase_executor hasn't already)
+        # phase_executor now handles this internally
         
         # Mark phase complete
         if phase not in self.state['phases_completed']:
             self.state['phases_completed'].append(phase)
         
         self._save_state()
-        
         return results
     
     def spawn_investigation(self, 
@@ -181,253 +193,204 @@ class LitigationOrchestrator:
         Returns investigation ID
         """
         
-        investigation_id = self.knowledge_graph._spawn_investigation(
+        investigation_id = self.knowledge_graph.spawn_investigation(
             trigger_type=trigger_type,
             trigger_data=trigger_data,
             priority=priority
         )
         
         self.state['active_investigations'].append(investigation_id)
-        print(f"  → Spawned investigation {investigation_id[:8]} (Priority: {priority:.1f})")
+        print(f"  → Spawned investigation {investigation_id} (Priority: {priority})")
         
         return investigation_id
     
-    def _execute_knowledge_phase(self) -> Dict:
-        """Execute Phase 0: Combined knowledge absorption"""
+    def _execute_synthesis(self, results: Dict) -> Dict:
+        """
+        Execute final strategic synthesis
+        Pulls everything together into actionable report
+        """
         
-        # Load legal and case documents
-        print("  • Loading legal knowledge documents...")
-        legal_docs = self._load_documents(self.config.legal_knowledge_dir)
+        print("  Synthesising all findings...")
         
-        print("  • Loading case documents...")
-        case_docs = self._load_documents(self.config.case_documents_dir)
+        # Get all findings from knowledge graph
+        all_findings = self.knowledge_graph.get_all_findings()
         
-        print(f"  • Total documents: {len(legal_docs)} legal + {len(case_docs)} case")
-        
-        # Get context from memory manager
-        context = self.memory_manager.build_context_for_phase(0)
-        
-        # Build synthesis prompt
-        prompt = self.autonomous_prompts.knowledge_synthesis_prompt(
-            legal_knowledge=legal_docs,
-            case_context=case_docs,
-            existing_knowledge=context
-        )
-        
-        # Call Claude with maximum context
-        print("  • Analysing with Claude Opus 4.1...")
-        response, metadata = self.api_client.call_claude(
-            prompt=prompt,
-            task_type='knowledge_synthesis',
-            phase='0'
-        )
-        
-        # Extract and store knowledge
-        knowledge_extracted = self._extract_knowledge_from_response(response, '0')
-        
-        # Save results
-        results = {
-            'phase': '0',
-            'documents_processed': len(legal_docs) + len(case_docs),
-            'legal_documents': len(legal_docs),
-            'case_documents': len(case_docs),
-            'knowledge_extracted': knowledge_extracted,
-            'synthesis': response[:5000],  # First 5000 chars
-            'metadata': metadata,
-            'timestamp': datetime.now().isoformat()
-        }
-        
-        self._save_phase_output('0', results)
-        
-        return results
-    
-    def _check_and_spawn_investigations(self, phase_results: Dict):
-        """Check phase results for investigation triggers"""
-        
-        discoveries = phase_results.get('discoveries', [])
-        
-        for discovery in discoveries:
-            if self.config.should_investigate(discovery):
-                priority = self.config.calculate_priority(discovery)
-                
-                if priority >= 7.0:  # Only spawn high-priority investigations
-                    self.spawn_investigation(
-                        trigger_type=discovery.get('type', 'general'),
-                        trigger_data=discovery,
-                        priority=priority
-                    )
-    
-    def _update_knowledge_from_results(self, results: Dict, phase: str):
-        """Update knowledge graph with phase results"""
-        
-        # Add entities
-        if 'entities' in results:
-            for entity_data in results['entities']:
-                # Create Entity object and add to knowledge graph
-                pass  # Implementation depends on Entity structure
-        
-        # Add contradictions
-        if 'contradictions' in results:
-            for contradiction in results['contradictions']:
-                # Add to knowledge graph
-                pass
-        
-        # Add patterns
-        if 'patterns' in results:
-            for pattern in results['patterns']:
-                # Add to knowledge graph
-                pass
-        
-        # Log discoveries
-        if 'discoveries' in results:
-            for discovery in results['discoveries']:
-                self.knowledge_graph.log_discovery(
-                    discovery_type=discovery.get('type', 'general'),
-                    content=str(discovery),
-                    importance=discovery.get('importance', 'MEDIUM'),
-                    phase=phase
-                )
-    
-    def _generate_final_synthesis(self) -> Dict:
-        """Generate final synthesis of all intelligence"""
-        
-        # Get all phase results from memory
-        all_phase_analyses = {}
-        for phase_id, phase_memory in self.memory_manager.phase_memories.items():
-            all_phase_analyses[phase_id] = phase_memory.get('complete_results', {})
-        
-        # Get investigation results
-        investigations = self.memory_manager.investigation_history
-        
-        # Get knowledge graph export
-        knowledge_export = self.knowledge_graph.export_for_report()
+        # Count total investigations
+        investigation_count = len(results['phases']) - 2  # Subtract Phase 0 and 1
         
         # Build synthesis prompt
-        prompt = self.synthesis_prompts.strategic_synthesis_prompt(
-            phase_analyses=all_phase_analyses,
-            investigations=investigations,
-            knowledge_graph_export=knowledge_export
+        prompt = self.simplified_prompts.final_synthesis_prompt(
+            all_findings=all_findings,
+            investigation_count=investigation_count
         )
         
-        # Call Claude for final synthesis
-        print("  • Generating strategic synthesis with Opus 4.1...")
+        # Call Claude for synthesis
+        print("  🤖 Calling Claude for final synthesis...")
         response, metadata = self.api_client.call_claude(
             prompt=prompt,
+            model=self.config.models['primary'],
             task_type='synthesis',
             phase='final'
         )
         
-        synthesis = {
-            'summary': response[:2000],
-            'full_synthesis': response,
+        synthesis_results = {
+            'narrative': response,
             'metadata': metadata,
-            'intelligence_stats': self.memory_manager.generate_complete_intelligence_summary(),
-            'timestamp': datetime.now().isoformat()
+            'timestamp': datetime.now().isoformat(),
+            'findings_count': len(all_findings.get('critical_discoveries', []))
         }
         
-        return synthesis
+        # Save synthesis
+        self._save_synthesis(synthesis_results)
+        
+        print(f"  ✅ Synthesis complete")
+        print(f"     Tokens: {metadata.get('input_tokens', 0):,} in / {metadata.get('output_tokens', 0):,} out")
+        
+        return synthesis_results
     
     def _load_documents(self, directory: Path) -> List[Dict]:
-        """Load documents from directory"""
-        
-        documents = []
+        """Load documents from directory using document loader"""
         
         if not directory.exists():
-            print(f"  ⚠️  Directory not found: {directory}")
-            return documents
+            print(f"  ⚠️ Directory not found: {directory}")
+            return []
         
-        # Load all PDF, TXT, DOCX files
-        for file_path in directory.glob('**/*'):
-            if file_path.suffix.lower() in ['.pdf', '.txt', '.docx', '.doc']:
-                try:
-                    doc = self.document_loader.load_document(str(file_path))
-                    documents.append(doc)
-                except Exception as e:
-                    print(f"  ⚠️  Failed to load {file_path.name}: {e}")
-        
-        return documents
-    
-    def _extract_knowledge_from_response(self, response: str, phase: str) -> Dict:
-        """Extract structured knowledge from Claude's response"""
-        
-        # Simple extraction - looks for marked sections
-        knowledge = {
-            'legal_principles': [],
-            'case_facts': [],
-            'strategic_insights': [],
-            'entities_identified': [],
-            'key_documents': []
-        }
-        
-        # Extract [STRATEGIC] markers
-        import re
-        strategic = re.findall(r'\[STRATEGIC\](.*?)(?=\[|\n\n|$)', response, re.DOTALL)
-        knowledge['strategic_insights'] = [s.strip() for s in strategic]
-        
-        # Extract [VULNERABILITY] markers
-        vulnerabilities = re.findall(r'\[VULNERABILITY\](.*?)(?=\[|\n\n|$)', response, re.DOTALL)
-        knowledge['vulnerabilities'] = [v.strip() for v in vulnerabilities]
-        
-        # Extract [WEAPON] markers
-        weapons = re.findall(r'\[WEAPON\](.*?)(?=\[|\n\n|$)', response, re.DOTALL)
-        knowledge['legal_weapons'] = [w.strip() for w in weapons]
-        
-        return knowledge
-    
-    def _get_phase_name(self, phase_num: int) -> str:
-        """Get human-readable phase name"""
-        phase_names = {
-            0: "KNOWLEDGE FOUNDATION",
-            1: "DOCUMENT ORGANISATION",
-            2: "FOUNDATION INTELLIGENCE",
-            3: "PATTERN RECOGNITION & DEEP ANALYSIS",
-            4: "ADVERSARIAL INTELLIGENCE",
-            5: "NOVEL THEORIES & CREATIVE STRATEGY",
-            6: "SYNTHESIS & WEAPONISATION"
-        }
-        return phase_names.get(phase_num, f"PHASE {phase_num}")
+        loader = DocumentLoader(self.config)
+        return loader.load_directory(directory)
     
     def _load_state(self):
         """Load previous state if exists"""
-        state_file = self.config.knowledge_dir / "orchestrator_state.json"
+        
+        state_file = self.config.output_dir / 'orchestrator_state.json'
         if state_file.exists():
-            with open(state_file, 'r', encoding='utf-8') as f:
-                self.state = json.load(f)
+            try:
+                with open(state_file, 'r', encoding='utf-8') as f:
+                    saved_state = json.load(f)
+                    # Only load certain fields
+                    self.state['phases_completed'] = saved_state.get('phases_completed', [])
+                    print(f"  ℹ️ Loaded previous state: {len(self.state['phases_completed'])} phases completed")
+            except Exception as e:
+                print(f"  ⚠️ Could not load state: {e}")
     
     def _save_state(self):
         """Save current state"""
-        state_file = self.config.knowledge_dir / "orchestrator_state.json"
-        with open(state_file, 'w', encoding='utf-8') as f:
-            json.dump(self.state, f, indent=2, ensure_ascii=False)
-    
-    def _save_phase_output(self, phase: str, results: Dict):
-        """Save phase output to file"""
-        output_file = self.config.analysis_dir / f"phase_{phase}_results.json"
-        with open(output_file, 'w', encoding='utf-8') as f:
-            json.dump(results, f, indent=2, ensure_ascii=False)
         
-        print(f"  • Results saved to: {output_file}")
+        state_file = self.config.output_dir / 'orchestrator_state.json'
+        try:
+            with open(state_file, 'w', encoding='utf-8') as f:
+                json.dump(self.state, f, indent=2, ensure_ascii=False)
+        except Exception as e:
+            print(f"  ⚠️ Could not save state: {e}")
     
-    def _save_final_results(self, results: Dict):
-        """Save final analysis results"""
-        output_file = self.config.output_dir / f"final_analysis_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
-        with open(output_file, 'w', encoding='utf-8') as f:
-            json.dump(results, f, indent=2, ensure_ascii=False)
+    def _save_synthesis(self, synthesis: Dict):
+        """Save synthesis results"""
         
-        print(f"\n📄 Final results saved to: {output_file}")
+        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        synthesis_file = self.config.reports_dir / f"synthesis_{timestamp}.md"
+        
+        try:
+            with open(synthesis_file, 'w', encoding='utf-8') as f:
+                f.write("# Strategic Synthesis - Lismore v Process Holdings\n\n")
+                f.write(f"*Generated: {synthesis['timestamp']}*\n\n")
+                f.write("---\n\n")
+                f.write(synthesis['narrative'])
+            
+            print(f"  💾 Synthesis saved: {synthesis_file.name}")
+        except Exception as e:
+            print(f"  ⚠️ Could not save synthesis: {e}")
     
-    def get_status_report(self) -> Dict:
+    def _save_results(self, results: Dict):
+        """Save complete results"""
+        
+        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        results_file = self.config.output_dir / f"complete_results_{timestamp}.json"
+        
+        # Create serialisable version (remove large content)
+        serialisable_results = {
+            'phases': {},
+            'investigations_count': len(results.get('investigations', [])),
+            'metadata': results.get('metadata', {}),
+            'synthesis_preview': results.get('synthesis', {}).get('narrative', '')[:1000]
+        }
+        
+        # Add phase summaries
+        for phase_key, phase_data in results.get('phases', {}).items():
+            serialisable_results['phases'][phase_key] = {
+                'documents_processed': phase_data.get('documents_processed', 0),
+                'discoveries': len(phase_data.get('discoveries', [])),
+                'converged': phase_data.get('converged', False),
+                'timestamp': phase_data.get('timestamp', '')
+            }
+        
+        try:
+            with open(results_file, 'w', encoding='utf-8') as f:
+                json.dump(serialisable_results, f, indent=2, ensure_ascii=False)
+            
+            print(f"\n💾 Results saved: {results_file.name}")
+        except Exception as e:
+            print(f"  ⚠️ Could not save results: {e}")
+    
+    def _print_summary(self, results: Dict):
+        """Print analysis summary"""
+        
+        print("\n" + "=" * 60)
+        print("ANALYSIS COMPLETE")
+        print("=" * 60)
+        
+        # Count phases
+        phases_executed = len(results['phases'])
+        print(f"\n📊 Phases executed: {phases_executed}")
+        
+        # Count discoveries
+        total_discoveries = 0
+        for phase_data in results['phases'].values():
+            total_discoveries += len(phase_data.get('discoveries', []))
+        
+        print(f"🔍 Total discoveries: {total_discoveries}")
+        
+        # Get statistics from knowledge graph
+        stats = self.knowledge_graph.get_statistics()
+        print(f"\n📈 Knowledge Graph Statistics:")
+        print(f"   - Critical discoveries: {stats.get('critical_discoveries', 0)}")
+        print(f"   - Patterns identified: {stats.get('patterns', 0)}")
+        print(f"   - Contradictions found: {stats.get('contradictions', 0)}")
+        print(f"   - Entities mapped: {stats.get('entities', 0)}")
+        
+        # API usage
+        api_stats = self.api_client.get_usage_statistics()
+        print(f"\n💰 API Usage:")
+        print(f"   - Total calls: {api_stats['summary']['total_calls']}")
+        print(f"   - Input tokens: {api_stats['summary']['total_input_tokens']:,}")
+        print(f"   - Output tokens: {api_stats['summary']['total_output_tokens']:,}")
+        print(f"   - Estimated cost: ${api_stats['summary']['estimated_cost_usd']:.2f}")
+        
+        # Timing
+        start_time = datetime.fromisoformat(results['metadata']['start_time'])
+        end_time = datetime.now()
+        duration = end_time - start_time
+        
+        hours = int(duration.total_seconds() // 3600)
+        minutes = int((duration.total_seconds() % 3600) // 60)
+        
+        print(f"\n⏱️ Duration: {hours}h {minutes}m")
+        
+        # Output locations
+        print(f"\n📁 Outputs:")
+        print(f"   - Reports: {self.config.reports_dir}")
+        print(f"   - Knowledge: {self.config.knowledge_dir}")
+        print(f"   - Full results: {self.config.output_dir}")
+        
+        print("\n" + "=" * 60)
+        print("System ready for litigation deployment")
+        print("=" * 60 + "\n")
+    
+    def get_status(self) -> Dict:
         """Get current system status"""
+        
         return {
             'current_phase': self.state['current_phase'],
             'phases_completed': self.state['phases_completed'],
-            'expertise_level': self.memory_manager.expertise_level,
             'active_investigations': len(self.state['active_investigations']),
             'knowledge_graph_stats': self.knowledge_graph.get_statistics(),
-            'memory_stats': {
-                'documents_analysed': len(self.memory_manager.document_intelligence),
-                'entities_tracked': len(self.memory_manager.entity_intelligence),
-                'patterns_found': len(self.memory_manager.pattern_library),
-                'contradictions_found': len(self.memory_manager.contradiction_database)
-            }
+            'api_usage': self.api_client.get_usage_statistics()
         }
