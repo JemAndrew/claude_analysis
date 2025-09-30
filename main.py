@@ -1,349 +1,272 @@
 #!/usr/bin/env python3
 """
-Litigation Intelligence System - Main Entry Point
-Optimised for maximum Claude utilisation - Lismore v Process Holdings
+Main Entry Point for Litigation Intelligence System
+Staged execution: Phase 0 → Phase 1 → Phase 2-N
+British English throughout - Lismore v Process Holdings
 """
 
-import os
 import sys
-import argparse
-import json
 from pathlib import Path
-from datetime import datetime
-from typing import Optional
 
 # Add src to path
 sys.path.insert(0, str(Path(__file__).parent / 'src'))
 
-from core.config import config
+from dotenv import load_dotenv
+load_dotenv(override=True)
+
 from core.orchestrator import LitigationOrchestrator
-
-
-class LitigationIntelligence:
-    """Main entry point for litigation intelligence system"""
-    
-    def __init__(self, config_path: Optional[str] = None):
-        """Initialise system"""
-        
-        # Load custom config if provided
-        config_override = {}
-        if config_path and Path(config_path).exists():
-            with open(config_path, 'r') as f:
-                config_override = json.load(f)
-        
-        # Initialise orchestrator
-        self.orchestrator = LitigationOrchestrator(config_override)
-        
-        # Check API key
-        if not os.getenv('ANTHROPIC_API_KEY'):
-            raise ValueError("ANTHROPIC_API_KEY environment variable not set")
-    
-    def run_full_analysis(self):
-        """Execute complete analysis pipeline"""
-        
-        print("\n🎯 LITIGATION INTELLIGENCE SYSTEM")
-        print("📁 Case: Lismore Capital v Process Holdings")
-        print("🤖 Model: Claude Opus (Maximum Capability Mode)")
-        print("=" * 60)
-        
-        # Confirm execution
-        print("\nThis will:")
-        print("  • Process all legal knowledge and case context")
-        print("  • Analyse all disclosure documents")
-        print("  • Spawn investigations automatically")
-        print("  • Generate strategic reports")
-        print("  • Create war room dashboard")
-        print("\nEstimated time: 30-60 minutes")
-        print("Estimated cost: $50-150 (depending on document volume)")
-        
-        response = input("\nProceed? (y/n): ")
-        if response.lower() != 'y':
-            print("Cancelled")
-            return
-        
-        # Execute full analysis
-        results = self.orchestrator.execute_full_analysis()
-        
-        # Print final summary
-        self._print_final_summary(results)
-    
-    def run_single_phase(self, phase: str):
-        """Execute single phase"""
-        
-        print(f"\n🎯 Executing Phase {phase}")
-        print("=" * 60)
-        
-        # Execute phase
-        results = self.orchestrator.execute_single_phase(phase)
-        
-        print(f"\n✅ Phase {phase} complete")
-        print(f"Documents processed: {results.get('documents_processed', 0)}")
-        
-        return results
-    
-    def run_investigation(self, investigation_type: str, priority: float = 7.0):
-        """Spawn and execute specific investigation"""
-        
-        print(f"\n🔍 Spawning Investigation: {investigation_type}")
-        print("=" * 60)
-        
-        # Spawn investigation
-        investigation_id = self.orchestrator.spawn_investigation(
-            trigger_type=investigation_type,
-            trigger_data={'manual_trigger': True},
-            priority=priority
-        )
-        
-        print(f"Investigation ID: {investigation_id}")
-        print(f"Priority: {priority}")
-        
-        # Execute investigation
-        investigation = {
-            'id': investigation_id,
-            'type': investigation_type,
-            'priority': priority,
-            'data': {'manual_trigger': True}
-        }
-        
-        results = self.orchestrator._execute_investigation(investigation)
-        
-        print(f"\n✅ Investigation complete")
-        return results
-    
-    def generate_reports(self):
-        """Generate all strategic reports"""
-        
-        print("\n📊 Generating Strategic Reports")
-        print("=" * 60)
-        
-        # Get all results
-        results = {
-            'phases': {},
-            'investigations': []
-        }
-        
-        # Load completed phases
-        for phase in self.orchestrator.state.get('phases_completed', []):
-            phase_dir = config.analysis_dir / f"phase_{phase}"
-            if phase_dir.exists():
-                synthesis_file = phase_dir / "synthesis.md"
-                if synthesis_file.exists():
-                    with open(synthesis_file, 'r') as f:
-                        results['phases'][phase] = {'synthesis': f.read()}
-        
-        # Generate war room dashboard
-        dashboard = self.orchestrator._generate_war_room_dashboard(results)
-        
-        print("✅ Reports generated")
-        print(f"Location: {config.reports_dir}")
-        
-        return dashboard
-    
-    def show_status(self):
-        """Show system status"""
-        
-        print("\n📈 SYSTEM STATUS")
-        print("=" * 60)
-        
-        # Get statistics
-        stats = self.orchestrator.knowledge_graph.get_statistics()
-        
-        print(f"\nKnowledge Graph Statistics:")
-        print(f"  Entities: {stats['entities']}")
-        print(f"  Relationships: {stats['relationships']}")
-        print(f"  Contradictions: {stats['contradictions']}")
-        print(f"  Patterns: {stats['patterns']}")
-        print(f"  Timeline Events: {stats['timeline_events']}")
-        print(f"  Active Investigations: {stats['active_investigations']}")
-        print(f"  Discoveries: {stats['discoveries']}")
-        
-        # Show completed phases
-        print(f"\nPhases Completed: {', '.join(self.orchestrator.state['phases_completed'])}")
-        
-        # Show API usage
-        usage = self.orchestrator.api_client.get_usage_report()
-        print(f"\nAPI Usage:")
-        print(f"  Total Calls: {usage['summary']['total_calls']}")
-        print(f"  Input Tokens: {usage['summary']['total_input_tokens']:,}")
-        print(f"  Output Tokens: {usage['summary']['total_output_tokens']:,}")
-        print(f"  Estimated Cost: ${usage['summary']['estimated_cost_usd']:.2f}")
-        
-        # Show active investigations
-        investigations = self.orchestrator.knowledge_graph.get_investigation_queue(limit=5)
-        if investigations:
-            print(f"\nActive Investigations:")
-            for inv in investigations:
-                print(f"  • {inv['type']} (Priority: {inv['priority']:.1f})")
-    
-    def reset(self, confirm: bool = False):
-        """Reset system state"""
-        
-        if not confirm:
-            response = input("\n⚠️  This will delete all analysis. Are you sure? (yes/no): ")
-            if response.lower() != 'yes':
-                print("Cancelled")
-                return
-        
-        print("\nResetting system...")
-        
-        # Clear knowledge graph
-        if config.graph_db_path.exists():
-            config.graph_db_path.unlink()
-        
-        # Clear outputs
-        import shutil
-        if config.output_dir.exists():
-            shutil.rmtree(config.output_dir)
-        
-        # Recreate directories
-        config.output_dir.mkdir(parents=True, exist_ok=True)
-        config.analysis_dir.mkdir(parents=True, exist_ok=True)
-        config.investigations_dir.mkdir(parents=True, exist_ok=True)
-        config.reports_dir.mkdir(parents=True, exist_ok=True)
-        
-        print("✅ System reset complete")
-    
-    def _print_final_summary(self, results: Dict):
-        """Print final analysis summary"""
-        
-        print("\n" + "=" * 60)
-        print("🎯 ANALYSIS COMPLETE")
-        print("=" * 60)
-        
-        # Count discoveries
-        nuclear_count = 0
-        critical_count = 0
-        
-        for phase_data in results.get('phases', {}).values():
-            synthesis = phase_data.get('synthesis', '')
-            nuclear_count += synthesis.count('[NUCLEAR]')
-            critical_count += synthesis.count('[CRITICAL]')
-        
-        print(f"\nKey Discoveries:")
-        print(f"  🔴 Nuclear (Case-ending): {nuclear_count}")
-        print(f"  🟠 Critical (Major advantage): {critical_count}")
-        
-        # Show top findings
-        if results.get('war_room_dashboard'):
-            print(f"\n📊 War Room Dashboard generated")
-            print(f"   Location: {config.reports_dir}")
-        
-        if results.get('final_synthesis'):
-            print(f"\n📝 Strategic Synthesis complete")
-            print(f"   Location: {config.reports_dir}")
-        
-        print("\n✅ All outputs saved to:", config.output_dir)
+import argparse
 
 
 def main():
-    """CLI entry point"""
+    """Main entry point with staged execution"""
     
     parser = argparse.ArgumentParser(
-        description="Litigation Intelligence System - Maximum Claude Utilisation",
-        formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog="""
-Examples:
-  python main.py --full              # Run complete analysis
-  python main.py --phase 0           # Run knowledge absorption
-  python main.py --phase 1           # Run discovery phase
-  python main.py --investigate contradiction --priority 9
-  python main.py --status            # Show current status
-  python main.py --reports           # Generate reports
-  python main.py --reset             # Reset system
-        """
+        description='Litigation Intelligence System - Lismore v Process Holdings'
     )
-    
     parser.add_argument(
-        '--full',
-        action='store_true',
-        help='Run full analysis pipeline'
+        'stage',
+        choices=['phase0', 'phase1', 'investigate', 'full'],
+        help='Which stage to run: phase0 (legal knowledge), phase1 (case understanding), investigate (phase 2-N), or full (all phases)'
     )
-    
     parser.add_argument(
-        '--phase',
-        type=str,
-        choices=['0', '1', '2', '3', '4', '5', '6', '7'],
-        help='Run specific phase'
-    )
-    
-    parser.add_argument(
-        '--investigate',
-        type=str,
-        help='Spawn investigation (e.g., contradiction, pattern, timeline)'
-    )
-    
-    parser.add_argument(
-        '--priority',
-        type=float,
-        default=7.0,
-        help='Investigation priority (1-10)'
-    )
-    
-    parser.add_argument(
-        '--status',
-        action='store_true',
-        help='Show system status'
-    )
-    
-    parser.add_argument(
-        '--reports',
-        action='store_true',
-        help='Generate strategic reports'
-    )
-    
-    parser.add_argument(
-        '--reset',
-        action='store_true',
-        help='Reset system (delete all analysis)'
-    )
-    
-    parser.add_argument(
-        '--config',
-        type=str,
-        help='Path to custom configuration file'
+        '--max-iterations',
+        type=int,
+        default=5,
+        help='Maximum investigation iterations (default: 5)'
     )
     
     args = parser.parse_args()
     
-    # Initialise system
-    try:
-        system = LitigationIntelligence(config_path=args.config)
-    except Exception as e:
-        print(f"❌ Error: {e}")
-        sys.exit(1)
+    orchestrator = LitigationOrchestrator()
     
-    # Execute command
-    try:
-        if args.full:
-            system.run_full_analysis()
-        
-        elif args.phase:
-            system.run_single_phase(args.phase)
-        
-        elif args.investigate:
-            system.run_investigation(args.investigate, args.priority)
-        
-        elif args.status:
-            system.show_status()
-        
-        elif args.reports:
-            system.generate_reports()
-        
-        elif args.reset:
-            system.reset()
-        
-        else:
-            # Default: show status
-            system.show_status()
-            print("\nUse --help for options")
+    if args.stage == 'phase0':
+        run_phase_0(orchestrator)
+    elif args.stage == 'phase1':
+        run_phase_1(orchestrator)
+    elif args.stage == 'investigate':
+        run_investigations(orchestrator, args.max_iterations)
+    elif args.stage == 'full':
+        run_full_analysis(orchestrator, args.max_iterations)
+
+
+def run_phase_0(orchestrator):
+    """
+    Phase 0: Legal Knowledge Mastery
+    Loads legal documents and builds legal framework
+    Cost: ~$0.10
+    Time: ~5 minutes
+    """
     
-    except KeyboardInterrupt:
-        print("\n\n⚠️  Interrupted by user")
-    except Exception as e:
-        print(f"\n❌ Error: {e}")
-        import traceback
-        traceback.print_exc()
-        sys.exit(1)
+    print("\n" + "="*60)
+    print("PHASE 0: LEGAL KNOWLEDGE MASTERY")
+    print("="*60)
+    print("\nThis phase will:")
+    print("  - Load all legal documents")
+    print("  - Synthesise legal framework with Claude Sonnet 4.5")
+    print("  - Store legal knowledge for later phases")
+    print("\nEstimated cost: $0.10")
+    print("Estimated time: 5 minutes")
+    
+    response = input("\nProceed with Phase 0? (yes/no): ").strip().lower()
+    if response != 'yes':
+        print("Cancelled.")
+        return
+    
+    print("\nExecuting Phase 0...")
+    results = orchestrator.execute_phase('0')
+    
+    print("\n" + "="*60)
+    print("PHASE 0 COMPLETE")
+    print("="*60)
+    print(f"Documents processed: {results.get('documents_processed', 0)}")
+    print(f"Tokens: {results['metadata']['input_tokens']:,} in / {results['metadata']['output_tokens']:,} out")
+    
+    cost = (results['metadata']['input_tokens'] / 1000 * 0.003) + \
+           (results['metadata']['output_tokens'] / 1000 * 0.015)
+    print(f"Cost: ${cost:.2f}")
+    
+    print("\nLegal framework stored. Ready for Phase 1.")
+    print("\nNext step: python main.py phase1")
+
+
+def run_phase_1(orchestrator):
+    """
+    Phase 1: Complete Case Understanding
+    Loads all case documents, builds understanding, marks discoveries
+    Cost: ~$5-10
+    Time: ~15-30 minutes
+    """
+    
+    print("\n" + "="*60)
+    print("PHASE 1: COMPLETE CASE UNDERSTANDING")
+    print("="*60)
+    print("\nThis phase will:")
+    print("  - Load ALL case documents (including subdirectories)")
+    print("  - Send to Claude Sonnet 4.5 for complete understanding")
+    print("  - Mark discoveries: [NUCLEAR], [CRITICAL], [INVESTIGATE]")
+    print("  - Prepare for autonomous investigation")
+    
+    # Check if Phase 0 completed
+    if '0' not in orchestrator.state.get('phases_completed', []):
+        print("\n⚠️  Phase 0 not completed yet!")
+        print("Run: python main.py phase0")
+        return
+    
+    # Estimate documents
+    import os
+    case_dir = orchestrator.config.case_documents_dir
+    doc_count = sum(1 for root, dirs, files in os.walk(case_dir) 
+                    for file in files if file.endswith(('.pdf', '.docx', '.doc')))
+    
+    print(f"\nFound ~{doc_count} case documents")
+    print(f"Estimated cost: ${doc_count * 0.05:.2f} - ${doc_count * 0.10:.2f}")
+    print(f"Estimated time: 15-30 minutes")
+    
+    response = input("\nProceed with Phase 1? (yes/no): ").strip().lower()
+    if response != 'yes':
+        print("Cancelled.")
+        return
+    
+    print("\nExecuting Phase 1...")
+    results = orchestrator.execute_phase('1')
+    
+    print("\n" + "="*60)
+    print("PHASE 1 COMPLETE")
+    print("="*60)
+    print(f"Documents processed: {results.get('documents_processed', 0)}")
+    print(f"Discoveries: {len(results.get('discoveries', []))}")
+    print(f"Tokens: {results['metadata']['input_tokens']:,} in / {results['metadata']['output_tokens']:,} out")
+    
+    cost = (results['metadata']['input_tokens'] / 1000 * 0.003) + \
+           (results['metadata']['output_tokens'] / 1000 * 0.015)
+    print(f"Cost: ${cost:.2f}")
+    
+    # Show discoveries
+    discoveries = results.get('discoveries', [])
+    if discoveries:
+        nuclear = [d for d in discoveries if d['type'] == 'NUCLEAR']
+        critical = [d for d in discoveries if d['type'] == 'CRITICAL']
+        investigate = [d for d in discoveries if d['type'] == 'INVESTIGATE']
+        
+        print(f"\nDiscoveries marked:")
+        print(f"  NUCLEAR: {len(nuclear)}")
+        print(f"  CRITICAL: {len(critical)}")
+        print(f"  INVESTIGATE: {len(investigate)}")
+    
+    print("\nCase understanding complete. Ready for investigation.")
+    print("\nNext step: python main.py investigate")
+
+
+def run_investigations(orchestrator, max_iterations):
+    """
+    Phase 2-N: Autonomous Investigation
+    Claude investigates freely until convergence
+    Cost: ~$10-40
+    Time: ~30-90 minutes
+    """
+    
+    print("\n" + "="*60)
+    print("PHASE 2-N: AUTONOMOUS INVESTIGATION")
+    print("="*60)
+    print("\nThis phase will:")
+    print("  - Let Claude investigate ANYTHING it finds interesting")
+    print("  - No predetermined focus (complete autonomy)")
+    print(f"  - Run up to {max_iterations} investigation iterations")
+    print("  - Stop when no new critical discoveries")
+    print("  - Generate final strategic synthesis")
+    
+    # Check prerequisites
+    if '0' not in orchestrator.state.get('phases_completed', []):
+        print("\n⚠️  Phase 0 not completed! Run: python main.py phase0")
+        return
+    if '1' not in orchestrator.state.get('phases_completed', []):
+        print("\n⚠️  Phase 1 not completed! Run: python main.py phase1")
+        return
+    
+    print(f"\nEstimated cost: $10-$40")
+    print(f"Estimated time: 30-90 minutes")
+    
+    response = input("\nProceed with autonomous investigation? (yes/no): ").strip().lower()
+    if response != 'yes':
+        print("Cancelled.")
+        return
+    
+    print("\nStarting autonomous investigation...")
+    
+    # Run investigation iterations
+    converged = False
+    iteration = 2
+    
+    while not converged and iteration < (2 + max_iterations):
+        print(f"\n{'='*60}")
+        print(f"INVESTIGATION ITERATION {iteration - 1}")
+        print(f"{'='*60}")
+        
+        results = orchestrator.execute_phase(str(iteration))
+        
+        converged = results.get('converged', False)
+        
+        if converged:
+            print("\n✅ INVESTIGATION CONVERGED")
+            break
+        
+        iteration += 1
+    
+    # Final synthesis
+    print("\n" + "="*60)
+    print("FINAL SYNTHESIS")
+    print("="*60)
+    
+    synthesis = orchestrator._execute_synthesis({'phases': {}})
+    
+    print("\n" + "="*60)
+    print("INVESTIGATION COMPLETE")
+    print("="*60)
+    print(f"Iterations completed: {iteration - 2}")
+    print(f"Reports saved: {orchestrator.config.reports_dir}")
+    
+    # Show usage
+    api_stats = orchestrator.api_client.get_usage_statistics()
+    print(f"\nTotal API Usage:")
+    print(f"  Calls: {api_stats['summary']['total_calls']}")
+    print(f"  Tokens: {api_stats['summary']['total_input_tokens']:,} in / {api_stats['summary']['total_output_tokens']:,} out")
+    print(f"  Cost: ${api_stats['summary']['estimated_cost_usd']:.2f}")
+
+
+def run_full_analysis(orchestrator, max_iterations):
+    """
+    Run complete analysis: Phase 0 → Phase 1 → Phase 2-N
+    Cost: ~$20-50
+    Time: ~1-2 hours
+    """
+    
+    print("\n" + "="*60)
+    print("FULL AUTONOMOUS ANALYSIS")
+    print("="*60)
+    print("\nThis will run ALL phases:")
+    print("  Phase 0: Legal Knowledge Mastery")
+    print("  Phase 1: Complete Case Understanding")
+    print("  Phase 2-N: Autonomous Investigation")
+    print("  Final: Strategic Synthesis")
+    
+    print(f"\nEstimated cost: $20-$50")
+    print(f"Estimated time: 1-2 hours")
+    
+    response = input("\nProceed with FULL analysis? (yes/no): ").strip().lower()
+    if response != 'yes':
+        print("Cancelled.")
+        return
+    
+    results = orchestrator.execute_full_analysis(
+        start_phase='0',
+        max_iterations=max_iterations
+    )
+    
+    print("\n" + "="*60)
+    print("COMPLETE ANALYSIS FINISHED")
+    print("="*60)
+    print(f"Check reports: {orchestrator.config.reports_dir}")
 
 
 if __name__ == "__main__":

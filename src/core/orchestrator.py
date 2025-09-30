@@ -21,7 +21,7 @@ from api.batch_manager import BatchManager
 from prompts.autonomous import AutonomousPrompts
 from prompts.recursive import RecursivePrompts
 from prompts.simplified import SimplifiedPrompts
-from utils.document_loader import DocumentLoader
+from utils.document_processor import DocumentLoader
 
 
 class LitigationOrchestrator:

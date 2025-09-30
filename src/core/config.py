@@ -48,33 +48,23 @@ class Config:
             dir_path.mkdir(parents=True, exist_ok=True)
     
     def _setup_models(self) -> None:
-        """Model selection - using working API model names"""
-        
-        # Primary models - CORRECTED MODEL NAMES
+    
+    
+        # Primary models - LATEST CLAUDE 4.x (September 2025)
         self.models = {
-            'primary': 'claude-3-5-sonnet-20241022',   # Sonnet 3.7 - Best balance
-            'secondary': 'claude-3-haiku-20240307',    # Haiku 3 - Fallback
-            'quick': 'claude-3-haiku-20240307'         # Haiku 3 - Quick tasks
+            'primary': 'claude-sonnet-4-5-20250929',    # Sonnet 4.5 - WORKS
+            'opus': 'claude-opus-4-1-20250805',         # Opus 4.1 - WORKS
+            'secondary': 'claude-3-haiku-20240307',     # Haiku 3 - WORKS
+            'quick': 'claude-3-haiku-20240307'          # Haiku 3 - WORKS
         }
         
-        # Phase-specific model selection
+        # Phase-specific model selection - Use Sonnet 4.5 for everything critical
         self.phase_models = {
-            'knowledge_synthesis': 'claude-3-5-sonnet-20241022',  # Critical learning
-            'case_understanding': 'claude-3-5-sonnet-20241022',   # First read
-            'investigation': 'claude-3-5-sonnet-20241022',        # Free investigation
-            'synthesis': 'claude-3-5-sonnet-20241022',            # Final synthesis
-            'quick_validation': 'claude-3-haiku-20240307'         # Simple checks
-        }
-        
-        # Complexity triggers for automatic model selection
-        self.complexity_triggers = {
-            'contradiction_found': True,
-            'pattern_confidence_high': 0.8,
-            'investigation_depth': 3,
-            'document_complexity': 0.7,
-            'entity_relationships': 10,
-            'timeline_gaps': True,
-            'financial_analysis': True
+            'knowledge_synthesis': 'claude-sonnet-4-5-20250929',
+            'case_understanding': 'claude-sonnet-4-5-20250929',
+            'investigation': 'claude-sonnet-4-5-20250929',
+            'synthesis': 'claude-sonnet-4-5-20250929',
+            'quick_validation': 'claude-3-haiku-20240307'
         }
     
     def _setup_analysis(self) -> None:
@@ -128,7 +118,20 @@ class Config:
             'pattern': ['PATTERN', 'RECURRING', 'SYSTEMATIC'],
             'contradiction': ['CONTRADICTION', 'INCONSISTENT', 'CONFLICTS']
         }
+            # ADD THIS - Recursion configuration for recursive prompts
+        self.recursion_config = {
+            'self_questioning_depth': 3,        # Default depth for recursive questioning
+            'min_questioning_depth': 2,         # Minimum depth
+            'max_questioning_depth': 5          # Maximum depth
+        }
         
+        # Investigation depth settings
+        self.investigation_depth = {
+            'quick_investigation': 1,
+            'standard_investigation': 2,
+            'deep_investigation': 3,
+            'exhaustive_investigation': 5
+        }
         # Strategic focus - what matters for Lismore
         self.strategic_focus = {
             'our_client': 'Lismore Capital',
