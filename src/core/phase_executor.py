@@ -1,949 +1,718 @@
 #!/usr/bin/env python3
 """
-Main Orchestration Engine for Litigation Intelligence
-Controls dynamic phase execution and investigation spawning
-Enhanced with complete extraction and metadata filtering
+Phase Executor for Dynamic Phase Management
+Handles individual phase execution with adaptive strategies
+British English throughout - Lismore v Process Holdings
 """
 
-import json
-import time
-from pathlib import Path
-from typing import Dict, List, Optional, Any, Tuple
+from typing import Dict, List, Optional, Any
 from datetime import datetime
-import hashlib
-import re
-
-from core.config import config
-from core.phase_executor import PhaseExecutor
-from intelligence.knowledge_graph import KnowledgeGraph
-from api.client import ClaudeClient
-from api.context_manager import ContextManager
-from api.batch_manager import BatchManager
-from prompts.autonomous import AutonomousPrompts
-from prompts.recursive import RecursivePrompts
-from prompts.synthesis import SynthesisPrompts
-from utils.document_processor import DocumentLoader
+import json
+from pathlib import Path
 
 
-class LitigationOrchestrator:
-    """Main system orchestrator for maximum Claude utilisation"""
+class PhaseExecutor:
+    """Executes phases with dynamic adaptation based on findings"""
     
-    def __init__(self, config_override: Dict = None):
-        """Initialise orchestrator with all components"""
-        
-        # Override config if needed
-        if config_override:
-            for key, value in config_override.items():
-                setattr(config, key, value)
-        
+    def __init__(self, config, orchestrator):
         self.config = config
+        self.orchestrator = orchestrator
         
-        # Initialise core components
-        self.knowledge_graph = KnowledgeGraph(config)
-        self.api_client = ClaudeClient(config)
-        self.context_manager = ContextManager(config)
-        self.batch_manager = BatchManager(config)
-        self.phase_executor = PhaseExecutor(config, self)
-        
-        # Initialise prompt systems
-        self.autonomous_prompts = AutonomousPrompts(config)
-        self.recursive_prompts = RecursivePrompts(config)
-        self.synthesis_prompts = SynthesisPrompts(config)
-        
-        # Track system state
-        self.state = {
-            'current_phase': None,
-            'phases_completed': [],
-            'active_investigations': [],
-            'iteration_count': 0,
-            'start_time': datetime.now().isoformat(),
-            'convergence_metrics': {}
+        # Define phase strategies
+        self.phase_strategies = {
+            '0': self._execute_knowledge_phase,
+            '1': self._execute_organisation_phase,
+            '2': self._execute_foundation_phase,
+            '3': self._execute_pattern_phase,
+            '4': self._execute_adversarial_phase,
+            '5': self._execute_creative_phase,
+            '6': self._execute_synthesis_phase
         }
-        
-        # Load previous state if exists
-        self._load_state()
     
-    def execute_full_analysis(self, 
-                             start_phase: str = '0',
-                             max_iterations: int = 10) -> Dict:
+    def execute(self, phase: str, context: str) -> Dict:
         """
-        Execute complete analysis with dynamic phase progression
+        Execute phase with appropriate strategy
         """
         
-        print("="*60)
-        print("LITIGATION INTELLIGENCE SYSTEM - FULL ANALYSIS")
-        print(f"Starting at: {datetime.now().isoformat()}")
-        print("="*60)
+        # Check if custom strategy exists
+        if phase in self.phase_strategies:
+            return self.phase_strategies[phase](context)
         
-        results = {
-            'phases': {},
-            'investigations': [],
-            'final_synthesis': None,
-            'war_room_dashboard': None
-        }
-        
-        # Phase 0: Combined knowledge absorption
-        if '0' not in self.state['phases_completed']:
-            print("\n[PHASE 0] Knowledge Absorption (Legal + Case Context)")
-            phase_0_results = self._execute_knowledge_phase()
-            results['phases']['0'] = phase_0_results
-            self.state['phases_completed'].append('0')
-            self._save_state()
-        
-        # Dynamic disclosure analysis with iteration
-        iteration = 1
-        converged = False
-        
-        while iteration <= max_iterations and not converged:
-            print(f"\n[ITERATION {iteration}] Disclosure Analysis")
-            
-            # Execute disclosure analysis
-            iteration_results = self._execute_disclosure_iteration(iteration)
-            results['phases'][f'iteration_{iteration}'] = iteration_results
-            
-            # Check for investigation triggers
-            investigations = self.knowledge_graph.get_investigation_queue(limit=5)
-            
-            if investigations:
-                print(f"  Spawning {len(investigations)} investigation threads")
-                for investigation in investigations:
-                    inv_results = self._execute_investigation(investigation)
-                    results['investigations'].append(inv_results)
-            
-            # Check convergence
-            converged = self._check_convergence(iteration_results)
-            
-            if converged:
-                print("  ✓ Analysis converged - no new significant discoveries")
-            
-            iteration += 1
-            self.state['iteration_count'] = iteration
-            self._save_state()
-        
-        # Final synthesis
-        print("\n[SYNTHESIS] Building Strategic Narrative")
-        synthesis_results = self._execute_synthesis(results)
-        results['final_synthesis'] = synthesis_results
-        
-        # Generate war room dashboard
-        print("\n[DASHBOARD] Generating Executive Dashboard")
-        dashboard = self._generate_war_room_dashboard(results)
-        results['war_room_dashboard'] = dashboard
-        
-        # Save final results
-        self._save_results(results)
-        
-        # Print summary
-        self._print_summary(results)
-        
-        return results
+        # Default execution for unknown phases
+        return self._execute_generic_phase(phase, context)
     
-    def execute_single_phase(self, phase: str) -> Dict:
-        """Execute a single phase with full context"""
-        
-        print(f"\n[PHASE {phase}] Execution Starting")
-        
-        # Backup knowledge graph
-        self.knowledge_graph.backup_before_phase(phase)
-        
-        # Get context from knowledge graph
-        context = self.knowledge_graph.get_context_for_phase(phase)
-        
-        # Execute phase
-        results = self.phase_executor.execute(phase, context)
-        
-        # Update knowledge graph with findings
-        self._update_knowledge_from_results(results, phase)
-        
-        # Mark phase complete
-        if phase not in self.state['phases_completed']:
-            self.state['phases_completed'].append(phase)
-        
-        self._save_state()
-        return results
-    
-    def spawn_investigation(self, 
-                          trigger_type: str,
-                          trigger_data: Dict,
-                          priority: float = 5.0) -> str:
+    def _execute_knowledge_phase(self, context: str) -> Dict:
         """
-        Spawn new investigation thread
-        Returns investigation ID
+        Phase 0: Combined legal and case knowledge absorption
         """
         
-        investigation_id = self.knowledge_graph._spawn_investigation(
-            trigger_type=trigger_type,
-            trigger_data=trigger_data,
-            priority=priority
-        )
+        print("  Strategy: Unified knowledge synthesis")
         
-        self.state['active_investigations'].append(investigation_id)
-        print(f"  → Spawned investigation {investigation_id} (Priority: {priority})")
-        
-        return investigation_id
-    
-    def _execute_knowledge_phase(self) -> Dict:
-        """Execute Phase 0: Combined knowledge absorption"""
-        
-        # Load legal and case documents
-        legal_docs = self._load_documents(self.config.legal_knowledge_dir)
-        case_docs = self._load_documents(self.config.case_context_dir)
-        
-        print(f"  Loading {len(legal_docs)} legal documents")
-        print(f"  Loading {len(case_docs)} case context documents")
-        
-        # Build synthesis prompt
-        existing_knowledge = self.knowledge_graph.get_context_for_phase('0')
-        
-        prompt = self.autonomous_prompts.knowledge_synthesis_prompt(
-            legal_knowledge=legal_docs,
-            case_context=case_docs,
-            existing_knowledge=existing_knowledge
-        )
-        
-        # Call Claude with maximum context
-        response, metadata = self.api_client.call_claude(
-            prompt=prompt,
-            task_type='knowledge_synthesis',
-            phase='0'
-        )
-        
-        # Extract and store knowledge using enhanced extraction
-        self._extract_knowledge_from_response(response, '0')
-        
-        # Save results
-        results = {
-            'phase': '0',
-            'documents_processed': len(legal_docs) + len(case_docs),
-            'synthesis': response,
-            'metadata': metadata
-        }
-        
-        self._save_phase_output('0', results)
-        
-        return results
-    
-    def _execute_disclosure_iteration(self, iteration: int) -> Dict:
-        """Execute one iteration of disclosure analysis"""
-        
-        # Load disclosure documents
-        disclosure_docs = self._load_documents(self.config.disclosure_dir)
-        
-        # Build batches using semantic clustering
-        batches = self.batch_manager.create_semantic_batches(
-            documents=disclosure_docs,
-            strategy='semantic_clustering'
-        )
-        
-        print(f"  Processing {len(disclosure_docs)} documents in {len(batches)} batches")
-        
-        iteration_results = {
-            'iteration': iteration,
-            'batches_processed': len(batches),
-            'documents_analysed': len(disclosure_docs),
-            'batch_results': [],
-            'new_discoveries': 0
-        }
-        
-        # Process each batch
-        for i, batch in enumerate(batches):
-            print(f"    Batch {i+1}/{len(batches)}: {len(batch)} documents")
-            
-            # Get current context
-            context = self.knowledge_graph.get_context_for_phase(f'iteration_{iteration}')
-            
-            # Build investigation prompt
-            prompt = self.autonomous_prompts.investigation_prompt(
-                documents=batch,
-                context=context,
-                phase=f'iteration_{iteration}'
-            )
-            
-            # Call Claude
-            response, metadata = self.api_client.call_claude(
-                prompt=prompt,
-                task_type='deep_investigation',
-                phase=f'iteration_{iteration}'
-            )
-            
-            # Extract discoveries using enhanced extraction
-            discoveries = self._extract_discoveries_from_response(response, f'iteration_{iteration}')
-            iteration_results['new_discoveries'] += len(discoveries)
-            
-            # Perform recursive self-questioning on interesting findings
-            if discoveries:
-                recursive_prompt = self.recursive_prompts.deep_questioning_prompt(
-                    initial_analysis=response,
-                    depth=self.config.recursion_config['self_questioning_depth']
-                )
-                
-                recursive_response, _ = self.api_client.call_claude(
-                    prompt=recursive_prompt,
-                    task_type='recursive_analysis',
-                    phase=f'iteration_{iteration}_recursive'
-                )
-                
-                # Extract additional insights from recursive analysis
-                self._extract_knowledge_from_response(recursive_response, f'iteration_{iteration}')
-            
-            iteration_results['batch_results'].append({
-                'batch_num': i + 1,
-                'documents': len(batch),
-                'discoveries': len(discoveries),
-                'response_length': len(response)
-            })
-            
-            # Delay between batches
-            if i < len(batches) - 1:
-                time.sleep(self.config.api_config['rate_limit_delay'])
-        
-        return iteration_results
-    
-    def _execute_investigation(self, investigation: Dict) -> Dict:
-        """Execute deep investigation thread"""
-        
-        print(f"\n  [INVESTIGATION] {investigation['type']} (Priority: {investigation['priority']})")
-        
-        # Get relevant documents using enhanced metadata filtering
-        relevant_docs = self._get_investigation_documents(investigation)
-        
-        # Build investigation context
-        knowledge_context = self.knowledge_graph.get_context_for_phase('investigation')
-        
-        investigation_context = self.context_manager.build_investigation_context(
-            investigation=investigation,
-            relevant_docs=relevant_docs,
-            knowledge_graph_context=knowledge_context
-        )
-        
-        # Generate investigation prompt
-        prompt = self.recursive_prompts.focused_investigation_prompt(
-            investigation_thread=investigation,
-            context=investigation_context,
-            depth=self.config.investigation_depth['deep_investigation']
-        )
-        
-        # Call Claude with deep investigation
-        response, metadata = self.api_client.call_claude(
-            prompt=prompt,
-            task_type='deep_investigation',
-            phase=f"investigation_{investigation['id']}"
-        )
-        
-        # Extract findings using enhanced extraction
-        findings = self._extract_investigation_findings(response, investigation)
-        
-        # Update knowledge graph
-        self.knowledge_graph.complete_investigation(
-            investigation_id=investigation['id'],
-            findings=findings
-        )
-        
-        # Check if findings warrant child investigations
-        if findings.get('spawn_children'):
-            for child in findings['spawn_children']:
-                self.spawn_investigation(
-                    trigger_type=child['type'],
-                    trigger_data=child['data'],
-                    priority=child.get('priority', 5.0)
-                )
-        
+        # This is handled by orchestrator._execute_knowledge_phase()
+        # Just return placeholder
         return {
-            'investigation_id': investigation['id'],
-            'type': investigation['type'],
-            'findings': findings,
-            'metadata': metadata
+            'phase': '0',
+            'strategy': 'unified_synthesis',
+            'note': 'Executed by orchestrator'
         }
     
-    def _execute_synthesis(self, results: Dict) -> Dict:
-        """Execute final strategic synthesis"""
+    def _execute_organisation_phase(self, context: str) -> Dict:
+        """
+        Phase 1: Claude autonomously organises documents
+        """
         
-        # Export knowledge graph
-        knowledge_export = self.knowledge_graph.export_for_report()
+        print("  Strategy: Autonomous document organisation")
         
-        # Gather phase analyses
-        phase_analyses = {}
-        for phase_key, phase_data in results['phases'].items():
-            if 'synthesis' in phase_data:
-                phase_analyses[phase_key] = phase_data['synthesis'][:5000]
+        # Load ALL case documents
+        documents = self._load_phase_documents('case_documents')
         
-        # Generate synthesis prompt
-        prompt = self.synthesis_prompts.strategic_synthesis_prompt(
-            phase_analyses=phase_analyses,
-            investigations=results['investigations'][:20],
-            knowledge_graph_export=knowledge_export
-        )
+        print(f"  • Total documents to organise: {len(documents)}")
         
-        # Call Claude for synthesis
-        response, metadata = self.api_client.call_claude(
+        # Build organisation prompt with full context
+        prompt = self._build_organisation_prompt(documents, context)
+        
+        # Call Claude to organise
+        print("  • Claude organising documents autonomously...")
+        response, metadata = self.orchestrator.api_client.call_claude(
             prompt=prompt,
-            task_type='synthesis',
-            phase='final_synthesis'
+            model=self.config.models['primary'],
+            task_type='document_organisation',
+            phase='1'
         )
         
-        synthesis_results = {
-            'narrative': response,
+        # Extract organisation structure from response
+        organisation = self._extract_organisation_structure(response)
+        
+        # Save organised structure
+        self._save_organisation_structure(organisation)
+        
+        # Perform initial document classification
+        classifications = self._classify_documents(documents, response)
+        
+        results = {
+            'phase': '1',
+            'strategy': 'autonomous_organisation',
+            'documents_processed': len(documents),
+            'categories_created': len(organisation.get('categories', [])),
+            'organisation_structure': organisation,
+            'document_classifications': classifications,
+            'synthesis': response[:3000],
             'metadata': metadata,
             'timestamp': datetime.now().isoformat()
         }
         
-        # Save synthesis
-        self._save_synthesis(synthesis_results)
-        
-        return synthesis_results
+        return results
     
-    def _generate_war_room_dashboard(self, results: Dict) -> Dict:
-        """Generate executive war room dashboard"""
-        
-        # Get current status
-        current_status = {
-            'phases_completed': len(results['phases']),
-            'investigations_conducted': len(results['investigations']),
-            'documents_analysed': sum(
-                p.get('documents_analysed', 0) 
-                for p in results['phases'].values()
-            ),
-            **self.knowledge_graph.get_statistics()
-        }
-        
-        # Get critical findings
-        critical_findings = []
-        conn = self.knowledge_graph.db_path
-        # Direct database query for critical findings
-        # (simplified for example)
-        
-        # Get active investigations
-        active_investigations = self.knowledge_graph.get_investigation_queue(limit=10)
-        
-        # Strategic options (would be extracted from synthesis)
-        strategic_options = {
-            'nuclear_options': [],
-            'pressure_points': [],
-            'defensive_requirements': []
-        }
-        
-        # Generate dashboard prompt
-        prompt = self.synthesis_prompts.war_room_dashboard_prompt(
-            current_status=current_status,
-            critical_findings=critical_findings,
-            active_investigations=active_investigations,
-            strategic_options=strategic_options
-        )
-        
-        # Call Claude
-        response, metadata = self.api_client.call_claude(
-            prompt=prompt,
-            task_type='report',
-            phase='war_room_dashboard'
-        )
-        
-        dashboard = {
-            'content': response,
-            'generated': datetime.now().isoformat(),
-            'status': current_status,
-            'metadata': metadata
-        }
-        
-        # Save dashboard
-        dashboard_path = self.config.reports_dir / f"war_room_dashboard_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md"
-        with open(dashboard_path, 'w', encoding='utf-8') as f:
-            f.write(dashboard['content'])
-        
-        print(f"  ✓ Dashboard saved to {dashboard_path}")
-        
-        return dashboard
-    
-    def _check_convergence(self, iteration_results: Dict) -> bool:
+    def _execute_foundation_phase(self, context: str) -> Dict:
         """
-        Check if analysis has converged (no new significant discoveries)
+        Phase 2: Foundation intelligence - document analysis
         """
         
-        new_discoveries = iteration_results.get('new_discoveries', 0)
+        print("  Strategy: Foundation intelligence extraction")
         
-        # Track discovery trend
-        if 'discovery_trend' not in self.state['convergence_metrics']:
-            self.state['convergence_metrics']['discovery_trend'] = []
+        # Load organised documents
+        documents = self._load_phase_documents('case_documents')
         
-        self.state['convergence_metrics']['discovery_trend'].append(new_discoveries)
-        
-        # Check convergence criteria
-        if new_discoveries == 0:
-            return True
-        
-        # Check if discovery rate is declining
-        trend = self.state['convergence_metrics']['discovery_trend']
-        if len(trend) >= 3:
-            # If last 3 iterations show declining discoveries
-            if trend[-1] < trend[-2] < trend[-3]:
-                if trend[-1] < 5:  # And current is low
-                    return True
-        
-        # Check confidence threshold
-        if hasattr(self.config, 'convergence_threshold'):
-            # Would check pattern confidence scores
-            pass
-        
-        return False
-    
-    def _load_documents(self, directory: Path) -> List[Dict]:
-        """Load documents from directory using DocumentLoader"""
-        
-        loader = DocumentLoader(self.config)
-        
-        # Load all supported document types (PDFs, DOCX, TXT, etc.)
-        documents = loader.load_directory(
-            directory=directory,
-            doc_types=['.pdf', '.txt', '.docx', '.doc', '.json', '.html', '.md']
+        # Create semantic batches
+        batches = self.orchestrator.batch_manager.create_semantic_batches(
+            documents=documents,
+            strategy='semantic_clustering'
         )
         
-        if not documents:
-            print(f"  Warning: No documents loaded from {directory}")
-        else:
-            print(f"  Loaded {len(documents)} documents from {directory}")
+        print(f"  • Processing {len(documents)} documents in {len(batches)} batches")
+        
+        all_discoveries = []
+        all_entities = {}
+        all_timeline_events = []
+        
+        # Process each batch
+        for i, batch in enumerate(batches):
+            print(f"    • Batch {i+1}/{len(batches)}: {len(batch)} documents")
             
-            # Show breakdown by type
-            by_type = {}
-            for doc in documents:
-                ext = doc['metadata'].get('extension', 'unknown')
-                by_type[ext] = by_type.get(ext, 0) + 1
+            # Build investigation prompt with full context
+            prompt = self.orchestrator.autonomous_prompts.investigation_prompt(
+                documents=batch,
+                context={'phase_context': context},
+                phase='2'
+            )
             
-            for ext, count in by_type.items():
-                print(f"    - {ext}: {count} documents")
-        
-        return documents
-    
-    # ============================================================
-    # ENHANCED METHODS - Complete implementations replacing stubs
-    # ============================================================
-    
-    def _get_investigation_documents(self, investigation: Dict) -> List[Dict]:
-        """Get relevant documents using metadata filtering"""
-        
-        # Load all disclosure documents
-        all_docs = self._load_documents(self.config.disclosure_dir)
-        
-        # Enhanced filtering based on investigation type and metadata
-        investigation_data = investigation.get('data', {})
-        scored_docs = []
-        
-        for doc in all_docs:
-            relevance_score = 0.0
-            content_lower = doc['content'].lower()
-            metadata = doc.get('metadata', {})
+            # Call Claude
+            response, _ = self.orchestrator.api_client.call_claude(
+                prompt=prompt,
+                task_type='initial_analysis',
+                phase='2'
+            )
             
-            # Score based on investigation type
-            if 'contradiction' in investigation['type']:
-                # Prioritise documents with dates and multiple entities
-                if metadata.get('has_dates'):
-                    relevance_score += 2.0
-                if len(metadata.get('entities', {}).get('people', [])) > 2:
-                    relevance_score += 1.5
-                    
-                # Check for statement fragments
-                if 'statement_a' in investigation_data:
-                    if investigation_data['statement_a'].lower()[:50] in content_lower:
-                        relevance_score += 5.0
-                if 'statement_b' in investigation_data:
-                    if investigation_data['statement_b'].lower()[:50] in content_lower:
-                        relevance_score += 5.0
+            # Extract findings
+            batch_discoveries = self._extract_discoveries(response)
+            all_discoveries.extend(batch_discoveries)
             
-            elif 'financial' in investigation['type']:
-                # Prioritise financial documents
-                if metadata.get('has_amounts'):
-                    relevance_score += 3.0
-                if metadata.get('classification') == 'financial':
-                    relevance_score += 2.0
-                    
-            elif 'timeline' in investigation['type']:
-                # Prioritise documents with dates
-                if metadata.get('has_dates'):
-                    date_count = len(metadata.get('dates_found', []))
-                    relevance_score += min(5.0, date_count * 0.5)
+            # Extract entities
+            batch_entities = self._extract_entities(response)
+            all_entities.update(batch_entities)
             
-            elif 'entity' in investigation['type']:
-                # Check for entity presence in metadata
-                doc_entities = metadata.get('entities', {})
-                inv_entities = investigation_data.get('entities', [])
-                
-                for entity in inv_entities:
-                    if entity in doc_entities.get('people', []):
-                        relevance_score += 3.0
-                    if entity in doc_entities.get('companies', []):
-                        relevance_score += 3.0
-            
-            # General relevance checks
-            if 'trigger' in investigation_data:
-                trigger_text = str(investigation_data['trigger']).lower()
-                if trigger_text in content_lower:
-                    relevance_score += 2.0
-            
-            # Check for document type relevance
-            doc_class = metadata.get('classification', 'general')
-            if doc_class in ['contract', 'agreement'] and 'breach' in investigation['type']:
-                relevance_score += 1.5
-            elif doc_class == 'correspondence' and 'conspiracy' in investigation['type']:
-                relevance_score += 1.5
-            
-            if relevance_score > 0:
-                scored_docs.append((relevance_score, doc))
+            # Extract timeline events
+            batch_timeline = self._extract_timeline_events(response)
+            all_timeline_events.extend(batch_timeline)
         
-        # Sort by relevance and return top documents
-        scored_docs.sort(key=lambda x: x[0], reverse=True)
-        relevant_docs = [doc for score, doc in scored_docs[:50]]  # Top 50 most relevant
+        # Build complete timeline
+        complete_timeline = self._build_timeline(all_timeline_events)
         
-        print(f"    Filtered {len(all_docs)} documents to {len(relevant_docs)} relevant ones")
-        
-        return relevant_docs
-    
-    def _extract_knowledge_from_response(self, response: str, phase: str):
-        """Extract and store knowledge using enhanced phase executor methods"""
-        
-        # Use phase executor's enhanced extraction methods
-        if hasattr(self.phase_executor, '_extract_entities_and_relationships'):
-            # Extract entities and relationships
-            entities, relationships = self.phase_executor._extract_entities_and_relationships(response)
-            
-            for entity in entities:
-                self.knowledge_graph.add_entity(entity)
-            
-            for relationship in relationships:
-                self.knowledge_graph.add_relationship(relationship)
-            
-            print(f"    Extracted {len(entities)} entities, {len(relationships)} relationships")
-        
-        # Extract patterns
-        if hasattr(self.phase_executor, '_extract_patterns'):
-            patterns = self.phase_executor._extract_patterns(response)
-            for pattern in patterns:
-                self.knowledge_graph.add_pattern(pattern)
-            print(f"    Extracted {len(patterns)} patterns")
-        
-        # Extract timeline events
-        if hasattr(self.phase_executor, '_extract_timeline_events'):
-            events = self.phase_executor._extract_timeline_events(response)
-            for event in events:
-                self.knowledge_graph.add_timeline_event(
-                    date=event['date'],
-                    description=event['description'],
-                    entities=event.get('entities', []),
-                    documents=event.get('documents', []),
-                    is_critical=event.get('is_critical', False)
-                )
-            print(f"    Extracted {len(events)} timeline events")
-        
-        # Extract contradictions
-        if hasattr(self.phase_executor, '_extract_contradictions'):
-            contradictions = self.phase_executor._extract_contradictions(response)
-            for contradiction in contradictions:
-                self.knowledge_graph.add_contradiction(contradiction)
-            print(f"    Extracted {len(contradictions)} contradictions")
-    
-    def _extract_discoveries_from_response(self, response: str, phase: str) -> List[Dict]:
-        """Enhanced discovery extraction with multiple detection methods"""
-        
-        discoveries = []
-        
-        # Method 1: Explicit markers
-        markers = ['[NUCLEAR]', '[CRITICAL]', '[SUSPICIOUS]', '[PATTERN]', 
-                  '[MISSING]', '[TIMELINE]', '[FINANCIAL]', '[RELATIONSHIP]', '[ADMISSION]']
-        
-        for marker in markers:
-            if marker in response:
-                import re
-                pattern = rf'{re.escape(marker)}\s*([^\n\[]+)'
-                findings = re.findall(pattern, response)
-                
-                for finding in findings:
-                    discovery = {
-                        'type': marker.strip('[]'),
-                        'content': finding.strip(),
-                        'phase': phase,
-                        'confidence': self._calculate_discovery_confidence(marker, finding)
-                    }
-                    discoveries.append(discovery)
-                    
-                    # Log to knowledge graph
-                    importance_map = {
-                        'NUCLEAR': 'NUCLEAR',
-                        'CRITICAL': 'CRITICAL',
-                        'SUSPICIOUS': 'HIGH',
-                        'PATTERN': 'MEDIUM',
-                        'MISSING': 'HIGH',
-                        'TIMELINE': 'MEDIUM',
-                        'FINANCIAL': 'HIGH',
-                        'RELATIONSHIP': 'MEDIUM',
-                        'ADMISSION': 'CRITICAL'
-                    }
-                    
-                    self.knowledge_graph.log_discovery(
-                        discovery_type=marker.strip('[]'),
-                        content=finding[:500],
-                        importance=importance_map.get(marker.strip('[]'), 'MEDIUM'),
-                        phase=phase
-                    )
-        
-        # Method 2: Semantic discovery patterns
-        semantic_patterns = [
-            (r'discovered that\s+([^.]+)', 'DISCOVERY'),
-            (r'evidence shows?\s+([^.]+)', 'EVIDENCE'),
-            (r'impossible that\s+([^.]+)', 'IMPOSSIBILITY'),
-            (r'hidden\s+([^.]+)', 'CONCEALMENT'),
-            (r'failed to disclose\s+([^.]+)', 'WITHHOLDING')
-        ]
-        
-        for pattern, discovery_type in semantic_patterns:
-            matches = re.findall(pattern, response, re.IGNORECASE)
-            for match in matches:
-                discovery = {
-                    'type': discovery_type,
-                    'content': match.strip(),
-                    'phase': phase,
-                    'confidence': 0.7
-                }
-                discoveries.append(discovery)
-        
-        # Method 3: Extract financial anomalies
-        if hasattr(self.phase_executor, '_extract_financial_anomalies'):
-            anomalies = self.phase_executor._extract_financial_anomalies(response)
-            for anomaly in anomalies:
-                if anomaly.get('severity', 0) >= 7:
-                    discovery = {
-                        'type': 'FINANCIAL_ANOMALY',
-                        'content': anomaly['description'],
-                        'phase': phase,
-                        'confidence': 0.8,
-                        'metadata': anomaly
-                    }
-                    discoveries.append(discovery)
-        
-        return discoveries
-    
-    def _extract_investigation_findings(self, response: str, investigation: Dict) -> Dict:
-        """Enhanced extraction of investigation findings"""
-        
-        findings = {
-            'summary': '',
-            'contradictions': [],
-            'patterns': [],
-            'entities': [],
-            'spawn_children': [],
-            'confidence': 0.7,
-            'evidence_found': [],
-            'next_steps': []
-        }
-        
-        # Extract summary (first substantial paragraph)
-        paragraphs = response.split('\n\n')
-        for para in paragraphs:
-            if len(para) > 100:  # Find first substantial paragraph
-                findings['summary'] = para[:500]
-                break
-        
-        # Extract contradictions using phase executor
-        if hasattr(self.phase_executor, '_extract_contradictions'):
-            contradictions = self.phase_executor._extract_contradictions(response)
-            findings['contradictions'] = [c.__dict__ for c in contradictions]
-        
-        # Extract patterns
-        if hasattr(self.phase_executor, '_extract_patterns'):
-            patterns = self.phase_executor._extract_patterns(response)
-            findings['patterns'] = [p.__dict__ for p in patterns]
-        
-        # Extract entities
-        if hasattr(self.phase_executor, '_extract_entities_and_relationships'):
-            entities, relationships = self.phase_executor._extract_entities_and_relationships(response)
-            findings['entities'] = [e.__dict__ for e in entities]
-        
-        # Look for child investigation triggers
-        investigation_triggers = [
-            r'\[INVESTIGATE\]\s*([^\n]+)',
-            r'requires? (?:further|deeper) investigation:?\s*([^\n]+)',
-            r'need to (?:investigate|explore):?\s*([^\n]+)',
-            r'follow up on:?\s*([^\n]+)'
-        ]
-        
-        for trigger_pattern in investigation_triggers:
-            inv_matches = re.findall(trigger_pattern, response, re.IGNORECASE)
-            for inv_text in inv_matches[:3]:  # Max 3 children
-                findings['spawn_children'].append({
-                    'type': 'follow_up',
-                    'data': {
-                        'trigger': inv_text[:200],
-                        'parent_id': investigation['id'],
-                        'parent_type': investigation['type']
-                    },
-                    'priority': 6.0
-                })
-        
-        # Extract evidence references
-        doc_refs = re.findall(r'DOC[_\-]?\d+', response)
-        findings['evidence_found'] = list(set(doc_refs))[:20]
-        
-        # Extract next steps
-        next_steps_pattern = r'(?:next steps?|action items?|todo|must|should):?\s*([^\n]+)'
-        next_matches = re.findall(next_steps_pattern, response, re.IGNORECASE)
-        findings['next_steps'] = [step.strip() for step in next_matches[:5]]
-        
-        # Calculate overall confidence
-        findings['confidence'] = self._calculate_findings_confidence(findings)
-        
-        return findings
-    
-    def _calculate_discovery_confidence(self, marker: str, content: str) -> float:
-        """Calculate confidence score for a discovery"""
-        
-        base_confidence = {
-            '[NUCLEAR]': 0.9,
-            '[CRITICAL]': 0.85,
-            '[SUSPICIOUS]': 0.7,
-            '[PATTERN]': 0.75,
-            '[MISSING]': 0.8,
-            '[TIMELINE]': 0.7,
-            '[FINANCIAL]': 0.8,
-            '[RELATIONSHIP]': 0.65,
-            '[ADMISSION]': 0.9
-        }
-        
-        confidence = base_confidence.get(marker, 0.5)
-        
-        # Boost for document references
-        if re.search(r'DOC[_\-]?\d+', content):
-            confidence += 0.1
-        
-        # Boost for specific dates
-        if re.search(r'\d{4}-\d{2}-\d{2}', content):
-            confidence += 0.05
-        
-        # Boost for monetary amounts
-        if re.search(r'[£$€]\s*[\d,]+', content):
-            confidence += 0.05
-        
-        return min(1.0, confidence)
-    
-    def _calculate_findings_confidence(self, findings: Dict) -> float:
-        """Calculate overall confidence for investigation findings"""
-        
-        confidence = 0.5
-        
-        # Increase based on evidence found
-        if findings['contradictions']:
-            confidence += 0.15
-        if findings['patterns']:
-            confidence += 0.1
-        if findings['evidence_found']:
-            confidence += min(0.2, len(findings['evidence_found']) * 0.02)
-        if findings['entities']:
-            confidence += min(0.1, len(findings['entities']) * 0.02)
-        
-        return min(1.0, confidence)
-    
-    def _update_knowledge_from_results(self, results: Dict, phase: str):
-        """Update knowledge graph with phase results"""
-        
-        # Extract and store any synthesis text
-        if 'synthesis' in results:
-            self._extract_knowledge_from_response(results['synthesis'], phase)
-        
-        # Process discoveries
-        if 'discoveries' in results:
-            for discovery in results['discoveries']:
-                self.knowledge_graph.log_discovery(
-                    discovery_type=discovery.get('type', 'UNKNOWN'),
-                    content=discovery.get('content', '')[:500],
-                    importance='HIGH' if discovery.get('type') in ['NUCLEAR', 'CRITICAL'] else 'MEDIUM',
-                    phase=phase
-                )
-        
-        # Process contradictions
-        if 'contradictions' in results or 'critical_contradictions' in results:
-            # These should already be added to knowledge graph by phase executor
-            pass
-    
-    # ============================================================
-    # EXISTING METHODS - Kept unchanged
-    # ============================================================
-    
-    def _save_phase_output(self, phase: str, results: Dict):
-        """Save phase output to file"""
-        
-        phase_dir = self.config.analysis_dir / f"phase_{phase}"
-        phase_dir.mkdir(parents=True, exist_ok=True)
-        
-        # Save synthesis
-        if 'synthesis' in results:
-            synthesis_file = phase_dir / "synthesis.md"
-            with open(synthesis_file, 'w', encoding='utf-8') as f:
-                f.write(f"# Phase {phase} Analysis\n\n")
-                f.write(f"*Documents Processed: {results.get('documents_processed', 0)}*\n\n")
-                f.write("---\n\n")
-                f.write(results['synthesis'])
-        
-        # Save metadata
-        metadata_file = phase_dir / "metadata.json"
-        with open(metadata_file, 'w', encoding='utf-8') as f:
-            json.dump(results.get('metadata', {}), f, indent=2)
-    
-    def _save_synthesis(self, synthesis: Dict):
-        """Save synthesis results"""
-        
-        synthesis_file = self.config.reports_dir / f"synthesis_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md"
-        with open(synthesis_file, 'w', encoding='utf-8') as f:
-            f.write("# Strategic Synthesis - Lismore v Process Holdings\n\n")
-            f.write(synthesis['narrative'])
-    
-    def _save_results(self, results: Dict):
-        """Save complete results"""
-        
-        results_file = self.config.output_dir / f"complete_results_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
-        
-        # Convert to serialisable format
-        serialisable_results = {
-            'phases': {k: {'summary': v.get('synthesis', '')[:1000]} for k, v in results['phases'].items()},
-            'investigations_count': len(results['investigations']),
+        results = {
+            'phase': '2',
+            'strategy': 'foundation_intelligence',
+            'documents_processed': len(documents),
+            'batches_processed': len(batches),
+            'discoveries': all_discoveries,
+            'entities': all_entities,
+            'timeline': complete_timeline,
+            'document_analysis': self._analyse_documents(documents, all_discoveries),
             'timestamp': datetime.now().isoformat()
         }
         
-        with open(results_file, 'w', encoding='utf-8') as f:
-            json.dump(serialisable_results, f, indent=2)
+        return results
     
-    def _save_state(self):
-        """Save orchestrator state"""
+    def _execute_pattern_phase(self, context: str) -> Dict:
+        """
+        Phase 3: Pattern recognition and deep analysis
+        """
         
-        state_file = self.config.output_dir / ".orchestrator_state.json"
-        with open(state_file, 'w', encoding='utf-8') as f:
-            json.dump(self.state, f, indent=2)
+        print("  Strategy: Deep pattern recognition and contradiction mining")
+        
+        documents = self._load_phase_documents('case_documents')
+        
+        # Build pattern discovery prompt with full memory context
+        prompt = self.orchestrator.autonomous_prompts.pattern_discovery_prompt(
+            documents=documents[:100],  # Sample for pattern analysis
+            known_patterns={},
+            context={'phase_context': context}
+        )
+        
+        # Call Claude with maximum creativity
+        print("  • Discovering patterns with high creativity...")
+        response, metadata = self.orchestrator.api_client.call_claude(
+            prompt=prompt,
+            temperature=0.9,  # High creativity
+            task_type='pattern_recognition',
+            phase='3'
+        )
+        
+        # Extract patterns
+        patterns = self._extract_patterns(response)
+        
+        # Mine contradictions
+        print("  • Mining contradictions...")
+        contradiction_prompt = self._build_contradiction_prompt(documents[:100], context)
+        contradiction_response, _ = self.orchestrator.api_client.call_claude(
+            prompt=contradiction_prompt,
+            task_type='contradiction_analysis',
+            phase='3'
+        )
+        
+        contradictions = self._extract_contradictions(contradiction_response)
+        
+        # Detect gaps
+        print("  • Detecting document gaps...")
+        gap_detection_prompt = self._build_gap_detection_prompt(documents, context)
+        gap_response, _ = self.orchestrator.api_client.call_claude(
+            prompt=gap_detection_prompt,
+            task_type='gap_detection',
+            phase='3'
+        )
+        
+        gaps = self._extract_gaps(gap_response)
+        
+        results = {
+            'phase': '3',
+            'strategy': 'pattern_recognition_deep_analysis',
+            'patterns': patterns,
+            'contradictions': contradictions,
+            'gaps': gaps,
+            'strategic_patterns': [p for p in patterns if p.get('strategic_value', 0) > 7],
+            'synthesis': response[:3000],
+            'metadata': metadata,
+            'timestamp': datetime.now().isoformat()
+        }
+        
+        return results
     
-    def _load_state(self):
-        """Load orchestrator state if exists"""
+    def _execute_adversarial_phase(self, context: str) -> Dict:
+        """
+        Phase 4: Adversarial intelligence - red team analysis
+        """
         
-        state_file = self.config.output_dir / ".orchestrator_state.json"
-        if state_file.exists():
-            with open(state_file, 'r', encoding='utf-8') as f:
-                saved_state = json.load(f)
-                self.state.update(saved_state)
+        print("  Strategy: Adversarial red team analysis")
+        
+        # Build adversarial analysis prompt
+        prompt = f"""{context}
+
+<adversarial_analysis>
+PHASE 4: ADVERSARIAL INTELLIGENCE
+
+Your task is three-fold:
+
+1. RED TEAM ANALYSIS - Process Holdings' Perspective
+   - What are their BEST arguments?
+   - What evidence do they have?
+   - How will they attack our position?
+   - What are their strategic options?
+   
+2. OFFENSIVE STRATEGY - Lismore's Attack
+   - How do we destroy their arguments pre-emptively?
+   - What's our strongest line of attack?
+   - What evidence is devastating to them?
+   - What's our nuclear option?
+   
+3. DEFENSIVE STRATEGY - Protecting Lismore
+   - Where are we vulnerable?
+   - How do we shore up weaknesses?
+   - What counter-arguments do we prepare?
+   - What's our fallback position?
+
+Think like both sides. Then give Lismore the winning strategy.
+</adversarial_analysis>"""
+        
+        # Call Claude for adversarial analysis
+        print("  • Performing red team analysis...")
+        response, metadata = self.orchestrator.api_client.call_claude(
+            prompt=prompt,
+            temperature=0.7,
+            task_type='adversarial_analysis',
+            phase='4'
+        )
+        
+        # Extract adversarial intelligence
+        adversarial_intel = self._extract_adversarial_intelligence(response)
+        
+        results = {
+            'phase': '4',
+            'strategy': 'adversarial_intelligence',
+            'red_team_analysis': adversarial_intel.get('red_team', []),
+            'offensive_strategy': adversarial_intel.get('offensive', []),
+            'defensive_strategy': adversarial_intel.get('defensive', []),
+            'strategic_insights': adversarial_intel.get('insights', {}),
+            'synthesis': response[:3000],
+            'metadata': metadata,
+            'timestamp': datetime.now().isoformat()
+        }
+        
+        return results
     
-    def _print_summary(self, results: Dict):
-        """Print execution summary"""
+    def _execute_creative_phase(self, context: str) -> Dict:
+        """
+        Phase 5: Novel theories and creative strategy
+        """
         
-        print("\n" + "="*60)
-        print("EXECUTION SUMMARY")
-        print("="*60)
+        print("  Strategy: Creative legal theory development")
         
-        # Calculate statistics
-        stats = self.knowledge_graph.get_statistics()
+        # Build creative strategy prompt
+        prompt = f"""{context}
+
+<creative_strategy>
+PHASE 5: NOVEL THEORIES & CREATIVE STRATEGY
+
+You have MASTER-level knowledge of this case.
+
+Your task: Generate unprecedented legal strategies.
+
+1. NOVEL LEGAL THEORIES
+   - What arguments have NEVER been made in this context?
+   - What creative interpretations of law apply?
+   - What precedents can we use innovatively?
+   
+2. PROCEDURAL INNOVATIONS
+   - What procedural moves would surprise them?
+   - What jurisdictional strategies apply?
+   - What alternative dispute resolution leverage exists?
+   
+3. CREATIVE SETTLEMENT STRUCTURES
+   - What settlement terms maximise our leverage?
+   - What non-monetary remedies could we pursue?
+   - What face-saving options exist for them?
+   
+4. THE UNTHINKABLE MOVE
+   - What's the bold strategy that actually wins?
+   - What would a legal genius do here?
+   - What's the move they'll never see coming?
+
+Think beyond convention. Find the winning innovation.
+</creative_strategy>"""
         
-        print(f"Phases Completed: {len(results['phases'])}")
-        print(f"Investigations Conducted: {len(results['investigations'])}")
-        print(f"Entities Identified: {stats['entities']}")
-        print(f"Relationships Mapped: {stats['relationships']}")
-        print(f"Contradictions Found: {stats['contradictions']}")
-        print(f"Patterns Discovered: {stats['patterns']}")
-        print(f"Timeline Events: {stats['timeline_events']}")
+        # Call Claude with maximum creativity
+        print("  • Generating novel theories with maximum creativity...")
+        response, metadata = self.orchestrator.api_client.call_claude(
+            prompt=prompt,
+            temperature=0.95,  # Maximum creativity
+            task_type='hypothesis_generation',
+            phase='5'
+        )
         
-        # API usage
-        usage = self.api_client.get_usage_report()
-        print(f"\nAPI Usage:")
-        print(f"  Total Calls: {usage['summary']['total_calls']}")
-        print(f"  Estimated Cost: ${usage['summary']['estimated_cost_usd']}")
+        # Extract novel theories
+        novel_theories = self._extract_novel_theories(response)
         
-        print("\n" + "="*60)
+        results = {
+            'phase': '5',
+            'strategy': 'creative_innovation',
+            'novel_legal_theories': novel_theories.get('legal_theories', []),
+            'procedural_innovations': novel_theories.get('procedural', []),
+            'creative_strategies': novel_theories.get('creative', []),
+            'unthinkable_moves': novel_theories.get('unthinkable', []),
+            'synthesis': response[:3000],
+            'metadata': metadata,
+            'timestamp': datetime.now().isoformat()
+        }
+        
+        return results
+    
+    def _execute_synthesis_phase(self, context: str) -> Dict:
+        """
+        Phase 6: Synthesis and weaponisation
+        """
+        
+        print("  Strategy: Strategic synthesis and weaponisation")
+        
+        # Build synthesis prompt
+        prompt = f"""{context}
+
+<final_synthesis>
+PHASE 6: SYNTHESIS & WEAPONISATION
+
+You have COMPLETE MASTERY of this case.
+
+Your final task: Package everything for victory.
+
+DELIVERABLES:
+
+1. PRIORITISED ARGUMENT HIERARCHY
+   - What do we lead with?
+   - What's our strongest evidence?
+   - What's the knockout punch?
+   
+2. EVIDENCE PACKAGES
+   - Organise evidence for tribunal presentation
+   - Create exhibit bundles
+   - Prepare witness examination guides
+   
+3. IMPLEMENTATION STRATEGY
+   - Step-by-step litigation plan
+   - Timeline for actions
+   - Resource requirements
+   
+4. SETTLEMENT STRATEGY
+   - Maximum pressure points
+   - Optimal timing
+   - Negotiation tactics
+   
+5. TRIAL STRATEGY (IF SETTLEMENT FAILS)
+   - Opening statement outline
+   - Evidence presentation order
+   - Closing argument themes
+
+6. WAR ROOM BRIEFING
+   - Executive summary for barristers
+   - Key facts at a glance
+   - Strategic recommendations
+
+Package everything. Make it tribunal-ready. This must win.
+</final_synthesis>"""
+        
+        # Call Claude for final synthesis
+        print("  • Generating final strategic synthesis...")
+        response, metadata = self.orchestrator.api_client.call_claude(
+            prompt=prompt,
+            temperature=0.4,  # Precise synthesis
+            task_type='synthesis',
+            phase='6'
+        )
+        
+        # Extract final deliverables
+        final_deliverables = self._extract_final_deliverables(response)
+        
+        results = {
+            'phase': '6',
+            'strategy': 'synthesis_weaponisation',
+            'argument_hierarchy': final_deliverables.get('arguments', []),
+            'evidence_packages': final_deliverables.get('evidence', {}),
+            'implementation_strategy': final_deliverables.get('implementation', {}),
+            'settlement_strategy': final_deliverables.get('settlement', {}),
+            'trial_strategy': final_deliverables.get('trial', {}),
+            'war_room_briefing': final_deliverables.get('briefing', ''),
+            'synthesis': response,
+            'metadata': metadata,
+            'timestamp': datetime.now().isoformat()
+        }
+        
+        # Save final synthesis as separate document
+        self._save_final_synthesis(response)
+        
+        return results
+    
+    def _execute_generic_phase(self, phase: str, context: str) -> Dict:
+        """
+        Generic phase execution for custom phases
+        """
+        
+        print(f"  Strategy: Generic investigation for phase {phase}")
+        
+        documents = self._load_phase_documents('case_documents')
+        
+        prompt = self.orchestrator.autonomous_prompts.investigation_prompt(
+            documents=documents[:50],
+            context={'phase_context': context},
+            phase=phase
+        )
+        
+        response, metadata = self.orchestrator.api_client.call_claude(
+            prompt=prompt,
+            task_type='investigation',
+            phase=phase
+        )
+        
+        return {
+            'phase': phase,
+            'strategy': 'generic',
+            'synthesis': response[:3000],
+            'metadata': metadata,
+            'timestamp': datetime.now().isoformat()
+        }
+    
+    # ==================== HELPER METHODS ====================
+    
+    def _load_phase_documents(self, doc_type: str) -> List[Dict]:
+        """Load documents for phase"""
+        
+        if doc_type == 'legal_knowledge':
+            path = self.config.legal_knowledge_dir
+        elif doc_type == 'case_documents':
+            path = self.config.case_documents_dir
+        else:
+            path = self.config.case_documents_dir
+        
+        return self.orchestrator._load_documents(path)
+    
+    def _build_organisation_prompt(self, documents: List[Dict], context: str) -> str:
+        """Build prompt for document organisation"""
+        
+        # Format document list
+        doc_list = []
+        for i, doc in enumerate(documents[:200]):  # First 200 for overview
+            doc_list.append(f"[DOC_{i:04d}] {doc.get('filename', 'Unknown')} - {len(doc.get('content', ''))} chars")
+        
+        prompt = f"""{context}
+
+<document_organisation_task>
+You have {len(documents)} case documents to organise.
+
+DOCUMENTS TO ORGANISE:
+{chr(10).join(doc_list[:100])}
+... and {len(documents) - 100} more documents
+
+YOUR TASK:
+Organise these documents into strategic categories for deep analysis.
+
+You have COMPLETE FREEDOM to create categories that make sense.
+
+Consider organising by:
+- Strategic importance (nuclear/critical/important/background)
+- Document type (contracts/emails/financial/procedural)
+- Time period (pre-arbitration/arbitration/post-award)
+- Entity focus (by key players)
+- Evidentiary value (smoking guns/supporting/neutral)
+- Suspicious indicators (potential withholding/contradictions)
+
+Create an organisation structure that would best reveal:
+- Their deception
+- Missing documents
+- Contradictions
+- Strategic weaknesses
+
+Output your organisation structure as:
+CATEGORY: [Name]
+DESCRIPTION: [Why this category matters]
+CRITERIA: [What belongs here]
+PRIORITY: [1-10]
+DOCUMENTS: [List document IDs]
+</document_organisation_task>"""
+        
+        return prompt
+    
+    def _build_contradiction_prompt(self, documents: List[Dict], context: str) -> str:
+        """Build prompt for contradiction mining"""
+        
+        prompt = f"""{context}
+
+<contradiction_mining>
+Hunt for contradictions ruthlessly.
+
+Find where their statements conflict.
+Find where documents contradict each other.
+Find where actions contradict claims.
+
+Rate each contradiction 1-10 for severity.
+Severity 9-10 = Case-destroying contradictions
+</contradiction_mining>
+
+DOCUMENTS:
+{self._format_documents_for_prompt(documents[:50])}
+
+Find EVERY contradiction. Rate severity. Explain implications.
+</contradiction_mining>"""
+        
+        return prompt
+    
+    def _build_gap_detection_prompt(self, documents: List[Dict], context: str) -> str:
+        """Build prompt for gap detection"""
+        
+        prompt = f"""{context}
+
+<gap_detection>
+Find evidence of withheld documents.
+
+Look for:
+- "As discussed in previous email..." (where's that email?)
+- "See attached..." (where's the attachment?)
+- "Following up on..." (where's the original?)
+- Email thread gaps (missing earlier messages)
+- Meeting references without records
+- Document version gaps (v2.1 and v2.3 exist, where's v2.2?)
+
+For each gap, specify:
+- What's missing
+- How we know it existed
+- Why it matters
+- Who likely withheld it
+</gap_detection>
+
+DOCUMENTS:
+{self._format_documents_for_prompt(documents[:100])}
+
+Find EVERY missing document. Build the withholding case.
+</gap_detection>"""
+        
+        return prompt
+    
+    def _format_documents_for_prompt(self, documents: List[Dict]) -> str:
+        """Format documents for prompt"""
+        formatted = []
+        for i, doc in enumerate(documents):
+            formatted.append(f"[DOC_{i:04d}] {doc.get('filename', 'Unknown')}\n{doc.get('content', '')[:500]}\n")
+        return "\n".join(formatted)
+    
+    def _extract_organisation_structure(self, response: str) -> Dict:
+        """Extract organisation structure from Claude's response"""
+        # Parse organisation structure
+        # This would parse Claude's structured output
+        return {
+            'categories': [],
+            'document_mappings': {}
+        }
+    
+    def _save_organisation_structure(self, organisation: Dict):
+        """Save organisation structure to file"""
+        output_file = self.config.organised_docs_dir / "organisation_structure.json"
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(organisation, f, indent=2, ensure_ascii=False)
+    
+    def _classify_documents(self, documents: List[Dict], response: str) -> Dict:
+        """Classify documents based on response"""
+        classifications = {}
+        for doc in documents:
+            doc_id = doc.get('id', doc.get('filename'))
+            classifications[doc_id] = {
+                'category': 'uncategorised',
+                'importance': 5,
+                'strategic_value': 0
+            }
+        return classifications
+    
+    def _extract_discoveries(self, response: str) -> List[Dict]:
+        """Extract discoveries from response"""
+        import re
+        discoveries = []
+        
+        markers = {
+            'NUCLEAR': r'\[NUCLEAR\]\s*([^\n]+)',
+            'CRITICAL': r'\[CRITICAL\]\s*([^\n]+)',
+            'PATTERN': r'\[PATTERN\]\s*([^\n]+)',
+            'SUSPICIOUS': r'\[SUSPICIOUS\]\s*([^\n]+)'
+        }
+        
+        for discovery_type, pattern in markers.items():
+            matches = re.findall(pattern, response)
+            for match in matches:
+                discoveries.append({
+                    'type': discovery_type,
+                    'content': match,
+                    'timestamp': datetime.now().isoformat()
+                })
+        
+        return discoveries
+    
+    def _extract_entities(self, response: str) -> Dict:
+        """Extract entities from response"""
+        # Simple entity extraction
+        return {}
+    
+    def _extract_timeline_events(self, response: str) -> List[Dict]:
+        """Extract timeline events from response"""
+        return []
+    
+    def _build_timeline(self, events: List[Dict]) -> Dict:
+        """Build complete timeline from events"""
+        return {
+            'events': events,
+            'gaps': [],
+            'impossibilities': []
+        }
+    
+    def _analyse_documents(self, documents: List[Dict], discoveries: List[Dict]) -> Dict:
+        """Analyse documents based on discoveries"""
+        return {}
+    
+    def _extract_patterns(self, response: str) -> List[Dict]:
+        """Extract patterns from response"""
+        return []
+    
+    def _extract_contradictions(self, response: str) -> List[Dict]:
+        """Extract contradictions from response"""
+        return []
+    
+    def _extract_gaps(self, response: str) -> List[Dict]:
+        """Extract document gaps from response"""
+        return []
+    
+    def _extract_adversarial_intelligence(self, response: str) -> Dict:
+        """Extract adversarial intelligence from response"""
+        return {
+            'red_team': [],
+            'offensive': [],
+            'defensive': [],
+            'insights': {}
+        }
+    
+    def _extract_novel_theories(self, response: str) -> Dict:
+        """Extract novel theories from response"""
+        return {
+            'legal_theories': [],
+            'procedural': [],
+            'creative': [],
+            'unthinkable': []
+        }
+    
+    def _extract_final_deliverables(self, response: str) -> Dict:
+        """Extract final deliverables from response"""
+        return {
+            'arguments': [],
+            'evidence': {},
+            'implementation': {},
+            'settlement': {},
+            'trial': {},
+            'briefing': response[:2000]
+        }
+    
+    def _save_final_synthesis(self, response: str):
+        """Save final synthesis as separate document"""
+        output_file = self.config.reports_dir / f"final_synthesis_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+        with open(output_file, 'w', encoding='utf-8') as f:
+            f.write(response)
+        print(f"  • Final synthesis saved to: {output_file}")

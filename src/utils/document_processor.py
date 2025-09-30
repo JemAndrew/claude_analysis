@@ -1,20 +1,16 @@
 #!/usr/bin/env python3
 """
-Enhanced Document Loader with Metadata Extraction
+Document Loader with Metadata Extraction
 Handles all document types for litigation intelligence
+British English throughout - Lismore v Process Holdings
 """
 
 from pathlib import Path
-from dotenv import load_dotenv
-import os
-
-env_path = Path(__file__).parent / '.env'
-load_dotenv(dotenv_path=env_path, override=True)
-
 from typing import Dict, List, Optional, Tuple, Any
 from datetime import datetime
 import hashlib
 import json
+import re
 
 # PDF libraries
 try:
@@ -30,16 +26,25 @@ except ImportError:
     PDFPLUMBER_AVAILABLE = False
 
 import PyPDF2
-import docx
-import chardet
-import re
+
+try:
+    import docx
+    DOCX_AVAILABLE = True
+except ImportError:
+    DOCX_AVAILABLE = False
+
+try:
+    import chardet
+    CHARDET_AVAILABLE = True
+except ImportError:
+    CHARDET_AVAILABLE = False
 
 
 class DocumentLoader:
     """Advanced document loading with metadata extraction"""
     
-    def __init__(self, config):
-        self.config = config
+    def __init__(self):
+        """Initialise document loader"""
         self.load_stats = {
             'total_loaded': 0,
             'failed_loads': 0,
@@ -63,7 +68,7 @@ class DocumentLoader:
         """
         
         if not directory.exists():
-            print(f"Warning: Directory {directory} does not exist")
+            print(f"⚠️  Directory {directory} does not exist")
             return []
         
         # Default document types
@@ -85,7 +90,7 @@ class DocumentLoader:
         if max_docs:
             all_files = all_files[:max_docs]
         
-        print(f"Loading {len(all_files)} documents from {directory}")
+        print(f"📂 Loading {len(all_files)} documents from {directory.name}")
         
         for file_path in all_files:
             files_processed += 1
@@ -99,18 +104,24 @@ class DocumentLoader:
                     documents.append(document)
                     self.load_stats['total_loaded'] += 1
             except Exception as e:
-                print(f"  Failed to load {file_path.name}: {e}")
+                print(f"  ⚠️  Failed to load {file_path.name}: {e}")
                 self.load_stats['failed_loads'] += 1
         
         print(f"✅ Loaded {len(documents)} documents successfully")
+        if self.load_stats['failed_loads'] > 0:
+            print(f"⚠️  Failed to load {self.load_stats['failed_loads']} documents")
+        
         return documents
     
     def load_document(self, file_path: Path) -> Optional[Dict]:
         """
         Load single document with metadata extraction
         
+        Args:
+            file_path: Path to document file
+        
         Returns:
-            Document dictionary with content and metadata
+            Document dictionary with content and metadata, or None if load fails
         """
         
         if not file_path.exists():
@@ -148,7 +159,8 @@ class DocumentLoader:
             'filename': file_path.name,
             'path': str(file_path),
             'content': content,
-            'metadata': metadata
+            'metadata': metadata,
+            'loaded_at': datetime.now().isoformat()
         }
         
         # Track statistics
@@ -181,10 +193,17 @@ class DocumentLoader:
                     text += f"\n[PAGE {page_num + 1}]\n{page_text}"
                     
                     # Check for tables and images
-                    if page.get_tables():
-                        metadata['has_tables'] = True
-                    if page.get_images():
-                        metadata['has_images'] = True
+                    try:
+                        if page.get_tables():
+                            metadata['has_tables'] = True
+                    except:
+                        pass
+                    
+                    try:
+                        if page.get_images():
+                            metadata['has_images'] = True
+                    except:
+                        pass
                 
                 metadata['page_count'] = len(doc)
                 metadata['extraction_method'] = 'PyMuPDF'
@@ -207,8 +226,11 @@ class DocumentLoader:
                         page_text = page.extract_text() or ""
                         text += f"\n[PAGE {i + 1}]\n{page_text}"
                         
-                        if page.extract_tables():
-                            metadata['has_tables'] = True
+                        try:
+                            if page.extract_tables():
+                                metadata['has_tables'] = True
+                        except:
+                            pass
                     
                     metadata['page_count'] = len(pdf.pages)
                     metadata['extraction_method'] = 'pdfplumber'
@@ -238,14 +260,19 @@ class DocumentLoader:
                 return text, metadata
                 
         except Exception as e:
-            print(f"All PDF extraction failed for {file_path}: {e}")
+            print(f"  All PDF extraction methods failed for {file_path.name}: {e}")
             return None, metadata
     
     def _load_docx(self, file_path: Path) -> Optional[str]:
         """Load Word document"""
         
+        if not DOCX_AVAILABLE:
+            print(f"  python-docx not installed, cannot load {file_path.name}")
+            return None
+        
         try:
-            doc = docx.Document(str(file_path))
+            import docx as docx_module
+            doc = docx_module.Document(str(file_path))
             paragraphs = []
             
             for para in doc.paragraphs:
@@ -262,7 +289,7 @@ class DocumentLoader:
             return '\n'.join(paragraphs)
             
         except Exception as e:
-            print(f"Failed to load DOCX {file_path}: {e}")
+            print(f"  Failed to load DOCX {file_path.name}: {e}")
             return None
     
     def _load_json(self, file_path: Path) -> Optional[str]:
@@ -272,27 +299,30 @@ class DocumentLoader:
             with open(file_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
                 # Convert to formatted string
-                return json.dumps(data, indent=2)
+                return json.dumps(data, indent=2, ensure_ascii=False)
         except Exception as e:
-            print(f"Failed to load JSON {file_path}: {e}")
+            print(f"  Failed to load JSON {file_path.name}: {e}")
             return None
     
     def _load_text(self, file_path: Path) -> Optional[str]:
         """Load text file with encoding detection"""
         
         try:
-            # Detect encoding
-            with open(file_path, 'rb') as f:
-                raw_data = f.read(10000)
-                result = chardet.detect(raw_data)
-                encoding = result['encoding'] or 'utf-8'
+            # Detect encoding if chardet available
+            if CHARDET_AVAILABLE:
+                with open(file_path, 'rb') as f:
+                    raw_data = f.read(10000)
+                    result = chardet.detect(raw_data)
+                    encoding = result['encoding'] or 'utf-8'
+            else:
+                encoding = 'utf-8'
             
             # Load with detected encoding
             with open(file_path, 'r', encoding=encoding, errors='ignore') as f:
                 return f.read()
                 
         except Exception as e:
-            print(f"Failed to load text {file_path}: {e}")
+            print(f"  Failed to load text {file_path.name}: {e}")
             return None
     
     def _generate_doc_id(self, file_path: Path) -> str:
@@ -302,11 +332,12 @@ class DocumentLoader:
         path_hash = hashlib.md5(str(file_path).encode()).hexdigest()[:8].upper()
         
         # Prefix based on location
-        if 'legal' in str(file_path).lower():
+        path_str = str(file_path).lower()
+        if 'legal' in path_str:
             prefix = 'LEGAL'
-        elif 'case' in str(file_path).lower():
+        elif 'case' in path_str:
             prefix = 'CASE'
-        elif 'disclosure' in str(file_path).lower():
+        elif 'disclosure' in path_str:
             prefix = 'DISC'
         else:
             prefix = 'DOC'
@@ -359,7 +390,7 @@ class DocumentLoader:
         
         dates = []
         
-        # Multiple date patterns
+        # Multiple date patterns (British format DD/MM/YYYY priority)
         patterns = [
             r'\b\d{1,2}[/-]\d{1,2}[/-]\d{2,4}\b',  # DD/MM/YYYY or MM/DD/YYYY
             r'\b\d{4}[/-]\d{1,2}[/-]\d{1,2}\b',    # YYYY-MM-DD
@@ -386,7 +417,7 @@ class DocumentLoader:
         
         amounts = []
         
-        # Amount patterns
+        # Amount patterns (UK currency priority)
         patterns = [
             r'[£$€]\s*[\d,]+(?:\.\d{2})?(?:\s*(?:million|billion|k|m|bn))?',
             r'[\d,]+(?:\.\d{2})?\s*(?:GBP|USD|EUR)',
@@ -410,12 +441,12 @@ class DocumentLoader:
             'emails': []
         }
         
-        # Extract people (simple pattern)
+        # Extract people (simple pattern for UK names)
         people_pattern = r'\b([A-Z][a-z]+ (?:[A-Z]\. )?[A-Z][a-z]+)\b'
         people = re.findall(people_pattern, content)
         entities['people'] = list(set(people))[:20]
         
-        # Extract companies
+        # Extract companies (UK patterns)
         company_patterns = [
             r'\b\w+\s+(?:Ltd|Limited|Inc|LLC|LLP|Plc|Corp|Corporation)\b',
             r'\b\w+\s+(?:Capital|Holdings|Partners|Group|Ventures)\b'
@@ -469,12 +500,13 @@ class DocumentLoader:
     def get_statistics(self) -> Dict:
         """Get loading statistics"""
         
+        total = self.load_stats['total_loaded'] + self.load_stats['failed_loads']
+        
         return {
             'total_loaded': self.load_stats['total_loaded'],
             'failed_loads': self.load_stats['failed_loads'],
             'by_type': self.load_stats['by_type'],
             'success_rate': (
-                self.load_stats['total_loaded'] / 
-                max(1, self.load_stats['total_loaded'] + self.load_stats['failed_loads'])
+                self.load_stats['total_loaded'] / max(1, total)
             )
         }
