@@ -1,0 +1,185 @@
+# Environment Variables
+.env
+.env.*
+.env.local
+.env.*.local
+*.env
+
+# Configuration Files with Sensitive Data
+config/settings.json
+config/credentials.json
+config/*.key
+config/*.pem
+config/secrets/
+
+# Case-Sensitive Directories (Lismore-specific)
+documents/
+Documents/
+logs/
+Logs/
+memory/
+Memory/
+outputs/
+Outputs/
+findings/
+Findings/
+investigation/
+Investigation/
+case_context/
+Case_Context/
+temp/
+Temp/
+tmp/
+logs/
+outputs/
+analysis/
+investigation/
+case_context/
+costs/
+legal_resources/
+sensitive_docs/
+
+
+
+# Analysis Outputs
+results/
+reports/
+*.report
+*.analysis
+
+# Cache and Runtime
+cache/
+.cache/
+*.cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Database Files
+*.db
+*.sqlite
+*.sqlite3
+*.sql
+
+# API Keys and Authentication
+*.key
+*.pem
+*.cert
+*.crt
+tokens/
+auth/
+credentials/
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.sublime-*
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Node.js (if applicable)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Python Virtual Environments
+venv/
+env/
+ENV/
+.venv/
+.virtualenv/
+*.venv
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+*.cover
+.hypothesis/
+
+# Build Directories
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+
+# Backup Files
+*.bak
+*.backup
+*.old
+*.orig
+*~
+
+# Archive Files (potentially containing sensitive data)
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Data Files (be selective based on your needs)
+*.csv
+*.xlsx
+*.xls
+*.json
+!package.json
+!tsconfig.json
+!jsconfig.json
+
+# Exclude everything in these dirs except .gitkeep
+data/*
+!data/.gitkeep
+raw_data/*
+!raw_data/.gitkeep
+processed_data/*
+!processed_data/.gitkeep
+
+# Legal/Sensitive Documents
+*.pdf
+*.doc
+*.docx
+confidential/
+sensitive/
+private/
+
+# Custom Patterns for Claude Analysis
+*.session
+*.conversation
+*.chat_log
+claude_sessions/
+analysis_cache/
+model_outputs/
+
+# Terraform (if using infrastructure as code)
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# Docker (if containerising)
+.dockerignore
+docker-compose.override.yml
+
+# Keep these files
+!README.md
+!requirements.txt
