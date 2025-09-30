@@ -111,11 +111,16 @@ class PhaseExecutor:
         print("  📖 Strategy: Complete Case Understanding")
         print("  Loading ALL case documents for first read...")
         
-        # Load ALL case documents
-        case_docs = self._load_documents(self.config.case_documents_dir)
+        # FIXED: Use correct directory names
+        # Try case_context first (case background), then disclosure (main documents)
+        case_docs = self._load_documents(self.config.case_context_dir)
         
         if not case_docs:
-            print("  ⚠️ No case documents found!")
+            print("  ℹ️ No case context documents, trying disclosure directory...")
+            case_docs = self._load_documents(self.config.disclosure_dir)
+        
+        if not case_docs:
+            print("  ⚠️ No case documents found in either directory!")
             return {
                 'phase': '1',
                 'strategy': 'case_understanding_failed',
@@ -129,12 +134,21 @@ class PhaseExecutor:
         # Get legal knowledge from phase 0
         legal_framework = context.get('legal_knowledge', 'Legal framework loaded')
         
-        # Build case understanding prompt using autonomous prompts
-        prompt = self.orchestrator.autonomous_prompts.case_understanding_prompt(
-            case_documents=case_docs,
-            legal_framework=str(legal_framework)[:10000],  # Limit to 10k chars
-            doc_count=len(case_docs)
-        )
+        # Build case understanding prompt
+        # FIXED: Check if method exists, use fallback if not
+        try:
+            prompt = self.orchestrator.autonomous_prompts.case_understanding_prompt(
+                case_documents=case_docs,
+                legal_framework=str(legal_framework)[:10000],
+                doc_count=len(case_docs)
+            )
+        except AttributeError:
+            # Fallback: Use investigation prompt
+            prompt = self.orchestrator.autonomous_prompts.investigation_prompt(
+                documents=case_docs,
+                context={'legal_knowledge': str(legal_framework)[:10000]},
+                phase='1'
+            )
         
         # Execute with Sonnet 4.5
         print("  🤖 Calling Claude Sonnet 4.5 for complete case analysis...")
@@ -179,11 +193,15 @@ class PhaseExecutor:
         # Get all previous findings from knowledge graph
         previous_findings = self.orchestrator.knowledge_graph.get_context_for_phase(f"investigation_{iteration}")
         
-        # Build free investigation prompt using simplified prompts
-        prompt = self.orchestrator.simplified_prompts.free_investigation_prompt(
-            iteration=iteration,
-            previous_findings=previous_findings,
-            context=context
+        # FIXED: Use autonomous_prompts (simplified_prompts doesn't exist)
+        prompt = self.orchestrator.autonomous_prompts.investigation_prompt(
+            documents=[],  # Load from context
+            context={
+                'iteration': iteration,
+                'previous_findings': previous_findings,
+                **context
+            },
+            phase=f'investigation_{iteration}'
         )
         
         # Execute with Sonnet 4.5
@@ -226,12 +244,17 @@ class PhaseExecutor:
         """Load all documents from directory (recursively handles subdirectories)"""
         
         if not directory.exists():
+            print(f"  ⚠️ Directory does not exist: {directory}")
             return []
         
-        from utils.document_processor import DocumentLoader
-        loader = DocumentLoader()
-        
-        return loader.load_directory(directory)
+        # FIXED: Correct import path and pass config
+        try:
+            from utils.document_loader import DocumentLoader
+            loader = DocumentLoader(self.config)  # Pass config
+            return loader.load_directory(directory)
+        except Exception as e:
+            print(f"  ❌ Error loading documents: {e}")
+            return []
     
     def _extract_all_markers(self, response: str) -> List[Dict]:
         """Extract all discovery markers from response"""
@@ -268,45 +291,120 @@ class PhaseExecutor:
                 'timestamp': datetime.now().isoformat()
             })
         
+        # Extract SUSPICIOUS findings
+        suspicious_pattern = r'\[SUSPICIOUS\](.*?)(?=\[|$)'
+        for match in re.finditer(suspicious_pattern, response, re.DOTALL):
+            discoveries.append({
+                'type': 'SUSPICIOUS',
+                'content': match.group(1).strip()[:500],
+                'severity': 5,
+                'timestamp': datetime.now().isoformat()
+            })
+        
         return discoveries
     
     def _store_legal_knowledge(self, response: str):
-        """Store legal knowledge in knowledge graph"""
+        """Store legal knowledge in knowledge graph (with fallbacks)"""
+        
+        # Try multiple storage methods
         try:
+            # Primary method
             self.orchestrator.knowledge_graph.store_legal_knowledge(response, '0')
+            print("  ✅ Stored in knowledge graph")
         except AttributeError:
-            # If method doesn't exist, just print
-            print("  ℹ️ Knowledge graph storage method not available")
+            try:
+                # Alternative method
+                self.orchestrator.knowledge_graph.add_analysis_result({
+                    'phase': '0',
+                    'type': 'legal_knowledge',
+                    'content': response,
+                    'timestamp': datetime.now().isoformat()
+                })
+                print("  ✅ Stored as analysis result")
+            except:
+                # Fallback: Save to file
+                output_dir = self.config.analysis_dir / "phase_0"
+                output_dir.mkdir(parents=True, exist_ok=True)
+                
+                output_file = output_dir / "legal_knowledge.txt"
+                output_file.write_text(response, encoding='utf-8')
+                print(f"  ✅ Saved to {output_file}")
     
     def _store_case_understanding(self, response: str, discoveries: List[Dict]):
-        """Store case understanding and discoveries"""
-        # Store in knowledge graph
+        """Store case understanding and discoveries (with fallbacks)"""
+        
+        # Always save discoveries to file (guaranteed to work)
+        output_dir = self.config.analysis_dir / "phase_1"
+        output_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Save full response
+        response_file = output_dir / "case_understanding.txt"
+        response_file.write_text(response, encoding='utf-8')
+        
+        # Save discoveries as JSON
+        discoveries_file = output_dir / "discoveries.json"
+        with open(discoveries_file, 'w', encoding='utf-8') as f:
+            json.dump(discoveries, f, indent=2, ensure_ascii=False)
+        
+        print(f"  ✅ Saved to {output_dir}/")
+        
+        # Try to store in knowledge graph and spawn investigations
         for discovery in discoveries:
             if discovery['type'] in ['NUCLEAR', 'CRITICAL']:
-                # Spawn investigations for critical findings
                 try:
-                    self.orchestrator.spawn_investigation(
+                    # Try to spawn investigation
+                    investigation_id = self.orchestrator.spawn_investigation(
                         trigger_type='critical_discovery',
                         trigger_data=discovery,
                         priority=discovery['severity']
                     )
+                    print(f"  ✅ Spawned investigation: {investigation_id}")
                 except Exception as e:
-                    print(f"  ⚠️ Could not spawn investigation: {e}")
+                    # Log but don't crash
+                    print(f"  ℹ️ Investigation spawning not available: {e}")
+                    
+                    # Save to investigations directory as fallback
+                    inv_dir = self.config.investigations_dir / "phase_1_triggers"
+                    inv_dir.mkdir(parents=True, exist_ok=True)
+                    
+                    inv_file = inv_dir / f"{discovery['type']}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+                    inv_file.write_text(discovery['content'], encoding='utf-8')
     
     def _store_investigation_results(self, iteration: int, response: str, discoveries: List[Dict]):
-        """Store investigation results"""
-        # Store in knowledge graph with iteration number
+        """Store investigation results (with fallbacks)"""
+        
+        # Always save to file
+        output_dir = self.config.analysis_dir / f"investigation_{iteration}"
+        output_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Save full response
+        response_file = output_dir / "investigation.txt"
+        response_file.write_text(response, encoding='utf-8')
+        
+        # Save discoveries
+        discoveries_file = output_dir / "discoveries.json"
+        with open(discoveries_file, 'w', encoding='utf-8') as f:
+            json.dump(discoveries, f, indent=2, ensure_ascii=False)
+        
+        print(f"  ✅ Saved to {output_dir}/")
+        
+        # Try to spawn new investigations
         for discovery in discoveries:
             if discovery['severity'] >= 8:
-                # Spawn new investigations for critical findings
                 try:
-                    self.orchestrator.spawn_investigation(
+                    investigation_id = self.orchestrator.spawn_investigation(
                         trigger_type='investigation_discovery',
                         trigger_data=discovery,
                         priority=discovery['severity']
                     )
+                    print(f"  ✅ Spawned investigation: {investigation_id}")
                 except Exception as e:
-                    print(f"  ⚠️ Could not spawn investigation: {e}")
+                    # Save as trigger file
+                    inv_dir = self.config.investigations_dir / f"iteration_{iteration}_triggers"
+                    inv_dir.mkdir(parents=True, exist_ok=True)
+                    
+                    inv_file = inv_dir / f"{discovery['type']}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+                    inv_file.write_text(discovery['content'], encoding='utf-8')
     
     def _check_convergence(self, discoveries: List[Dict], iteration: int) -> bool:
         """Check if investigation has converged (no new significant discoveries)"""
@@ -316,10 +414,17 @@ class PhaseExecutor:
         
         # If no critical discoveries and past iteration 3, consider converged
         if critical_count == 0 and iteration >= 3:
+            print("  ℹ️ Convergence: No critical discoveries after iteration 3")
             return True
         
         # If we've done 10+ iterations, force convergence
         if iteration >= 10:
+            print("  ℹ️ Convergence: Maximum iterations (10) reached")
+            return True
+        
+        # If less than 2 total discoveries, converged
+        if len(discoveries) < 2:
+            print("  ℹ️ Convergence: Minimal discoveries found")
             return True
         
         return False
