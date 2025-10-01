@@ -1,430 +1,363 @@
 #!/usr/bin/env python3
 """
-Phase Executor - Simplified for Maximum Claude Autonomy
-Only 3 phase types: Legal Knowledge, Case Understanding, Free Investigation
-British English throughout - Lismore v Process Holdings
+Phase Executor for Dynamic Phase Management
+Handles Phase 0 (knowledge) and dynamic iteration logic only
+NO FIXED PHASES 1-7 - Pure Phase 0, 1, 2-N structure
 """
 
 from typing import Dict, List, Optional, Any
 from datetime import datetime
-from pathlib import Path
 import json
 import re
+import hashlib
+from pathlib import Path
 
 
 class PhaseExecutor:
-    """Executes phases with complete Claude autonomy"""
+    """Executes Phase 0 and provides iteration support - British English"""
     
     def __init__(self, config, orchestrator):
         self.config = config
         self.orchestrator = orchestrator
         
-        # Simple phase mapping - only 3 real phase types
-        self.phase_strategies = {
-            '0': self._execute_legal_knowledge,
-            '1': self._execute_case_understanding,
-            # Everything else uses free investigation
-        }
+    # ═══════════════════════════════════════════════════════════════
+    # PHASE 0: KNOWLEDGE ABSORPTION (ONLY FIXED PHASE)
+    # ═══════════════════════════════════════════════════════════════
     
-    def execute(self, phase: str, context: Dict) -> Dict:
+    def execute_phase_0(self, context: Dict) -> Dict:
         """
-        Execute phase with appropriate strategy
-        Phase 0 = Legal knowledge only
-        Phase 1 = Case understanding
-        Phase 2+ = Free investigation iterations
+        Phase 0: Combined legal and case knowledge absorption
+        This is the ONLY fixed phase - everything else is dynamic iterations
         """
         
-        print(f"\n{'='*60}")
-        print(f"PHASE {phase}")
-        print(f"{'='*60}")
+        print("  📚 Strategy: Unified knowledge synthesis (legal + case context)")
         
-        # Check if specific strategy exists
-        if phase in self.phase_strategies:
-            return self.phase_strategies[phase](context)
+        # Load documents
+        legal_docs = self._load_phase_documents('legal_knowledge')
+        case_docs = self._load_phase_documents('case_context')
         
-        # Everything else is free investigation
-        iteration = int(phase) - 1
-        return self._execute_investigation_iteration(iteration, context)
-    
-    def _execute_legal_knowledge(self, context: Dict) -> Dict:
-        """
-        Phase 0: Learn legal frameworks ONLY
-        No case documents yet - just pure legal learning
-        """
+        print(f"    Legal documents: {len(legal_docs)}")
+        print(f"    Case context documents: {len(case_docs)}")
         
-        print("  📚 Strategy: Legal Framework Mastery")
-        print("  Loading legal knowledge documents...")
-        
-        # Load ONLY legal documents
-        legal_docs = self._load_documents(self.config.legal_knowledge_dir)
-        
-        if not legal_docs:
-            print("  ⚠️ No legal documents found - skipping legal knowledge phase")
-            return {
-                'phase': '0',
-                'strategy': 'legal_framework_skipped',
-                'documents_processed': 0,
-                'synthesis': 'No legal documents provided',
-                'timestamp': datetime.now().isoformat()
-            }
-        
-        print(f"  Found {len(legal_docs)} legal documents")
-        
-        # Build legal knowledge prompt using autonomous prompts
+        # Build knowledge synthesis prompt
         prompt = self.orchestrator.autonomous_prompts.knowledge_synthesis_prompt(
             legal_knowledge=legal_docs,
-            case_context=[],  # No case context in Phase 0
-            existing_knowledge=""
+            case_context=case_docs,
+            existing_knowledge=context
         )
         
-        # Execute with Sonnet 4.5 for maximum learning
-        print("  🤖 Calling Claude Sonnet 4.5 for legal analysis...")
+        # Execute with primary model for maximum learning
         response, metadata = self.orchestrator.api_client.call_claude(
             prompt=prompt,
-            model=self.config.models['primary'],  # Force Sonnet 4.5
+            model=self.config.models['primary'],
             task_type='knowledge_synthesis',
             phase='0'
         )
         
-        # Store legal knowledge in knowledge graph
-        self._store_legal_knowledge(response)
-        
-        print(f"  ✅ Legal knowledge synthesised")
-        print(f"     Tokens: {metadata.get('input_tokens', 0):,} in / {metadata.get('output_tokens', 0):,} out")
+        # Store knowledge in graph
+        self._process_knowledge_response(response, '0')
         
         return {
             'phase': '0',
-            'strategy': 'legal_framework_mastery',
-            'documents_processed': len(legal_docs),
+            'strategy': 'unified_synthesis',
+            'documents_processed': len(legal_docs) + len(case_docs),
             'synthesis': response,
             'metadata': metadata,
             'timestamp': datetime.now().isoformat()
         }
     
-    def _execute_case_understanding(self, context: Dict) -> Dict:
+    # ═══════════════════════════════════════════════════════════════
+    # HELPER METHODS
+    # ═══════════════════════════════════════════════════════════════
+    
+    def _load_phase_documents(self, doc_type: str) -> List[Dict]:
+        """Load documents for phase"""
+        from utils.document_loader import DocumentLoader
+        
+        if doc_type == 'legal_knowledge':
+            path = self.config.legal_knowledge_dir
+        elif doc_type == 'case_context':
+            path = self.config.case_context_dir
+        elif doc_type == 'disclosure':
+            path = self.config.disclosure_dir
+        else:
+            path = self.config.disclosure_dir
+        
+        loader = DocumentLoader(self.config)
+        return loader.load_directory(path)
+    
+    def _process_knowledge_response(self, response: str, phase: str):
         """
-        Phase 1: Understand the case (first complete read)
-        Claude reads ALL case documents and builds understanding
-        Marks anything interesting for investigation
+        Extract and store knowledge from Phase 0 response
+        Looks for legal principles, case facts, strategic insights
         """
         
-        print("  📖 Strategy: Complete Case Understanding")
-        print("  Loading ALL case documents for first read...")
+        # Log the knowledge acquisition
+        self.orchestrator.knowledge_graph.log_discovery(
+            discovery_type='KNOWLEDGE_SYNTHESIS',
+            content=response[:1000],
+            importance='HIGH',
+            phase=phase
+        )
         
-        # FIXED: Use correct directory names
-        # Try case_context first (case background), then disclosure (main documents)
-        case_docs = self._load_documents(self.config.case_context_dir)
-        
-        if not case_docs:
-            print("  ℹ️ No case context documents, trying disclosure directory...")
-            case_docs = self._load_documents(self.config.disclosure_dir)
-        
-        if not case_docs:
-            print("  ⚠️ No case documents found in either directory!")
-            return {
-                'phase': '1',
-                'strategy': 'case_understanding_failed',
-                'documents_processed': 0,
-                'error': 'No case documents found',
-                'timestamp': datetime.now().isoformat()
-            }
-        
-        print(f"  Found {len(case_docs)} case documents")
-        
-        # Get legal knowledge from phase 0
-        legal_framework = context.get('legal_knowledge', 'Legal framework loaded')
-        
-        # Build case understanding prompt
-        # FIXED: Check if method exists, use fallback if not
-        try:
-            prompt = self.orchestrator.autonomous_prompts.case_understanding_prompt(
-                case_documents=case_docs,
-                legal_framework=str(legal_framework)[:10000],
-                doc_count=len(case_docs)
+        # Extract strategic insights
+        insights = self._extract_strategic_insights(response)
+        for insight in insights:
+            self.orchestrator.knowledge_graph.log_discovery(
+                discovery_type='STRATEGIC_INSIGHT',
+                content=insight,
+                importance='MEDIUM',
+                phase=phase
             )
-        except AttributeError:
-            # Fallback: Use investigation prompt
-            prompt = self.orchestrator.autonomous_prompts.investigation_prompt(
-                documents=case_docs,
-                context={'legal_knowledge': str(legal_framework)[:10000]},
-                phase='1'
-            )
-        
-        # Execute with Sonnet 4.5
-        print("  🤖 Calling Claude Sonnet 4.5 for complete case analysis...")
-        response, metadata = self.orchestrator.api_client.call_claude(
-            prompt=prompt,
-            model=self.config.models['primary'],
-            task_type='case_understanding',
-            phase='1'
-        )
-        
-        # Extract all discovery markers
-        discoveries = self._extract_all_markers(response)
-        
-        # Store discoveries in knowledge graph
-        self._store_case_understanding(response, discoveries)
-        
-        print(f"  ✅ Case understanding complete")
-        print(f"     Documents: {len(case_docs)}")
-        print(f"     Discoveries: {len(discoveries)}")
-        print(f"     Tokens: {metadata.get('input_tokens', 0):,} in / {metadata.get('output_tokens', 0):,} out")
-        
-        return {
-            'phase': '1',
-            'strategy': 'case_understanding',
-            'documents_processed': len(case_docs),
-            'discoveries': discoveries,
-            'synthesis': response,
-            'metadata': metadata,
-            'timestamp': datetime.now().isoformat()
-        }
     
-    def _execute_investigation_iteration(self, iteration: int, context: Dict) -> Dict:
+    def _extract_strategic_insights(self, response: str) -> List[str]:
+        """Extract strategic insights from response"""
+        insights = []
+        
+        # Look for marked strategic content
+        markers = [
+            r'\[STRATEGIC\](.*?)(?=\[|$)',
+            r'\[VULNERABILITY\](.*?)(?=\[|$)',
+            r'\[WEAPON\](.*?)(?=\[|$)'
+        ]
+        
+        for marker in markers:
+            matches = re.findall(marker, response, re.IGNORECASE | re.DOTALL)
+            for match in matches:
+                insights.append(match.strip()[:500])
+        
+        return insights
+    
+    # ═══════════════════════════════════════════════════════════════
+    # DISCOVERY EXTRACTION (Used by orchestrator during iterations)
+    # ═══════════════════════════════════════════════════════════════
+    
+    def extract_discoveries(self, response: str, phase: str) -> List[Dict]:
         """
-        Phase 2+: Free investigation iterations
-        Claude decides what to investigate based on previous findings
-        No predetermined focus - complete autonomy
+        Extract discoveries from iteration response
+        Called by orchestrator during dynamic iterations
         """
-        
-        print(f"  🔍 Strategy: Free Investigation (Iteration {iteration})")
-        print("  Claude has complete freedom to investigate anything...")
-        
-        # Get all previous findings from knowledge graph
-        previous_findings = self.orchestrator.knowledge_graph.get_context_for_phase(f"investigation_{iteration}")
-        
-        # FIXED: Use autonomous_prompts (simplified_prompts doesn't exist)
-        prompt = self.orchestrator.autonomous_prompts.investigation_prompt(
-            documents=[],  # Load from context
-            context={
-                'iteration': iteration,
-                'previous_findings': previous_findings,
-                **context
-            },
-            phase=f'investigation_{iteration}'
-        )
-        
-        # Execute with Sonnet 4.5
-        print(f"  🤖 Calling Claude Sonnet 4.5 for investigation {iteration}...")
-        response, metadata = self.orchestrator.api_client.call_claude(
-            prompt=prompt,
-            model=self.config.models['primary'],
-            task_type='investigation',
-            phase=f'investigation_{iteration}'
-        )
-        
-        # Extract discoveries and new investigation threads
-        discoveries = self._extract_all_markers(response)
-        
-        # Store investigation results
-        self._store_investigation_results(iteration, response, discoveries)
-        
-        # Check for convergence (no new discoveries)
-        converged = self._check_convergence(discoveries, iteration)
-        
-        print(f"  ✅ Investigation {iteration} complete")
-        print(f"     New discoveries: {len(discoveries)}")
-        print(f"     Converged: {'Yes' if converged else 'No'}")
-        print(f"     Tokens: {metadata.get('input_tokens', 0):,} in / {metadata.get('output_tokens', 0):,} out")
-        
-        return {
-            'phase': f'investigation_{iteration}',
-            'iteration': iteration,
-            'strategy': 'free_investigation',
-            'discoveries': discoveries,
-            'converged': converged,
-            'synthesis': response,
-            'metadata': metadata,
-            'timestamp': datetime.now().isoformat()
-        }
-    
-    # ==================== HELPER METHODS ====================
-    
-    def _load_documents(self, directory: Path) -> List[Dict]:
-        """Load all documents from directory (recursively handles subdirectories)"""
-        
-        if not directory.exists():
-            print(f"  ⚠️ Directory does not exist: {directory}")
-            return []
-        
-        # FIXED: Correct import path and pass config
-        try:
-            from utils.document_loader import DocumentLoader
-            loader = DocumentLoader(self.config)  # Pass config
-            return loader.load_directory(directory)
-        except Exception as e:
-            print(f"  ❌ Error loading documents: {e}")
-            return []
-    
-    def _extract_all_markers(self, response: str) -> List[Dict]:
-        """Extract all discovery markers from response"""
-        
         discoveries = []
         
-        # Extract NUCLEAR findings
-        nuclear_pattern = r'\[NUCLEAR\](.*?)(?=\[|$)'
-        for match in re.finditer(nuclear_pattern, response, re.DOTALL):
-            discoveries.append({
-                'type': 'NUCLEAR',
-                'content': match.group(1).strip()[:500],
-                'severity': 10,
-                'timestamp': datetime.now().isoformat()
-            })
+        # Parse response for discovery markers
+        markers = {
+            'NUCLEAR': r'\[NUCLEAR\]\s*([^\[]+)',
+            'CRITICAL': r'\[CRITICAL\]\s*([^\[]+)',
+            'PATTERN': r'\[PATTERN\]\s*([^\[]+)',
+            'SUSPICIOUS': r'\[SUSPICIOUS\]\s*([^\[]+)',
+            'MISSING': r'\[MISSING\]\s*([^\[]+)',
+            'TIMELINE': r'\[TIMELINE\]\s*([^\[]+)',
+            'FINANCIAL': r'\[FINANCIAL\]\s*([^\[]+)',
+            'CONTRADICTION': r'\[CONTRADICTION\]\s*([^\[]+)'
+        }
         
-        # Extract CRITICAL findings
-        critical_pattern = r'\[CRITICAL\](.*?)(?=\[|$)'
-        for match in re.finditer(critical_pattern, response, re.DOTALL):
-            discoveries.append({
-                'type': 'CRITICAL',
-                'content': match.group(1).strip()[:500],
-                'severity': 8,
-                'timestamp': datetime.now().isoformat()
-            })
-        
-        # Extract INVESTIGATE threads
-        investigate_pattern = r'\[INVESTIGATE\](.*?)(?=\[|$)'
-        for match in re.finditer(investigate_pattern, response, re.DOTALL):
-            discoveries.append({
-                'type': 'INVESTIGATE',
-                'content': match.group(1).strip()[:500],
-                'severity': 6,
-                'timestamp': datetime.now().isoformat()
-            })
-        
-        # Extract SUSPICIOUS findings
-        suspicious_pattern = r'\[SUSPICIOUS\](.*?)(?=\[|$)'
-        for match in re.finditer(suspicious_pattern, response, re.DOTALL):
-            discoveries.append({
-                'type': 'SUSPICIOUS',
-                'content': match.group(1).strip()[:500],
-                'severity': 5,
-                'timestamp': datetime.now().isoformat()
-            })
+        for discovery_type, pattern in markers.items():
+            matches = re.findall(pattern, response, re.IGNORECASE)
+            for match in matches:
+                discoveries.append({
+                    'type': discovery_type,
+                    'content': match.strip()[:500],
+                    'timestamp': datetime.now().isoformat(),
+                    'phase': phase
+                })
+                
+                # Log to knowledge graph
+                importance_map = {
+                    'NUCLEAR': 'NUCLEAR',
+                    'CRITICAL': 'CRITICAL',
+                    'SUSPICIOUS': 'HIGH',
+                    'PATTERN': 'MEDIUM',
+                    'MISSING': 'MEDIUM',
+                    'TIMELINE': 'MEDIUM',
+                    'FINANCIAL': 'HIGH',
+                    'CONTRADICTION': 'CRITICAL'
+                }
+                
+                self.orchestrator.knowledge_graph.log_discovery(
+                    discovery_type=discovery_type,
+                    content=match.strip()[:500],
+                    importance=importance_map.get(discovery_type, 'MEDIUM'),
+                    phase=phase
+                )
         
         return discoveries
     
-    def _store_legal_knowledge(self, response: str):
-        """Store legal knowledge in knowledge graph (with fallbacks)"""
+    def extract_contradictions(self, response: str) -> List:
+        """Extract contradictions for investigation spawning"""
+        from intelligence.knowledge_graph import Contradiction
         
-        # Try multiple storage methods
-        try:
-            # Primary method
-            self.orchestrator.knowledge_graph.store_legal_knowledge(response, '0')
-            print("  ✅ Stored in knowledge graph")
-        except AttributeError:
-            try:
-                # Alternative method
-                self.orchestrator.knowledge_graph.add_analysis_result({
-                    'phase': '0',
-                    'type': 'legal_knowledge',
-                    'content': response,
-                    'timestamp': datetime.now().isoformat()
-                })
-                print("  ✅ Stored as analysis result")
-            except:
-                # Fallback: Save to file
-                output_dir = self.config.analysis_dir / "phase_0"
-                output_dir.mkdir(parents=True, exist_ok=True)
+        contradictions = []
+        
+        # Pattern matching for contradictions
+        patterns = [
+            r'\[CONTRADICTION\](.*?)(?=\[|$)',
+            r'contradict(?:s|ion)?:?\s*(.*?)(?=\n|\[|$)',
+            r'inconsistent:?\s*(.*?)(?=\n|\[|$)'
+        ]
+        
+        for pattern in patterns:
+            matches = re.findall(pattern, response, re.IGNORECASE | re.DOTALL)
+            for match in matches:
+                # Extract severity if mentioned
+                severity_match = re.search(r'severity[:\s]+(\d+)', match, re.IGNORECASE)
+                severity = int(severity_match.group(1)) if severity_match else 7
                 
-                output_file = output_dir / "legal_knowledge.txt"
-                output_file.write_text(response, encoding='utf-8')
-                print(f"  ✅ Saved to {output_file}")
+                contradiction = Contradiction(
+                    contradiction_id=hashlib.md5(match.encode()).hexdigest()[:16],
+                    statement_a=match[:200],
+                    statement_b=match[200:400] if len(match) > 200 else "IMPLIED",
+                    doc_a='EXTRACTED',
+                    doc_b='EXTRACTED',
+                    severity=severity,
+                    confidence=0.8,
+                    implications=match[:500],
+                    investigation_priority=float(severity),
+                    discovered=datetime.now().isoformat()
+                )
+                contradictions.append(contradiction)
+        
+        return contradictions
     
-    def _store_case_understanding(self, response: str, discoveries: List[Dict]):
-        """Store case understanding and discoveries (with fallbacks)"""
+    def extract_patterns(self, response: str) -> List:
+        """Extract patterns for knowledge graph"""
+        from intelligence.knowledge_graph import Pattern
         
-        # Always save discoveries to file (guaranteed to work)
-        output_dir = self.config.analysis_dir / "phase_1"
-        output_dir.mkdir(parents=True, exist_ok=True)
+        patterns = []
         
-        # Save full response
-        response_file = output_dir / "case_understanding.txt"
-        response_file.write_text(response, encoding='utf-8')
+        # Pattern markers
+        markers = [
+            r'\[PATTERN\](.*?)(?=\[|$)',
+            r'\[PATTERN-TEMPORAL\](.*?)(?=\[|$)',
+            r'\[PATTERN-FINANCIAL\](.*?)(?=\[|$)',
+            r'\[PATTERN-BEHAVIOURAL\](.*?)(?=\[|$)',
+            r'pattern:?\s*(.*?)(?=\n|\[|$)'
+        ]
         
-        # Save discoveries as JSON
-        discoveries_file = output_dir / "discoveries.json"
-        with open(discoveries_file, 'w', encoding='utf-8') as f:
-            json.dump(discoveries, f, indent=2, ensure_ascii=False)
+        for marker in markers:
+            matches = re.findall(marker, response, re.IGNORECASE | re.DOTALL)
+            for match in matches:
+                pattern = Pattern(
+                    pattern_id=hashlib.md5(match.encode()).hexdigest()[:16],
+                    pattern_type='discovered',
+                    description=match[:500],
+                    confidence=0.7,
+                    supporting_evidence=[],
+                    contradicting_evidence=[],
+                    evolution_history=[{'timestamp': datetime.now().isoformat()}],
+                    investigation_spawned=False,
+                    discovered=datetime.now().isoformat()
+                )
+                patterns.append(pattern)
         
-        print(f"  ✅ Saved to {output_dir}/")
-        
-        # Try to store in knowledge graph and spawn investigations
-        for discovery in discoveries:
-            if discovery['type'] in ['NUCLEAR', 'CRITICAL']:
-                try:
-                    # Try to spawn investigation
-                    investigation_id = self.orchestrator.spawn_investigation(
-                        trigger_type='critical_discovery',
-                        trigger_data=discovery,
-                        priority=discovery['severity']
-                    )
-                    print(f"  ✅ Spawned investigation: {investigation_id}")
-                except Exception as e:
-                    # Log but don't crash
-                    print(f"  ℹ️ Investigation spawning not available: {e}")
-                    
-                    # Save to investigations directory as fallback
-                    inv_dir = self.config.investigations_dir / "phase_1_triggers"
-                    inv_dir.mkdir(parents=True, exist_ok=True)
-                    
-                    inv_file = inv_dir / f"{discovery['type']}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
-                    inv_file.write_text(discovery['content'], encoding='utf-8')
+        return patterns
     
-    def _store_investigation_results(self, iteration: int, response: str, discoveries: List[Dict]):
-        """Store investigation results (with fallbacks)"""
+    def extract_entities_and_relationships(self, response: str) -> tuple:
+        """Extract entities and relationships from response"""
+        from intelligence.knowledge_graph import Entity, Relationship
         
-        # Always save to file
-        output_dir = self.config.analysis_dir / f"investigation_{iteration}"
-        output_dir.mkdir(parents=True, exist_ok=True)
+        entities = []
+        relationships = []
         
-        # Save full response
-        response_file = output_dir / "investigation.txt"
-        response_file.write_text(response, encoding='utf-8')
+        # Entity patterns
+        entity_patterns = [
+            r'\[ENTITY-NEW\](.*?)(?=\[|$)',
+            r'entity:?\s*(.*?)(?=\n|\[|$)'
+        ]
         
-        # Save discoveries
-        discoveries_file = output_dir / "discoveries.json"
-        with open(discoveries_file, 'w', encoding='utf-8') as f:
-            json.dump(discoveries, f, indent=2, ensure_ascii=False)
+        for pattern in entity_patterns:
+            matches = re.findall(pattern, response, re.IGNORECASE)
+            for match in matches:
+                entity = Entity(
+                    entity_id=hashlib.md5(match.encode()).hexdigest()[:16],
+                    entity_type='DISCOVERED',
+                    subtype='UNKNOWN',
+                    name=match[:100],
+                    first_seen=datetime.now().isoformat(),
+                    confidence=0.7,
+                    properties={},
+                    discovery_phase='dynamic'
+                )
+                entities.append(entity)
         
-        print(f"  ✅ Saved to {output_dir}/")
+        # Relationship patterns
+        relationship_patterns = [
+            r'\[RELATIONSHIP-HIDDEN\](.*?)(?=\[|$)',
+            r'relationship:?\s*(.*?)(?=\n|\[|$)'
+        ]
         
-        # Try to spawn new investigations
-        for discovery in discoveries:
-            if discovery['severity'] >= 8:
-                try:
-                    investigation_id = self.orchestrator.spawn_investigation(
-                        trigger_type='investigation_discovery',
-                        trigger_data=discovery,
-                        priority=discovery['severity']
-                    )
-                    print(f"  ✅ Spawned investigation: {investigation_id}")
-                except Exception as e:
-                    # Save as trigger file
-                    inv_dir = self.config.investigations_dir / f"iteration_{iteration}_triggers"
-                    inv_dir.mkdir(parents=True, exist_ok=True)
-                    
-                    inv_file = inv_dir / f"{discovery['type']}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
-                    inv_file.write_text(discovery['content'], encoding='utf-8')
+        for pattern in relationship_patterns:
+            matches = re.findall(pattern, response, re.IGNORECASE)
+            for match in matches:
+                relationship = Relationship(
+                    relationship_id=hashlib.md5(match.encode()).hexdigest()[:16],
+                    source_entity='UNKNOWN',
+                    target_entity='UNKNOWN',
+                    relationship_type='DISCOVERED',
+                    confidence=0.7,
+                    evidence=[match[:200]],
+                    discovered=datetime.now().isoformat(),
+                    properties={}
+                )
+                relationships.append(relationship)
+        
+        return entities, relationships
     
-    def _check_convergence(self, discoveries: List[Dict], iteration: int) -> bool:
-        """Check if investigation has converged (no new significant discoveries)"""
+    def extract_financial_anomalies(self, response: str) -> List[Dict]:
+        """Extract financial anomalies from response"""
+        anomalies = []
         
-        # Check if we have critical/nuclear discoveries
-        critical_count = sum(1 for d in discoveries if d.get('severity', 0) >= 8)
+        markers = [
+            r'\[FINANCIAL\](.*?)(?=\[|$)',
+            r'anomaly:?\s*(.*?)(?=\n|\[|$)',
+            r'suspicious.*?(?:payment|valuation|transaction):?\s*(.*?)(?=\n|\[|$)'
+        ]
         
-        # If no critical discoveries and past iteration 3, consider converged
-        if critical_count == 0 and iteration >= 3:
-            print("  ℹ️ Convergence: No critical discoveries after iteration 3")
-            return True
+        for marker in markers:
+            matches = re.findall(marker, response, re.IGNORECASE | re.DOTALL)
+            for match in matches:
+                # Try to extract severity
+                severity_match = re.search(r'severity[:\s]+(\d+)', match, re.IGNORECASE)
+                severity = int(severity_match.group(1)) if severity_match else 7
+                
+                anomalies.append({
+                    'description': match[:500],
+                    'severity': severity,
+                    'requires_investigation': severity > 6,
+                    'discovered': datetime.now().isoformat()
+                })
         
-        # If we've done 10+ iterations, force convergence
-        if iteration >= 10:
-            print("  ℹ️ Convergence: Maximum iterations (10) reached")
-            return True
+        return anomalies
+    
+    def synthesise_narrative(self, narrative: str):
+        """Save final narrative synthesis"""
+        narrative_file = self.config.reports_dir / "strategic_narrative.md"
+        narrative_file.parent.mkdir(parents=True, exist_ok=True)
         
-        # If less than 2 total discoveries, converged
-        if len(discoveries) < 2:
-            print("  ℹ️ Convergence: Minimal discoveries found")
-            return True
+        with open(narrative_file, 'w', encoding='utf-8') as f:
+            f.write(f"# LISMORE V PROCESS HOLDINGS - STRATEGIC NARRATIVE\n\n")
+            f.write(f"Generated: {datetime.now().isoformat()}\n\n")
+            f.write(narrative)
         
-        return False
+        print(f"  ✓ Narrative saved to {narrative_file}")
+    
+    # ═══════════════════════════════════════════════════════════════
+    # KNOWLEDGE GRAPH HELPERS
+    # ═══════════════════════════════════════════════════════════════
+    
+    def get_known_patterns(self) -> Dict:
+        """Get known patterns from knowledge graph"""
+        patterns = self.orchestrator.knowledge_graph.get_all_patterns()
+        return {p.pattern_id: {
+            'description': p.description,
+            'confidence': p.confidence,
+            'type': p.pattern_type
+        } for p in patterns}
+    
+    def get_known_entities(self) -> Dict:
+        """Get known entities from knowledge graph"""
+        entities = self.orchestrator.knowledge_graph.get_all_entities()
+        return {e.entity_id: {
+            'name': e.name,
+            'type': e.entity_type,
+            'confidence': e.confidence
+        } for e in entities}

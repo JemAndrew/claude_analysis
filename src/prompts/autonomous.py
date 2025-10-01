@@ -558,3 +558,221 @@ Content preview:
                 formatted.append(f"  • {entity_id}")
         
         return "\n".join(formatted) if formatted else "None"
+
+
+    def _format_documents(self, documents: List[Dict], doc_type: str = "DISCLOSURE") -> str:
+        """Format documents for prompt inclusion - British English"""
+        
+        if not documents:
+            return f"No {doc_type.lower()} documents provided"
+        
+        formatted = []
+        for i, doc in enumerate(documents[:50], 1):  # Limit to 50 for context window
+            # Extract key fields
+            title = doc.get('title', doc.get('filename', 'Unknown'))
+            source = doc.get('source', doc.get('path', 'Unknown'))
+            date = doc.get('date', doc.get('created', 'Unknown'))
+            content = doc.get('content', '')[:2000]  # First 2000 chars
+            
+            formatted.append(f"""
+    [DOC_{i:04d}] ({doc_type})
+    Title: {title}
+    Source: {source}
+    Date: {date}
+    Content Preview:
+    {content}
+    {'...' if len(doc.get('content', '')) > 2000 else ''}
+    ---
+    """)
+        
+        summary = f"\n{len(documents)} {doc_type} documents available"
+        if len(documents) > 50:
+            summary += f" (showing first 50, {len(documents) - 50} more available)"
+        
+        return summary + "\n\n" + "\n".join(formatted)
+
+
+    def _format_evidence(self, evidence: List[str]) -> str:
+        """Format evidence list for prompts"""
+        
+        if not evidence:
+            return "No evidence provided"
+        
+        formatted = []
+        for i, ev in enumerate(evidence[:20], 1):  # Limit to 20
+            # Truncate long evidence
+            evidence_text = ev[:500]
+            if len(ev) > 500:
+                evidence_text += "..."
+            
+            formatted.append(f"{i}. {evidence_text}")
+        
+        if len(evidence) > 20:
+            formatted.append(f"\n[...and {len(evidence) - 20} more pieces of evidence]")
+        
+        return "\n".join(formatted)
+
+
+    def _format_entities(self, entities: Dict) -> str:
+        """Format known entities for prompt"""
+        
+        if not entities:
+            return "No entities mapped yet - identify all players"
+        
+        formatted = []
+        
+        # Group by entity type
+        by_type = {}
+        for entity_id, entity_data in entities.items():
+            entity_type = entity_data.get('type', 'UNKNOWN')
+            if entity_type not in by_type:
+                by_type[entity_type] = []
+            by_type[entity_type].append(entity_data)
+        
+        # Format each type
+        for entity_type, entity_list in list(by_type.items())[:5]:  # Limit to 5 types
+            formatted.append(f"\n{entity_type}:")
+            for entity in entity_list[:10]:  # Limit to 10 per type
+                name = entity.get('name', 'Unknown')
+                confidence = entity.get('confidence', 0.0)
+                formatted.append(f"  - {name} (confidence: {confidence:.2f})")
+            
+            if len(entity_list) > 10:
+                formatted.append(f"  [...and {len(entity_list) - 10} more {entity_type}]")
+        
+        if len(by_type) > 5:
+            formatted.append(f"\n[...and {len(by_type) - 5} more entity types]")
+        
+        return "\n".join(formatted) if formatted else "Starting entity mapping"
+
+
+    def _format_timeline(self, timeline: Dict) -> str:
+        """Format timeline events for prompt"""
+        
+        if not timeline or not timeline.get('events'):
+            return "No timeline events recorded yet"
+        
+        events = timeline.get('events', [])
+        
+        formatted = []
+        formatted.append(f"Timeline: {len(events)} events recorded\n")
+        
+        # Sort by date if available
+        try:
+            sorted_events = sorted(events, key=lambda x: x.get('date', ''))
+        except:
+            sorted_events = events
+        
+        # Show first 20 events
+        for event in sorted_events[:20]:
+            date = event.get('date', 'Unknown date')
+            description = event.get('description', 'No description')[:200]
+            critical = " [CRITICAL]" if event.get('is_critical') else ""
+            
+            formatted.append(f"  • {date}: {description}{critical}")
+        
+        if len(events) > 20:
+            formatted.append(f"\n  [...and {len(events) - 20} more events]")
+        
+        return "\n".join(formatted)
+
+
+    def _format_relationships(self, relationships: List[Dict]) -> str:
+        """Format relationships for prompt"""
+        
+        if not relationships:
+            return "No relationships mapped yet"
+        
+        formatted = []
+        formatted.append(f"Relationships: {len(relationships)} identified\n")
+        
+        for rel in relationships[:15]:  # Limit to 15
+            source = rel.get('source', 'Unknown')
+            target = rel.get('target', 'Unknown')
+            rel_type = rel.get('type', 'UNKNOWN')
+            confidence = rel.get('confidence', 0.0)
+            
+            formatted.append(
+                f"  • {source} --[{rel_type}]--> {target} "
+                f"(confidence: {confidence:.2f})"
+            )
+        
+        if len(relationships) > 15:
+            formatted.append(f"\n  [...and {len(relationships) - 15} more relationships]")
+        
+        return "\n".join(formatted)
+
+
+    def _format_context_summary(self, context: Dict) -> str:
+        """Format full context summary for prompt"""
+        
+        summary = []
+        
+        # Statistics
+        stats = context.get('statistics', {})
+        if stats:
+            summary.append("CURRENT INTELLIGENCE STATE:")
+            summary.append(f"  Entities tracked: {stats.get('entities', 0)}")
+            summary.append(f"  Relationships mapped: {stats.get('relationships', 0)}")
+            summary.append(f"  Contradictions found: {stats.get('contradictions', 0)}")
+            summary.append(f"  Patterns identified: {stats.get('patterns', 0)}")
+            summary.append(f"  Timeline events: {stats.get('timeline_events', 0)}")
+            summary.append(f"  Discoveries logged: {stats.get('discoveries', 0)}")
+            summary.append("")
+        
+        # Critical findings
+        critical_findings = context.get('critical_findings', [])
+        if critical_findings:
+            summary.append("CRITICAL FINDINGS SO FAR:")
+            for i, finding in enumerate(critical_findings[:5], 1):
+                finding_text = finding if isinstance(finding, str) else finding.get('content', 'Unknown')
+                summary.append(f"  {i}. {finding_text[:200]}")
+            
+            if len(critical_findings) > 5:
+                summary.append(f"  [...and {len(critical_findings) - 5} more critical findings]")
+            summary.append("")
+        
+        # Active investigations
+        investigations = context.get('active_investigations', [])
+        if investigations:
+            summary.append("ACTIVE INVESTIGATIONS:")
+            for inv in investigations[:5]:
+                inv_type = inv if isinstance(inv, str) else inv.get('type', 'Unknown')
+                priority = inv.get('priority', 0.0) if isinstance(inv, dict) else 0.0
+                summary.append(f"  • {inv_type} (priority: {priority:.1f})")
+            
+            if len(investigations) > 5:
+                summary.append(f"  [...and {len(investigations) - 5} more investigations]")
+            summary.append("")
+        
+        return "\n".join(summary) if summary else "No context available yet - beginning fresh analysis"
+
+
+    def _format_investigation_triggers(self, triggers: List[Dict]) -> str:
+        """Format investigation triggers for prompt"""
+        
+        if not triggers:
+            return "No investigation triggers"
+        
+        formatted = []
+        formatted.append("INVESTIGATION TRIGGERS:\n")
+        
+        for trigger in triggers[:10]:
+            trigger_type = trigger.get('type', 'Unknown')
+            priority = trigger.get('priority', 0.0)
+            data = trigger.get('data', {})
+            
+            # Extract key info from trigger data
+            if 'contradiction' in data:
+                desc = data['contradiction'].get('implications', 'Contradiction detected')[:100]
+            elif 'pattern' in data:
+                desc = data['pattern'].get('description', 'Pattern detected')[:100]
+            else:
+                desc = str(data)[:100]
+            
+            formatted.append(f"  [{priority:.1f}] {trigger_type}: {desc}")
+        
+        if len(triggers) > 10:
+            formatted.append(f"\n  [...and {len(triggers) - 10} more triggers]")
+        
+        return "\n".join(formatted)
