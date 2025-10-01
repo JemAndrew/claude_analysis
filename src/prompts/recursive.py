@@ -1,383 +1,403 @@
 #!/usr/bin/env python3
 """
 Recursive Self-Questioning Prompts for Deep Analysis
-Forces Claude to challenge its own conclusions repeatedly
+COMPLETE REPLACEMENT for src/prompts/recursive.py
 """
 
-from typing import Dict, List, Optional, Any
+from typing import Dict, List
 import json
 
 
+HALLUCINATION_PREVENTION = """
+<critical_accuracy_requirements>
+MANDATORY CITATION RULES:
+1. EVERY factual claim MUST cite: [DOC_ID: Location]
+2. No speculation without [INFERENCE] label
+3. Quotes must be EXACT - word-for-word from documents
+4. If uncertain, clearly mark as [UNCERTAIN] with reasoning
+
+✓ "PH stated 'X' [DOC_123: p4, para 2]"
+✗ "PH probably stated X" - REJECTED: No citation
+</critical_accuracy_requirements>
+"""
+
+
 class RecursivePrompts:
-    """Multi-level self-questioning for maximum insight extraction"""
+    """Generate recursive self-questioning prompts for deep litigation analysis"""
     
     def __init__(self, config):
         self.config = config
-        self.max_depth = config.recursion_config['self_questioning_depth']
-        self.min_depth = config.recursion_config['min_questioning_depth']
     
     def deep_questioning_prompt(self,
-                               initial_analysis: str,
-                               depth: int = None,
-                               focus_areas: List[str] = None) -> str:
+                                initial_analysis: str,
+                                depth: int = 5,
+                                context: Dict = None) -> str:
         """
-        Generate recursive self-questioning prompt
-        Each level challenges the previous level's assumptions
+        Recursive self-questioning to deepen analysis quality
+        Claude questions its own conclusions to find gaps and strengthen arguments
         """
         
-        depth = depth or self.max_depth
-        depth = max(self.min_depth, min(depth, self.max_depth))
-        
-        focus_areas = focus_areas or [
-            'hidden assumptions',
-            'alternative explanations',
-            'missing evidence',
-            'strategic implications',
-            'opponent perspective'
-        ]
-        
-        prompt = f"""<initial_analysis>
-{initial_analysis[:8000]}
+        return f"""{HALLUCINATION_PREVENTION}
+
+<recursive_analysis_mission>
+You just completed initial analysis. Now CHALLENGE YOUR OWN CONCLUSIONS.
+
+Goal: Strengthen Lismore's case by:
+- Identifying gaps in your analysis
+- Finding alternative explanations you missed
+- Stress-testing your arguments
+- Anticipating PH's counter-arguments
+- Deepening legal analysis
+- Finding additional evidence
+</recursive_analysis_mission>
+
+<initial_analysis>
+{initial_analysis[:20000]}
 </initial_analysis>
 
-<recursive_questioning_protocol>
-You will now engage in {depth}-level deep recursive questioning about your analysis.
-Each level must challenge and expand the previous level.
+<context>
+{json.dumps(context, indent=2)[:3000] if context else "No additional context"}
+</context>
 
-QUESTIONING FRAMEWORK:
-- Every answer must be challenged by the next level
-- Assumptions must be exposed and tested
-- Alternative explanations must be considered
-- Strategic value must be assessed at each level
-- New investigation paths must be identified
-</recursive_questioning_protocol>
+<recursive_questioning_framework>
 
-<level_1_questions>
-Generate 5 CRITICAL questions about your analysis focusing on:
-{self._format_focus_areas(focus_areas)}
+LEVEL 1: QUESTION YOUR FINDINGS
+For each finding in your initial analysis, ask:
+- What evidence did I rely on? Is it the strongest available?
+- What alternative explanations exist?
+- What would PH argue against this?
+- What additional evidence would make this stronger?
+- Did I miss any relevant legal principles?
+- Is my legal analysis complete?
 
-For each L1 question:
-1. Provide detailed, thorough answer
-2. Challenge your core assumptions
-3. Identify what evidence would prove/disprove
-4. Rate strategic importance (1-10)
-5. Identify investigation paths
-</level_1_questions>
+LEVEL 2: CHALLENGE YOUR REASONING
+- Am I making logical leaps?
+- Are my inferences justified by the evidence?
+- What assumptions am I making?
+- Could I be wrong about this?
+- What would make me change my conclusion?
+- How would an expert critique this analysis?
 
-<level_2_questions>
-For EACH L1 answer, generate 3 follow-up questions that:
-- Dig deeper into implications
-- Challenge the L1 reasoning
-- Explore alternative interpretations
-- Find hidden connections
-- Test logical soundness
+LEVEL 3: STRATEGIC DEPTH
+- How does this help Lismore WIN?
+- Is this the best use of this evidence?
+- Are there stronger arguments available?
+- What's the most compelling way to present this?
+- How does this fit into overall case strategy?
+- What's the risk if PH has a good counter?
 
-For each L2 question:
-1. Provide comprehensive answer
-2. Identify new patterns/connections
-3. Assess probability of being correct
-4. Determine what we're missing
-</level_2_questions>
+LEVEL 4: ADVERSARIAL TESTING
+- How would PH's lawyer attack this finding?
+- What documents might undermine this?
+- What witness testimony could contradict this?
+- What legal arguments defeat this?
+- How do I counter those attacks?
+- Does this survive aggressive cross-examination?
 
-<level_3_questions>
-For EACH L2 answer, generate 2 critical challenges that:
-- Test the fundamental logic
-- Propose opposite interpretation
-- Identify cognitive biases affecting analysis
-- Determine strategic blind spots
-- Find the "what if we're completely wrong"
+LEVEL 5: SYNTHESIS & REFINEMENT
+- What are the 3 strongest arguments for Lismore?
+- What evidence must we find to win?
+- What are Lismore's biggest risks?
+- What novel legal arguments exist?
+- How do all findings connect?
+- What's the winning narrative?
+</recursive_questioning_framework>
 
-For each L3 challenge:
-1. Provide rigorous analysis
-2. Calculate confidence adjustment
-3. Identify pivotal evidence needed
-4. Assess case impact
-</level_3_questions>
+<output_format>
+For each level of questioning:
 
-{self._add_deeper_levels(depth)}
+LEVEL X: [Level name]
 
-<synthesis_requirements>
-After completing all levels, provide:
+QUESTIONS:
+Q1: [Specific question about initial analysis]
+A1: [Answer with evidence and reasoning]
+   CONFIDENCE: [0.0-1.0]
+   NEW INSIGHTS: [What this reveals]
+   
+Q2: [Next question]
+A2: [Answer]
+   ...
 
-CRITICAL DISCOVERIES:
-- Top 5 insights uncovered through questioning
-- Confidence level for each (0.0-1.0)
+KEY DISCOVERIES:
+- [New finding or insight from questioning]
+- [Gap identified in initial analysis]
+- [Stronger argument developed]
+- [Risk identified and mitigated]
 
-NEW INVESTIGATION PRIORITIES:
-- What must be investigated immediately
-- Why it matters strategically
+REFINEMENTS TO INITIAL ANALYSIS:
+- [Change #1: Why and how it strengthens case]
+- [Change #2: Additional evidence needed]
+- [Change #3: Legal argument refined]
+</output_format>
 
-ASSUMPTION CORRECTIONS:
-- What assumptions were wrong
-- How this changes our approach
+<critical_instructions>
+1. Be RUTHLESS in questioning yourself
+2. Find flaws before PH's lawyers do
+3. Strengthen arguments through self-critique
+4. Identify evidence gaps explicitly
+5. Every refined conclusion must cite evidence
+6. If you find your initial analysis was wrong, say so
+7. Prioritise quality over quantity
+8. Focus on what wins the case
+</critical_instructions>
 
-STRATEGIC ADJUSTMENTS:
-- How our strategy should adapt
-- What new attack vectors opened up
+<self_verification>
+After recursive analysis:
+□ Every new/refined finding has citation
+□ Identified weaknesses in initial analysis
+□ Anticipated PH's counter-arguments
+□ Suggested stronger alternative arguments
+□ Identified evidence gaps
+□ Assessed strategic value realistically
+□ No speculation without [INFERENCE] label
+</self_verification>
 
-CONFIDENCE ASSESSMENT:
-- Overall confidence in conclusions (0.0-1.0)
-- Key uncertainties remaining
-</synthesis_requirements>
-
-<example_structure>
-L1-Q1: Why did they structure the transaction this way?
-L1-A1: [Detailed analysis of transaction structure]
-  Strategic Importance: 8/10
-  Evidence needed: Bank records, board minutes
-  Investigation path: Follow money flow
-  
-  L2-Q1.1: What if the structure was designed to hide something else?
-  L2-A1.1: [Analysis of potential concealment]
-    Probability: 0.7
-    New pattern: Similar structures in other deals
-    
-    L3-Q1.1.1: Could we be seeing conspiracy where there's incompetence?
-    L3-A1.1.1: [Critical examination of conspiracy vs incompetence]
-      Confidence adjustment: -0.2
-      Pivotal evidence: Communications showing intent
-      
-    L3-Q1.1.2: What would their lawyer argue about this structure?
-    L3-A1.1.2: [Adversarial perspective]
-      Counter-argument: Legitimate tax planning
-      Our response: Pattern shows intent beyond tax
-</example_structure>
-
-Begin {depth}-level recursive questioning. Be ruthlessly self-critical.
-Question everything. Assume nothing. Find the truth.
+Question yourself deeply. Find the truth. Strengthen Lismore's case.
 """
-        
-        return prompt
     
     def focused_investigation_prompt(self,
                                    investigation_thread: Dict,
                                    context: Dict,
                                    depth: int = 3) -> str:
         """
-        Deep-dive prompt for specific investigation thread
+        Deep-dive investigation on specific finding
         """
         
-        prompt = f"""<investigation_thread>
-Type: {investigation_thread.get('type')}
-Priority: {investigation_thread.get('priority')}
-Trigger: {json.dumps(investigation_thread.get('data', {}), indent=2)[:2000]}
-</investigation_thread>
+        return f"""{HALLUCINATION_PREVENTION}
 
-<investigation_context>
-{json.dumps(context, indent=2)[:3000]}
-</investigation_context>
+<investigation_mission>
+Deep investigation of specific finding that requires thorough analysis.
+
+INVESTIGATION TYPE: {investigation_thread.get('type')}
+PRIORITY: {investigation_thread.get('priority'):.1f}/10
+TRIGGER: {json.dumps(investigation_thread.get('data', {}), indent=2)[:1000]}
+</investigation_mission>
+
+<context>
+{json.dumps(context, indent=2)[:5000]}
+</context>
 
 <deep_investigation_protocol>
-This requires {depth}-level deep investigation.
 
-LEVEL 1: IMMEDIATE INVESTIGATION
-- What does this discovery mean?
-- What else must be true if this is true?
-- What evidence would confirm/refute this?
-- Who benefits from this?
-- Who would know about this?
+PHASE 1: EVIDENCE GATHERING
+- What documents are most relevant?
+- What specific passages contain evidence?
+- What's missing from the evidence?
+- What witnesses would know about this?
+- What experts might help?
 
-LEVEL 2: EXPANDED INVESTIGATION
-For each L1 finding:
-- What patterns connect to this?
-- What timeline events relate?
-- What documents should exist?
-- What conversations happened?
-- What money moved?
+Cite every piece of evidence: [DOC:LOC]
 
-LEVEL 3: STRATEGIC INVESTIGATION  
-For each L2 finding:
-- How do we prove this in court?
+PHASE 2: LEGAL ANALYSIS
+- What legal principles apply?
+- What precedents are relevant?
+- What elements must Lismore prove?
+- What burdens of proof apply?
+- What defences might PH raise?
+
+Provide legal basis for each argument.
+
+PHASE 3: FACTUAL ANALYSIS
+- What exactly happened?
+- Who knew what, when?
+- What was said/written?
+- What actions were taken?
+- What's the timeline?
+
+Build chronology with citations.
+
+PHASE 4: CAUSATION & DAMAGES
+- How did this cause Lismore's losses?
+- What damages flow from this?
+- How do we quantify the loss?
+- What mitigation issues exist?
+- What's the maximum recovery?
+
+Link damages to breach with evidence.
+
+PHASE 5: STRATEGIC ASSESSMENT
+- How strong is this finding? [1-10]
+- What's the best use in arbitration?
+- Opening statement? Expert report? Cross-examination?
+- What additional evidence would make it bulletproof?
+- What are the risks if we pursue this?
+
+Provide realistic strategic assessment.
+
+PHASE 6: COUNTER-ANALYSIS
+- What will PH argue?
 - What's their best defence?
-- How do we destroy that defence?
-- What's the nuclear option here?
-- What are we still missing?
+- What evidence might undermine this?
+- How do we counter their arguments?
+- What's our fallback position?
 
-{self._add_investigation_levels(depth)}
+Anticipate and prepare for defence.
 </deep_investigation_protocol>
 
-<required_outputs>
-1. FINDINGS SUMMARY
-   - Key discoveries with confidence scores
-   - Evidence located
-   - Evidence still needed
+<output_format>
+INVESTIGATION SUMMARY:
+[2-3 sentences on what this investigation found]
 
-2. CONTRADICTION ANALYSIS
-   - New contradictions discovered
-   - Severity assessment (1-10)
-   - Strategic value
+KEY FINDINGS:
+1. [Finding with citation and legal basis]
+2. [Finding with citation and legal basis]
+3. [Finding with citation and legal basis]
 
-3. PATTERN EVOLUTION
-   - How this changes known patterns
-   - New patterns discovered
-   - Confidence adjustments
+EVIDENCE MAP:
+- Primary: [DOC:LOC] [What it shows]
+- Supporting: [DOC:LOC] [What it shows]
+- Corroborating: [DOC:LOC] [What it shows]
 
-4. ENTITY IMPLICATIONS
-   - Who's implicated
-   - New relationships uncovered
-   - Suspicion score changes
+LEGAL FRAMEWORK:
+- Applicable law: [Citation]
+- Elements to prove: [List with evidence for each]
+- Burden of proof: [Who bears it, strength of case]
 
-5. NEXT STEPS
-   - Child investigations to spawn
-   - Priority actions
-   - Evidence to secure
+DAMAGES:
+- Type: [Consequential/Direct/etc]
+- Calculation: [How computed]
+- Amount: [Range or specific amount]
+- Evidence: [Citations]
 
-6. STRATEGIC ASSESSMENT
-   - How this helps Lismore
-   - How this damages Process Holdings
-   - Settlement leverage impact
-   - Trial strategy impact
-</required_outputs>
+STRATEGIC RECOMMENDATION:
+[How to use this in arbitration]
 
-Investigate with maximum thoroughness. Leave no stone unturned.
-This could be the thread that unravels everything.
+RISKS & MITIGATION:
+- Risk: [What could go wrong]
+- Mitigation: [How to address it]
+
+ADDITIONAL INVESTIGATION NEEDED:
+- [Specific evidence to seek]
+- [Witnesses to interview]
+- [Experts to instruct]
+</output_format>
+
+Investigate thoroughly. Leave no stone unturned. Build bulletproof case.
 """
-        
-        return prompt
     
-    def hypothesis_testing_prompt(self,
-                                hypothesis: str,
-                                evidence_for: List[str],
-                                evidence_against: List[str],
-                                context: Dict) -> str:
+    def contradiction_deep_dive(self,
+                               contradiction: Dict,
+                               documents: List[Dict],
+                               context: Dict) -> str:
         """
-        Rigorous hypothesis testing through recursive questioning
+        Deep analysis of specific contradiction
         """
         
-        prompt = f"""<hypothesis>
-{hypothesis}
-</hypothesis>
+        return f"""{HALLUCINATION_PREVENTION}
 
-<current_evidence>
-SUPPORTING EVIDENCE:
-{self._format_evidence(evidence_for)}
+<contradiction_investigation>
+Investigate this contradiction in depth to determine its significance for Lismore's case.
 
-CONTRADICTING EVIDENCE:
-{self._format_evidence(evidence_against)}
-</current_evidence>
+CONTRADICTION IDENTIFIED:
+{json.dumps(contradiction, indent=2)[:2000]}
+</contradiction_investigation>
 
-<hypothesis_testing_protocol>
-Test this hypothesis through 5-level recursive analysis:
+<relevant_documents>
+{self._format_documents(documents[:20])}
+</relevant_documents>
 
-LEVEL 1: BASIC VALIDITY
-Q1: Is this hypothesis logically sound?
-Q2: What assumptions underpin it?
-Q3: What must be true for this to be true?
-Q4: What cannot be true if this is true?
-Q5: What's the simplest alternative explanation?
+<context>
+{json.dumps(context, indent=2)[:2000]}
+</context>
 
-LEVEL 2: EVIDENCE ANALYSIS
-For each L1 answer, examine:
-- Quality of supporting evidence
-- Weight of contradicting evidence  
-- Missing evidence that should exist
-- Reliability of sources
-- Alternative interpretations
+<contradiction_analysis_framework>
 
-LEVEL 3: STRATEGIC TESTING
-For each L2 finding, determine:
-- Courtroom viability
-- Burden of proof requirements
-- Vulnerability to challenge
-- Jury comprehension
-- Documentary support needed
+1. VERIFY THE CONTRADICTION
+   - Confirm Statement A is accurately quoted [cite exact location]
+   - Confirm Statement B is accurately quoted [cite exact location]
+   - Verify they actually conflict (not just different emphasis)
+   - Check for any qualifications or conditions
+   
+   VERIFIED: Yes/No
+   If No, explain why it's not actually a contradiction
 
-LEVEL 4: ADVERSARIAL TESTING
-For each L3 conclusion:
-- Best counter-argument
-- Evidence they'd present
-- Experts they'd call
-- Narrative they'd construct
-- Weaknesses they'd exploit
+2. ASSESS MATERIALITY
+   - Is this contradiction material to key issues?
+   - Does it affect liability or damages?
+   - Would outcome differ if resolved in PH's favour?
+   
+   MATERIALITY: [High/Medium/Low] with reasoning
 
-LEVEL 5: FINAL ASSESSMENT
-For each L4 challenge:
-- Our response strategy
-- Additional evidence needed
-- Confidence in prevailing
-- Alternative approaches
-- Risk assessment
-</hypothesis_testing_protocol>
+3. DETERMINE CAUSE
+   Why does this contradiction exist?
+   - Deliberate falsehood?
+   - Changed circumstances?
+   - Different knowledge at different times?
+   - Witness coordination failure?
+   - Cover-up attempt?
+   
+   MOST LIKELY CAUSE: [with evidence]
 
-<output_requirements>
-HYPOTHESIS VIABILITY:
-- Probability of being correct (0.0-1.0)
-- Confidence in evidence (0.0-1.0)
-- Strategic value if proven (1-10)
-- Risk if pursued and wrong (1-10)
+4. LEGAL IMPLICATIONS
+   - Does this prove misrepresentation?
+   - Does it show fraudulent inducement?
+   - Does it establish breach?
+   - Does it affect credibility?
+   - Can we draw adverse inferences?
+   
+   LEGAL SIGNIFICANCE: [detailed analysis]
 
-CRITICAL EVIDENCE GAPS:
-- What would prove this definitively
-- Where that evidence likely exists
-- How to obtain it
-- Timeline for investigation
+5. STRATEGIC USE
+   - Opening statement impact?
+   - Cross-examination potential?
+   - Expert evidence support?
+   - Adverse inference argument?
+   - Settlement leverage?
+   
+   BEST USE: [specific recommendation]
 
-ALTERNATIVE HYPOTHESES:
-- Other explanations that fit evidence
-- Their relative probability
-- Testing requirements
+6. ANTICIPATE DEFENCE
+   - How will PH explain this?
+   - What's their best argument?
+   - What evidence might support them?
+   - How do we rebut?
+   
+   COUNTER-STRATEGY: [detailed plan]
+</contradiction_analysis_framework>
 
-RECOMMENDATION:
-- Pursue/modify/abandon hypothesis
-- Resources required
-- Expected outcomes
-- Strategic implications
-</output_requirements>
+<output_format>
+CONTRADICTION VERIFIED: [Yes/No]
 
-Test rigorously. Challenge mercilessly. Find truth.
+STATEMENT A: [exact quote] [DOC:LOC] [date]
+STATEMENT B: [exact quote] [DOC:LOC] [date]
+
+CONFLICT: [Precisely how they contradict]
+
+MATERIALITY: [High/Medium/Low]
+REASONING: [Why material or not]
+
+CAUSE: [Most likely explanation with evidence]
+
+LEGAL BASIS:
+- [Principle 1] [How contradiction proves it]
+- [Principle 2] [How contradiction proves it]
+
+STRATEGIC VALUE: [1-10]
+RECOMMENDED USE: [Specific deployment strategy]
+
+PH'S LIKELY DEFENCE: [What they'll argue]
+OUR COUNTER: [How we defeat their defence]
+
+EVIDENCE NEEDED: [What would make this bulletproof]
+</output_format>
+
+Analyse this contradiction exhaustively. Make it a weapon for Lismore.
 """
-        
-        return prompt
     
-    def _format_focus_areas(self, areas: List[str]) -> str:
-        """Format focus areas for questioning"""
-        return "\n".join([f"- {area}" for area in areas])
-    
-    def _add_deeper_levels(self, depth: int) -> str:
-        """Add additional levels beyond 3 if specified"""
-        if depth <= 3:
-            return ""
-        
-        additional = []
-        for level in range(4, depth + 1):
-            additional.append(f"""
-<level_{level}_questions>
-For EACH L{level-1} answer, generate 2 fundamental challenges that:
-- Question the entire framework of analysis
-- Propose paradigm-shifting interpretations
-- Identify systemic biases
-- Find critical vulnerabilities
-- Test ultimate strategic value
-
-Rate final confidence (0.0-1.0) and strategic importance (1-10)
-</level_{level}_questions>""")
-        
-        return "\n".join(additional)
-    
-    def _add_investigation_levels(self, depth: int) -> str:
-        """Add investigation levels beyond 3"""
-        if depth <= 3:
-            return ""
-        
-        additional = []
-        for level in range(4, depth + 1):
-            additional.append(f"""
-LEVEL {level}: META-INVESTIGATION
-- What are we not seeing?
-- What would opposing counsel investigate?
-- What would a forensic accountant find?
-- What would a private investigator discover?
-- What's the story behind the story?""")
-        
-        return "\n".join(additional)
-    
-    def _format_evidence(self, evidence: List[str]) -> str:
-        """Format evidence list for prompt"""
-        if not evidence:
-            return "No evidence provided"
+    def _format_documents(self, documents: List[Dict]) -> str:
+        """Format documents for prompts"""
+        if not documents:
+            return "No documents provided"
         
         formatted = []
-        for i, item in enumerate(evidence[:20], 1):
-            formatted.append(f"{i}. {item[:200]}")
+        for doc in documents:
+            formatted.append(f"""
+<document id="{doc.get('id', 'unknown')}">
+<filename>{doc.get('filename', 'unknown')}</filename>
+<content>
+{doc.get('content', '')[:10000]}
+</content>
+</document>
+""")
         
-        return "\n".join(formatted)
+        return '\n'.join(formatted)

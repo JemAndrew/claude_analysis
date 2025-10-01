@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Document Loader with Metadata Extraction
+Enhanced Document Loader with Metadata Extraction
 Handles all document types for litigation intelligence
-British English throughout - Lismore v Process Holdings
+COMPLETE FIXED VERSION - All methods implemented
 """
 
 from pathlib import Path
@@ -26,25 +26,15 @@ except ImportError:
     PDFPLUMBER_AVAILABLE = False
 
 import PyPDF2
-
-try:
-    import docx
-    DOCX_AVAILABLE = True
-except ImportError:
-    DOCX_AVAILABLE = False
-
-try:
-    import chardet
-    CHARDET_AVAILABLE = True
-except ImportError:
-    CHARDET_AVAILABLE = False
+import docx
+import chardet
 
 
 class DocumentLoader:
     """Advanced document loading with metadata extraction"""
     
-    def __init__(self):
-        """Initialise document loader"""
+    def __init__(self, config):
+        self.config = config
         self.load_stats = {
             'total_loaded': 0,
             'failed_loads': 0,
@@ -61,14 +51,14 @@ class DocumentLoader:
         Args:
             directory: Path to document directory
             max_docs: Maximum documents to load
-            doc_types: List of extensions to load (e.g., ['.pdf', '.docx'])
+            doc_types: List of extensions to load
         
         Returns:
             List of document dictionaries with content and metadata
         """
         
         if not directory.exists():
-            print(f"⚠️  Directory {directory} does not exist")
+            print(f"Warning: Directory {directory} does not exist")
             return []
         
         # Default document types
@@ -90,7 +80,7 @@ class DocumentLoader:
         if max_docs:
             all_files = all_files[:max_docs]
         
-        print(f"📂 Loading {len(all_files)} documents from {directory.name}")
+        print(f"Loading {len(all_files)} documents from {directory}")
         
         for file_path in all_files:
             files_processed += 1
@@ -104,24 +94,18 @@ class DocumentLoader:
                     documents.append(document)
                     self.load_stats['total_loaded'] += 1
             except Exception as e:
-                print(f"  ⚠️  Failed to load {file_path.name}: {e}")
+                print(f"  Failed to load {file_path.name}: {e}")
                 self.load_stats['failed_loads'] += 1
         
         print(f"✅ Loaded {len(documents)} documents successfully")
-        if self.load_stats['failed_loads'] > 0:
-            print(f"⚠️  Failed to load {self.load_stats['failed_loads']} documents")
-        
         return documents
     
     def load_document(self, file_path: Path) -> Optional[Dict]:
         """
         Load single document with metadata extraction
         
-        Args:
-            file_path: Path to document file
-        
         Returns:
-            Document dictionary with content and metadata, or None if load fails
+            Document dictionary with content and metadata
         """
         
         if not file_path.exists():
@@ -150,136 +134,100 @@ class DocumentLoader:
         if not content:
             return None
         
-        # Extract metadata
+        # Extract comprehensive metadata
         metadata = self._extract_metadata(file_path, content, extraction_metadata)
         
-        # Create document entry
-        document = {
+        # Update stats
+        ext = extension
+        self.load_stats['by_type'][ext] = self.load_stats['by_type'].get(ext, 0) + 1
+        
+        return {
             'id': doc_id,
             'filename': file_path.name,
-            'path': str(file_path),
+            'filepath': str(file_path),
             'content': content,
-            'metadata': metadata,
-            'loaded_at': datetime.now().isoformat()
+            'metadata': metadata
         }
-        
-        # Track statistics
-        if extension not in self.load_stats['by_type']:
-            self.load_stats['by_type'][extension] = 0
-        self.load_stats['by_type'][extension] += 1
-        
-        return document
     
     def _load_pdf(self, file_path: Path) -> Tuple[Optional[str], Dict]:
-        """Load PDF with best available method"""
+        """Load PDF file with metadata"""
         
-        metadata = {
-            'extraction_method': None,
-            'page_count': 0,
-            'has_tables': False,
-            'has_images': False,
-            'extraction_quality': 'unknown'
-        }
+        extraction_metadata = {}
+        content = None
         
         # Try PyMuPDF first (best quality)
         if PYMUPDF_AVAILABLE:
             try:
-                import fitz
-                doc = fitz.open(str(file_path))
-                text = ""
+                doc = fitz.open(file_path)
+                text_parts = []
                 
                 for page_num, page in enumerate(doc):
-                    page_text = page.get_text()
-                    text += f"\n[PAGE {page_num + 1}]\n{page_text}"
-                    
-                    # Check for tables and images
-                    try:
-                        if page.get_tables():
-                            metadata['has_tables'] = True
-                    except:
-                        pass
-                    
-                    try:
-                        if page.get_images():
-                            metadata['has_images'] = True
-                    except:
-                        pass
+                    text_parts.append(page.get_text())
                 
-                metadata['page_count'] = len(doc)
-                metadata['extraction_method'] = 'PyMuPDF'
-                metadata['extraction_quality'] = 'high'
+                content = '\n\n'.join(text_parts)
+                extraction_metadata['page_count'] = len(doc)
+                extraction_metadata['method'] = 'pymupdf'
                 doc.close()
                 
-                if text.strip():
-                    return text, metadata
-                    
+                if content and len(content.strip()) > 50:
+                    return content, extraction_metadata
             except Exception as e:
-                pass
+                print(f"  PyMuPDF failed for {file_path.name}: {e}")
         
-        # Try pdfplumber (good for tables)
-        if PDFPLUMBER_AVAILABLE:
+        # Try pdfplumber
+        if PDFPLUMBER_AVAILABLE and not content:
             try:
                 import pdfplumber
                 with pdfplumber.open(file_path) as pdf:
-                    text = ""
-                    for i, page in enumerate(pdf.pages):
-                        page_text = page.extract_text() or ""
-                        text += f"\n[PAGE {i + 1}]\n{page_text}"
-                        
-                        try:
-                            if page.extract_tables():
-                                metadata['has_tables'] = True
-                        except:
-                            pass
+                    text_parts = []
+                    for page in pdf.pages:
+                        text = page.extract_text()
+                        if text:
+                            text_parts.append(text)
                     
-                    metadata['page_count'] = len(pdf.pages)
-                    metadata['extraction_method'] = 'pdfplumber'
-                    metadata['extraction_quality'] = 'medium'
-                    
-                    if text.strip():
-                        return text, metadata
-                        
-            except Exception:
-                pass
+                    content = '\n\n'.join(text_parts)
+                    extraction_metadata['page_count'] = len(pdf.pages)
+                    extraction_metadata['method'] = 'pdfplumber'
+                
+                if content and len(content.strip()) > 50:
+                    return content, extraction_metadata
+            except Exception as e:
+                print(f"  pdfplumber failed for {file_path.name}: {e}")
         
         # Fallback to PyPDF2
-        try:
-            with open(file_path, 'rb') as file:
-                pdf_reader = PyPDF2.PdfReader(file)
-                text = ""
-                
-                for page_num in range(len(pdf_reader.pages)):
-                    page = pdf_reader.pages[page_num]
-                    page_text = page.extract_text()
-                    text += f"\n[PAGE {page_num + 1}]\n{page_text}"
-                
-                metadata['page_count'] = len(pdf_reader.pages)
-                metadata['extraction_method'] = 'PyPDF2'
-                metadata['extraction_quality'] = 'basic'
-                
-                return text, metadata
-                
-        except Exception as e:
-            print(f"  All PDF extraction methods failed for {file_path.name}: {e}")
-            return None, metadata
+        if not content:
+            try:
+                with open(file_path, 'rb') as f:
+                    reader = PyPDF2.PdfReader(f)
+                    text_parts = []
+                    
+                    for page in reader.pages:
+                        text = page.extract_text()
+                        if text:
+                            text_parts.append(text)
+                    
+                    content = '\n\n'.join(text_parts)
+                    extraction_metadata['page_count'] = len(reader.pages)
+                    extraction_metadata['method'] = 'pypdf2'
+            except Exception as e:
+                print(f"  PyPDF2 failed for {file_path.name}: {e}")
+                return None, {}
+        
+        return content, extraction_metadata
     
     def _load_docx(self, file_path: Path) -> Optional[str]:
-        """Load Word document"""
-        
-        if not DOCX_AVAILABLE:
-            print(f"  python-docx not installed, cannot load {file_path.name}")
-            return None
+        """Load DOCX file"""
         
         try:
-            import docx as docx_module
-            doc = docx_module.Document(str(file_path))
-            paragraphs = []
+            doc = docx.Document(file_path)
             
+            # Extract paragraphs
+            paragraphs = []
             for para in doc.paragraphs:
                 if para.text.strip():
                     paragraphs.append(para.text)
             
-            # Also extract tables
+            # Extract tables
             for table in doc.tables:
                 for row in table.rows:
                     row_text = '\t'.join(cell.text for cell in row.cells)
@@ -289,7 +237,7 @@ class DocumentLoader:
             return '\n'.join(paragraphs)
             
         except Exception as e:
-            print(f"  Failed to load DOCX {file_path.name}: {e}")
+            print(f"Failed to load DOCX {file_path}: {e}")
             return None
     
     def _load_json(self, file_path: Path) -> Optional[str]:
@@ -298,46 +246,40 @@ class DocumentLoader:
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
-                # Convert to formatted string
-                return json.dumps(data, indent=2, ensure_ascii=False)
+                return json.dumps(data, indent=2)
         except Exception as e:
-            print(f"  Failed to load JSON {file_path.name}: {e}")
+            print(f"Failed to load JSON {file_path}: {e}")
             return None
     
     def _load_text(self, file_path: Path) -> Optional[str]:
         """Load text file with encoding detection"""
         
         try:
-            # Detect encoding if chardet available
-            if CHARDET_AVAILABLE:
-                with open(file_path, 'rb') as f:
-                    raw_data = f.read(10000)
-                    result = chardet.detect(raw_data)
-                    encoding = result['encoding'] or 'utf-8'
-            else:
-                encoding = 'utf-8'
+            # Detect encoding
+            with open(file_path, 'rb') as f:
+                raw_data = f.read(10000)
+                result = chardet.detect(raw_data)
+                encoding = result['encoding'] or 'utf-8'
             
             # Load with detected encoding
             with open(file_path, 'r', encoding=encoding, errors='ignore') as f:
                 return f.read()
                 
         except Exception as e:
-            print(f"  Failed to load text {file_path.name}: {e}")
+            print(f"Failed to load text {file_path}: {e}")
             return None
     
     def _generate_doc_id(self, file_path: Path) -> str:
         """Generate unique document ID"""
         
-        # Use file path hash for consistency
         path_hash = hashlib.md5(str(file_path).encode()).hexdigest()[:8].upper()
         
         # Prefix based on location
-        path_str = str(file_path).lower()
-        if 'legal' in path_str:
+        if 'legal' in str(file_path).lower():
             prefix = 'LEGAL'
-        elif 'case' in path_str:
+        elif 'case' in str(file_path).lower():
             prefix = 'CASE'
-        elif 'disclosure' in path_str:
+        elif 'disclosure' in str(file_path).lower():
             prefix = 'DISC'
         else:
             prefix = 'DOC'
@@ -364,12 +306,12 @@ class DocumentLoader:
         
         # Extract dates
         dates = self._extract_dates(content)
-        metadata['dates_found'] = dates[:10]  # Top 10 dates
+        metadata['dates_found'] = dates[:10]
         metadata['has_dates'] = len(dates) > 0
         
-        # Extract amounts
+        # Extract amounts - FIXED METHOD
         amounts = self._extract_amounts(content)
-        metadata['amounts_found'] = amounts[:10]  # Top 10 amounts
+        metadata['amounts_found'] = amounts[:10]
         metadata['has_amounts'] = len(amounts) > 0
         
         # Extract entities
@@ -390,11 +332,11 @@ class DocumentLoader:
         
         dates = []
         
-        # Multiple date patterns (British format DD/MM/YYYY priority)
+        # Multiple date patterns
         patterns = [
-            r'\b\d{1,2}[/-]\d{1,2}[/-]\d{2,4}\b',  # DD/MM/YYYY or MM/DD/YYYY
+            r'\b\d{1,2}[/-]\d{1,2}[/-]\d{2,4}\b',  # DD/MM/YYYY
             r'\b\d{4}[/-]\d{1,2}[/-]\d{1,2}\b',    # YYYY-MM-DD
-            r'\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]* \d{1,2},? \d{4}\b',  # Month DD, YYYY
+            r'\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]* \d{1,2},? \d{4}\b',
             r'\b\d{1,2} (?:January|February|March|April|May|June|July|August|September|October|November|December) \d{4}\b'
         ]
         
@@ -413,27 +355,39 @@ class DocumentLoader:
         return unique_dates
     
     def _extract_amounts(self, content: str) -> List[str]:
-        """Extract monetary amounts from content"""
+        """
+        Extract monetary amounts from content
+        COMPLETE FIXED VERSION
+        """
         
         amounts = []
         
-        # Amount patterns (UK currency priority)
+        # Amount patterns - British English focused
         patterns = [
-            r'[£$€]\s*[\d,]+(?:\.\d{2})?(?:\s*(?:million|billion|k|m|bn))?',
-            r'[\d,]+(?:\.\d{2})?\s*(?:GBP|USD|EUR)',
-            r'[\d,]+(?:\.\d{2})?\s*(?:pounds?|dollars?|euros?)'
+            r'£\s*[\d,]+(?:\.\d{2})?(?:\s*(?:million|billion|k|m|bn))?',  # £123,456.78
+            r'\$\s*[\d,]+(?:\.\d{2})?(?:\s*(?:million|billion|k|m|bn))?',  # $123,456.78
+            r'€\s*[\d,]+(?:\.\d{2})?(?:\s*(?:million|billion|k|m|bn))?',  # €123,456.78
+            r'[\d,]+(?:\.\d{2})?\s*(?:GBP|USD|EUR|pounds?|dollars?)',  # 123,456.78 GBP
+            r'\b\d{1,3}(?:,\d{3})+(?:\.\d{2})?\b'  # Numbers with commas: 123,456.78
         ]
         
         for pattern in patterns:
             matches = re.findall(pattern, content, re.IGNORECASE)
             amounts.extend(matches)
         
-        # Clean and deduplicate
-        unique_amounts = list(set(amounts))
-        return unique_amounts[:20]  # Limit to 20
+        # Remove duplicates while preserving order
+        seen = set()
+        unique_amounts = []
+        for amount in amounts:
+            clean_amount = amount.strip()
+            if clean_amount not in seen:
+                seen.add(clean_amount)
+                unique_amounts.append(clean_amount)
+        
+        return unique_amounts
     
-    def _extract_entities(self, content: str) -> Dict[str, List[str]]:
-        """Extract named entities from content"""
+    def _extract_entities(self, content: str) -> Dict:
+        """Extract entities from content"""
         
         entities = {
             'people': [],
@@ -441,12 +395,12 @@ class DocumentLoader:
             'emails': []
         }
         
-        # Extract people (simple pattern for UK names)
-        people_pattern = r'\b([A-Z][a-z]+ (?:[A-Z]\. )?[A-Z][a-z]+)\b'
+        # Extract people (capitalised names)
+        people_pattern = r'\b([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\b'
         people = re.findall(people_pattern, content)
         entities['people'] = list(set(people))[:20]
         
-        # Extract companies (UK patterns)
+        # Extract companies
         company_patterns = [
             r'\b\w+\s+(?:Ltd|Limited|Inc|LLC|LLP|Plc|Corp|Corporation)\b',
             r'\b\w+\s+(?:Capital|Holdings|Partners|Group|Ventures)\b'
@@ -469,7 +423,7 @@ class DocumentLoader:
         """Classify document type based on content and filename"""
         
         filename_lower = filename.lower()
-        content_lower = content[:5000].lower()  # Check first 5000 chars
+        content_lower = content[:5000].lower()
         
         # Check filename patterns
         if 'contract' in filename_lower or 'agreement' in filename_lower:
@@ -500,13 +454,12 @@ class DocumentLoader:
     def get_statistics(self) -> Dict:
         """Get loading statistics"""
         
-        total = self.load_stats['total_loaded'] + self.load_stats['failed_loads']
-        
         return {
             'total_loaded': self.load_stats['total_loaded'],
             'failed_loads': self.load_stats['failed_loads'],
             'by_type': self.load_stats['by_type'],
             'success_rate': (
-                self.load_stats['total_loaded'] / max(1, total)
+                self.load_stats['total_loaded'] / 
+                max(1, self.load_stats['total_loaded'] + self.load_stats['failed_loads'])
             )
         }

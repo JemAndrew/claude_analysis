@@ -1,219 +1,359 @@
 #!/usr/bin/env python3
 """
-Configuration for Litigation Intelligence System
-Simplified for maximum Claude autonomy - Lismore v Process Holdings
-British English throughout
+Configuration Management for Litigation Intelligence System
+COMPLETE REPLACEMENT for src/core/config.py
+
+Sets up all system parameters for comprehensive litigation analysis
+- Temperature = 0.0 for consistency
+- Prompt caching enabled
+- Citation enforcement
+- Lismore-sided analysis focus
 """
 
 import os
 from pathlib import Path
-from typing import Dict, Any, List
+from typing import Dict, Any, Optional
+import json
 
 
 class Config:
-    """Central configuration for autonomous Claude analysis"""
+    """Central configuration for litigation intelligence system"""
     
-    def __init__(self, root_path: str = None):
-        """Initialise configuration with simplified structure"""
-        self.root = Path(root_path) if root_path else Path.cwd()
-        self._setup_paths()
-        self._setup_models()
+    def __init__(self, config_path: Optional[Path] = None):
+        """
+        Initialise configuration
+        
+        Args:
+            config_path: Optional path to config file (defaults to project root)
+        """
+        self.project_root = Path(__file__).parent.parent.parent
+        self.config_path = config_path or self.project_root / 'config.json'
+        
+        # Load or create configuration
+        if self.config_path.exists():
+            self._load_config()
+        else:
+            self._setup_default_config()
+            self._save_config()
+    
+    def _setup_default_config(self) -> None:
+        """Set up default configuration values"""
+        
+        # API Configuration
+        self._setup_api()
+        
+        # Directory Structure
+        self._setup_directories()
+        
+        # Analysis Configuration
         self._setup_analysis()
-        self._setup_investigation()
-    
-    def _setup_paths(self) -> None:
-        """Define simplified folder structure - Claude organises content"""
         
-        # Input paths - SIMPLIFIED (no pre-organised folders)
-        self.input_dir = self.root / "data" / "input"
-        self.legal_knowledge_dir = self.input_dir / "legal_knowledge"
-        self.case_documents_dir = self.input_dir / "case_documents"
+        # Knowledge Graph Configuration
+        self._setup_knowledge_graph()
         
-        # Knowledge management
-        self.knowledge_dir = self.root / "data" / "knowledge"
-        self.graph_db_path = self.knowledge_dir / "graph.db"
-        self.backups_dir = self.knowledge_dir / "backups"
-        self.investigations_db_path = self.knowledge_dir / "investigations.db"
+        # Orchestration Configuration
+        self._setup_orchestration()
         
-        # Output paths
-        self.output_dir = self.root / "data" / "output"
-        self.reports_dir = self.output_dir / "reports"
+        # Output Configuration
+        self._setup_output()
+    
+    def _setup_api(self) -> None:
+        """API configuration for Claude with prompt caching"""
         
-        # Create directories if they don't exist
-        for dir_path in [
-            self.input_dir, self.legal_knowledge_dir, self.case_documents_dir,
-            self.knowledge_dir, self.backups_dir,
-            self.output_dir, self.reports_dir
-        ]:
-            dir_path.mkdir(parents=True, exist_ok=True)
+        self.api_config = {
+            'anthropic_api_key': os.getenv('ANTHROPIC_API_KEY', ''),
+            'model': 'claude-sonnet-4-20250514',
+            'max_tokens': 16000,  # Increased for comprehensive analysis
+            
+            # CRITICAL: Prompt caching enabled
+            'enable_prompt_caching': True,
+            'cache_control_breakpoints': ['legal_framework', 'knowledge_graph'],
+            
+            # Rate limiting
+            'requests_per_minute': 50,
+            'tokens_per_minute': 80000,
+            
+            # Retry configuration
+            'max_retries': 3,
+            'retry_delay': 2.0,
+            'exponential_backoff': True,
+        }
     
-    def _setup_models(self) -> None:
-    
-    
-        # Primary models - LATEST CLAUDE 4.x (September 2025)
-        self.models = {
-            'primary': 'claude-sonnet-4-5-20250929',    # Sonnet 4.5 - WORKS
-            'opus': 'claude-opus-4-1-20250805',         # Opus 4.1 - WORKS
-            'secondary': 'claude-3-haiku-20240307',     # Haiku 3 - WORKS
-            'quick': 'claude-3-haiku-20240307'          # Haiku 3 - WORKS
+    def _setup_directories(self) -> None:
+        """Directory structure for case files"""
+        
+        self.directories = {
+            # Input directories
+            'legal_knowledge': self.project_root / 'data' / 'legal_knowledge',
+            'case_background': self.project_root / 'data' / 'case_background',
+            'disclosure': self.project_root / 'data' / 'disclosure',
+            'validation_tests': self.project_root / 'data' / 'validation_tests',
+            
+            # Output directories
+            'output': self.project_root / 'data' / 'output',
+            'analysis': self.project_root / 'data' / 'output' / 'analysis',
+            'reports': self.project_root / 'data' / 'output' / 'reports',
+            'knowledge_graph': self.project_root / 'data' / 'output' / 'knowledge_graph',
+            'logs': self.project_root / 'data' / 'output' / 'logs',
+            
+            # Cache directories
+            'cache': self.project_root / 'data' / 'cache',
+            'processed_docs': self.project_root / 'data' / 'cache' / 'processed',
         }
         
-        # Phase-specific model selection - Use Sonnet 4.5 for everything critical
-        self.phase_models = {
-            'knowledge_synthesis': 'claude-sonnet-4-5-20250929',
-            'case_understanding': 'claude-sonnet-4-5-20250929',
-            'investigation': 'claude-sonnet-4-5-20250929',
-            'synthesis': 'claude-sonnet-4-5-20250929',
-            'quick_validation': 'claude-3-haiku-20240307'
-        }
+        # Create all directories
+        for directory in self.directories.values():
+            directory.mkdir(parents=True, exist_ok=True)
     
     def _setup_analysis(self) -> None:
-        """Analysis configuration for maximum capability"""
+        """Analysis configuration for comprehensive litigation intelligence"""
         
-        # Token management - maximise context
-        self.token_config = {
-            'max_input_tokens': 150000,     # Maximum context window
-            'max_output_tokens': 4096,      # Maximum response
-            'buffer_tokens': 10000,         # Safety buffer
-            'optimal_batch_size': 140000    # Optimal for processing
-        }
-        
-        # Temperature settings by task type
-        self.temperature_settings = {
-            'creative_investigation': 0.9,   # High for hypothesis generation
-            'hypothesis_generation': 0.8,    # Creative thinking
-            'pattern_recognition': 0.6,      # Balanced
-            'contradiction_analysis': 0.4,   # Logical precision
-            'synthesis': 0.3,                # Structured thinking
-            'final_report': 0.2              # Consistent output
+        # CRITICAL: All temperatures = 0.0 for consistency and deterministic output
+        self.temperature_config = {
+            'knowledge_synthesis': 0.0,      # Phase 0: Legal knowledge
+            'investigation': 0.0,            # Document analysis
+            'pattern_recognition': 0.0,      # Pattern detection
+            'contradiction_analysis': 0.0,   # Finding contradictions
+            'credibility_analysis': 0.0,     # Witness credibility
+            'legal_argument': 0.0,           # Legal reasoning
+            'damages_analysis': 0.0,         # Financial calculations
+            'synthesis': 0.0,                # Final reports
+            'recursive_questioning': 0.0,    # Deep investigation
+            'hypothesis_generation': 0.0,    # Even creative tasks
         }
         
-        # Batch processing strategy
-        self.batch_strategy = {
-            'max_batch_size': 150000,        # Maximum tokens per batch
-            'min_batch_size': 20000,         # Minimum viable batch
-            'overlap_tokens': 2000,          # Context overlap between batches
-            'smart_splitting': True,         # Split on logical boundaries
-            'semantic_clustering': True      # Group related documents
+        # Analysis scope - COMPREHENSIVE for Lismore
+        self.analysis_scope = {
+            'contract_breach_analysis': True,
+            'fraud_misrepresentation': True,
+            'fiduciary_duty_breach': True,
+            'credibility_attacks': True,
+            'damages_quantification': True,
+            'procedural_advantages': True,
+            'novel_legal_arguments': True,
+            'document_withholding': True,  # Still included but not primary focus
+            'witness_inconsistencies': True,
+            'timeline_reconstruction': True,
+            'financial_analysis': True,
+            'strategic_recommendations': True,
         }
         
-        # Investigation spawning thresholds
-        self.investigation_thresholds = {
-            'contradiction_severity': 7,     # Severity > 7 spawns investigation
-            'pattern_confidence': 0.8,       # Confidence > 0.8 spawns investigation
-            'entity_suspicion': 0.7,         # Suspicion score > 0.7
-            'timeline_gap_days': 30,         # Gaps > 30 days are suspicious
-            'amount_threshold': 100000,      # Amounts > £100k warrant investigation
-            'max_concurrent': 5              # Maximum parallel investigations
-        }
-    
-    def _setup_investigation(self) -> None:
-        """Investigation and discovery configuration"""
-        
-        # Discovery markers - what Claude should flag
-        self.discovery_markers = {
-            'nuclear': ['NUCLEAR', 'CASE-ENDING', 'SMOKING GUN'],
-            'critical': ['CRITICAL', 'MAJOR', 'SIGNIFICANT'],
-            'investigate': ['INVESTIGATE', 'SUSPICIOUS', 'ANOMALY'],
-            'pattern': ['PATTERN', 'RECURRING', 'SYSTEMATIC'],
-            'contradiction': ['CONTRADICTION', 'INCONSISTENT', 'CONFLICTS']
-        }
-            # ADD THIS - Recursion configuration for recursive prompts
-        self.recursion_config = {
-            'self_questioning_depth': 3,        # Default depth for recursive questioning
-            'min_questioning_depth': 2,         # Minimum depth
-            'max_questioning_depth': 5          # Maximum depth
+        # Investigation triggers
+        self.investigation_triggers = {
+            'contradiction_severity': 7,           # 0-10 scale
+            'pattern_confidence': 0.75,            # 0-1 scale
+            'legal_argument_strength': 0.7,        # 0-1 scale
+            'credibility_issue_severity': 7,       # 0-10 scale
+            'damages_evidence_found': True,        # Boolean trigger
+            'contractual_breach_identified': True, # Boolean trigger
+            'fraud_indicators': 3,                 # Number of indicators
+            'missing_document_references': 2,      # Count threshold
         }
         
-        # Investigation depth settings
-        self.investigation_depth = {
-            'quick_investigation': 1,
-            'standard_investigation': 2,
-            'deep_investigation': 3,
-            'exhaustive_investigation': 5
+        # Recursive investigation depth
+        self.recursive_config = {
+            'max_depth': 3,                    # How many layers of questioning
+            'min_importance_score': 7,         # Only recurse on high-value findings
+            'questions_per_finding': 5,        # Questions to ask per issue
+            'follow_contradictions': True,     # Always dig into contradictions
+            'follow_gaps': True,               # Investigate missing evidence
+            'follow_patterns': True,           # Explore detected patterns
         }
-        # Strategic focus - what matters for Lismore
-        self.strategic_focus = {
-            'our_client': 'Lismore Capital',
-            'opponent': 'Process Holdings',
-            'case_type': 'arbitration',
-            'goal': 'destroy_their_case',
-            'key_themes': [
-                'breach of contract', 'fraud', 'misrepresentation',
-                'liability', 'damages', 'negligence',
-                'conspiracy', 'bad faith'
-            ]
+        
+        # Citation enforcement - MANDATORY
+        self.citation_requirements = {
+            'mandatory': True,
+            'format': '[DOC_ID: Page X, Para Y]',
+            'require_exact_quotes': True,
+            'verify_citations': True,
+            'reject_uncited_claims': True,
         }
     
-    # Database configuration
-    @property
-    def db_config(self) -> Dict[str, Any]:
-        """SQLite configuration for knowledge persistence"""
-        return {
-            'path': str(self.graph_db_path),
-            'backup_on_phase': True,
-            'versioning': True,
-            'compression': True,
-            'wal_mode': True,
-            'cache_size': -64000,          # 64MB cache
-            'foreign_keys': True,
-            'auto_vacuum': 'INCREMENTAL'
+    def _setup_knowledge_graph(self) -> None:
+        """Knowledge graph configuration"""
+        
+        self.knowledge_graph_config = {
+            # Entity extraction
+            'extract_entities': True,
+            'entity_types': [
+                'person', 'organisation', 'contract', 'obligation',
+                'payment', 'delivery', 'breach', 'representation',
+                'warranty', 'document', 'meeting', 'communication'
+            ],
+            
+            # Relationship tracking
+            'track_relationships': True,
+            'relationship_types': [
+                'contradicts', 'supports', 'references', 'supersedes',
+                'breaches', 'fulfils', 'owes', 'paid', 'delivered',
+                'represented', 'witnessed', 'disclosed', 'withheld'
+            ],
+            
+            # Temporal tracking
+            'track_timeline': True,
+            'date_extraction': True,
+            'sequence_reconstruction': True,
+            
+            # Pattern detection
+            'detect_patterns': True,
+            'pattern_types': [
+                'systematic_withholding',
+                'late_disclosure_pattern',
+                'contradictory_explanations',
+                'inconsistent_testimony',
+                'financial_discrepancies',
+                'timeline_gaps',
+                'document_trails'
+            ],
+            
+            # Confidence scoring
+            'use_confidence_scores': True,
+            'min_confidence': 0.7,
         }
     
-    # API configuration
-    @property
-    def api_config(self) -> Dict[str, Any]:
-        """API configuration for Claude"""
-        return {
-            'api_key': os.getenv('ANTHROPIC_API_KEY'),
-            'max_retries': 5,
-            'retry_delay': 5,
-            'exponential_backoff': True,
-            'timeout': 120,
-            'rate_limit_delay': 10,
-            'parallel_calls': False
+    def _setup_orchestration(self) -> None:
+        """Orchestration configuration for multi-phase analysis"""
+        
+        self.orchestration_config = {
+            # Phase configuration
+            'phases': [
+                {
+                    'name': 'phase_0_knowledge_synthesis',
+                    'description': 'Legal knowledge and case background synthesis',
+                    'required': True,
+                    'output_to_kg': True,
+                },
+                {
+                    'name': 'phase_1_disclosure_analysis',
+                    'description': 'Comprehensive disclosure analysis',
+                    'iterations': 3,  # Multiple passes for depth
+                    'batch_size': 50,  # Documents per batch
+                    'required': True,
+                },
+                {
+                    'name': 'phase_2_pattern_synthesis',
+                    'description': 'Cross-document pattern detection',
+                    'required': True,
+                    'min_documents_analysed': 100,
+                },
+                {
+                    'name': 'phase_3_strategic_synthesis',
+                    'description': 'Final strategic report for Lismore',
+                    'required': True,
+                    'output_format': 'tribunal_ready',
+                }
+            ],
+            
+            # Batch processing
+            'batch_config': {
+                'default_batch_size': 50,
+                'max_batch_size': 75,
+                'min_batch_size': 10,
+                'adaptive_batching': True,  # Adjust based on complexity
+            },
+            
+            # Parallel processing
+            'parallel_config': {
+                'enable_parallel': False,  # Disabled for consistency
+                'max_workers': 1,
+                'preserve_order': True,
+            },
+            
+            # Checkpoint configuration
+            'checkpointing': {
+                'enabled': True,
+                'checkpoint_every_n_batches': 10,
+                'save_intermediate_results': True,
+                'resume_on_failure': True,
+            }
         }
     
-    def get_model_for_task(self, task_type: str, complexity_score: float = 0.5) -> str:
-        """Dynamically select model based on task and complexity"""
+    def _setup_output(self) -> None:
+        """Output configuration"""
         
-        # Check if task has specific model assignment
-        if task_type in self.phase_models:
-            base_model = self.phase_models[task_type]
-        else:
-            base_model = self.models['primary']
-        
-        # High complexity always uses primary (Sonnet)
-        if complexity_score > 0.7 and base_model != self.models['primary']:
-            return self.models['primary']
-        
-        return base_model
+        self.output_config = {
+            # Report formats
+            'formats': ['json', 'markdown', 'pdf'],
+            'default_format': 'markdown',
+            
+            # Report sections
+            'include_sections': [
+                'executive_summary',
+                'key_findings',
+                'contract_breaches',
+                'fraud_indicators',
+                'credibility_issues',
+                'damages_analysis',
+                'legal_arguments',
+                'strategic_recommendations',
+                'document_withholding',  # One section among many
+                'evidence_gaps',
+                'procedural_opportunities',
+                'annexes_and_citations'
+            ],
+            
+            # Citation format
+            'citation_style': 'litigation',  # [DOC_ID: Location]
+            'include_citation_index': True,
+            'verify_all_citations': True,
+            
+            # Logging
+            'log_level': 'INFO',
+            'log_to_file': True,
+            'log_api_calls': True,
+            'log_costs': True,
+        }
     
-    def should_spawn_investigation(self, 
-                                   trigger_type: str,
-                                   trigger_data: Dict) -> bool:
-        """Determine if trigger warrants spawning investigation"""
+    def _load_config(self) -> None:
+        """Load configuration from file"""
+        with open(self.config_path, 'r') as f:
+            saved_config = json.load(f)
+            
+        # Update config from saved values
+        for key, value in saved_config.items():
+            if hasattr(self, key):
+                setattr(self, key, value)
+    
+    def _save_config(self) -> None:
+        """Save configuration to file"""
+        config_dict = {
+            'api_config': self.api_config,
+            'directories': {k: str(v) for k, v in self.directories.items()},
+            'temperature_config': self.temperature_config,
+            'analysis_scope': self.analysis_scope,
+            'investigation_triggers': self.investigation_triggers,
+            'recursive_config': self.recursive_config,
+            'citation_requirements': self.citation_requirements,
+            'knowledge_graph_config': self.knowledge_graph_config,
+            'orchestration_config': self.orchestration_config,
+            'output_config': self.output_config,
+        }
         
-        thresholds = self.investigation_thresholds
-        
-        if trigger_type == 'contradiction':
-            return trigger_data.get('severity', 0) >= thresholds['contradiction_severity']
-        
-        elif trigger_type == 'pattern':
-            return trigger_data.get('confidence', 0) >= thresholds['pattern_confidence']
-        
-        elif trigger_type == 'entity':
-            return trigger_data.get('suspicion_score', 0) >= thresholds['entity_suspicion']
-        
-        elif trigger_type == 'timeline_gap':
-            return trigger_data.get('gap_days', 0) >= thresholds['timeline_gap_days']
-        
-        elif trigger_type == 'financial':
-            return trigger_data.get('amount', 0) >= thresholds['amount_threshold']
-        
-        # Default: spawn if marked critical
-        return trigger_data.get('priority', 0) >= 8.0
+        with open(self.config_path, 'w') as f:
+            json.dump(config_dict, f, indent=2)
+    
+    def get_temperature(self, task_type: str) -> float:
+        """Get temperature for specific task type"""
+        return self.temperature_config.get(task_type, 0.0)
+    
+    def get_directory(self, dir_type: str) -> Path:
+        """Get path for specific directory type"""
+        return self.directories.get(dir_type, self.project_root / 'data')
+    
+    def update_config(self, updates: Dict[str, Any]) -> None:
+        """Update configuration values"""
+        for key, value in updates.items():
+            if hasattr(self, key):
+                setattr(self, key, value)
+        self._save_config()
 
 
 # Global config instance
-config = Config()
+_config_instance = None
+
+def get_config() -> Config:
+    """Get global configuration instance"""
+    global _config_instance
+    if _config_instance is None:
+        _config_instance = Config()
+    return _config_instance

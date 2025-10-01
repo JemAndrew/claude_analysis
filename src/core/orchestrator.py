@@ -1,569 +1,658 @@
 #!/usr/bin/env python3
 """
-Litigation Orchestrator - Staged Execution Architecture
-Phase 0 → Phase 1 → Phase 2-N with autonomous investigation
-British English throughout - Lismore v Process Holdings
+Litigation Intelligence Orchestrator
+COMPLETE REPLACEMENT for src/core/orchestrator.py
+
+Coordinates multi-phase comprehensive litigation analysis for Lismore:
+- Phase 0: Legal knowledge synthesis
+- Phase 1: Disclosure analysis (iterative with prompt caching)
+- Phase 2: Pattern synthesis
+- Phase 3: Strategic report generation
+
+Implements prompt caching for cost efficiency
 """
 
 import json
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Any, Tuple
 from datetime import datetime
+import time
 
-from core.config import config
-from core.phase_executor import PhaseExecutor
-from intelligence.knowledge_graph import KnowledgeGraph
-from api.client import ClaudeClient
-from api.context_manager import ContextManager
-from api.batch_manager import BatchManager
-from prompts.autonomous import AutonomousPrompts
-from prompts.recursive import RecursivePrompts
-from prompts.synthesis import SynthesisPrompts
-from utils.document_loader import DocumentLoader
+from ..api.client import ClaudeClient
+from ..core.config import get_config
+from ..knowledge.graph import KnowledgeGraph
+from ..utils.logger import get_logger
+from ..utils.document_processor import DocumentProcessor
+from ..prompts.autonomous import AutonomousPrompts
+from ..prompts.recursive import RecursivePrompts
+from ..prompts.synthesis import SynthesisPrompts
 
 
 class LitigationOrchestrator:
     """
-    Staged execution orchestrator
-    Phase 0: Legal knowledge
-    Phase 1: Case understanding
-    Phase 2-N: Autonomous investigation
+    Orchestrates comprehensive litigation intelligence analysis
+    
+    Multi-phase approach:
+    1. Knowledge synthesis (legal framework + case context)
+    2. Iterative disclosure analysis (with caching)
+    3. Cross-document pattern detection
+    4. Strategic synthesis for Lismore
     """
     
     def __init__(self):
-        """Initialise orchestrator with all components"""
-        
-        self.config = config
+        """Initialise orchestrator"""
+        self.config = get_config()
+        self.logger = get_logger(__name__)
         
         # Core components
-        self.knowledge_graph = KnowledgeGraph(config)
-        self.api_client = ClaudeClient(config)
-        self.context_manager = ContextManager(config)
-        self.batch_manager = BatchManager(config)
-        self.phase_executor = PhaseExecutor(config, self)
+        self.api_client = ClaudeClient()
+        self.knowledge_graph = KnowledgeGraph()
+        self.doc_processor = DocumentProcessor()
         
-        # Prompt systems
-        self.autonomous_prompts = AutonomousPrompts(config)
-        self.recursive_prompts = RecursivePrompts(config)
-        self.synthesis_prompts = SynthesisPrompts(config)
+        # Prompt generators
+        self.autonomous_prompts = AutonomousPrompts()
+        self.recursive_prompts = RecursivePrompts()
+        self.synthesis_prompts = SynthesisPrompts()
         
         # State tracking
-        self.state = {
-            'phases_completed': [],
-            'current_iteration': 0,
-            'discoveries': [],
-            'convergence_metrics': {}
+        self.current_phase = None
+        self.analysis_state = {
+            'phase_0_complete': False,
+            'legal_knowledge_synthesised': False,
+            'disclosure_batches_processed': 0,
+            'total_documents_analysed': 0,
+            'high_value_findings': 0,
+            'recursive_investigations_triggered': 0
         }
         
-        self._load_state()
+        # Cacheable context (built once, reused across batches)
+        self.cacheable_context = None
+        
+        self.logger.info("Litigation orchestrator initialised")
     
-    # ═══════════════════════════════════════════════════════════════
-    # PHASE EXECUTION
-    # ═══════════════════════════════════════════════════════════════
-    
-    def execute_phase(self, phase: str) -> Dict:
+    def run_full_analysis(
+        self,
+        legal_knowledge_dir: Optional[Path] = None,
+        case_background_dir: Optional[Path] = None,
+        disclosure_dir: Optional[Path] = None
+    ) -> Dict[str, Any]:
         """
-        Execute specific phase
-        Supports: '0', '1', '2', '3', etc.
+        Run complete multi-phase litigation analysis
+        
+        Args:
+            legal_knowledge_dir: Directory with legal framework docs
+            case_background_dir: Directory with case context
+            disclosure_dir: Directory with disclosure documents
+        
+        Returns:
+            Complete analysis results
         """
+        start_time = time.time()
+        self.logger.info("=" * 60)
+        self.logger.info("STARTING COMPREHENSIVE LITIGATION ANALYSIS")
+        self.logger.info("Target: Process Holdings (PH)")
+        self.logger.info("Client: Lismore Capital")
+        self.logger.info("=" * 60)
         
-        if phase == '0':
-            return self._execute_phase_0()
-        elif phase == '1':
-            return self._execute_phase_1()
-        else:
-            # Phase 2+ are investigation iterations
-            iteration = int(phase)
-            return self._execute_investigation_iteration(iteration)
-    
-    def execute_full_analysis(self, start_phase: str = '0', max_iterations: int = 5) -> Dict:
-        """
-        Execute complete analysis
-        Phase 0 → Phase 1 → Phase 2-N
-        """
-        
-        results = {
-            'phases': {},
-            'iterations': {},
-            'final_synthesis': None
-        }
-        
-        # Phase 0: Legal knowledge
-        if '0' not in self.state['phases_completed']:
-            print("\n[PHASE 0] Legal Knowledge Mastery")
-            results['phases']['0'] = self._execute_phase_0()
-        
-        # Phase 1: Case understanding
-        if '1' not in self.state['phases_completed']:
-            print("\n[PHASE 1] Complete Case Understanding")
-            results['phases']['1'] = self._execute_phase_1()
-        
-        # Phase 2-N: Autonomous investigation
-        print("\n[PHASE 2-N] Autonomous Investigation")
-        
-        converged = False
-        iteration = 2
-        
-        while not converged and iteration < (2 + max_iterations):
-            print(f"\n  Iteration {iteration - 1}...")
-            iter_results = self._execute_investigation_iteration(iteration)
-            results['iterations'][iteration] = iter_results
+        try:
+            # Phase 0: Legal Knowledge Synthesis
+            legal_knowledge = self._execute_phase_0(
+                legal_knowledge_dir,
+                case_background_dir
+            )
             
-            converged = iter_results.get('converged', False)
-            iteration += 1
-        
-        # Final synthesis
-        print("\n[SYNTHESIS] Building Strategic Narrative")
-        results['final_synthesis'] = self._execute_synthesis(results)
-        
-        return results
+            # Phase 1: Disclosure Analysis (Iterative with Caching)
+            disclosure_results = self._execute_phase_1(disclosure_dir)
+            
+            # Phase 2: Pattern Synthesis
+            patterns = self._execute_phase_2()
+            
+            # Phase 3: Strategic Report
+            final_report = self._execute_phase_3(
+                legal_knowledge,
+                disclosure_results,
+                patterns
+            )
+            
+            # Calculate total time
+            total_time = time.time() - start_time
+            
+            # Final statistics
+            self.api_client.log_final_statistics()
+            
+            self.logger.info("=" * 60)
+            self.logger.info(f"ANALYSIS COMPLETE in {total_time/60:.1f} minutes")
+            self.logger.info(f"Documents analysed: {self.analysis_state['total_documents_analysed']}")
+            self.logger.info(f"High-value findings: {self.analysis_state['high_value_findings']}")
+            self.logger.info(f"Recursive investigations: {self.analysis_state['recursive_investigations_triggered']}")
+            self.logger.info("=" * 60)
+            
+            return {
+                'legal_knowledge': legal_knowledge,
+                'disclosure_analysis': disclosure_results,
+                'patterns': patterns,
+                'final_report': final_report,
+                'statistics': {
+                    'total_time_seconds': total_time,
+                    'documents_analysed': self.analysis_state['total_documents_analysed'],
+                    'high_value_findings': self.analysis_state['high_value_findings'],
+                    'api_usage': self.api_client.get_usage_summary()
+                }
+            }
+            
+        except Exception as e:
+            self.logger.error(f"Analysis failed: {e}")
+            raise
     
-    # ═══════════════════════════════════════════════════════════════
-    # PHASE 0: LEGAL KNOWLEDGE MASTERY
-    # ═══════════════════════════════════════════════════════════════
-    
-    def _execute_phase_0(self) -> Dict:
+    def _execute_phase_0(
+        self,
+        legal_knowledge_dir: Optional[Path],
+        case_background_dir: Optional[Path]
+    ) -> Dict[str, Any]:
         """
-        Phase 0: Load legal documents only and synthesise legal framework
-        Cost: ~$0.10, Time: ~5 minutes
+        Phase 0: Synthesise Legal Knowledge and Case Context
+        
+        This creates the foundational understanding that will be cached
+        and reused across all subsequent analysis phases.
         """
+        self.logger.info("\n" + "=" * 60)
+        self.logger.info("PHASE 0: LEGAL KNOWLEDGE SYNTHESIS")
+        self.logger.info("=" * 60)
         
-        print("  Loading legal documents...")
+        self.current_phase = 'phase_0_knowledge_synthesis'
         
-        # Load legal documents
-        loader = DocumentLoader(self.config)
-        legal_docs = loader.load_directory(self.config.legal_knowledge_dir)
+        # Load legal framework documents
+        legal_docs = []
+        if legal_knowledge_dir and legal_knowledge_dir.exists():
+            legal_docs = self.doc_processor.load_directory(legal_knowledge_dir)
+            self.logger.info(f"Loaded {len(legal_docs)} legal framework documents")
         
-        print(f"  Loaded {len(legal_docs)} legal documents")
+        # Load case background
+        case_docs = []
+        if case_background_dir and case_background_dir.exists():
+            case_docs = self.doc_processor.load_directory(case_background_dir)
+            self.logger.info(f"Loaded {len(case_docs)} case background documents")
         
-        # Build legal mastery prompt
-        prompt = self._build_legal_knowledge_prompt(legal_docs)
+        if not legal_docs and not case_docs:
+            self.logger.warning("No legal knowledge or case background provided")
+            return {'status': 'skipped', 'reason': 'no_input_documents'}
         
-        # Call Claude Sonnet 4.5
-        response, metadata = self.api_client.call_claude(
+        # Generate knowledge synthesis prompt
+        prompt = self.autonomous_prompts.knowledge_synthesis_prompt(
+            legal_knowledge=legal_docs,
+            case_context=case_docs,
+            existing_knowledge={}
+        )
+        
+        # Call Claude (no caching yet - this is first call)
+        self.logger.info("Synthesising legal knowledge with Claude...")
+        response, metadata = self.api_client.call_claude_with_cache(
             prompt=prompt,
-            model='claude-sonnet-4-20250514',  # Sonnet 4.5
-            task_type='legal_knowledge',
-            phase='0'
+            cacheable_context="",  # Nothing to cache yet
+            task_type='knowledge_synthesis',
+            phase='phase_0'
         )
         
-        # Store legal knowledge
-        self.knowledge_graph.log_discovery(
-            discovery_type='LEGAL_FRAMEWORK',
-            content=response[:2000],
-            importance='HIGH',
-            phase='0'
-        )
-        
-        # Mark phase complete
-        self.state['phases_completed'].append('0')
-        self._save_state()
-        
-        # Save output
-        results = {
-            'phase': '0',
-            'documents_processed': len(legal_docs),
-            'synthesis': response,
-            'metadata': metadata,
-            'timestamp': datetime.now().isoformat()
-        }
-        
-        self._save_phase_output('0', results)
-        
-        return results
-    
-    def _build_legal_knowledge_prompt(self, legal_docs: List[Dict]) -> str:
-        """Build prompt for legal knowledge synthesis"""
-        
-        docs_formatted = self.autonomous_prompts._format_documents(legal_docs, "LEGAL")
-        
-        return f"""<mission>
-You are building a complete legal framework for Lismore v Process Holdings litigation.
-Absorb ALL legal knowledge. Create a mental model of available legal weapons.
-</mission>
-
-<approach>
-As you read these legal documents:
-1. Identify applicable laws, statutes, precedents
-2. Note duties Process Holdings owed to Lismore
-3. Identify potential causes of action
-4. Spot defences they might raise
-5. Build strategic legal framework
-</approach>
-
-<legal_documents>
-{docs_formatted}
-</legal_documents>
-
-<output_requirements>
-Synthesise complete legal framework covering:
-
-APPLICABLE LAW:
-- What laws govern this dispute?
-- What duties exist?
-- What standards apply?
-
-CAUSES OF ACTION:
-- What can we sue for?
-- Elements we must prove for each
-- Strength of each claim
-
-DEFENCES TO ANTICIPATE:
-- What will they argue?
-- How do we counter?
-
-STRATEGIC WEAPONS:
-- Most powerful legal arguments
-- Precedents in our favour
-- Statutory provisions that help us
-
-Provide comprehensive synthesis showing deep legal understanding.
-Mark key strategic insights with [STRATEGIC].
-</output_requirements>"""
-    
-    # ═══════════════════════════════════════════════════════════════
-    # PHASE 1: COMPLETE CASE UNDERSTANDING
-    # ═══════════════════════════════════════════════════════════════
-    
-    def _execute_phase_1(self) -> Dict:
-        """
-        Phase 1: Load ALL case documents and build complete understanding
-        Marks discoveries for later investigation
-        Cost: ~$5-10, Time: ~15-30 minutes
-        """
-        
-        print("  Loading ALL case documents (including subdirectories)...")
-        
-        # Load case documents recursively
-        loader = DocumentLoader(self.config)
-        case_docs = loader.load_directory(self.config.case_documents_dir)
-        
-        print(f"  Loaded {len(case_docs)} case documents")
-        
-        # Get legal framework from Phase 0
-        legal_context = self.knowledge_graph.export_for_report()
-        
-        # Build case understanding prompt
-        prompt = self._build_case_understanding_prompt(case_docs, legal_context)
-        
-        # Call Claude Sonnet 4.5 with full case
-        response, metadata = self.api_client.call_claude(
-            prompt=prompt,
-            model='claude-sonnet-4-20250514',
-            task_type='case_understanding',
-            phase='1'
-        )
-        
-        # Extract discoveries
-        discoveries = self.phase_executor.extract_discoveries(response, '1')
+        # Parse response
+        legal_knowledge = self._parse_knowledge_synthesis(response)
         
         # Store in knowledge graph
-        for discovery in discoveries:
-            self.knowledge_graph.log_discovery(
-                discovery_type=discovery['type'],
-                content=discovery['content'],
-                importance=self._discovery_importance(discovery['type']),
-                phase='1'
-            )
+        self.knowledge_graph.add_legal_framework(legal_knowledge)
         
         # Mark phase complete
-        self.state['phases_completed'].append('1')
-        self.state['discoveries'].extend(discoveries)
-        self._save_state()
+        self.analysis_state['phase_0_complete'] = True
+        self.analysis_state['legal_knowledge_synthesised'] = True
         
-        # Save output
-        results = {
-            'phase': '1',
-            'documents_processed': len(case_docs),
-            'discoveries': discoveries,
-            'synthesis': response,
-            'metadata': metadata,
-            'timestamp': datetime.now().isoformat()
-        }
+        self.logger.info(f"✓ Phase 0 complete. Synthesised {len(legal_knowledge.get('principles', []))} legal principles")
         
-        self._save_phase_output('1', results)
-        
-        return results
+        return legal_knowledge
     
-    def _build_case_understanding_prompt(self, case_docs: List[Dict], legal_context: Dict) -> str:
-        """Build prompt for complete case understanding"""
+    def _execute_phase_1(self, disclosure_dir: Optional[Path]) -> Dict[str, Any]:
+        """
+        Phase 1: Comprehensive Disclosure Analysis
         
-        docs_formatted = self.autonomous_prompts._format_documents(case_docs, "CASE")
+        Processes disclosure in batches with prompt caching for efficiency.
+        Runs multiple iterations for depth.
+        """
+        self.logger.info("\n" + "=" * 60)
+        self.logger.info("PHASE 1: DISCLOSURE ANALYSIS")
+        self.logger.info("=" * 60)
         
-        return f"""<mission>
-Build COMPLETE understanding of Lismore v Process Holdings case.
-Read ALL documents. Understand the full story.
-Mark anything worth investigating further.
-</mission>
+        self.current_phase = 'phase_1_disclosure_analysis'
+        
+        if not disclosure_dir or not disclosure_dir.exists():
+            self.logger.error("No disclosure directory provided")
+            return {'status': 'failed', 'reason': 'no_disclosure_directory'}
+        
+        # Load all disclosure documents
+        all_docs = self.doc_processor.load_directory(disclosure_dir)
+        self.logger.info(f"Loaded {len(all_docs)} disclosure documents")
+        
+        if not all_docs:
+            return {'status': 'failed', 'reason': 'no_documents_found'}
+        
+        # Get iteration configuration
+        iterations = self.config.orchestration_config['phases'][1].get('iterations', 3)
+        batch_size = self.config.orchestration_config['phases'][1].get('batch_size', 50)
+        
+        # Run multiple iterations
+        all_results = []
+        for iteration in range(1, iterations + 1):
+            self.logger.info(f"\n--- ITERATION {iteration}/{iterations} ---")
+            
+            iteration_results = self._execute_disclosure_iteration(
+                iteration=iteration,
+                documents=all_docs,
+                batch_size=batch_size
+            )
+            
+            all_results.append(iteration_results)
+        
+        # Consolidate results
+        consolidated = self._consolidate_iteration_results(all_results)
+        
+        return consolidated
+    
+    def _execute_disclosure_iteration(
+        self,
+        iteration: int,
+        documents: List[Dict],
+        batch_size: int
+    ) -> Dict[str, Any]:
+        """
+        Execute single iteration of disclosure analysis with prompt caching
+        
+        Key insight: The legal framework and knowledge graph context stays
+        the same across ALL batches - perfect for caching.
+        """
+        self.logger.info(f"Processing {len(documents)} documents in batches of {batch_size}")
+        
+        # Build cacheable context ONCE per iteration
+        cacheable_context = self._build_cacheable_context(iteration)
+        
+        # Split documents into batches
+        batches = [
+            documents[i:i + batch_size]
+            for i in range(0, len(documents), batch_size)
+        ]
+        
+        self.logger.info(f"Created {len(batches)} batches for iteration {iteration}")
+        
+        # Process each batch
+        batch_results = []
+        for batch_num, batch in enumerate(batches, 1):
+            self.logger.info(f"\nProcessing batch {batch_num}/{len(batches)} ({len(batch)} documents)")
+            
+            # Build unique prompt for this batch
+            unique_prompt = self.autonomous_prompts.investigation_prompt(
+                documents=batch,
+                context={},  # Context is in cacheable part
+                phase=f'iteration_{iteration}'
+            )
+            
+            # Call Claude with caching (cacheable_context is cached after first batch)
+            response, metadata = self.api_client.call_claude_with_cache(
+                prompt=unique_prompt,
+                cacheable_context=cacheable_context,
+                task_type='investigation',
+                phase=f'iteration_{iteration}_batch_{batch_num}'
+            )
+            
+            # Parse findings
+            findings = self._parse_investigation_response(response)
+            
+            # Check for high-value findings that need recursive investigation
+            high_value = self._identify_high_value_findings(findings)
+            
+            if high_value:
+                self.logger.info(f"Found {len(high_value)} high-value findings - triggering recursive investigation")
+                recursive_results = self._execute_recursive_investigation(
+                    findings=high_value,
+                    documents=batch,
+                    cacheable_context=cacheable_context
+                )
+                findings['recursive_investigations'] = recursive_results
+                self.analysis_state['recursive_investigations_triggered'] += len(high_value)
+            
+            # Update knowledge graph
+            self.knowledge_graph.add_findings(findings, phase=f'iteration_{iteration}')
+            
+            # Track statistics
+            self.analysis_state['disclosure_batches_processed'] += 1
+            self.analysis_state['total_documents_analysed'] += len(batch)
+            self.analysis_state['high_value_findings'] += len(findings.get('critical_findings', []))
+            
+            batch_results.append({
+                'batch_number': batch_num,
+                'documents_processed': len(batch),
+                'findings': findings,
+                'metadata': metadata
+            })
+        
+        return {
+            'iteration': iteration,
+            'batches': batch_results,
+            'total_findings': sum(len(b['findings'].get('critical_findings', [])) for b in batch_results)
+        }
+    
+    def _build_cacheable_context(self, iteration: int) -> str:
+        """
+        Build the cacheable context that stays consistent across batches
+        
+        This includes:
+        - Legal framework (from Phase 0)
+        - Knowledge graph accumulated context
+        - Analysis mission and instructions
+        - Hallucination prevention rules
+        """
+        # Get legal knowledge from KG
+        legal_framework = self.knowledge_graph.get_legal_framework()
+        
+        # Get accumulated context from previous iterations
+        kg_context = self.knowledge_graph.get_context_for_phase(f'iteration_{iteration}')
+        
+        # Build comprehensive cacheable context
+        context = f"""
+<critical_accuracy_requirements>
+MANDATORY CITATION RULES:
+1. EVERY factual claim MUST cite: [DOC_ID: Page X, Para Y]
+2. NEVER speculate without [INFERENCE] label
+3. Quote marks only for EXACT quotes
+4. If cannot cite location, DO NOT make the claim
+</critical_accuracy_requirements>
+
+<case_mission>
+COMPREHENSIVE LITIGATION ANALYSIS FOR LISMORE CAPITAL v PROCESS HOLDINGS
+
+Objective: Find EVERYTHING that helps Lismore win this arbitration.
+
+Analysis must be:
+- Adversarial for Lismore (not neutral)
+- Comprehensive across all legal grounds
+- Evidence-based with mandatory citations
+- Strategically focused on winning
+
+Key areas:
+1. Contract breaches by PH
+2. Fraud/misrepresentation indicators
+3. Fiduciary duty breaches
+4. Credibility attacks on PH witnesses
+5. Damages quantification
+6. Legal arguments (liability + quantum)
+7. Procedural advantages
+8. Document withholding patterns
+9. Timeline reconstruction
+10. Strategic recommendations
+</case_mission>
 
 <legal_framework>
-You've already mastered the legal framework. Key points:
-{json.dumps(legal_context, indent=2)[:2000]}
+{json.dumps(legal_framework, indent=2)}
 </legal_framework>
 
-<case_documents>
-{docs_formatted}
-</case_documents>
+<knowledge_graph_context>
+{json.dumps(kg_context, indent=2)}
+</knowledge_graph_context>
 
-<understanding_requirements>
-Build comprehensive case understanding covering:
+<lismore_strategy>
+Every finding must address: "How does this help Lismore win?"
 
-THE STORY:
-- What happened chronologically?
-- Who are the key players?
-- What did everyone do?
-- What went wrong?
-
-THE EVIDENCE:
-- What documents prove what?
-- What's the strongest evidence?
-- What's missing?
-
-THE CLAIMS:
-- How do facts map to legal claims?
-- What can we prove?
-- What's our strongest case?
-
-THEIR DEFENCE:
-- What will they argue?
-- What evidence supports them?
-- Where are they vulnerable?
-
-INVESTIGATION PRIORITIES:
-- Mark anything NUCLEAR (case-ending)
-- Mark anything CRITICAL (major advantage)
-- Mark anything worth deeper investigation [INVESTIGATE]
-
-Provide complete synthesis showing deep case understanding.
-</understanding_requirements>
-
-<discovery_markers>
-Use these markers liberally:
-[NUCLEAR] - This wins the case
-[CRITICAL] - Major strategic advantage
-[INVESTIGATE] - Needs deeper investigation
-[SUSPICIOUS] - Something doesn't add up
-[MISSING] - Evidence that should exist
-</discovery_markers>"""
+Prioritise:
+- Evidence proving PH breach/fraud
+- Ammunition for cross-examination
+- Damages supporting evidence
+- Procedural leverage
+- Novel legal arguments
+</lismore_strategy>
+"""
+        
+        return context
     
-    # ═══════════════════════════════════════════════════════════════
-    # PHASE 2-N: AUTONOMOUS INVESTIGATION
-    # ═══════════════════════════════════════════════════════════════
+    def _identify_high_value_findings(self, findings: Dict) -> List[Dict]:
+        """
+        Identify findings that warrant recursive investigation
+        
+        Triggers:
+        - Severity >= 7
+        - Contract breach identified
+        - Fraud indicators
+        - Major contradictions
+        - Significant damages evidence
+        """
+        high_value = []
+        
+        for finding in findings.get('critical_findings', []):
+            severity = finding.get('severity', 0)
+            finding_type = finding.get('type', '')
+            
+            # Check triggers
+            if severity >= self.config.investigation_triggers.get('contradiction_severity', 7):
+                high_value.append(finding)
+            elif finding_type in ['contract_breach', 'fraud', 'fiduciary_breach']:
+                high_value.append(finding)
+            elif 'contradiction' in finding.get('description', '').lower():
+                high_value.append(finding)
+        
+        return high_value
     
-    def _execute_investigation_iteration(self, iteration: int) -> Dict:
+    def _execute_recursive_investigation(
+        self,
+        findings: List[Dict],
+        documents: List[Dict],
+        cacheable_context: str
+    ) -> List[Dict]:
         """
-        Execute one iteration of autonomous investigation
-        Claude investigates whatever it finds interesting
+        Execute recursive self-questioning on high-value findings
+        
+        Uses RecursivePrompts to dig deeper
         """
+        recursive_results = []
         
-        # Get accumulated knowledge
-        context = self.knowledge_graph.export_for_report()
-        all_docs = self._load_all_documents()
+        for finding in findings:
+            self.logger.info(f"Recursive investigation: {finding.get('description', 'Unknown')[:50]}...")
+            
+            # Generate deep questioning prompt
+            prompt = self.recursive_prompts.deep_questioning_prompt(
+                finding=finding,
+                documents=documents,
+                knowledge_context={}  # In cacheable part
+            )
+            
+            # Call Claude (still benefits from cacheable context)
+            response, metadata = self.api_client.call_claude_with_cache(
+                prompt=prompt,
+                cacheable_context=cacheable_context,
+                task_type='recursive_questioning',
+                phase='recursive_investigation'
+            )
+            
+            # Parse recursive findings
+            recursive_finding = self._parse_recursive_response(response, finding)
+            recursive_results.append(recursive_finding)
         
-        # Build autonomous investigation prompt
-        prompt = self._build_investigation_prompt(context, all_docs, iteration)
+        return recursive_results
+    
+    def _execute_phase_2(self) -> Dict[str, Any]:
+        """
+        Phase 2: Cross-Document Pattern Synthesis
         
-        # Call Claude with full autonomy
-        response, metadata = self.api_client.call_claude(
-            prompt=prompt,
-            model='claude-sonnet-4-20250514',
-            task_type='autonomous_investigation',
-            phase=f'investigation_{iteration}'
+        Analyses patterns across all findings accumulated in KG
+        """
+        self.logger.info("\n" + "=" * 60)
+        self.logger.info("PHASE 2: PATTERN SYNTHESIS")
+        self.logger.info("=" * 60)
+        
+        self.current_phase = 'phase_2_pattern_synthesis'
+        
+        # Get all findings from knowledge graph
+        all_findings = self.knowledge_graph.get_all_findings()
+        
+        if not all_findings:
+            self.logger.warning("No findings to analyse for patterns")
+            return {'status': 'skipped', 'reason': 'no_findings'}
+        
+        self.logger.info(f"Analysing patterns across {len(all_findings)} findings")
+        
+        # Generate pattern detection prompt
+        prompt = self.autonomous_prompts.pattern_discovery_prompt(
+            documents=[],  # Not needed - working from findings
+            known_patterns={},
+            context={'all_findings': all_findings}
         )
         
-        # Extract new discoveries
-        discoveries = self.phase_executor.extract_discoveries(response, f'iteration_{iteration}')
+        # Build cacheable context
+        cacheable_context = self._build_cacheable_context(iteration=999)  # Use final context
         
-        # Check convergence
-        converged = self._check_convergence(discoveries)
-        
-        # Store results
-        results = {
-            'iteration': iteration,
-            'new_discoveries': len(discoveries),
-            'discoveries': discoveries,
-            'converged': converged,
-            'synthesis': response,
-            'metadata': metadata,
-            'timestamp': datetime.now().isoformat()
-        }
-        
-        # Save output
-        self._save_phase_output(f'iteration_{iteration}', results)
-        
-        return results
-    
-    def _build_investigation_prompt(self, context: Dict, all_docs: List[Dict], iteration: int) -> str:
-        """Build autonomous investigation prompt"""
-        
-        return f"""<autonomous_investigation>
-ITERATION {iteration - 1}
-
-You have COMPLETE AUTONOMY to investigate ANYTHING interesting.
-No predetermined focus. Follow your instincts.
-</autonomous_investigation>
-
-<what_you_know>
-{json.dumps(context, indent=2)[:5000]}
-</what_you_know>
-
-<all_case_documents>
-You have access to all case documents. Focus on whatever intrigues you.
-{len(all_docs)} documents available for investigation.
-</all_case_documents>
-
-<investigation_freedom>
-Investigate ANYTHING that:
-- Seems suspicious
-- Doesn't add up
-- Could be important
-- Might reveal something
-- Interests you strategically
-
-You decide what matters. You decide what to investigate.
-Follow every interesting thread.
-</investigation_freedom>
-
-<discovery_markers>
-Mark what you find:
-[NUCLEAR] - Case-ending discovery
-[CRITICAL] - Major advantage
-[PATTERN] - Significant pattern
-[CONTRADICTION] - Important contradiction
-[INVESTIGATE] - Needs even deeper look
-</discovery_markers>
-
-<instruction>
-What do YOU find interesting in this case?
-What threads do YOU want to follow?
-Investigate autonomously. Report everything you discover.
-</instruction>"""
-    
-    def _check_convergence(self, discoveries: List[Dict]) -> bool:
-        """Check if investigation has converged"""
-        
-        # Count critical discoveries
-        critical_count = sum(1 for d in discoveries 
-                           if d['type'] in ['NUCLEAR', 'CRITICAL'])
-        
-        # Track history
-        if 'discovery_history' not in self.state['convergence_metrics']:
-            self.state['convergence_metrics']['discovery_history'] = []
-        
-        self.state['convergence_metrics']['discovery_history'].append(critical_count)
-        history = self.state['convergence_metrics']['discovery_history']
-        
-        # Convergence: no critical discoveries
-        if critical_count == 0:
-            return True
-        
-        # Convergence: declining trend
-        if len(history) >= 3:
-            if history[-1] < history[-2] < history[-3]:
-                if history[-1] <= 1:
-                    return True
-        
-        return False
-    
-    # ═══════════════════════════════════════════════════════════════
-    # FINAL SYNTHESIS
-    # ═══════════════════════════════════════════════════════════════
-    
-    def _execute_synthesis(self, all_results: Dict) -> Dict:
-        """Build final strategic narrative"""
-        
-        # Export all knowledge
-        knowledge = self.knowledge_graph.export_for_report()
-        
-        # Build synthesis prompt
-        prompt = self.synthesis_prompts.narrative_construction_prompt(
-            findings=knowledge.get('critical_findings', {}),
-            contradictions=knowledge.get('key_contradictions', []),
-            patterns=knowledge.get('strong_patterns', {}),
-            timeline=knowledge.get('timeline', {}),
-            entities=knowledge.get('entities', {})
+        # Call Claude
+        response, metadata = self.api_client.call_claude_with_cache(
+            prompt=prompt,
+            cacheable_context=cacheable_context,
+            task_type='pattern_recognition',
+            phase='phase_2'
         )
         
-        # Generate narrative
-        response, metadata = self.api_client.call_claude(
+        # Parse patterns
+        patterns = self._parse_pattern_response(response)
+        
+        # Store in knowledge graph
+        self.knowledge_graph.add_patterns(patterns)
+        
+        self.logger.info(f"✓ Phase 2 complete. Identified {len(patterns.get('patterns', []))} patterns")
+        
+        return patterns
+    
+    def _execute_phase_3(
+        self,
+        legal_knowledge: Dict,
+        disclosure_results: Dict,
+        patterns: Dict
+    ) -> Dict[str, Any]:
+        """
+        Phase 3: Strategic Synthesis - Final Report for Lismore
+        
+        Generates tribunal-ready strategic report
+        """
+        self.logger.info("\n" + "=" * 60)
+        self.logger.info("PHASE 3: STRATEGIC SYNTHESIS")
+        self.logger.info("=" * 60)
+        
+        self.current_phase = 'phase_3_strategic_synthesis'
+        
+        # Get complete knowledge graph
+        complete_context = self.knowledge_graph.get_complete_context()
+        
+        # Generate final synthesis prompt
+        prompt = self.synthesis_prompts.strategic_synthesis_prompt(
+            legal_framework=legal_knowledge,
+            all_findings=complete_context.get('findings', []),
+            patterns=patterns,
+            timeline=complete_context.get('timeline', {}),
+            knowledge_graph=complete_context
+        )
+        
+        # Build final cacheable context
+        cacheable_context = self._build_cacheable_context(iteration=999)
+        
+        # Call Claude for final report
+        self.logger.info("Generating final strategic report...")
+        response, metadata = self.api_client.call_claude_with_cache(
             prompt=prompt,
-            model='claude-sonnet-4-20250514',
+            cacheable_context=cacheable_context,
             task_type='synthesis',
-            phase='final_synthesis'
+            phase='phase_3_final'
         )
         
-        # Save narrative
-        self.phase_executor.synthesise_narrative(response)
+        # Parse final report
+        final_report = self._parse_final_report(response)
         
-        results = {
-            'narrative': response,
-            'metadata': metadata,
+        # Save report
+        self._save_final_report(final_report)
+        
+        self.logger.info("✓ Phase 3 complete. Final report generated")
+        
+        return final_report
+    
+    # Response parsing methods
+    
+    def _parse_knowledge_synthesis(self, response: str) -> Dict[str, Any]:
+        """Parse Phase 0 knowledge synthesis response"""
+        try:
+            # Look for JSON in response
+            import re
+            json_match = re.search(r'```json\n(.*?)\n```', response, re.DOTALL)
+            if json_match:
+                return json.loads(json_match.group(1))
+            else:
+                # Fallback: return raw response
+                return {'raw_synthesis': response}
+        except Exception as e:
+            self.logger.error(f"Failed to parse knowledge synthesis: {e}")
+            return {'raw_synthesis': response}
+    
+    def _parse_investigation_response(self, response: str) -> Dict[str, Any]:
+        """Parse investigation findings"""
+        try:
+            import re
+            json_match = re.search(r'```json\n(.*?)\n```', response, re.DOTALL)
+            if json_match:
+                return json.loads(json_match.group(1))
+            else:
+                return {'raw_response': response}
+        except Exception as e:
+            self.logger.error(f"Failed to parse investigation response: {e}")
+            return {'raw_response': response}
+    
+    def _parse_recursive_response(self, response: str, original_finding: Dict) -> Dict[str, Any]:
+        """Parse recursive investigation response"""
+        return {
+            'original_finding': original_finding,
+            'recursive_analysis': response,
             'timestamp': datetime.now().isoformat()
         }
-        
-        self._save_phase_output('final_synthesis', results)
-        
-        return results
     
-    # ═══════════════════════════════════════════════════════════════
-    # HELPER METHODS
-    # ═══════════════════════════════════════════════════════════════
+    def _parse_pattern_response(self, response: str) -> Dict[str, Any]:
+        """Parse pattern detection response"""
+        try:
+            import re
+            json_match = re.search(r'```json\n(.*?)\n```', response, re.DOTALL)
+            if json_match:
+                return json.loads(json_match.group(1))
+            else:
+                return {'raw_patterns': response}
+        except Exception as e:
+            self.logger.error(f"Failed to parse patterns: {e}")
+            return {'raw_patterns': response}
     
-    def _load_all_documents(self) -> List[Dict]:
-        """Load all case documents"""
-        loader = DocumentLoader(self.config)
-        return loader.load_directory(self.config.case_documents_dir)
-    
-    def _discovery_importance(self, discovery_type: str) -> str:
-        """Map discovery type to importance level"""
-        importance_map = {
-            'NUCLEAR': 'NUCLEAR',
-            'CRITICAL': 'CRITICAL',
-            'INVESTIGATE': 'HIGH',
-            'SUSPICIOUS': 'HIGH',
-            'PATTERN': 'MEDIUM',
-            'CONTRADICTION': 'CRITICAL',
-            'MISSING': 'MEDIUM'
+    def _parse_final_report(self, response: str) -> Dict[str, Any]:
+        """Parse final strategic report"""
+        return {
+            'report': response,
+            'generated_at': datetime.now().isoformat(),
+            'statistics': self.analysis_state
         }
-        return importance_map.get(discovery_type, 'MEDIUM')
     
-    def _save_phase_output(self, phase: str, results: Dict):
-        """Save phase output to disk"""
-        
-        phase_dir = self.config.analysis_dir / f"phase_{phase}"
-        phase_dir.mkdir(parents=True, exist_ok=True)
-        
-        # Save synthesis
-        synthesis_file = phase_dir / "synthesis.md"
-        with open(synthesis_file, 'w', encoding='utf-8') as f:
-            f.write(f"# Phase {phase}\n\n")
-            f.write(f"Timestamp: {results.get('timestamp', datetime.now().isoformat())}\n\n")
-            f.write(results.get('synthesis', results.get('narrative', 'No output')))
-        
-        # Save JSON
-        results_file = phase_dir / "results.json"
-        save_results = results.copy()
-        if 'synthesis' in save_results:
-            save_results['synthesis'] = save_results['synthesis'][:5000] + "..."
-        
-        with open(results_file, 'w', encoding='utf-8') as f:
-            json.dump(save_results, f, indent=2, ensure_ascii=False)
+    def _consolidate_iteration_results(self, all_results: List[Dict]) -> Dict[str, Any]:
+        """Consolidate results from multiple iterations"""
+        consolidated = {
+            'iterations': all_results,
+            'total_batches': sum(len(r['batches']) for r in all_results),
+            'total_findings': sum(r['total_findings'] for r in all_results),
+            'statistics': self.analysis_state
+        }
+        return consolidated
     
-    def _load_state(self):
-        """Load previous state"""
-        state_file = self.config.output_dir / "system_state.json"
-        if state_file.exists():
-            try:
-                with open(state_file, 'r') as f:
-                    saved_state = json.load(f)
-                    self.state.update(saved_state)
-            except Exception as e:
-                print(f"  ⚠ Could not load state: {e}")
-    
-    def _save_state(self):
-        """Save current state"""
-        state_file = self.config.output_dir / "system_state.json"
-        state_file.parent.mkdir(parents=True, exist_ok=True)
+    def _save_final_report(self, report: Dict) -> None:
+        """Save final report to disk"""
+        output_dir = self.config.get_directory('reports')
+        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
         
-        with open(state_file, 'w') as f:
-            json.dump(self.state, f, indent=2, ensure_ascii=False)
+        # Save as JSON
+        json_path = output_dir / f'final_report_{timestamp}.json'
+        with open(json_path, 'w') as f:
+            json.dump(report, f, indent=2)
+        
+        # Save as Markdown
+        md_path = output_dir / f'final_report_{timestamp}.md'
+        with open(md_path, 'w') as f:
+            f.write(report.get('report', 'No report content'))
+        
+        self.logger.info(f"Final report saved to: {md_path}")
