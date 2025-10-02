@@ -1,359 +1,367 @@
 #!/usr/bin/env python3
 """
-Configuration Management for Litigation Intelligence System
-COMPLETE REPLACEMENT for src/core/config.py
-
-Sets up all system parameters for comprehensive litigation analysis
-- Temperature = 0.0 for consistency
-- Prompt caching enabled
-- Citation enforcement
-- Lismore-sided analysis focus
+Configuration for Litigation Intelligence System
+Optimised for maximum Claude capability - Lismore v Process Holdings
+ENHANCED VERSION with Sonnet 4.5, system prompts, and prompt caching
 """
 
 import os
 from pathlib import Path
-from typing import Dict, Any, Optional
-import json
+from typing import Dict, Any, List
 
 
 class Config:
-    """Central configuration for litigation intelligence system"""
+    """Central configuration for maximum Claude utilisation"""
     
-    def __init__(self, config_path: Optional[Path] = None):
-        """
-        Initialise configuration
-        
-        Args:
-            config_path: Optional path to config file (defaults to project root)
-        """
-        self.project_root = Path(__file__).parent.parent.parent
-        self.config_path = config_path or self.project_root / 'config.json'
-        
-        # Load or create configuration
-        if self.config_path.exists():
-            self._load_config()
-        else:
-            self._setup_default_config()
-            self._save_config()
-    
-    def _setup_default_config(self) -> None:
-        """Set up default configuration values"""
-        
-        # API Configuration
-        self._setup_api()
-        
-        # Directory Structure
-        self._setup_directories()
-        
-        # Analysis Configuration
+    def __init__(self, root_path: str = None):
+        """Initialise configuration with organised structure"""
+        self.root = Path(root_path) if root_path else Path.cwd()
+        self._setup_paths()
+        self._setup_models()
         self._setup_analysis()
-        
-        # Knowledge Graph Configuration
-        self._setup_knowledge_graph()
-        
-        # Orchestration Configuration
-        self._setup_orchestration()
-        
-        # Output Configuration
-        self._setup_output()
+        self._setup_investigation()
+        self._setup_prompting()
     
-    def _setup_api(self) -> None:
-        """API configuration for Claude with prompt caching"""
+    def _setup_paths(self) -> None:
+        """Define organised folder structure"""
+        # Input paths
+        self.input_dir = self.root / "data" / "input"
+        self.legal_knowledge_dir = self.input_dir / "legal_knowledge"
+        self.case_context_dir = self.input_dir / "case_context"
+        self.disclosure_dir = self.input_dir / "disclosure"
         
-        self.api_config = {
-            'anthropic_api_key': os.getenv('ANTHROPIC_API_KEY', ''),
-            'model': 'claude-sonnet-4-20250514',
-            'max_tokens': 16000,  # Increased for comprehensive analysis
-            
-            # CRITICAL: Prompt caching enabled
-            'enable_prompt_caching': True,
-            'cache_control_breakpoints': ['legal_framework', 'knowledge_graph'],
-            
-            # Rate limiting
-            'requests_per_minute': 50,
-            'tokens_per_minute': 80000,
-            
-            # Retry configuration
-            'max_retries': 3,
-            'retry_delay': 2.0,
-            'exponential_backoff': True,
-        }
+        # Knowledge management
+        self.knowledge_dir = self.root / "data" / "knowledge"
+        self.graph_db_path = self.knowledge_dir / "graph.db"
+        self.backups_dir = self.knowledge_dir / "backups"
+        self.investigations_db_path = self.knowledge_dir / "investigations.db"
+        
+        # Output paths
+        self.output_dir = self.root / "data" / "output"
+        self.analysis_dir = self.output_dir / "analysis"
+        self.investigations_dir = self.output_dir / "investigations"
+        self.reports_dir = self.output_dir / "reports"
+        
+        # Create directories if they don't exist
+        for dir_path in [
+            self.input_dir, self.legal_knowledge_dir, self.case_context_dir,
+            self.disclosure_dir, self.knowledge_dir, self.backups_dir,
+            self.output_dir, self.analysis_dir, self.investigations_dir,
+            self.reports_dir
+        ]:
+            dir_path.mkdir(parents=True, exist_ok=True)
     
-    def _setup_directories(self) -> None:
-        """Directory structure for case files"""
+    def _setup_models(self) -> None:
+        """Model selection for maximum reasoning capability"""
         
-        self.directories = {
-            # Input directories
-            'legal_knowledge': self.project_root / 'data' / 'legal_knowledge',
-            'case_background': self.project_root / 'data' / 'case_background',
-            'disclosure': self.project_root / 'data' / 'disclosure',
-            'validation_tests': self.project_root / 'data' / 'validation_tests',
-            
-            # Output directories
-            'output': self.project_root / 'data' / 'output',
-            'analysis': self.project_root / 'data' / 'output' / 'analysis',
-            'reports': self.project_root / 'data' / 'output' / 'reports',
-            'knowledge_graph': self.project_root / 'data' / 'output' / 'knowledge_graph',
-            'logs': self.project_root / 'data' / 'output' / 'logs',
-            
-            # Cache directories
-            'cache': self.project_root / 'data' / 'cache',
-            'processed_docs': self.project_root / 'data' / 'cache' / 'processed',
+        # Primary model - Sonnet 4.5 for best performance and cost
+        self.models = {
+            'primary': 'claude-sonnet-4-5-20250929',    # Best for litigation analysis
+            'secondary': 'claude-sonnet-4-5-20250929',  # Same - it's excellent
+            'quick': 'claude-3-haiku-20240307'          # Quick validation only
         }
         
-        # Create all directories
-        for directory in self.directories.values():
-            directory.mkdir(parents=True, exist_ok=True)
+        # Phase-specific model selection
+        self.phase_models = {
+            'knowledge_loading': 'claude-sonnet-4-5-20250929',
+            'initial_analysis': 'claude-sonnet-4-5-20250929',
+            'deep_investigation': 'claude-sonnet-4-5-20250929',
+            'contradiction_analysis': 'claude-sonnet-4-5-20250929',
+            'synthesis': 'claude-sonnet-4-5-20250929',
+            'quick_validation': 'claude-3-haiku-20240307'
+        }
+        
+        # Complexity triggers for analysis depth
+        self.complexity_triggers = {
+            'contradiction_found': True,
+            'pattern_confidence_high': 0.8,
+            'investigation_depth': 3,
+            'document_complexity': 0.7,
+            'entity_relationships': 10,
+            'timeline_gaps': True,
+            'financial_analysis': True
+        }
     
     def _setup_analysis(self) -> None:
-        """Analysis configuration for comprehensive litigation intelligence"""
+        """Analysis configuration for maximum potential"""
         
-        # CRITICAL: All temperatures = 0.0 for consistency and deterministic output
-        self.temperature_config = {
-            'knowledge_synthesis': 0.0,      # Phase 0: Legal knowledge
-            'investigation': 0.0,            # Document analysis
-            'pattern_recognition': 0.0,      # Pattern detection
-            'contradiction_analysis': 0.0,   # Finding contradictions
-            'credibility_analysis': 0.0,     # Witness credibility
-            'legal_argument': 0.0,           # Legal reasoning
-            'damages_analysis': 0.0,         # Financial calculations
-            'synthesis': 0.0,                # Final reports
-            'recursive_questioning': 0.0,    # Deep investigation
-            'hypothesis_generation': 0.0,    # Even creative tasks
+        # Token management - maximise context
+        self.token_config = {
+            'max_input_tokens': 200000,     # Sonnet 4.5 supports 200k
+            'max_output_tokens': 8192,      # Sonnet 4.5 supports 8k
+            'buffer_tokens': 10000,         # Safety buffer
+            'optimal_batch_size': 180000,   # Optimal for 200k window
+            'cache_breakpoint': 1024        # Minimum tokens for caching
         }
         
-        # Analysis scope - COMPREHENSIVE for Lismore
-        self.analysis_scope = {
-            'contract_breach_analysis': True,
-            'fraud_misrepresentation': True,
-            'fiduciary_duty_breach': True,
-            'credibility_attacks': True,
-            'damages_quantification': True,
-            'procedural_advantages': True,
-            'novel_legal_arguments': True,
-            'document_withholding': True,  # Still included but not primary focus
-            'witness_inconsistencies': True,
-            'timeline_reconstruction': True,
-            'financial_analysis': True,
-            'strategic_recommendations': True,
+        # Temperature settings by task type
+        self.temperature_settings = {
+            'creative_investigation': 0.9,
+            'hypothesis_generation': 0.8,
+            'pattern_recognition': 0.6,
+            'contradiction_analysis': 0.4,
+            'synthesis': 0.3,
+            'final_report': 0.2
         }
         
-        # Investigation triggers
+        # Prompt caching configuration
+        self.caching_config = {
+            'enabled': True,
+            'cache_legal_knowledge': True,
+            'cache_case_context': True,
+            'cache_knowledge_graph': True,
+            'cache_duration': 300,              # 5 minutes (standard)
+            'min_tokens_to_cache': 1024
+        }
+        
+        # Batching strategy
+        self.batch_strategy = {
+            'method': 'semantic_clustering',
+            'max_batch_size': 180000,
+            'overlap_tokens': 5000,
+            'prioritise_by': 'relevance',
+            'min_batch_size': 50000
+        }
+        
+        # Recursive analysis depth
+        self.recursion_config = {
+            'self_questioning_depth': 5,
+            'min_questioning_depth': 3,
+            'investigation_iterations': 10,
+            'convergence_threshold': 0.95,
+            'force_deep_dive_on': ['CRITICAL', 'NUCLEAR', 'CONTRADICTION']
+        }
+    
+    def _setup_investigation(self) -> None:
+        """Investigation triggers and thresholds"""
+        
+        # Auto-investigation triggers
         self.investigation_triggers = {
-            'contradiction_severity': 7,           # 0-10 scale
-            'pattern_confidence': 0.75,            # 0-1 scale
-            'legal_argument_strength': 0.7,        # 0-1 scale
-            'credibility_issue_severity': 7,       # 0-10 scale
-            'damages_evidence_found': True,        # Boolean trigger
-            'contractual_breach_identified': True, # Boolean trigger
-            'fraud_indicators': 3,                 # Number of indicators
-            'missing_document_references': 2,      # Count threshold
+            'contradiction_severity': 7,
+            'pattern_confidence': 0.8,
+            'missing_document_pattern': True,
+            'timeline_impossibility': True,
+            'financial_anomaly': 0.6,
+            'entity_suspicion': 0.7,
+            'keyword_triggers': [
+                'CRITICAL', 'NUCLEAR', 'INVESTIGATE',
+                'SUSPICIOUS', 'ANOMALY', 'IMPOSSIBLE'
+            ]
         }
         
-        # Recursive investigation depth
-        self.recursive_config = {
-            'max_depth': 3,                    # How many layers of questioning
-            'min_importance_score': 7,         # Only recurse on high-value findings
-            'questions_per_finding': 5,        # Questions to ask per issue
-            'follow_contradictions': True,     # Always dig into contradictions
-            'follow_gaps': True,               # Investigate missing evidence
-            'follow_patterns': True,           # Explore detected patterns
+        # Investigation depth by priority
+        self.investigation_depth = {
+            'nuclear': 7,
+            'critical': 5,
+            'high': 4,
+            'medium': 3,
+            'low': 2
         }
         
-        # Citation enforcement - MANDATORY
-        self.citation_requirements = {
-            'mandatory': True,
-            'format': '[DOC_ID: Page X, Para Y]',
-            'require_exact_quotes': True,
-            'verify_citations': True,
-            'reject_uncited_claims': True,
+        # Priority weights for investigation scoring
+        self.priority_weights = {
+            'financial_impact': 0.3,
+            'timeline_critical': 0.25,
+            'contradiction': 0.2,
+            'pattern_strength': 0.15,
+            'entity_centrality': 0.05,
+            'document_absence': 0.05
         }
-    
-    def _setup_knowledge_graph(self) -> None:
-        """Knowledge graph configuration"""
         
-        self.knowledge_graph_config = {
-            # Entity extraction
-            'extract_entities': True,
-            'entity_types': [
-                'person', 'organisation', 'contract', 'obligation',
-                'payment', 'delivery', 'breach', 'representation',
-                'warranty', 'document', 'meeting', 'communication'
+        # Analysis categories with keywords
+        self.analysis_categories = {
+            'contract_breaches': [
+                'breach', 'violation', 'default', 'non-compliance',
+                'failed to', 'obligation', 'duty'
             ],
-            
-            # Relationship tracking
-            'track_relationships': True,
-            'relationship_types': [
-                'contradicts', 'supports', 'references', 'supersedes',
-                'breaches', 'fulfils', 'owes', 'paid', 'delivered',
-                'represented', 'witnessed', 'disclosed', 'withheld'
+            'fraud': [
+                'fraud', 'misrepresentation', 'false statement',
+                'deception', 'concealment', 'dishonest'
             ],
-            
-            # Temporal tracking
-            'track_timeline': True,
-            'date_extraction': True,
-            'sequence_reconstruction': True,
-            
-            # Pattern detection
-            'detect_patterns': True,
-            'pattern_types': [
-                'systematic_withholding',
-                'late_disclosure_pattern',
-                'contradictory_explanations',
-                'inconsistent_testimony',
-                'financial_discrepancies',
-                'timeline_gaps',
-                'document_trails'
+            'credibility': [
+                'inconsistent', 'contradicts', 'implausible',
+                'impossible', 'conflicting'
             ],
-            
-            # Confidence scoring
-            'use_confidence_scores': True,
-            'min_confidence': 0.7,
+            'document_withholding': [
+                'missing', 'not provided', 'withheld',
+                'absent', 'no record', 'cannot locate'
+            ],
+            'financial': [
+                'payment', 'invoice', 'valuation', 'loss',
+                'damages', 'cost', 'liability'
+            ],
+            'legal_doctrines': [
+                'liability', 'damages', 'negligence',
+                'fraud', 'misrepresentation', 'conspiracy'
+            ]
         }
     
-    def _setup_orchestration(self) -> None:
-        """Orchestration configuration for multi-phase analysis"""
+    def _setup_prompting(self) -> None:
+        """Enhanced prompting configuration"""
         
-        self.orchestration_config = {
-            # Phase configuration
-            'phases': [
-                {
-                    'name': 'phase_0_knowledge_synthesis',
-                    'description': 'Legal knowledge and case background synthesis',
-                    'required': True,
-                    'output_to_kg': True,
-                },
-                {
-                    'name': 'phase_1_disclosure_analysis',
-                    'description': 'Comprehensive disclosure analysis',
-                    'iterations': 3,  # Multiple passes for depth
-                    'batch_size': 50,  # Documents per batch
-                    'required': True,
-                },
-                {
-                    'name': 'phase_2_pattern_synthesis',
-                    'description': 'Cross-document pattern detection',
-                    'required': True,
-                    'min_documents_analysed': 100,
-                },
-                {
-                    'name': 'phase_3_strategic_synthesis',
-                    'description': 'Final strategic report for Lismore',
-                    'required': True,
-                    'output_format': 'tribunal_ready',
-                }
-            ],
-            
-            # Batch processing
-            'batch_config': {
-                'default_batch_size': 50,
-                'max_batch_size': 75,
-                'min_batch_size': 10,
-                'adaptive_batching': True,  # Adjust based on complexity
-            },
-            
-            # Parallel processing
-            'parallel_config': {
-                'enable_parallel': False,  # Disabled for consistency
-                'max_workers': 1,
-                'preserve_order': True,
-            },
-            
-            # Checkpoint configuration
-            'checkpointing': {
-                'enabled': True,
-                'checkpoint_every_n_batches': 10,
-                'save_intermediate_results': True,
-                'resume_on_failure': True,
-            }
-        }
-    
-    def _setup_output(self) -> None:
-        """Output configuration"""
+        # System prompt for all litigation analysis
+        self.system_prompt = self._get_litigation_system_prompt()
         
-        self.output_config = {
-            # Report formats
-            'formats': ['json', 'markdown', 'pdf'],
-            'default_format': 'markdown',
-            
-            # Report sections
-            'include_sections': [
-                'executive_summary',
-                'key_findings',
-                'contract_breaches',
-                'fraud_indicators',
-                'credibility_issues',
-                'damages_analysis',
-                'legal_arguments',
-                'strategic_recommendations',
-                'document_withholding',  # One section among many
-                'evidence_gaps',
-                'procedural_opportunities',
-                'annexes_and_citations'
-            ],
-            
-            # Citation format
-            'citation_style': 'litigation',  # [DOC_ID: Location]
-            'include_citation_index': True,
-            'verify_all_citations': True,
-            
-            # Logging
-            'log_level': 'INFO',
-            'log_to_file': True,
-            'log_api_calls': True,
-            'log_costs': True,
-        }
-    
-    def _load_config(self) -> None:
-        """Load configuration from file"""
-        with open(self.config_path, 'r') as f:
-            saved_config = json.load(f)
-            
-        # Update config from saved values
-        for key, value in saved_config.items():
-            if hasattr(self, key):
-                setattr(self, key, value)
-    
-    def _save_config(self) -> None:
-        """Save configuration to file"""
-        config_dict = {
-            'api_config': self.api_config,
-            'directories': {k: str(v) for k, v in self.directories.items()},
-            'temperature_config': self.temperature_config,
-            'analysis_scope': self.analysis_scope,
-            'investigation_triggers': self.investigation_triggers,
-            'recursive_config': self.recursive_config,
-            'citation_requirements': self.citation_requirements,
-            'knowledge_graph_config': self.knowledge_graph_config,
-            'orchestration_config': self.orchestration_config,
-            'output_config': self.output_config,
+        # Prefill templates for consistent outputs
+        self.prefill_templates = {
+            'finding_xml': '<finding id="F001">\n  <category>',
+            'executive_summary': 'EXECUTIVE SUMMARY FOR TRIBUNAL\n\nThe evidence demonstrates',
+            'analysis_cot': 'ANALYSIS\n\n<thinking>\nStep 1: ',
+            'json_output': '{"critical_findings": [',
+            'citation_format': '[DOC_001: Para 15] The evidence shows'
         }
         
-        with open(self.config_path, 'w') as f:
-            json.dump(config_dict, f, indent=2)
+        # Hallucination prevention (used in all prompts)
+        self.hallucination_prevention = """<critical_accuracy_requirements>
+You MUST follow these rules without exception:
+
+1. CITATIONS ARE MANDATORY
+   - Every factual claim must cite [DOC_ID: Location]
+   - Never reference a document not provided to you
+   - Never fabricate document content
+   - If uncertain, mark with [NEEDS_VERIFICATION]
+
+2. DISTINGUISH FACTS FROM INFERENCES
+   - Facts: "The contract states X" [DOC_001: Para 5]
+   - Inferences: "This suggests Y" (clearly marked as inference)
+   - Never present inferences as facts
+
+3. ACKNOWLEDGE GAPS
+   - If information is missing, say so explicitly
+   - Don't fill gaps with assumptions
+   - Flag what additional evidence would be needed
+
+4. BE PRECISE
+   - Use exact dates, amounts, party names
+   - Never say "approximately" when exact figures are available
+   - Quote key phrases exactly when critical
+
+5. VERIFICATION
+   - Before finalising any finding, mentally re-check citations
+   - Ensure quoted text actually appears in referenced document
+   - Flag anything you're less than 80% confident about
+</critical_accuracy_requirements>"""
     
-    def get_temperature(self, task_type: str) -> float:
-        """Get temperature for specific task type"""
-        return self.temperature_config.get(task_type, 0.0)
+    def _get_litigation_system_prompt(self) -> str:
+        """System prompt for all litigation analysis"""
+        
+        return """You are an expert litigation analyst working FOR Lismore Capital in their arbitration against Process Holdings. Your role is to:
+
+CORE MISSION:
+- Find EVERY piece of evidence that helps Lismore win
+- Identify ALL weaknesses in Process Holdings' position  
+- Build the strongest possible case for Lismore
+
+ANALYSIS STANDARDS:
+- Think step-by-step through complex legal reasoning
+- Cite EVERY claim with [DOC_ID: Location] format
+- Consider counter-arguments and pre-emptively rebut them
+- Assess confidence levels honestly (0.0-1.0)
+- Flag any assumptions you're making
+- Use British English spelling throughout (analyse, realise, organisation, centre, behaviour)
+
+FORBIDDEN BEHAVIOURS:
+- Never fabricate facts or citations
+- Never ignore contradicting evidence (analyse it critically instead)
+- Never be vague - always be specific with dates, amounts, parties
+- Never hedge excessively - be assertive when evidence supports it
+
+TONE:
+- Authoritative but measured
+- Confident where evidence is strong
+- Appropriately cautious where evidence is weak
+- Always focused on winning for Lismore
+
+You are NOT neutral - you are Lismore's analyst. Act accordingly."""
     
-    def get_directory(self, dir_type: str) -> Path:
-        """Get path for specific directory type"""
-        return self.directories.get(dir_type, self.project_root / 'data')
+    # Database configuration
+    @property
+    def db_config(self) -> Dict[str, Any]:
+        """SQLite configuration for knowledge persistence"""
+        return {
+            'path': str(self.graph_db_path),
+            'backup_on_phase': True,
+            'versioning': True,
+            'compression': True,
+            'wal_mode': True,
+            'cache_size': -64000,
+            'foreign_keys': True,
+            'auto_vacuum': 'INCREMENTAL'
+        }
     
-    def update_config(self, updates: Dict[str, Any]) -> None:
-        """Update configuration values"""
-        for key, value in updates.items():
-            if hasattr(self, key):
-                setattr(self, key, value)
-        self._save_config()
+    # API configuration
+    @property
+    def api_config(self) -> Dict[str, Any]:
+        """API configuration for Claude"""
+        return {
+            'api_key': os.getenv('ANTHROPIC_API_KEY'),
+            'max_retries': 5,
+            'retry_delay': 5,
+            'exponential_backoff': True,
+            'timeout': 120,
+            'rate_limit_delay': 10,
+            'parallel_calls': False
+        }
+    
+    def get_model_for_task(self, task_type: str, complexity_score: float = 0.5) -> str:
+        """Get model for task - Sonnet 4.5 for all litigation work"""
+        
+        # Quick validation can use Haiku
+        if task_type == 'quick_validation':
+            return self.models['quick']
+        
+        # Everything else uses Sonnet 4.5
+        return self.models['primary']
+    
+    def should_investigate(self, discovery: Dict[str, Any]) -> bool:
+        """Determine if a discovery warrants investigation"""
+        
+        # Check keyword triggers
+        if any(trigger in str(discovery).upper() for trigger in 
+               self.investigation_triggers['keyword_triggers']):
+            return True
+        
+        # Check metric triggers
+        if discovery.get('contradiction_severity', 0) > self.investigation_triggers['contradiction_severity']:
+            return True
+        
+        if discovery.get('pattern_confidence', 0) > self.investigation_triggers['pattern_confidence']:
+            return True
+        
+        if discovery.get('timeline_impossibility'):
+            return True
+        
+        if discovery.get('financial_anomaly', 0) > self.investigation_triggers['financial_anomaly']:
+            return True
+        
+        return False
+    
+    def calculate_priority(self, discovery: Dict[str, Any]) -> float:
+        """Calculate investigation priority score"""
+        
+        score = 0.0
+        
+        # Apply weighted scoring
+        if 'financial_impact' in discovery:
+            score += discovery['financial_impact'] * self.priority_weights['financial_impact']
+        
+        if discovery.get('timeline_critical'):
+            score += self.priority_weights['timeline_critical']
+        
+        if discovery.get('contradiction_severity'):
+            score += discovery['contradiction_severity'] * self.priority_weights['contradiction'] / 10
+        
+        if discovery.get('pattern_confidence'):
+            score += discovery['pattern_confidence'] * self.priority_weights['pattern_strength']
+        
+        if discovery.get('entity_centrality'):
+            score += discovery['entity_centrality'] * self.priority_weights['entity_centrality']
+        
+        if discovery.get('document_absence'):
+            score += self.priority_weights['document_absence']
+        
+        return min(score, 10.0)
 
 
 # Global config instance
-_config_instance = None
-
-def get_config() -> Config:
-    """Get global configuration instance"""
-    global _config_instance
-    if _config_instance is None:
-        _config_instance = Config()
-    return _config_instance
+config = Config()
