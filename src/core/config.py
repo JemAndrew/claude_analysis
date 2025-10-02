@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import Dict, Any, List
 
 
-class Config:
+class config:
     """Central configuration for maximum Claude utilisation"""
     
     def __init__(self, root_path: str = None):
@@ -364,4 +364,4 @@ You are NOT neutral - you are Lismore's analyst. Act accordingly."""
 
 
 # Global config instance
-config = Config()
+config = config()
