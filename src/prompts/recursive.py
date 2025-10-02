@@ -1,25 +1,11 @@
 #!/usr/bin/env python3
 """
 Recursive Self-Questioning Prompts for Deep Analysis
-COMPLETE REPLACEMENT for src/prompts/recursive.py
+Enhanced with hallucination prevention and config integration
 """
 
 from typing import Dict, List
 import json
-
-
-HALLUCINATION_PREVENTION = """
-<critical_accuracy_requirements>
-MANDATORY CITATION RULES:
-1. EVERY factual claim MUST cite: [DOC_ID: Location]
-2. No speculation without [INFERENCE] label
-3. Quotes must be EXACT - word-for-word from documents
-4. If uncertain, clearly mark as [UNCERTAIN] with reasoning
-
-✓ "PH stated 'X' [DOC_123: p4, para 2]"
-✗ "PH probably stated X" - REJECTED: No citation
-</critical_accuracy_requirements>
-"""
 
 
 class RecursivePrompts:
@@ -37,7 +23,7 @@ class RecursivePrompts:
         Claude questions its own conclusions to find gaps and strengthen arguments
         """
         
-        return f"""{HALLUCINATION_PREVENTION}
+        return f"""{self.config.hallucination_prevention}
 
 <recursive_analysis_mission>
 You just completed initial analysis. Now CHALLENGE YOUR OWN CONCLUSIONS.
@@ -46,7 +32,7 @@ Goal: Strengthen Lismore's case by:
 - Identifying gaps in your analysis
 - Finding alternative explanations you missed
 - Stress-testing your arguments
-- Anticipating PH's counter-arguments
+- Anticipating Process Holdings' counter-arguments
 - Deepening legal analysis
 - Finding additional evidence
 </recursive_analysis_mission>
@@ -65,7 +51,7 @@ LEVEL 1: QUESTION YOUR FINDINGS
 For each finding in your initial analysis, ask:
 - What evidence did I rely on? Is it the strongest available?
 - What alternative explanations exist?
-- What would PH argue against this?
+- What would Process Holdings argue against this?
 - What additional evidence would make this stronger?
 - Did I miss any relevant legal principles?
 - Is my legal analysis complete?
@@ -84,10 +70,10 @@ LEVEL 3: STRATEGIC DEPTH
 - Are there stronger arguments available?
 - What's the most compelling way to present this?
 - How does this fit into overall case strategy?
-- What's the risk if PH has a good counter?
+- What's the risk if Process Holdings has a good counter?
 
 LEVEL 4: ADVERSARIAL TESTING
-- How would PH's lawyer attack this finding?
+- How would Process Holdings' lawyer attack this finding?
 - What documents might undermine this?
 - What witness testimony could contradict this?
 - What legal arguments defeat this?
@@ -113,10 +99,13 @@ Q1: [Specific question about initial analysis]
 A1: [Answer with evidence and reasoning]
    CONFIDENCE: [0.0-1.0]
    NEW INSIGHTS: [What this reveals]
+   CITATIONS: [DOC_ID: Location]
    
 Q2: [Next question]
-A2: [Answer]
-   ...
+A2: [Answer with evidence]
+   CONFIDENCE: [0.0-1.0]
+   NEW INSIGHTS: [What this reveals]
+   CITATIONS: [DOC_ID: Location]
 
 KEY DISCOVERIES:
 - [New finding or insight from questioning]
@@ -132,24 +121,26 @@ REFINEMENTS TO INITIAL ANALYSIS:
 
 <critical_instructions>
 1. Be RUTHLESS in questioning yourself
-2. Find flaws before PH's lawyers do
+2. Find flaws before Process Holdings' lawyers do
 3. Strengthen arguments through self-critique
 4. Identify evidence gaps explicitly
-5. Every refined conclusion must cite evidence
+5. Every refined conclusion must cite evidence [DOC_ID: Location]
 6. If you find your initial analysis was wrong, say so
 7. Prioritise quality over quantity
-8. Focus on what wins the case
+8. Focus on what wins the case for Lismore
+9. Use British English spelling (analyse, realise, organisation)
 </critical_instructions>
 
 <self_verification>
-After recursive analysis:
-□ Every new/refined finding has citation
+After recursive analysis, verify:
+□ Every new/refined finding has citation [DOC_ID: Location]
 □ Identified weaknesses in initial analysis
-□ Anticipated PH's counter-arguments
+□ Anticipated Process Holdings' counter-arguments
 □ Suggested stronger alternative arguments
 □ Identified evidence gaps
 □ Assessed strategic value realistically
 □ No speculation without [INFERENCE] label
+□ Used British English throughout
 </self_verification>
 
 Question yourself deeply. Find the truth. Strengthen Lismore's case.
@@ -163,7 +154,7 @@ Question yourself deeply. Find the truth. Strengthen Lismore's case.
         Deep-dive investigation on specific finding
         """
         
-        return f"""{HALLUCINATION_PREVENTION}
+        return f"""{self.config.hallucination_prevention}
 
 <investigation_mission>
 Deep investigation of specific finding that requires thorough analysis.
@@ -186,14 +177,14 @@ PHASE 1: EVIDENCE GATHERING
 - What witnesses would know about this?
 - What experts might help?
 
-Cite every piece of evidence: [DOC:LOC]
+Cite every piece of evidence: [DOC_ID: Location]
 
 PHASE 2: LEGAL ANALYSIS
 - What legal principles apply?
 - What precedents are relevant?
 - What elements must Lismore prove?
 - What burdens of proof apply?
-- What defences might PH raise?
+- What defences might Process Holdings raise?
 
 Provide legal basis for each argument.
 
@@ -225,7 +216,7 @@ PHASE 5: STRATEGIC ASSESSMENT
 Provide realistic strategic assessment.
 
 PHASE 6: COUNTER-ANALYSIS
-- What will PH argue?
+- What will Process Holdings argue?
 - What's their best defence?
 - What evidence might undermine this?
 - How do we counter their arguments?
@@ -244,9 +235,9 @@ KEY FINDINGS:
 3. [Finding with citation and legal basis]
 
 EVIDENCE MAP:
-- Primary: [DOC:LOC] [What it shows]
-- Supporting: [DOC:LOC] [What it shows]
-- Corroborating: [DOC:LOC] [What it shows]
+- Primary: [DOC_ID: Location] [What it shows]
+- Supporting: [DOC_ID: Location] [What it shows]
+- Corroborating: [DOC_ID: Location] [What it shows]
 
 LEGAL FRAMEWORK:
 - Applicable law: [Citation]
@@ -272,7 +263,7 @@ ADDITIONAL INVESTIGATION NEEDED:
 - [Experts to instruct]
 </output_format>
 
-Investigate thoroughly. Leave no stone unturned. Build bulletproof case.
+Investigate thoroughly. Leave no stone unturned. Build bulletproof case for Lismore.
 """
     
     def contradiction_deep_dive(self,
@@ -283,7 +274,7 @@ Investigate thoroughly. Leave no stone unturned. Build bulletproof case.
         Deep analysis of specific contradiction
         """
         
-        return f"""{HALLUCINATION_PREVENTION}
+        return f"""{self.config.hallucination_prevention}
 
 <contradiction_investigation>
 Investigate this contradiction in depth to determine its significance for Lismore's case.
@@ -314,7 +305,7 @@ CONTRADICTION IDENTIFIED:
 2. ASSESS MATERIALITY
    - Is this contradiction material to key issues?
    - Does it affect liability or damages?
-   - Would outcome differ if resolved in PH's favour?
+   - Would outcome differ if resolved in Process Holdings' favour?
    
    MATERIALITY: [High/Medium/Low] with reasoning
 
@@ -347,7 +338,7 @@ CONTRADICTION IDENTIFIED:
    BEST USE: [specific recommendation]
 
 6. ANTICIPATE DEFENCE
-   - How will PH explain this?
+   - How will Process Holdings explain this?
    - What's their best argument?
    - What evidence might support them?
    - How do we rebut?
@@ -358,8 +349,8 @@ CONTRADICTION IDENTIFIED:
 <output_format>
 CONTRADICTION VERIFIED: [Yes/No]
 
-STATEMENT A: [exact quote] [DOC:LOC] [date]
-STATEMENT B: [exact quote] [DOC:LOC] [date]
+STATEMENT A: [exact quote] [DOC_ID: Location] [date]
+STATEMENT B: [exact quote] [DOC_ID: Location] [date]
 
 CONFLICT: [Precisely how they contradict]
 
@@ -375,7 +366,7 @@ LEGAL BASIS:
 STRATEGIC VALUE: [1-10]
 RECOMMENDED USE: [Specific deployment strategy]
 
-PH'S LIKELY DEFENCE: [What they'll argue]
+PROCESS HOLDINGS' LIKELY DEFENCE: [What they'll argue]
 OUR COUNTER: [How we defeat their defence]
 
 EVIDENCE NEEDED: [What would make this bulletproof]
