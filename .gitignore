@@ -5,12 +5,7 @@
 .env.*.local
 *.env
 
-# Configuration Files with Sensitive Data
-config/settings.json
-config/credentials.json
-config/*.key
-config/*.pem
-config/secrets/
+
 
 # Case-Sensitive Directories (Lismore-specific)
 documents/

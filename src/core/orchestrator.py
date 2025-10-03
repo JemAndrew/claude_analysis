@@ -14,7 +14,7 @@ from typing import Dict, List, Optional, Any, Tuple
 from datetime import datetime
 import hashlib
 
-from core.config import config
+from core.config import Config
 from core.phase_executor import PhaseExecutor
 from intelligence.knowledge_graph import KnowledgeGraph
 from api.client import ClaudeClient
@@ -35,21 +35,21 @@ class LitigationOrchestrator:
         # Override config if needed
         if config_override:
             for key, value in config_override.items():
-                setattr(config, key, value)
+                setattr(Config, key, value)
         
-        self.config = config
+        self.config = Config
         
         # Initialise core components
-        self.knowledge_graph = KnowledgeGraph(config)
-        self.api_client = ClaudeClient(config)
-        self.context_manager = ContextManager(config)
-        self.batch_manager = BatchManager(config)
-        self.phase_executor = PhaseExecutor(config, self)
+        self.knowledge_graph = KnowledgeGraph(Config)
+        self.api_client = ClaudeClient(Config)
+        self.context_manager = ContextManager(Config)
+        self.batch_manager = BatchManager(Config)
+        self.phase_executor = PhaseExecutor(Config, self)
         
         # Initialise prompt systems
-        self.autonomous_prompts = AutonomousPrompts(config)
-        self.recursive_prompts = RecursivePrompts(config)
-        self.synthesis_prompts = SynthesisPrompts(config)
+        self.autonomous_prompts = AutonomousPrompts(Config)
+        self.recursive_prompts = RecursivePrompts(Config)
+        self.synthesis_prompts = SynthesisPrompts(Config)
         
         # NEW: Initialise hierarchical memory system
         try:
