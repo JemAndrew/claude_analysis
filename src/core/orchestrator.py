@@ -2,7 +2,8 @@
 """
 Main Orchestration Engine for Litigation Intelligence
 Controls dynamic phase execution and investigation spawning
-WITH INTEGRATED CHECKPOINT SYSTEM FOR INTERNET RESILIENCE
+WITH INTEGRATED CHECKPOINT SYSTEM AND HIERARCHICAL MEMORY
+British English throughout
 """
 
 import json
@@ -50,6 +51,21 @@ class LitigationOrchestrator:
         self.recursive_prompts = RecursivePrompts(config)
         self.synthesis_prompts = SynthesisPrompts(config)
         
+        # NEW: Initialise hierarchical memory system
+        try:
+            from memory import HierarchicalMemory, MemoryQuery
+            self.memory_system = HierarchicalMemory(
+                config=self.config,
+                knowledge_graph=self.knowledge_graph
+            )
+            self.memory_enabled = True
+            print("Memory System: ACTIVE")
+        except ImportError as e:
+            print(f"Memory System: Not available ({e})")
+            print("Install: pip install chromadb sentence-transformers cryptography")
+            self.memory_system = None
+            self.memory_enabled = False
+        
         # Track system state
         self.state = {
             'current_phase': None,
@@ -57,17 +73,18 @@ class LitigationOrchestrator:
             'active_investigations': [],
             'iteration_count': 0,
             'start_time': datetime.now().isoformat(),
-            'convergence_metrics': {}
+            'convergence_metrics': {},
+            'memory_enabled': self.memory_enabled
         }
         
         # Load previous state if exists
         self._load_state()
         
-        # ✅ NEW: Initialise checkpoint system
+        # Initialise checkpoint system
         self._init_checkpoints()
     
     # ============================================================================
-    # ✅ NEW: CHECKPOINT METHODS
+    # CHECKPOINT METHODS
     # ============================================================================
     
     def _init_checkpoints(self):
@@ -92,17 +109,15 @@ class LitigationOrchestrator:
             'status': 'completed'
         }
         
-        # Save to batch-specific file
         checkpoint_file = self.batch_checkpoint_dir / f"phase_{phase}_batch_{batch_num}.json"
         with open(checkpoint_file, 'w', encoding='utf-8') as f:
             json.dump(checkpoint_data, f, indent=2)
         
-        # Also save as "latest" for easy recovery
         latest_file = self.batch_checkpoint_dir / f"phase_{phase}_latest.json"
         with open(latest_file, 'w', encoding='utf-8') as f:
             json.dump(checkpoint_data, f, indent=2)
         
-        print(f"      ✓ Checkpoint saved (Batch {batch_num})")
+        print(f"      Checkpoint saved (Batch {batch_num})")
     
     def _load_checkpoint(self, phase: str) -> Optional[Dict]:
         """Load latest checkpoint for phase"""
@@ -131,7 +146,7 @@ class LitigationOrchestrator:
         checkpoint = self._load_checkpoint(phase)
         
         if checkpoint:
-            print(f"\n  🔄 Found checkpoint for Phase {phase}")
+            print(f"\n  Found checkpoint for Phase {phase}")
             print(f"    Last batch: {checkpoint.get('batch_number', 0)}")
             print(f"    Documents processed: {len(checkpoint.get('processed_document_ids', []))}")
             print(f"    Timestamp: {checkpoint.get('timestamp', 'N/A')}")
@@ -146,12 +161,10 @@ class LitigationOrchestrator:
     def _clear_phase_checkpoints(self, phase: str):
         """Clear checkpoints after successful phase completion"""
         
-        # Remove latest checkpoint
         latest_file = self.batch_checkpoint_dir / f"phase_{phase}_latest.json"
         if latest_file.exists():
             latest_file.unlink()
         
-        # Archive batch checkpoints
         archive_dir = self.checkpoint_dir / "archive" / phase
         archive_dir.mkdir(parents=True, exist_ok=True)
         
@@ -165,160 +178,117 @@ class LitigationOrchestrator:
         backup_dir = self.config.output_dir / f"backup_phase_{phase}_{timestamp}"
         backup_dir.mkdir(parents=True, exist_ok=True)
         
-        # Backup knowledge graph
         if self.config.graph_db_path.exists():
             shutil.copy2(
                 self.config.graph_db_path,
                 backup_dir / "graph.db"
             )
         
-        # Backup state
         state_file = self.config.output_dir / ".orchestrator_state.json"
         if state_file.exists():
             shutil.copy2(state_file, backup_dir / "orchestrator_state.json")
         
-        print(f"  ✓ Backup created: {backup_dir.name}")
+        print(f"  Backup created: {backup_dir.name}")
     
     # ============================================================================
-    # MAIN EXECUTION METHODS
+    # NEW: MEMORY-AWARE METHODS
     # ============================================================================
     
-    def execute_full_analysis(self, 
-                             start_phase: str = '0',
-                             max_iterations: int = 10) -> Dict:
+    def get_context_with_memory(self, 
+                                query_text: str,
+                                phase: str = None,
+                                max_tokens: int = 100000) -> Dict[str, Any]:
         """
-        Execute complete analysis with dynamic phase progression
+        Get context using memory system if available, otherwise fallback
         """
-        
-        print("="*60)
-        print("LITIGATION INTELLIGENCE SYSTEM - FULL ANALYSIS")
-        print(f"Starting at: {datetime.now().isoformat()}")
-        print("="*60)
-        
-        results = {
-            'phases': {},
-            'investigations': [],
-            'final_synthesis': None,
-            'war_room_dashboard': None
-        }
-        
-        # Phase 0: Combined knowledge absorption
-        if '0' not in self.state['phases_completed']:
-            print("\n[PHASE 0] Knowledge Absorption (Legal + Case Context)")
-            phase_0_results = self._execute_knowledge_phase()
-            results['phases']['0'] = phase_0_results
-            self.state['phases_completed'].append('0')
-            self._save_state()
-        
-        # Dynamic disclosure analysis with iteration
-        iteration = 1
-        converged = False
-        
-        while iteration <= max_iterations and not converged:
-            print(f"\n[ITERATION {iteration}] Disclosure Analysis")
+        if self.memory_enabled and self.memory_system:
+            from memory import MemoryQuery
             
-            # Execute disclosure analysis
-            iteration_results = self._execute_disclosure_iteration(iteration)
-            results['phases'][f'iteration_{iteration}'] = iteration_results
+            memory_query = MemoryQuery(
+                query_text=query_text,
+                max_tokens=max_tokens,
+                include_tiers=[1, 2, 3, 5]
+            )
             
-            # Check for investigation triggers
-            investigations = self.knowledge_graph.get_investigation_queue(limit=5)
+            result = self.memory_system.retrieve_relevant_context(memory_query)
             
-            if investigations:
-                print(f"  Spawning {len(investigations)} investigation threads")
-                for investigation in investigations:
-                    inv_results = self._execute_investigation(investigation)
-                    results['investigations'].append(inv_results)
+            print(f"      Memory: {result['total_tokens']} tokens, "
+                  f"saved £{result['cost_estimate']:.3f}, "
+                  f"{result['retrieval_time_ms']:.0f}ms")
             
-            # Check convergence
-            converged = self._check_convergence(iteration_results)
+            return {
+                'context': result['combined_context'],
+                'tokens_used': result['total_tokens'],
+                'cost_saved': result['cost_estimate'],
+                'source': 'hierarchical_memory'
+            }
+        else:
+            context = self.knowledge_graph.get_context_for_phase(phase or 'query')
             
-            if converged:
-                print("  ✓ Analysis converged - no new significant discoveries")
-            
-            iteration += 1
-            self.state['iteration_count'] = iteration
-            self._save_state()
+            return {
+                'context': context,
+                'tokens_used': len(str(context)) // 4,
+                'cost_saved': 0,
+                'source': 'knowledge_graph_only'
+            }
+    
+    def _cache_analysis_if_enabled(self, 
+                                   query_text: str,
+                                   response: str,
+                                   phase: str,
+                                   doc_ids: List[str] = None):
+        """Cache analysis result if memory system enabled"""
         
-        # Final synthesis
-        print("\n[SYNTHESIS] Building Strategic Narrative")
-        synthesis_results = self._execute_synthesis(results)
-        results['final_synthesis'] = synthesis_results
+        if self.memory_enabled and self.memory_system:
+            try:
+                self.memory_system.tier5.cache_analysis(
+                    query_text=query_text,
+                    analysis_result={'response': response, 'phase': phase},
+                    document_ids=doc_ids,
+                    model_used='claude-sonnet-4',
+                    analysis_type=phase
+                )
+            except Exception as e:
+                print(f"      Cache warning: {e}")
+    
+    def get_memory_stats(self) -> Dict[str, Any]:
+        """Get memory system statistics"""
+        if not self.memory_system:
+            return {'available': False}
         
-        # Generate war room dashboard
-        print("\n[DASHBOARD] Generating Executive Dashboard")
-        dashboard = self._generate_war_room_dashboard(results)
-        results['war_room_dashboard'] = dashboard
-        
-        # Save final results
-        self._save_results(results)
-        
-        # Print summary
-        self._print_summary(results)
-        
-        return results
+        return self.memory_system.get_system_stats()
+    
+    # ============================================================================
+    # MAIN EXECUTION METHOD
+    # ============================================================================
     
     def execute_single_phase(self, phase: str) -> Dict:
         """Execute a single phase with full context"""
         
         print(f"\n[PHASE {phase}] Execution Starting")
         
-        # Backup knowledge graph
-        self.knowledge_graph.backup_before_phase(phase)
-        
-        # Get context from knowledge graph
-        context = self.knowledge_graph.get_context_for_phase(phase)
-        
-        # Execute phase
-        results = self.phase_executor.execute(phase, context)
-        
-        # Update knowledge graph with findings
-        self._update_knowledge_from_results(results, phase)
-        
-        # Mark phase complete
-        if phase not in self.state['phases_completed']:
-            self.state['phases_completed'].append(phase)
-        
-        self._save_state()
-        return results
-    
-    def spawn_investigation(self, 
-                          trigger_type: str,
-                          trigger_data: Dict,
-                          priority: float = 5.0) -> str:
-        """
-        Spawn new investigation thread
-        Returns investigation ID
-        """
-        
-        investigation_id = self.knowledge_graph._spawn_investigation(
-            trigger_type=trigger_type,
-            trigger_data=trigger_data,
-            priority=priority
-        )
-        
-        self.state['active_investigations'].append(investigation_id)
-        print(f"  → Spawned investigation {investigation_id} (Priority: {priority})")
-        
-        return investigation_id
+        if phase == '0':
+            return self._execute_knowledge_phase()
+        elif phase == '1':
+            return self._execute_phase_1_tiered()
+        else:
+            print(f"Unknown phase: {phase}")
+            return {}
     
     # ============================================================================
-    # ✅ MODIFIED: PHASE EXECUTION WITH CHECKPOINTS
+    # PHASE EXECUTION WITH CHECKPOINTS AND MEMORY
     # ============================================================================
     
     def _execute_knowledge_phase(self) -> Dict:
-        """Execute Phase 0: Combined knowledge absorption WITH CHECKPOINTS"""
+        """Execute Phase 0: Combined knowledge absorption"""
         
         phase = '0'
         
-        # Check for checkpoint
         should_resume, checkpoint = self._should_resume_phase(phase)
         
-        # Create backup before starting
         if not should_resume:
             self._create_backup(phase)
         
-        # Load legal and case documents
         legal_docs = self._load_documents(self.config.legal_knowledge_dir)
         case_docs = self._load_documents(self.config.case_context_dir)
         
@@ -326,10 +296,8 @@ class LitigationOrchestrator:
         
         print(f"  Total documents: {len(all_docs)}")
         
-        # Get already-processed documents if resuming
         processed_doc_ids = self._get_processed_docs(phase) if should_resume else []
         
-        # Filter out already-processed documents
         if processed_doc_ids:
             all_docs = [
                 doc for doc in all_docs 
@@ -337,7 +305,6 @@ class LitigationOrchestrator:
             ]
             print(f"  Remaining documents: {len(all_docs)}")
         
-        # Create batches
         batches = self.batch_manager.create_semantic_batches(
             documents=all_docs,
             strategy='semantic_clustering'
@@ -355,41 +322,47 @@ class LitigationOrchestrator:
             'metadata': {}
         }
         
-        # Process each batch with checkpoint
-        for i, batch in enumerate(batches, start_batch):
-            print(f"    Batch {i}/{len(batches) + start_batch - 1}: {len(batch)} documents")
+        for i, batch in enumerate(batches[start_batch-1:], start_batch):
+            print(f"    Batch {i}/{len(batches)}: {len(batch)} documents")
             
             try:
-                # Get current context
-                existing_knowledge = self.knowledge_graph.get_context_for_phase(phase)
+                context_result = self.get_context_with_memory(
+                    query_text=f"Phase {phase} knowledge synthesis",
+                    phase=phase,
+                    max_tokens=80000
+                )
+                existing_knowledge = context_result['context']
                 
-                # Build synthesis prompt
                 prompt = self.autonomous_prompts.knowledge_synthesis_prompt(
                     legal_knowledge=legal_docs if i <= len(legal_docs)//20 else [],
                     case_context=case_docs if i > len(legal_docs)//20 else [],
                     existing_knowledge=existing_knowledge
                 )
                 
-                # Call Claude
                 response, metadata = self.api_client.call_claude(
                     prompt=prompt,
                     task_type='knowledge_synthesis',
                     phase=phase
                 )
                 
-                # Extract knowledge
-                self._extract_knowledge_from_response(response, phase)
-                
-                # Track processed documents
                 batch_doc_ids = [doc.get('id', doc.get('filename', f'doc_{j}')) 
                                for j, doc in enumerate(batch)]
+                
+                self._cache_analysis_if_enabled(
+                    query_text=f"Phase {phase} batch {i}",
+                    response=response,
+                    phase=phase,
+                    doc_ids=batch_doc_ids
+                )
+                
+                self._extract_knowledge_from_response(response, phase)
+                
                 processed_doc_ids.extend(batch_doc_ids)
                 
                 results['documents_processed'] += len(batch)
                 results['batches_processed'] = i
                 results['synthesis'] += response[:500] + "\n\n"
                 
-                # ✅ CRITICAL: Save checkpoint after batch
                 self._save_batch_checkpoint(
                     phase=phase,
                     batch_num=i,
@@ -397,294 +370,186 @@ class LitigationOrchestrator:
                     doc_ids=processed_doc_ids
                 )
                 
-                # Rate limit delay
-                if i < len(batches) + start_batch - 1:
+                if i < len(batches):
                     time.sleep(self.config.api_config['rate_limit_delay'])
             
             except Exception as e:
-                print(f"      ❌ Error in batch {i}: {e}")
-                print(f"      ✓ Progress saved up to batch {i-1}")
+                print(f"      Error in batch {i}: {e}")
+                print(f"      Progress saved up to batch {i-1}")
                 raise
         
-        # Clear checkpoints after successful completion
         self._clear_phase_checkpoints(phase)
-        
-        # Save final phase output
         self._save_phase_output(phase, results)
+        
+        if phase not in self.state['phases_completed']:
+            self.state['phases_completed'].append(phase)
+        self._save_state()
         
         return results
     
-    def _execute_disclosure_iteration(self, iteration: int) -> Dict:
-        """Execute one iteration of disclosure analysis WITH CHECKPOINTS"""
+    def _execute_phase_1_tiered(self) -> Dict:
+        """Execute Phase 1: Three-tier disclosure analysis"""
         
-        phase = f'iteration_{iteration}'
+        phase = '1'
         
-        # Check for checkpoint
-        should_resume, checkpoint = self._should_resume_phase(phase)
+        print("\n  Executing 3-tier analysis...")
         
-        # Create backup if not resuming
+        results = {
+            'phase': phase,
+            'tiers': {}
+        }
+        
+        # Tier 1: Priority documents
+        print("\n  [TIER 1] Deep analysis of priority documents")
+        tier1_results = self._execute_tier(
+            tier_num=1,
+            phase=phase,
+            doc_limit=500,
+            analysis_depth='deep'
+        )
+        results['tiers']['tier_1'] = tier1_results
+        
+        # Tier 2: Metadata scan
+        print("\n  [TIER 2] Metadata scan of remaining documents")
+        tier2_results = self._execute_tier(
+            tier_num=2,
+            phase=phase,
+            doc_limit=None,
+            analysis_depth='shallow'
+        )
+        results['tiers']['tier_2'] = tier2_results
+        
+        # Tier 3: Flagged documents
+        flagged = tier2_results.get('flagged_documents', [])
+        if flagged:
+            print(f"\n  [TIER 3] Deep dive on {len(flagged)} flagged documents")
+            tier3_results = self._execute_tier(
+                tier_num=3,
+                phase=phase,
+                specific_docs=flagged,
+                analysis_depth='deep'
+            )
+            results['tiers']['tier_3'] = tier3_results
+        
+        if phase not in self.state['phases_completed']:
+            self.state['phases_completed'].append(phase)
+        self._save_state()
+        
+        return results
+    
+    def _execute_tier(self, 
+                     tier_num: int,
+                     phase: str,
+                     doc_limit: int = None,
+                     specific_docs: List = None,
+                     analysis_depth: str = 'deep') -> Dict:
+        """Execute a single tier of analysis"""
+        
+        tier_phase = f"{phase}_tier_{tier_num}"
+        
+        should_resume, checkpoint = self._should_resume_phase(tier_phase)
+        
         if not should_resume:
-            self._create_backup(phase)
+            self._create_backup(tier_phase)
         
-        # Load disclosure documents
-        disclosure_docs = self._load_documents(self.config.disclosure_dir)
+        if specific_docs:
+            docs = specific_docs
+        else:
+            all_docs = self._load_documents(self.config.disclosure_dir)
+            if doc_limit:
+                docs = all_docs[:doc_limit]
+            else:
+                docs = all_docs
         
-        # Get already-processed documents
-        processed_doc_ids = self._get_processed_docs(phase) if should_resume else []
+        processed_doc_ids = self._get_processed_docs(tier_phase) if should_resume else []
         
-        # Filter out processed documents
         if processed_doc_ids:
-            disclosure_docs = [
-                doc for doc in disclosure_docs 
+            docs = [
+                doc for doc in docs 
                 if doc.get('id', doc.get('filename')) not in processed_doc_ids
             ]
         
-        # Build batches
         batches = self.batch_manager.create_semantic_batches(
-            documents=disclosure_docs,
+            documents=docs,
             strategy='semantic_clustering'
         )
         
         start_batch = checkpoint.get('batch_number', 0) + 1 if should_resume else 1
         
-        print(f"  Processing {len(disclosure_docs)} documents in {len(batches)} batches")
-        print(f"  Starting from batch {start_batch}")
-        
-        iteration_results = {
-            'iteration': iteration,
-            'batches_processed': start_batch - 1,
+        results = {
+            'tier': tier_num,
             'documents_analysed': len(processed_doc_ids),
-            'batch_results': [],
-            'new_discoveries': 0
+            'batches_processed': start_batch - 1,
+            'critical_findings': [],
+            'contradictions': [],
+            'flagged_documents': []
         }
         
-        # Process each batch with checkpoint
-        for i, batch in enumerate(batches, start_batch):
-            print(f"    Batch {i}/{len(batches) + start_batch - 1}: {len(batch)} documents")
+        for i, batch in enumerate(batches[start_batch-1:], start_batch):
+            print(f"      Batch {i}/{len(batches)}: {len(batch)} documents")
             
             try:
-                # Get current context
-                context = self.knowledge_graph.get_context_for_phase(phase)
+                context_result = self.get_context_with_memory(
+                    query_text=f"Tier {tier_num} analysis",
+                    phase=tier_phase,
+                    max_tokens=100000
+                )
+                context = context_result['context']
                 
-                # Build investigation prompt
                 prompt = self.autonomous_prompts.investigation_prompt(
                     documents=batch,
                     context=context,
-                    phase=phase
+                    phase=tier_phase
                 )
                 
-                # Call Claude
                 response, metadata = self.api_client.call_claude(
                     prompt=prompt,
-                    task_type='deep_investigation',
-                    phase=phase
+                    task_type='tier_analysis',
+                    phase=tier_phase
                 )
                 
-                # Extract discoveries
-                discoveries = self._extract_discoveries_from_response(response, phase)
-                iteration_results['new_discoveries'] += len(discoveries)
-                
-                # Track processed documents
                 batch_doc_ids = [doc.get('id', doc.get('filename', f'doc_{j}')) 
                                for j, doc in enumerate(batch)]
+                
+                self._cache_analysis_if_enabled(
+                    query_text=f"Tier {tier_num} batch {i}",
+                    response=response,
+                    phase=tier_phase,
+                    doc_ids=batch_doc_ids
+                )
+                
+                discoveries = self._extract_discoveries_from_response(response, tier_phase)
+                results['critical_findings'].extend(discoveries)
+                
                 processed_doc_ids.extend(batch_doc_ids)
+                results['documents_analysed'] += len(batch)
+                results['batches_processed'] = i
                 
-                iteration_results['documents_analysed'] += len(batch)
-                iteration_results['batches_processed'] = i
-                
-                iteration_results['batch_results'].append({
-                    'batch_num': i,
-                    'documents': len(batch),
-                    'discoveries': len(discoveries)
-                })
-                
-                # ✅ CRITICAL: Save checkpoint after batch
                 self._save_batch_checkpoint(
-                    phase=phase,
+                    phase=tier_phase,
                     batch_num=i,
                     batch_results={'discoveries': len(discoveries)},
                     doc_ids=processed_doc_ids
                 )
                 
-                # Delay between batches
-                if i < len(batches) + start_batch - 1:
+                if i < len(batches):
                     time.sleep(self.config.api_config['rate_limit_delay'])
             
             except Exception as e:
-                print(f"      ❌ Error in batch {i}: {e}")
-                print(f"      ✓ Progress saved up to batch {i-1}")
+                print(f"      Error in batch {i}: {e}")
+                print(f"      Progress saved up to batch {i-1}")
                 raise
         
-        # Clear checkpoints after successful completion
-        self._clear_phase_checkpoints(phase)
+        self._clear_phase_checkpoints(tier_phase)
         
-        return iteration_results
+        return results
     
     # ============================================================================
-    # INVESTIGATION & SYNTHESIS (Unchanged)
-    # ============================================================================
-    
-    def _execute_investigation(self, investigation: Dict) -> Dict:
-        """Execute deep investigation thread"""
-        
-        print(f"\n  [INVESTIGATION] {investigation['type']} (Priority: {investigation['priority']})")
-        
-        # Get relevant documents for investigation
-        relevant_docs = self._get_investigation_documents(investigation)
-        
-        # Build investigation context
-        knowledge_context = self.knowledge_graph.get_context_for_phase('investigation')
-        
-        investigation_context = self.context_manager.build_investigation_context(
-            investigation=investigation,
-            relevant_docs=relevant_docs,
-            knowledge_graph_context=knowledge_context
-        )
-        
-        # Generate investigation prompt
-        prompt = self.recursive_prompts.focused_investigation_prompt(
-            investigation_thread=investigation,
-            context=investigation_context,
-            depth=self.config.investigation_depth['deep_investigation']
-        )
-        
-        # Call Claude with deep investigation
-        response, metadata = self.api_client.call_claude(
-            prompt=prompt,
-            task_type='deep_investigation',
-            phase=f"investigation_{investigation['id']}"
-        )
-        
-        # Extract findings
-        findings = self._extract_investigation_findings(response, investigation)
-        
-        # Update knowledge graph
-        self.knowledge_graph.complete_investigation(
-            investigation_id=investigation['id'],
-            findings=findings
-        )
-        
-        # Check if findings warrant child investigations
-        if findings.get('spawn_children'):
-            for child in findings['spawn_children']:
-                self.spawn_investigation(
-                    trigger_type=child['type'],
-                    trigger_data=child['data'],
-                    priority=child['priority']
-                )
-        
-        return findings
-    
-    def _execute_synthesis(self, results: Dict) -> Dict:
-        """Execute final synthesis"""
-        
-        # Get all knowledge from graph
-        knowledge_export = self.knowledge_graph.export_for_report()
-        
-        # Build synthesis prompt
-        prompt = self.synthesis_prompts.final_strategic_synthesis_prompt(
-            all_findings=knowledge_export,
-            phase_results=results['phases'],
-            investigation_results=results['investigations']
-        )
-        
-        # Call Claude
-        response, metadata = self.api_client.call_claude(
-            prompt=prompt,
-            task_type='synthesis',
-            phase='final_synthesis'
-        )
-        
-        synthesis = {
-            'narrative': response,
-            'timestamp': datetime.now().isoformat(),
-            'metadata': metadata
-        }
-        
-        # Save synthesis
-        self._save_synthesis(synthesis)
-        
-        return synthesis
-    
-    def _generate_war_room_dashboard(self, results: Dict) -> Dict:
-        """Generate executive dashboard"""
-        
-        # Prepare dashboard data
-        stats = self.knowledge_graph.get_statistics()
-        
-        current_status = {
-            'phases_completed': len(results['phases']),
-            'investigations_conducted': len(results['investigations']),
-            'entities': stats['entities'],
-            'contradictions': stats['contradictions'],
-            'patterns': stats['patterns']
-        }
-        
-        critical_findings = self.knowledge_graph.get_critical_findings(limit=10)
-        active_investigations = self.knowledge_graph.get_investigation_queue(limit=5)
-        strategic_options = []
-        
-        # Generate dashboard prompt
-        prompt = self.synthesis_prompts.war_room_dashboard_prompt(
-            current_status=current_status,
-            critical_findings=critical_findings,
-            active_investigations=active_investigations,
-            strategic_options=strategic_options
-        )
-        
-        # Call Claude
-        response, metadata = self.api_client.call_claude(
-            prompt=prompt,
-            task_type='report',
-            phase='war_room_dashboard'
-        )
-        
-        dashboard = {
-            'content': response,
-            'generated': datetime.now().isoformat(),
-            'status': current_status,
-            'metadata': metadata
-        }
-        
-        # Save dashboard
-        dashboard_path = self.config.reports_dir / f"war_room_dashboard_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md"
-        with open(dashboard_path, 'w', encoding='utf-8') as f:
-            f.write(dashboard['content'])
-        
-        print(f"  ✓ Dashboard saved to {dashboard_path}")
-        
-        return dashboard
-    
-    def _check_convergence(self, iteration_results: Dict) -> bool:
-        """Check if analysis has converged"""
-        
-        new_discoveries = iteration_results.get('new_discoveries', 0)
-        
-        # Track discovery trend
-        if 'discovery_trend' not in self.state['convergence_metrics']:
-            self.state['convergence_metrics']['discovery_trend'] = []
-        
-        self.state['convergence_metrics']['discovery_trend'].append(new_discoveries)
-        
-        # Check convergence criteria
-        if new_discoveries == 0:
-            return True
-        
-        # Check if discovery rate is declining
-        trend = self.state['convergence_metrics']['discovery_trend']
-        if len(trend) >= 3:
-            if trend[-1] < trend[-2] < trend[-3]:
-                if trend[-1] < 5:
-                    return True
-        
-        return False
-    
-    # ============================================================================
-    # HELPER METHODS (Unchanged)
+    # HELPER METHODS
     # ============================================================================
     
     def _load_documents(self, directory: Path) -> List[Dict]:
-        """Load documents from directory using DocumentLoader"""
+        """Load documents from directory"""
         
         loader = DocumentLoader(self.config)
         
@@ -698,7 +563,6 @@ class LitigationOrchestrator:
         else:
             print(f"  Loaded {len(documents)} documents from {directory}")
             
-            # Show breakdown by type
             by_type = {}
             for doc in documents:
                 ext = doc['metadata'].get('extension', 'unknown')
@@ -709,46 +573,13 @@ class LitigationOrchestrator:
         
         return documents
     
-    def _get_investigation_documents(self, investigation: Dict) -> List[Dict]:
-        """Get relevant documents for investigation"""
-        
-        all_docs = self._load_documents(self.config.disclosure_dir)
-        relevant_docs = []
-        
-        investigation_data = investigation.get('data', {})
-        
-        for doc in all_docs:
-            relevance_score = 0
-            content_lower = doc['content'].lower()
-            
-            if 'contradiction' in investigation['type']:
-                if 'statement_a' in investigation_data:
-                    if investigation_data['statement_a'].lower()[:50] in content_lower:
-                        relevance_score += 1.0
-            
-            if relevance_score > 0:
-                relevant_docs.append(doc)
-        
-        return relevant_docs[:50]
-    
     def _extract_knowledge_from_response(self, response: str, phase: str):
         """Extract and store knowledge from response"""
-        # Simplified - implement parsing logic
         pass
     
     def _extract_discoveries_from_response(self, response: str, phase: str) -> List[Dict]:
         """Extract discoveries from response"""
-        # Simplified - implement parsing logic
         return []
-    
-    def _extract_investigation_findings(self, response: str, investigation: Dict) -> Dict:
-        """Extract investigation findings"""
-        # Simplified - implement parsing logic
-        return {}
-    
-    def _update_knowledge_from_results(self, results: Dict, phase: str):
-        """Update knowledge graph from phase results"""
-        pass
     
     def _save_phase_output(self, phase: str, results: Dict):
         """Save phase output to file"""
@@ -768,28 +599,6 @@ class LitigationOrchestrator:
         with open(metadata_file, 'w', encoding='utf-8') as f:
             json.dump(results.get('metadata', {}), f, indent=2)
     
-    def _save_synthesis(self, synthesis: Dict):
-        """Save synthesis results"""
-        
-        synthesis_file = self.config.reports_dir / f"synthesis_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md"
-        with open(synthesis_file, 'w', encoding='utf-8') as f:
-            f.write("# Strategic Synthesis - Lismore v Process Holdings\n\n")
-            f.write(synthesis['narrative'])
-    
-    def _save_results(self, results: Dict):
-        """Save complete results"""
-        
-        results_file = self.config.output_dir / f"complete_results_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
-        
-        serialisable_results = {
-            'phases': {k: {'summary': str(v)[:1000]} for k, v in results['phases'].items()},
-            'investigations_count': len(results['investigations']),
-            'timestamp': datetime.now().isoformat()
-        }
-        
-        with open(results_file, 'w', encoding='utf-8') as f:
-            json.dump(serialisable_results, f, indent=2)
-    
     def _save_state(self):
         """Save orchestrator state"""
         
@@ -805,27 +614,3 @@ class LitigationOrchestrator:
             with open(state_file, 'r', encoding='utf-8') as f:
                 saved_state = json.load(f)
                 self.state.update(saved_state)
-    
-    def _print_summary(self, results: Dict):
-        """Print execution summary"""
-        
-        print("\n" + "="*60)
-        print("EXECUTION SUMMARY")
-        print("="*60)
-        
-        stats = self.knowledge_graph.get_statistics()
-        
-        print(f"Phases Completed: {len(results['phases'])}")
-        print(f"Investigations Conducted: {len(results['investigations'])}")
-        print(f"Entities Identified: {stats['entities']}")
-        print(f"Relationships Mapped: {stats['relationships']}")
-        print(f"Contradictions Found: {stats['contradictions']}")
-        print(f"Patterns Discovered: {stats['patterns']}")
-        print(f"Timeline Events: {stats['timeline_events']}")
-        
-        usage = self.api_client.get_usage_report()
-        print(f"\nAPI Usage:")
-        print(f"  Total Calls: {usage['summary']['total_calls']}")
-        print(f"  Estimated Cost: ${usage['summary']['estimated_cost_usd']}")
-        
-        print("\n" + "="*60)

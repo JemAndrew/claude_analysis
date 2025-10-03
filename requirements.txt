@@ -58,3 +58,18 @@ ratelimit>=2.2.1
 
 # Caching
 diskcache>=5.6.0
+
+# Security & encryption
+cryptography>=41.0.0
+
+# Memory System - NEW
+chromadb>=0.4.22
+sentence-transformers>=2.2.2
+
+# Optional but recommended for better performance
+faiss-cpu>=1.7.4  # Alternative to ChromaDB (faster)
+
+# Utilities
+requests>=2.31.0
+
+
