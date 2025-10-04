@@ -14,16 +14,16 @@ from typing import Dict, List, Optional, Any, Tuple
 from datetime import datetime
 import hashlib
 
-from src.core.config import Config
-from src.core.phase_executor import PhaseExecutor
-from src.intelligence.knowledge_graph import KnowledgeGraph
-from src.api.client import ClaudeClient
-from src.api.context_manager import ContextManager
-from src.api.batch_manager import BatchManager
-from src.prompts.autonomous import AutonomousPrompts
-from src.prompts.recursive import RecursivePrompts
-from src.prompts.synthesis import SynthesisPrompts
-from src.utils.document_loader import DocumentLoader
+from core.config import Config
+from core.phase_executor import PhaseExecutor
+from intelligence.knowledge_graph import KnowledgeGraph
+from api.client import ClaudeClient
+from api.context_manager import ContextManager
+from api.batch_manager import BatchManager
+from prompts.autonomous import AutonomousPrompts
+from prompts.recursive import RecursivePrompts
+from prompts.synthesis import SynthesisPrompts
+from utils.document_loader import DocumentLoader
 
 
 class LitigationOrchestrator:
@@ -31,25 +31,25 @@ class LitigationOrchestrator:
     
     def __init__(self, config_override: Dict = None):
         """Initialise orchestrator with all components"""
-        self.Config = Config()
+        self.config = Config()
         # Override config if needed
         if config_override:
             for key, value in config_override.items():
-                setattr(Config, key, value)
+                setattr(self.config, key, value)
         
     
         
         # Initialise core components
-        self.knowledge_graph = KnowledgeGraph(self.Config)
-        self.api_client = ClaudeClient(self.Config)
-        self.context_manager = ContextManager(self.Config)
-        self.batch_manager = BatchManager(self.Config)
-        self.phase_executor = PhaseExecutor(self.Config, self)
+        self.knowledge_graph = KnowledgeGraph(self.config)
+        self.api_client = ClaudeClient(self.config)
+        self.context_manager = ContextManager(self.config)
+        self.batch_manager = BatchManager(self.config)
+        self.phase_executor = PhaseExecutor(self.config, self)
         
         # Initialise prompt systems
-        self.autonomous_prompts = AutonomousPrompts(self.Config)
-        self.recursive_prompts = RecursivePrompts(self.Config)
-        self.synthesis_prompts = SynthesisPrompts(self.Config)
+        self.autonomous_prompts = AutonomousPrompts(self.config)
+        self.recursive_prompts = RecursivePrompts(self.config)
+        self.synthesis_prompts = SynthesisPrompts(self.config)
         
         # NEW: Initialise hierarchical memory system
         try:

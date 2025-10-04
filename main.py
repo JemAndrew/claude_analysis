@@ -9,12 +9,14 @@ import sys
 from pathlib import Path
 
 # Add src to path
-sys.path.insert(0, str(Path(__file__).parent / 'src'))
+src_path = Path(__file__).parent / 'src'
+sys.path.insert(0, str(src_path))
+
 
 from dotenv import load_dotenv
 load_dotenv(override=True)
 
-from src.core.orchestrator import LitigationOrchestrator
+from core.orchestrator import LitigationOrchestrator
 import argparse
 
 
