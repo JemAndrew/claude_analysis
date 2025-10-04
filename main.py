@@ -14,7 +14,7 @@ sys.path.insert(0, str(Path(__file__).parent / 'src'))
 from dotenv import load_dotenv
 load_dotenv(override=True)
 
-from core.orchestrator import LitigationOrchestrator
+from src.core.orchestrator import LitigationOrchestrator
 import argparse
 
 

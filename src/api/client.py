@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
-Optimised Claude API Client with Prompt Caching
+Optimised Claude API Client with Prompt Caching & Extended Thinking
 Handles 200k token contexts with intelligent caching and retry logic
-ENHANCED VERSION with system prompts, prefill support, and extended thinking
+FINAL VERSION with Extended Thinking enabled
+British English throughout
 """
 
 import time
@@ -27,6 +28,7 @@ class ClaudeClient:
             'total_output_tokens': 0,
             'cache_creation_tokens': 0,
             'cache_read_tokens': 0,
+            'thinking_tokens': 0,  # NEW: Track thinking tokens
             'calls_by_model': {},
             'calls_by_phase': {},
             'cache_hits': 0,
@@ -109,12 +111,12 @@ class ClaudeClient:
                         {"role": "user", "content": prompt}
                     ]
                 
-                # Make API call with caching
-                response = self.client.messages.create(
-                    model=model,
-                    max_tokens=max_tokens,
-                    temperature=temperature,
-                    system=[
+                # Build API parameters
+                api_params = {
+                    'model': model,
+                    'max_tokens': max_tokens,
+                    'temperature': temperature,
+                    'system': [
                         {
                             "type": "text",
                             "text": self.config.system_prompt,
@@ -126,8 +128,19 @@ class ClaudeClient:
                             "cache_control": {"type": "ephemeral"}
                         }
                     ],
-                    messages=messages
-                )
+                    'messages': messages
+                }
+                
+                # ADD EXTENDED THINKING if Sonnet 4 and complex task
+                if self._should_use_extended_thinking(model, task_type):
+                    api_params['thinking'] = {
+                        'type': 'enabled',
+                        'budget_tokens': 10000
+                    }
+                    print(f"  🧠 Extended Thinking: ENABLED")
+                
+                # Make API call with caching
+                response = self.client.messages.create(**api_params)
                 
                 # Calculate timing and tokens
                 elapsed_time = time.time() - start_time
@@ -138,6 +151,17 @@ class ClaudeClient:
                 output_tokens = usage.output_tokens
                 cache_creation_tokens = getattr(usage, 'cache_creation_input_tokens', 0)
                 cache_read_tokens = getattr(usage, 'cache_read_input_tokens', 0)
+                
+                # NEW: Extract thinking tokens
+                thinking_tokens = 0
+                thinking_content = None
+                if hasattr(response, 'content'):
+                    for block in response.content:
+                        if hasattr(block, 'type') and block.type == 'thinking':
+                            thinking_tokens = len(getattr(block, 'thinking', '').split()) * 1.3
+                            thinking_content = getattr(block, 'thinking', None)
+                            if thinking_tokens > 0:
+                                print(f"  💭 Thinking: {int(thinking_tokens)} tokens used")
                 
                 # Track cache performance
                 if cache_read_tokens > 0:
@@ -156,6 +180,7 @@ class ClaudeClient:
                     output_tokens=output_tokens,
                     cache_creation_tokens=cache_creation_tokens,
                     cache_read_tokens=cache_read_tokens,
+                    thinking_tokens=thinking_tokens,
                     elapsed_time=elapsed_time,
                     success=True
                 )
@@ -179,6 +204,9 @@ class ClaudeClient:
                     'cache_creation_tokens': cache_creation_tokens,
                     'cache_read_tokens': cache_read_tokens,
                     'cache_hit': cache_read_tokens > 0,
+                    'thinking_tokens': thinking_tokens,
+                    'thinking_content': thinking_content,
+                    'extended_thinking_used': thinking_tokens > 0,
                     'elapsed_time': elapsed_time,
                     'attempt': attempt + 1,
                     'timestamp': datetime.now().isoformat()
@@ -284,19 +312,44 @@ class ClaudeClient:
                         {"role": "user", "content": prompt}
                     ]
                 
+                # Build API parameters
+                api_params = {
+                    'model': model,
+                    'max_tokens': max_tokens,
+                    'temperature': temperature,
+                    'system': self.config.system_prompt,
+                    'messages': messages
+                }
+                
+                # ADD EXTENDED THINKING if Sonnet 4 and complex task
+                if self._should_use_extended_thinking(model, task_type):
+                    api_params['thinking'] = {
+                        'type': 'enabled',
+                        'budget_tokens': 10000
+                    }
+                    print(f"  🧠 Extended Thinking: ENABLED")
+                
                 # Make the API call
-                response = self.client.messages.create(
-                    model=model,
-                    max_tokens=max_tokens,
-                    temperature=temperature,
-                    system=self.config.system_prompt,
-                    messages=messages
-                )
+                response = self.client.messages.create(**api_params)
                 
                 # Calculate tokens and timing
                 elapsed_time = time.time() - start_time
-                input_tokens = self._estimate_tokens(prompt)
-                output_tokens = self._estimate_tokens(response.content[0].text if response.content else "")
+                
+                # Extract usage from response
+                usage = response.usage
+                input_tokens = usage.input_tokens
+                output_tokens = usage.output_tokens
+                
+                # NEW: Extract thinking tokens
+                thinking_tokens = 0
+                thinking_content = None
+                if hasattr(response, 'content'):
+                    for block in response.content:
+                        if hasattr(block, 'type') and block.type == 'thinking':
+                            thinking_tokens = len(getattr(block, 'thinking', '').split()) * 1.3
+                            thinking_content = getattr(block, 'thinking', None)
+                            if thinking_tokens > 0:
+                                print(f"  💭 Thinking: {int(thinking_tokens)} tokens used")
                 
                 # Update statistics
                 self._update_stats(
@@ -306,6 +359,7 @@ class ClaudeClient:
                     output_tokens=output_tokens,
                     cache_creation_tokens=0,
                     cache_read_tokens=0,
+                    thinking_tokens=thinking_tokens,
                     elapsed_time=elapsed_time,
                     success=True
                 )
@@ -326,6 +380,9 @@ class ClaudeClient:
                     'temperature': temperature,
                     'input_tokens': input_tokens,
                     'output_tokens': output_tokens,
+                    'thinking_tokens': thinking_tokens,
+                    'thinking_content': thinking_content,
+                    'extended_thinking_used': thinking_tokens > 0,
                     'elapsed_time': elapsed_time,
                     'attempt': attempt + 1,
                     'timestamp': datetime.now().isoformat()
@@ -434,6 +491,30 @@ class ClaudeClient:
         
         return results
     
+    def _should_use_extended_thinking(self, model: str, task_type: str = None) -> bool:
+        """
+        Determine if Extended Thinking should be enabled
+        
+        Only for Sonnet 4.x and complex reasoning tasks
+        """
+        # Only Sonnet 4 supports extended thinking
+        if 'sonnet-4' not in model.lower():
+            return False
+        
+        # Enable for complex reasoning tasks
+        complex_tasks = [
+            'investigation', 'pattern_recognition', 'contradiction_analysis',
+            'synthesis', 'hypothesis', 'deep_investigation', 'strategic_synthesis',
+            'timeline_analysis', 'financial_analysis', 'entity_mapping'
+        ]
+        
+        if task_type:
+            for task in complex_tasks:
+                if task in task_type.lower():
+                    return True
+        
+        return False
+    
     def _calculate_complexity(self, prompt: str, task_type: str = None) -> float:
         """Calculate prompt complexity to determine model selection"""
         
@@ -533,6 +614,7 @@ class ClaudeClient:
                      output_tokens: int,
                      cache_creation_tokens: int,
                      cache_read_tokens: int,
+                     thinking_tokens: int,
                      elapsed_time: float,
                      success: bool) -> None:
         """Update usage statistics"""
@@ -542,17 +624,20 @@ class ClaudeClient:
         self.usage_stats['total_output_tokens'] += output_tokens
         self.usage_stats['cache_creation_tokens'] += cache_creation_tokens
         self.usage_stats['cache_read_tokens'] += cache_read_tokens
+        self.usage_stats['thinking_tokens'] += thinking_tokens
         
         # By model
         if model not in self.usage_stats['calls_by_model']:
             self.usage_stats['calls_by_model'][model] = {
                 'count': 0,
                 'input_tokens': 0,
-                'output_tokens': 0
+                'output_tokens': 0,
+                'thinking_tokens': 0
             }
         self.usage_stats['calls_by_model'][model]['count'] += 1
         self.usage_stats['calls_by_model'][model]['input_tokens'] += input_tokens
         self.usage_stats['calls_by_model'][model]['output_tokens'] += output_tokens
+        self.usage_stats['calls_by_model'][model]['thinking_tokens'] += thinking_tokens
         
         # By phase
         if phase:
@@ -560,11 +645,13 @@ class ClaudeClient:
                 self.usage_stats['calls_by_phase'][phase] = {
                     'count': 0,
                     'input_tokens': 0,
-                    'output_tokens': 0
+                    'output_tokens': 0,
+                    'thinking_tokens': 0
                 }
             self.usage_stats['calls_by_phase'][phase]['count'] += 1
             self.usage_stats['calls_by_phase'][phase]['input_tokens'] += input_tokens
             self.usage_stats['calls_by_phase'][phase]['output_tokens'] += output_tokens
+            self.usage_stats['calls_by_phase'][phase]['thinking_tokens'] += thinking_tokens
     
     def get_usage_report(self) -> Dict:
         """Generate comprehensive usage report with cost estimates"""
@@ -574,14 +661,16 @@ class ClaudeClient:
         output_price = 15.0  # £15 per million output tokens
         cache_write_price = 3.75  # £3.75 per million (25% more than input)
         cache_read_price = 0.30  # £0.30 per million (90% discount)
+        thinking_price = 3.0  # £3 per million (same as input)
         
         # Calculate costs
         input_cost = (self.usage_stats['total_input_tokens'] / 1_000_000) * input_price
         output_cost = (self.usage_stats['total_output_tokens'] / 1_000_000) * output_price
         cache_write_cost = (self.usage_stats['cache_creation_tokens'] / 1_000_000) * cache_write_price
         cache_read_cost = (self.usage_stats['cache_read_tokens'] / 1_000_000) * cache_read_price
+        thinking_cost = (self.usage_stats['thinking_tokens'] / 1_000_000) * thinking_price
         
-        total_cost = input_cost + output_cost + cache_write_cost + cache_read_cost
+        total_cost = input_cost + output_cost + cache_write_cost + cache_read_cost + thinking_cost
         
         # Calculate savings from caching
         cache_savings = 0
@@ -597,6 +686,7 @@ class ClaudeClient:
                 'total_output_tokens': self.usage_stats['total_output_tokens'],
                 'cache_creation_tokens': self.usage_stats['cache_creation_tokens'],
                 'cache_read_tokens': self.usage_stats['cache_read_tokens'],
+                'thinking_tokens': self.usage_stats['thinking_tokens'],
                 'cache_hits': self.usage_stats['cache_hits'],
                 'cache_misses': self.usage_stats['cache_misses'],
                 'cache_hit_rate': (
@@ -605,6 +695,7 @@ class ClaudeClient:
                 ),
                 'estimated_cost_gbp': round(total_cost, 2),
                 'cache_savings_gbp': round(cache_savings, 2),
+                'thinking_cost_gbp': round(thinking_cost, 2),
                 'error_count': len(self.usage_stats['errors'])
             },
             'by_model': self.usage_stats['calls_by_model'],
@@ -624,12 +715,16 @@ class ClaudeClient:
         print(f"Total API Calls: {summary['total_calls']}")
         print(f"Total Input Tokens: {summary['total_input_tokens']:,}")
         print(f"Total Output Tokens: {summary['total_output_tokens']:,}")
+        print(f"Total Thinking Tokens: {summary['thinking_tokens']:,}")
         print(f"\nCache Performance:")
         print(f"  Cache Hits: {summary['cache_hits']}")
         print(f"  Cache Misses: {summary['cache_misses']}")
         print(f"  Hit Rate: {summary['cache_hit_rate']:.1%}")
         print(f"  Cache Read Tokens: {summary['cache_read_tokens']:,}")
         print(f"  Cache Savings: £{summary['cache_savings_gbp']:.2f}")
+        print(f"\nExtended Thinking:")
+        print(f"  Thinking Tokens Used: {summary['thinking_tokens']:,}")
+        print(f"  Thinking Cost: £{summary['thinking_cost_gbp']:.2f}")
         print(f"\nEstimated Total Cost: £{summary['estimated_cost_gbp']:.2f}")
         print(f"Errors: {summary['error_count']}")
         print("="*60 + "\n")

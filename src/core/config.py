@@ -3,11 +3,16 @@
 Configuration for Litigation Intelligence System
 Optimised for maximum Claude capability - Lismore v Process Holdings
 British English throughout
+FINAL VERSION - Complete with all methods
 """
 
 import os
 from pathlib import Path
 from typing import Dict, Any, List
+
+# CRITICAL: Load environment variables from root .env
+from dotenv import load_dotenv
+load_dotenv(override=True)
 
 
 class Config:
@@ -55,9 +60,9 @@ class Config:
     def _setup_models(self) -> None:
         """Model selection for maximum reasoning"""
         self.models = {
-            'primary': 'claude-sonnet-4-20250514',
-            'secondary': 'claude-haiku-4-20250605',
-            'opus': 'claude-opus-4-20250514'
+            'primary': 'claude-sonnet-4-5-20250929',  # Latest Sonnet 4.5
+            'secondary': 'claude-haiku-4-20250605',   # Haiku 4 for speed
+            'opus': 'claude-opus-4-20250514'          # Opus 4 if needed
         }
         
         self.task_models = {
@@ -80,6 +85,13 @@ class Config:
             'max_output_tokens': 16000,
             'buffer_tokens': 10000,
             'optimal_batch_size': 140000
+        }
+        
+        # Prompt caching configuration
+        self.caching_config = {
+            'enabled': True,
+            'min_tokens_to_cache': 1024,
+            'ttl_seconds': 300
         }
         
         # Batching strategy
@@ -264,14 +276,58 @@ class Config:
         """API and rate limiting configuration"""
         
         self.api_config = {
-            'api_key': os. getenv('ANTHROPIC_API_KEY'),
+            'api_key': os.getenv('ANTHROPIC_API_KEY'),
             'rate_limit_delay': 2,
             'max_retries': 5,
             'retry_delay': 5,
             'timeout': 300
         }
+        
+        # Verify API key loaded
+        if not self.api_config['api_key']:
+            raise ValueError(
+                "ANTHROPIC_API_KEY not found in environment variables!\n"
+                "Ensure .env file exists in root directory with:\n"
+                "ANTHROPIC_API_KEY=sk-ant-api03-..."
+            )
     
-    # Entity categories for knowledge graph
+    # ========================================================================
+    # NEW: HELPER METHODS
+    # ========================================================================
+    
+    def get_model_for_task(self, task_type: str, complexity: float) -> str:
+        """
+        Select model based on task and complexity
+        
+        Args:
+            task_type: Type of task (investigation, metadata_extraction, etc.)
+            complexity: Complexity score (0.0-1.0)
+        
+        Returns:
+            Model string
+        """
+        
+        # For complex tasks or high complexity, use primary (Sonnet 4.5)
+        if complexity > 0.7 or task_type in ['investigation', 'synthesis', 'contradiction_analysis']:
+            return self.models['primary']
+        
+        # For metadata scanning, use secondary (Haiku 4)
+        elif task_type == 'metadata_extraction':
+            return self.models['secondary']
+        
+        # Default to primary for quality
+        else:
+            return self.models['primary']
+    
+    # ========================================================================
+    # PROPERTIES
+    # ========================================================================
+    
+    @property
+    def temperature_settings(self) -> Dict:
+        """Temperature settings accessor for backwards compatibility"""
+        return self.temperature_config
+    
     @property
     def base_entities(self) -> Dict[str, List[str]]:
         """Base entity types for Lismore case"""
@@ -303,7 +359,6 @@ class Config:
             ]
         }
     
-    # Hallucination prevention
     @property
     def hallucination_prevention(self) -> str:
         """Core instructions to prevent hallucination"""
@@ -328,6 +383,27 @@ WE ARE ARGUING FOR LISMORE. All analysis must:
 - Think like Lismore's senior litigation counsel
 </lismore_advocacy_stance>
 """
+    
+    @property
+    def system_prompt(self) -> str:
+        """Core system prompt for all Claude interactions"""
+        return """You are a senior litigation analyst working for Lismore against Process Holdings.
+
+<critical_accuracy_requirements>
+- NEVER invent facts not in documents
+- NEVER assume document content
+- NEVER create fictional quotes
+- ALWAYS cite specific document references
+- ALWAYS distinguish between: (1) Facts from documents, (2) Logical inferences, (3) Strategic hypotheses
+- Mark confidence levels: CERTAIN (in document), PROBABLE (strong inference), POSSIBLE (hypothesis)
+- When uncertain: State "Not found in reviewed documents" rather than speculating
+</critical_accuracy_requirements>
+
+<lismore_advocacy_stance>
+WE ARE ARGUING FOR LISMORE. Frame all findings to support Lismore's position.
+Identify weaknesses in Process Holdings' case.
+Look for contradictions, omissions, and suspicious patterns favouring Lismore.
+</lismore_advocacy_stance>"""
 
 
 # Global config instance
