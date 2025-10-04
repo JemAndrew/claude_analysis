@@ -2,7 +2,8 @@
 """
 Enhanced Document Loader with Metadata Extraction
 Handles all document types for litigation intelligence
-COMPLETE FIXED VERSION - All methods implemented
+COMPLETE VERSION - Memory tiers integrated
+British English throughout
 """
 
 from pathlib import Path
@@ -31,7 +32,7 @@ import chardet
 
 
 class DocumentLoader:
-    """Advanced document loading with metadata extraction"""
+    """Advanced document loading with metadata extraction and memory tier integration"""
     
     def __init__(self, config):
         self.config = config
@@ -40,6 +41,36 @@ class DocumentLoader:
             'failed_loads': 0,
             'by_type': {}
         }
+        
+        # NEW: Memory tier integration
+        self.vector_store = None
+        self.cold_storage = None
+        
+        # Initialise Tier 2: Vector Store (if enabled)
+        if hasattr(config, 'enable_vector_store') and config.enable_vector_store:
+            try:
+                from memory.tier2_vector import VectorStoreManager
+                vector_path = config.root / "data" / "memory_tiers" / "tier2_vector_store"
+                self.vector_store = VectorStoreManager(vector_path, config)
+                print("✅ Tier 2 Vector Store ACTIVE (semantic search enabled)")
+            except ImportError as e:
+                print(f"⚠️  Tier 2 Vector Store unavailable: {e}")
+                print("    Install: pip install chromadb sentence-transformers")
+            except Exception as e:
+                print(f"⚠️  Tier 2 Vector Store error: {e}")
+        
+        # Initialise Tier 4: Cold Storage (if enabled)
+        if hasattr(config, 'enable_cold_storage') and config.enable_cold_storage:
+            try:
+                from memory.tier4_cold_storage import ColdStorageManager
+                vault_path = config.root / "data" / "memory_tiers" / "tier4_cold_storage"
+                self.cold_storage = ColdStorageManager(vault_path, config)
+                print("✅ Tier 4 Cold Storage ACTIVE (document encryption enabled)")
+            except ImportError as e:
+                print(f"⚠️  Tier 4 Cold Storage unavailable: {e}")
+                print("    Install: pip install cryptography")
+            except Exception as e:
+                print(f"⚠️  Tier 4 Cold Storage error: {e}")
     
     def load_directory(self, 
                       directory: Path,
@@ -98,6 +129,12 @@ class DocumentLoader:
                 self.load_stats['failed_loads'] += 1
         
         print(f"✅ Loaded {len(documents)} documents successfully")
+        
+        # Report memory tier statistics
+        if self.vector_store:
+            stats = self.vector_store.get_collection_stats()
+            print(f"   Tier 2: {stats.get('total_documents', 0)} docs indexed")
+        
         return documents
     
     def load_document(self, file_path: Path) -> Optional[Dict]:
@@ -141,13 +178,73 @@ class DocumentLoader:
         ext = extension
         self.load_stats['by_type'][ext] = self.load_stats['by_type'].get(ext, 0) + 1
         
-        return {
+        # Build document object
+        document = {
             'id': doc_id,
             'filename': file_path.name,
             'filepath': str(file_path),
             'content': content,
             'metadata': metadata
         }
+        
+        # NEW: Add to memory tiers if enabled
+        self._add_to_memory_tiers(file_path, document, extension)
+        
+        return document
+    
+    def _add_to_memory_tiers(self, file_path: Path, document: Dict, extension: str):
+        """Add document to memory tiers (Tier 2 & 4)"""
+        
+        doc_id = document['id']
+        content = document['content']
+        metadata = document['metadata']
+        
+        # TIER 2: Add to vector store (for semantic search)
+        if self.vector_store and content:
+            try:
+                self.vector_store.add_document(
+                    doc_path=file_path,
+                    doc_metadata={
+                        'doc_id': doc_id,
+                        'content': content,
+                        'filename': file_path.name,
+                        'folder': str(file_path.parent.name),
+                        'classification': metadata.get('classification', 'general'),
+                        'has_dates': metadata.get('has_dates', False),
+                        'has_amounts': metadata.get('has_amounts', False),
+                        'word_count': metadata.get('word_count', 0),
+                        **metadata
+                    }
+                )
+            except Exception as e:
+                # Don't fail entire load if vector indexing fails
+                print(f"    ⚠️  Vector indexing failed for {file_path.name}: {e}")
+        
+        # TIER 4: Encrypt to cold storage (PDFs only for security)
+        if self.cold_storage and extension == '.pdf':
+            try:
+                # Determine importance for prioritisation
+                importance = 5  # Default
+                classification = metadata.get('classification', 'general')
+                
+                if classification in ['witness_statement', 'contract']:
+                    importance = 10  # High importance
+                elif classification in ['correspondence', 'minutes']:
+                    importance = 7
+                
+                self.cold_storage.encrypt_and_store(
+                    file_path=file_path,
+                    doc_metadata={
+                        'doc_id': doc_id,
+                        'filename': file_path.name,
+                        'classification': classification,
+                        'importance': importance,
+                        'file_size': metadata.get('file_size_mb', 0),
+                        **metadata
+                    }
+                )
+            except Exception as e:
+                print(f"    ⚠️  Cold storage encryption failed for {file_path.name}: {e}")
     
     def _load_pdf(self, file_path: Path) -> Tuple[Optional[str], Dict]:
         """Load PDF file with metadata"""
@@ -172,7 +269,7 @@ class DocumentLoader:
                 if content and len(content.strip()) > 50:
                     return content, extraction_metadata
             except Exception as e:
-                print(f"  PyMuPDF failed for {file_path.name}: {e}")
+                pass  # Try next method
         
         # Try pdfplumber
         if PDFPLUMBER_AVAILABLE and not content:
@@ -192,7 +289,7 @@ class DocumentLoader:
                 if content and len(content.strip()) > 50:
                     return content, extraction_metadata
             except Exception as e:
-                print(f"  pdfplumber failed for {file_path.name}: {e}")
+                pass  # Try next method
         
         # Fallback to PyPDF2
         if not content:
@@ -210,7 +307,6 @@ class DocumentLoader:
                     extraction_metadata['page_count'] = len(reader.pages)
                     extraction_metadata['method'] = 'pypdf2'
             except Exception as e:
-                print(f"  PyPDF2 failed for {file_path.name}: {e}")
                 return None, {}
         
         return content, extraction_metadata
@@ -237,7 +333,6 @@ class DocumentLoader:
             return '\n'.join(paragraphs)
             
         except Exception as e:
-            print(f"Failed to load DOCX {file_path}: {e}")
             return None
     
     def _load_json(self, file_path: Path) -> Optional[str]:
@@ -248,7 +343,6 @@ class DocumentLoader:
                 data = json.load(f)
                 return json.dumps(data, indent=2)
         except Exception as e:
-            print(f"Failed to load JSON {file_path}: {e}")
             return None
     
     def _load_text(self, file_path: Path) -> Optional[str]:
@@ -266,7 +360,6 @@ class DocumentLoader:
                 return f.read()
                 
         except Exception as e:
-            print(f"Failed to load text {file_path}: {e}")
             return None
     
     def _generate_doc_id(self, file_path: Path) -> str:
@@ -296,6 +389,7 @@ class DocumentLoader:
             'file_size_mb': file_path.stat().st_size / (1024 * 1024),
             'modified_date': datetime.fromtimestamp(file_path.stat().st_mtime).isoformat(),
             'extension': file_path.suffix.lower(),
+            'source_folder': file_path.parent.name,
             'char_count': len(content),
             'word_count': len(content.split()),
             'line_count': content.count('\n')
@@ -309,7 +403,7 @@ class DocumentLoader:
         metadata['dates_found'] = dates[:10]
         metadata['has_dates'] = len(dates) > 0
         
-        # Extract amounts - FIXED METHOD
+        # Extract amounts
         amounts = self._extract_amounts(content)
         metadata['amounts_found'] = amounts[:10]
         metadata['has_amounts'] = len(amounts) > 0
@@ -317,6 +411,7 @@ class DocumentLoader:
         # Extract entities
         entities = self._extract_entities(content)
         metadata['entities'] = entities
+        metadata['has_entities'] = bool(entities['people'] or entities['companies'])
         
         # Document classification
         metadata['classification'] = self._classify_document(file_path.name, content)
@@ -355,27 +450,24 @@ class DocumentLoader:
         return unique_dates
     
     def _extract_amounts(self, content: str) -> List[str]:
-        """
-        Extract monetary amounts from content
-        COMPLETE FIXED VERSION
-        """
+        """Extract monetary amounts from content"""
         
         amounts = []
         
         # Amount patterns - British English focused
         patterns = [
-            r'£\s*[\d,]+(?:\.\d{2})?(?:\s*(?:million|billion|k|m|bn))?',  # £123,456.78
-            r'\$\s*[\d,]+(?:\.\d{2})?(?:\s*(?:million|billion|k|m|bn))?',  # $123,456.78
-            r'€\s*[\d,]+(?:\.\d{2})?(?:\s*(?:million|billion|k|m|bn))?',  # €123,456.78
-            r'[\d,]+(?:\.\d{2})?\s*(?:GBP|USD|EUR|pounds?|dollars?)',  # 123,456.78 GBP
-            r'\b\d{1,3}(?:,\d{3})+(?:\.\d{2})?\b'  # Numbers with commas: 123,456.78
+            r'£\s*[\d,]+(?:\.\d{2})?(?:\s*(?:million|billion|k|m|bn))?',
+            r'\$\s*[\d,]+(?:\.\d{2})?(?:\s*(?:million|billion|k|m|bn))?',
+            r'€\s*[\d,]+(?:\.\d{2})?(?:\s*(?:million|billion|k|m|bn))?',
+            r'[\d,]+(?:\.\d{2})?\s*(?:GBP|USD|EUR|pounds?|dollars?)',
+            r'\b\d{1,3}(?:,\d{3})+(?:\.\d{2})?\b'
         ]
         
         for pattern in patterns:
             matches = re.findall(pattern, content, re.IGNORECASE)
             amounts.extend(matches)
         
-        # Remove duplicates while preserving order
+        # Remove duplicates
         seen = set()
         unique_amounts = []
         for amount in amounts:
@@ -454,7 +546,7 @@ class DocumentLoader:
     def get_statistics(self) -> Dict:
         """Get loading statistics"""
         
-        return {
+        stats = {
             'total_loaded': self.load_stats['total_loaded'],
             'failed_loads': self.load_stats['failed_loads'],
             'by_type': self.load_stats['by_type'],
@@ -463,3 +555,20 @@ class DocumentLoader:
                 max(1, self.load_stats['total_loaded'] + self.load_stats['failed_loads'])
             )
         }
+        
+        # Add memory tier stats if available
+        if self.vector_store:
+            vector_stats = self.vector_store.get_collection_stats()
+            stats['vector_store'] = {
+                'documents': vector_stats.get('total_documents', 0),
+                'tokens': vector_stats.get('estimated_total_tokens', 0)
+            }
+        
+        if self.cold_storage:
+            storage_stats = self.cold_storage.get_vault_statistics()
+            stats['cold_storage'] = {
+                'documents': storage_stats.get('total_documents', 0),
+                'encrypted_size_mb': storage_stats.get('total_size_mb', 0)
+            }
+        
+        return stats

@@ -3,7 +3,7 @@
 Configuration for Litigation Intelligence System
 Optimised for maximum Claude capability - Lismore v Process Holdings
 British English throughout
-FINAL VERSION - Complete with all methods
+COMPLETE VERSION - Memory tiers enabled
 """
 
 import os
@@ -27,6 +27,7 @@ class Config:
         self._setup_investigation()
         self._setup_tiered_analysis()
         self._setup_api_config()
+        self._setup_memory_tiers()  # NEW
     
     def _setup_paths(self) -> None:
         """Define organised folder structure"""
@@ -102,309 +103,138 @@ class Config:
             'tier_3_batch_size': 15,
             'max_retries': 5,
             'retry_delay': 5,
-            'auto_adjust': True,
-            'method': 'semantic_clustering',
-            'max_batch_size': 140000,
-            'overlap_tokens': 5000,
-            'prioritise_by': 'relevance',
-            'min_batch_size': 50000
+            'auto_adjust': True
         }
         
-        # Phase configuration
-        self.phases = {
-            '0': {
-                'name': 'Knowledge Foundation',
-                'strategy': 'batched_synthesis',
-                'priority': 'CRITICAL'
-            },
-            '1': {
-                'name': 'Disclosure Analysis',
-                'strategy': 'tiered_analysis',
-                'priority': 'HIGH'
-            },
-            '2': {
-                'name': 'Timeline Reconstruction',
-                'strategy': 'temporal_forensics',
-                'priority': 'HIGH'
-            },
-            '3': {
-                'name': 'Contradiction Mining',
-                'strategy': 'logic_analysis',
-                'priority': 'CRITICAL'
-            },
-            '4': {
-                'name': 'Pattern Recognition',
-                'strategy': 'cross_document_patterns',
-                'priority': 'HIGH'
-            },
-            '5': {
-                'name': 'Entity Relationship Mapping',
-                'strategy': 'network_analysis',
-                'priority': 'MEDIUM'
-            },
-            '6': {
-                'name': 'Financial Forensics',
-                'strategy': 'financial_analysis',
-                'priority': 'HIGH'
-            },
-            '7': {
-                'name': 'Strategic Synthesis',
-                'strategy': 'narrative_construction',
-                'priority': 'CRITICAL'
-            }
-        }
-        
-        # Convergence detection
-        self.convergence_config = {
-            'min_iterations': 3,
-            'confidence_threshold': 0.85,
-            'discovery_rate_threshold': 0.1,
-            'max_iterations': 10
-        }
-        
-        # Recursion configuration
-        self.recursion_config = {
-            'self_questioning_depth': 5,
-            'min_questioning_depth': 3,
-            'investigation_iterations': 10,
-            'convergence_threshold': 0.95,
-            'force_deep_dive_on': ['CRITICAL', 'NUCLEAR', 'CONTRADICTION']
-        }
-        
-        # Temperature settings
-        self.temperature_config = {
-            'exploration': 0.9,
-            'analysis': 0.7,
-            'synthesis': 0.5,
-            'final_report': 0.3,
-            'knowledge_synthesis': 0.4,
-            'investigation': 0.7,
-            'creative_investigation': 0.9,
-            'hypothesis_generation': 0.8,
-            'pattern_recognition': 0.6,
-            'contradiction_analysis': 0.4
-        }
+        # Hallucination prevention
+        self.hallucination_prevention = """
+CRITICAL INSTRUCTIONS:
+- Base all findings ONLY on documents provided
+- Never fabricate document references
+- Mark inferences clearly with [INFERENCE]
+- Cite all factual claims with [DOC_ID: Location]
+- If uncertain, state "Insufficient evidence to determine"
+"""
     
     def _setup_investigation(self) -> None:
         """Investigation spawning configuration"""
-        # Investigation triggers
-        self.investigation_triggers = {
-            'critical_discovery': {'threshold': 8.0, 'auto_spawn': True},
-            'contradiction': {'threshold': 7.5, 'auto_spawn': True},
-            'pattern': {'threshold': 0.8, 'auto_spawn': True},
-            'timeline_impossibility': {'threshold': 9.0, 'auto_spawn': True},
-            'financial_anomaly': {'threshold': 7.0, 'auto_spawn': True},
-            'missing_document': {'threshold': 6.5, 'auto_spawn': True},
-            'contradiction_severity': 7,
-            'pattern_confidence': 0.8,
-            'missing_document_pattern': True,
-            'entity_suspicion': 0.7,
-            'keyword_triggers': [
-                'CRITICAL', 'NUCLEAR', 'INVESTIGATE',
-                'SUSPICIOUS', 'ANOMALY', 'IMPOSSIBLE'
+        self.investigation_config = {
+            'max_depth': 3,
+            'priority_threshold': 7.0,
+            'auto_spawn_enabled': True,
+            'convergence_threshold': 0.95,
+            'max_concurrent': 5,
+            'discovery_types': [
+                'NUCLEAR',      # Case-ending discovery
+                'CRITICAL',     # Major strategic advantage
+                'PATTERN',      # Significant pattern
+                'CONTRADICTION', # Contradiction detected
+                'TIMELINE',     # Timeline impossibility
+                'MISSING'       # Evidence of withholding
             ]
-        }
-        
-        # Investigation priority scoring
-        self.priority_weights = {
-            'financial_impact': 3.0,
-            'timeline_critical': 2.5,
-            'contradiction': 2.0,
-            'pattern_strength': 1.5,
-            'entity_centrality': 1.5,
-            'document_absence': 2.0
-        }
-        
-        # Investigation depth settings
-        self.investigation_depth = {
-            'initial_sweep': 1,
-            'standard_investigation': 3,
-            'deep_investigation': 5,
-            'exhaustive_investigation': 10,
-            'parallel_threads': 5,
-            'deep': 5
         }
     
     def _setup_tiered_analysis(self) -> None:
-        """Tiered analysis configuration for Phase 1"""
-        
-        self.tiered_analysis = {
-            'tier_1_deep': {
-                'name': 'Deep Forensic Analysis',
-                'description': 'Full senior litigator analysis of priority documents',
+        """Three-tier analysis configuration for Phase 1"""
+        self.tier_config = {
+            'tier_1': {
+                'name': 'Deep Analysis',
+                'doc_limit': 500,
                 'batch_size': 25,
-                'analysis_depth': 'comprehensive',
-                'prompts': 'investigation',
-                'spawn_investigations': True,
-                'model': 'primary'
+                'analysis_depth': 'deep',
+                'model': 'primary',
+                'priority_folders': [
+                    'Document Production',
+                    'Witness Statements',
+                    'Expert Reports',
+                    'Correspondence',
+                    'Contracts'
+                ]
             },
-            'tier_2_metadata': {
+            'tier_2': {
                 'name': 'Metadata Scan',
-                'description': 'Lightweight scanning to flag suspicious documents',
+                'doc_limit': None,  # All remaining
                 'batch_size': 100,
-                'analysis_depth': 'metadata',
-                'prompts': 'metadata_extraction',
-                'spawn_investigations': False,
-                'model': 'secondary'
+                'analysis_depth': 'shallow',
+                'model': 'secondary',
+                'flag_threshold': 7.0
             },
-            'tier_3_targeted': {
+            'tier_3': {
                 'name': 'Targeted Deep Dive',
-                'description': 'Deep analysis of documents flagged in Tier 2',
                 'batch_size': 15,
-                'analysis_depth': 'investigation',
-                'prompts': 'focused_investigation',
-                'spawn_investigations': True,
+                'analysis_depth': 'deep',
                 'model': 'primary'
             }
         }
-        
-        # Priority folders for Tier 1 deep analysis
-        self.tier_1_priority_folders = [
-            '55. Document Production',
-            '57. First Respondent\'s Responses',
-            '61. Witness Statements',
-            '12. Brendan Cahill\'s witness statements',
-            '33. Correspondence',
-            '45. Objections to Production',
-            '46. PH Objections',
-            '48. Objections',
-            '36. Chronological Email Run',
-            '40. Witness Statements Index'
-        ]
     
     def _setup_api_config(self) -> None:
-        """API and rate limiting configuration"""
-        
+        """API configuration"""
         self.api_config = {
             'api_key': os.getenv('ANTHROPIC_API_KEY'),
-            'rate_limit_delay': 2,
-            'max_retries': 5,
-            'retry_delay': 5,
-            'timeout': 300
+            'rate_limit_delay': 3,
+            'max_retries': 3,
+            'timeout': 300,
+            'default_model': self.models['primary']
         }
         
-        # Verify API key loaded
+        # Validate API key
         if not self.api_config['api_key']:
-            raise ValueError(
-                "ANTHROPIC_API_KEY not found in environment variables!\n"
-                "Ensure .env file exists in root directory with:\n"
-                "ANTHROPIC_API_KEY=sk-ant-api03-..."
-            )
+            print("WARNING: ANTHROPIC_API_KEY not found in environment")
     
-    # ========================================================================
-    # NEW: HELPER METHODS
-    # ========================================================================
-    
-    def get_model_for_task(self, task_type: str, complexity: float) -> str:
+    def _setup_memory_tiers(self) -> None:
         """
-        Select model based on task and complexity
-        
-        Args:
-            task_type: Type of task (investigation, metadata_extraction, etc.)
-            complexity: Complexity score (0.0-1.0)
-        
-        Returns:
-            Model string
+        NEW: Memory tier configuration
+        Enables hierarchical memory system
         """
+        # Enable/disable memory tiers
+        self.enable_vector_store = True   # Tier 2: Semantic search across all docs
+        self.enable_cold_storage = True   # Tier 4: Encrypted vault for security
+        self.enable_analysis_cache = True # Tier 5: Cache Claude responses
         
-        # For complex tasks or high complexity, use primary (Sonnet 4.5)
-        if complexity > 0.7 or task_type in ['investigation', 'synthesis', 'contradiction_analysis']:
-            return self.models['primary']
+        # Vector store configuration (Tier 2)
+        self.vector_config = {
+            'embedding_model': 'sentence-transformers/all-MiniLM-L6-v2',
+            'chunk_size': 1000,
+            'chunk_overlap': 200,
+            'collection_name': 'lismore_disclosure',
+            'distance_metric': 'cosine'
+        }
         
-        # For metadata scanning, use secondary (Haiku 4)
-        elif task_type == 'metadata_extraction':
-            return self.models['secondary']
+        # Cold storage configuration (Tier 4)
+        self.cold_storage_config = {
+            'encryption_enabled': True,
+            'auto_encrypt_pdfs': True,
+            'audit_trail': True
+        }
         
-        # Default to primary for quality
-        else:
-            return self.models['primary']
-    
-    # ========================================================================
-    # PROPERTIES
-    # ========================================================================
-    
-    @property
-    def temperature_settings(self) -> Dict:
-        """Temperature settings accessor for backwards compatibility"""
-        return self.temperature_config
-    
-    @property
-    def base_entities(self) -> Dict[str, List[str]]:
-        """Base entity types for Lismore case"""
-        return {
-            'people': [
-                'director', 'adviser', 'witness', 'expert',
-                'shareholder', 'employee', 'legal_representative'
-            ],
-            'companies': [
-                'defendant', 'plaintiff', 'subsidiary', 'parent',
-                'related_party', 'third_party', 'joint_venture'
-            ],
-            'financial': [
-                'payment', 'valuation', 'loss', 'profit', 'investment',
-                'debt', 'asset', 'liability', 'transaction'
-            ],
-            'dates': [
-                'contract_date', 'breach_date', 'payment_date',
-                'meeting_date', 'filing_date', 'deadline', 'event'
-            ],
-            'documents': [
-                'contract', 'email', 'report', 'minutes', 'invoice',
-                'statement', 'filing', 'correspondence', 'evidence'
-            ],
-            'legal_concepts': [
-                'breach', 'duty', 'obligation', 'representation',
-                'warranty', 'indemnity', 'limitation', 'causation',
-                'loss', 'quantum', 'liability'
-            ]
+        # Analysis cache configuration (Tier 5)
+        self.cache_config = {
+            'default_ttl_days': 30,
+            'max_cache_size_mb': 1000,
+            'auto_cleanup': True
         }
     
-    @property
-    def hallucination_prevention(self) -> str:
-        """Core instructions to prevent hallucination"""
-        return """
-<critical_accuracy_requirements>
-- NEVER invent facts not in documents
-- NEVER assume document content
-- NEVER create fictional quotes
-- ALWAYS cite specific document references
-- ALWAYS distinguish between: (1) Facts from documents, (2) Logical inferences, (3) Strategic hypotheses
-- Mark confidence levels: CERTAIN (in document), PROBABLE (strong inference), POSSIBLE (hypothesis)
-- When uncertain: State "Not found in reviewed documents" rather than speculating
-</critical_accuracy_requirements>
-
-<lismore_advocacy_stance>
-WE ARE ARGUING FOR LISMORE. All analysis must:
-- Interpret ambiguous evidence favourably to Lismore
-- Identify Process Holdings' vulnerabilities aggressively
-- Frame legal principles to support Lismore's position
-- Find weaknesses in PH's arguments
-- Strengthen Lismore's case wherever possible
-- Think like Lismore's senior litigation counsel
-</lismore_advocacy_stance>
-"""
+    def get_model_for_task(self, task_type: str) -> str:
+        """Get appropriate model for task"""
+        model_key = self.task_models.get(task_type, 'primary')
+        return self.models[model_key]
     
-    @property
-    def system_prompt(self) -> str:
-        """Core system prompt for all Claude interactions"""
-        return """You are a senior litigation analyst working for Lismore against Process Holdings.
-
-<critical_accuracy_requirements>
-- NEVER invent facts not in documents
-- NEVER assume document content
-- NEVER create fictional quotes
-- ALWAYS cite specific document references
-- ALWAYS distinguish between: (1) Facts from documents, (2) Logical inferences, (3) Strategic hypotheses
-- Mark confidence levels: CERTAIN (in document), PROBABLE (strong inference), POSSIBLE (hypothesis)
-- When uncertain: State "Not found in reviewed documents" rather than speculating
-</critical_accuracy_requirements>
-
-<lismore_advocacy_stance>
-WE ARE ARGUING FOR LISMORE. Frame all findings to support Lismore's position.
-Identify weaknesses in Process Holdings' case.
-Look for contradictions, omissions, and suspicious patterns favouring Lismore.
-</lismore_advocacy_stance>"""
-
-
-# Global config instance
-config = Config()
+    def validate_configuration(self) -> List[str]:
+        """Validate configuration and return list of issues"""
+        issues = []
+        
+        # Check API key
+        if not self.api_config['api_key']:
+            issues.append("ANTHROPIC_API_KEY not configured")
+        
+        # Check required directories
+        if not self.legal_knowledge_dir.exists():
+            issues.append(f"Legal knowledge directory missing: {self.legal_knowledge_dir}")
+        
+        if not self.case_context_dir.exists():
+            issues.append(f"Case context directory missing: {self.case_context_dir}")
+        
+        if not self.disclosure_dir.exists():
+            issues.append(f"Disclosure directory missing: {self.disclosure_dir}")
+        
+        return issues
