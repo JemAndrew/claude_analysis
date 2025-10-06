@@ -637,25 +637,120 @@ class KnowledgeGraph:
     def integrate_analysis(self, iteration_result: Dict):
         """
         Integrate Pass 2 iteration results into knowledge graph
-        
-        Args:
-            iteration_result: Dict from Pass 2 with findings, breaches, evidence
+        Option 1: Handles structured breach/contradiction/timeline data
         """
-        # Add findings as discoveries
-        for finding in iteration_result.get('findings', []):
+        
+        # Store breaches (from structured extraction)
+        breaches = iteration_result.get('breaches', [])
+        for breach in breaches:
+            if isinstance(breach, dict) and breach.get('description'):
+                # Store as pattern with full structured data
+                self.add_pattern({
+                    'pattern_type': 'breach',
+                    'description': f"{breach.get('clause', 'unknown')}: {breach['description'][:500]}",
+                    'confidence': breach.get('confidence', 0.7),
+                    'supporting_evidence': breach.get('evidence', [])
+                })
+                
+                # Also log breach details
+                breach_detail = f"""Breach: {breach['description'][:200]}
+    Clause: {breach.get('clause', 'unknown')}
+    Evidence: {', '.join(breach.get('evidence', [])[:5])}
+    Causation: {breach.get('causation', 'unknown')[:100]}
+    Quantum: {breach.get('quantum', 'unknown')[:100]}"""
+                
+                self.add_discovery(
+                    discovery_type='breach',
+                    content=breach_detail,
+                    importance='HIGH',
+                    phase='pass_2'
+                )
+        
+        # Store contradictions
+        contradictions = iteration_result.get('contradictions', [])
+        for cont in contradictions:
+            if isinstance(cont, dict) and cont.get('statement_a'):
+                self.add_contradiction({
+                    'statement_a': cont['statement_a'][:1000],
+                    'statement_b': cont.get('statement_b', '')[:1000],
+                    'doc_a': cont.get('doc_a', 'unknown'),
+                    'doc_b': cont.get('doc_b', 'unknown'),
+                    'severity': cont.get('severity', 7),
+                    'confidence': cont.get('confidence', 0.7),
+                    'implications': cont.get('implications', '')[:1000]
+                })
+        
+        # Store timeline events
+        timeline_events = iteration_result.get('timeline_events', [])
+        if timeline_events:
+            import sqlite3
+            import hashlib
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+            
+            for event in timeline_events:
+                if isinstance(event, dict) and event.get('date'):
+                    event_id = hashlib.md5(
+                        f"{event['date']}_{event.get('description', '')[:50]}".encode()
+                    ).hexdigest()[:16]
+                    
+                    cursor.execute("""
+                        INSERT OR IGNORE INTO timeline_events (
+                            event_id, date, description, entities_involved,
+                            documents, confidence, is_critical, discovered
+                        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                    """, (
+                        event_id,
+                        event['date'],
+                        event.get('description', '')[:1000],
+                        event.get('participants', ''),
+                        json.dumps(event.get('documents', [])),
+                        event.get('confidence', 0.7),
+                        event.get('is_critical', False),
+                        datetime.now().isoformat()
+                    ))
+            
+            conn.commit()
+            conn.close()
+        
+        # Store general findings as patterns
+        findings = iteration_result.get('findings', [])
+        for finding in findings:
+            if isinstance(finding, str) and len(finding) > 20:
+                self.add_pattern({
+                    'pattern_type': 'finding',
+                    'description': finding[:500],
+                    'confidence': 0.6,
+                    'supporting_evidence': []
+                })
+        
+        # Store critical findings
+        critical_findings = iteration_result.get('critical_findings', [])
+        for critical in critical_findings:
+            if isinstance(critical, dict):
+                content = critical.get('content', str(critical))
+                severity = critical.get('severity', 'CRITICAL')
+                
+                self.add_pattern({
+                    'pattern_type': 'critical_finding',
+                    'description': content[:500],
+                    'confidence': 0.9,
+                    'supporting_evidence': []
+                })
+                
+                self.add_discovery(
+                    discovery_type='critical_finding',
+                    content=content[:1000],
+                    importance='CRITICAL' if severity == 'CRITICAL' else 'NUCLEAR',
+                    phase='pass_2'
+                )
+        
+        # Audit trail
+        for finding in findings:
             self.add_discovery(
                 discovery_type='analysis_finding',
-                content=str(finding),
+                content=str(finding)[:1000],
                 importance='MEDIUM',
-                phase='pass_2'
-            )
-        
-        # Add critical findings
-        for critical in iteration_result.get('critical_findings', []):
-            self.add_discovery(
-                discovery_type='critical_finding',
-                content=str(critical),
-                importance='CRITICAL',
                 phase='pass_2'
             )
     

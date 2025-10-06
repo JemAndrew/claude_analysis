@@ -50,6 +50,7 @@ class InvestigationQueue:
         self.queue = PriorityQueue()
         self.active = {}
         self.completed = []
+        self.completed_by_id = {}
     
     def add(self, investigation: Investigation):
         """
@@ -78,6 +79,7 @@ class InvestigationQueue:
         inv_id = investigation.get_id()
         if inv_id in self.active:
             self.completed.append(self.active[inv_id])
+            self.completed_by_id[inv_id] = self.active[inv_id]
             del self.active[inv_id]
     
     def is_empty(self) -> bool:

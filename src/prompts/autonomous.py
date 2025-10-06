@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
 Autonomous Investigation Prompts for 4-Pass Litigation Analysis
-Optimised for Lismore v Process Holdings litigation intelligence
-British English throughout
+Option 1: Structured output for precise claim construction
+British English throughout - Lismore v Process Holdings
 """
 
 from typing import Dict, List, Optional, Any
@@ -11,7 +11,7 @@ from datetime import datetime
 
 
 class AutonomousPrompts:
-    """Prompts that give Claude complete investigative freedom"""
+    """Prompts that give Claude complete investigative freedom with structured output"""
     
     def __init__(self, config):
         self.config = config
@@ -71,6 +71,12 @@ Scoring guide:
 4-5: Relevant (background information, peripheral documents)
 1-3: Low priority (administrative, duplicates, tangential)
 
+Examples:
+- "SPA_2021_Final.pdf" mentioning Lismore/PH → Score 9-10
+- "Board_Minutes_Disclosure_Decision.pdf" → Score 10
+- "Email_routine_admin.pdf" → Score 2
+- "Valuation_Report_2021.pdf" → Score 8
+
 Be decisive. Err on side of higher priority if uncertain.
 </scoring>
 
@@ -80,7 +86,7 @@ Score all {len(documents)} documents now.
         return prompt
     
     # ========================================================================
-    # PASS 2: DEEP ANALYSIS PROMPT
+    # PASS 2: DEEP ANALYSIS PROMPT (STRUCTURED OUTPUT - OPTION 1)
     # ========================================================================
     
     def deep_analysis_prompt(self, 
@@ -89,9 +95,8 @@ Score all {len(documents)} documents now.
                             accumulated_knowledge: Dict,
                             confidence: float) -> str:
         """
-        Pass 2: Deep comprehensive analysis prompt
-        Uses Sonnet with extended thinking
-        Includes confidence tracking and self-assessment
+        Pass 2: Deep comprehensive analysis prompt with structured output
+        Enhanced for Option 1: precise litigation claim construction
         """
         
         prompt = f"""<deep_analysis_mission>
@@ -99,7 +104,7 @@ ITERATION: {iteration + 1}
 CURRENT CONFIDENCE: {confidence:.2%}
 DOCUMENTS TO ANALYSE: {len(documents)}
 
-You are conducting deep litigation analysis for a commercial dispute.
+You are conducting deep litigation analysis for Lismore v Process Holdings.
 
 This is iteration {iteration + 1}. Your accumulated knowledge is below.
 Analyse these {len(documents)} documents comprehensively and integrate with your existing understanding.
@@ -116,9 +121,8 @@ YOU HAVE COMPLETE AUTONOMY. Use extended thinking to:
 {json.dumps(accumulated_knowledge, indent=2)[:20000]}
 
 Timeline events: {len(accumulated_knowledge.get('timeline', []))}
-Breaches identified: {len(accumulated_knowledge.get('breaches', []))}
-Evidence pieces: {len(accumulated_knowledge.get('evidence', []))}
-Patterns detected: {len(accumulated_knowledge.get('patterns', []))}
+Known breaches: {len(accumulated_knowledge.get('strong_patterns', []))}
+Critical contradictions: {len(accumulated_knowledge.get('critical_contradictions', []))}
 </accumulated_knowledge>
 
 <analysis_framework>
@@ -160,45 +164,84 @@ LAYER 5: ADVERSARIAL THINKING
 {self._format_documents(documents)}
 </documents_to_analyse>
 
-<output_requirements>
-Provide:
+<structured_output_requirements>
+CRITICAL: Use this EXACT format for all findings to enable precise claim construction.
 
-1. FINDINGS THIS ITERATION
-   - New timeline events discovered
-   - New breaches identified
-   - New evidence found
-   - Patterns detected
-   - Mark critical findings: [CRITICAL] or [NUCLEAR]
+1. BREACHES FOUND (use this format for each breach):
 
-2. CLAIM STATUS
-   For each claim:
-   - Elements proven vs needed
-   - Evidence strength (1-10)
-   - Gaps in proof
+BREACH_START
+Description: [Detailed description of the breach]
+Clause/Obligation: [Specific clause number or obligation breached]
+Evidence: ["DOC_ID_1", "DOC_ID_2"]
+Confidence: [0.0-1.0]
+Causation: [What loss resulted]
+Quantum: [Financial impact if known]
+BREACH_END
 
-3. INVESTIGATION TRIGGERS
-   If you found anything requiring deeper investigation:
-   - Topic to investigate
-   - Why critical
-   - Priority (1-10)
+2. CONTRADICTIONS FOUND (use this format for each contradiction):
 
-4. SELF-ASSESSMENT (CRITICAL)
-   - Confidence in completeness: 0.0-1.0
-   - What am I still missing?
-   - What's unclear?
-   - Should analysis continue? YES/NO + reasoning
-   
-   Be HONEST. If only 60% confident, say so.
-   Don't claim high confidence unless warranted.
+CONTRADICTION_START
+Statement_A: [First statement]
+Statement_B: [Conflicting statement]
+Doc_A: [Document ID for first statement]
+Doc_B: [Document ID for second statement]
+Severity: [1-10]
+Confidence: [0.0-1.0]
+Implications: [Why this matters for the case]
+CONTRADICTION_END
 
-5. STRATEGIC INSIGHTS
-   - Strongest argument emerging
-   - Their biggest vulnerability
-   - Evidence still needed
-</output_requirements>
+3. TIMELINE EVENTS (use this format for each event):
+
+TIMELINE_EVENT_START
+Date: [YYYY-MM-DD or DD/MM/YYYY]
+Description: [What happened]
+Participants: [Who was involved]
+Documents: ["DOC_ID_1", "DOC_ID_2"]
+Confidence: [0.0-1.0]
+Critical: [YES/NO]
+TIMELINE_EVENT_END
+
+4. GENERAL FINDINGS (natural language):
+- [Finding 1]
+- [Finding 2]
+- [Finding 3]
+
+5. CRITICAL FINDINGS REQUIRING INVESTIGATION:
+Mark any finding that needs deeper investigation with [CRITICAL] or [NUCLEAR]:
+
+[CRITICAL] Topic requiring investigation
+[NUCLEAR] Smoking gun requiring immediate deep dive
+
+6. SELF-ASSESSMENT (CRITICAL - DO NOT SKIP):
+
+CONFIDENCE: [0.00 - 1.00]
+
+Interpretation guide:
+- 0.0-0.3: Just starting, need much more information
+- 0.4-0.6: Getting clearer but significant gaps remain  
+- 0.7-0.9: Strong understanding, minor gaps only
+- 0.95-1.0: Complete understanding, confident I can advise
+
+CONTINUE: [YES or NO]
+
+Reasoning: [Why this confidence level? What am I still missing?]
+
+IMPORTANT: You MUST provide a decimal confidence score.
+Example: "CONFIDENCE: 0.73" or "CONFIDENCE: 0.42"
+</structured_output_requirements>
+
+<quality_requirements>
+- Every breach must cite specific document IDs
+- Every date must be in recognisable format
+- Confidence scores must be decimal (0.0-1.0), not percentages
+- Be honest about confidence - don't inflate scores
+- If unsure about evidence, mark confidence lower
+- Critical findings should be genuinely critical (smoking guns, major contradictions)
+</quality_requirements>
 
 Begin iteration {iteration + 1} analysis now.
 Use extended thinking for complex reasoning.
+Follow the structured output format EXACTLY.
 """
         
         return prompt
@@ -292,157 +335,6 @@ Begin investigation now.
         return prompt
     
     # ========================================================================
-    # PHASE 0: KNOWLEDGE SYNTHESIS (KEEP FROM OLD SYSTEM)
-    # ========================================================================
-    
-    def knowledge_synthesis_prompt(self,
-                                  legal_knowledge: List[Dict],
-                                  case_context: List[Dict],
-                                  existing_knowledge: Dict) -> str:
-        """
-        Prompt for synthesising legal knowledge with case context
-        Builds comprehensive understanding in single phase
-        KEPT FROM OLD SYSTEM - still useful for Phase 0 foundation
-        """
-        
-        prompt = f"""<mission>
-You're building a complete mental model for litigation.
-Absorb EVERYTHING. Make connections. See the battlefield.
-</mission>
-
-<approach>
-As you read, you're simultaneously:
-1. Learning the legal weapons available (statutes, precedents, principles)
-2. Understanding the case landscape (players, timeline, relationships)
-3. Identifying vulnerabilities in Process Holdings' position
-4. Spotting opportunities for Lismore's attack
-5. Predicting their defence strategy
-6. Building counter-strategies
-</approach>
-
-<existing_intelligence>
-{json.dumps(existing_knowledge, indent=2)[:2000] if existing_knowledge else "First pass - no prior knowledge"}
-</existing_intelligence>
-
-<legal_knowledge_documents>
-{self._format_documents(legal_knowledge[:30], doc_type="LEGAL")}
-</legal_knowledge_documents>
-
-<case_context_documents>
-{self._format_documents(case_context[:30], doc_type="CASE")}
-</case_context_documents>
-
-<synthesis_requirements>
-Build a comprehensive understanding that includes:
-
-LEGAL ARSENAL:
-- What laws/precedents can we weaponise?
-- What duties did they breach?
-- What damages can we claim?
-- What defences must we anticipate?
-
-CASE DYNAMICS:
-- Who are the key players and their motivations?
-- What's the real story of what happened?
-- Where are they vulnerable?
-- What are they hiding?
-
-CONNECTIONS:
-- How does the legal framework apply to these specific facts?
-- What patterns emerge between law and conduct?
-- Where does their behaviour violate legal principles?
-- What evidence would be devastating given the law?
-
-STRATEGIC SYNTHESIS:
-- What's our strongest line of attack?
-- What's their biggest weakness?
-- What evidence should we hunt for?
-- What questions destroy their case?
-</synthesis_requirements>
-
-<instruction>
-Absorb everything. Make connections. Think strategically.
-Show your reasoning. Mark critical insights with [STRATEGIC], [VULNERABILITY], [WEAPON].
-Build the mental model that wins this case.
-</instruction>"""
-        
-        return prompt
-    
-    # ========================================================================
-    # LEGACY PROMPTS (KEEP FOR BACKWARDS COMPATIBILITY)
-    # ========================================================================
-    
-    def investigation_prompt(self, 
-                           documents: List[Dict],
-                           context: Dict[str, Any],
-                           phase: str) -> str:
-        """
-        Legacy investigation prompt from old system
-        KEPT for backwards compatibility with Phase 0 if needed
-        """
-        
-        suspicious_entities = context.get('suspicious_entities', [])
-        contradictions = context.get('critical_contradictions', [])
-        patterns = context.get('strong_patterns', [])
-        impossibilities = context.get('timeline_impossibilities', [])
-        investigations = context.get('active_investigations', [])
-        
-        prompt = f"""<adversarial_litigation_mindset>
-YOU ARE A SENIOR LITIGATION PARTNER AT A MAGIC CIRCLE FIRM.
-
-Client: Lismore Capital (£50M+ at stake)
-Opposition: Process Holdings (document withholding suspected)
-Mandate: FIND EVERYTHING that destroys their case
-
-BALANCED COMMERCIAL FOCUS:
-60% - Commercial fundamentals (obligations, breach, causation, quantum)
-20% - Pattern recognition and evidence assessment
-20% - Strategic positioning and adversarial thinking
-
-DISCOVERY INTENSITY:
-[SMOKING GUN] = Can win case alone
-[NUCLEAR] = Game-changing evidence
-[CRITICAL] = Major strategic advantage
-[SUSPICIOUS] = Forensic investigation required
-[PATTERN] = Systemic behaviour
-[MISSING] = Document should exist but doesn't
-[CONTRADICTION] = Witness/document conflict
-[TIMELINE] = Impossible timing
-</adversarial_litigation_mindset>
-
-<current_intelligence>
-Phase: {phase}
-Documents in batch: {len(documents)}
-Total entities tracked: {context.get('statistics', {}).get('entities', 0)}
-Active investigations: {len(investigations)}
-Critical contradictions found: {len(contradictions)}
-High-confidence patterns: {len(patterns)}
-Timeline impossibilities: {len(impossibilities)}
-
-SUSPICIOUS ENTITIES:
-{self._format_suspicious_entities(suspicious_entities)}
-
-CRITICAL CONTRADICTIONS:
-{self._format_contradictions(contradictions[:5])}
-</current_intelligence>
-
-<documents>
-{self._format_documents(documents[:50])}  
-</documents>
-
-<instruction>
-Begin your investigation. Think out loud. Show your reasoning in real-time.
-Follow EVERY interesting thread to its conclusion. Be creative. Be thorough.
-Connect dots others wouldn't see. Find patterns in chaos.
-Question everything. Trust nothing at face value.
-
-What wins this case might be hidden in a single sentence.
-Find it.
-</instruction>"""
-        
-        return prompt
-    
-    # ========================================================================
     # FORMATTING HELPER METHODS
     # ========================================================================
     
@@ -465,30 +357,4 @@ Content:
 ---
 """)
         
-        return "\n".join(formatted)
-    
-    def _format_suspicious_entities(self, entities: List[Dict]) -> str:
-        """Format suspicious entities for prompt"""
-        if not entities:
-            return "No suspicious entities identified yet"
-        
-        formatted = []
-        for entity in entities[:10]:
-            formatted.append(
-                f"- {entity.get('name', 'Unknown')} ({entity.get('type', 'Unknown')}): "
-                f"Suspicion {entity.get('suspicion', 0.0):.1f}/1.0"
-            )
-        return "\n".join(formatted)
-    
-    def _format_contradictions(self, contradictions: List[Dict]) -> str:
-        """Format contradictions for prompt"""
-        if not contradictions:
-            return "No critical contradictions found yet"
-        
-        formatted = []
-        for cont in contradictions:
-            formatted.append(
-                f"- Severity {cont.get('severity', 0)}/10: "
-                f"{cont.get('statement_a', '')[:100]} VS {cont.get('statement_b', '')[:100]}"
-            )
         return "\n".join(formatted)
