@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
-Optimised Claude API Client with Prompt Caching & Extended Thinking
-Handles 200k token contexts with intelligent caching and retry logic
-FINAL VERSION with Extended Thinking enabled
+Enhanced Claude API Client with FIXED Prompt Caching
+- Caches static content only (pleadings, system prompt)
+- Increased extended thinking budget (100K tokens)
+- Proper cache separation
 British English throughout
 """
 
@@ -15,11 +16,15 @@ import hashlib
 
 
 class ClaudeClient:
-    """API client optimised for maximum Claude utilisation with caching"""
+    """API client with optimised caching and extended thinking"""
     
     def __init__(self, config):
         self.config = config
         self.client = Anthropic(api_key=config.api_config['api_key'])
+        
+        # Static content for caching (loaded once)
+        self.pleadings_text = None
+        self.legal_framework_text = None
         
         # Track usage for cost management
         self.usage_stats = {
@@ -28,11 +33,12 @@ class ClaudeClient:
             'total_output_tokens': 0,
             'cache_creation_tokens': 0,
             'cache_read_tokens': 0,
-            'thinking_tokens': 0,  # NEW: Track thinking tokens
+            'thinking_tokens': 0,
             'calls_by_model': {},
             'calls_by_phase': {},
             'cache_hits': 0,
             'cache_misses': 0,
+            'cache_savings_gbp': 0.0,
             'errors': [],
             'start_time': datetime.now().isoformat()
         }
@@ -42,23 +48,46 @@ class ClaudeClient:
         self.calls_in_window = []
         self.rate_limit_window = 60
     
+    def load_static_content(self, pleadings_text: str = None, legal_framework_text: str = None):
+        """
+        Load static content for caching
+        Call this once at system startup
+        """
+        if pleadings_text:
+            self.pleadings_text = pleadings_text
+            print(f"Loaded pleadings for caching: {len(pleadings_text):,} characters")
+        
+        if legal_framework_text:
+            self.legal_framework_text = legal_framework_text
+            print(f"Loaded legal framework for caching: {len(legal_framework_text):,} characters")
+    
     def call_claude_with_cache(self,
                                prompt: str,
-                               cacheable_context: str,
+                               dynamic_context: str = None,
                                task_type: str = None,
                                phase: str = None,
                                temperature: float = None,
                                prefill: str = None) -> Tuple[str, Dict]:
         """
-        Call Claude with prompt caching for repeated contexts
+        Call Claude with FIXED prompt caching
+        
+        CACHES (static content that never changes):
+        - System prompt
+        - Pleadings text
+        - Legal framework
+        
+        DOESN'T CACHE (dynamic content that changes):
+        - Accumulated knowledge
+        - Current documents
+        - Iteration-specific context
         
         Args:
             prompt: The unique prompt for this call
-            cacheable_context: Context that stays the same across calls (will be cached)
-            task_type: Type of task for temperature selection
-            phase: Analysis phase for tracking
-            temperature: Override temperature
-            prefill: Start of Claude's response (forces format/tone)
+            dynamic_context: Context that changes (accumulated knowledge, documents)
+            task_type: Type of task
+            phase: Analysis phase
+            temperature: Temperature override
+            prefill: Response prefill
         
         Returns:
             (response_text, metadata)
@@ -66,17 +95,8 @@ class ClaudeClient:
         
         # Check if caching is enabled
         if not self.config.caching_config['enabled']:
-            # Fall back to standard call
-            full_prompt = f"{cacheable_context}\n\n{prompt}"
+            full_prompt = f"{dynamic_context}\n\n{prompt}" if dynamic_context else prompt
             return self.call_claude(full_prompt, task_type=task_type, phase=phase, 
-                                   temperature=temperature, prefill=prefill)
-        
-        # Check minimum cache size
-        cache_tokens = self._estimate_tokens(cacheable_context)
-        if cache_tokens < self.config.caching_config['min_tokens_to_cache']:
-            # Too small to cache efficiently
-            full_prompt = f"{cacheable_context}\n\n{prompt}"
-            return self.call_claude(full_prompt, task_type=task_type, phase=phase,
                                    temperature=temperature, prefill=prefill)
         
         # Determine model and temperature
@@ -97,18 +117,50 @@ class ClaudeClient:
             try:
                 start_time = time.time()
                 
-                # Build messages with caching
+                # Build system array with STATIC content only
+                system = [
+                    {
+                        "type": "text",
+                        "text": self.config.system_prompt,
+                        "cache_control": {"type": "ephemeral"}
+                    }
+                ]
+                
+                # Add pleadings to cache if available (STATIC)
+                if self.pleadings_text:
+                    system.append({
+                        "type": "text",
+                        "text": f"<pleadings_context>\n{self.pleadings_text}\n</pleadings_context>",
+                        "cache_control": {"type": "ephemeral"}
+                    })
+                
+                # Add legal framework to cache if available (STATIC)
+                if self.legal_framework_text:
+                    system.append({
+                        "type": "text",
+                        "text": f"<legal_framework>\n{self.legal_framework_text}\n</legal_framework>",
+                        "cache_control": {"type": "ephemeral"}
+                    })
+                
+                # Build user message with DYNAMIC content (NOT cached)
+                user_content = ""
+                
+                if dynamic_context:
+                    user_content += f"{dynamic_context}\n\n"
+                
+                user_content += prompt
+                
+                # Build messages
                 messages = []
                 
-                # If prefill provided, add user message then assistant prefill
                 if prefill:
                     messages = [
-                        {"role": "user", "content": prompt},
+                        {"role": "user", "content": user_content},
                         {"role": "assistant", "content": prefill}
                     ]
                 else:
                     messages = [
-                        {"role": "user", "content": prompt}
+                        {"role": "user", "content": user_content}
                     ]
                 
                 # Build API parameters
@@ -116,28 +168,17 @@ class ClaudeClient:
                     'model': model,
                     'max_tokens': max_tokens,
                     'temperature': temperature,
-                    'system': [
-                        {
-                            "type": "text",
-                            "text": self.config.system_prompt,
-                            "cache_control": {"type": "ephemeral"}
-                        },
-                        {
-                            "type": "text",
-                            "text": cacheable_context,
-                            "cache_control": {"type": "ephemeral"}
-                        }
-                    ],
+                    'system': system,
                     'messages': messages
                 }
                 
-                # ADD EXTENDED THINKING if Sonnet 4 and complex task
+                # Add extended thinking if appropriate
                 if self._should_use_extended_thinking(model, task_type):
                     api_params['thinking'] = {
                         'type': 'enabled',
-                        'budget_tokens': 20000
+                        'budget_tokens': self.config.token_config['extended_thinking_budget']
                     }
-                    print(f"  🧠 Extended Thinking: ENABLED")
+                    print(f"  🧠 Extended Thinking: ENABLED ({self.config.token_config['extended_thinking_budget']:,} tokens)")
                 
                 # Make API call with caching
                 response = self.client.messages.create(**api_params)
@@ -145,32 +186,36 @@ class ClaudeClient:
                 # Calculate timing and tokens
                 elapsed_time = time.time() - start_time
                 
-                # Extract usage information
+                # Extract usage from response
                 usage = response.usage
                 input_tokens = usage.input_tokens
                 output_tokens = usage.output_tokens
                 cache_creation_tokens = getattr(usage, 'cache_creation_input_tokens', 0)
                 cache_read_tokens = getattr(usage, 'cache_read_input_tokens', 0)
                 
-                # NEW: Extract thinking tokens
+                # Extract thinking tokens
                 thinking_tokens = 0
                 thinking_content = None
                 if hasattr(response, 'content'):
                     for block in response.content:
                         if hasattr(block, 'type') and block.type == 'thinking':
-                            thinking_tokens = len(getattr(block, 'thinking', '').split()) * 1.3
-                            thinking_content = getattr(block, 'thinking', None)
+                            thinking_text = getattr(block, 'thinking', '')
+                            thinking_tokens = len(thinking_text.split()) * 1.3  # Rough estimate
+                            thinking_content = thinking_text
                             if thinking_tokens > 0:
-                                print(f"  💭 Thinking: {int(thinking_tokens)} tokens used")
+                                print(f"  💭 Thinking: {int(thinking_tokens):,} tokens used")
                 
                 # Track cache performance
                 if cache_read_tokens > 0:
                     self.usage_stats['cache_hits'] += 1
-                    print(f"  💰 Cache HIT: Saved {cache_read_tokens} tokens (90% cost reduction)")
+                    # Cache reads are 90% cheaper
+                    savings = (cache_read_tokens * 0.9 * 3.0) / 1_000_000  # £3 per 1M tokens
+                    self.usage_stats['cache_savings_gbp'] += savings
+                    print(f"  💰 Cache HIT: Saved {cache_read_tokens:,} tokens (£{savings:.2f})")
                 else:
                     self.usage_stats['cache_misses'] += 1
                     if cache_creation_tokens > 0:
-                        print(f"  📝 Cache CREATED: {cache_creation_tokens} tokens cached")
+                        print(f"  📝 Cache CREATED: {cache_creation_tokens:,} tokens cached")
                 
                 # Update statistics
                 self._update_stats(
@@ -181,74 +226,50 @@ class ClaudeClient:
                     cache_creation_tokens=cache_creation_tokens,
                     cache_read_tokens=cache_read_tokens,
                     thinking_tokens=thinking_tokens,
-                    elapsed_time=elapsed_time,
-                    success=True
+                    elapsed_time=elapsed_time
                 )
                 
                 # Extract response text
                 response_text = ""
                 for block in response.content:
-                    if hasattr(block, 'text'):
+                    if hasattr(block, 'type') and block.type == 'text':
                         response_text += block.text
                 
-                # If prefill was used, prepend it to response
-                if prefill:
-                    response_text = prefill + response_text
-                
-                # Create metadata
+                # Build metadata
                 metadata = {
                     'model': model,
-                    'temperature': temperature,
                     'input_tokens': input_tokens,
                     'output_tokens': output_tokens,
                     'cache_creation_tokens': cache_creation_tokens,
                     'cache_read_tokens': cache_read_tokens,
-                    'cache_hit': cache_read_tokens > 0,
-                    'thinking_tokens': thinking_tokens,
-                    'thinking_content': thinking_content,
-                    'extended_thinking_used': thinking_tokens > 0,
+                    'thinking_tokens': int(thinking_tokens),
                     'elapsed_time': elapsed_time,
-                    'attempt': attempt + 1,
-                    'timestamp': datetime.now().isoformat()
+                    'cost_gbp': self._calculate_cost(
+                        model, input_tokens, output_tokens,
+                        cache_creation_tokens, cache_read_tokens, thinking_tokens
+                    ),
+                    'cache_hit': cache_read_tokens > 0,
+                    'thinking_used': thinking_tokens > 0
                 }
                 
                 return response_text, metadata
                 
             except Exception as e:
                 error_str = str(e)
+                self.usage_stats['errors'].append({
+                    'attempt': attempt + 1,
+                    'error': error_str,
+                    'timestamp': datetime.now().isoformat()
+                })
                 
-                # Handle rate limiting
-                if "rate_limit" in error_str.lower() or "429" in error_str:
-                    if attempt < max_retries - 1:
-                        wait_time = base_delay * (2 ** attempt)
-                        print(f"  ⏳ Rate limit hit. Waiting {wait_time}s...")
-                        time.sleep(wait_time)
-                        continue
-                
-                # Handle overloaded errors
-                elif "overloaded" in error_str.lower() or "503" in error_str:
-                    if attempt < max_retries - 1:
-                        wait_time = base_delay * (2 ** attempt)
-                        print(f"  ⏳ API overloaded. Waiting {wait_time}s...")
-                        time.sleep(wait_time)
-                        continue
-                
-                # Handle other errors
+                if attempt < max_retries - 1:
+                    wait_time = base_delay * (2 ** attempt)
+                    print(f"    ⚠️  API error (attempt {attempt + 1}/{max_retries}): {error_str[:100]}")
+                    print(f"    Retrying in {wait_time}s...")
+                    time.sleep(wait_time)
+                    continue
                 else:
-                    self.usage_stats['errors'].append({
-                        'error': error_str[:500],
-                        'timestamp': datetime.now().isoformat(),
-                        'attempt': attempt + 1,
-                        'phase': phase
-                    })
-                    
-                    if attempt < max_retries - 1:
-                        wait_time = base_delay
-                        print(f"  ⚠️  Error: {error_str[:100]}. Retrying in {wait_time}s...")
-                        time.sleep(wait_time)
-                        continue
-                    else:
-                        raise Exception(f"API call failed after {max_retries} attempts: {error_str}")
+                    raise Exception(f"API call failed after {max_retries} attempts: {error_str}")
         
         raise Exception("Max retries exceeded")
     
@@ -262,37 +283,20 @@ class ClaudeClient:
                    prefill: str = None) -> Tuple[str, Dict]:
         """
         Standard API call without caching
-        
-        Args:
-            prompt: Full prompt text
-            model: Model to use (defaults to config selection)
-            temperature: Temperature setting
-            max_tokens: Maximum output tokens
-            phase: Analysis phase for tracking
-            task_type: Type of task
-            prefill: Start of Claude's response
-        
-        Returns:
-            (response_text, metadata)
         """
         
-        # Determine model based on task complexity
         if not model:
             complexity_score = self._calculate_complexity(prompt, task_type)
             model = self.config.get_model_for_task(task_type or 'general', complexity_score)
         
-        # Determine temperature based on task type
         if temperature is None:
             temperature = self._get_temperature(task_type)
         
-        # Set max tokens
         if max_tokens is None:
             max_tokens = self.config.token_config['max_output_tokens']
         
-        # Apply rate limiting
         self._apply_rate_limit()
         
-        # Retry logic
         max_retries = self.config.api_config['max_retries']
         base_delay = self.config.api_config['retry_delay']
         
@@ -300,8 +304,8 @@ class ClaudeClient:
             try:
                 start_time = time.time()
                 
-                # Build messages
                 messages = []
+                
                 if prefill:
                     messages = [
                         {"role": "user", "content": prompt},
@@ -312,7 +316,6 @@ class ClaudeClient:
                         {"role": "user", "content": prompt}
                     ]
                 
-                # Build API parameters
                 api_params = {
                     'model': model,
                     'max_tokens': max_tokens,
@@ -321,37 +324,30 @@ class ClaudeClient:
                     'messages': messages
                 }
                 
-                # ADD EXTENDED THINKING if Sonnet 4 and complex task
                 if self._should_use_extended_thinking(model, task_type):
                     api_params['thinking'] = {
                         'type': 'enabled',
-                        'budget_tokens': 20000
+                        'budget_tokens': self.config.token_config['extended_thinking_budget']
                     }
-                    print(f"  🧠 Extended Thinking: ENABLED")
+                    print(f"  🧠 Extended Thinking: ENABLED ({self.config.token_config['extended_thinking_budget']:,} tokens)")
                 
-                # Make the API call
                 response = self.client.messages.create(**api_params)
                 
-                # Calculate tokens and timing
                 elapsed_time = time.time() - start_time
                 
-                # Extract usage from response
                 usage = response.usage
                 input_tokens = usage.input_tokens
                 output_tokens = usage.output_tokens
                 
-                # NEW: Extract thinking tokens
                 thinking_tokens = 0
-                thinking_content = None
                 if hasattr(response, 'content'):
                     for block in response.content:
                         if hasattr(block, 'type') and block.type == 'thinking':
-                            thinking_tokens = len(getattr(block, 'thinking', '').split()) * 1.3
-                            thinking_content = getattr(block, 'thinking', None)
+                            thinking_text = getattr(block, 'thinking', '')
+                            thinking_tokens = len(thinking_text.split()) * 1.3
                             if thinking_tokens > 0:
-                                print(f"  💭 Thinking: {int(thinking_tokens)} tokens used")
+                                print(f"  💭 Thinking: {int(thinking_tokens):,} tokens")
                 
-                # Update statistics
                 self._update_stats(
                     model=model,
                     phase=phase,
@@ -360,156 +356,145 @@ class ClaudeClient:
                     cache_creation_tokens=0,
                     cache_read_tokens=0,
                     thinking_tokens=thinking_tokens,
-                    elapsed_time=elapsed_time,
-                    success=True
+                    elapsed_time=elapsed_time
                 )
                 
-                # Extract response text
                 response_text = ""
                 for block in response.content:
-                    if hasattr(block, 'text'):
+                    if hasattr(block, 'type') and block.type == 'text':
                         response_text += block.text
                 
-                # If prefill was used, prepend it
-                if prefill:
-                    response_text = prefill + response_text
-                
-                # Create metadata
                 metadata = {
                     'model': model,
-                    'temperature': temperature,
                     'input_tokens': input_tokens,
                     'output_tokens': output_tokens,
-                    'thinking_tokens': thinking_tokens,
-                    'thinking_content': thinking_content,
-                    'extended_thinking_used': thinking_tokens > 0,
+                    'thinking_tokens': int(thinking_tokens),
                     'elapsed_time': elapsed_time,
-                    'attempt': attempt + 1,
-                    'timestamp': datetime.now().isoformat()
+                    'cost_gbp': self._calculate_cost(
+                        model, input_tokens, output_tokens,
+                        0, 0, thinking_tokens
+                    )
                 }
                 
                 return response_text, metadata
                 
             except Exception as e:
-                error_str = str(e)
-                
-                # Handle rate limiting
-                if "rate_limit" in error_str.lower() or "429" in error_str:
-                    if attempt < max_retries - 1:
-                        wait_time = base_delay * (2 ** attempt)
-                        print(f"  ⏳ Rate limit hit. Waiting {wait_time}s...")
-                        time.sleep(wait_time)
-                        continue
-                
-                # Handle overloaded errors
-                elif "overloaded" in error_str.lower() or "503" in error_str:
-                    if attempt < max_retries - 1:
-                        wait_time = base_delay * (2 ** attempt)
-                        print(f"  ⏳ API overloaded. Waiting {wait_time}s...")
-                        time.sleep(wait_time)
-                        continue
-                
-                # Handle other errors
+                if attempt < max_retries - 1:
+                    wait_time = base_delay * (2 ** attempt)
+                    print(f"    ⚠️  Error: {str(e)[:100]}")
+                    print(f"    Retrying in {wait_time}s...")
+                    time.sleep(wait_time)
+                    continue
                 else:
-                    self.usage_stats['errors'].append({
-                        'error': error_str[:500],
-                        'timestamp': datetime.now().isoformat(),
-                        'attempt': attempt + 1,
-                        'phase': phase
-                    })
-                    
-                    if attempt < max_retries - 1:
-                        wait_time = base_delay
-                        print(f"  ⚠️  Error: {error_str[:100]}. Retrying in {wait_time}s...")
-                        time.sleep(wait_time)
-                        continue
-                    else:
-                        raise Exception(f"API call failed after {max_retries} attempts: {error_str}")
+                    raise
         
         raise Exception("Max retries exceeded")
     
-    def call_with_context(self,
-                         prompt: str,
-                         context: Dict[str, Any],
-                         task_type: str,
-                         phase: str = None) -> Tuple[str, Dict]:
-        """
-        Call Claude with rich context from knowledge graph
-        Uses caching if context is large enough
-        """
-        
-        # Build context string
-        context_str = json.dumps(context, indent=2)
-        
-        # If context is large, use caching
-        if self._estimate_tokens(context_str) >= self.config.caching_config['min_tokens_to_cache']:
-            return self.call_claude_with_cache(
-                prompt=prompt,
-                cacheable_context=context_str,
-                task_type=task_type,
-                phase=phase
-            )
-        else:
-            # Small context - standard call
-            full_prompt = f"<context>\n{context_str}\n</context>\n\n{prompt}"
-            return self.call_claude(
-                prompt=full_prompt,
-                task_type=task_type,
-                phase=phase
-            )
-    
-    def batch_call(self,
-                  prompts: List[str],
-                  task_type: str,
-                  phase: str = None,
-                  parallel: bool = False) -> List[Tuple[str, Dict]]:
-        """
-        Process multiple prompts efficiently
-        Returns list of (response, metadata) tuples
-        """
-        
-        results = []
-        
-        for i, prompt in enumerate(prompts):
-            print(f"  Processing prompt {i+1}/{len(prompts)}")
-            
-            try:
-                response, metadata = self.call_claude(
-                    prompt=prompt,
-                    task_type=task_type,
-                    phase=phase
-                )
-                results.append((response, metadata))
-                
-            except Exception as e:
-                print(f"  ❌ Failed on prompt {i+1}: {e}")
-                results.append(("", {"error": str(e)}))
-            
-            # Delay between calls to avoid rate limiting
-            if i < len(prompts) - 1:
-                time.sleep(self.config.api_config['rate_limit_delay'])
-        
-        return results
-    
     def _should_use_extended_thinking(self, model: str, task_type: str = None) -> bool:
-        """
-        LITIGATION OPTIMISATION: Extended thinking for ALL analysis tasks
-        """
+        """Determine if extended thinking should be used"""
         if 'sonnet-4' not in model.lower():
             return False
         
-        # Disable ONLY for basic tasks
+        # Disable for basic tasks
         if task_type in ['metadata_scan', 'document_loading', 'prioritisation']:
             return False
         
-        return True  # Everything else gets extended thinking
+        return True
+    
+    def _get_temperature(self, task_type: str = None) -> float:
+        """Get temperature for task type"""
+        temperature_map = {
+            'document_triage': 0.0,
+            'deep_analysis': 0.3,
+            'investigation': 0.5,
+            'synthesis': 0.3,
+            'creative': 0.7
+        }
+        return temperature_map.get(task_type, 0.3)
+    
+    def _calculate_cost(self, model: str, input_tokens: int, output_tokens: int,
+                       cache_creation: int, cache_read: int, thinking_tokens: int) -> float:
+        """Calculate cost in GBP"""
+        
+        # Pricing per 1M tokens (GBP)
+        if 'haiku' in model.lower():
+            input_price = 0.25
+            output_price = 1.25
+        elif 'sonnet' in model.lower():
+            input_price = 3.0
+            output_price = 15.0
+        elif 'opus' in model.lower():
+            input_price = 15.0
+            output_price = 75.0
+        else:
+            input_price = 3.0
+            output_price = 15.0
+        
+        # Cache pricing (90% discount on reads)
+        cache_write_price = input_price * 1.25  # 25% more to write
+        cache_read_price = input_price * 0.1    # 90% discount
+        
+        # Thinking tokens priced at input rate
+        thinking_price = input_price
+        
+        cost = (
+            (input_tokens * input_price / 1_000_000) +
+            (output_tokens * output_price / 1_000_000) +
+            (cache_creation * cache_write_price / 1_000_000) +
+            (cache_read * cache_read_price / 1_000_000) +
+            (thinking_tokens * thinking_price / 1_000_000)
+        )
+        
+        return cost
+    
+    def _update_stats(self, model: str, phase: str, input_tokens: int,
+                     output_tokens: int, cache_creation_tokens: int,
+                     cache_read_tokens: int, thinking_tokens: int,
+                     elapsed_time: float):
+        """Update usage statistics"""
+        
+        self.usage_stats['total_calls'] += 1
+        self.usage_stats['total_input_tokens'] += input_tokens
+        self.usage_stats['total_output_tokens'] += output_tokens
+        self.usage_stats['cache_creation_tokens'] += cache_creation_tokens
+        self.usage_stats['cache_read_tokens'] += cache_read_tokens
+        self.usage_stats['thinking_tokens'] += int(thinking_tokens)
+        
+        if model not in self.usage_stats['calls_by_model']:
+            self.usage_stats['calls_by_model'][model] = 0
+        self.usage_stats['calls_by_model'][model] += 1
+        
+        if phase:
+            if phase not in self.usage_stats['calls_by_phase']:
+                self.usage_stats['calls_by_phase'][phase] = 0
+            self.usage_stats['calls_by_phase'][phase] += 1
+    
+    def _apply_rate_limit(self):
+        """Apply rate limiting"""
+        now = time.time()
+        
+        # Remove calls outside window
+        self.calls_in_window = [
+            t for t in self.calls_in_window 
+            if now - t < self.rate_limit_window
+        ]
+        
+        # If at limit, wait
+        if len(self.calls_in_window) >= 50:  # 50 calls per minute
+            wait_time = self.rate_limit_window - (now - self.calls_in_window[0])
+            if wait_time > 0:
+                time.sleep(wait_time)
+        
+        self.calls_in_window.append(now)
+    
+    def _estimate_tokens(self, text: str) -> int:
+        """Rough token estimation"""
+        return len(text) // 4
     
     def _calculate_complexity(self, prompt: str, task_type: str = None) -> float:
-        """Calculate prompt complexity to determine model selection"""
-        
+        """Calculate prompt complexity"""
         complexity = 0.0
         
-        # Length complexity
         prompt_length = len(prompt)
         if prompt_length > 100000:
             complexity += 0.3
@@ -518,202 +503,31 @@ class ClaudeClient:
         elif prompt_length > 20000:
             complexity += 0.1
         
-        # Task type complexity
         complex_tasks = [
             'deep_investigation', 'contradiction_analysis',
-            'pattern_recognition', 'strategic_synthesis',
-            'timeline_reconstruction', 'entity_mapping'
+            'pattern_recognition', 'strategic_synthesis'
         ]
         if task_type in complex_tasks:
             complexity += 0.3
         
-        # Content complexity markers
-        complexity_markers = [
-            'NUCLEAR', 'CRITICAL', 'INVESTIGATE',
-            'recursive', 'hypothesis', 'strategic'
-        ]
-        marker_count = sum(1 for marker in complexity_markers if marker in prompt.upper())
-        complexity += min(0.2, marker_count * 0.05)
-        
-        # Question depth
-        question_count = prompt.count('?')
-        if question_count > 20:
-            complexity += 0.2
-        elif question_count > 10:
-            complexity += 0.1
-        
         return min(1.0, complexity)
     
-    def _get_temperature(self, task_type: str = None) -> float:
-        """Get temperature based on task type"""
-        
-        if not task_type:
-            return 0.5
-        
-        temp_config = self.config.temperature_settings
-        
-        task_temp_map = {
-            'investigation': temp_config.get('creative_investigation', 0.9),
-            'hypothesis': temp_config.get('hypothesis_generation', 0.8),
-            'pattern': temp_config.get('pattern_recognition', 0.6),
-            'contradiction': temp_config.get('contradiction_analysis', 0.4),
-            'synthesis': temp_config.get('synthesis', 0.3),
-            'report': temp_config.get('final_report', 0.2)
-        }
-        
-        # Find matching task type
-        for key, temp in task_temp_map.items():
-            if key in task_type.lower():
-                return temp
-        
-        return 0.5
-    
-    def _apply_rate_limit(self) -> None:
-        """Apply rate limiting to avoid API throttling"""
-        
-        current_time = time.time()
-        
-        # Remove old calls outside window
-        self.calls_in_window = [
-            t for t in self.calls_in_window 
-            if current_time - t < self.rate_limit_window
-        ]
-        
-        # Check if we need to wait
-        if len(self.calls_in_window) >= 50:  # Conservative limit
-            oldest_call = min(self.calls_in_window)
-            wait_time = self.rate_limit_window - (current_time - oldest_call)
-            if wait_time > 0:
-                print(f"  ⏳ Rate limit approached. Waiting {wait_time:.1f}s...")
-                time.sleep(wait_time)
-        
-        # Record this call
-        self.calls_in_window.append(current_time)
-        self.last_call_time = current_time
-    
-    def _estimate_tokens(self, text: str) -> int:
-        """Estimate token count (approximately 1 token per 0.75 words)"""
-        word_count = len(text.split())
-        return int(word_count * 1.3)
-    
-    def _update_stats(self,
-                     model: str,
-                     phase: str,
-                     input_tokens: int,
-                     output_tokens: int,
-                     cache_creation_tokens: int,
-                     cache_read_tokens: int,
-                     thinking_tokens: int,
-                     elapsed_time: float,
-                     success: bool) -> None:
-        """Update usage statistics"""
-        
-        self.usage_stats['total_calls'] += 1
-        self.usage_stats['total_input_tokens'] += input_tokens
-        self.usage_stats['total_output_tokens'] += output_tokens
-        self.usage_stats['cache_creation_tokens'] += cache_creation_tokens
-        self.usage_stats['cache_read_tokens'] += cache_read_tokens
-        self.usage_stats['thinking_tokens'] += thinking_tokens
-        
-        # By model
-        if model not in self.usage_stats['calls_by_model']:
-            self.usage_stats['calls_by_model'][model] = {
-                'count': 0,
-                'input_tokens': 0,
-                'output_tokens': 0,
-                'thinking_tokens': 0
-            }
-        self.usage_stats['calls_by_model'][model]['count'] += 1
-        self.usage_stats['calls_by_model'][model]['input_tokens'] += input_tokens
-        self.usage_stats['calls_by_model'][model]['output_tokens'] += output_tokens
-        self.usage_stats['calls_by_model'][model]['thinking_tokens'] += thinking_tokens
-        
-        # By phase
-        if phase:
-            if phase not in self.usage_stats['calls_by_phase']:
-                self.usage_stats['calls_by_phase'][phase] = {
-                    'count': 0,
-                    'input_tokens': 0,
-                    'output_tokens': 0,
-                    'thinking_tokens': 0
-                }
-            self.usage_stats['calls_by_phase'][phase]['count'] += 1
-            self.usage_stats['calls_by_phase'][phase]['input_tokens'] += input_tokens
-            self.usage_stats['calls_by_phase'][phase]['output_tokens'] += output_tokens
-            self.usage_stats['calls_by_phase'][phase]['thinking_tokens'] += thinking_tokens
-    
-    def get_usage_report(self) -> Dict:
-        """Generate comprehensive usage report with cost estimates"""
-        
-        # Sonnet 4.5 pricing (per million tokens)
-        input_price = 3.0  # £3 per million input tokens
-        output_price = 15.0  # £15 per million output tokens
-        cache_write_price = 3.75  # £3.75 per million (25% more than input)
-        cache_read_price = 0.30  # £0.30 per million (90% discount)
-        thinking_price = 3.0  # £3 per million (same as input)
-        
-        # Calculate costs
-        input_cost = (self.usage_stats['total_input_tokens'] / 1_000_000) * input_price
-        output_cost = (self.usage_stats['total_output_tokens'] / 1_000_000) * output_price
-        cache_write_cost = (self.usage_stats['cache_creation_tokens'] / 1_000_000) * cache_write_price
-        cache_read_cost = (self.usage_stats['cache_read_tokens'] / 1_000_000) * cache_read_price
-        thinking_cost = (self.usage_stats['thinking_tokens'] / 1_000_000) * thinking_price
-        
-        total_cost = input_cost + output_cost + cache_write_cost + cache_read_cost + thinking_cost
-        
-        # Calculate savings from caching
-        cache_savings = 0
-        if self.usage_stats['cache_read_tokens'] > 0:
-            # What it would have cost without caching
-            would_have_cost = (self.usage_stats['cache_read_tokens'] / 1_000_000) * input_price
-            cache_savings = would_have_cost - cache_read_cost
-        
-        return {
-            'summary': {
-                'total_calls': self.usage_stats['total_calls'],
-                'total_input_tokens': self.usage_stats['total_input_tokens'],
-                'total_output_tokens': self.usage_stats['total_output_tokens'],
-                'cache_creation_tokens': self.usage_stats['cache_creation_tokens'],
-                'cache_read_tokens': self.usage_stats['cache_read_tokens'],
-                'thinking_tokens': self.usage_stats['thinking_tokens'],
-                'cache_hits': self.usage_stats['cache_hits'],
-                'cache_misses': self.usage_stats['cache_misses'],
-                'cache_hit_rate': (
-                    self.usage_stats['cache_hits'] / 
-                    max(1, self.usage_stats['cache_hits'] + self.usage_stats['cache_misses'])
-                ),
-                'estimated_cost_gbp': round(total_cost, 2),
-                'cache_savings_gbp': round(cache_savings, 2),
-                'thinking_cost_gbp': round(thinking_cost, 2),
-                'error_count': len(self.usage_stats['errors'])
-            },
-            'by_model': self.usage_stats['calls_by_model'],
-            'by_phase': self.usage_stats['calls_by_phase'],
-            'recent_errors': self.usage_stats['errors'][-5:] if self.usage_stats['errors'] else []
-        }
-    
-    def print_usage_summary(self) -> None:
-        """Print formatted usage summary"""
-        
-        report = self.get_usage_report()
-        summary = report['summary']
-        
-        print("\n" + "="*60)
+    def print_usage_summary(self):
+        """Print usage statistics"""
+        print("\n" + "=" * 70)
         print("API USAGE SUMMARY")
-        print("="*60)
-        print(f"Total API Calls: {summary['total_calls']}")
-        print(f"Total Input Tokens: {summary['total_input_tokens']:,}")
-        print(f"Total Output Tokens: {summary['total_output_tokens']:,}")
-        print(f"Total Thinking Tokens: {summary['thinking_tokens']:,}")
-        print(f"\nCache Performance:")
-        print(f"  Cache Hits: {summary['cache_hits']}")
-        print(f"  Cache Misses: {summary['cache_misses']}")
-        print(f"  Hit Rate: {summary['cache_hit_rate']:.1%}")
-        print(f"  Cache Read Tokens: {summary['cache_read_tokens']:,}")
-        print(f"  Cache Savings: £{summary['cache_savings_gbp']:.2f}")
-        print(f"\nExtended Thinking:")
-        print(f"  Thinking Tokens Used: {summary['thinking_tokens']:,}")
-        print(f"  Thinking Cost: £{summary['thinking_cost_gbp']:.2f}")
-        print(f"\nEstimated Total Cost: £{summary['estimated_cost_gbp']:.2f}")
-        print(f"Errors: {summary['error_count']}")
-        print("="*60 + "\n")
+        print("=" * 70)
+        
+        print(f"\nTotal calls: {self.usage_stats['total_calls']}")
+        print(f"Total input tokens: {self.usage_stats['total_input_tokens']:,}")
+        print(f"Total output tokens: {self.usage_stats['total_output_tokens']:,}")
+        print(f"Total thinking tokens: {self.usage_stats['thinking_tokens']:,}")
+        
+        print(f"\nCache performance:")
+        print(f"  Cache hits: {self.usage_stats['cache_hits']}")
+        print(f"  Cache misses: {self.usage_stats['cache_misses']}")
+        print(f"  Tokens cached: {self.usage_stats['cache_creation_tokens']:,}")
+        print(f"  Tokens read from cache: {self.usage_stats['cache_read_tokens']:,}")
+        print(f"  Cache savings: £{self.usage_stats['cache_savings_gbp']:.2f}")
+        
+        print("=" * 70)

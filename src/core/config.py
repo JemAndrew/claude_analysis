@@ -1,241 +1,194 @@
 #!/usr/bin/env python3
 """
-Configuration for Lismore Litigation Intelligence System
-Updated to use direct path access (no file copying needed)
-British English throughout
+Enhanced Configuration with Increased Context Utilisation
+British English throughout - Lismore v Process Holdings
 """
 
-import os
 from pathlib import Path
 from typing import Dict, List
-from dotenv import load_dotenv
-
-# Import folder mapping
-from .folder_mapping import FolderMapping
+from core.folder_mapping import FolderMapping
 
 
 class Config:
-    """System configuration"""
+    """System configuration with enhanced context limits"""
     
     def __init__(self):
-        """Initialise configuration"""
-        
-        # Load environment variables
-        load_dotenv()
+        # Project paths
+        self.project_root = Path(__file__).parent.parent
+        self.source_root = self.project_root / "data" / "LIS1.1"
+        self.output_dir = self.project_root / "data" / "output"
+        self.analysis_dir = self.output_dir / "analysis"
         
         # API Configuration
-        self.anthropic_api_key = os.getenv('ANTHROPIC_API_KEY')
-        if not self.anthropic_api_key:
-            raise ValueError("ANTHROPIC_API_KEY not found in environment variables")
+        self.api_config = {
+            'api_key': None,  # Set via environment variable
+            'max_retries': 3,
+            'retry_delay': 2,
+            'rate_limit_delay': 1,
+            'timeout': 300
+        }
         
         # Model Configuration
-        self.haiku_model = "claude-3-5-haiku-20241022"
-        self.sonnet_model = "claude-sonnet-4-20250514"
+        self.haiku_model = "claude-haiku-4-20250514"
+        self.sonnet_model = "claude-sonnet-4.5-20250929"
+        self.opus_model = "claude-opus-4-20250514"
         
-        # Cost Configuration (per million tokens)
-        self.haiku_cost_input = 1.00    # £1 per 1M input tokens
-        self.haiku_cost_output = 5.00   # £5 per 1M output tokens
-        self.sonnet_cost_input = 3.00   # £3 per 1M input tokens
-        self.sonnet_cost_output = 15.00 # £15 per 1M output tokens
+        # Token Configuration - ENHANCED
+        self.token_config = {
+            'max_context_tokens': 200000,      # Claude's full capacity
+            'max_output_tokens': 16000,        # Increased for detailed outputs
+            'context_buffer': 10000,           # Safety margin
+            'extended_thinking_budget': 100000, # INCREASED from 20K
+            
+            # Context utilisation per component - ENHANCED
+            'accumulated_knowledge_limit': 150000,  # Up from 20K
+            'document_content_per_doc': 15000,      # Up from 3K
+            'pleadings_full_limit': 80000,          # Full pleadings
+            'intelligence_context_limit': 100000     # Full intelligence
+        }
         
-        # Directory Configuration - DIRECT PATH ACCESS
-        self._setup_paths()
+        # Caching Configuration - ENHANCED
+        self.caching_config = {
+            'enabled': True,
+            'min_tokens_to_cache': 1024,
+            'cache_ttl_seconds': 300,
+            
+            # What to cache (static content only)
+            'cache_static_only': True,
+            'cache_pleadings': True,        # NEW
+            'cache_legal_framework': True,  # NEW
+            'cache_system_prompt': True
+        }
         
-        # Pass Configuration
-        self._setup_pass_config()
+        # Hallucination Prevention
+        self.hallucination_prevention = """You are analysing real litigation documents for Lismore v Process Holdings arbitration.
+
+CRITICAL INSTRUCTIONS:
+- Only state facts that documents prove
+- Cite specific document IDs for every claim
+- If uncertain, say "needs investigation"
+- Don't make assumptions beyond evidence
+- Don't import theories from external sources"""
         
-        # Memory Configuration
-        self._setup_memory_config()
+        # System Prompt - ENHANCED
+        self.system_prompt = """You are an expert litigation analyst and strategic counsel for Lismore in their arbitration against Process Holdings.
+
+Your role:
+- Analyse disclosure documents with extreme rigour
+- Build evidence-based legal arguments
+- Identify opponent weaknesses
+- Generate novel strategic arguments
+- Produce tribunal-ready work product
+
+You have access to extended thinking - use it extensively for:
+- Complex legal reasoning
+- Multi-document pattern analysis
+- Strategic argument construction
+- Evidence chain analysis
+
+CRITICAL: Every factual claim must cite specific document IDs."""
         
-        # Folder Mapping Reference
+        # Folder mapping
         self.folder_mapping = FolderMapping
-    
-    def _setup_paths(self):
-        """Set up directory paths - points directly at LIS1.1"""
-        
-        # Root directory (claude_analysis-master)
-        self.root_dir = Path(__file__).parent.parent.parent
-        
-        # SOURCE: LIS1.1 folder (where files actually are)
-        self.source_root = Path(r"C:\Users\JemAndrew\Velitor\Communication site - Documents\LIS1.1")
-        
-        if not self.source_root.exists():
-            raise FileNotFoundError(f"Source folder not found: {self.source_root}")
-        
-        # Output directories (for system-generated files)
-        self.output_dir = self.root_dir / "output"
-        self.output_dir.mkdir(parents=True, exist_ok=True)
-        
-        # System data directories (NOT source documents)
-        self.data_dir = self.root_dir / "data"
-        self.data_dir.mkdir(parents=True, exist_ok=True)
-        
-        # Vector store and knowledge graph
-        self.vector_store_dir = self.data_dir / "vector_store"
-        self.vector_store_dir.mkdir(parents=True, exist_ok=True)
-        
-        self.knowledge_graph_db = self.data_dir / "knowledge_graph.db"
-        
-        # Cache directory
-        self.cache_dir = self.data_dir / "cache"
-        self.cache_dir.mkdir(parents=True, exist_ok=True)
-        
-        # Logs
-        self.logs_dir = self.root_dir / "logs"
-        self.logs_dir.mkdir(parents=True, exist_ok=True)
-    
-    def _setup_pass_config(self):
-        """Configure pass-specific settings"""
         
         # Pass 1: Triage Configuration
         self.pass_1_config = {
             'model': self.haiku_model,
-            'top_n_documents': 500,  # Select top 500 for deep analysis
-            'preview_chars': 300,    # Characters to preview per document
-            'batch_size': 100,       # Documents to process per batch
-            'include_folders': FolderMapping.get_pass_1_folders(),  # Only folders marked for Pass 1
+            'batch_size': 100,
+            'use_batch_api': False,  # Set to True for 50% cost reduction
+            'target_priority_docs': 500,
+            'folders': self.folder_mapping.get_pass_1_folders(),
             'priority_boost': {
-                10: 2.0,  # Disclosure gets +2.0 boost
-                9: 1.5,   # Witness evidence gets +1.5
-                8: 1.0,   # High priority gets +1.0
-                7: 0.5,   # Medium-high gets +0.5
-                6: 0.0,   # Medium gets no boost
-                5: -0.3,  # Low gets penalty
-                4: -0.5,  # Very low gets penalty
-                3: -0.8,  # Skip tier gets penalty
-                2: -1.0   # Really skip tier gets penalty
+                10: 2.0,
+                9: 1.5,
+                8: 1.0,
+                7: 0.5,
+                6: 0.0,
+                5: -0.3,
+                4: -0.5,
+                3: -0.8,
+                2: -1.0
             }
         }
         
-        # Pass 2: Deep Analysis Configuration
+        # Pass 2: Deep Analysis Configuration - ENHANCED
         self.pass_2_config = {
             'model': self.sonnet_model,
             'use_extended_thinking': True,
+            'extended_thinking_budget': 100000,  # INCREASED from 20K
             'max_iterations': 25,
-            'batch_size': 30,  # Documents per iteration
+            'batch_size': 30,
             'confidence_threshold': 0.95,
-            'adaptive_loading': True,  # Load more docs if confidence low
-            'adaptive_trigger_iteration': 15,  # Check confidence at iteration 15
-            'adaptive_confidence_threshold': 0.90,  # If below this, load more
-            'adaptive_additional_docs': 100,  # Load 100 more (docs 501-600)
+            'adaptive_loading': True,
+            'adaptive_trigger_iteration': 15,
+            'adaptive_confidence_threshold': 0.90,
+            'adaptive_additional_docs': 100,
+            
+            # Enhanced context usage
+            'use_full_documents': True,          # NEW
+            'documents_per_iteration': 30,       # NEW
+            'include_full_pleadings': True       # NEW
         }
         
         # Pass 3: Autonomous Investigations Configuration
         self.pass_3_config = {
             'model': self.sonnet_model,
             'use_extended_thinking': True,
+            'extended_thinking_budget': 100000,  # INCREASED
             'max_investigations': 10,
             'max_recursion_depth': 5,
-            'min_investigation_priority': 7,  # Only investigate high-priority topics
+            'min_investigation_priority': 7
         }
         
-        # Pass 4: Deliverables Configuration
+        # Pass 4: Deliverables Configuration - ENHANCED
         self.pass_4_config = {
             'model': self.sonnet_model,
-            'use_extended_thinking': False,  # Faster for document generation
+            'use_extended_thinking': False,  # Templates don't need thinking
+            'separate_deliverables': True,    # NEW - generate each separately
             'deliverables': [
                 'scott_schedule',
-                'opening_submissions',
                 'witness_outlines',
-                'cross_examination_outlines',
-                'disclosure_requests',
                 'skeleton_argument',
+                'disclosure_requests',
+                'opening_submissions',
                 'expert_instructions'
             ]
         }
-    
-    def _setup_memory_config(self):
-        """Configure memory system"""
         
-        self.memory_config = {
-            # Vector Store Configuration
-            'vector_store': {
-                'collection_name': 'lismore_documents',
-                'embedding_function': 'sentence-transformers',
-                'chunk_size': 1000,
-                'chunk_overlap': 200,
-            },
-            
-            # Knowledge Graph Configuration
-            'knowledge_graph': {
-                'entity_types': [
-                    'person', 'company', 'document', 'contract',
-                    'transaction', 'meeting', 'email', 'financial_record'
-                ],
-                'relationship_types': [
-                    'sent_email_to', 'attended_meeting', 'signed_contract',
-                    'contradicts', 'supports', 'references', 'part_of'
-                ]
-            },
-            
-            # Cache Configuration
-            'cache': {
-                'ttl_seconds': 86400,  # 24 hours
-                'max_size_mb': 1000,   # 1GB cache limit
-            }
+        # Quality Validation - NEW
+        self.validation_config = {
+            'enabled': True,
+            'check_evidence_citations': True,
+            'check_confidence_scores': True,
+            'check_opponent_arguments': True,
+            'check_document_ids': True,
+            'min_evidence_per_breach': 1,
+            'max_confidence_early_iteration': 0.80
         }
     
     def get_folder_path(self, folder_name: str) -> Path:
-        """
-        Get full path to a source folder using fuzzy matching
-        
-        Args:
-            folder_name: Name of LIS folder (e.g., "55. Document Production")
-            
-        Returns:
-            Full path to folder
-        """
-        # Try exact match first
+        """Get full path for a folder"""
         folder_path = self.source_root / folder_name
-        if folder_path.exists():
-            return folder_path
-        
-        # Fuzzy match: try to find folder that starts with the same number/prefix
-        # Extract number prefix (e.g., "29-" or "50.")
-        import re
-        match = re.match(r'^(\d+[-\.])\s*', folder_name)
-        if match:
-            prefix = match.group(1)
-            # Find any folder starting with this prefix
-            for folder in self.source_root.iterdir():
-                if folder.is_dir() and folder.name.startswith(prefix):
-                    return folder
-        
-        raise FileNotFoundError(f"Folder not found: {folder_path}")
-    
-    def get_all_folders(self) -> List[Path]:
-        """Get all LIS1.1 folders"""
-        return [f for f in self.source_root.iterdir() if f.is_dir()]
+        if not folder_path.exists():
+            raise FileNotFoundError(f"Folder not found: {folder_path}")
+        return folder_path
     
     def get_pass_1_folders(self) -> List[Path]:
-        """Get folders to include in Pass 1 triage"""
-        folder_names = self.pass_1_config['include_folders']
+        """Get all folders for Pass 1 triage"""
+        folder_names = self.folder_mapping.get_pass_1_folders()
         folders = []
         
         for name in folder_names:
             try:
                 folders.append(self.get_folder_path(name))
             except FileNotFoundError:
-                print(f"Warning: Pass 1 folder not found: {name}")
-        
-        return folders
-    
-    def get_disclosure_folders(self) -> List[Path]:
-        """Get all disclosure folders (Priority 10)"""
-        folder_names = FolderMapping.get_disclosure_folders()
-        folders = []
-        
-        for name in folder_names:
-            try:
-                folders.append(self.get_folder_path(name))
-            except FileNotFoundError:
-                print(f"Warning: Disclosure folder not found: {name}")
+                print(f"Warning: Folder not found: {name}")
         
         return folders
     
     def get_pleadings_folders(self) -> List[Path]:
-        """Get all pleading folders"""
-        folder_names = FolderMapping.get_pleadings_folders()
+        """Get pleadings folders"""
+        folder_names = self.folder_mapping.get_pleadings_folders()
         folders = []
         
         for name in folder_names:
@@ -249,64 +202,67 @@ class Config:
     def get_folder_priority(self, folder_path: Path) -> int:
         """Get priority tier for a folder (1-10)"""
         folder_name = folder_path.name
-        return FolderMapping.get_priority(folder_name)
+        return self.folder_mapping.get_priority(folder_name)
     
     def get_folder_category(self, folder_path: Path) -> str:
         """Get category for a folder"""
         folder_name = folder_path.name
-        return FolderMapping.get_category(folder_name)
+        return self.folder_mapping.get_category(folder_name)
     
     def should_include_in_pass_1(self, folder_path: Path) -> bool:
         """Check if folder should be in Pass 1"""
         folder_name = folder_path.name
-        return FolderMapping.should_include_in_pass_1(folder_name)
+        return self.folder_mapping.should_include_in_pass_1(folder_name)
     
     def get_priority_boost(self, priority_tier: int) -> float:
         """Get priority boost for a tier"""
         return self.pass_1_config['priority_boost'].get(priority_tier, 0.0)
     
+    def get_model_for_task(self, task_type: str, complexity: float) -> str:
+        """Select appropriate model based on task and complexity"""
+        
+        if task_type in ['document_triage', 'metadata_scan']:
+            return self.haiku_model
+        
+        if complexity > 0.7 or task_type in ['deep_analysis', 'investigation', 'synthesis']:
+            return self.sonnet_model
+        
+        if complexity > 0.3:
+            return self.sonnet_model
+        
+        return self.haiku_model
+    
     def print_config(self):
         """Print configuration summary"""
         print("=" * 70)
-        print("LISMORE LITIGATION INTELLIGENCE SYSTEM - CONFIGURATION")
+        print("ENHANCED LITIGATION INTELLIGENCE SYSTEM - CONFIGURATION")
         print("=" * 70)
         
         print(f"\nSource folder: {self.source_root}")
         print(f"Output folder: {self.output_dir}")
-        print(f"Data folder: {self.data_dir}")
-        
         print(f"\nModels:")
-        print(f"  Haiku (Pass 1): {self.haiku_model}")
-        print(f"  Sonnet (Pass 2-4): {self.sonnet_model}")
+        print(f"  Haiku: {self.haiku_model}")
+        print(f"  Sonnet: {self.sonnet_model}")
         
-        print(f"\nPass 1 Configuration:")
-        print(f"  Folders to triage: {len(self.pass_1_config['include_folders'])}")
-        print(f"  Top documents to select: {self.pass_1_config['top_n_documents']}")
+        print(f"\nEnhanced Features:")
+        print(f"  Context limit: {self.token_config['max_context_tokens']:,} tokens")
+        print(f"  Extended thinking: {self.token_config['extended_thinking_budget']:,} tokens")
+        print(f"  Document content per doc: {self.token_config['document_content_per_doc']:,} chars")
+        print(f"  Accumulated knowledge limit: {self.token_config['accumulated_knowledge_limit']:,} tokens")
         
-        print(f"\nPass 2 Configuration:")
-        print(f"  Max iterations: {self.pass_2_config['max_iterations']}")
-        print(f"  Batch size: {self.pass_2_config['batch_size']}")
-        print(f"  Confidence threshold: {self.pass_2_config['confidence_threshold']}")
-        print(f"  Adaptive loading: {self.pass_2_config['adaptive_loading']}")
+        print(f"\nPass Configuration:")
+        print(f"  Pass 1 folders: {len(self.get_pass_1_folders())}")
+        print(f"  Pass 2 max iterations: {self.pass_2_config['max_iterations']}")
+        print(f"  Pass 3 max investigations: {self.pass_3_config['max_investigations']}")
+        print(f"  Pass 4 separate deliverables: {self.pass_4_config['separate_deliverables']}")
         
-        print(f"\nFolder Mapping:")
-        print(f"  Total folders mapped: {len(FolderMapping.FOLDER_MAP)}")
-        
-        # Count available folders
-        available = len([f for f in self.get_all_folders()])
-        print(f"  Folders found in source: {available}")
+        print(f"\nQuality Controls:")
+        print(f"  Validation enabled: {self.validation_config['enabled']}")
+        print(f"  Check evidence citations: {self.validation_config['check_evidence_citations']}")
         
         print("=" * 70)
 
 
 if __name__ == "__main__":
-    # Test configuration
     config = Config()
     config.print_config()
-    
-    print("\nPass 1 folders:")
-    for folder in config.get_pass_1_folders():
-        priority = config.get_folder_priority(folder)
-        category = config.get_folder_category(folder)
-        boost = config.get_priority_boost(priority)
-        print(f"  [{priority}] {folder.name} ({category}, boost: {boost:+.1f})")
