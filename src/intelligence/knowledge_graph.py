@@ -1,453 +1,269 @@
 #!/usr/bin/env python3
 """
-SQLite-based Knowledge Graph for Litigation Intelligence
-Extended with litigation-specific tables for Lismore v Process Holdings
-British English throughout
-UPDATED: Pass executor support methods added
+ENHANCED Knowledge Graph - Replace src/intelligence/knowledge_graph.py
+Adds: Better document retrieval support, memory integration, investigation storage
+British English throughout - Lismore v Process Holdings
 """
 
 import sqlite3
 import json
 import shutil
-from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Any, Optional, Tuple
-from dataclasses import dataclass, asdict
+from typing import Dict, List, Optional, Any
+from datetime import datetime
 import hashlib
 
 
-@dataclass
-class Entity:
-    """Entity in the knowledge graph"""
-    entity_id: str
-    entity_type: str
-    subtype: str
-    name: str
-    first_seen: str
-    confidence: float
-    properties: Dict[str, Any]
-    discovery_phase: str
-
-
-@dataclass
-class Relationship:
-    """Relationship between entities"""
-    relationship_id: str
-    source_entity: str
-    target_entity: str
-    relationship_type: str
-    confidence: float
-    evidence: List[str]
-    discovered: str
-    properties: Dict[str, Any]
-
-
-@dataclass
-class Contradiction:
-    """Contradiction in evidence"""
-    contradiction_id: str
-    statement_a: str
-    statement_b: str
-    doc_a: str
-    doc_b: str
-    severity: int  # 1-10
-    confidence: float
-    implications: str
-    investigation_priority: float
-    discovered: str
-
-
-@dataclass
-class Pattern:
-    """Identified pattern across documents"""
-    pattern_id: str
-    pattern_type: str
-    description: str
-    confidence: float
-    supporting_evidence: List[str]
-    contradicting_evidence: List[str]
-    evolution_history: List[Dict[str, Any]]
-    investigation_spawned: bool
-    discovered: str
-
-
 class KnowledgeGraph:
-    """SQLite-based knowledge graph with litigation intelligence extensions"""
+    """Enhanced knowledge graph with document retrieval and memory integration"""
     
     def __init__(self, config):
-        """Initialise knowledge graph with SQLite backend"""
+        """Initialise knowledge graph"""
         self.config = config
-        self.db_path = config.graph_db_path
-        self.backup_dir = config.backups_dir
+        self.db_path = config.output_dir / "knowledge_graph.db"
+        self.backup_dir = config.output_dir / "graph_backups"
+        self.backup_dir.mkdir(parents=True, exist_ok=True)
         
         # Initialise database
         self._init_database()
-        
-        # Track active investigations
-        self.active_investigations = []
-        
-        # Version tracking
-        self.current_version = self._get_current_version()
     
     def _init_database(self):
-        """Initialise SQLite database with full schema"""
-        
-        # Ensure directory exists
-        self.db_path.parent.mkdir(parents=True, exist_ok=True)
-        self.backup_dir.mkdir(parents=True, exist_ok=True)
-        
+        """Initialise SQLite database with all required tables"""
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
         
-        # Entities table
+        # Discovery log (documents)
         cursor.execute("""
-            CREATE TABLE IF NOT EXISTS entities (
-                entity_id TEXT PRIMARY KEY,
-                entity_type TEXT NOT NULL,
-                subtype TEXT,
-                name TEXT NOT NULL,
-                first_seen TEXT NOT NULL,
-                last_seen TEXT,
-                confidence REAL DEFAULT 0.5,
-                suspicion_score REAL DEFAULT 0.0,
-                properties TEXT,
-                discovery_phase TEXT,
-                notes TEXT
+            CREATE TABLE IF NOT EXISTS discovery_log (
+                doc_id TEXT PRIMARY KEY,
+                filename TEXT,
+                folder TEXT,
+                content TEXT,
+                preview TEXT,
+                importance INTEGER DEFAULT 5,
+                triage_score INTEGER,
+                category TEXT,
+                indexed_date TEXT,
+                metadata_json TEXT
             )
         """)
         
-        # Relationships table
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS relationships (
-                relationship_id TEXT PRIMARY KEY,
-                source_entity TEXT NOT NULL,
-                target_entity TEXT NOT NULL,
-                relationship_type TEXT NOT NULL,
-                confidence REAL DEFAULT 0.5,
-                evidence TEXT,
-                discovered TEXT NOT NULL,
-                properties TEXT,
-                FOREIGN KEY (source_entity) REFERENCES entities(entity_id),
-                FOREIGN KEY (target_entity) REFERENCES entities(entity_id)
-            )
-        """)
-        
-        # Contradictions table
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS contradictions (
-                contradiction_id TEXT PRIMARY KEY,
-                statement_a TEXT NOT NULL,
-                statement_b TEXT NOT NULL,
-                doc_a TEXT NOT NULL,
-                doc_b TEXT NOT NULL,
-                severity INTEGER CHECK(severity >= 1 AND severity <= 10),
-                confidence REAL DEFAULT 0.5,
-                implications TEXT,
-                investigation_priority REAL,
-                investigation_status TEXT DEFAULT 'pending',
-                discovered TEXT NOT NULL,
-                resolved BOOLEAN DEFAULT 0,
-                resolution TEXT
-            )
-        """)
-        
-        # Patterns table
+        # Patterns (breaches, findings)
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS patterns (
                 pattern_id TEXT PRIMARY KEY,
-                pattern_type TEXT NOT NULL,
-                description TEXT NOT NULL,
-                confidence REAL DEFAULT 0.5,
-                supporting_evidence TEXT,
-                contradicting_evidence TEXT,
-                evolution_history TEXT,
-                investigation_spawned BOOLEAN DEFAULT 0,
-                discovered TEXT NOT NULL,
-                last_confirmed TEXT,
-                decay_rate REAL DEFAULT 0.0
+                description TEXT,
+                pattern_type TEXT,
+                confidence REAL,
+                supporting_docs TEXT,
+                first_seen TEXT,
+                last_updated TEXT,
+                metadata_json TEXT
             )
         """)
         
-        # Timeline events table (basic)
+        # Contradictions
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS contradictions (
+                contradiction_id TEXT PRIMARY KEY,
+                statement_a TEXT,
+                statement_b TEXT,
+                doc_id_a TEXT,
+                doc_id_b TEXT,
+                severity INTEGER,
+                explanation TEXT,
+                identified_date TEXT,
+                FOREIGN KEY (doc_id_a) REFERENCES discovery_log(doc_id),
+                FOREIGN KEY (doc_id_b) REFERENCES discovery_log(doc_id)
+            )
+        """)
+        
+        # Timeline events
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS timeline_events (
                 event_id TEXT PRIMARY KEY,
-                date TEXT NOT NULL,
-                description TEXT NOT NULL,
-                entities_involved TEXT,
-                documents TEXT,
-                confidence REAL DEFAULT 0.5,
-                is_critical BOOLEAN DEFAULT 0,
-                discovered TEXT NOT NULL,
-                impossibility_flag BOOLEAN DEFAULT 0
-            )
-        """)
-        
-        # Investigation threads table
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS investigations (
-                investigation_id TEXT PRIMARY KEY,
-                trigger_type TEXT NOT NULL,
-                trigger_data TEXT,
-                priority REAL NOT NULL,
-                status TEXT DEFAULT 'active',
-                spawned_from TEXT,
-                depth INTEGER DEFAULT 0,
-                created TEXT NOT NULL,
-                completed TEXT,
-                findings TEXT,
-                child_investigations TEXT
-            )
-        """)
-        
-        # Version history table
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS version_history (
-                version_id INTEGER PRIMARY KEY AUTOINCREMENT,
-                phase TEXT NOT NULL,
-                timestamp TEXT NOT NULL,
-                changes_summary TEXT,
-                backup_path TEXT,
-                entity_count INTEGER,
-                relationship_count INTEGER,
-                contradiction_count INTEGER,
-                pattern_count INTEGER
-            )
-        """)
-        
-        # Discovery log table
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS discovery_log (
-                discovery_id TEXT PRIMARY KEY,
-                discovery_type TEXT NOT NULL,
-                content TEXT NOT NULL,
-                importance TEXT CHECK(importance IN ('NUCLEAR', 'CRITICAL', 'HIGH', 'MEDIUM', 'LOW')),
-                phase TEXT NOT NULL,
-                timestamp TEXT NOT NULL,
-                actionable BOOLEAN DEFAULT 1,
-                actioned BOOLEAN DEFAULT 0
-            )
-        """)
-        
-        # Detailed timeline events (for impossibility detection)
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS timeline_events_detailed (
-                event_id TEXT PRIMARY KEY,
-                event_date TEXT NOT NULL,
-                event_time TEXT,
-                event_description TEXT NOT NULL,
-                location TEXT,
-                participants TEXT,
-                source_doc_ids TEXT,
-                confidence REAL DEFAULT 0.5,
-                event_type TEXT,
-                discovered_phase TEXT,
-                created_at TEXT NOT NULL
-            )
-        """)
-        
-        # Timeline impossibilities
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS timeline_impossibilities (
-                impossibility_id TEXT PRIMARY KEY,
-                event_a_id TEXT,
-                event_b_id TEXT,
-                impossibility_type TEXT,
-                description TEXT NOT NULL,
-                severity INTEGER CHECK(severity >= 1 AND severity <= 10),
-                evidence TEXT,
-                lismore_value TEXT,
-                discovered_at TEXT NOT NULL,
-                FOREIGN KEY (event_a_id) REFERENCES timeline_events_detailed(event_id),
-                FOREIGN KEY (event_b_id) REFERENCES timeline_events_detailed(event_id)
-            )
-        """)
-        
-        # Withheld documents (inferred from references)
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS withheld_documents (
-                inference_id TEXT PRIMARY KEY,
-                referenced_in_doc TEXT NOT NULL,
-                reference_text TEXT NOT NULL,
-                inferred_date TEXT,
-                inferred_subject TEXT,
-                inferred_participants TEXT,
-                missing_type TEXT,
-                suspicion_score REAL DEFAULT 5.0,
-                strategic_importance TEXT,
-                lismore_impact TEXT,
-                discovered_at TEXT NOT NULL
-            )
-        """)
-        
-        # Admissions against interest
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS admissions_against_interest (
-                admission_id TEXT PRIMARY KEY,
-                admission_text TEXT NOT NULL,
-                source_doc TEXT NOT NULL,
                 date TEXT,
-                speaker TEXT,
-                admission_type TEXT,
-                contradicts_ph_position TEXT,
-                strength_score REAL DEFAULT 5.0,
-                tribunal_weight TEXT,
-                lismore_use TEXT,
-                discovered_at TEXT NOT NULL
+                description TEXT,
+                event_type TEXT,
+                significance INTEGER,
+                supporting_docs TEXT,
+                metadata_json TEXT
             )
         """)
         
-        # Privilege claims analysis
+        # Entities (people, companies, amounts)
         cursor.execute("""
-            CREATE TABLE IF NOT EXISTS privilege_claims (
-                claim_id TEXT PRIMARY KEY,
-                document_description TEXT NOT NULL,
-                date_range TEXT,
-                privilege_type TEXT,
-                claimed_by TEXT,
-                suspicion_flags TEXT,
-                legitimate_score REAL DEFAULT 5.0,
-                discovered_at TEXT NOT NULL
+            CREATE TABLE IF NOT EXISTS entities (
+                entity_id TEXT PRIMARY KEY,
+                entity_name TEXT,
+                entity_type TEXT,
+                first_mentioned TEXT,
+                mention_count INTEGER DEFAULT 0,
+                related_docs TEXT,
+                metadata_json TEXT
             )
         """)
         
+        # Relationships
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS relationships (
+                relationship_id TEXT PRIMARY KEY,
+                entity_a TEXT,
+                entity_b TEXT,
+                relationship_type TEXT,
+                strength REAL,
+                supporting_docs TEXT,
+                FOREIGN KEY (entity_a) REFERENCES entities(entity_id),
+                FOREIGN KEY (entity_b) REFERENCES entities(entity_id)
+            )
+        """)
+        
+        # Investigation results (NEW)
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS investigation_results (
+                investigation_id TEXT PRIMARY KEY,
+                topic TEXT,
+                conclusion TEXT,
+                confidence REAL,
+                depth INTEGER,
+                parent_id TEXT,
+                completed_date TEXT,
+                metadata_json TEXT
+            )
+        """)
+        
+        # Create indices for fast retrieval
+        cursor.execute("CREATE INDEX IF NOT EXISTS idx_patterns_type ON patterns(pattern_type)")
+        cursor.execute("CREATE INDEX IF NOT EXISTS idx_patterns_confidence ON patterns(confidence)")
+        cursor.execute("CREATE INDEX IF NOT EXISTS idx_timeline_date ON timeline_events(date)")
+        cursor.execute("CREATE INDEX IF NOT EXISTS idx_contradictions_severity ON contradictions(severity)")
+        cursor.execute("CREATE INDEX IF NOT EXISTS idx_discovery_category ON discovery_log(category)")
+        cursor.execute("CREATE INDEX IF NOT EXISTS idx_discovery_importance ON discovery_log(importance)")
+        
         conn.commit()
         conn.close()
     
+    def _get_connection(self):
+        """Get database connection"""
+        return sqlite3.connect(self.db_path)
+    
     # ========================================================================
-    # ENTITY MANAGEMENT
+    # DOCUMENT MANAGEMENT
     # ========================================================================
     
-    def add_entity(self, entity: Dict) -> str:
-        """Add entity to knowledge graph"""
-        
-        entity_id = entity.get('entity_id') or hashlib.md5(
-            f"{entity['name']}_{entity['entity_type']}".encode()
-        ).hexdigest()[:16]
-        
-        conn = sqlite3.connect(self.db_path)
+    def add_document(self, doc: Dict):
+        """Add document to discovery log"""
+        conn = self._get_connection()
         cursor = conn.cursor()
         
         cursor.execute("""
-            INSERT OR REPLACE INTO entities (
-                entity_id, entity_type, subtype, name, first_seen,
-                confidence, suspicion_score, properties, discovery_phase
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+            INSERT OR REPLACE INTO discovery_log
+            (doc_id, filename, folder, content, preview, importance, 
+             triage_score, category, indexed_date, metadata_json)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """, (
-            entity_id,
-            entity['entity_type'],
-            entity.get('subtype', ''),
-            entity['name'],
+            doc.get('doc_id'),
+            doc.get('filename'),
+            doc.get('folder'),
+            doc.get('content'),
+            doc.get('preview'),
+            doc.get('importance', 5),
+            doc.get('triage_score', 0),
+            doc.get('category', 'other'),
             datetime.now().isoformat(),
-            entity.get('confidence', 0.5),
-            entity.get('suspicion_score', 0.0),
-            json.dumps(entity.get('properties', {})),
-            entity.get('discovery_phase', 'unknown')
+            json.dumps(doc.get('metadata', {}))
         ))
         
         conn.commit()
         conn.close()
-        
-        return entity_id
     
-    def add_relationship(self, relationship: Dict) -> str:
-        """Add relationship between entities"""
-        
-        relationship_id = hashlib.md5(
-            f"{relationship['source_entity']}_{relationship['target_entity']}_{relationship['relationship_type']}".encode()
-        ).hexdigest()[:16]
-        
-        conn = sqlite3.connect(self.db_path)
+    def get_all_documents(self) -> List[Dict]:
+        """Get all documents for indexing"""
+        conn = self._get_connection()
         cursor = conn.cursor()
         
         cursor.execute("""
-            INSERT OR REPLACE INTO relationships (
-                relationship_id, source_entity, target_entity, relationship_type,
-                confidence, evidence, discovered, properties
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-        """, (
-            relationship_id,
-            relationship['source_entity'],
-            relationship['target_entity'],
-            relationship['relationship_type'],
-            relationship.get('confidence', 0.5),
-            json.dumps(relationship.get('evidence', [])),
-            datetime.now().isoformat(),
-            json.dumps(relationship.get('properties', {}))
-        ))
+            SELECT doc_id, filename, content, preview, category, importance
+            FROM discovery_log
+        """)
         
-        conn.commit()
+        documents = []
+        for row in cursor.fetchall():
+            documents.append({
+                'doc_id': row[0],
+                'filename': row[1],
+                'content': row[2],
+                'preview': row[3],
+                'category': row[4],
+                'importance': row[5]
+            })
+        
         conn.close()
-        
-        return relationship_id
+        return documents
     
-    # ========================================================================
-    # CONTRADICTION MANAGEMENT
-    # ========================================================================
-    
-    def add_contradiction(self, contradiction: Dict) -> str:
-        """Add contradiction to knowledge graph"""
+    def get_documents_by_ids(self, doc_ids: List[str]) -> List[Dict]:
+        """Get specific documents by their IDs"""
+        if not doc_ids:
+            return []
         
-        contradiction_id = hashlib.md5(
-            f"{contradiction['doc_a']}_{contradiction['doc_b']}_{contradiction['statement_a'][:50]}".encode()
-        ).hexdigest()[:16]
-        
-        conn = sqlite3.connect(self.db_path)
+        conn = self._get_connection()
         cursor = conn.cursor()
         
-        cursor.execute("""
-            INSERT OR REPLACE INTO contradictions (
-                contradiction_id, statement_a, statement_b, doc_a, doc_b,
-                severity, confidence, implications, investigation_priority, discovered
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        """, (
-            contradiction_id,
-            contradiction['statement_a'],
-            contradiction['statement_b'],
-            contradiction['doc_a'],
-            contradiction['doc_b'],
-            contradiction.get('severity', 5),
-            contradiction.get('confidence', 0.5),
-            contradiction.get('implications', ''),
-            contradiction.get('investigation_priority', 5.0),
-            datetime.now().isoformat()
-        ))
+        placeholders = ','.join('?' * len(doc_ids))
+        cursor.execute(f"""
+            SELECT doc_id, filename, content, preview, category
+            FROM discovery_log
+            WHERE doc_id IN ({placeholders})
+        """, doc_ids)
         
-        conn.commit()
+        documents = []
+        for row in cursor.fetchall():
+            documents.append({
+                'doc_id': row[0],
+                'filename': row[1],
+                'content': row[2],
+                'preview': row[3],
+                'category': row[4]
+            })
+        
         conn.close()
-        
-        return contradiction_id
+        return documents
+    
+    def get_documents_for_investigation(self, topic: str) -> List[str]:
+        """
+        Get relevant document IDs for investigation topic
+        NOTE: This now works with BM25 search in pass_executor
+        Returns empty list - pass_executor will use BM25 instead
+        """
+        # This is intentionally simple - the BM25 algorithm in pass_executor
+        # does the heavy lifting for document retrieval
+        return []
     
     # ========================================================================
     # PATTERN MANAGEMENT
     # ========================================================================
     
-    def add_pattern(self, pattern: Dict) -> str:
-        """Add pattern to knowledge graph"""
-        
-        pattern_id = hashlib.md5(
-            f"{pattern['pattern_type']}_{pattern['description'][:50]}".encode()
-        ).hexdigest()[:16]
-        
-        conn = sqlite3.connect(self.db_path)
+    def add_pattern(self, pattern: Dict):
+        """Add pattern (breach, finding) to knowledge graph"""
+        conn = self._get_connection()
         cursor = conn.cursor()
         
+        pattern_id = pattern.get('pattern_id') or self._generate_id('pattern')
+        
         cursor.execute("""
-            INSERT OR REPLACE INTO patterns (
-                pattern_id, pattern_type, description, confidence,
-                supporting_evidence, contradicting_evidence, evolution_history,
-                investigation_spawned, discovered
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+            INSERT OR REPLACE INTO patterns
+            (pattern_id, description, pattern_type, confidence, 
+             supporting_docs, first_seen, last_updated, metadata_json)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
         """, (
             pattern_id,
-            pattern['pattern_type'],
-            pattern['description'],
-            pattern.get('confidence', 0.5),
-            json.dumps(pattern.get('supporting_evidence', [])),
-            json.dumps(pattern.get('contradicting_evidence', [])),
-            json.dumps(pattern.get('evolution_history', [])),
-            pattern.get('investigation_spawned', False),
-            datetime.now().isoformat()
+            pattern.get('description'),
+            pattern.get('pattern_type', 'breach'),
+            pattern.get('confidence', 0.0),
+            json.dumps(pattern.get('supporting_docs', [])),
+            pattern.get('first_seen', datetime.now().isoformat()),
+            datetime.now().isoformat(),
+            json.dumps(pattern.get('metadata', {}))
         ))
         
         conn.commit()
@@ -456,44 +272,384 @@ class KnowledgeGraph:
         return pattern_id
     
     # ========================================================================
-    # DISCOVERY LOGGING
+    # CONTRADICTION MANAGEMENT
     # ========================================================================
     
-    def add_discovery(self, discovery_type: str, content: str, 
-                     importance: str, phase: str) -> str:
-        """Add discovery to log"""
-        
-        discovery_id = hashlib.md5(
-            f"{discovery_type}_{content[:50]}_{datetime.now().isoformat()}".encode()
-        ).hexdigest()[:16]
-        
-        conn = sqlite3.connect(self.db_path)
+    def add_contradiction(self, contradiction: Dict):
+        """Add contradiction to knowledge graph"""
+        conn = self._get_connection()
         cursor = conn.cursor()
         
+        contra_id = contradiction.get('contradiction_id') or self._generate_id('contradiction')
+        
         cursor.execute("""
-            INSERT INTO discovery_log (
-                discovery_id, discovery_type, content, importance, phase, timestamp
-            ) VALUES (?, ?, ?, ?, ?, ?)
+            INSERT OR REPLACE INTO contradictions
+            (contradiction_id, statement_a, statement_b, doc_id_a, doc_id_b,
+             severity, explanation, identified_date)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
         """, (
-            discovery_id, discovery_type, content, importance,
-            phase, datetime.now().isoformat()
+            contra_id,
+            contradiction.get('statement_a'),
+            contradiction.get('statement_b'),
+            contradiction.get('doc_id_a'),
+            contradiction.get('doc_id_b'),
+            contradiction.get('severity', 5),
+            contradiction.get('explanation', ''),
+            datetime.now().isoformat()
         ))
         
         conn.commit()
         conn.close()
         
-        return discovery_id
+        return contra_id
     
     # ========================================================================
-    # STATISTICS & EXPORT
+    # TIMELINE MANAGEMENT
     # ========================================================================
     
-    def get_statistics(self) -> Dict[str, int]:
-        """Get current graph statistics"""
-        conn = sqlite3.connect(self.db_path)
+    def add_timeline_event(self, event: Dict):
+        """Add timeline event to knowledge graph"""
+        conn = self._get_connection()
+        cursor = conn.cursor()
+        
+        event_id = event.get('event_id') or self._generate_id('event')
+        
+        cursor.execute("""
+            INSERT OR REPLACE INTO timeline_events
+            (event_id, date, description, event_type, significance,
+             supporting_docs, metadata_json)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
+        """, (
+            event_id,
+            event.get('date'),
+            event.get('description'),
+            event.get('event_type', 'general'),
+            event.get('significance', 5),
+            json.dumps(event.get('supporting_docs', [])),
+            json.dumps(event.get('metadata', {}))
+        ))
+        
+        conn.commit()
+        conn.close()
+        
+        return event_id
+    
+    # ========================================================================
+    # INVESTIGATION RESULTS STORAGE (NEW)
+    # ========================================================================
+    
+    def store_investigation_result(self, result: Dict):
+        """Store investigation result"""
+        conn = self._get_connection()
+        cursor = conn.cursor()
+        
+        cursor.execute("""
+            INSERT OR REPLACE INTO investigation_results
+            (investigation_id, topic, conclusion, confidence, depth,
+             parent_id, completed_date, metadata_json)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        """, (
+            result.get('investigation_id'),
+            result.get('topic'),
+            result.get('conclusion'),
+            result.get('confidence', 0.0),
+            result.get('depth', 0),
+            result.get('parent_id'),
+            datetime.now().isoformat(),
+            json.dumps(result.get('metadata', {}))
+        ))
+        
+        conn.commit()
+        conn.close()
+    
+    # ========================================================================
+    # CONTEXT RETRIEVAL FOR ANALYSIS
+    # ========================================================================
+    
+    def get_context_for_analysis(self) -> Dict:
+        """
+        Get accumulated context for Pass 2 iterations
+        Returns most relevant patterns, contradictions, timeline events
+        """
+        conn = self._get_connection()
+        cursor = conn.cursor()
+        
+        context = {
+            'patterns': [],
+            'contradictions': [],
+            'timeline_events': [],
+            'statistics': {}
+        }
+        
+        # Get high-confidence patterns (breaches)
+        cursor.execute("""
+            SELECT pattern_id, description, confidence, supporting_docs
+            FROM patterns
+            WHERE confidence > 0.5
+            ORDER BY confidence DESC
+            LIMIT 50
+        """)
+        
+        for row in cursor.fetchall():
+            try:
+                supporting_docs = json.loads(row[3])
+            except:
+                supporting_docs = []
+            
+            context['patterns'].append({
+                'id': row[0],
+                'description': row[1],
+                'confidence': row[2],
+                'supporting_docs': supporting_docs
+            })
+        
+        # Get critical contradictions
+        cursor.execute("""
+            SELECT contradiction_id, statement_a, statement_b, severity
+            FROM contradictions
+            WHERE severity >= 7
+            ORDER BY severity DESC
+            LIMIT 20
+        """)
+        
+        for row in cursor.fetchall():
+            context['contradictions'].append({
+                'id': row[0],
+                'statement_a': row[1][:200],
+                'statement_b': row[2][:200],
+                'severity': row[3]
+            })
+        
+        # Get timeline events
+        cursor.execute("""
+            SELECT event_id, date, description, significance
+            FROM timeline_events
+            ORDER BY date DESC
+            LIMIT 30
+        """)
+        
+        for row in cursor.fetchall():
+            context['timeline_events'].append({
+                'id': row[0],
+                'date': row[1],
+                'description': row[2],
+                'significance': row[3]
+            })
+        
+        # Get statistics
+        cursor.execute("SELECT COUNT(*) FROM patterns")
+        context['statistics']['total_patterns'] = cursor.fetchone()[0]
+        
+        cursor.execute("SELECT COUNT(*) FROM contradictions")
+        context['statistics']['total_contradictions'] = cursor.fetchone()[0]
+        
+        cursor.execute("SELECT COUNT(*) FROM timeline_events")
+        context['statistics']['total_timeline_events'] = cursor.fetchone()[0]
+        
+        conn.close()
+        return context
+    
+    def get_context_for_phase(self, phase: str) -> Dict:
+        """Alias for get_context_for_analysis for backwards compatibility"""
+        return self.get_context_for_analysis()
+    
+    # ========================================================================
+    # INTEGRATION METHOD (CRITICAL FOR PASS 2)
+    # ========================================================================
+    
+    def integrate_analysis(self, iteration_result: Dict):
+        """
+        Integrate Pass 2 iteration results into knowledge graph
+        This is called after each iteration to accumulate findings
+        """
+        # Store breaches as patterns
+        for breach in iteration_result.get('breaches', []):
+            pattern = {
+                'description': breach.get('description'),
+                'pattern_type': 'breach',
+                'confidence': breach.get('confidence', 0.0),
+                'supporting_docs': breach.get('evidence', []),
+                'metadata': {
+                    'clause': breach.get('clause'),
+                    'causation': breach.get('causation'),
+                    'quantum': breach.get('quantum')
+                }
+            }
+            self.add_pattern(pattern)
+        
+        # Store contradictions
+        for contra in iteration_result.get('contradictions', []):
+            docs = contra.get('documents', [])
+            contradiction = {
+                'statement_a': contra.get('statement_a'),
+                'statement_b': contra.get('statement_b'),
+                'doc_id_a': docs[0] if len(docs) > 0 else None,
+                'doc_id_b': docs[1] if len(docs) > 1 else None,
+                'severity': contra.get('severity', 5),
+                'explanation': contra.get('explanation', '')
+            }
+            self.add_contradiction(contradiction)
+        
+        # Store timeline events
+        for event in iteration_result.get('timeline_events', []):
+            timeline_event = {
+                'date': event.get('date'),
+                'description': event.get('description'),
+                'event_type': event.get('type', 'general'),
+                'significance': event.get('significance', 5),
+                'supporting_docs': event.get('documents', [])
+            }
+            self.add_timeline_event(timeline_event)
+        
+        # Store novel arguments as patterns
+        for argument in iteration_result.get('novel_arguments', []):
+            pattern = {
+                'description': argument.get('argument'),
+                'pattern_type': 'novel_argument',
+                'confidence': argument.get('strength', 0.7),
+                'supporting_docs': argument.get('supporting_evidence', []),
+                'metadata': {
+                    'tactical_value': argument.get('tactical_value', 'medium')
+                }
+            }
+            self.add_pattern(pattern)
+    
+    # ========================================================================
+    # EXPORT METHODS
+    # ========================================================================
+    
+    def export_complete(self) -> Dict:
+        """
+        Export complete intelligence for Pass 3 and Pass 4
+        Returns all accumulated knowledge
+        """
+        conn = self._get_connection()
+        cursor = conn.cursor()
+        
+        intelligence = {
+            'patterns': [],
+            'contradictions': [],
+            'timeline_events': [],
+            'investigations': [],
+            'statistics': {}
+        }
+        
+        # Export all patterns
+        cursor.execute("""
+            SELECT pattern_id, description, pattern_type, confidence, 
+                   supporting_docs, metadata_json
+            FROM patterns
+            ORDER BY confidence DESC
+        """)
+        
+        for row in cursor.fetchall():
+            try:
+                supporting_docs = json.loads(row[4])
+                metadata = json.loads(row[5])
+            except:
+                supporting_docs = []
+                metadata = {}
+            
+            intelligence['patterns'].append({
+                'id': row[0],
+                'description': row[1],
+                'type': row[2],
+                'confidence': row[3],
+                'supporting_docs': supporting_docs,
+                'metadata': metadata
+            })
+        
+        # Export all contradictions
+        cursor.execute("""
+            SELECT contradiction_id, statement_a, statement_b, 
+                   doc_id_a, doc_id_b, severity, explanation
+            FROM contradictions
+            ORDER BY severity DESC
+        """)
+        
+        for row in cursor.fetchall():
+            intelligence['contradictions'].append({
+                'id': row[0],
+                'statement_a': row[1],
+                'statement_b': row[2],
+                'doc_id_a': row[3],
+                'doc_id_b': row[4],
+                'severity': row[5],
+                'explanation': row[6]
+            })
+        
+        # Export all timeline events
+        cursor.execute("""
+            SELECT event_id, date, description, event_type, 
+                   significance, supporting_docs
+            FROM timeline_events
+            ORDER BY date
+        """)
+        
+        for row in cursor.fetchall():
+            try:
+                supporting_docs = json.loads(row[5])
+            except:
+                supporting_docs = []
+            
+            intelligence['timeline_events'].append({
+                'id': row[0],
+                'date': row[1],
+                'description': row[2],
+                'type': row[3],
+                'significance': row[4],
+                'supporting_docs': supporting_docs
+            })
+        
+        # Export investigation results
+        cursor.execute("""
+            SELECT investigation_id, topic, conclusion, confidence, depth
+            FROM investigation_results
+            ORDER BY confidence DESC
+        """)
+        
+        for row in cursor.fetchall():
+            intelligence['investigations'].append({
+                'id': row[0],
+                'topic': row[1],
+                'conclusion': row[2],
+                'confidence': row[3],
+                'depth': row[4]
+            })
+        
+        # Add statistics
+        intelligence['statistics'] = {
+            'total_patterns': len(intelligence['patterns']),
+            'total_contradictions': len(intelligence['contradictions']),
+            'total_timeline_events': len(intelligence['timeline_events']),
+            'total_investigations': len(intelligence['investigations'])
+        }
+        
+        conn.close()
+        return intelligence
+    
+    # ========================================================================
+    # UTILITY METHODS
+    # ========================================================================
+    
+    def get_statistics(self) -> Dict:
+        """Get knowledge graph statistics"""
+        conn = self._get_connection()
         cursor = conn.cursor()
         
         stats = {}
+        
+        cursor.execute("SELECT COUNT(*) FROM discovery_log")
+        stats['documents'] = cursor.fetchone()[0]
+        
+        cursor.execute("SELECT COUNT(*) FROM patterns")
+        stats['patterns'] = cursor.fetchone()[0]
+        
+        cursor.execute("SELECT COUNT(*) FROM contradictions")
+        stats['contradictions'] = cursor.fetchone()[0]
+        
+        cursor.execute("SELECT COUNT(*) FROM timeline_events")
+        stats['timeline_events'] = cursor.fetchone()[0]
         
         cursor.execute("SELECT COUNT(*) FROM entities")
         stats['entities'] = cursor.fetchone()[0]
@@ -501,401 +657,24 @@ class KnowledgeGraph:
         cursor.execute("SELECT COUNT(*) FROM relationships")
         stats['relationships'] = cursor.fetchone()[0]
         
-        cursor.execute("SELECT COUNT(*) FROM contradictions")
-        stats['contradictions'] = cursor.fetchone()[0]
-        
-        cursor.execute("SELECT COUNT(*) FROM patterns")
-        stats['patterns'] = cursor.fetchone()[0]
-        
-        cursor.execute("SELECT COUNT(*) FROM timeline_events")
-        stats['timeline_events'] = cursor.fetchone()[0]
-        
-        cursor.execute("SELECT COUNT(*) FROM timeline_events_detailed")
-        stats['timeline_events_detailed'] = cursor.fetchone()[0]
-        
-        cursor.execute("SELECT COUNT(*) FROM timeline_impossibilities")
-        stats['timeline_impossibilities'] = cursor.fetchone()[0]
-        
-        cursor.execute("SELECT COUNT(*) FROM withheld_documents")
-        stats['withheld_documents'] = cursor.fetchone()[0]
-        
-        cursor.execute("SELECT COUNT(*) FROM admissions_against_interest")
-        stats['admissions'] = cursor.fetchone()[0]
-        
-        cursor.execute("SELECT COUNT(*) FROM investigations WHERE status = 'active'")
-        stats['active_investigations'] = cursor.fetchone()[0]
+        cursor.execute("SELECT COUNT(*) FROM investigation_results")
+        stats['investigations'] = cursor.fetchone()[0]
         
         conn.close()
         return stats
     
-    def get_context_for_phase(self, phase: str) -> Dict[str, Any]:
-        """Generate rich context for Claude from knowledge graph"""
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-        
-        context = {
-            'phase': phase,
-            'timestamp': datetime.now().isoformat(),
-            'statistics': self.get_statistics()
-        }
-        
-        # High-suspicion entities
-        cursor.execute("""
-            SELECT entity_id, name, entity_type, suspicion_score
-            FROM entities
-            WHERE suspicion_score > 0.5
-            ORDER BY suspicion_score DESC
-            LIMIT 10
-        """)
-        context['suspicious_entities'] = [
-            {'id': row[0], 'name': row[1], 'type': row[2], 'suspicion': row[3]}
-            for row in cursor.fetchall()
-        ]
-        
-        # Critical contradictions
-        cursor.execute("""
-            SELECT contradiction_id, statement_a, statement_b, severity
-            FROM contradictions
-            WHERE severity >= 7 AND resolved = 0
-            ORDER BY severity DESC
-            LIMIT 10
-        """)
-        context['critical_contradictions'] = [
-            {'id': row[0], 'statement_a': row[1][:100], 
-             'statement_b': row[2][:100], 'severity': row[3]}
-            for row in cursor.fetchall()
-        ]
-        
-        # High-confidence patterns
-        cursor.execute("""
-            SELECT pattern_id, description, confidence
-            FROM patterns
-            WHERE confidence > 0.7
-            ORDER BY confidence DESC
-            LIMIT 10
-        """)
-        context['strong_patterns'] = [
-            {'id': row[0], 'description': row[1][:200], 'confidence': row[2]}
-            for row in cursor.fetchall()
-        ]
-        
-        conn.close()
-        return context
-    
     def backup_before_phase(self, phase: str) -> str:
-        """Create versioned backup before phase execution"""
+        """Create backup before major phase"""
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        backup_path = self.backup_dir / f"graph_backup_phase_{phase}_{timestamp}.db"
+        backup_path = self.backup_dir / f"graph_backup_{phase}_{timestamp}.db"
         
         shutil.copy2(self.db_path, backup_path)
         
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-        
-        stats = self.get_statistics()
-        
-        cursor.execute("""
-            INSERT INTO version_history (
-                phase, timestamp, changes_summary, backup_path,
-                entity_count, relationship_count, contradiction_count,
-                pattern_count
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-        """, (
-            phase, datetime.now().isoformat(),
-            f"Backup before phase {phase}", str(backup_path),
-            stats['entities'], stats['relationships'],
-            stats['contradictions'], stats['patterns']
-        ))
-        
-        conn.commit()
-        conn.close()
-        
         return str(backup_path)
     
-    def _get_current_version(self) -> int:
-        """Get current version number"""
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-        
-        cursor.execute("SELECT MAX(version_id) FROM version_history")
-        result = cursor.fetchone()
-        
-        conn.close()
-        return result[0] if result[0] else 0
-    
-    # ========================================================================
-    # PASS EXECUTOR SUPPORT METHODS (for 4-pass system)
-    # ========================================================================
-    
-    def get_context_for_analysis(self) -> Dict:
-        """
-        Get context for Pass 2 deep analysis
-        Wrapper around get_context_for_phase for compatibility
-        """
-        return self.get_context_for_phase('analysis')
-    
-    def integrate_analysis(self, iteration_result: Dict):
-        """
-        Integrate Pass 2 iteration results into knowledge graph
-        Option 1: Handles structured breach/contradiction/timeline data
-        """
-        
-        # Store breaches (from structured extraction)
-        breaches = iteration_result.get('breaches', [])
-        for breach in breaches:
-            if isinstance(breach, dict) and breach.get('description'):
-                # Store as pattern with full structured data
-                self.add_pattern({
-                    'pattern_type': 'breach',
-                    'description': f"{breach.get('clause', 'unknown')}: {breach['description'][:500]}",
-                    'confidence': breach.get('confidence', 0.7),
-                    'supporting_evidence': breach.get('evidence', [])
-                })
-                
-                # Also log breach details
-                breach_detail = f"""Breach: {breach['description'][:200]}
-    Clause: {breach.get('clause', 'unknown')}
-    Evidence: {', '.join(breach.get('evidence', [])[:5])}
-    Causation: {breach.get('causation', 'unknown')[:100]}
-    Quantum: {breach.get('quantum', 'unknown')[:100]}"""
-                
-                self.add_discovery(
-                    discovery_type='breach',
-                    content=breach_detail,
-                    importance='HIGH',
-                    phase='pass_2'
-                )
-        
-        # Store contradictions
-        contradictions = iteration_result.get('contradictions', [])
-        for cont in contradictions:
-            if isinstance(cont, dict) and cont.get('statement_a'):
-                self.add_contradiction({
-                    'statement_a': cont['statement_a'][:1000],
-                    'statement_b': cont.get('statement_b', '')[:1000],
-                    'doc_a': cont.get('doc_a', 'unknown'),
-                    'doc_b': cont.get('doc_b', 'unknown'),
-                    'severity': cont.get('severity', 7),
-                    'confidence': cont.get('confidence', 0.7),
-                    'implications': cont.get('implications', '')[:1000]
-                })
-        
-        # Store timeline events
-        timeline_events = iteration_result.get('timeline_events', [])
-        if timeline_events:
-            import sqlite3
-            import hashlib
-            conn = sqlite3.connect(self.db_path)
-            cursor = conn.cursor()
-            
-            for event in timeline_events:
-                if isinstance(event, dict) and event.get('date'):
-                    event_id = hashlib.md5(
-                        f"{event['date']}_{event.get('description', '')[:50]}".encode()
-                    ).hexdigest()[:16]
-                    
-                    cursor.execute("""
-                        INSERT OR IGNORE INTO timeline_events (
-                            event_id, date, description, entities_involved,
-                            documents, confidence, is_critical, discovered
-                        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-                    """, (
-                        event_id,
-                        event['date'],
-                        event.get('description', '')[:1000],
-                        event.get('participants', ''),
-                        json.dumps(event.get('documents', [])),
-                        event.get('confidence', 0.7),
-                        event.get('is_critical', False),
-                        datetime.now().isoformat()
-                    ))
-            
-            conn.commit()
-            conn.close()
-        
-        # Store general findings as patterns
-        findings = iteration_result.get('findings', [])
-        for finding in findings:
-            if isinstance(finding, str) and len(finding) > 20:
-                self.add_pattern({
-                    'pattern_type': 'finding',
-                    'description': finding[:500],
-                    'confidence': 0.6,
-                    'supporting_evidence': []
-                })
-        
-        # Store critical findings
-        critical_findings = iteration_result.get('critical_findings', [])
-        for critical in critical_findings:
-            if isinstance(critical, dict):
-                content = critical.get('content', str(critical))
-                severity = critical.get('severity', 'CRITICAL')
-                
-                self.add_pattern({
-                    'pattern_type': 'critical_finding',
-                    'description': content[:500],
-                    'confidence': 0.9,
-                    'supporting_evidence': []
-                })
-                
-                self.add_discovery(
-                    discovery_type='critical_finding',
-                    content=content[:1000],
-                    importance='CRITICAL' if severity == 'CRITICAL' else 'NUCLEAR',
-                    phase='pass_2'
-                )
-        
-        # Audit trail
-        for finding in findings:
-            self.add_discovery(
-                discovery_type='analysis_finding',
-                content=str(finding)[:1000],
-                importance='MEDIUM',
-                phase='pass_2'
-            )
-    
-    def get_documents_for_investigation(self, topic: str) -> List[Dict]:
-        """
-        Get relevant documents for Pass 3 investigation
-        
-        Args:
-            topic: Investigation topic string
-            
-        Returns:
-            List of relevant document dicts (empty list for now)
-        """
-        # TODO: Implement document retrieval based on topic
-        # For now, return empty - Pass 3 will work with complete intelligence
-        return []
-    
-    def add_investigation_result(self, investigation, result: Dict):
-        """
-        Store Pass 3 investigation result in knowledge graph
-        
-        Args:
-            investigation: Investigation object
-            result: Dict with findings, confidence, conclusion
-        """
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-        
-        cursor.execute("""
-            INSERT OR REPLACE INTO investigations (
-                investigation_id, trigger_type, trigger_data, priority,
-                status, spawned_from, findings, created, completed
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-        """, (
-            investigation.get_id(),
-            'autonomous',
-            json.dumps(investigation.trigger_data),
-            investigation.priority,
-            'completed',
-            investigation.parent_id,
-            json.dumps(result),
-            investigation.created_at.isoformat(),
-            datetime.now().isoformat()
-        ))
-        
-        conn.commit()
-        conn.close()
-    
-    def export_complete(self) -> Dict:
-        """
-        Export complete knowledge graph for Pass 3 & 4
-        
-        Returns:
-            Complete intelligence dict with all findings
-        """
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-        
-        export = {
-            'timestamp': datetime.now().isoformat(),
-            'statistics': self.get_statistics(),
-            'entities': [],
-            'relationships': [],
-            'contradictions': [],
-            'patterns': [],
-            'timeline': [],
-            'breaches': [],
-            'evidence': []
-        }
-        
-        # Export entities (top 100)
-        cursor.execute("""
-            SELECT entity_id, name, entity_type, confidence, properties
-            FROM entities
-            ORDER BY confidence DESC
-            LIMIT 100
-        """)
-        for row in cursor.fetchall():
-            export['entities'].append({
-                'id': row[0],
-                'name': row[1],
-                'type': row[2],
-                'confidence': row[3],
-                'properties': json.loads(row[4]) if row[4] else {}
-            })
-        
-        # Export relationships (top 100)
-        cursor.execute("""
-            SELECT source_entity, target_entity, relationship_type, confidence
-            FROM relationships
-            ORDER BY confidence DESC
-            LIMIT 100
-        """)
-        for row in cursor.fetchall():
-            export['relationships'].append({
-                'source': row[0],
-                'target': row[1],
-                'type': row[2],
-                'confidence': row[3]
-            })
-        
-        # Export contradictions (all unresolved)
-        cursor.execute("""
-            SELECT statement_a, statement_b, severity, confidence, implications
-            FROM contradictions
-            WHERE resolved = 0
-            ORDER BY severity DESC
-        """)
-        for row in cursor.fetchall():
-            export['contradictions'].append({
-                'statement_a': row[0],
-                'statement_b': row[1],
-                'severity': row[2],
-                'confidence': row[3],
-                'implications': row[4]
-            })
-        
-        # Export patterns (high confidence)
-        cursor.execute("""
-            SELECT pattern_type, description, confidence, supporting_evidence
-            FROM patterns
-            WHERE confidence > 0.5
-            ORDER BY confidence DESC
-        """)
-        for row in cursor.fetchall():
-            export['patterns'].append({
-                'type': row[0],
-                'description': row[1],
-                'confidence': row[2],
-                'evidence': json.loads(row[3]) if row[3] else []
-            })
-        
-        # Export timeline events
-        cursor.execute("""
-            SELECT date, description, confidence, is_critical
-            FROM timeline_events
-            ORDER BY date
-        """)
-        for row in cursor.fetchall():
-            export['timeline'].append({
-                'date': row[0],
-                'description': row[1],
-                'confidence': row[2],
-                'critical': bool(row[3])
-            })
-        
-        conn.close()
-        return export
+    def _generate_id(self, prefix: str) -> str:
+        """Generate unique ID"""
+        timestamp = datetime.now().isoformat()
+        hash_input = f"{prefix}_{timestamp}"
+        hash_obj = hashlib.md5(hash_input.encode())
+        return f"{prefix}_{hash_obj.hexdigest()[:8]}"
