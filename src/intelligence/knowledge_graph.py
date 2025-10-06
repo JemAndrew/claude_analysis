@@ -3,7 +3,7 @@
 SQLite-based Knowledge Graph for Litigation Intelligence
 Extended with litigation-specific tables for Lismore v Process Holdings
 British English throughout
-COMPLETE VERSION - All litigation tables included
+UPDATED: Pass executor support methods added
 """
 
 import sqlite3
@@ -89,18 +89,15 @@ class KnowledgeGraph:
         # Version tracking
         self.current_version = self._get_current_version()
     
-    def _init_database(self) -> None:
-        """Create SQLite database schema with litigation tables"""
+    def _init_database(self):
+        """Initialise SQLite database with full schema"""
+        
+        # Ensure directory exists
+        self.db_path.parent.mkdir(parents=True, exist_ok=True)
+        self.backup_dir.mkdir(parents=True, exist_ok=True)
         
         conn = sqlite3.connect(self.db_path)
-        conn.execute("PRAGMA foreign_keys = ON")
-        conn.execute("PRAGMA journal_mode = WAL")
-        
         cursor = conn.cursor()
-        
-        # =====================================================================
-        # CORE TABLES (Original)
-        # =====================================================================
         
         # Entities table
         cursor.execute("""
@@ -110,12 +107,12 @@ class KnowledgeGraph:
                 subtype TEXT,
                 name TEXT NOT NULL,
                 first_seen TEXT NOT NULL,
-                last_updated TEXT NOT NULL,
+                last_seen TEXT,
                 confidence REAL DEFAULT 0.5,
+                suspicion_score REAL DEFAULT 0.0,
                 properties TEXT,
                 discovery_phase TEXT,
-                suspicion_score REAL DEFAULT 0.0,
-                investigation_count INTEGER DEFAULT 0
+                notes TEXT
             )
         """)
         
@@ -129,9 +126,7 @@ class KnowledgeGraph:
                 confidence REAL DEFAULT 0.5,
                 evidence TEXT,
                 discovered TEXT NOT NULL,
-                last_updated TEXT NOT NULL,
                 properties TEXT,
-                strength REAL DEFAULT 0.5,
                 FOREIGN KEY (source_entity) REFERENCES entities(entity_id),
                 FOREIGN KEY (target_entity) REFERENCES entities(entity_id)
             )
@@ -234,10 +229,6 @@ class KnowledgeGraph:
             )
         """)
         
-        # =====================================================================
-        # LITIGATION-SPECIFIC TABLES (NEW for Lismore case)
-        # =====================================================================
-        
         # Detailed timeline events (for impossibility detection)
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS timeline_events_detailed (
@@ -320,138 +311,124 @@ class KnowledgeGraph:
             )
         """)
         
-        # =====================================================================
-        # INDICES for Performance
-        # =====================================================================
-        
-        # Core table indices
-        cursor.execute("CREATE INDEX IF NOT EXISTS idx_entity_type ON entities(entity_type)")
-        cursor.execute("CREATE INDEX IF NOT EXISTS idx_entity_suspicion ON entities(suspicion_score DESC)")
-        cursor.execute("CREATE INDEX IF NOT EXISTS idx_rel_type ON relationships(relationship_type)")
-        cursor.execute("CREATE INDEX IF NOT EXISTS idx_contradiction_severity ON contradictions(severity DESC)")
-        cursor.execute("CREATE INDEX IF NOT EXISTS idx_pattern_confidence ON patterns(confidence DESC)")
-        cursor.execute("CREATE INDEX IF NOT EXISTS idx_investigation_priority ON investigations(priority DESC)")
-        cursor.execute("CREATE INDEX IF NOT EXISTS idx_timeline_date ON timeline_events(date)")
-        
-        # Litigation table indices
-        cursor.execute("CREATE INDEX IF NOT EXISTS idx_timeline_detailed_date ON timeline_events_detailed(event_date)")
-        cursor.execute("CREATE INDEX IF NOT EXISTS idx_impossibility_severity ON timeline_impossibilities(severity DESC)")
-        cursor.execute("CREATE INDEX IF NOT EXISTS idx_withheld_suspicion ON withheld_documents(suspicion_score DESC)")
-        cursor.execute("CREATE INDEX IF NOT EXISTS idx_admission_strength ON admissions_against_interest(strength_score DESC)")
-        cursor.execute("CREATE INDEX IF NOT EXISTS idx_privilege_legitimate ON privilege_claims(legitimate_score)")
-        
         conn.commit()
         conn.close()
     
-    # =========================================================================
-    # CORE METHODS (Original - keeping all existing functionality)
-    # =========================================================================
+    # ========================================================================
+    # ENTITY MANAGEMENT
+    # ========================================================================
     
-    def add_entity(self, entity: Entity) -> str:
-        """Add or update entity"""
+    def add_entity(self, entity: Dict) -> str:
+        """Add entity to knowledge graph"""
+        
+        entity_id = entity.get('entity_id') or hashlib.md5(
+            f"{entity['name']}_{entity['entity_type']}".encode()
+        ).hexdigest()[:16]
+        
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
         
-        cursor.execute("SELECT entity_id, confidence FROM entities WHERE entity_id = ?", 
-                      (entity.entity_id,))
-        existing = cursor.fetchone()
-        
-        if existing:
-            old_confidence = existing[1]
-            new_confidence = min(1.0, old_confidence + 0.1)
-            
-            cursor.execute("""
-                UPDATE entities 
-                SET confidence = ?, last_updated = ?, properties = ?
-                WHERE entity_id = ?
-            """, (new_confidence, datetime.now().isoformat(), 
-                  json.dumps(entity.properties), entity.entity_id))
-        else:
-            cursor.execute("""
-                INSERT INTO entities (
-                    entity_id, entity_type, subtype, name, first_seen, 
-                    last_updated, confidence, properties, discovery_phase
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-            """, (
-                entity.entity_id, entity.entity_type, entity.subtype,
-                entity.name, entity.first_seen, datetime.now().isoformat(),
-                entity.confidence, json.dumps(entity.properties),
-                entity.discovery_phase
-            ))
+        cursor.execute("""
+            INSERT OR REPLACE INTO entities (
+                entity_id, entity_type, subtype, name, first_seen,
+                confidence, suspicion_score, properties, discovery_phase
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """, (
+            entity_id,
+            entity['entity_type'],
+            entity.get('subtype', ''),
+            entity['name'],
+            datetime.now().isoformat(),
+            entity.get('confidence', 0.5),
+            entity.get('suspicion_score', 0.0),
+            json.dumps(entity.get('properties', {})),
+            entity.get('discovery_phase', 'unknown')
+        ))
         
         conn.commit()
         conn.close()
-        return entity.entity_id
+        
+        return entity_id
     
-    def add_relationship(self, relationship: Relationship) -> str:
+    def add_relationship(self, relationship: Dict) -> str:
         """Add relationship between entities"""
+        
+        relationship_id = hashlib.md5(
+            f"{relationship['source_entity']}_{relationship['target_entity']}_{relationship['relationship_type']}".encode()
+        ).hexdigest()[:16]
+        
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
-        
-        strength = min(1.0, len(relationship.evidence) * 0.2)
         
         cursor.execute("""
             INSERT OR REPLACE INTO relationships (
-                relationship_id, source_entity, target_entity, 
-                relationship_type, confidence, evidence, discovered, 
-                last_updated, properties, strength
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                relationship_id, source_entity, target_entity, relationship_type,
+                confidence, evidence, discovered, properties
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
         """, (
-            relationship.relationship_id, relationship.source_entity,
-            relationship.target_entity, relationship.relationship_type,
-            relationship.confidence, json.dumps(relationship.evidence),
-            relationship.discovered, datetime.now().isoformat(),
-            json.dumps(relationship.properties), strength
+            relationship_id,
+            relationship['source_entity'],
+            relationship['target_entity'],
+            relationship['relationship_type'],
+            relationship.get('confidence', 0.5),
+            json.dumps(relationship.get('evidence', [])),
+            datetime.now().isoformat(),
+            json.dumps(relationship.get('properties', {}))
         ))
         
         conn.commit()
         conn.close()
-        return relationship.relationship_id
+        
+        return relationship_id
     
-    def add_contradiction(self, contradiction: Contradiction) -> str:
-        """Add contradiction with automatic investigation spawning"""
+    # ========================================================================
+    # CONTRADICTION MANAGEMENT
+    # ========================================================================
+    
+    def add_contradiction(self, contradiction: Dict) -> str:
+        """Add contradiction to knowledge graph"""
+        
+        contradiction_id = hashlib.md5(
+            f"{contradiction['doc_a']}_{contradiction['doc_b']}_{contradiction['statement_a'][:50]}".encode()
+        ).hexdigest()[:16]
+        
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
         
-        priority = contradiction.severity / 10.0 * 10
-        contradiction.investigation_priority = priority
-        
         cursor.execute("""
-            INSERT INTO contradictions (
+            INSERT OR REPLACE INTO contradictions (
                 contradiction_id, statement_a, statement_b, doc_a, doc_b,
-                severity, confidence, implications, investigation_priority,
-                discovered, investigation_status
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                severity, confidence, implications, investigation_priority, discovered
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """, (
-            contradiction.contradiction_id, contradiction.statement_a,
-            contradiction.statement_b, contradiction.doc_a, contradiction.doc_b,
-            contradiction.severity, contradiction.confidence,
-            contradiction.implications, priority, contradiction.discovered,
-            'pending'
+            contradiction_id,
+            contradiction['statement_a'],
+            contradiction['statement_b'],
+            contradiction['doc_a'],
+            contradiction['doc_b'],
+            contradiction.get('severity', 5),
+            contradiction.get('confidence', 0.5),
+            contradiction.get('implications', ''),
+            contradiction.get('investigation_priority', 5.0),
+            datetime.now().isoformat()
         ))
         
         conn.commit()
-        
-        if contradiction.severity >= 7:
-            self._spawn_investigation(
-                trigger_type="contradiction",
-                trigger_data=asdict(contradiction),
-                priority=priority
-            )
-        
-        if contradiction.severity >= 8:
-            self.log_discovery(
-                discovery_type="contradiction",
-                content=f"{contradiction.statement_a[:100]} vs {contradiction.statement_b[:100]}",
-                importance="CRITICAL" if contradiction.severity >= 9 else "HIGH",
-                phase=contradiction.discovered.split('_')[0] if '_' in contradiction.discovered else "unknown"
-            )
-        
         conn.close()
-        return contradiction.contradiction_id
+        
+        return contradiction_id
     
-    def add_pattern(self, pattern: Pattern) -> str:
-        """Add pattern with confidence evolution tracking"""
+    # ========================================================================
+    # PATTERN MANAGEMENT
+    # ========================================================================
+    
+    def add_pattern(self, pattern: Dict) -> str:
+        """Add pattern to knowledge graph"""
+        
+        pattern_id = hashlib.md5(
+            f"{pattern['pattern_type']}_{pattern['description'][:50]}".encode()
+        ).hexdigest()[:16]
+        
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
         
@@ -459,301 +436,43 @@ class KnowledgeGraph:
             INSERT OR REPLACE INTO patterns (
                 pattern_id, pattern_type, description, confidence,
                 supporting_evidence, contradicting_evidence, evolution_history,
-                investigation_spawned, discovered, last_confirmed
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                investigation_spawned, discovered
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
         """, (
-            pattern.pattern_id, pattern.pattern_type, pattern.description,
-            pattern.confidence, json.dumps(pattern.supporting_evidence),
-            json.dumps(pattern.contradicting_evidence), 
-            json.dumps(pattern.evolution_history),
-            pattern.investigation_spawned, pattern.discovered,
-            datetime.now().isoformat()
-        ))
-        
-        conn.commit()
-        conn.close()
-        return pattern.pattern_id
-    
-    def add_timeline_event(self,
-                          date: str,
-                          description: str,
-                          entities: List[str] = None,
-                          documents: List[str] = None,
-                          is_critical: bool = False) -> str:
-        """Add basic timeline event"""
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-        
-        event_id = hashlib.md5(f"{date}{description}".encode()).hexdigest()[:16]
-        
-        cursor.execute("""
-            INSERT OR REPLACE INTO timeline_events (
-                event_id, date, description, entities_involved,
-                documents, confidence, is_critical, discovered
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-        """, (
-            event_id, date, description,
-            json.dumps(entities or []),
-            json.dumps(documents or []),
-            0.7, is_critical, datetime.now().isoformat()
-        ))
-        
-        conn.commit()
-        conn.close()
-        return event_id
-    
-    # =========================================================================
-    # NEW LITIGATION-SPECIFIC METHODS
-    # =========================================================================
-    
-    def add_timeline_event_detailed(self, event: Dict) -> str:
-        """
-        Add detailed timeline event for forensic analysis
-        
-        Args:
-            event: Dict with date, description, location, participants, etc.
-        """
-        event_id = hashlib.md5(
-            f"{event['date']}_{event['description'][:50]}".encode()
-        ).hexdigest()[:16]
-        
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-        
-        cursor.execute("""
-            INSERT OR REPLACE INTO timeline_events_detailed
-            (event_id, event_date, event_time, event_description, location,
-             participants, source_doc_ids, confidence, event_type, discovered_phase, created_at)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        """, (
-            event_id,
-            event['date'],
-            event.get('time'),
-            event['description'],
-            event.get('location'),
-            json.dumps(event.get('participants', [])),
-            json.dumps(event.get('source_docs', [])),
-            event.get('confidence', 0.5),
-            event.get('event_type', 'unknown'),
-            event.get('phase', 'unknown'),
-            datetime.now().isoformat()
-        ))
-        
-        conn.commit()
-        conn.close()
-        return event_id
-    
-    def add_timeline_impossibility(self, impossibility: Dict) -> str:
-        """
-        Track timeline impossibility
-        
-        Args:
-            impossibility: Dict with event_a_id, event_b_id, type, description, severity
-        """
-        impossibility_id = hashlib.md5(
-            f"{impossibility['event_a_id']}_{impossibility['event_b_id']}".encode()
-        ).hexdigest()[:16]
-        
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-        
-        cursor.execute("""
-            INSERT OR REPLACE INTO timeline_impossibilities
-            (impossibility_id, event_a_id, event_b_id, impossibility_type,
-             description, severity, evidence, lismore_value, discovered_at)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-        """, (
-            impossibility_id,
-            impossibility['event_a_id'],
-            impossibility['event_b_id'],
-            impossibility['type'],
-            impossibility['description'],
-            impossibility['severity'],
-            json.dumps(impossibility.get('evidence', [])),
-            impossibility.get('lismore_value', ''),
-            datetime.now().isoformat()
-        ))
-        
-        conn.commit()
-        conn.close()
-        return impossibility_id
-    
-    def add_withheld_document_inference(self, withheld: Dict) -> str:
-        """
-        Track withheld/missing document inference
-        
-        Args:
-            withheld: Dict with referenced_in_doc, reference_text, suspicion_score, etc.
-        """
-        inference_id = hashlib.md5(
-            f"{withheld['referenced_in_doc']}_{withheld['reference_text'][:50]}".encode()
-        ).hexdigest()[:16]
-        
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-        
-        cursor.execute("""
-            INSERT OR REPLACE INTO withheld_documents
-            (inference_id, referenced_in_doc, reference_text, inferred_date,
-             inferred_subject, inferred_participants, missing_type, suspicion_score,
-             strategic_importance, lismore_impact, discovered_at)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        """, (
-            inference_id,
-            withheld['referenced_in_doc'],
-            withheld['reference_text'],
-            withheld.get('inferred_date'),
-            withheld.get('inferred_subject'),
-            json.dumps(withheld.get('inferred_participants', [])),
-            withheld.get('missing_type', 'unknown'),
-            withheld.get('suspicion_score', 5.0),
-            withheld.get('strategic_importance', ''),
-            withheld.get('lismore_impact', ''),
-            datetime.now().isoformat()
-        ))
-        
-        conn.commit()
-        conn.close()
-        return inference_id
-    
-    def add_admission_against_interest(self, admission: Dict) -> str:
-        """
-        Track admission against interest
-        
-        Args:
-            admission: Dict with admission_text, source_doc, speaker, strength_score, etc.
-        """
-        admission_id = hashlib.md5(
-            f"{admission['source_doc']}_{admission['admission_text'][:50]}".encode()
-        ).hexdigest()[:16]
-        
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-        
-        cursor.execute("""
-            INSERT OR REPLACE INTO admissions_against_interest
-            (admission_id, admission_text, source_doc, date, speaker,
-             admission_type, contradicts_ph_position, strength_score,
-             tribunal_weight, lismore_use, discovered_at)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        """, (
-            admission_id,
-            admission['admission_text'],
-            admission['source_doc'],
-            admission.get('date'),
-            admission.get('speaker'),
-            admission.get('admission_type', 'unknown'),
-            admission.get('contradicts_ph_position', ''),
-            admission.get('strength_score', 5.0),
-            admission.get('tribunal_weight', 'moderate'),
-            admission.get('lismore_use', ''),
-            datetime.now().isoformat()
-        ))
-        
-        conn.commit()
-        conn.close()
-        return admission_id
-    
-    def get_litigation_intelligence(self) -> Dict[str, Any]:
-        """
-        Get all litigation-specific intelligence for prompt context
-        
-        Returns comprehensive findings for Lismore case
-        """
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-        
-        intel = {}
-        
-        # Timeline impossibilities
-        cursor.execute("""
-            SELECT description, severity, lismore_value
-            FROM timeline_impossibilities
-            WHERE severity >= 7
-            ORDER BY severity DESC
-            LIMIT 10
-        """)
-        intel['timeline_impossibilities'] = [
-            {'description': row[0], 'severity': row[1], 'value': row[2]}
-            for row in cursor.fetchall()
-        ]
-        
-        # Withheld documents
-        cursor.execute("""
-            SELECT referenced_in_doc, reference_text, suspicion_score, lismore_impact
-            FROM withheld_documents
-            WHERE suspicion_score >= 7
-            ORDER BY suspicion_score DESC
-            LIMIT 10
-        """)
-        intel['withheld_documents'] = [
-            {'referenced_in': row[0], 'reference': row[1][:100], 'suspicion': row[2], 'impact': row[3]}
-            for row in cursor.fetchall()
-        ]
-        
-        # Admissions
-        cursor.execute("""
-            SELECT admission_text, speaker, strength_score, lismore_use
-            FROM admissions_against_interest
-            WHERE strength_score >= 7
-            ORDER BY strength_score DESC
-            LIMIT 10
-        """)
-        intel['admissions'] = [
-            {'text': row[0][:200], 'speaker': row[1], 'strength': row[2], 'use': row[3]}
-            for row in cursor.fetchall()
-        ]
-        
-        conn.close()
-        return intel
-    
-    # =========================================================================
-    # REMAINING ORIGINAL METHODS (Investigation, Discovery, Stats, etc.)
-    # =========================================================================
-    
-    def _spawn_investigation(self, trigger_type: str, trigger_data: Dict, priority: float, parent_id: str = None) -> str:
-        """Spawn new investigation thread"""
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
-        
-        investigation_id = f"INV_{hashlib.md5(str(trigger_data).encode()).hexdigest()[:8].upper()}"
-        
-        depth = 0
-        if parent_id:
-            cursor.execute("SELECT depth FROM investigations WHERE investigation_id = ?", (parent_id,))
-            parent_depth = cursor.fetchone()
-            depth = (parent_depth[0] if parent_depth else 0) + 1
-        
-        cursor.execute("""
-            INSERT INTO investigations (
-                investigation_id, trigger_type, trigger_data, priority,
-                status, spawned_from, depth, created
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-        """, (
-            investigation_id, trigger_type, json.dumps(trigger_data),
-            priority, 'active', parent_id, depth,
+            pattern_id,
+            pattern['pattern_type'],
+            pattern['description'],
+            pattern.get('confidence', 0.5),
+            json.dumps(pattern.get('supporting_evidence', [])),
+            json.dumps(pattern.get('contradicting_evidence', [])),
+            json.dumps(pattern.get('evolution_history', [])),
+            pattern.get('investigation_spawned', False),
             datetime.now().isoformat()
         ))
         
         conn.commit()
         conn.close()
         
-        self.active_investigations.append(investigation_id)
-        return investigation_id
+        return pattern_id
     
-    def log_discovery(self, discovery_type: str, content: str, importance: str, phase: str) -> None:
-        """Log significant discoveries"""
-        conn = sqlite3.connect(self.db_path)
-        cursor = conn.cursor()
+    # ========================================================================
+    # DISCOVERY LOGGING
+    # ========================================================================
+    
+    def add_discovery(self, discovery_type: str, content: str, 
+                     importance: str, phase: str) -> str:
+        """Add discovery to log"""
         
         discovery_id = hashlib.md5(
-            f"{discovery_type}{content}{datetime.now().isoformat()}".encode()
+            f"{discovery_type}_{content[:50]}_{datetime.now().isoformat()}".encode()
         ).hexdigest()[:16]
+        
+        conn = sqlite3.connect(self.db_path)
+        cursor = conn.cursor()
         
         cursor.execute("""
             INSERT INTO discovery_log (
-                discovery_id, discovery_type, content, importance,
-                phase, timestamp
+                discovery_id, discovery_type, content, importance, phase, timestamp
             ) VALUES (?, ?, ?, ?, ?, ?)
         """, (
             discovery_id, discovery_type, content, importance,
@@ -762,6 +481,12 @@ class KnowledgeGraph:
         
         conn.commit()
         conn.close()
+        
+        return discovery_id
+    
+    # ========================================================================
+    # STATISTICS & EXPORT
+    # ========================================================================
     
     def get_statistics(self) -> Dict[str, int]:
         """Get current graph statistics"""
@@ -854,9 +579,6 @@ class KnowledgeGraph:
             for row in cursor.fetchall()
         ]
         
-        # Add litigation intelligence
-        context['litigation_findings'] = self.get_litigation_intelligence()
-        
         conn.close()
         return context
     
@@ -900,3 +622,185 @@ class KnowledgeGraph:
         
         conn.close()
         return result[0] if result[0] else 0
+    
+    # ========================================================================
+    # PASS EXECUTOR SUPPORT METHODS (for 4-pass system)
+    # ========================================================================
+    
+    def get_context_for_analysis(self) -> Dict:
+        """
+        Get context for Pass 2 deep analysis
+        Wrapper around get_context_for_phase for compatibility
+        """
+        return self.get_context_for_phase('analysis')
+    
+    def integrate_analysis(self, iteration_result: Dict):
+        """
+        Integrate Pass 2 iteration results into knowledge graph
+        
+        Args:
+            iteration_result: Dict from Pass 2 with findings, breaches, evidence
+        """
+        # Add findings as discoveries
+        for finding in iteration_result.get('findings', []):
+            self.add_discovery(
+                discovery_type='analysis_finding',
+                content=str(finding),
+                importance='MEDIUM',
+                phase='pass_2'
+            )
+        
+        # Add critical findings
+        for critical in iteration_result.get('critical_findings', []):
+            self.add_discovery(
+                discovery_type='critical_finding',
+                content=str(critical),
+                importance='CRITICAL',
+                phase='pass_2'
+            )
+    
+    def get_documents_for_investigation(self, topic: str) -> List[Dict]:
+        """
+        Get relevant documents for Pass 3 investigation
+        
+        Args:
+            topic: Investigation topic string
+            
+        Returns:
+            List of relevant document dicts (empty list for now)
+        """
+        # TODO: Implement document retrieval based on topic
+        # For now, return empty - Pass 3 will work with complete intelligence
+        return []
+    
+    def add_investigation_result(self, investigation, result: Dict):
+        """
+        Store Pass 3 investigation result in knowledge graph
+        
+        Args:
+            investigation: Investigation object
+            result: Dict with findings, confidence, conclusion
+        """
+        conn = sqlite3.connect(self.db_path)
+        cursor = conn.cursor()
+        
+        cursor.execute("""
+            INSERT OR REPLACE INTO investigations (
+                investigation_id, trigger_type, trigger_data, priority,
+                status, spawned_from, findings, created, completed
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """, (
+            investigation.get_id(),
+            'autonomous',
+            json.dumps(investigation.trigger_data),
+            investigation.priority,
+            'completed',
+            investigation.parent_id,
+            json.dumps(result),
+            investigation.created_at.isoformat(),
+            datetime.now().isoformat()
+        ))
+        
+        conn.commit()
+        conn.close()
+    
+    def export_complete(self) -> Dict:
+        """
+        Export complete knowledge graph for Pass 3 & 4
+        
+        Returns:
+            Complete intelligence dict with all findings
+        """
+        conn = sqlite3.connect(self.db_path)
+        cursor = conn.cursor()
+        
+        export = {
+            'timestamp': datetime.now().isoformat(),
+            'statistics': self.get_statistics(),
+            'entities': [],
+            'relationships': [],
+            'contradictions': [],
+            'patterns': [],
+            'timeline': [],
+            'breaches': [],
+            'evidence': []
+        }
+        
+        # Export entities (top 100)
+        cursor.execute("""
+            SELECT entity_id, name, entity_type, confidence, properties
+            FROM entities
+            ORDER BY confidence DESC
+            LIMIT 100
+        """)
+        for row in cursor.fetchall():
+            export['entities'].append({
+                'id': row[0],
+                'name': row[1],
+                'type': row[2],
+                'confidence': row[3],
+                'properties': json.loads(row[4]) if row[4] else {}
+            })
+        
+        # Export relationships (top 100)
+        cursor.execute("""
+            SELECT source_entity, target_entity, relationship_type, confidence
+            FROM relationships
+            ORDER BY confidence DESC
+            LIMIT 100
+        """)
+        for row in cursor.fetchall():
+            export['relationships'].append({
+                'source': row[0],
+                'target': row[1],
+                'type': row[2],
+                'confidence': row[3]
+            })
+        
+        # Export contradictions (all unresolved)
+        cursor.execute("""
+            SELECT statement_a, statement_b, severity, confidence, implications
+            FROM contradictions
+            WHERE resolved = 0
+            ORDER BY severity DESC
+        """)
+        for row in cursor.fetchall():
+            export['contradictions'].append({
+                'statement_a': row[0],
+                'statement_b': row[1],
+                'severity': row[2],
+                'confidence': row[3],
+                'implications': row[4]
+            })
+        
+        # Export patterns (high confidence)
+        cursor.execute("""
+            SELECT pattern_type, description, confidence, supporting_evidence
+            FROM patterns
+            WHERE confidence > 0.5
+            ORDER BY confidence DESC
+        """)
+        for row in cursor.fetchall():
+            export['patterns'].append({
+                'type': row[0],
+                'description': row[1],
+                'confidence': row[2],
+                'evidence': json.loads(row[3]) if row[3] else []
+            })
+        
+        # Export timeline events
+        cursor.execute("""
+            SELECT date, description, confidence, is_critical
+            FROM timeline_events
+            ORDER BY date
+        """)
+        for row in cursor.fetchall():
+            export['timeline'].append({
+                'date': row[0],
+                'description': row[1],
+                'confidence': row[2],
+                'critical': bool(row[3])
+            })
+        
+        conn.close()
+        return export

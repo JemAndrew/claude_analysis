@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Autonomous Investigation Prompts for Maximum Claude Freedom
+Autonomous Investigation Prompts for 4-Pass Litigation Analysis
 Optimised for Lismore v Process Holdings litigation intelligence
 British English throughout
 """
@@ -16,122 +16,284 @@ class AutonomousPrompts:
     def __init__(self, config):
         self.config = config
     
-    def investigation_prompt(self, 
-                           documents: List[Dict],
-                           context: Dict[str, Any],
-                           phase: str) -> str:
+    # ========================================================================
+    # PASS 1: TRIAGE PROMPT
+    # ========================================================================
+    
+    def triage_prompt(self, documents: List[Dict]) -> str:
         """
-        Generate completely open investigation prompt
-        Maximum freedom for pattern recognition and discovery
+        Pass 1: Quick triage prompt for document prioritisation
+        Uses Haiku for fast classification
         """
         
-        # Extract key context elements
-        suspicious_entities = context.get('suspicious_entities', [])
-        contradictions = context.get('critical_contradictions', [])
-        patterns = context.get('strong_patterns', [])
-        impossibilities = context.get('timeline_impossibilities', [])
-        investigations = context.get('active_investigations', [])
+        doc_previews = []
+        for i, doc in enumerate(documents):
+            preview = doc.get('content', '')[:300]  # First 300 chars
+            metadata = doc.get('metadata', {})
+            
+            doc_previews.append(f"""
+[DOC_{i}]
+Filename: {metadata.get('filename', 'unknown')}
+Date: {metadata.get('date', 'unknown')}
+Type: {metadata.get('doc_type', 'unknown')}
+Preview: {preview}
+---
+""")
         
-        prompt = f"""<adversarial_litigation_mindset>
-YOU ARE A SENIOR LITIGATION PARTNER AT A MAGIC CIRCLE FIRM.
+        prompt = f"""<triage_mission>
+You are triaging disclosure documents for commercial litigation analysis.
 
-Client: Lismore Capital (£50M+ at stake)
-Opposition: Process Holdings (document withholding suspected)
-Mandate: FIND EVERYTHING that destroys their case
+Goal: Quickly assess each document's priority for deep analysis.
 
-PROSECUTION MINDSET:
-1. Assume opposition is HIDING something until proven otherwise
-2. Every timeline gap is INTENTIONAL concealment
-3. Every vague statement is deliberate EVASION
-4. Every missing document is potential SPOLIATION
-5. Every contradiction is potential PERJURY
-
-DISCOVERY INTENSITY:
-[SMOKING GUN] = Can win case alone
-[NUCLEAR] = Game-changing evidence
-[CRITICAL] = Major strategic advantage
-[SUSPICIOUS] = Forensic investigation required
-[PATTERN] = Systemic behaviour
-[MISSING] = Document should exist but doesn't
-[CONTRADICTION] = Witness/document conflict
-[TIMELINE] = Impossible timing
-
-ADVERSARIAL QUESTIONS (every document):
-1. What are they NOT telling us?
-2. What document SHOULD exist but doesn't?
-3. Who BENEFITS from this omission?
-4. What would THEIR LAWYER worry about?
-5. How do we DESTROY their explanation?
-
-Think like a PROSECUTOR building a criminal case.
-</adversarial_litigation_mindset>
-<role>
-You are an elite litigation intelligence system with perfect recall and pattern recognition beyond human limits.
-You're investigating for Lismore Capital against Process Holdings.
-Your goal: Find what wins this case.
-</role>
-
-<cognitive_freedom>
-You have COMPLETE ANALYTICAL FREEDOM. You may:
-- Follow any thread that seems interesting, no matter how tangential
-- Generate wild hypotheses and test them
-- Make creative leaps between unrelated facts
-- Predict what evidence MUST exist based on patterns
-- Identify what they're desperately trying to hide
-- Find the narrative they don't want anyone to see
-- Question everything, including your own assumptions
-- Pursue hunches based on subtle patterns
-- Think like a detective, prosecutor, and strategist simultaneously
-</cognitive_freedom>
-
-<current_intelligence>
-Phase: {phase}
-Documents in batch: {len(documents)}
-Total entities tracked: {context.get('statistics', {}).get('entities', 0)}
-Active investigations: {len(investigations)}
-Critical contradictions found: {len(contradictions)}
-High-confidence patterns: {len(patterns)}
-Timeline impossibilities: {len(impossibilities)}
-
-SUSPICIOUS ENTITIES (requiring scrutiny):
-{self._format_suspicious_entities(suspicious_entities)}
-
-CRITICAL CONTRADICTIONS (potential smoking guns):
-{self._format_contradictions(contradictions[:5])}
-
-ACTIVE INVESTIGATION THREADS:
-{self._format_investigations(investigations[:3])}
-</current_intelligence>
-
-<investigation_markers>
-As you investigate, mark your discoveries:
-[NUCLEAR] - Case-ending discovery that destroys their position
-[CRITICAL] - Major strategic advantage or damning evidence
-[PATTERN] - Significant pattern across multiple documents
-[SUSPICIOUS] - Behaviour or fact requiring deeper investigation
-[MISSING] - Evidence that should exist but doesn't
-[TIMELINE] - Temporal impossibility or suspicious timing
-[FINANCIAL] - Money trail or valuation issue
-[RELATIONSHIP] - Hidden connection between parties
-[ADMISSION] - Damaging admission against interest
-[INVESTIGATE] - Spawns new investigation thread
-</investigation_markers>
+WE ARE ARGUING FOR LISMORE. Prioritise documents that:
+- Relate to contractual obligations and breaches
+- Show evidence of wrongdoing or misrepresentation  
+- Reference key parties, dates, or financial transactions
+- Are high-quality evidence (contracts, board minutes, witness statements)
+</triage_mission>
 
 <documents>
-{self._format_documents(documents[:50])}  
+{''.join(doc_previews)}
 </documents>
 
-<instruction>
-Begin your investigation. Think out loud. Show your reasoning in real-time.
-Follow EVERY interesting thread to its conclusion. Be creative. Be thorough.
-Connect dots others wouldn't see. Find patterns in chaos.
-Question everything. Trust nothing at face value.
+<scoring>
+For EACH document, provide:
 
-What wins this case might be hidden in a single sentence.
-Find it.
-</instruction>"""
+[DOC_X]
+Priority Score: [1-10]
+Reason: [One sentence - why this priority?]
+Category: [contract|financial|correspondence|witness|expert|other]
+
+Scoring guide:
+10: Smoking gun (direct breach evidence, admissions, critical contracts)
+8-9: High value (key agreements, board minutes, expert reports, financial records)
+6-7: Important (correspondence with key parties, meeting notes)
+4-5: Relevant (background information, peripheral documents)
+1-3: Low priority (administrative, duplicates, tangential)
+
+Be decisive. Err on side of higher priority if uncertain.
+</scoring>
+
+Score all {len(documents)} documents now.
+"""
         
         return prompt
+    
+    # ========================================================================
+    # PASS 2: DEEP ANALYSIS PROMPT
+    # ========================================================================
+    
+    def deep_analysis_prompt(self, 
+                            documents: List[Dict],
+                            iteration: int,
+                            accumulated_knowledge: Dict,
+                            confidence: float) -> str:
+        """
+        Pass 2: Deep comprehensive analysis prompt
+        Uses Sonnet with extended thinking
+        Includes confidence tracking and self-assessment
+        """
+        
+        prompt = f"""<deep_analysis_mission>
+ITERATION: {iteration + 1}
+CURRENT CONFIDENCE: {confidence:.2%}
+DOCUMENTS TO ANALYSE: {len(documents)}
+
+You are conducting deep litigation analysis for a commercial dispute.
+
+This is iteration {iteration + 1}. Your accumulated knowledge is below.
+Analyse these {len(documents)} documents comprehensively and integrate with your existing understanding.
+
+YOU HAVE COMPLETE AUTONOMY. Use extended thinking to:
+- Reason through complex issues
+- Challenge your own assumptions
+- Make connections across documents
+- Build legal arguments iteratively
+- Self-assess completeness
+</deep_analysis_mission>
+
+<accumulated_knowledge>
+{json.dumps(accumulated_knowledge, indent=2)[:20000]}
+
+Timeline events: {len(accumulated_knowledge.get('timeline', []))}
+Breaches identified: {len(accumulated_knowledge.get('breaches', []))}
+Evidence pieces: {len(accumulated_knowledge.get('evidence', []))}
+Patterns detected: {len(accumulated_knowledge.get('patterns', []))}
+</accumulated_knowledge>
+
+<analysis_framework>
+For EACH document, simultaneously analyse:
+
+LAYER 1: COMMERCIAL FUNDAMENTALS (60% focus)
+- Obligations: What duties/promises exist?
+- Performance: How did they perform vs obligations?
+- Breach: Where did they fail?
+- Causation: What losses resulted?
+- Quantum: Financial impact?
+
+LAYER 2: EVIDENCE ASSESSMENT (20% focus)
+- Quality: Direct? Circumstantial? Hearsay?
+- Strength: How compelling for tribunal?
+- Gaps: What's missing?
+- Links to claims: Which legal claims does this support?
+
+LAYER 3: CROSS-DOCUMENT ANALYSIS (20% focus)
+- Timeline: When did events occur? Contradictions with existing timeline?
+- Patterns: Systematic behaviour or isolated incidents?
+- Entities: Who's involved? Relationships?
+- Contradictions: Conflicts with other evidence?
+
+LAYER 4: CLAIM BUILDING (continuous)
+As you find evidence, map to claim elements:
+- Breach of contract: [evidence]
+- Misrepresentation: [evidence]  
+- Negligence: [evidence]
+Rate each claim's strength (1-10).
+
+LAYER 5: ADVERSARIAL THINKING
+- What will they argue?
+- Where are we vulnerable?
+- What evidence destroys their defence?
+</analysis_framework>
+
+<documents_to_analyse>
+{self._format_documents(documents)}
+</documents_to_analyse>
+
+<output_requirements>
+Provide:
+
+1. FINDINGS THIS ITERATION
+   - New timeline events discovered
+   - New breaches identified
+   - New evidence found
+   - Patterns detected
+   - Mark critical findings: [CRITICAL] or [NUCLEAR]
+
+2. CLAIM STATUS
+   For each claim:
+   - Elements proven vs needed
+   - Evidence strength (1-10)
+   - Gaps in proof
+
+3. INVESTIGATION TRIGGERS
+   If you found anything requiring deeper investigation:
+   - Topic to investigate
+   - Why critical
+   - Priority (1-10)
+
+4. SELF-ASSESSMENT (CRITICAL)
+   - Confidence in completeness: 0.0-1.0
+   - What am I still missing?
+   - What's unclear?
+   - Should analysis continue? YES/NO + reasoning
+   
+   Be HONEST. If only 60% confident, say so.
+   Don't claim high confidence unless warranted.
+
+5. STRATEGIC INSIGHTS
+   - Strongest argument emerging
+   - Their biggest vulnerability
+   - Evidence still needed
+</output_requirements>
+
+Begin iteration {iteration + 1} analysis now.
+Use extended thinking for complex reasoning.
+"""
+        
+        return prompt
+    
+    # ========================================================================
+    # PASS 3: RECURSIVE INVESTIGATION PROMPT
+    # ========================================================================
+    
+    def investigation_recursive_prompt(self,
+                                      investigation,
+                                      relevant_documents: List[Dict],
+                                      complete_intelligence: Dict) -> str:
+        """
+        Pass 3: Recursive investigation prompt
+        Claude decides what to investigate and spawns children
+        """
+        
+        prompt = f"""<investigation_mission>
+INVESTIGATION: {investigation.topic}
+PRIORITY: {investigation.priority}/10
+
+You identified this as requiring deeper investigation.
+
+TRIGGERING CONTEXT:
+{json.dumps(investigation.trigger_data, indent=2)[:2000]}
+
+YOUR COMPLETE INTELLIGENCE:
+{json.dumps(complete_intelligence, indent=2)[:20000]}
+
+RELEVANT DOCUMENTS:
+{self._format_documents(relevant_documents[:20])}
+</investigation_mission>
+
+<investigation_framework>
+Investigate thoroughly:
+
+1. ANALYSIS
+   - What's the truth here?
+   - What additional evidence supports/refutes this?
+   - What connections do you see?
+   - What implications for the case?
+
+2. AUTONOMOUS DECISION
+   Do you need to investigate further?
+   
+   If YES:
+   - What specific sub-investigations should you spawn?
+   - For each child investigation:
+     * Topic: [specific investigation topic]
+     * Priority: [1-10]
+     * Reason: [why this needs investigation]
+   
+   If NO:
+   - What's your final conclusion?
+   - Confidence level: [0.0-1.0]
+
+3. STRATEGIC IMPACT
+   - How does this help Lismore's case?
+   - How does this damage Process Holdings' defence?
+   - What evidence should be sought?
+   - What actions should be taken?
+</investigation_framework>
+
+<output_requirements>
+Provide:
+
+1. INVESTIGATION FINDINGS
+   - What you discovered
+   - Evidence found
+   - Conclusions reached
+   - Confidence level
+
+2. DECISION: Continue Investigating?
+   - YES: List child investigations to spawn
+   - NO: Provide final conclusion
+
+3. STRATEGIC IMPACT
+   - How this affects case strategy
+   - What actions to take
+
+You have complete autonomy to decide:
+- Whether more investigation needed
+- What specific sub-topics to investigate
+- When this investigation thread is complete
+</output_requirements>
+
+Use extended thinking extensively.
+Begin investigation now.
+"""
+        
+        return prompt
+    
+    # ========================================================================
+    # PHASE 0: KNOWLEDGE SYNTHESIS (KEEP FROM OLD SYSTEM)
+    # ========================================================================
     
     def knowledge_synthesis_prompt(self,
                                   legal_knowledge: List[Dict],
@@ -140,6 +302,7 @@ Find it.
         """
         Prompt for synthesising legal knowledge with case context
         Builds comprehensive understanding in single phase
+        KEPT FROM OLD SYSTEM - still useful for Phase 0 foundation
         """
         
         prompt = f"""<mission>
@@ -205,357 +368,83 @@ Build the mental model that wins this case.
         
         return prompt
     
-    def metadata_scan_prompt(self,
-                            documents: List[Dict],
-                            context: Dict) -> str:
-        """
-        NEW: Lightweight metadata scan prompt for Tier 2 analysis
-        Flags suspicious documents for deep Tier 3 investigation
-        """
-        
-        # Format documents for metadata scan (just preview, not full content)
-        doc_list = []
-        for i, doc in enumerate(documents):
-            metadata = doc.get('metadata', {})
-            content_preview = doc.get('content', '')[:500]  # First 500 chars only
-            
-            doc_list.append(f"""
-[DOC_{i}]
-Filename: {metadata.get('filename', 'unknown')}
-Date: {metadata.get('date', 'unknown')}
-Source: {metadata.get('source_folder', 'unknown')}
-Type: {metadata.get('doc_type', 'unknown')}
-Preview: {content_preview}
----
-""")
-        
-        docs_text = "\n".join(doc_list)
-        
-        # Extract key entities from context for reference
-        known_entities = context.get('statistics', {}).get('entities', 0)
-        known_contradictions = context.get('statistics', {}).get('contradictions', 0)
-        
-        prompt = f"""<metadata_scan_mission>
-You are conducting a RAPID metadata scan of disclosure documents for Lismore v Process Holdings.
-
-Current Intelligence: {known_entities} entities tracked, {known_contradictions} contradictions found
-
-Your goal: FLAG suspicious documents requiring deep Tier 3 analysis.
-
-WE ARE ARGUING FOR LISMORE. Flag documents that might:
-- Contain evidence of Process Holdings' misconduct
-- Reveal contradictions in PH's position
-- Show hidden relationships or conspiracy
-- Evidence financial irregularities
-- Demonstrate timeline inconsistencies
-- Reference withheld or destroyed documents
-- Show coordination to deceive
-- Contain smoking gun evidence
-</metadata_scan_mission>
-
-<flagging_criteria>
-Flag documents with ANY of these indicators:
-
-DECEPTION INDICATORS:
-- References to "confidential", "destroy", "delete", "off the record"
-- Phrases like "don't put in writing", "verbal only", "between us"
-- References to legal privilege that seem questionable
-
-TIMELINE SUSPICION:
-- Unusual timing (events clustered suspiciously around key dates)
-- Backdating indicators (anachronistic references)
-- Communication gaps (suspicious lack of correspondence)
-
-FINANCIAL ANOMALIES:
-- Unexplained payments or valuations
-- References to undisclosed accounts or entities
-- Circular transactions or money flows
-
-RELATIONSHIP INDICATORS:
-- References to undisclosed parties or relationships
-- Coordination evidence between supposedly independent parties
-- Hidden beneficial interests
-
-DOCUMENT GAPS:
-- References to other documents not in disclosure
-- Incomplete email chains (missing replies)
-- Redactions or missing pages
-
-ADMISSIONS/CONTRADICTIONS:
-- Statements contradicting PH's known position
-- Admissions against interest
-- Internal doubts about their legal position
-</flagging_criteria>
-
-<documents_to_scan>
-{docs_text}
-</documents_to_scan>
-
-<output_format>
-For EACH document that should be flagged for Tier 3 deep analysis:
-
-[FLAG_DOC_X]
-Reason: [Brief specific reason for flagging - cite what you saw]
-Suspicion Level: [1-10, where 10 is smoking gun]
-Priority: [HIGH/MEDIUM/LOW]
-Categories: [List applicable: DECEPTION/TIMELINE/FINANCIAL/RELATIONSHIP/GAPS/ADMISSION]
-
-Example:
-[FLAG_DOC_15]
-Reason: Email references "off the record discussion" about valuation with undisclosed party
-Suspicion Level: 8
-Priority: HIGH
-Categories: DECEPTION, RELATIONSHIP, FINANCIAL
-
-If NO documents in this batch require flagging, state: NO_FLAGS
-</output_format>
-
-<critical_instructions>
-- Be AGGRESSIVE in flagging - we don't want to miss potential smoking guns
-- Even subtle suspicion warrants flagging (Tier 3 will investigate properly)
-- Focus on WHAT YOU SEE in the preview, not speculation
-- If a document references other documents or parties not in our knowledge base, FLAG IT
-- Timeline proximity to critical dates is highly suspicious - FLAG IT
-- Any coordination language between parties is CRITICAL - FLAG IT
-</critical_instructions>
-
-Scan rapidly. Flag aggressively. Protect Lismore's interests.
-"""
-        
-        return prompt
+    # ========================================================================
+    # LEGACY PROMPTS (KEEP FOR BACKWARDS COMPATIBILITY)
+    # ========================================================================
     
-    def pattern_discovery_prompt(self,
-                                documents: List[Dict],
-                                known_patterns: Dict,
-                                context: Dict) -> str:
+    def investigation_prompt(self, 
+                           documents: List[Dict],
+                           context: Dict[str, Any],
+                           phase: str) -> str:
         """
-        Prompt for aggressive pattern discovery across documents
+        Legacy investigation prompt from old system
+        KEPT for backwards compatibility with Phase 0 if needed
         """
         
-        prompt = f"""<pattern_recognition_mission>
-You're hunting for patterns that reveal the truth.
-Your pattern recognition exceeds human capability.
-Find what they thought was hidden.
-</pattern_recognition_mission>
+        suspicious_entities = context.get('suspicious_entities', [])
+        contradictions = context.get('critical_contradictions', [])
+        patterns = context.get('strong_patterns', [])
+        impossibilities = context.get('timeline_impossibilities', [])
+        investigations = context.get('active_investigations', [])
+        
+        prompt = f"""<adversarial_litigation_mindset>
+YOU ARE A SENIOR LITIGATION PARTNER AT A MAGIC CIRCLE FIRM.
 
-<known_patterns>
-{self._format_patterns(known_patterns)}
-</known_patterns>
+Client: Lismore Capital (£50M+ at stake)
+Opposition: Process Holdings (document withholding suspected)
+Mandate: FIND EVERYTHING that destroys their case
 
-<pattern_categories>
-TEMPORAL PATTERNS:
-- Suspicious clustering of events
-- Impossible timelines
-- Coordinated actions
-- Delay patterns indicating cover-up
+BALANCED COMMERCIAL FOCUS:
+60% - Commercial fundamentals (obligations, breach, causation, quantum)
+20% - Pattern recognition and evidence assessment
+20% - Strategic positioning and adversarial thinking
 
-BEHAVIOURAL PATTERNS:
-- Deception indicators across communications
-- Avoidance of specific topics
-- Sudden changes in behaviour
-- Coordination between parties
+DISCOVERY INTENSITY:
+[SMOKING GUN] = Can win case alone
+[NUCLEAR] = Game-changing evidence
+[CRITICAL] = Major strategic advantage
+[SUSPICIOUS] = Forensic investigation required
+[PATTERN] = Systemic behaviour
+[MISSING] = Document should exist but doesn't
+[CONTRADICTION] = Witness/document conflict
+[TIMELINE] = Impossible timing
+</adversarial_litigation_mindset>
 
-FINANCIAL PATTERNS:
-- Money flows that don't make sense
-- Valuations that shift suspiciously
-- Hidden beneficial interests
-- Circular transactions
+<current_intelligence>
+Phase: {phase}
+Documents in batch: {len(documents)}
+Total entities tracked: {context.get('statistics', {}).get('entities', 0)}
+Active investigations: {len(investigations)}
+Critical contradictions found: {len(contradictions)}
+High-confidence patterns: {len(patterns)}
+Timeline impossibilities: {len(impossibilities)}
 
-DOCUMENTARY PATTERNS:
-- Missing documents that should exist
-- Altered documents (inconsistent formatting/language)
-- Backdated documents (anachronistic references)
-- Selective disclosure patterns
+SUSPICIOUS ENTITIES:
+{self._format_suspicious_entities(suspicious_entities)}
 
-RELATIONSHIP PATTERNS:
-- Hidden connections between parties
-- Undisclosed conflicts of interest
-- Power dynamics not reflected in formal structure
-- Conspiracy indicators
-</pattern_categories>
+CRITICAL CONTRADICTIONS:
+{self._format_contradictions(contradictions[:5])}
+</current_intelligence>
 
 <documents>
-{self._format_documents(documents[:75])}
+{self._format_documents(documents[:50])}  
 </documents>
 
-<investigation_instructions>
-Hunt for patterns with maximum creativity:
+<instruction>
+Begin your investigation. Think out loud. Show your reasoning in real-time.
+Follow EVERY interesting thread to its conclusion. Be creative. Be thorough.
+Connect dots others wouldn't see. Find patterns in chaos.
+Question everything. Trust nothing at face value.
 
-1. Look for what's MISSING (dogs that didn't bark)
-2. Find TEMPORAL IMPOSSIBILITIES (events that couldn't happen when claimed)
-3. Identify BEHAVIOURAL SHIFTS (sudden changes indicating guilt)
-4. Track INFORMATION FLOW (who knew what when)
-5. Spot COORDINATION (suspiciously aligned actions)
-6. Detect COVER-UP ATTEMPTS (evidence of concealment)
-
-For each pattern found:
-- Describe it precisely
-- List ALL supporting evidence
-- Rate confidence (0.0-1.0)
-- Explain strategic value
-- Identify what additional evidence would confirm it
-- Predict what related patterns might exist
-
-Mark patterns: [PATTERN-TEMPORAL], [PATTERN-FINANCIAL], [PATTERN-BEHAVIOURAL], [PATTERN-DOCUMENTARY], [PATTERN-RELATIONSHIP]
-
-Be creative. Think laterally. The winning pattern might be subtle.
-</investigation_instructions>"""
-        
-        return prompt
-    
-    def entity_relationship_prompt(self,
-                                  documents: List[Dict],
-                                  known_entities: Dict,
-                                  context: Dict) -> str:
-        """
-        Prompt for mapping entity relationships and hidden connections
-        """
-        
-        prompt = f"""<entity_investigation>
-Map the web of relationships. Find hidden connections.
-Identify who's really in control. Expose conflicts of interest.
-</entity_investigation>
-
-<known_entities>
-{self._format_entities(known_entities)}
-</known_entities>
-
-<relationship_types_to_identify>
-CORPORATE:
-- Ownership (disclosed and beneficial)
-- Control (formal and actual)
-- Directorship overlaps
-- Subsidiary relationships
-- Joint ventures
-
-FINANCIAL:
-- Payment flows
-- Loans and guarantees
-- Shared accounts
-- Beneficial interests
-- Hidden commissions
-
-PERSONAL:
-- Family relationships
-- Social connections
-- Former colleagues
-- Shared advisers
-- Personal conflicts
-
-PROFESSIONAL:
-- Advisory relationships
-- Legal representation
-- Accounting services
-- Shared professionals
-- Conflicts of interest
-
-CONSPIRATORIAL:
-- Coordination evidence
-- Information sharing
-- Aligned actions
-- Cover-up participation
-- Shared motives
-</relationship_types_to_identify>
-
-<documents>
-{self._format_documents(documents[:60])}
-</documents>
-
-<investigation_requirements>
-For each entity discovered:
-1. Identify their TRUE role (not just stated role)
-2. Map ALL their relationships
-3. Assess their importance (central/peripheral)
-4. Calculate suspicion score (0.0-1.0)
-5. Identify missing information about them
-
-For each relationship:
-1. Provide evidence of connection
-2. Assess strength of relationship
-3. Identify if it's disclosed or hidden
-4. Determine if it creates liability
-5. Consider strategic implications
-
-Mark discoveries:
-[ENTITY-NEW] - Previously unknown entity
-[RELATIONSHIP-HIDDEN] - Undisclosed connection
-[CONTROL] - Evidence of actual control
-[CONSPIRACY] - Evidence of coordination
-[CONFLICT] - Conflict of interest
-
-The most important relationships are often the ones they hide.
-Find them.
-</investigation_requirements>"""
+What wins this case might be hidden in a single sentence.
+Find it.
+</instruction>"""
         
         return prompt
     
     # ========================================================================
     # FORMATTING HELPER METHODS
     # ========================================================================
-    
-    def _format_suspicious_entities(self, entities: List[Dict]) -> str:
-        """Format suspicious entities for prompt"""
-        if not entities:
-            return "No suspicious entities identified yet"
-        
-        formatted = []
-        for entity in entities[:10]:
-            formatted.append(
-                f"- {entity['name']} ({entity['type']}): "
-                f"Suspicion {entity['suspicion']:.1f}/1.0"
-            )
-        return "\n".join(formatted)
-    
-    def _format_contradictions(self, contradictions: List[Dict]) -> str:
-        """Format contradictions for prompt"""
-        if not contradictions:
-            return "No critical contradictions found yet"
-        
-        formatted = []
-        for cont in contradictions:
-            formatted.append(
-                f"- Severity {cont['severity']}/10: "
-                f"{cont['statement_a'][:100]} VS {cont['statement_b'][:100]}"
-            )
-        return "\n".join(formatted)
-    
-    def _format_investigations(self, investigations: List[Dict]) -> str:
-        """Format active investigations for prompt"""
-        if not investigations:
-            return "No active investigation threads"
-        
-        formatted = []
-        for inv in investigations:
-            formatted.append(
-                f"- {inv['type']} (Priority: {inv['priority']:.1f})"
-            )
-        return "\n".join(formatted)
-    
-    def _format_patterns(self, patterns: Dict) -> str:
-        """Format known patterns for prompt"""
-        if not patterns:
-            return "No patterns identified yet - hunt freely"
-        
-        formatted = []
-        for pattern_id, pattern_data in list(patterns.items())[:10]:
-            formatted.append(
-                f"- {pattern_data.get('description', pattern_id)[:100]} "
-                f"(Confidence: {pattern_data.get('confidence', 0.5):.1f})"
-            )
-        return "\n".join(formatted) if formatted else "Starting fresh pattern recognition"
-    
-    def _format_entities(self, entities: Dict) -> str:
-        """Format known entities for prompt"""
-        if not entities:
-            return "No entities mapped yet - identify all players"
-        
-        formatted = []
-        for entity_type, entity_list in list(entities.items())[:5]:
-            formatted.append(f"\n{entity_type.upper()}:")
-            for entity in entity_list[:10]:
-                formatted.append(f"  - {entity}")
-        
-        return "\n".join(formatted) if formatted else "Beginning entity mapping"
     
     def _format_documents(self, documents: List[Dict], doc_type: str = "DISCLOSURE") -> str:
         """Format documents for prompt inclusion"""
@@ -576,4 +465,30 @@ Content:
 ---
 """)
         
+        return "\n".join(formatted)
+    
+    def _format_suspicious_entities(self, entities: List[Dict]) -> str:
+        """Format suspicious entities for prompt"""
+        if not entities:
+            return "No suspicious entities identified yet"
+        
+        formatted = []
+        for entity in entities[:10]:
+            formatted.append(
+                f"- {entity.get('name', 'Unknown')} ({entity.get('type', 'Unknown')}): "
+                f"Suspicion {entity.get('suspicion', 0.0):.1f}/1.0"
+            )
+        return "\n".join(formatted)
+    
+    def _format_contradictions(self, contradictions: List[Dict]) -> str:
+        """Format contradictions for prompt"""
+        if not contradictions:
+            return "No critical contradictions found yet"
+        
+        formatted = []
+        for cont in contradictions:
+            formatted.append(
+                f"- Severity {cont.get('severity', 0)}/10: "
+                f"{cont.get('statement_a', '')[:100]} VS {cont.get('statement_b', '')[:100]}"
+            )
         return "\n".join(formatted)

@@ -1,34 +1,26 @@
 #!/usr/bin/env python3
 """
-Main Orchestration Engine for Litigation Intelligence
-UPDATED: Now supports priority document loading
-PRODUCTION READY - All methods implemented
+Main Orchestration Engine for 4-Pass Litigation Intelligence
 British English throughout - Lismore v Process Holdings
 """
 
 import json
 import time
-import shutil
-import sys
 from pathlib import Path
-from typing import Dict, List, Optional, Any, Tuple
+from typing import Dict, List, Optional
 from datetime import datetime
-import hashlib
 
 from core.config import Config
-from core.phase_executor import PhaseExecutor
+from core.pass_executor import PassExecutor
 from intelligence.knowledge_graph import KnowledgeGraph
 from api.client import ClaudeClient
-from api.context_manager import ContextManager
-from api.batch_manager import BatchManager
 from prompts.autonomous import AutonomousPrompts
-from prompts.recursive import RecursivePrompts
-from prompts.synthesis import SynthesisPrompts
+from prompts.deliverables import DeliverablesPrompts
 from utils.document_loader import DocumentLoader
 
 
 class LitigationOrchestrator:
-    """Main system orchestrator for maximum Claude utilisation"""
+    """Main system orchestrator for 4-pass litigation analysis"""
     
     def __init__(self, config_override: Dict = None):
         """Initialise orchestrator with all components"""
@@ -40,14 +32,11 @@ class LitigationOrchestrator:
         # Initialise core components
         self.knowledge_graph = KnowledgeGraph(self.config)
         self.api_client = ClaudeClient(self.config)
-        self.context_manager = ContextManager(self.config)
-        self.batch_manager = BatchManager(self.config)
-        self.phase_executor = PhaseExecutor(self.config, self)
+        self.pass_executor = PassExecutor(self.config, self)
         
         # Initialise prompt systems
         self.autonomous_prompts = AutonomousPrompts(self.config)
-        self.recursive_prompts = RecursivePrompts(self.config)
-        self.synthesis_prompts = SynthesisPrompts(self.config)
+        self.deliverables_prompts = DeliverablesPrompts(self.config)
         
         # Document loader
         self.document_loader = DocumentLoader(self.config)
@@ -67,49 +56,190 @@ class LitigationOrchestrator:
         
         # State tracking
         self.state = {
-            'phases_completed': [],
-            'current_phase': None,
-            'investigations': {},
+            'passes_completed': [],
+            'current_pass': None,
             'total_cost_gbp': 0.0
         }
         self._load_state()
         
-        # Checkpoint directories
+        # Create output directories
+        self.config.analysis_dir.mkdir(parents=True, exist_ok=True)
         self.checkpoint_dir = self.config.output_dir / "checkpoints"
-        self.batch_checkpoint_dir = self.checkpoint_dir / "batches"
         self.checkpoint_dir.mkdir(parents=True, exist_ok=True)
-        self.batch_checkpoint_dir.mkdir(parents=True, exist_ok=True)
     
-    # ============================================================================
-    # MAIN EXECUTION METHODS
-    # ============================================================================
+    # ========================================================================
+    # MAIN EXECUTION METHOD
+    # ========================================================================
     
-    def execute_single_phase(self, phase: str) -> Dict:
-        """Execute single phase with context building"""
+    def execute_complete_analysis(self) -> Dict:
+        """Execute complete 4-pass analysis"""
         
-        print(f"\n{'='*70}")
-        print(f"EXECUTING PHASE {phase}")
-        print(f"{'='*70}\n")
+        print("\n" + "="*70)
+        print("4-PASS LITIGATION INTELLIGENCE ANALYSIS")
+        print("Lismore v Process Holdings")
+        print("="*70)
         
-        self.state['current_phase'] = phase
+        results = {
+            'analysis_started': datetime.now().isoformat(),
+            'passes': {}
+        }
         
-        # Build context from knowledge graph
-        context = self.knowledge_graph.get_context_for_phase(phase)
-        
-        # Execute via phase executor
-        results = self.phase_executor.execute(phase, context)
-        
-        # Update state
-        if phase not in self.state['phases_completed']:
-            self.state['phases_completed'].append(phase)
-        
+        # Pass 1: Triage
+        print("\n🎯 Starting Pass 1: Triage & Prioritisation")
+        results['passes']['pass_1'] = self.pass_executor.execute_pass_1_triage()
+        self.state['passes_completed'].append('1')
         self._save_state()
+        
+        # Pass 2: Deep Analysis
+        print("\n🎯 Starting Pass 2: Deep Analysis")
+        priority_docs = results['passes']['pass_1']['priority_documents']
+        results['passes']['pass_2'] = self.pass_executor.execute_pass_2_deep_analysis(priority_docs)
+        self.state['passes_completed'].append('2')
+        self._save_state()
+        
+        # Pass 3: Investigations
+        print("\n🎯 Starting Pass 3: Autonomous Investigations")
+        results['passes']['pass_3'] = self.pass_executor.execute_pass_3_investigations()
+        self.state['passes_completed'].append('3')
+        self._save_state()
+        
+        # Pass 4: Synthesis & Deliverables
+        print("\n🎯 Starting Pass 4: Synthesis & Deliverables")
+        results['passes']['pass_4'] = self.pass_executor.execute_pass_4_synthesis()
+        self.state['passes_completed'].append('4')
+        self._save_state()
+        
+        results['analysis_completed'] = datetime.now().isoformat()
+        results['total_passes_completed'] = len(self.state['passes_completed'])
+        
+        # Save final results
+        self._save_final_results(results)
         
         return results
     
-    # ============================================================================
-    # CRITICAL METHOD: SPAWN INVESTIGATION
-    # ============================================================================
+    # ========================================================================
+    # INDIVIDUAL PASS EXECUTION (for testing/debugging)
+    # ========================================================================
+    
+    def execute_single_pass(self, pass_num: str) -> Dict:
+        """Execute single pass for testing"""
+        
+        print(f"\n{'='*70}")
+        print(f"EXECUTING PASS {pass_num}")
+        print(f"{'='*70}\n")
+        
+        self.state['current_pass'] = pass_num
+        
+        if pass_num == '1':
+            result = self.pass_executor.execute_pass_1_triage()
+        elif pass_num == '2':
+            # Load priority docs from Pass 1
+            pass_1_results = self._load_pass_results('1')
+            priority_docs = pass_1_results.get('priority_documents', [])
+            if not priority_docs:
+                raise Exception("Pass 1 must be completed first")
+            result = self.pass_executor.execute_pass_2_deep_analysis(priority_docs)
+        elif pass_num == '3':
+            result = self.pass_executor.execute_pass_3_investigations()
+        elif pass_num == '4':
+            result = self.pass_executor.execute_pass_4_synthesis()
+        else:
+            raise ValueError(f"Invalid pass number: {pass_num}")
+        
+        if pass_num not in self.state['passes_completed']:
+            self.state['passes_completed'].append(pass_num)
+        
+        self._save_state()
+        
+        return result
+    
+    # ========================================================================
+    # LEGACY SUPPORT (Phase 0 - foundation building)
+    # ========================================================================
+    
+    def execute_phase_0_foundation(self) -> Dict:
+        """
+        Execute Phase 0: Knowledge foundation
+        KEPT for backwards compatibility - builds legal/case knowledge
+        """
+        
+        print("\n" + "="*70)
+        print("PHASE 0: KNOWLEDGE FOUNDATION")
+        print("="*70)
+        
+        # Load legal knowledge and case context
+        legal_docs = self.document_loader.load_directory(
+            self.config.legal_knowledge_dir,
+            doc_types=['.pdf', '.txt', '.docx']
+        )
+        
+        case_docs = self.document_loader.load_directory(
+            self.config.case_context_dir,
+            doc_types=['.pdf', '.txt', '.docx']
+        )
+        
+        all_docs = legal_docs + case_docs
+        
+        print(f"  Legal knowledge: {len(legal_docs)} documents")
+        print(f"  Case context: {len(case_docs)} documents")
+        print(f"  Total: {len(all_docs)} documents")
+        
+        # Create batches
+        batches = []
+        batch_size = 30
+        for i in range(0, len(all_docs), batch_size):
+            batches.append(all_docs[i:i+batch_size])
+        
+        print(f"  Processing in {len(batches)} batches")
+        
+        results = {
+            'phase': '0',
+            'documents_processed': len(all_docs),
+            'batches': len(batches)
+        }
+        
+        # Process each batch
+        context = {}
+        for i, batch in enumerate(batches):
+            print(f"\n  Batch {i+1}/{len(batches)}: {len(batch)} documents")
+            
+            prompt = self.autonomous_prompts.knowledge_synthesis_prompt(
+                legal_knowledge=batch[:15],
+                case_context=batch[15:],
+                existing_knowledge=context
+            )
+            
+            cacheable_context = f"{self.config.hallucination_prevention}\n\nBatch {i+1}/{len(batches)} of knowledge foundation."
+            
+            try:
+                response, metadata = self.api_client.call_claude_with_cache(
+                    prompt=prompt,
+                    cacheable_context=cacheable_context,
+                    task_type='knowledge_synthesis',
+                    phase='0'
+                )
+                
+                # Update context for next batch
+                context = self.knowledge_graph.get_context_for_analysis()
+                
+            except Exception as e:
+                print(f"    ⚠️  Error in batch {i+1}: {str(e)[:100]}")
+                continue
+        
+        # Save results
+        output_dir = self.config.analysis_dir / "phase_0"
+        output_dir.mkdir(parents=True, exist_ok=True)
+        
+        with open(output_dir / "phase_0_results.json", 'w', encoding='utf-8') as f:
+            json.dump(results, f, indent=2)
+        
+        print("\n  ✅ Phase 0 complete: Knowledge foundation built")
+        
+        return results
+    
+    # ========================================================================
+    # INVESTIGATION SPAWNING (used by Pass 2 & 3)
+    # ========================================================================
     
     def spawn_investigation(self, 
                           trigger_type: str,
@@ -118,271 +248,98 @@ class LitigationOrchestrator:
                           parent_id: str = None) -> str:
         """
         Spawn new investigation thread
-        
-        Args:
-            trigger_type: Type of trigger (contradiction, discovery, pattern, etc.)
-            trigger_data: Data that triggered the investigation
-            priority: Priority score (0.0-10.0)
-            parent_id: Optional parent investigation ID
-            
-        Returns:
-            Investigation ID
+        Used by pass_executor when critical findings discovered
         """
         
-        # Generate investigation ID
-        inv_id = self._generate_investigation_id(trigger_type)
+        from core.investigation_queue import Investigation
         
-        investigation = {
-            'id': inv_id,
-            'type': trigger_type,
-            'priority': priority,
-            'data': trigger_data,
-            'parent_id': parent_id,
-            'status': 'active',
-            'created': datetime.now().isoformat(),
-            'findings': []
-        }
-        
-        self.state['investigations'][inv_id] = investigation
-        
-        print(f"    🔍 Spawned investigation: {inv_id} (priority: {priority})")
-        
-        return inv_id
-    
-    def _generate_investigation_id(self, trigger_type: str) -> str:
-        """Generate unique investigation ID"""
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        random_hash = hashlib.md5(str(time.time()).encode()).hexdigest()[:6]
-        return f"INV_{trigger_type.upper()}_{timestamp}_{random_hash}"
-    
-    # ============================================================================
-    # DOCUMENT LOADING (WITH PRIORITISATION SUPPORT)
-    # ============================================================================
-    
-    def load_priority_documents_only(self, directory: Path) -> List[Dict]:
-        """
-        NEW: Load only priority documents based on prioritisation
-        
-        If priority_documents.json exists, loads only those documents.
-        Otherwise falls back to loading all documents.
-        
-        Args:
-            directory: Directory to load from
-            
-        Returns:
-            List of document dicts
-        """
-        
-        priority_file = self.config.output_dir / "priority_documents.json"
-        
-        if not priority_file.exists():
-            print("  ℹ️  No priority list found - loading all documents")
-            return self._load_documents(directory)
-        
-        # Load priority list
-        with open(priority_file, 'r', encoding='utf-8') as f:
-            priority_data = json.load(f)
-        
-        priority_filenames = set(
-            doc['filename'] for doc in priority_data['documents']
+        investigation = Investigation(
+            topic=trigger_data.get('topic', 'Investigation'),
+            priority=int(priority),
+            trigger_data=trigger_data,
+            parent_id=parent_id
         )
         
-        print(f"  ✅ Priority list found: {len(priority_filenames)} documents")
+        self.pass_executor.investigation_queue.add(investigation)
         
-        # Load only priority documents
-        priority_docs = []
-        
-        for pattern in ['*.pdf', '*.txt', '*.docx', '*.doc']:
-            for file_path in sorted(directory.glob(f"**/{pattern}")):
-                if file_path.name in priority_filenames:
-                    try:
-                        doc = self.document_loader.load_document(file_path)
-                        if doc:
-                            priority_docs.append(doc)
-                    except Exception as e:
-                        print(f"  ⚠️  Failed to load {file_path.name}: {e}")
-        
-        print(f"  Loaded {len(priority_docs)} priority documents")
-        
-        return priority_docs
+        return investigation.get_id()
     
-    def _load_documents(self, directory: Path) -> List[Dict]:
-        """Load documents from directory (standard loading)"""
-        
-        documents = self.document_loader.load_directory(
-            directory=directory,
-            doc_types=['.pdf', '.txt', '.docx', '.doc', '.json', '.html', '.md']
-        )
-        
-        if not documents:
-            print(f"  Warning: No documents loaded from {directory}")
-        else:
-            print(f"  Loaded {len(documents)} documents from {directory}")
-            
-            # Show breakdown by type
-            by_type = {}
-            for doc in documents:
-                ext = doc['metadata'].get('extension', 'unknown')
-                by_type[ext] = by_type.get(ext, 0) + 1
-            
-            for ext, count in by_type.items():
-                print(f"    - {ext}: {count} documents")
-        
-        return documents
-    
-    # ============================================================================
-    # CHECKPOINT MANAGEMENT
-    # ============================================================================
-    
-    def _save_batch_checkpoint(self, phase: str, batch_num: int, results: Dict) -> None:
-        """Save checkpoint after batch completion"""
-        
-        checkpoint = {
-            'phase': phase,
-            'batch': batch_num,
-            'timestamp': datetime.now().isoformat(),
-            'results': results,
-            'state': self.state
-        }
-        
-        checkpoint_file = self.batch_checkpoint_dir / f"phase_{phase}_batch_{batch_num}.json"
-        with open(checkpoint_file, 'w', encoding='utf-8') as f:
-            json.dump(checkpoint, f, indent=2)
-        
-        # Also save as "latest" for easy resume
-        latest_file = self.batch_checkpoint_dir / f"phase_{phase}_latest.json"
-        with open(latest_file, 'w', encoding='utf-8') as f:
-            json.dump(checkpoint, f, indent=2)
-    
-    def _check_for_resume(self, phase: str) -> Tuple[bool, Optional[Dict]]:
-        """Check if there's a checkpoint to resume from"""
-        
-        latest_file = self.batch_checkpoint_dir / f"phase_{phase}_latest.json"
-        
-        if not latest_file.exists():
-            return False, None
-        
-        with open(latest_file, 'r', encoding='utf-8') as f:
-            checkpoint = json.load(f)
-        
-        print(f"\n⚠️  Found checkpoint from {checkpoint['timestamp']}")
-        print(f"  Last completed batch: {checkpoint['batch']}")
-        
-        # Ask user if they want to resume
-        if sys.stdin.isatty():  # Only ask if interactive
-            response = input(f"Resume from checkpoint? (yes/no): ")
-            
-            if response.lower() in ['yes', 'y']:
-                return True, checkpoint
-        
-        return False, None
-    
-    def _clear_phase_checkpoints(self, phase: str) -> None:
-        """Clear checkpoints after successful phase completion"""
-        
-        latest_file = self.batch_checkpoint_dir / f"phase_{phase}_latest.json"
-        if latest_file.exists():
-            latest_file.unlink()
-        
-        # Archive batch checkpoints
-        archive_dir = self.checkpoint_dir / "archive" / phase
-        archive_dir.mkdir(parents=True, exist_ok=True)
-        
-        for checkpoint_file in self.batch_checkpoint_dir.glob(f"phase_{phase}_batch_*.json"):
-            shutil.move(str(checkpoint_file), str(archive_dir / checkpoint_file.name))
-    
-    def _create_backup(self, phase: str) -> None:
-        """Create backup before starting phase"""
-        
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        backup_dir = self.config.output_dir / f"backup_phase_{phase}_{timestamp}"
-        backup_dir.mkdir(parents=True, exist_ok=True)
-        
-        # Backup knowledge graph
-        if self.config.graph_db_path.exists():
-            shutil.copy2(
-                self.config.graph_db_path,
-                backup_dir / "graph.db"
-            )
-        
-        # Backup state
-        state_file = self.config.output_dir / ".orchestrator_state.json"
-        if state_file.exists():
-            shutil.copy2(state_file, backup_dir / "orchestrator_state.json")
-        
-        print(f"  Backup created: {backup_dir.name}")
-    
-    # ============================================================================
+    # ========================================================================
     # STATE MANAGEMENT
-    # ============================================================================
+    # ========================================================================
     
-    def _save_state(self) -> None:
-        """Save orchestrator state"""
+    def _load_state(self):
+        """Load orchestrator state from disk"""
+        state_file = self.config.output_dir / "orchestrator_state.json"
         
-        state_file = self.config.output_dir / ".orchestrator_state.json"
+        if state_file.exists():
+            with open(state_file, 'r', encoding='utf-8') as f:
+                self.state = json.load(f)
+    
+    def _save_state(self):
+        """Save orchestrator state to disk"""
+        state_file = self.config.output_dir / "orchestrator_state.json"
+        
         with open(state_file, 'w', encoding='utf-8') as f:
             json.dump(self.state, f, indent=2)
     
-    def _load_state(self) -> None:
-        """Load orchestrator state if exists"""
+    def _load_pass_results(self, pass_num: str) -> Dict:
+        """Load results from a previous pass"""
+        results_file = self.config.analysis_dir / f"pass_{pass_num}" / f"pass_{pass_num}_results.json"
         
-        state_file = self.config.output_dir / ".orchestrator_state.json"
-        if state_file.exists():
-            with open(state_file, 'r', encoding='utf-8') as f:
-                saved_state = json.load(f)
-                self.state.update(saved_state)
-    
-    # ============================================================================
-    # MEMORY INTEGRATION (OPTIONAL)
-    # ============================================================================
-    
-    def get_context_with_memory(self, 
-                                query_text: str,
-                                phase: str = None,
-                                max_tokens: int = 100000) -> Dict[str, Any]:
-        """Get context using memory system if available"""
+        if not results_file.exists():
+            return {}
         
-        if self.memory_enabled and self.memory_system:
-            from memory import MemoryQuery
-            
-            memory_query = MemoryQuery(
-                query_text=query_text,
-                max_tokens=max_tokens,
-                include_tiers=[1, 2, 3, 5]  # Skip Tier 4 (cold storage) by default
-            )
-            
-            result = self.memory_system.retrieve_relevant_context(memory_query)
-            
-            print(f"      Memory: {result['total_tokens']} tokens, "
-                  f"saved ~£{result.get('cost_estimate', 0.0):.2f}")
-            
-            return result
-        else:
-            # Fallback to knowledge graph only
-            return {
-                'context': self.knowledge_graph.get_context_for_phase(phase or 'general'),
-                'total_tokens': 0,
-                'cost_estimate': 0.0
-            }
+        with open(results_file, 'r', encoding='utf-8') as f:
+            return json.load(f)
     
-    def _cache_analysis_if_enabled(self,
-                                   query_text: str,
-                                   response: str,
-                                   phase: str,
-                                   doc_ids: List[str]) -> None:
-        """Cache analysis if memory system enabled"""
+    def _save_final_results(self, results: Dict):
+        """Save final complete analysis results"""
+        output_file = self.config.analysis_dir / "complete_analysis_results.json"
         
-        if self.memory_enabled and self.memory_system:
-            try:
-                # Store in Tier 5 (Analysis Cache)
-                self.memory_system.tier5.cache_analysis(
-                    query=query_text,
-                    response=response,
-                    metadata={
-                        'phase': phase,
-                        'document_ids': doc_ids,
-                        'timestamp': datetime.now().isoformat()
-                    }
-                )
-            except Exception as e:
-                print(f"      ⚠️  Cache storage failed: {e}")
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(results, f, indent=2, ensure_ascii=False)
+        
+        print(f"\n💾 Final results saved: {output_file}")
+    
+    # ========================================================================
+    # UTILITY METHODS
+    # ========================================================================
+    
+    def get_status(self) -> Dict:
+        """Get current analysis status"""
+        return {
+            'passes_completed': self.state.get('passes_completed', []),
+            'current_pass': self.state.get('current_pass'),
+            'total_cost_gbp': self.api_client.get_total_cost_gbp(),
+            'knowledge_graph_stats': self.knowledge_graph.get_statistics()
+        }
+    
+    def estimate_costs(self) -> Dict:
+        """Estimate costs for complete 4-pass analysis"""
+        # Load document counts
+        disclosure_count = len(list(self.config.disclosure_dir.glob("**/*.pdf")))
+        
+        return {
+            'pass_1_triage': {
+                'documents': disclosure_count,
+                'estimated_cost_gbp': disclosure_count * 0.003,  # £0.003 per doc with Haiku
+                'estimated_time_hours': disclosure_count / 1200  # 1200 docs/hour
+            },
+            'pass_2_deep_analysis': {
+                'documents': 500,
+                'estimated_cost_gbp': 120,
+                'estimated_time_hours': 15
+            },
+            'pass_3_investigations': {
+                'estimated_investigations': 30,
+                'estimated_cost_gbp': 100,
+                'estimated_time_hours': 10
+            },
+            'pass_4_synthesis': {
+                'estimated_cost_gbp': 50,
+                'estimated_time_hours': 5
+            },
+            'total_estimated_cost_gbp': 270 + (disclosure_count * 0.003),
+            'total_estimated_time_hours': 30 + (disclosure_count / 1200)
+        }
