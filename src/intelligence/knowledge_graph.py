@@ -678,3 +678,57 @@ class KnowledgeGraph:
         hash_input = f"{prefix}_{timestamp}"
         hash_obj = hashlib.md5(hash_input.encode())
         return f"{prefix}_{hash_obj.hexdigest()[:8]}"
+    
+    def _get_context_from_memory(self, query: str, max_tokens: int = 50000) -> Dict:
+        """
+        Get context from HierarchicalMemory system
+        Falls back to knowledge graph if memory unavailable
+        """
+        try:
+            if hasattr(self.orchestrator, 'memory_enabled') and self.orchestrator.memory_enabled:
+                print("   📚 Querying HierarchicalMemory system...")
+                context = self.orchestrator.retrieve_memory_context(
+                    query_text=query,
+                    max_tokens=max_tokens,
+                    tiers=[1, 2, 3, 5]
+                )
+                
+                if 'intelligence' in context:
+                    return context['intelligence']
+                else:
+                    return self.knowledge_graph.export_complete_intelligence()
+            else:
+                print("   📚 Using knowledge graph...")
+                return self.knowledge_graph.export_complete_intelligence()
+                
+        except Exception as e:
+            print(f"   ⚠️  Memory error: {e}, using fallback")
+            return self.knowledge_graph.export_complete_intelligence()
+    
+    def _check_cache_before_analysis(self, query_key: str) -> Optional[Dict]:
+        """Check if analysis already cached"""
+        try:
+            if hasattr(self.orchestrator, 'memory_enabled') and self.orchestrator.memory_enabled:
+                cached = self.orchestrator.check_analysis_cache(query_key)
+                if cached:
+                    print(f"   🎯 CACHE HIT (£0 cost)")
+                    return cached
+                else:
+                    print(f"   💰 Cache miss (£2-3 cost)")
+            return None
+        except Exception as e:
+            print(f"   ⚠️  Cache error: {e}")
+            return None
+    
+    def _store_in_cache(self, query_key: str, result: Dict, analysis_type: str):
+        """Store analysis in cache"""
+        try:
+            if hasattr(self.orchestrator, 'memory_enabled') and self.orchestrator.memory_enabled:
+                self.orchestrator.store_analysis_in_cache(
+                    query=query_key,
+                    analysis_result=result,
+                    analysis_type=analysis_type
+                )
+                print(f"   💾 Cached for future use")
+        except Exception as e:
+            print(f"   ⚠️  Cache storage error: {e}")

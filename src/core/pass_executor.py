@@ -447,10 +447,10 @@ class PassExecutor:
     # ========================================================================
     
     def execute_pass_2_deep_analysis(self, priority_docs: List[Dict]) -> Dict:
-        """Pass 2: Deep analysis with checkpointing every 3 iterations"""
+        """Pass 2: Deep analysis with memory system integration"""
         
         print("\n" + "="*70)
-        print("PASS 2: DEEP ANALYSIS")
+        print("PASS 2: DEEP ANALYSIS WITH MEMORY SYSTEM")
         print("="*70)
         
         # Check for checkpoint
@@ -493,8 +493,43 @@ class PassExecutor:
                 print(f"  ℹ️  No more documents")
                 break
             
-            # Get context
-            context = self.knowledge_graph.get_context_for_analysis()
+            # CHECK CACHE FIRST
+            cache_key = f"pass_2_iter_{iteration}_conf_{confidence:.2f}"
+            cached_result = self._check_cache_before_analysis(cache_key)
+            
+            if cached_result:
+                # Use cached result (FREE)
+                iteration_result = cached_result
+                iteration_result['iteration'] = iteration + 1
+                iteration_result['cost_gbp'] = 0.0
+                iteration_result['source'] = 'cache'
+                
+                self.knowledge_graph.integrate_analysis(iteration_result)
+                new_confidence = iteration_result.get('confidence', 0)
+                confidence = max(confidence, new_confidence)
+                
+                results['breaches'].extend(iteration_result.get('breaches', []))
+                results['contradictions'].extend(iteration_result.get('contradictions', []))
+                results['timeline_events'].extend(iteration_result.get('timeline_events', []))
+                results['novel_arguments'].extend(iteration_result.get('novel_arguments', []))
+                results['opponent_weaknesses'].extend(iteration_result.get('opponent_weaknesses', []))
+                results['iterations'].append(iteration_result)
+                
+                print(f"    Confidence: {confidence:.1%} (cached)")
+                print(f"    Cost: £0.00 (CACHE HIT)")
+                
+                if confidence >= confidence_threshold:
+                    print(f"\n  ✅ Confidence threshold reached")
+                    results['reason_stopped'] = 'confidence_reached'
+                    break
+                
+                continue
+            
+            # GET CONTEXT FROM MEMORY SYSTEM
+            context = self._get_context_from_memory(
+                query="breach patterns contradictions timeline evidence",
+                max_tokens=50000
+            )
             
             # Determine phase
             if iteration == 0:
@@ -514,7 +549,7 @@ class PassExecutor:
             )
             
             try:
-                # Call API with caching
+                # Call API
                 response, metadata = self.api_client.call_claude_with_cache(
                     prompt=prompt,
                     dynamic_context=json.dumps(context, indent=2)[:self.config.token_config['accumulated_knowledge_limit']],
@@ -526,8 +561,9 @@ class PassExecutor:
                 iteration_result = self._parse_deep_analysis_response(response)
                 iteration_result['iteration'] = iteration + 1
                 iteration_result['cost_gbp'] = metadata.get('cost_gbp', 0)
+                iteration_result['source'] = 'api'
                 
-                # VALIDATE OUTPUT
+                # Validate
                 if self.config.validation_config['enabled']:
                     validation_result = self._validate_analysis_output(iteration_result)
                     iteration_result['validation'] = validation_result
@@ -536,8 +572,15 @@ class PassExecutor:
                     if not validation_result['passed']:
                         results['validation_issues'].extend(validation_result['issues'])
                 
-                # Integrate into knowledge graph
+                # Integrate
                 self.knowledge_graph.integrate_analysis(iteration_result)
+                
+                # STORE IN CACHE
+                self._store_in_cache(
+                    query_key=cache_key,
+                    result=iteration_result,
+                    analysis_type='deep_analysis'
+                )
                 
                 # Update confidence
                 new_confidence = iteration_result.get('confidence', 0)
@@ -549,27 +592,26 @@ class PassExecutor:
                 results['timeline_events'].extend(iteration_result.get('timeline_events', []))
                 results['novel_arguments'].extend(iteration_result.get('novel_arguments', []))
                 results['opponent_weaknesses'].extend(iteration_result.get('opponent_weaknesses', []))
-                
                 results['iterations'].append(iteration_result)
                 
                 print(f"    Confidence: {confidence:.1%}")
                 print(f"    Breaches: {len(iteration_result.get('breaches', []))}")
-                print(f"    Validation: {'✅ PASSED' if iteration_result.get('validation_passed', True) else '⚠️  ISSUES'}")
+                print(f"    Validation: {'✅' if iteration_result.get('validation_passed', True) else '⚠️'}")
                 print(f"    Cost: £{metadata.get('cost_gbp', 0):.2f}")
                 
-                # SAVE CHECKPOINT EVERY 3 ITERATIONS
+                # Checkpoint every 3 iterations
                 if (iteration + 1) % 3 == 0:
                     results['final_confidence'] = confidence
                     self._save_checkpoint('pass_2', results)
                 
-                # Check stopping condition
+                # Check stopping
                 if confidence >= confidence_threshold:
-                    print(f"\n  ✅ Confidence threshold reached: {confidence:.1%}")
+                    print(f"\n  ✅ Confidence threshold reached")
                     results['reason_stopped'] = 'confidence_reached'
                     break
                 
             except Exception as e:
-                print(f"\n  ⚠️  Error in iteration {iteration + 1}: {str(e)[:100]}")
+                print(f"\n  ⚠️  Error: {str(e)[:100]}")
                 continue
         
         # Final results
