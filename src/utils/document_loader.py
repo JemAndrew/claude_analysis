@@ -1,810 +1,400 @@
 #!/usr/bin/env python3
 """
-Enhanced Document Loader with Metadata Extraction
-Handles all document types for litigation intelligence
-COMPLETE VERSION - Memory tiers integrated
+Document Loader for Lismore Litigation Intelligence System
+Loads documents directly from source folders (no copying needed)
+Extracts folder metadata from FolderMapping
 British English throughout
 """
 
+import PyPDF2
+import fitz  # PyMuPDF
+import pdfplumber
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple, Any
+from typing import Dict, List, Optional
+import json
 from datetime import datetime
 import hashlib
-import json
-import re
-
-# PDF libraries
-try:
-    import fitz  # PyMuPDF
-    PYMUPDF_AVAILABLE = True
-except ImportError:
-    PYMUPDF_AVAILABLE = False
-
-try:
-    import pdfplumber
-    PDFPLUMBER_AVAILABLE = True
-except ImportError:
-    PDFPLUMBER_AVAILABLE = False
-
-import PyPDF2
-import docx
-import chardet
 
 
 class DocumentLoader:
-    """Advanced document loading with metadata extraction and memory tier integration"""
+    """Loads and processes documents from source folders"""
+    
+    SUPPORTED_FORMATS = ['.pdf', '.docx', '.doc', '.txt', '.json', '.html', '.md']
     
     def __init__(self, config):
-        self.config = config
-        self.load_stats = {
-            'total_loaded': 0,
-            'failed_loads': 0,
-            'by_type': {}
-        }
-        
-        # NEW: Memory tier integration
-        self.vector_store = None
-        self.cold_storage = None
-        
-        # Initialise Tier 2: Vector Store (if enabled)
-        if hasattr(config, 'enable_vector_store') and config.enable_vector_store:
-            try:
-                from memory.tier2_vector import VectorStoreManager
-                vector_path = config.root / "data" / "memory_tiers" / "tier2_vector_store"
-                self.vector_store = VectorStoreManager(vector_path, config)
-                print("✅ Tier 2 Vector Store ACTIVE (semantic search enabled)")
-            except ImportError as e:
-                print(f"⚠️  Tier 2 Vector Store unavailable: {e}")
-                print("    Install: pip install chromadb sentence-transformers")
-            except Exception as e:
-                print(f"⚠️  Tier 2 Vector Store error: {e}")
-        
-        # Initialise Tier 4: Cold Storage (if enabled)
-        if hasattr(config, 'enable_cold_storage') and config.enable_cold_storage:
-            try:
-                from memory.tier4_cold_storage import ColdStorageManager
-                vault_path = config.root / "data" / "memory_tiers" / "tier4_cold_storage"
-                self.cold_storage = ColdStorageManager(vault_path, config)
-                print("✅ Tier 4 Cold Storage ACTIVE (document encryption enabled)")
-            except ImportError as e:
-                print(f"⚠️  Tier 4 Cold Storage unavailable: {e}")
-                print("    Install: pip install cryptography")
-            except Exception as e:
-                print(f"⚠️  Tier 4 Cold Storage error: {e}")
-    
-    def load_directory(self, 
-                      directory: Path,
-                      max_docs: Optional[int] = None,
-                      doc_types: List[str] = None) -> List[Dict]:
         """
-        Load all documents from directory
+        Initialise document loader
         
         Args:
-            directory: Path to document directory
-            max_docs: Maximum documents to load
-            doc_types: List of extensions to load
-        
-        Returns:
-            List of document dictionaries with content and metadata
+            config: Config object with folder mapping
         """
+        self.config = config
+        self.folder_mapping = config.folder_mapping
         
-        if not directory.exists():
-            print(f"Warning: Directory {directory} does not exist")
-            return []
+        # Stats
+        self.stats = {
+            'total_loaded': 0,
+            'successful': 0,
+            'failed': 0,
+            'by_format': {},
+            'by_folder': {},
+            'by_priority': {}
+        }
+    
+    def load_all_documents(self, folders: Optional[List[Path]] = None) -> List[Dict]:
+        """
+        Load all documents from specified folders
         
-        # Default document types
-        if doc_types is None:
-            doc_types = ['.pdf', '.docx', '.doc', '.txt', '.json', '.html', '.md']
+        Args:
+            folders: List of folder paths. If None, uses Pass 1 folders from config
+            
+        Returns:
+            List of document dictionaries
+        """
+        if folders is None:
+            folders = self.config.get_pass_1_folders()
         
         documents = []
-        files_processed = 0
         
-        # Get all matching files
-        all_files = []
-        for doc_type in doc_types:
-            all_files.extend(directory.glob(f"**/*{doc_type}"))
+        print(f"\n{'=' * 70}")
+        print(f"LOADING DOCUMENTS")
+        print(f"{'=' * 70}")
+        print(f"Folders to load: {len(folders)}\n")
         
-        # Sort for consistent ordering
-        all_files.sort()
+        for folder_path in folders:
+            print(f"Loading: {folder_path.name}")
+            folder_docs = self.load_folder(folder_path)
+            documents.extend(folder_docs)
+            print(f"  Loaded: {len(folder_docs)} documents\n")
         
-        # Limit if specified
-        if max_docs:
-            all_files = all_files[:max_docs]
-        
-        print(f"Loading {len(all_files)} documents from {directory}")
-        
-        for file_path in all_files:
-            files_processed += 1
-            
-            if files_processed % 10 == 0:
-                print(f"  Progress: {files_processed}/{len(all_files)}")
-            
-            try:
-                document = self.load_document(file_path)
-                if document:
-                    documents.append(document)
-                    self.load_stats['total_loaded'] += 1
-            except Exception as e:
-                print(f"  Failed to load {file_path.name}: {e}")
-                self.load_stats['failed_loads'] += 1
-        
-        print(f"✅ Loaded {len(documents)} documents successfully")
-        
-        # Report memory tier statistics
-        if self.vector_store:
-            stats = self.vector_store.get_collection_stats()
-            print(f"   Tier 2: {stats.get('total_documents', 0)} docs indexed")
+        print(f"{'=' * 70}")
+        print(f"Total documents loaded: {len(documents)}")
+        print(f"{'=' * 70}\n")
         
         return documents
     
-    def load_document(self, file_path: Path) -> Optional[Dict]:
+    def load_folder(self, folder_path: Path) -> List[Dict]:
         """
-        Load single document with metadata extraction - ENHANCED with folder context
+        Load all documents from a folder
         
+        Args:
+            folder_path: Path to folder
+            
         Returns:
-            Document dictionary with content, metadata, and folder context
+            List of document dictionaries
         """
+        documents = []
         
-        if not file_path.exists():
-            return None
+        # Get folder metadata from mapping
+        folder_name = folder_path.name
+        folder_metadata = self._extract_folder_metadata(folder_name)
+        
+        # Find all supported files
+        for file_path in folder_path.rglob('*'):
+            if file_path.is_file() and file_path.suffix.lower() in self.SUPPORTED_FORMATS:
+                try:
+                    doc = self.load_document(file_path, folder_metadata)
+                    if doc:
+                        documents.append(doc)
+                        self.stats['successful'] += 1
+                    else:
+                        self.stats['failed'] += 1
+                
+                except Exception as e:
+                    print(f"  ⚠️  Failed to load: {file_path.name} ({str(e)[:50]})")
+                    self.stats['failed'] += 1
+                
+                self.stats['total_loaded'] += 1
+        
+        # Update stats
+        self.stats['by_folder'][folder_name] = len(documents)
+        
+        return documents
+    
+    def load_document(self, file_path: Path, folder_metadata: Dict) -> Optional[Dict]:
+        """
+        Load a single document
+        
+        Args:
+            file_path: Path to document
+            folder_metadata: Metadata extracted from folder
+            
+        Returns:
+            Document dictionary or None if failed
+        """
+        # Extract text based on file type
+        text = self._extract_text(file_path)
+        
+        if not text or len(text.strip()) < 10:
+            return None  # Skip empty or near-empty files
         
         # Generate document ID
         doc_id = self._generate_doc_id(file_path)
         
-        # Load based on file type
-        extension = file_path.suffix.lower()
-        
-        content = None
-        extraction_metadata = {}
-        
-        if extension == '.pdf':
-            content, extraction_metadata = self._load_pdf(file_path)
-        elif extension in ['.docx', '.doc']:
-            content = self._load_docx(file_path)
-        elif extension == '.json':
-            content = self._load_json(file_path)
-        elif extension in ['.txt', '.md', '.html']:
-            content = self._load_text(file_path)
-        else:
-            content = self._load_text(file_path)  # Try as text
-        
-        if not content:
-            return None
-        
-        # Extract comprehensive metadata
-        metadata = self._extract_metadata(file_path, content, extraction_metadata)
-        
-        # NEW: Extract folder context (CRITICAL for Pass 1 prioritisation)
-        folder_context = self._extract_folder_context(file_path)
-        metadata['folder_context'] = folder_context
-        
-        # NEW: Add priority boost based on folder
-        metadata['folder_priority_boost'] = folder_context.get('priority_tier', 5)
-        metadata['document_source_type'] = folder_context.get('source_type', 'unknown')
-        metadata['is_raw_disclosure'] = folder_context.get('is_disclosure', False)
-        metadata['batch_date'] = folder_context.get('batch_date')
-        
-        # Update stats
-        ext = extension
-        self.load_stats['by_type'][ext] = self.load_stats['by_type'].get(ext, 0) + 1
-        
-        # Build document object
+        # Build document dictionary
         document = {
             'id': doc_id,
             'filename': file_path.name,
             'filepath': str(file_path),
-            'content': content,
-            'metadata': metadata
+            'file_extension': file_path.suffix.lower(),
+            'file_size_bytes': file_path.stat().st_size,
+            'modified_date': datetime.fromtimestamp(file_path.stat().st_mtime).isoformat(),
+            'text': text,
+            'text_length': len(text),
+            'preview': text[:300],  # First 300 chars for triage
+            
+            # Folder metadata
+            'folder_name': folder_metadata['folder_name'],
+            'folder_category': folder_metadata['category'],
+            'folder_priority': folder_metadata['priority'],
+            'folder_description': folder_metadata['description'],
+            
+            # Processing metadata
+            'loaded_at': datetime.now().isoformat(),
+            'processing_status': 'loaded'
         }
         
-        # NEW: Add to memory tiers if enabled (with folder context)
-        self._add_to_memory_tiers(file_path, document, extension)
+        # Update format stats
+        ext = file_path.suffix.lower()
+        self.stats['by_format'][ext] = self.stats['by_format'].get(ext, 0) + 1
+        
+        # Update priority stats
+        priority = folder_metadata['priority']
+        self.stats['by_priority'][priority] = self.stats['by_priority'].get(priority, 0) + 1
         
         return document
     
-    def _add_to_memory_tiers(self, file_path: Path, document: Dict, extension: str):
-        """Add document to memory tiers (Tier 2 & 4)"""
+    def _extract_folder_metadata(self, folder_name: str) -> Dict:
+        """
+        Extract metadata for a folder from FolderMapping
         
-        doc_id = document['id']
-        content = document['content']
-        metadata = document['metadata']
-        folder_context = metadata.get('folder_context', {})
+        Args:
+            folder_name: Name of folder (e.g., "55. Document Production")
+            
+        Returns:
+            Dict with folder metadata
+        """
+        metadata = self.folder_mapping.get_folder_metadata(folder_name)
         
-        # TIER 2: Add to vector store (for semantic search)
-        if self.vector_store and content:
-            try:
-                self.vector_store.add_document(
-                    doc_path=file_path,
-                    doc_metadata={
-                        'doc_id': doc_id,
-                        'content': content,
-                        'filename': file_path.name,
-                        'folder': str(file_path.parent.name),
-                        'classification': metadata.get('classification', 'general'),
-                        'has_dates': metadata.get('has_dates', False),
-                        'has_amounts': metadata.get('has_amounts', False),
-                        'word_count': metadata.get('word_count', 0),
-                        'source_type': folder_context.get('source_type', 'unknown'),
-                        'priority_tier': folder_context.get('priority_tier', 5),
-                        'is_disclosure': folder_context.get('is_disclosure', False),
-                        'batch_date': folder_context.get('batch_date'),
-                        'party': folder_context.get('party'),
-                        **metadata
-                    }
-                )
-            except Exception as e:
-                # Don't fail entire load if vector indexing fails
-                print(f"    ⚠️  Vector indexing failed for {file_path.name}: {e}")
-        
-        # TIER 4: Encrypt to cold storage (PDFs only for security)
-        if self.cold_storage and extension == '.pdf':
-            try:
-                # Determine importance for prioritisation
-                importance = 5  # Default
-                classification = metadata.get('classification', 'general')
-                
-                if classification in ['witness_statement', 'contract']:
-                    importance = 10  # High importance
-                elif classification in ['correspondence', 'minutes']:
-                    importance = 7
-                
-                self.cold_storage.encrypt_and_store(
-                    file_path=file_path,
-                    doc_metadata={
-                        'doc_id': doc_id,
-                        'filename': file_path.name,
-                        'classification': classification,
-                        'importance': importance,
-                        'file_size': metadata.get('file_size_mb', 0),
-                        **metadata
-                    }
-                )
-            except Exception as e:
-                print(f"    ⚠️  Cold storage encryption failed for {file_path.name}: {e}")
+        if metadata:
+            return {
+                'folder_name': folder_name,
+                'category': metadata['category'],
+                'priority': metadata['priority'],
+                'description': metadata['description'],
+                'pass_1_include': metadata['pass_1_include']
+            }
+        else:
+            # Folder not in mapping - use defaults
+            return {
+                'folder_name': folder_name,
+                'category': 'unmapped',
+                'priority': 5,  # Mid-priority default
+                'description': 'Unmapped folder',
+                'pass_1_include': True
+            }
     
-    def _load_pdf(self, file_path: Path) -> Tuple[Optional[str], Dict]:
-        """Load PDF file with metadata"""
+    def _extract_text(self, file_path: Path) -> str:
+        """
+        Extract text from file based on format
         
-        extraction_metadata = {}
-        content = None
+        Args:
+            file_path: Path to file
+            
+        Returns:
+            Extracted text
+        """
+        ext = file_path.suffix.lower()
         
-        # Try PyMuPDF first (best quality)
-        if PYMUPDF_AVAILABLE:
-            try:
-                doc = fitz.open(file_path)
-                text_parts = []
-                
-                for page_num, page in enumerate(doc):
-                    text_parts.append(page.get_text())
-                
-                content = '\n\n'.join(text_parts)
-                extraction_metadata['page_count'] = len(doc)
-                extraction_metadata['method'] = 'pymupdf'
-                doc.close()
-                
-                if content and len(content.strip()) > 50:
-                    return content, extraction_metadata
-            except Exception as e:
-                pass  # Try next method
-        
-        # Try pdfplumber
-        if PDFPLUMBER_AVAILABLE and not content:
-            try:
-                import pdfplumber
-                with pdfplumber.open(file_path) as pdf:
-                    text_parts = []
-                    for page in pdf.pages:
-                        text = page.extract_text()
-                        if text:
-                            text_parts.append(text)
-                    
-                    content = '\n\n'.join(text_parts)
-                    extraction_metadata['page_count'] = len(pdf.pages)
-                    extraction_metadata['method'] = 'pdfplumber'
-                
-                if content and len(content.strip()) > 50:
-                    return content, extraction_metadata
-            except Exception as e:
-                pass  # Try next method
-        
-        # Fallback to PyPDF2
-        if not content:
-            try:
-                with open(file_path, 'rb') as f:
-                    reader = PyPDF2.PdfReader(f)
-                    text_parts = []
-                    
-                    for page in reader.pages:
-                        text = page.extract_text()
-                        if text:
-                            text_parts.append(text)
-                    
-                    content = '\n\n'.join(text_parts)
-                    extraction_metadata['page_count'] = len(reader.pages)
-                    extraction_metadata['method'] = 'pypdf2'
-            except Exception as e:
-                return None, {}
-        
-        return content, extraction_metadata
+        if ext == '.pdf':
+            return self._extract_pdf_text(file_path)
+        elif ext in ['.docx', '.doc']:
+            return self._extract_docx_text(file_path)
+        elif ext in ['.txt', '.md']:
+            return self._extract_text_file(file_path)
+        elif ext == '.json':
+            return self._extract_json_text(file_path)
+        elif ext == '.html':
+            return self._extract_html_text(file_path)
+        else:
+            return ""
     
-    def _load_docx(self, file_path: Path) -> Optional[str]:
-        """Load DOCX file"""
+    def _extract_pdf_text(self, file_path: Path) -> str:
+        """
+        Extract text from PDF using multiple methods
+        Tries PyMuPDF first, falls back to pdfplumber, then PyPDF2
+        """
+        text = ""
         
+        # Method 1: PyMuPDF (fitz) - fastest and most reliable
         try:
-            doc = docx.Document(file_path)
-            
-            # Extract paragraphs
-            paragraphs = []
-            for para in doc.paragraphs:
-                if para.text.strip():
-                    paragraphs.append(para.text)
-            
-            # Extract tables
-            for table in doc.tables:
-                for row in table.rows:
-                    row_text = '\t'.join(cell.text for cell in row.cells)
-                    if row_text.strip():
-                        paragraphs.append(row_text)
-            
-            return '\n'.join(paragraphs)
-            
+            with fitz.open(file_path) as doc:
+                text = ""
+                for page in doc:
+                    text += page.get_text()
+                
+                if text.strip():
+                    return text
         except Exception as e:
-            return None
-    
-    def _load_json(self, file_path: Path) -> Optional[str]:
-        """Load JSON file"""
+            pass
         
+        # Method 2: pdfplumber - good for tables and complex layouts
+        try:
+            with pdfplumber.open(file_path) as pdf:
+                text = ""
+                for page in pdf.pages:
+                    page_text = page.extract_text()
+                    if page_text:
+                        text += page_text + "\n"
+                
+                if text.strip():
+                    return text
+        except Exception as e:
+            pass
+        
+        # Method 3: PyPDF2 - fallback
+        try:
+            with open(file_path, 'rb') as f:
+                pdf_reader = PyPDF2.PdfReader(f)
+                text = ""
+                for page in pdf_reader.pages:
+                    text += page.extract_text() + "\n"
+                
+                return text
+        except Exception as e:
+            return ""
+    
+    def _extract_docx_text(self, file_path: Path) -> str:
+        """Extract text from Word document"""
+        try:
+            from docx import Document
+            doc = Document(file_path)
+            text = "\n".join([para.text for para in doc.paragraphs])
+            return text
+        except Exception as e:
+            return ""
+    
+    def _extract_text_file(self, file_path: Path) -> str:
+        """Extract text from plain text file"""
+        try:
+            with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
+                return f.read()
+        except Exception as e:
+            return ""
+    
+    def _extract_json_text(self, file_path: Path) -> str:
+        """Extract text from JSON file"""
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
                 return json.dumps(data, indent=2)
         except Exception as e:
-            return None
+            return ""
     
-    def _load_text(self, file_path: Path) -> Optional[str]:
-        """Load text file with encoding detection"""
-        
+    def _extract_html_text(self, file_path: Path) -> str:
+        """Extract text from HTML file"""
         try:
-            # Detect encoding
-            with open(file_path, 'rb') as f:
-                raw_data = f.read(10000)
-                result = chardet.detect(raw_data)
-                encoding = result['encoding'] or 'utf-8'
-            
-            # Load with detected encoding
-            with open(file_path, 'r', encoding=encoding, errors='ignore') as f:
-                return f.read()
-                
+            from bs4 import BeautifulSoup
+            with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
+                soup = BeautifulSoup(f.read(), 'html.parser')
+                return soup.get_text()
         except Exception as e:
-            return None
+            # Fallback: just read as text
+            return self._extract_text_file(file_path)
     
     def _generate_doc_id(self, file_path: Path) -> str:
-        """Generate unique document ID"""
-        
-        path_hash = hashlib.md5(str(file_path).encode()).hexdigest()[:8].upper()
-        
-        # Prefix based on location
-        if 'legal' in str(file_path).lower():
-            prefix = 'LEGAL'
-        elif 'case' in str(file_path).lower():
-            prefix = 'CASE'
-        elif 'disclosure' in str(file_path).lower():
-            prefix = 'DISC'
-        else:
-            prefix = 'DOC'
-        
-        return f"{prefix}_{path_hash}"
-    
-    def _extract_metadata(self, 
-                         file_path: Path,
-                         content: str,
-                         extraction_metadata: Dict) -> Dict:
-        """Extract comprehensive metadata from document"""
-        
-        metadata = {
-            'file_size_mb': file_path.stat().st_size / (1024 * 1024),
-            'modified_date': datetime.fromtimestamp(file_path.stat().st_mtime).isoformat(),
-            'extension': file_path.suffix.lower(),
-            'source_folder': file_path.parent.name,
-            'char_count': len(content),
-            'word_count': len(content.split()),
-            'line_count': content.count('\n')
-        }
-        
-        # Add extraction metadata
-        metadata.update(extraction_metadata)
-        
-        # Extract dates
-        dates = self._extract_dates(content)
-        metadata['dates_found'] = dates[:10]
-        metadata['has_dates'] = len(dates) > 0
-        
-        # Extract amounts
-        amounts = self._extract_amounts(content)
-        metadata['amounts_found'] = amounts[:10]
-        metadata['has_amounts'] = len(amounts) > 0
-        
-        # Extract entities
-        entities = self._extract_entities(content)
-        metadata['entities'] = entities
-        metadata['has_entities'] = bool(entities['people'] or entities['companies'])
-        
-        # Document classification
-        metadata['classification'] = self._classify_document(file_path.name, content)
-        
-        # Content flags
-        metadata['has_tables'] = bool(re.search(r'\t|\|', content))
-        metadata['has_emails'] = bool(re.findall(r'\b[\w.-]+@[\w.-]+\.\w+\b', content))
-        
-        return metadata
-    
-    def _extract_dates(self, content: str) -> List[str]:
-        """Extract dates from content"""
-        
-        dates = []
-        
-        # Multiple date patterns
-        patterns = [
-            r'\b\d{1,2}[/-]\d{1,2}[/-]\d{2,4}\b',  # DD/MM/YYYY
-            r'\b\d{4}[/-]\d{1,2}[/-]\d{1,2}\b',    # YYYY-MM-DD
-            r'\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]* \d{1,2},? \d{4}\b',
-            r'\b\d{1,2} (?:January|February|March|April|May|June|July|August|September|October|November|December) \d{4}\b'
-        ]
-        
-        for pattern in patterns:
-            matches = re.findall(pattern, content, re.IGNORECASE)
-            dates.extend(matches)
-        
-        # Remove duplicates while preserving order
-        seen = set()
-        unique_dates = []
-        for date in dates:
-            if date not in seen:
-                seen.add(date)
-                unique_dates.append(date)
-        
-        return unique_dates
-    
-    def _extract_amounts(self, content: str) -> List[str]:
-        """Extract monetary amounts from content"""
-        
-        amounts = []
-        
-        # Amount patterns - British English focused
-        patterns = [
-            r'£\s*[\d,]+(?:\.\d{2})?(?:\s*(?:million|billion|k|m|bn))?',
-            r'\$\s*[\d,]+(?:\.\d{2})?(?:\s*(?:million|billion|k|m|bn))?',
-            r'€\s*[\d,]+(?:\.\d{2})?(?:\s*(?:million|billion|k|m|bn))?',
-            r'[\d,]+(?:\.\d{2})?\s*(?:GBP|USD|EUR|pounds?|dollars?)',
-            r'\b\d{1,3}(?:,\d{3})+(?:\.\d{2})?\b'
-        ]
-        
-        for pattern in patterns:
-            matches = re.findall(pattern, content, re.IGNORECASE)
-            amounts.extend(matches)
-        
-        # Remove duplicates
-        seen = set()
-        unique_amounts = []
-        for amount in amounts:
-            clean_amount = amount.strip()
-            if clean_amount not in seen:
-                seen.add(clean_amount)
-                unique_amounts.append(clean_amount)
-        
-        return unique_amounts
-    
-    def _extract_entities(self, content: str) -> Dict:
-        """Extract entities from content"""
-        
-        entities = {
-            'people': [],
-            'companies': [],
-            'emails': []
-        }
-        
-        # Extract people (capitalised names)
-        people_pattern = r'\b([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\b'
-        people = re.findall(people_pattern, content)
-        entities['people'] = list(set(people))[:20]
-        
-        # Extract companies
-        company_patterns = [
-            r'\b\w+\s+(?:Ltd|Limited|Inc|LLC|LLP|Plc|Corp|Corporation)\b',
-            r'\b\w+\s+(?:Capital|Holdings|Partners|Group|Ventures)\b'
-        ]
-        
-        companies = []
-        for pattern in company_patterns:
-            matches = re.findall(pattern, content, re.IGNORECASE)
-            companies.extend(matches)
-        entities['companies'] = list(set(companies))[:20]
-        
-        # Extract emails
-        email_pattern = r'\b[\w.-]+@[\w.-]+\.\w+\b'
-        emails = re.findall(email_pattern, content)
-        entities['emails'] = list(set(emails))[:10]
-        
-        return entities
-    
-    def _classify_document(self, filename: str, content: str) -> str:
-        """Classify document type based on content and filename"""
-        
-        filename_lower = filename.lower()
-        content_lower = content[:5000].lower()
-        
-        # Check filename patterns
-        if 'contract' in filename_lower or 'agreement' in filename_lower:
-            return 'contract'
-        elif 'email' in filename_lower or 'correspondence' in filename_lower:
-            return 'correspondence'
-        elif 'invoice' in filename_lower or 'receipt' in filename_lower:
-            return 'financial'
-        elif 'statement' in filename_lower or 'witness' in filename_lower:
-            return 'witness_statement'
-        elif 'minutes' in filename_lower or 'meeting' in filename_lower:
-            return 'minutes'
-        
-        # Check content patterns
-        if 'whereas' in content_lower and 'agreement' in content_lower:
-            return 'contract'
-        elif 'from:' in content_lower and 'to:' in content_lower:
-            return 'email'
-        elif 'invoice' in content_lower or 'payment' in content_lower:
-            return 'financial'
-        elif 'i state' in content_lower or 'witness statement' in content_lower:
-            return 'witness_statement'
-        elif 'minutes of' in content_lower:
-            return 'minutes'
-        
-        return 'general'
-    
-    def _extract_folder_context(self, file_path: Path) -> Dict:
         """
-        Extract context from folder structure - CRITICAL for intelligent prioritisation
+        Generate unique document ID from file path
         
         Args:
-            file_path: Path to document file
+            file_path: Path to file
             
         Returns:
-            Dict with folder context metadata
+            SHA256 hash of file path
         """
+        path_str = str(file_path)
+        return hashlib.sha256(path_str.encode()).hexdigest()[:16]
+    
+    def print_stats(self):
+        """Print loading statistics"""
+        print("\n" + "=" * 70)
+        print("DOCUMENT LOADING STATISTICS")
+        print("=" * 70)
         
-        # Get folder hierarchy as string
-        folder_str = str(file_path.parent).lower()
-        parts = file_path.parts
+        print(f"Total files processed: {self.stats['total_loaded']}")
+        print(f"  Successful: {self.stats['successful']}")
+        print(f"  Failed: {self.stats['failed']}")
         
-        # Default context
-        context = {
-            'source_type': 'unknown',
-            'priority_tier': 5,  # Default medium priority
-            'is_disclosure': False,
-            'is_duplicate_risk': False,
-            'batch_date': None,
-            'folder_category': 'unknown'
-        }
+        if self.stats['by_format']:
+            print(f"\nBy format:")
+            for fmt, count in sorted(self.stats['by_format'].items()):
+                print(f"  {fmt}: {count} documents")
         
-        # ====================================================================
-        # TIER 10: RAW DISCLOSURE (HIGHEST PRIORITY - WHERE SMOKING GUNS HIDE)
-        # ====================================================================
+        if self.stats['by_priority']:
+            print(f"\nBy priority tier:")
+            for priority in sorted(self.stats['by_priority'].keys(), reverse=True):
+                count = self.stats['by_priority'][priority]
+                print(f"  Tier {priority}: {count} documents")
         
-        if '4_disclosure' in folder_str or 'disclosure' in folder_str:
-            context['source_type'] = 'raw_disclosure'
-            context['priority_tier'] = 10
-            context['is_disclosure'] = True
-            context['folder_category'] = 'disclosure'
-            
-            # Identify if respondent or claimant production
-            if 'respondent' in folder_str or 'phl' in folder_str:
-                context['party'] = 'respondent'
-                context['priority_tier'] = 10  # Respondent disclosure HIGHEST priority
-            elif 'claimant' in folder_str or 'lismore' in folder_str:
-                context['party'] = 'claimant'
-                context['priority_tier'] = 8  # Our own disclosure lower priority
-            
-            # Extract batch date if present
-            import re
-            date_patterns = [
-                r'(\d{1,2}[_\s][a-z]{3,}[_\s]\d{4})',  # "11_April_2025"
-                r'(\d{4}[-_]\d{2}[-_]\d{2})',           # "2025-04-11"
-                r'(\d{1,2}[_\s][a-z]{3,})',             # "11_April"
-            ]
-            
-            for pattern in date_patterns:
-                date_match = re.search(pattern, folder_str, re.IGNORECASE)
-                if date_match:
-                    context['batch_date'] = date_match.group(1).replace('_', ' ')
-                    break
-            
-            # Check if "complete sets" - highest quality disclosure
-            if 'complete' in folder_str:
-                context['priority_tier'] = 10
-                context['is_complete_set'] = True
+        if self.stats['by_folder']:
+            print(f"\nBy folder (top 10):")
+            sorted_folders = sorted(self.stats['by_folder'].items(), 
+                                  key=lambda x: x[1], reverse=True)
+            for folder, count in sorted_folders[:10]:
+                print(f"  {folder}: {count} documents")
         
-        # ====================================================================
-        # TIER 9: WITNESS EVIDENCE (HIGH PRIORITY - DIRECT TESTIMONY)
-        # ====================================================================
+        print("=" * 70)
+    
+    def save_document_index(self, documents: List[Dict], output_file: Path = None):
+        """
+        Save document index to JSON file
         
-        elif '3_witness' in folder_str or 'witness' in folder_str:
-            context['source_type'] = 'witness_statement'
-            context['priority_tier'] = 9
-            context['folder_category'] = 'witness_evidence'
-            
-            # Identify which witness
-            if 'cahill' in folder_str or 'bc' in folder_str:
-                context['witness'] = 'Brendan Cahill'
-                context['party'] = 'claimant'
-            elif 'taiga' in folder_str or 'isha' in folder_str:
-                context['witness'] = 'Isha Taiga'
-                context['party'] = 'respondent'
+        Args:
+            documents: List of document dictionaries
+            output_file: Output file path
+        """
+        if output_file is None:
+            output_file = self.config.output_dir / "document_index.json"
         
-        # ====================================================================
-        # TIER 8: CORRESPONDENCE (MEDIUM-HIGH - EMAIL CHAINS, ADMISSIONS)
-        # ====================================================================
+        # Create lightweight index (without full text)
+        index = []
+        for doc in documents:
+            index_entry = {
+                'id': doc['id'],
+                'filename': doc['filename'],
+                'filepath': doc['filepath'],
+                'folder_name': doc['folder_name'],
+                'folder_category': doc['folder_category'],
+                'folder_priority': doc['folder_priority'],
+                'text_length': doc['text_length'],
+                'preview': doc['preview'],
+                'modified_date': doc['modified_date']
+            }
+            index.append(index_entry)
         
-        elif '6_correspondence' in folder_str or 'email' in folder_str or 'correspondence' in folder_str:
-            context['source_type'] = 'correspondence'
-            context['priority_tier'] = 8
-            context['folder_category'] = 'correspondence'
-            
-            # Check if chronological email run (highest value correspondence)
-            if 'chronological' in folder_str or 'email_run' in folder_str:
-                context['priority_tier'] = 8
-                context['is_email_chain'] = True
+        output_file.parent.mkdir(parents=True, exist_ok=True)
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(index, f, indent=2, ensure_ascii=False)
         
-        # ====================================================================
-        # TIER 7: DISCLOSURE DISPUTES (IMPORTANT - SHOWS WHAT'S MISSING)
-        # ====================================================================
-        
-        elif '7_disclosure_disputes' in folder_str or 'objection' in folder_str or 'stern' in folder_str:
-            context['source_type'] = 'disclosure_dispute'
-            context['priority_tier'] = 7
-            context['folder_category'] = 'disclosure_disputes'
-            
-            if 'objection' in folder_str:
-                context['dispute_type'] = 'objection'
-            elif 'stern' in folder_str:
-                context['dispute_type'] = 'stern_schedule'
-        
-        # ====================================================================
-        # TIER 6-7: PLEADINGS (MEDIUM - ALREADY SYNTHESISED ARGUMENTS)
-        # ====================================================================
-        
-        elif '2_case_pleadings' in folder_str or any(term in folder_str for term in ['claim', 'defence', 'reply', 'rejoinder', 'pleading']):
-            context['source_type'] = 'pleading'
-            context['folder_category'] = 'pleadings'
-            
-            # Identify document type
-            if 'statement_of_claim' in folder_str or 'claim' in folder_str:
-                context['pleading_type'] = 'statement_of_claim'
-                context['priority_tier'] = 7 if 'claimant' in folder_str else 6
-                context['party'] = 'claimant'
-            elif 'defence' in folder_str:
-                context['pleading_type'] = 'defence'
-                context['priority_tier'] = 7  # Know their position
-                context['party'] = 'respondent'
-            elif 'reply' in folder_str:
-                context['pleading_type'] = 'reply'
-                context['priority_tier'] = 6
-            elif 'application' in folder_str:
-                context['pleading_type'] = 'application'
-                context['priority_tier'] = 6
-        
-        # ====================================================================
-        # TIER 5-6: TRIBUNAL ORDERS (REFERENCE - PROCEDURAL CONTEXT)
-        # ====================================================================
-        
-        elif '5_tribunal_orders' in folder_str or 'tribunal' in folder_str or 'ruling' in folder_str:
-            context['source_type'] = 'tribunal_order'
-            context['priority_tier'] = 5
-            context['folder_category'] = 'tribunal_orders'
-            
-            if 'ruling' in folder_str:
-                context['priority_tier'] = 6  # Rulings slightly higher
-        
-        # ====================================================================
-        # TIER 4-5: LEGAL KNOWLEDGE (FOUNDATION - CONTEXT BUILDING)
-        # ====================================================================
-        
-        elif '1_legal_knowledge' in folder_str or 'legal_knowledge' in folder_str:
-            context['source_type'] = 'legal_knowledge'
-            context['priority_tier'] = 5
-            context['folder_category'] = 'legal_knowledge'
-            
-            # P&ID v Nigeria - related case
-            if 'p&id' in folder_str or 'nigeria' in folder_str:
-                context['source_type'] = 'related_case'
-                context['priority_tier'] = 4
-                context['related_case'] = 'P&ID v Nigeria'
-            
-            # LCIA Rules
-            elif 'lcia' in folder_str or 'rules' in folder_str:
-                context['source_type'] = 'arbitration_rules'
-                context['priority_tier'] = 5
-        
-        # ====================================================================
-        # TIER 2-4: PROCEDURAL LOW PRIORITY (SKIP IN PASS 1 OR METADATA ONLY)
-        # ====================================================================
-        
-        elif '8_procedural' in folder_str or any(term in folder_str for term in ['transcript', 'bundle', 'hearing', 'reading_list', 'index']):
-            context['folder_category'] = 'procedural'
-            
-            # Transcripts
-            if 'transcript' in folder_str:
-                context['source_type'] = 'transcript'
-                context['priority_tier'] = 3
-            
-            # Hearing bundles (DUPLICATE RISK)
-            elif 'bundle' in folder_str:
-                context['source_type'] = 'hearing_bundle'
-                context['priority_tier'] = 3
-                context['is_duplicate_risk'] = True  # Bundles often contain docs already in disclosure
-            
-            # Reading lists, indices
-            elif 'reading' in folder_str or 'index' in folder_str:
-                context['source_type'] = 'procedural_admin'
-                context['priority_tier'] = 2
-            
-            # Chronologies, dramatis personae
-            elif 'chronology' in folder_str or 'dramatis' in folder_str:
-                context['source_type'] = 'case_admin'
-                context['priority_tier'] = 4  # Slightly higher - useful reference
-            
-            # Default procedural
-            else:
-                context['source_type'] = 'procedural'
-                context['priority_tier'] = 3
-        
-        # ====================================================================
-        # TIER 6: EXPERT INSTRUCTIONS (FUTURE EVIDENCE)
-        # ====================================================================
-        
-        elif '9_expert' in folder_str or 'expert' in folder_str:
-            context['source_type'] = 'expert_instruction'
-            context['priority_tier'] = 6
-            context['folder_category'] = 'expert_instructions'
-        
-        # ====================================================================
-        # QUALITY FLAGS
-        # ====================================================================
-        
-        # Flag potential duplicates
-        if context['is_duplicate_risk']:
-            context['warning'] = 'Possible duplicate - check against disclosure'
-        
-        # Flag missing batch dates for disclosure
-        if context['is_disclosure'] and not context['batch_date']:
-            context['note'] = 'Disclosure batch date not identified from folder name'
-        
-        return context
+        print(f"\n💾 Document index saved: {output_file}")
 
 
-    def get_statistics(self) -> Dict:
-        """Get loading statistics"""
-        
-        stats = {
-            'total_loaded': self.load_stats['total_loaded'],
-            'failed_loads': self.load_stats['failed_loads'],
-            'by_type': self.load_stats['by_type'],
-            'success_rate': (
-                self.load_stats['total_loaded'] / 
-                max(1, self.load_stats['total_loaded'] + self.load_stats['failed_loads'])
-            )
-        }
-        
-        # Add memory tier stats if available
-        if self.vector_store:
-            vector_stats = self.vector_store.get_collection_stats()
-            stats['vector_store'] = {
-                'documents': vector_stats.get('total_documents', 0),
-                'tokens': vector_stats.get('estimated_total_tokens', 0)
-            }
-        
-        if self.cold_storage:
-            storage_stats = self.cold_storage.get_vault_statistics()
-            stats['cold_storage'] = {
-                'documents': storage_stats.get('total_documents', 0),
-                'encrypted_size_mb': storage_stats.get('total_size_mb', 0)
-            }
-        
-        return stats
+if __name__ == "__main__":
+    # Test document loader
+    from src.core.config import Config
+    
+    config = Config()
+    loader = DocumentLoader(config)
+    
+    print("Testing document loader...")
+    print(f"Source root: {config.source_root}")
+    print(f"\nPass 1 folders: {len(config.get_pass_1_folders())}")
+    
+    # Load documents from Pass 1 folders
+    documents = loader.load_all_documents()
+    
+    # Print stats
+    loader.print_stats()
+    
+    # Save index
+    loader.save_document_index(documents)

@@ -1,329 +1,312 @@
 #!/usr/bin/env python3
 """
-Configuration for Litigation Intelligence System
-Optimised for maximum Claude capability - Lismore v Process Holdings
+Configuration for Lismore Litigation Intelligence System
+Updated to use direct path access (no file copying needed)
 British English throughout
-COMPLETE VERSION - Memory tiers enabled
 """
 
 import os
 from pathlib import Path
-from typing import Dict, Any, List
-
-# CRITICAL: Load environment variables from root .env
+from typing import Dict, List
 from dotenv import load_dotenv
-load_dotenv(override=True)
+
+# Import folder mapping
+from .folder_mapping import FolderMapping
 
 
 class Config:
-    """Central configuration for maximum Claude utilisation"""
+    """System configuration"""
     
-    def __init__(self, root_path: str = None):
-        """Initialise configuration with organised structure"""
-        self.root = Path(root_path) if root_path else Path.cwd()
+    def __init__(self):
+        """Initialise configuration"""
+        
+        # Load environment variables
+        load_dotenv()
+        
+        # API Configuration
+        self.anthropic_api_key = os.getenv('ANTHROPIC_API_KEY')
+        if not self.anthropic_api_key:
+            raise ValueError("ANTHROPIC_API_KEY not found in environment variables")
+        
+        # Model Configuration
+        self.haiku_model = "claude-3-5-haiku-20241022"
+        self.sonnet_model = "claude-sonnet-4-20250514"
+        
+        # Cost Configuration (per million tokens)
+        self.haiku_cost_input = 1.00    # £1 per 1M input tokens
+        self.haiku_cost_output = 5.00   # £5 per 1M output tokens
+        self.sonnet_cost_input = 3.00   # £3 per 1M input tokens
+        self.sonnet_cost_output = 15.00 # £15 per 1M output tokens
+        
+        # Directory Configuration - DIRECT PATH ACCESS
         self._setup_paths()
-        self._setup_models()
-        self._setup_analysis()
-        self._setup_investigation()
-        self._setup_tiered_analysis()
-        self._setup_api_config()
-        self._setup_memory_tiers()  # NEW
+        
+        # Pass Configuration
+        self._setup_pass_config()
+        
+        # Memory Configuration
+        self._setup_memory_config()
+        
+        # Folder Mapping Reference
+        self.folder_mapping = FolderMapping
     
-    def _setup_paths(self) -> None:
-        """Define organised folder structure - UPDATED FOR LIS1.1"""
+    def _setup_paths(self):
+        """Set up directory paths - points directly at LIS1.1"""
         
-        # Root input directory
-        self.input_dir = self.root / "data" 
+        # Root directory (claude_analysis-master)
+        self.root_dir = Path(__file__).parent.parent.parent
         
-        # ================================================================
-        # ORGANISED FOLDER HIERARCHY (matches organisation script)
-        # ================================================================
+        # SOURCE: LIS1.1 folder (where files actually are)
+        self.source_root = Path(r"C:\Users\JemAndrew\Velitor\Communication site - Documents\LIS1.1")
         
-        # 1. Legal Knowledge - Foundation & Context
-        self.legal_knowledge_dir = self.input_dir / "1_LEGAL_KNOWLEDGE"
+        if not self.source_root.exists():
+            raise FileNotFoundError(f"Source folder not found: {self.source_root}")
         
-        # 2. Case Pleadings - Parties' Legal Arguments  
-        self.case_pleadings_dir = self.input_dir / "2_CASE_PLEADINGS"
+        # Output directories (for system-generated files)
+        self.output_dir = self.root_dir / "output"
+        self.output_dir.mkdir(parents=True, exist_ok=True)
         
-        # 3. Witness Evidence - Witness Statements
-        self.witness_evidence_dir = self.input_dir / "3_WITNESS_EVIDENCE"
+        # System data directories (NOT source documents)
+        self.data_dir = self.root_dir / "data"
+        self.data_dir.mkdir(parents=True, exist_ok=True)
         
-        # 4. Disclosure - RAW EVIDENCE (HIGHEST PRIORITY)
-        self.disclosure_dir = self.input_dir / "4_DISCLOSURE"
+        # Vector store and knowledge graph
+        self.vector_store_dir = self.data_dir / "vector_store"
+        self.vector_store_dir.mkdir(parents=True, exist_ok=True)
         
-        # 5. Tribunal Orders - Procedural Rulings
-        self.tribunal_orders_dir = self.input_dir / "5_TRIBUNAL_ORDERS"
+        self.knowledge_graph_db = self.data_dir / "knowledge_graph.db"
         
-        # 6. Correspondence - Emails & Letters
-        self.correspondence_dir = self.input_dir / "6_CORRESPONDENCE"
+        # Cache directory
+        self.cache_dir = self.data_dir / "cache"
+        self.cache_dir.mkdir(parents=True, exist_ok=True)
         
-        # 7. Disclosure Disputes - Shows What's Missing
-        self.disclosure_disputes_dir = self.input_dir / "7_DISCLOSURE_DISPUTES"
-        
-        # 8. Procedural Low Priority - Admin Documents
-        self.procedural_dir = self.input_dir / "8_PROCEDURAL_LOW_PRIORITY"
-        
-        # 9. Expert Instructions - Future Expert Evidence
-        self.expert_instructions_dir = self.input_dir / "9_EXPERT_INSTRUCTIONS"
-        
-        # ================================================================
-        # BACKWARD COMPATIBILITY ALIASES
-        # ================================================================
-        # (Keep old code working while we transition)
-        
-        self.case_context_dir = self.case_pleadings_dir  # Old name
-        self.case_documents_dir = self.case_pleadings_dir  # Old name
-        
-        # ================================================================
-        # PASS-SPECIFIC CONFIGURATIONS
-        # ================================================================
-        
-        # Pass 0: Foundation building sources
-        self.pass_0_sources = [
-            self.legal_knowledge_dir,      # Legal context & rules
-            self.case_pleadings_dir        # Parties' positions
-        ]
-        
-        # Pass 1: Primary target (where smoking guns hide)
-        self.pass_1_primary_target = self.disclosure_dir / "respondent_production"
-        
-        # Pass 1: Secondary targets (supporting evidence)
-        self.pass_1_secondary_targets = [
-            self.disclosure_dir / "claimant_production",  # Our disclosure
-            self.witness_evidence_dir,                     # Witness statements
-            self.correspondence_dir,                       # Email chains
-            self.disclosure_disputes_dir                   # Shows what's missing!
-        ]
-        
-        # Pass 1: Excluded folders (don't waste tokens)
-        self.pass_1_exclude = [
-            self.procedural_dir,           # Transcripts, bundles (low value)
-            self.tribunal_orders_dir       # Reference only
-        ]
-        
-        # ================================================================
-        # KNOWLEDGE MANAGEMENT PATHS
-        # ================================================================
-        
-        self.knowledge_dir = self.root / "data" / "knowledge"
-        self.graph_db_path = self.knowledge_dir / "graph.db"
-        self.backups_dir = self.knowledge_dir / "backups"
-        self.investigations_db_path = self.knowledge_dir / "investigations.db"
-        
-        # ================================================================
-        # OUTPUT PATHS
-        # ================================================================
-        
-        self.output_dir = self.root / "data" / "output"
-        self.analysis_dir = self.output_dir / "analysis"
-        self.investigations_dir = self.output_dir / "investigations"
-        self.reports_dir = self.output_dir / "reports"
-        
-        # ================================================================
-        # CREATE ALL DIRECTORIES
-        # ================================================================
-        
-        for dir_path in [
-            # Input directories
-            self.input_dir,
-            self.legal_knowledge_dir,
-            self.case_pleadings_dir,
-            self.witness_evidence_dir,
-            self.disclosure_dir,
-            self.tribunal_orders_dir,
-            self.correspondence_dir,
-            self.disclosure_disputes_dir,
-            self.procedural_dir,
-            self.expert_instructions_dir,
-            # Knowledge management
-            self.knowledge_dir,
-            self.backups_dir,
-            # Output directories
-            self.output_dir,
-            self.analysis_dir,
-            self.investigations_dir,
-            self.reports_dir
-        ]:
-            dir_path.mkdir(parents=True, exist_ok=True)
-
-
-    def _setup_models(self) -> None:
-        """Model selection for maximum reasoning"""
-        self.models = {
-            'primary': 'claude-sonnet-4-5-20250929',  # Latest Sonnet 4.5
-            'secondary': 'claude-haiku-4-20250605',   # Haiku 4 for speed
-            'opus': 'claude-opus-4-20250514'          # Opus 4 if needed
-        }
-        
-        self.task_models = {
-            'knowledge_synthesis': 'primary',
-            'investigation': 'primary',
-            'pattern_recognition': 'primary',
-            'contradiction_analysis': 'primary',
-            'metadata_extraction': 'secondary',
-            'synthesis': 'primary',
-            'timeline_analysis': 'primary',
-            'financial_analysis': 'primary',
-            'entity_mapping': 'primary'
-        }
+        # Logs
+        self.logs_dir = self.root_dir / "logs"
+        self.logs_dir.mkdir(parents=True, exist_ok=True)
     
-    def _setup_analysis(self) -> None:
-        """Analysis configuration"""
-        # Token management
-        self.token_config = {
-            'max_input_tokens': 200000,
-            'max_output_tokens': 16000,
-            'buffer_tokens': 10000,
-            'optimal_batch_size': 140000
+    def _setup_pass_config(self):
+        """Configure pass-specific settings"""
+        
+        # Pass 1: Triage Configuration
+        self.pass_1_config = {
+            'model': self.haiku_model,
+            'top_n_documents': 500,  # Select top 500 for deep analysis
+            'preview_chars': 300,    # Characters to preview per document
+            'batch_size': 100,       # Documents to process per batch
+            'include_folders': FolderMapping.get_pass_1_folders(),  # Only folders marked for Pass 1
+            'priority_boost': {
+                10: 2.0,  # Disclosure gets +2.0 boost
+                9: 1.5,   # Witness evidence gets +1.5
+                8: 1.0,   # High priority gets +1.0
+                7: 0.5,   # Medium-high gets +0.5
+                6: 0.0,   # Medium gets no boost
+                5: -0.3,  # Low gets penalty
+                4: -0.5,  # Very low gets penalty
+                3: -0.8,  # Skip tier gets penalty
+                2: -1.0   # Really skip tier gets penalty
+            }
         }
         
-        # Prompt caching configuration
-        self.caching_config = {
-            'enabled': True,
-            'min_tokens_to_cache': 1024,
-            'ttl_seconds': 300
+        # Pass 2: Deep Analysis Configuration
+        self.pass_2_config = {
+            'model': self.sonnet_model,
+            'use_extended_thinking': True,
+            'max_iterations': 25,
+            'batch_size': 30,  # Documents per iteration
+            'confidence_threshold': 0.95,
+            'adaptive_loading': True,  # Load more docs if confidence low
+            'adaptive_trigger_iteration': 15,  # Check confidence at iteration 15
+            'adaptive_confidence_threshold': 0.90,  # If below this, load more
+            'adaptive_additional_docs': 100,  # Load 100 more (docs 501-600)
         }
         
-        # Batching strategy
-        self.batch_strategy = {
-            'phase_0_batch_size': 20,
-            'tier_1_batch_size': 25,
-            'tier_2_batch_size': 100,
-            'tier_3_batch_size': 15,
-            'max_retries': 5,
-            'retry_delay': 5,
-            'auto_adjust': True
+        # Pass 3: Autonomous Investigations Configuration
+        self.pass_3_config = {
+            'model': self.sonnet_model,
+            'use_extended_thinking': True,
+            'max_investigations': 10,
+            'max_recursion_depth': 5,
+            'min_investigation_priority': 7,  # Only investigate high-priority topics
         }
         
-        # Hallucination prevention
-        self.hallucination_prevention = """
-CRITICAL INSTRUCTIONS:
-- Base all findings ONLY on documents provided
-- Never fabricate document references
-- Mark inferences clearly with [INFERENCE]
-- Cite all factual claims with [DOC_ID: Location]
-- If uncertain, state "Insufficient evidence to determine"
-"""
-    
-    def _setup_investigation(self) -> None:
-        """Investigation spawning configuration"""
-        self.investigation_config = {
-            'max_depth': 3,
-            'priority_threshold': 7.0,
-            'auto_spawn_enabled': True,
-            'convergence_threshold': 0.95,
-            'max_concurrent': 5,
-            'discovery_types': [
-                'NUCLEAR',      # Case-ending discovery
-                'CRITICAL',     # Major strategic advantage
-                'PATTERN',      # Significant pattern
-                'CONTRADICTION', # Contradiction detected
-                'TIMELINE',     # Timeline impossibility
-                'MISSING'       # Evidence of withholding
+        # Pass 4: Deliverables Configuration
+        self.pass_4_config = {
+            'model': self.sonnet_model,
+            'use_extended_thinking': False,  # Faster for document generation
+            'deliverables': [
+                'scott_schedule',
+                'opening_submissions',
+                'witness_outlines',
+                'cross_examination_outlines',
+                'disclosure_requests',
+                'skeleton_argument',
+                'expert_instructions'
             ]
         }
     
-    def _setup_tiered_analysis(self) -> None:
-        """Three-tier analysis configuration for Phase 1"""
-        self.tier_config = {
-            'tier_1': {
-                'name': 'Deep Analysis',
-                'doc_limit': 500,
-                'batch_size': 25,
-                'analysis_depth': 'deep',
-                'model': 'primary',
-                'priority_folders': [
-                    'Document Production',
-                    'Witness Statements',
-                    'Expert Reports',
-                    'Correspondence',
-                    'Contracts'
+    def _setup_memory_config(self):
+        """Configure memory system"""
+        
+        self.memory_config = {
+            # Vector Store Configuration
+            'vector_store': {
+                'collection_name': 'lismore_documents',
+                'embedding_function': 'sentence-transformers',
+                'chunk_size': 1000,
+                'chunk_overlap': 200,
+            },
+            
+            # Knowledge Graph Configuration
+            'knowledge_graph': {
+                'entity_types': [
+                    'person', 'company', 'document', 'contract',
+                    'transaction', 'meeting', 'email', 'financial_record'
+                ],
+                'relationship_types': [
+                    'sent_email_to', 'attended_meeting', 'signed_contract',
+                    'contradicts', 'supports', 'references', 'part_of'
                 ]
             },
-            'tier_2': {
-                'name': 'Metadata Scan',
-                'doc_limit': None,  # All remaining
-                'batch_size': 100,
-                'analysis_depth': 'shallow',
-                'model': 'secondary',
-                'flag_threshold': 7.0
-            },
-            'tier_3': {
-                'name': 'Targeted Deep Dive',
-                'batch_size': 15,
-                'analysis_depth': 'deep',
-                'model': 'primary'
+            
+            # Cache Configuration
+            'cache': {
+                'ttl_seconds': 86400,  # 24 hours
+                'max_size_mb': 1000,   # 1GB cache limit
             }
         }
     
-    def _setup_api_config(self) -> None:
-        """API configuration"""
-        self.api_config = {
-            'api_key': os.getenv('ANTHROPIC_API_KEY'),
-            'rate_limit_delay': 3,
-            'max_retries': 3,
-            'timeout': 300,
-            'default_model': self.models['primary']
-        }
-        
-        # Validate API key
-        if not self.api_config['api_key']:
-            print("WARNING: ANTHROPIC_API_KEY not found in environment")
-    
-    def _setup_memory_tiers(self) -> None:
+    def get_folder_path(self, folder_name: str) -> Path:
         """
-        NEW: Memory tier configuration
-        Enables hierarchical memory system
+        Get full path to a source folder using fuzzy matching
+        
+        Args:
+            folder_name: Name of LIS folder (e.g., "55. Document Production")
+            
+        Returns:
+            Full path to folder
         """
-        # Enable/disable memory tiers
-        self.enable_vector_store = True   # Tier 2: Semantic search across all docs
-        self.enable_cold_storage = True   # Tier 4: Encrypted vault for security
-        self.enable_analysis_cache = True # Tier 5: Cache Claude responses
+        # Try exact match first
+        folder_path = self.source_root / folder_name
+        if folder_path.exists():
+            return folder_path
         
-        # Vector store configuration (Tier 2)
-        self.vector_config = {
-            'embedding_model': 'sentence-transformers/all-MiniLM-L6-v2',
-            'chunk_size': 1000,
-            'chunk_overlap': 200,
-            'collection_name': 'lismore_disclosure',
-            'distance_metric': 'cosine'
-        }
+        # Fuzzy match: try to find folder that starts with the same number/prefix
+        # Extract number prefix (e.g., "29-" or "50.")
+        import re
+        match = re.match(r'^(\d+[-\.])\s*', folder_name)
+        if match:
+            prefix = match.group(1)
+            # Find any folder starting with this prefix
+            for folder in self.source_root.iterdir():
+                if folder.is_dir() and folder.name.startswith(prefix):
+                    return folder
         
-        # Cold storage configuration (Tier 4)
-        self.cold_storage_config = {
-            'encryption_enabled': True,
-            'auto_encrypt_pdfs': True,
-            'audit_trail': True
-        }
-        
-        # Analysis cache configuration (Tier 5)
-        self.cache_config = {
-            'default_ttl_days': 30,
-            'max_cache_size_mb': 1000,
-            'auto_cleanup': True
-        }
+        raise FileNotFoundError(f"Folder not found: {folder_path}")
     
-    def get_model_for_task(self, task_type: str) -> str:
-        """Get appropriate model for task"""
-        model_key = self.task_models.get(task_type, 'primary')
-        return self.models[model_key]
+    def get_all_folders(self) -> List[Path]:
+        """Get all LIS1.1 folders"""
+        return [f for f in self.source_root.iterdir() if f.is_dir()]
     
-    def validate_configuration(self) -> List[str]:
-        """Validate configuration and return list of issues"""
-        issues = []
+    def get_pass_1_folders(self) -> List[Path]:
+        """Get folders to include in Pass 1 triage"""
+        folder_names = self.pass_1_config['include_folders']
+        folders = []
         
-        # Check API key
-        if not self.api_config['api_key']:
-            issues.append("ANTHROPIC_API_KEY not configured")
+        for name in folder_names:
+            try:
+                folders.append(self.get_folder_path(name))
+            except FileNotFoundError:
+                print(f"Warning: Pass 1 folder not found: {name}")
         
-        # Check required directories
-        if not self.legal_knowledge_dir.exists():
-            issues.append(f"Legal knowledge directory missing: {self.legal_knowledge_dir}")
+        return folders
+    
+    def get_disclosure_folders(self) -> List[Path]:
+        """Get all disclosure folders (Priority 10)"""
+        folder_names = FolderMapping.get_disclosure_folders()
+        folders = []
         
-        if not self.case_context_dir.exists():
-            issues.append(f"Case context directory missing: {self.case_context_dir}")
+        for name in folder_names:
+            try:
+                folders.append(self.get_folder_path(name))
+            except FileNotFoundError:
+                print(f"Warning: Disclosure folder not found: {name}")
         
-        if not self.disclosure_dir.exists():
-            issues.append(f"Disclosure directory missing: {self.disclosure_dir}")
+        return folders
+    
+    def get_pleadings_folders(self) -> List[Path]:
+        """Get all pleading folders"""
+        folder_names = FolderMapping.get_pleadings_folders()
+        folders = []
         
-        return issues
+        for name in folder_names:
+            try:
+                folders.append(self.get_folder_path(name))
+            except FileNotFoundError:
+                print(f"Warning: Pleadings folder not found: {name}")
+        
+        return folders
+    
+    def get_folder_priority(self, folder_path: Path) -> int:
+        """Get priority tier for a folder (1-10)"""
+        folder_name = folder_path.name
+        return FolderMapping.get_priority(folder_name)
+    
+    def get_folder_category(self, folder_path: Path) -> str:
+        """Get category for a folder"""
+        folder_name = folder_path.name
+        return FolderMapping.get_category(folder_name)
+    
+    def should_include_in_pass_1(self, folder_path: Path) -> bool:
+        """Check if folder should be in Pass 1"""
+        folder_name = folder_path.name
+        return FolderMapping.should_include_in_pass_1(folder_name)
+    
+    def get_priority_boost(self, priority_tier: int) -> float:
+        """Get priority boost for a tier"""
+        return self.pass_1_config['priority_boost'].get(priority_tier, 0.0)
+    
+    def print_config(self):
+        """Print configuration summary"""
+        print("=" * 70)
+        print("LISMORE LITIGATION INTELLIGENCE SYSTEM - CONFIGURATION")
+        print("=" * 70)
+        
+        print(f"\nSource folder: {self.source_root}")
+        print(f"Output folder: {self.output_dir}")
+        print(f"Data folder: {self.data_dir}")
+        
+        print(f"\nModels:")
+        print(f"  Haiku (Pass 1): {self.haiku_model}")
+        print(f"  Sonnet (Pass 2-4): {self.sonnet_model}")
+        
+        print(f"\nPass 1 Configuration:")
+        print(f"  Folders to triage: {len(self.pass_1_config['include_folders'])}")
+        print(f"  Top documents to select: {self.pass_1_config['top_n_documents']}")
+        
+        print(f"\nPass 2 Configuration:")
+        print(f"  Max iterations: {self.pass_2_config['max_iterations']}")
+        print(f"  Batch size: {self.pass_2_config['batch_size']}")
+        print(f"  Confidence threshold: {self.pass_2_config['confidence_threshold']}")
+        print(f"  Adaptive loading: {self.pass_2_config['adaptive_loading']}")
+        
+        print(f"\nFolder Mapping:")
+        print(f"  Total folders mapped: {len(FolderMapping.FOLDER_MAP)}")
+        
+        # Count available folders
+        available = len([f for f in self.get_all_folders()])
+        print(f"  Folders found in source: {available}")
+        
+        print("=" * 70)
+
+
+if __name__ == "__main__":
+    # Test configuration
+    config = Config()
+    config.print_config()
+    
+    print("\nPass 1 folders:")
+    for folder in config.get_pass_1_folders():
+        priority = config.get_folder_priority(folder)
+        category = config.get_folder_category(folder)
+        boost = config.get_priority_boost(priority)
+        print(f"  [{priority}] {folder.name} ({category}, boost: {boost:+.1f})")

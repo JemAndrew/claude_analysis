@@ -3,30 +3,41 @@
 Automated LIS1.1 Folder Organisation Script
 Organises litigation documents into intelligent hierarchy
 British English throughout
+ENHANCED: Timeout protection, skip problematic folders, resume capability
+Handles duplicate folder numbers by matching full folder names
 """
 
 import shutil
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict, List, Optional, Tuple
 import json
 from datetime import datetime
+import threading
+import time
+
+
+class TimeoutError(Exception):
+    """Raised when folder copy exceeds timeout"""
+    pass
 
 
 class LISFolderOrganiser:
     """Organises LIS1.1 folders into optimised structure"""
     
-    def __init__(self, source_root: Path, target_root: Path):
+    def __init__(self, source_root: Path, target_root: Path, timeout_minutes: int = 5):
         """
         Initialise organiser
         
         Args:
             source_root: LIS1.1 folder location
-            target_root: data/input target location
+            target_root: data target location
+            timeout_minutes: Skip folder if copy takes longer than this
         """
         self.source_root = Path(source_root)
         self.target_root = Path(target_root)
+        self.timeout_seconds = timeout_minutes * 60
         
-        # Folder mapping: source folder → target category
+        # Folder mapping: folder_pattern → (target_path, priority_tier, description)
         self.folder_mapping = self._define_folder_mapping()
         
         # Track operations
@@ -34,144 +45,171 @@ class LISFolderOrganiser:
             'organised_at': datetime.now().isoformat(),
             'source': str(source_root),
             'target': str(target_root),
+            'timeout_minutes': timeout_minutes,
             'folders_processed': [],
+            'folders_skipped': [],
             'errors': []
         }
+        
+        # State file for resume capability
+        self.state_file = target_root / "organisation_state.json"
+        self.completed_folders = self._load_completed_folders()
     
-    def _define_folder_mapping(self) -> Dict[str, tuple]:
+    def _load_completed_folders(self) -> set:
+        """Load list of already-completed folders"""
+        if self.state_file.exists():
+            try:
+                with open(self.state_file, 'r', encoding='utf-8') as f:
+                    state = json.load(f)
+                    return set(state.get('completed_folders', []))
+            except:
+                return set()
+        return set()
+    
+    def _save_completed_folder(self, folder_name: str):
+        """Save completed folder to state file"""
+        self.completed_folders.add(folder_name)
+        state = {'completed_folders': list(self.completed_folders)}
+        
+        self.state_file.parent.mkdir(parents=True, exist_ok=True)
+        with open(self.state_file, 'w', encoding='utf-8') as f:
+            json.dump(state, f, indent=2)
+    
+    def _define_folder_mapping(self) -> Dict[str, Tuple]:
         """
         Define where each LIS folder should go
-        Returns: {folder_number: (target_path, priority_tier, description)}
+        Uses partial folder name matching to handle duplicates
+        Returns: {folder_pattern: (target_path, priority_tier, description)}
         """
         
         mapping = {
             # ============================================================
             # 1_LEGAL_KNOWLEDGE - Foundation & Context
             # ============================================================
-            '25': ('1_LEGAL_KNOWLEDGE/arbitration_rules', 5, 'LCIA Rules'),
-            '26': ('1_LEGAL_KNOWLEDGE/research', 5, 'Tuna Bond Research'),
-            '36': ('1_LEGAL_KNOWLEDGE/related_cases/P&ID_v_Nigeria_Arbitration', 4, 'Related arbitration context'),
-            '37': ('1_LEGAL_KNOWLEDGE/related_cases/P&ID_v_Nigeria_Comm_Court', 4, 'Related court proceedings'),
-            '47': ('1_LEGAL_KNOWLEDGE/case_law', 5, 'Amit Forlit US Cases'),
+            '25- LCIA': ('1_LEGAL_KNOWLEDGE/arbitration_rules', 5, 'LCIA Rules'),
+            '26- Research': ('1_LEGAL_KNOWLEDGE/research', 5, 'Tuna Bond Research'),
+            '47. Amit': ('1_LEGAL_KNOWLEDGE/case_law', 5, 'Amit Forlit US Cases'),
+            '36- P&ID v Nigeria Arbitration': ('1_LEGAL_KNOWLEDGE/related_cases/P&ID_v_Nigeria_Arbitration', 4, 'Related arbitration context'),
+            '37- P&ID v Nigeria Comm': ('1_LEGAL_KNOWLEDGE/related_cases/P&ID_v_Nigeria_Comm_Court', 4, 'Related court proceedings'),
             
             # ============================================================
             # 2_CASE_PLEADINGS - Parties' Legal Arguments
             # ============================================================
-            '5': ('2_CASE_PLEADINGS/claimant/Request_for_Arbitration', 7, 'Initial request'),
-            '29': ('2_CASE_PLEADINGS/claimant/Statement_of_Claim', 8, 'Lismore main pleading'),
-            '72': ('2_CASE_PLEADINGS/claimant/Submissions_6_Oct_2025', 8, 'Latest Lismore submission'),
+            '5- Request': ('2_CASE_PLEADINGS/claimant/Request_for_Arbitration', 7, 'Initial request'),
+            '29- Claimant\'s Statement of Claim': ('2_CASE_PLEADINGS/claimant/Statement_of_Claim', 8, 'Lismore main pleading'),
+            '72. Lismore\'s Submission': ('2_CASE_PLEADINGS/claimant/Submissions_6_Oct_2025', 8, 'Latest Lismore submission'),
             
-            '35': ('2_CASE_PLEADINGS/respondent/Statement_of_Defence', 8, 'PHL main defence'),
-            '43': ('2_CASE_PLEADINGS/respondent/Defence_Shared_with_Counsel', 8, 'Defence working version'),
-            '30': ('2_CASE_PLEADINGS/respondent/Reply', 7, 'PHL reply'),
-            '62': ('2_CASE_PLEADINGS/respondent/Reply_and_Rejoinder', 7, 'PHL further pleadings'),
-            '63': ('2_CASE_PLEADINGS/respondent/Rejoinder_30_May_2025', 7, 'PHL rejoinder'),
+            '35- First Respondent\'s Statement of Defence': ('2_CASE_PLEADINGS/respondent/Statement_of_Defence', 8, 'PHL main defence'),
+            '43. Statement of Defence Shared': ('2_CASE_PLEADINGS/respondent/Defence_Shared_with_Counsel', 8, 'Defence working version'),
+            '30- Respondent\'s Reply': ('2_CASE_PLEADINGS/respondent/Reply', 7, 'PHL reply'),
+            '62. First Respondent\'s Reply and Rejoinder': ('2_CASE_PLEADINGS/respondent/Reply_and_Rejoinder', 7, 'PHL further pleadings'),
+            '63. PHL\'s Rejoinder': ('2_CASE_PLEADINGS/respondent/Rejoinder_30_May_2025', 7, 'PHL rejoinder'),
             
-            '1': ('2_CASE_PLEADINGS/applications/Stay_Application', 6, 'Stay application docs'),
-            '10': ('2_CASE_PLEADINGS/applications/Lismore_Response_Stay', 7, 'Lismore response to stay'),
-            '13': ('2_CASE_PLEADINGS/applications/Lismore_Response_Stay_v2', 7, 'Lismore response (duplicate?)'),
-            '27': ('2_CASE_PLEADINGS/applications/Security_for_Costs_Application', 6, 'Security application'),
-            '28': ('2_CASE_PLEADINGS/applications/Lismore_Response_Security', 7, 'Lismore response to security'),
-            '71': ('2_CASE_PLEADINGS/applications/Lismore_Response_PHL_Disclosure_25_Sep', 7, 'Response to PHL disclosure application'),
+            '1- Application to Stay': ('2_CASE_PLEADINGS/applications/Stay_Application', 6, 'Stay application docs'),
+            '10- Claimant\'s Response to the First Respondent\'s Stay': ('2_CASE_PLEADINGS/applications/Lismore_Response_Stay', 7, 'Lismore response to stay'),
+            '13- Claimant\'s Response to Stay': ('2_CASE_PLEADINGS/applications/Lismore_Response_Stay_v2', 7, 'Lismore response (duplicate?)'),
+            '27. Security for Costs': ('2_CASE_PLEADINGS/applications/Security_for_Costs_Application', 6, 'Security application'),
+            '28- Claimant\'s Response to the First Respondent\'s application for security': ('2_CASE_PLEADINGS/applications/Lismore_Response_Security', 7, 'Lismore response to security'),
+            '71. Response to PHL Application re Lismore Disclosure': ('2_CASE_PLEADINGS/applications/Lismore_Response_PHL_Disclosure_25_Sep', 7, 'Response to PHL disclosure application'),
             
             # ============================================================
             # 3_WITNESS_EVIDENCE - Witness Statements (HIGH PRIORITY)
             # ============================================================
-            '12': ('3_WITNESS_EVIDENCE/claimant_witnesses/Brendan_Cahill', 9, 'BC witness statements'),
-            '44': ('3_WITNESS_EVIDENCE/claimant_witnesses/BC_GT_MQ_Exhibits', 9, 'Exhibits to multiple witnesses'),
-            '61': ('3_WITNESS_EVIDENCE/consolidated/Witness_Statements', 8, 'All witness statements'),
+            '12- Brendan Cahill': ('3_WITNESS_EVIDENCE/claimant_witnesses/Brendan_Cahill', 9, 'BC witness statements'),
+            '44. Exhibits to BC': ('3_WITNESS_EVIDENCE/claimant_witnesses/BC_GT_MQ_Exhibits', 9, 'Exhibits to multiple witnesses'),
+            '61. Witness Statements': ('3_WITNESS_EVIDENCE/consolidated/Witness_Statements', 8, 'All witness statements'),
             
-            '40': ('3_WITNESS_EVIDENCE/respondent_witnesses/Isha_Taiga', 9, 'IT witness statement'),
+            '40- Isha Taiga': ('3_WITNESS_EVIDENCE/respondent_witnesses/Isha_Taiga', 9, 'IT witness statement'),
             
             # ============================================================
             # 4_DISCLOSURE - RAW EVIDENCE (HIGHEST PRIORITY)
             # ============================================================
-            '2': ('4_DISCLOSURE/initial_disclosure', 10, 'Initial disclosure batch'),
-            '55': ('4_DISCLOSURE/respondent_production/batch_001_Document_Production', 10, 'PHL document production'),
-            '56': ('4_DISCLOSURE/respondent_production/batch_002_11_April_2025', 10, 'PHL docs 11 April'),
-            '64': ('4_DISCLOSURE/respondent_production/batch_003_23_June_2025', 10, 'PHL docs 23 June'),
-            '66': ('4_DISCLOSURE/respondent_production/batch_004_15_Aug_2025', 10, 'PHL docs 15 Aug'),
-            '69': ('4_DISCLOSURE/respondent_production/batch_005_15_Sep_2025', 10, 'PHL docs 15 Sep'),
-            '70': ('4_DISCLOSURE/respondent_production/batch_006_COMPLETE_SETS', 10, '⭐ COMPLETE PHL DISCLOSURE'),
+            '2- Disclosure': ('4_DISCLOSURE/initial_disclosure', 10, 'Initial disclosure batch'),
+            '55. Document Production': ('4_DISCLOSURE/respondent_production/batch_001_Document_Production', 10, 'PHL document production'),
+            '56- Documents received from Three Crowns': ('4_DISCLOSURE/respondent_production/batch_002_11_April_2025', 10, 'PHL docs 11 April'),
+            '64. PHL\'s documents sent on 23 June': ('4_DISCLOSURE/respondent_production/batch_003_23_June_2025', 10, 'PHL docs 23 June'),
+            '66. PHL\'s additional documents (15 Aug': ('4_DISCLOSURE/respondent_production/batch_004_15_Aug_2025', 10, 'PHL docs 15 Aug'),
+            '69. PHL\'s disclosure (15 September': ('4_DISCLOSURE/respondent_production/batch_005_15_Sep_2025', 10, 'PHL docs 15 Sep'),
+            '70. Complete Sets': ('4_DISCLOSURE/respondent_production/batch_006_COMPLETE_SETS', 10, '⭐ COMPLETE PHL DISCLOSURE'),
             
-            '54': ('4_DISCLOSURE/claimant_production/Trial_Bundle_7_March_2025', 8, 'Lismore trial bundle'),
-            '58': ('4_DISCLOSURE/claimant_production/Docs_List_7_March', 7, 'Lismore docs list'),
-            '60': ('4_DISCLOSURE/claimant_production/Exhibits_12_May_2025', 8, 'Lismore exhibits'),
+            '54- Trial Bundle (7 March': ('4_DISCLOSURE/claimant_production/Trial_Bundle_7_March_2025', 8, 'Lismore trial bundle'),
+            '58- List of Claimant Docs': ('4_DISCLOSURE/claimant_production/Docs_List_7_March', 7, 'Lismore docs list'),
+            '60. Exhibits from the Claimant\'s response': ('4_DISCLOSURE/claimant_production/Exhibits_12_May_2025', 8, 'Lismore exhibits'),
             
-            '38': ('4_DISCLOSURE/issues/Missing_Exhibits', 8, 'Missing exhibits tracking'),
+            '38- Missing Exhibits': ('4_DISCLOSURE/issues/Missing_Exhibits', 8, 'Missing exhibits tracking'),
             
             # ============================================================
             # 5_TRIBUNAL_ORDERS - Procedural Rulings (REFERENCE)
             # ============================================================
-            '4': ('5_TRIBUNAL_ORDERS/PO1', 6, 'Procedural Order 1'),
-            '8': ('5_TRIBUNAL_ORDERS/PO2', 6, 'Procedural Order 2'),
-            '39': ('5_TRIBUNAL_ORDERS/PO2_v2', 6, 'PO2 (duplicate?)'),
-            '42': ('5_TRIBUNAL_ORDERS/PO3', 6, 'Procedural Order 3'),
+            '4- PO1': ('5_TRIBUNAL_ORDERS/PO1', 6, 'Procedural Order 1'),
+            '8- PO2': ('5_TRIBUNAL_ORDERS/PO2', 6, 'Procedural Order 2'),
+            '39- Procedural Order No. 2': ('5_TRIBUNAL_ORDERS/PO2_v2', 6, 'PO2 (duplicate?)'),
+            '42. Procedural Order No. 3': ('5_TRIBUNAL_ORDERS/PO3', 6, 'Procedural Order 3'),
             
-            '22': ('5_TRIBUNAL_ORDERS/Stay_Ruling', 7, 'Ruling on stay application'),
-            '31': ('5_TRIBUNAL_ORDERS/Security_Costs_Ruling', 7, 'Ruling on security for costs'),
-            '53': ('5_TRIBUNAL_ORDERS/Stern_Schedule_Decisions', 7, 'Tribunal decisions on Stern schedules'),
-            '65': ('5_TRIBUNAL_ORDERS/Ruling_31_July_2025', 7, 'Tribunal ruling 31 July'),
-            '68': ('5_TRIBUNAL_ORDERS/Ruling_2_Sep_2025', 7, 'Tribunal ruling 2 Sep'),
+            '22- Tribunal\'s Ruling on the Stay': ('5_TRIBUNAL_ORDERS/Stay_Ruling', 7, 'Ruling on stay application'),
+            '31- Tribunal\'s Ruling on Application for Security': ('5_TRIBUNAL_ORDERS/Security_Costs_Ruling', 7, 'Ruling on security for costs'),
+            '53- Tribunal\'s Decisions on Stern': ('5_TRIBUNAL_ORDERS/Stern_Schedule_Decisions', 7, 'Tribunal decisions on Stern schedules'),
+            '65. Tribunal\'s Ruling dated 31 July': ('5_TRIBUNAL_ORDERS/Ruling_31_July_2025', 7, 'Tribunal ruling 31 July'),
+            '68. Tribunal\'s Ruling (2 September': ('5_TRIBUNAL_ORDERS/Ruling_2_Sep_2025', 7, 'Tribunal ruling 2 Sep'),
             
             # ============================================================
             # 6_CORRESPONDENCE - Emails & Letters (MEDIUM-HIGH PRIORITY)
             # ============================================================
-            '33': ('6_CORRESPONDENCE/General_Correspondence', 7, 'General correspondence'),
-            '36': ('6_CORRESPONDENCE/Chronological_Email_Run', 8, '⭐ EMAIL CHAIN'),
-            '67': ('6_CORRESPONDENCE/Draft_Letters_22_Aug', 6, 'Draft letters'),
+            '33- Correspondence': ('6_CORRESPONDENCE/General_Correspondence', 7, 'General correspondence'),
+            '36- Chronological Email Run': ('6_CORRESPONDENCE/Chronological_Email_Run', 8, '⭐ EMAIL CHAIN'),
+            '67. First Respondent\'s Draft Letter': ('6_CORRESPONDENCE/Draft_Letters_22_Aug', 6, 'Draft letters'),
             
             # ============================================================
             # 7_DISCLOSURE_DISPUTES - Shows What's Missing (IMPORTANT)
             # ============================================================
-            '41': ('7_DISCLOSURE_DISPUTES/Production_Requests/PHL_Requests', 7, 'PHL document requests'),
-            '45': ('7_DISCLOSURE_DISPUTES/Objections/PHL_Objections', 7, 'PHL objections'),
-            '46': ('7_DISCLOSURE_DISPUTES/Objections/Lismore_Objections', 7, 'Lismore objections'),
-            '48': ('7_DISCLOSURE_DISPUTES/Objections/BC_Objections', 7, 'BC objections'),
-            '49': ('7_DISCLOSURE_DISPUTES/Stern_Schedules/PHL_Stern_Schedule', 7, 'PHL Stern schedule'),
-            '50': ('7_DISCLOSURE_DISPUTES/Stern_Schedules/Lismore_Stern_Schedule', 7, 'Lismore Stern schedule'),
-            '57': ('7_DISCLOSURE_DISPUTES/Responses/PHL_Responses_to_Lismore_Disclosure', 7, 'PHL responses'),
+            '41- First Respondent\'s Document Production Requests': ('7_DISCLOSURE_DISPUTES/Production_Requests/PHL_Requests', 7, 'PHL document requests'),
+            '45. First Respondent\'s Objections to Document': ('7_DISCLOSURE_DISPUTES/Objections/PHL_Objections', 7, 'PHL objections'),
+            '46. Claimant\'s Objections to Document': ('7_DISCLOSURE_DISPUTES/Objections/Lismore_Objections', 7, 'Lismore objections'),
+            '48. Brendan Cahill\'s Objections': ('7_DISCLOSURE_DISPUTES/Objections/BC_Objections', 7, 'BC objections'),
+            '49. First Respondent\'s Stern Schedule': ('7_DISCLOSURE_DISPUTES/Stern_Schedules/PHL_Stern_Schedule', 7, 'PHL Stern schedule'),
+            '50. Claimant\'s Stern Schedule': ('7_DISCLOSURE_DISPUTES/Stern_Schedules/Lismore_Stern_Schedule', 7, 'Lismore Stern schedule'),
+            '57- First Respondent\'s Responses to Claimant\'s disclosure': ('7_DISCLOSURE_DISPUTES/Responses/PHL_Responses_to_Lismore_Disclosure', 7, 'PHL responses'),
             
             # ============================================================
             # 8_PROCEDURAL_LOW_PRIORITY - Admin Documents (SKIP IN PASS 1)
             # ============================================================
-            '11': ('8_PROCEDURAL_LOW_PRIORITY/Transcripts/Epiq', 3, 'Epiq transcripts'),
-            '59': ('8_PROCEDURAL_LOW_PRIORITY/Transcripts/Trial_Transcripts', 3, 'Trial transcripts'),
-            '9': ('8_PROCEDURAL_LOW_PRIORITY/Transcripts/Opus2_Quote', 2, 'Transcription quote'),
+            '11- Epiq': ('8_PROCEDURAL_LOW_PRIORITY/Transcripts/Epiq', 3, 'Epiq transcripts'),
+            '59. Trial Transcripts': ('8_PROCEDURAL_LOW_PRIORITY/Transcripts/Trial_Transcripts', 3, 'Trial transcripts'),
+            '9- Opus 2': ('8_PROCEDURAL_LOW_PRIORITY/Transcripts/Opus2_Quote', 2, 'Transcription quote'),
             
-            '14': ('8_PROCEDURAL_LOW_PRIORITY/Hearing_Bundles/Bundle_as_Served', 4, 'Hearing bundle'),
-            '15': ('8_PROCEDURAL_LOW_PRIORITY/Hearing_Bundles/Covers_and_Spines', 2, 'Bundle covers'),
-            '7': ('8_PROCEDURAL_LOW_PRIORITY/Hearing_Bundles/Stay_CMC_Hearing_Docs', 4, 'Stay hearing docs'),
+            '14- Hearing Bundle - as served': ('8_PROCEDURAL_LOW_PRIORITY/Hearing_Bundles/Bundle_as_Served', 4, 'Hearing bundle'),
+            '15- Covers and Spines': ('8_PROCEDURAL_LOW_PRIORITY/Hearing_Bundles/Covers_and_Spines', 2, 'Bundle covers'),
+            '7- Documents of Hearing': ('8_PROCEDURAL_LOW_PRIORITY/Hearing_Bundles/Stay_CMC_Hearing_Docs', 4, 'Stay hearing docs'),
             
-            '16': ('8_PROCEDURAL_LOW_PRIORITY/Reading_Lists/Draft', 3, 'Draft reading list'),
-            '17': ('8_PROCEDURAL_LOW_PRIORITY/Reading_Lists/Final', 3, 'Final reading list'),
-            '18': ('8_PROCEDURAL_LOW_PRIORITY/Reading_Lists/IDRC_Remote_Hearing', 3, 'IDRC hearing docs'),
+            '16- Draft Reading List': ('8_PROCEDURAL_LOW_PRIORITY/Reading_Lists/Draft', 3, 'Draft reading list'),
+            '17- Reading List as sent': ('8_PROCEDURAL_LOW_PRIORITY/Reading_Lists/Final', 3, 'Final reading list'),
+            '18- IDRC remote': ('8_PROCEDURAL_LOW_PRIORITY/Reading_Lists/IDRC_Remote_Hearing', 3, 'IDRC hearing docs'),
             
-            '19': ('8_PROCEDURAL_LOW_PRIORITY/Exhibits/Respondent_Additional', 4, 'PHL additional exhibits'),
+            '19- Respondent\'s Additional': ('8_PROCEDURAL_LOW_PRIORITY/Exhibits/Respondent_Additional', 4, 'PHL additional exhibits'),
             
-            '20': ('8_PROCEDURAL_LOW_PRIORITY/Case_Admin/Dramatis_Personae', 4, 'Dramatis personae'),
-            '21': ('8_PROCEDURAL_LOW_PRIORITY/Case_Admin/Chronology', 5, 'Chronology'),
-            '24': ('8_PROCEDURAL_LOW_PRIORITY/Case_Admin/Minutes_of_Meetings', 4, 'Meeting minutes'),
-            '32': ('8_PROCEDURAL_LOW_PRIORITY/Case_Admin/Minutes_of_Meetings_v2', 4, 'Meeting minutes (duplicate?)'),
-            '23': ('8_PROCEDURAL_LOW_PRIORITY/Case_Admin/Costs_Spreadsheet', 3, 'Costs spreadsheet'),
+            '20- Dramatis': ('8_PROCEDURAL_LOW_PRIORITY/Case_Admin/Dramatis_Personae', 4, 'Dramatis personae'),
+            '21- Chronology': ('8_PROCEDURAL_LOW_PRIORITY/Case_Admin/Chronology', 5, 'Chronology'),
+            '24- Minutes of Meetings': ('8_PROCEDURAL_LOW_PRIORITY/Case_Admin/Minutes_of_Meetings', 4, 'Meeting minutes'),
+            '32- Minutes of Meetings': ('8_PROCEDURAL_LOW_PRIORITY/Case_Admin/Minutes_of_Meetings_v2', 4, 'Meeting minutes (duplicate?)'),
+            '23- Velitor\'s costs': ('8_PROCEDURAL_LOW_PRIORITY/Case_Admin/Costs_Spreadsheet', 3, 'Costs spreadsheet'),
             
-            '51': ('8_PROCEDURAL_LOW_PRIORITY/Indices/Hyperlinked_Index', 3, 'Hyperlinked index'),
-            '52': ('8_PROCEDURAL_LOW_PRIORITY/Indices/Consolidated_Index_Claimant', 3, 'Lismore consolidated index'),
+            '51. Hyperlinked Index': ('8_PROCEDURAL_LOW_PRIORITY/Indices/Hyperlinked_Index', 3, 'Hyperlinked index'),
+            '52- Hyperlinked Consolidated Index': ('8_PROCEDURAL_LOW_PRIORITY/Indices/Consolidated_Index_Claimant', 3, 'Lismore consolidated index'),
             
-            '3': ('8_PROCEDURAL_LOW_PRIORITY/Timetable/Amended_Timetable', 4, 'Amended timetable'),
-            '6': ('8_PROCEDURAL_LOW_PRIORITY/Responses/Various_Responses', 4, 'Various responses'),
+            '3- Amended proposed timetable': ('8_PROCEDURAL_LOW_PRIORITY/Timetable/Amended_Timetable', 4, 'Amended timetable'),
+            '6- Responses': ('8_PROCEDURAL_LOW_PRIORITY/Responses/Various_Responses', 4, 'Various responses'),
             
             # ============================================================
             # 9_EXPERT_INSTRUCTIONS - Future Expert Evidence
             # ============================================================
-            '34': ('9_EXPERT_INSTRUCTIONS/Instructions_to_Experts', 6, 'Expert instructions'),
+            '34- Instructions to Experts': ('9_EXPERT_INSTRUCTIONS/Instructions_to_Experts', 6, 'Expert instructions'),
         }
         
         return mapping
     
     def organise_folders(self, dry_run: bool = False) -> Dict:
         """
-        Main organisation method
+        Main organisation method with timeout protection
         
         Args:
             dry_run: If True, only simulate (don't copy files)
@@ -185,6 +223,7 @@ class LISFolderOrganiser:
         print("="*70)
         print(f"Source: {self.source_root}")
         print(f"Target: {self.target_root}")
+        print(f"Timeout: {self.timeout_seconds/60:.0f} minutes per folder")
         print(f"Mode: {'DRY RUN (simulation only)' if dry_run else 'LIVE (copying files)'}")
         print("="*70)
         
@@ -192,20 +231,27 @@ class LISFolderOrganiser:
         source_folders = [f for f in self.source_root.iterdir() if f.is_dir()]
         
         print(f"\nFound {len(source_folders)} folders in source")
-        print(f"Mapping defined for {len(self.folder_mapping)} folders\n")
+        print(f"Mapping defined for {len(self.folder_mapping)} folders")
+        print(f"Already completed: {len(self.completed_folders)} folders\n")
         
         # Process each mapped folder
-        for folder_num, (target_path, priority, description) in self.folder_mapping.items():
+        for folder_pattern, (target_path, priority, description) in self.folder_mapping.items():
+            
             # Find matching source folder
-            source_folder = self._find_source_folder(folder_num)
+            source_folder = self._find_source_folder(folder_pattern, source_folders)
             
             if not source_folder:
-                print(f"⚠️  Folder {folder_num}: NOT FOUND in source")
+                print(f"⚠️  Pattern '{folder_pattern}': NOT FOUND in source")
                 self.manifest['errors'].append({
-                    'folder': folder_num,
+                    'pattern': folder_pattern,
                     'error': 'Source folder not found',
                     'expected_target': target_path
                 })
+                continue
+            
+            # Skip if already completed
+            if source_folder.name in self.completed_folders:
+                print(f"⏭️  {source_folder.name} - Already completed - skipping\n")
                 continue
             
             # Build target path
@@ -213,7 +259,6 @@ class LISFolderOrganiser:
             
             # Log operation
             operation = {
-                'folder_number': folder_num,
                 'source_name': source_folder.name,
                 'target_path': str(target_path),
                 'priority_tier': priority,
@@ -222,7 +267,7 @@ class LISFolderOrganiser:
                 'status': 'pending'
             }
             
-            print(f"📁 [{folder_num}] {source_folder.name}")
+            print(f"📁 {source_folder.name}")
             print(f"   → {target_path}")
             print(f"   Priority: {priority}/10 | Files: {operation['file_count']} | {description}")
             
@@ -231,11 +276,25 @@ class LISFolderOrganiser:
                     # Create target directory
                     full_target.mkdir(parents=True, exist_ok=True)
                     
-                    # Copy folder contents
-                    self._copy_folder_contents(source_folder, full_target)
+                    # Copy folder contents with timeout
+                    start_time = time.time()
+                    success = self._copy_folder_with_timeout(source_folder, full_target)
+                    elapsed = time.time() - start_time
                     
-                    operation['status'] = 'success'
-                    print(f"   ✅ Copied successfully")
+                    if success:
+                        operation['status'] = 'success'
+                        operation['elapsed_seconds'] = round(elapsed, 1)
+                        print(f"   ✅ Copied successfully ({elapsed:.1f}s)")
+                        
+                        # Mark as completed
+                        self._save_completed_folder(source_folder.name)
+                    else:
+                        operation['status'] = 'timeout'
+                        operation['elapsed_seconds'] = self.timeout_seconds
+                        print(f"   ⏱️  Timeout after {self.timeout_seconds}s - SKIPPED")
+                        print(f"   💡 Copy this folder manually or increase timeout")
+                        
+                        self.manifest['folders_skipped'].append(operation)
                     
                 except Exception as e:
                     operation['status'] = 'failed'
@@ -243,7 +302,7 @@ class LISFolderOrganiser:
                     print(f"   ❌ Error: {str(e)[:100]}")
                     
                     self.manifest['errors'].append({
-                        'folder': folder_num,
+                        'folder': source_folder.name,
                         'error': str(e),
                         'source': str(source_folder)
                     })
@@ -262,46 +321,86 @@ class LISFolderOrganiser:
         
         return self.manifest
     
-    def _find_source_folder(self, folder_num: str) -> Path:
-        """Find source folder by number prefix"""
-        for folder in self.source_root.iterdir():
-            if folder.is_dir() and folder.name.startswith(f"{folder_num}-") or folder.name.startswith(f"{folder_num}."):
+    def _copy_folder_with_timeout(self, source: Path, target: Path) -> bool:
+        """
+        Copy folder with timeout protection
+        
+        Returns:
+            True if successful, False if timeout
+        """
+        
+        result = {'success': False, 'error': None}
+        
+        def copy_worker():
+            try:
+                self._copy_folder_contents(source, target)
+                result['success'] = True
+            except Exception as e:
+                result['error'] = str(e)
+        
+        # Start copy in separate thread
+        thread = threading.Thread(target=copy_worker)
+        thread.daemon = True
+        thread.start()
+        
+        # Wait for completion or timeout
+        thread.join(timeout=self.timeout_seconds)
+        
+        if thread.is_alive():
+            # Timeout occurred
+            print(f"   ⚠️  Copy still running after {self.timeout_seconds}s...")
+            return False
+        
+        if result['error']:
+            raise Exception(result['error'])
+        
+        return result['success']
+    
+    def _find_source_folder(self, pattern: str, source_folders: List[Path]) -> Optional[Path]:
+        """Find source folder by partial name match"""
+        for folder in source_folders:
+            if pattern in folder.name:
                 return folder
         return None
     
     def _count_files(self, folder: Path) -> int:
         """Count all files in folder recursively"""
         count = 0
-        for item in folder.rglob('*'):
-            if item.is_file():
-                count += 1
+        try:
+            for item in folder.rglob('*'):
+                if item.is_file():
+                    count += 1
+        except:
+            pass
         return count
     
     def _copy_folder_contents(self, source: Path, target: Path):
         """Copy all contents from source to target"""
         for item in source.rglob('*'):
             if item.is_file():
-                # Calculate relative path
-                rel_path = item.relative_to(source)
-                target_file = target / rel_path
-                
-                # Create parent directories
-                target_file.parent.mkdir(parents=True, exist_ok=True)
-                
-                # Copy file
-                shutil.copy2(item, target_file)
+                try:
+                    # Calculate relative path
+                    rel_path = item.relative_to(source)
+                    target_file = target / rel_path
+                    
+                    # Create parent directories
+                    target_file.parent.mkdir(parents=True, exist_ok=True)
+                    
+                    # Copy file
+                    shutil.copy2(item, target_file)
+                except Exception as e:
+                    # Log but continue
+                    print(f"   ⚠️  Skipped: {item.name} ({str(e)[:50]})")
     
     def _identify_unmapped_folders(self, source_folders: List[Path]):
         """Identify folders that weren't mapped"""
-        mapped_numbers = set(self.folder_mapping.keys())
+        # Get list of folders we processed
+        processed_names = {f['source_name'] for f in self.manifest['folders_processed']}
         
         unmapped = []
         for folder in source_folders:
-            # Extract folder number
-            folder_num = self._extract_folder_number(folder.name)
-            if folder_num and folder_num not in mapped_numbers:
+            if folder.name not in processed_names and folder.name not in self.completed_folders:
                 unmapped.append({
-                    'folder_number': folder_num,
                     'folder_name': folder.name,
                     'file_count': self._count_files(folder)
                 })
@@ -309,15 +408,9 @@ class LISFolderOrganiser:
         if unmapped:
             print("⚠️  UNMAPPED FOLDERS (not in organisation plan):")
             for item in unmapped:
-                print(f"   [{item['folder_number']}] {item['folder_name']} ({item['file_count']} files)")
+                print(f"   {item['folder_name']} ({item['file_count']} files)")
             
             self.manifest['unmapped_folders'] = unmapped
-    
-    def _extract_folder_number(self, folder_name: str) -> str:
-        """Extract folder number from name"""
-        import re
-        match = re.match(r'^(\d+)[-\.]', folder_name)
-        return match.group(1) if match else None
     
     def _generate_summary(self):
         """Generate organisation summary"""
@@ -328,13 +421,22 @@ class LISFolderOrganiser:
         total_processed = len(self.manifest['folders_processed'])
         successful = sum(1 for f in self.manifest['folders_processed'] if f['status'] == 'success')
         failed = sum(1 for f in self.manifest['folders_processed'] if f['status'] == 'failed')
+        timeout = sum(1 for f in self.manifest['folders_processed'] if f['status'] == 'timeout')
         simulated = sum(1 for f in self.manifest['folders_processed'] if f['status'] == 'simulated')
         
         print(f"Total folders processed: {total_processed}")
         print(f"  Successful: {successful}")
+        print(f"  Timeout (skipped): {timeout}")
         print(f"  Failed: {failed}")
         print(f"  Simulated (dry run): {simulated}")
         print(f"  Errors: {len(self.manifest['errors'])}")
+        
+        # Show skipped folders
+        if self.manifest['folders_skipped']:
+            print(f"\n⏱️  FOLDERS SKIPPED (timeout):")
+            for folder in self.manifest['folders_skipped']:
+                print(f"   {folder['source_name']} → {folder['target_path']}")
+            print(f"\n   💡 Copy these manually or re-run with longer timeout")
         
         # Count by priority tier
         print("\nBy Priority Tier:")
@@ -378,8 +480,8 @@ def main():
         print("Please update the source path in the script.")
         return
     
-    # Create organiser
-    organiser = LISFolderOrganiser(source, target)
+    # Create organiser with 5-minute timeout per folder
+    organiser = LISFolderOrganiser(source, target, timeout_minutes=5)
     
     # Ask user: dry run or live?
     print("\n" + "="*70)
@@ -416,9 +518,19 @@ def main():
     if dry_run:
         print("\n💡 This was a dry run. Run again with option 2 to actually copy files.")
     else:
-        print("\n🎯 Files organised! Your system is ready to run.")
-        print(f"\nNext step: Update config.py paths to point to:")
-        print(f"  {target}")
+        print("\n🎯 Files organised!")
+        
+        # Show next steps
+        if manifest['folders_skipped']:
+            print("\n⚠️  NEXT STEPS:")
+            print("Some folders timed out. You can:")
+            print("1. Re-run this script (it will skip completed folders)")
+            print("2. Copy skipped folders manually with robocopy")
+            print("3. Increase timeout and re-run")
+        else:
+            print("\n🎉 All folders copied successfully!")
+            print(f"\nYour system is ready. Update config.py paths to:")
+            print(f"  {target}")
 
 
 if __name__ == "__main__":
