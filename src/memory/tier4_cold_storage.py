@@ -137,28 +137,35 @@ class ColdStorageManager:
         return b'NO_ENCRYPTION_AVAILABLE'
     
     def encrypt_and_store(self, 
-                         doc_path: Path,
-                         doc_metadata: Dict[str, Any]) -> bool:
+                        file_path: Path = None,
+                        doc_path: Path = None,
+                        doc_metadata: Dict[str, Any] = None,
+                        **kwargs) -> bool:
         """
         Encrypt document and store in vault
+        Accepts both file_path and doc_path for compatibility
         
         Args:
-            doc_path: Path to original document
+            file_path: Path to original document (new naming)
+            doc_path: Path to original document (old naming - deprecated)
             doc_metadata: Document metadata
             
         Returns:
             True if stored successfully
         """
-        if not doc_path.exists():
-            self.logger.error(f"Document not found: {doc_path}")
+        # Use whichever parameter was provided
+        path = file_path or doc_path
+        
+        if not path or not path.exists():
+            self.logger.error(f"Document not found: {path}")
             return False
         
         try:
             # Generate unique doc ID
-            doc_id = self._generate_doc_id(doc_path, doc_metadata)
+            doc_id = self._generate_doc_id(path, doc_metadata or {})
             
             # Read original file
-            with open(doc_path, 'rb') as f:
+            with open(path, 'rb') as f:
                 original_data = f.read()
             
             # Calculate original hash
@@ -170,7 +177,7 @@ class ColdStorageManager:
             else:
                 # No encryption available - store as-is (NOT RECOMMENDED)
                 encrypted_data = original_data
-                self.logger.warning(f"Storing {doc_path.name} UNENCRYPTED")
+                self.logger.warning(f"Storing {path.name} UNENCRYPTED")
             
             # Generate encrypted filename
             encrypted_filename = f"{doc_id}.enc"
@@ -190,17 +197,17 @@ class ColdStorageManager:
             cursor.execute("""
                 INSERT OR REPLACE INTO vault_documents
                 (doc_id, original_filename, encrypted_filename, folder, doc_type,
-                 importance, size_bytes, encrypted_size_bytes, original_hash,
-                 encrypted_hash, encryption_date, last_accessed, access_count,
-                 metadata_json)
+                importance, size_bytes, encrypted_size_bytes, original_hash,
+                encrypted_hash, encryption_date, last_accessed, access_count,
+                metadata_json)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """, (
                 doc_id,
-                doc_path.name,
+                path.name,
                 encrypted_filename,
-                doc_metadata.get('folder', 'unknown'),
-                doc_metadata.get('doc_type', 'unknown'),
-                doc_metadata.get('importance', 5),
+                doc_metadata.get('folder', 'unknown') if doc_metadata else 'unknown',
+                doc_metadata.get('doc_type', 'unknown') if doc_metadata else 'unknown',
+                doc_metadata.get('importance', 5) if doc_metadata else 5,
                 len(original_data),
                 len(encrypted_data),
                 original_hash,
@@ -208,17 +215,17 @@ class ColdStorageManager:
                 datetime.now().isoformat(),
                 datetime.now().isoformat(),
                 0,
-                json.dumps(doc_metadata)
+                json.dumps(doc_metadata) if doc_metadata else '{}'
             ))
             
             conn.commit()
             conn.close()
             
-            self.logger.info(f"Stored in vault: {doc_path.name} ({len(original_data)} bytes)")
+            self.logger.info(f"Stored in vault: {path.name} ({len(original_data)} bytes)")
             return True
             
         except Exception as e:
-            self.logger.error(f"Failed to store {doc_path.name}: {e}")
+            self.logger.error(f"Failed to store {path.name if path else 'unknown'}: {e}")
             return False
     
     def retrieve_documents(self, 

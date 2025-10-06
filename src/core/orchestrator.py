@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 """
 Main Orchestration Engine for Litigation Intelligence
+UPDATED: Now supports priority document loading
 PRODUCTION READY - All methods implemented
-British English throughout
+British English throughout - Lismore v Process Holdings
 """
 
 import json
 import time
 import shutil
+import sys
 from pathlib import Path
 from typing import Dict, List, Optional, Any, Tuple
 from datetime import datetime
@@ -47,13 +49,15 @@ class LitigationOrchestrator:
         self.recursive_prompts = RecursivePrompts(self.config)
         self.synthesis_prompts = SynthesisPrompts(self.config)
         
+        # Document loader
+        self.document_loader = DocumentLoader(self.config)
+        
         # Hierarchical memory system (optional)
         self.memory_enabled = False
         self.memory_system = None
         try:
             from memory.hierarchical_system import HierarchicalMemory
-            memory_path = self.config.root / "data" / "memory_tiers"
-            self.memory_system = HierarchicalMemory(memory_path, self.config)
+            self.memory_system = HierarchicalMemory(self.config, self.knowledge_graph)
             self.memory_enabled = True
             print("✅ Hierarchical Memory System ACTIVE")
         except ImportError:
@@ -104,7 +108,7 @@ class LitigationOrchestrator:
         return results
     
     # ============================================================================
-    # CRITICAL METHOD: SPAWN INVESTIGATION (NOW IMPLEMENTED)
+    # CRITICAL METHOD: SPAWN INVESTIGATION
     # ============================================================================
     
     def spawn_investigation(self, 
@@ -115,314 +119,158 @@ class LitigationOrchestrator:
         """
         Spawn new investigation thread
         
-        PRODUCTION READY IMPLEMENTATION
-        
         Args:
             trigger_type: Type of trigger (contradiction, discovery, pattern, etc.)
-            trigger_data: Data that triggered investigation
-            priority: Investigation priority (0.0-10.0)
-            parent_id: Parent investigation ID if this is a child
-        
+            trigger_data: Data that triggered the investigation
+            priority: Priority score (0.0-10.0)
+            parent_id: Optional parent investigation ID
+            
         Returns:
             Investigation ID
         """
         
         # Generate investigation ID
-        trigger_hash = hashlib.md5(
-            json.dumps(trigger_data, sort_keys=True).encode()
-        ).hexdigest()[:8].upper()
-        investigation_id = f"INV_{trigger_hash}"
+        inv_id = self._generate_investigation_id(trigger_type)
         
-        # Check if already exists
-        if investigation_id in self.state['investigations']:
-            print(f"    Investigation {investigation_id} already exists - skipping")
-            return investigation_id
-        
-        # Determine depth
-        depth = 0
-        if parent_id and parent_id in self.state['investigations']:
-            depth = self.state['investigations'][parent_id]['depth'] + 1
-        
-        # Create investigation record
         investigation = {
-            'id': investigation_id,
+            'id': inv_id,
             'type': trigger_type,
             'priority': priority,
-            'status': 'active',
-            'trigger_data': trigger_data,
+            'data': trigger_data,
             'parent_id': parent_id,
-            'depth': depth,
-            'created_at': datetime.now().isoformat(),
-            'child_investigations': [],
+            'status': 'active',
+            'created': datetime.now().isoformat(),
             'findings': []
         }
         
-        # Add to knowledge graph investigations table
-        try:
-            import sqlite3
-            conn = sqlite3.connect(self.knowledge_graph.db_path)
-            cursor = conn.cursor()
-            
-            cursor.execute("""
-                INSERT INTO investigations (
-                    investigation_id, trigger_type, trigger_data, priority,
-                    status, spawned_from, depth, created
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-            """, (
-                investigation_id,
-                trigger_type,
-                json.dumps(trigger_data),
-                priority,
-                'active',
-                parent_id,
-                depth,
-                datetime.now().isoformat()
-            ))
-            
-            conn.commit()
-            conn.close()
-            
-        except Exception as e:
-            print(f"    ⚠️  Failed to add investigation to knowledge graph: {e}")
+        self.state['investigations'][inv_id] = investigation
         
-        # Store in state
-        self.state['investigations'][investigation_id] = investigation
+        print(f"    🔍 Spawned investigation: {inv_id} (priority: {priority})")
         
-        # Update parent's children list
-        if parent_id and parent_id in self.state['investigations']:
-            self.state['investigations'][parent_id]['child_investigations'].append(
-                investigation_id
-            )
-        
-        self._save_state()
-        
-        print(f"    ✅ Investigation spawned: {investigation_id} (Priority: {priority}, Depth: {depth})")
-        
-        return investigation_id
+        return inv_id
+    
+    def _generate_investigation_id(self, trigger_type: str) -> str:
+        """Generate unique investigation ID"""
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        random_hash = hashlib.md5(str(time.time()).encode()).hexdigest()[:6]
+        return f"INV_{trigger_type.upper()}_{timestamp}_{random_hash}"
     
     # ============================================================================
-    # CRITICAL METHOD: EXTRACT KNOWLEDGE FROM RESPONSE (NOW IMPLEMENTED)
+    # DOCUMENT LOADING (WITH PRIORITISATION SUPPORT)
     # ============================================================================
     
-    def _extract_knowledge_from_response(self, response: str, phase: str) -> None:
+    def load_priority_documents_only(self, directory: Path) -> List[Dict]:
         """
-        Extract and store knowledge from Claude response
+        NEW: Load only priority documents based on prioritisation
         
-        PRODUCTION READY IMPLEMENTATION
+        If priority_documents.json exists, loads only those documents.
+        Otherwise falls back to loading all documents.
         
-        Delegates to phase_executor for actual extraction,
-        then ensures everything is stored in knowledge graph
+        Args:
+            directory: Directory to load from
+            
+        Returns:
+            List of document dicts
         """
         
-        try:
-            # Use phase_executor's extraction methods
-            if hasattr(self.phase_executor, '_process_knowledge_response'):
-                self.phase_executor._process_knowledge_response(response, phase)
-            else:
-                # Fallback: manual extraction
-                from intelligence.knowledge_graph import Entity, Relationship, Pattern, Contradiction
-                
-                # Extract contradictions
-                contradictions = self.phase_executor.extract_contradictions(response)
-                for contradiction in contradictions:
+        priority_file = self.config.output_dir / "priority_documents.json"
+        
+        if not priority_file.exists():
+            print("  ℹ️  No priority list found - loading all documents")
+            return self._load_documents(directory)
+        
+        # Load priority list
+        with open(priority_file, 'r', encoding='utf-8') as f:
+            priority_data = json.load(f)
+        
+        priority_filenames = set(
+            doc['filename'] for doc in priority_data['documents']
+        )
+        
+        print(f"  ✅ Priority list found: {len(priority_filenames)} documents")
+        
+        # Load only priority documents
+        priority_docs = []
+        
+        for pattern in ['*.pdf', '*.txt', '*.docx', '*.doc']:
+            for file_path in sorted(directory.glob(f"**/{pattern}")):
+                if file_path.name in priority_filenames:
                     try:
-                        self.knowledge_graph.add_contradiction(contradiction)
+                        doc = self.document_loader.load_document(file_path)
+                        if doc:
+                            priority_docs.append(doc)
                     except Exception as e:
-                        print(f"      ⚠️  Failed to add contradiction: {e}")
-                
-                # Extract patterns
-                patterns = self.phase_executor.extract_patterns(response)
-                for pattern in patterns:
-                    try:
-                        self.knowledge_graph.add_pattern(pattern)
-                    except Exception as e:
-                        print(f"      ⚠️  Failed to add pattern: {e}")
-                
-                # Extract entities and relationships
-                entities, relationships = self.phase_executor.extract_entities_and_relationships(response)
-                
-                for entity_data in entities:
-                    try:
-                        # Convert dict to Entity object if needed
-                        if isinstance(entity_data, dict):
-                            entity = Entity(
-                                entity_id=hashlib.md5(entity_data.get('name', 'unknown').encode()).hexdigest()[:16],
-                                entity_type=entity_data.get('type', 'discovered'),
-                                subtype='',
-                                name=entity_data.get('name', 'Unknown'),
-                                first_seen=datetime.now().isoformat(),
-                                confidence=entity_data.get('suspicion', 0.5),
-                                properties=entity_data,
-                                discovery_phase=phase
-                            )
-                        else:
-                            entity = entity_data
-                        
-                        self.knowledge_graph.add_entity(entity)
-                    except Exception as e:
-                        print(f"      ⚠️  Failed to add entity: {e}")
-                
-                for rel_data in relationships:
-                    try:
-                        # Convert dict to Relationship object if needed
-                        if isinstance(rel_data, dict):
-                            relationship = Relationship(
-                                relationship_id=hashlib.md5(
-                                    f"{rel_data.get('description', 'unknown')}".encode()
-                                ).hexdigest()[:16],
-                                source_entity='unknown',
-                                target_entity='unknown',
-                                relationship_type=rel_data.get('type', 'hidden'),
-                                confidence=rel_data.get('strength', 0.7),
-                                evidence=[rel_data.get('description', '')],
-                                discovered=datetime.now().isoformat(),
-                                properties=rel_data
-                            )
-                        else:
-                            relationship = rel_data
-                        
-                        self.knowledge_graph.add_relationship(relationship)
-                    except Exception as e:
-                        print(f"      ⚠️  Failed to add relationship: {e}")
-                
-        except Exception as e:
-            print(f"    ⚠️  Knowledge extraction error: {e}")
+                        print(f"  ⚠️  Failed to load {file_path.name}: {e}")
+        
+        print(f"  Loaded {len(priority_docs)} priority documents")
+        
+        return priority_docs
     
-    # ============================================================================
-    # CRITICAL METHOD: EXTRACT DISCOVERIES FROM RESPONSE (NOW IMPLEMENTED)
-    # ============================================================================
-    
-    def _extract_discoveries_from_response(self, response: str, phase: str) -> List[Dict]:
-        """
-        Extract discovery markers from Claude response
+    def _load_documents(self, directory: Path) -> List[Dict]:
+        """Load documents from directory (standard loading)"""
         
-        PRODUCTION READY IMPLEMENTATION
+        documents = self.document_loader.load_directory(
+            directory=directory,
+            doc_types=['.pdf', '.txt', '.docx', '.doc', '.json', '.html', '.md']
+        )
         
-        Returns list of discoveries with type and content
-        """
-        
-        discoveries = []
-        
-        # Discovery markers
-        markers = {
-            'NUCLEAR': r'\[NUCLEAR\]\s*([^\[]+)',
-            'CRITICAL': r'\[CRITICAL\]\s*([^\[]+)',
-            'PATTERN': r'\[PATTERN\]\s*([^\[]+)',
-            'SUSPICIOUS': r'\[SUSPICIOUS\]\s*([^\[]+)',
-            'MISSING': r'\[MISSING\]\s*([^\[]+)',
-            'TIMELINE': r'\[TIMELINE\]\s*([^\[]+)',
-            'FINANCIAL': r'\[FINANCIAL\]\s*([^\[]+)',
-            'ADMISSION': r'\[ADMISSION\]\s*([^\[]+)',
-            'RELATIONSHIP': r'\[RELATIONSHIP\]\s*([^\[]+)',
-            'INVESTIGATE': r'\[INVESTIGATE\]\s*([^\[]+)'
-        }
-        
-        import re
-        
-        for discovery_type, pattern in markers.items():
-            matches = re.findall(pattern, response, re.IGNORECASE | re.DOTALL)
+        if not documents:
+            print(f"  Warning: No documents loaded from {directory}")
+        else:
+            print(f"  Loaded {len(documents)} documents from {directory}")
             
-            for match in matches:
-                content = match.strip()[:1000]  # Limit to 1000 chars
-                
-                discovery = {
-                    'type': discovery_type,
-                    'content': content,
-                    'phase': phase,
-                    'timestamp': datetime.now().isoformat()
-                }
-                
-                discoveries.append(discovery)
-                
-                # Log to knowledge graph discovery_log
-                try:
-                    importance_map = {
-                        'NUCLEAR': 'NUCLEAR',
-                        'CRITICAL': 'CRITICAL',
-                        'PATTERN': 'HIGH',
-                        'SUSPICIOUS': 'MEDIUM',
-                        'MISSING': 'HIGH',
-                        'TIMELINE': 'HIGH',
-                        'FINANCIAL': 'HIGH',
-                        'ADMISSION': 'CRITICAL',
-                        'RELATIONSHIP': 'MEDIUM',
-                        'INVESTIGATE': 'HIGH'
-                    }
-                    
-                    importance = importance_map.get(discovery_type, 'MEDIUM')
-                    
-                    self.knowledge_graph.log_discovery(
-                        discovery_type=discovery_type,
-                        content=content,
-                        importance=importance,
-                        phase=phase
-                    )
-                except Exception as e:
-                    print(f"      ⚠️  Failed to log discovery: {e}")
+            # Show breakdown by type
+            by_type = {}
+            for doc in documents:
+                ext = doc['metadata'].get('extension', 'unknown')
+                by_type[ext] = by_type.get(ext, 0) + 1
+            
+            for ext, count in by_type.items():
+                print(f"    - {ext}: {count} documents")
         
-        return discoveries
+        return documents
     
     # ============================================================================
-    # CHECKPOINT & STATE MANAGEMENT
+    # CHECKPOINT MANAGEMENT
     # ============================================================================
     
-    def _save_batch_checkpoint(self, 
-                               phase: str,
-                               batch_num: int,
-                               batch_results: Dict,
-                               doc_ids: List[str]) -> None:
-        """Save batch-level checkpoint"""
+    def _save_batch_checkpoint(self, phase: str, batch_num: int, results: Dict) -> None:
+        """Save checkpoint after batch completion"""
         
-        checkpoint_data = {
+        checkpoint = {
             'phase': phase,
-            'batch_number': batch_num,
+            'batch': batch_num,
             'timestamp': datetime.now().isoformat(),
-            'batch_results': batch_results,
-            'processed_document_ids': doc_ids,
-            'status': 'completed'
+            'results': results,
+            'state': self.state
         }
         
         checkpoint_file = self.batch_checkpoint_dir / f"phase_{phase}_batch_{batch_num}.json"
         with open(checkpoint_file, 'w', encoding='utf-8') as f:
-            json.dump(checkpoint_data, f, indent=2)
+            json.dump(checkpoint, f, indent=2)
         
+        # Also save as "latest" for easy resume
         latest_file = self.batch_checkpoint_dir / f"phase_{phase}_latest.json"
         with open(latest_file, 'w', encoding='utf-8') as f:
-            json.dump(checkpoint_data, f, indent=2)
+            json.dump(checkpoint, f, indent=2)
     
-    def _load_checkpoint(self, phase: str) -> Optional[Dict]:
-        """Load latest checkpoint for phase"""
+    def _check_for_resume(self, phase: str) -> Tuple[bool, Optional[Dict]]:
+        """Check if there's a checkpoint to resume from"""
         
         latest_file = self.batch_checkpoint_dir / f"phase_{phase}_latest.json"
         
-        if latest_file.exists():
-            with open(latest_file, 'r', encoding='utf-8') as f:
-                return json.load(f)
+        if not latest_file.exists():
+            return False, None
         
-        return None
-    
-    def _get_processed_docs(self, phase: str) -> List[str]:
-        """Get list of already-processed document IDs"""
+        with open(latest_file, 'r', encoding='utf-8') as f:
+            checkpoint = json.load(f)
         
-        checkpoint = self._load_checkpoint(phase)
+        print(f"\n⚠️  Found checkpoint from {checkpoint['timestamp']}")
+        print(f"  Last completed batch: {checkpoint['batch']}")
         
-        if checkpoint:
-            return checkpoint.get('processed_document_ids', [])
-        
-        return []
-    
-    def _should_resume_phase(self, phase: str) -> Tuple[bool, Optional[Dict]]:
-        """Check if phase should resume from checkpoint"""
-        
-        checkpoint = self._load_checkpoint(phase)
-        
-        if checkpoint:
-            print(f"\n  Found checkpoint for Phase {phase}")
-            print(f"    Last batch: {checkpoint.get('batch_number', 0)}")
-            print(f"    Documents processed: {len(checkpoint.get('processed_document_ids', []))}")
-            print(f"    Timestamp: {checkpoint.get('timestamp', 'N/A')}")
-            
-            response = input("\n  Resume from checkpoint? (yes/no): ")
+        # Ask user if they want to resume
+        if sys.stdin.isatty():  # Only ask if interactive
+            response = input(f"Resume from checkpoint? (yes/no): ")
             
             if response.lower() in ['yes', 'y']:
                 return True, checkpoint
@@ -436,6 +284,7 @@ class LitigationOrchestrator:
         if latest_file.exists():
             latest_file.unlink()
         
+        # Archive batch checkpoints
         archive_dir = self.checkpoint_dir / "archive" / phase
         archive_dir.mkdir(parents=True, exist_ok=True)
         
@@ -449,17 +298,23 @@ class LitigationOrchestrator:
         backup_dir = self.config.output_dir / f"backup_phase_{phase}_{timestamp}"
         backup_dir.mkdir(parents=True, exist_ok=True)
         
+        # Backup knowledge graph
         if self.config.graph_db_path.exists():
             shutil.copy2(
                 self.config.graph_db_path,
                 backup_dir / "graph.db"
             )
         
+        # Backup state
         state_file = self.config.output_dir / ".orchestrator_state.json"
         if state_file.exists():
             shutil.copy2(state_file, backup_dir / "orchestrator_state.json")
         
         print(f"  Backup created: {backup_dir.name}")
+    
+    # ============================================================================
+    # STATE MANAGEMENT
+    # ============================================================================
     
     def _save_state(self) -> None:
         """Save orchestrator state"""
@@ -478,53 +333,6 @@ class LitigationOrchestrator:
                 self.state.update(saved_state)
     
     # ============================================================================
-    # HELPER METHODS
-    # ============================================================================
-    
-    def _load_documents(self, directory: Path) -> List[Dict]:
-        """Load documents from directory"""
-        
-        loader = DocumentLoader(self.config)
-        
-        documents = loader.load_directory(
-            directory=directory,
-            doc_types=['.pdf', '.txt', '.docx', '.doc', '.json', '.html', '.md']
-        )
-        
-        if not documents:
-            print(f"  Warning: No documents loaded from {directory}")
-        else:
-            print(f"  Loaded {len(documents)} documents from {directory}")
-            
-            by_type = {}
-            for doc in documents:
-                ext = doc['metadata'].get('extension', 'unknown')
-                by_type[ext] = by_type.get(ext, 0) + 1
-            
-            for ext, count in by_type.items():
-                print(f"    - {ext}: {count} documents")
-        
-        return documents
-    
-    def _save_phase_output(self, phase: str, results: Dict) -> None:
-        """Save phase output to file"""
-        
-        phase_dir = self.config.analysis_dir / f"phase_{phase}"
-        phase_dir.mkdir(parents=True, exist_ok=True)
-        
-        if 'synthesis' in results:
-            synthesis_file = phase_dir / "synthesis.md"
-            with open(synthesis_file, 'w', encoding='utf-8') as f:
-                f.write(f"# Phase {phase} Analysis\n\n")
-                f.write(f"*Documents Processed: {results.get('documents_processed', 0)}*\n\n")
-                f.write("---\n\n")
-                f.write(results['synthesis'])
-        
-        metadata_file = phase_dir / "metadata.json"
-        with open(metadata_file, 'w', encoding='utf-8') as f:
-            json.dump(results.get('metadata', {}), f, indent=2)
-    
-    # ============================================================================
     # MEMORY INTEGRATION (OPTIONAL)
     # ============================================================================
     
@@ -540,13 +348,13 @@ class LitigationOrchestrator:
             memory_query = MemoryQuery(
                 query_text=query_text,
                 max_tokens=max_tokens,
-                include_tiers=[1, 2, 3, 5]
+                include_tiers=[1, 2, 3, 5]  # Skip Tier 4 (cold storage) by default
             )
             
             result = self.memory_system.retrieve_relevant_context(memory_query)
             
             print(f"      Memory: {result['total_tokens']} tokens, "
-                  f"saved £{result['cost_estimate_saved']:.2f}")
+                  f"saved ~£{result.get('cost_estimate', 0.0):.2f}")
             
             return result
         else:
@@ -554,7 +362,7 @@ class LitigationOrchestrator:
             return {
                 'context': self.knowledge_graph.get_context_for_phase(phase or 'general'),
                 'total_tokens': 0,
-                'cost_estimate_saved': 0.0
+                'cost_estimate': 0.0
             }
     
     def _cache_analysis_if_enabled(self,
@@ -566,7 +374,8 @@ class LitigationOrchestrator:
         
         if self.memory_enabled and self.memory_system:
             try:
-                self.memory_system.store_analysis(
+                # Store in Tier 5 (Analysis Cache)
+                self.memory_system.tier5.cache_analysis(
                     query=query_text,
                     response=response,
                     metadata={
