@@ -33,9 +33,14 @@ class Config:
         """Define organised folder structure"""
         # Input paths
         self.input_dir = self.root / "data" / "input"
-        self.legal_knowledge_dir = self.input_dir / "legal_knowledge"
-        self.case_context_dir = self.input_dir / "case_context"
-        self.disclosure_dir = self.input_dir / "disclosure"
+        
+        # NEW FOLDER NAMES (your actual folders)
+        self.legal_knowledge_dir = self.input_dir / "LEGAL_KNOWLEDGE"
+        self.case_documents_dir = self.input_dir / "CASE_DOCUMENTS"
+        
+        # ALIASES (for backward compatibility with old code)
+        self.case_context_dir = self.case_documents_dir
+        self.disclosure_dir = self.case_documents_dir
         
         # Knowledge management
         self.knowledge_dir = self.root / "data" / "knowledge"
@@ -51,8 +56,8 @@ class Config:
         
         # Create directories if they don't exist
         for dir_path in [
-            self.input_dir, self.legal_knowledge_dir, self.case_context_dir,
-            self.disclosure_dir, self.knowledge_dir, self.backups_dir,
+            self.input_dir, self.legal_knowledge_dir, self.case_documents_dir,
+            self.knowledge_dir, self.backups_dir,
             self.output_dir, self.analysis_dir, self.investigations_dir,
             self.reports_dir
         ]:

@@ -135,7 +135,7 @@ class ClaudeClient:
                 if self._should_use_extended_thinking(model, task_type):
                     api_params['thinking'] = {
                         'type': 'enabled',
-                        'budget_tokens': 10000
+                        'budget_tokens': 20000
                     }
                     print(f"  🧠 Extended Thinking: ENABLED")
                 
@@ -325,7 +325,7 @@ class ClaudeClient:
                 if self._should_use_extended_thinking(model, task_type):
                     api_params['thinking'] = {
                         'type': 'enabled',
-                        'budget_tokens': 10000
+                        'budget_tokens': 20000
                     }
                     print(f"  🧠 Extended Thinking: ENABLED")
                 
@@ -493,27 +493,16 @@ class ClaudeClient:
     
     def _should_use_extended_thinking(self, model: str, task_type: str = None) -> bool:
         """
-        Determine if Extended Thinking should be enabled
-        
-        Only for Sonnet 4.x and complex reasoning tasks
+        LITIGATION OPTIMISATION: Extended thinking for ALL analysis tasks
         """
-        # Only Sonnet 4 supports extended thinking
         if 'sonnet-4' not in model.lower():
             return False
         
-        # Enable for complex reasoning tasks
-        complex_tasks = [
-            'investigation', 'pattern_recognition', 'contradiction_analysis',
-            'synthesis', 'hypothesis', 'deep_investigation', 'strategic_synthesis',
-            'timeline_analysis', 'financial_analysis', 'entity_mapping'
-        ]
+        # Disable ONLY for basic tasks
+        if task_type in ['metadata_scan', 'document_loading', 'prioritisation']:
+            return False
         
-        if task_type:
-            for task in complex_tasks:
-                if task in task_type.lower():
-                    return True
-        
-        return False
+        return True  # Everything else gets extended thinking
     
     def _calculate_complexity(self, prompt: str, task_type: str = None) -> float:
         """Calculate prompt complexity to determine model selection"""
