@@ -30,39 +30,123 @@ class Config:
         self._setup_memory_tiers()  # NEW
     
     def _setup_paths(self) -> None:
-        """Define organised folder structure"""
-        # Input paths
-        self.input_dir = self.root / "data" / "input"
+        """Define organised folder structure - UPDATED FOR LIS1.1"""
         
-        # NEW FOLDER NAMES (your actual folders)
-        self.legal_knowledge_dir = self.input_dir / "LEGAL_KNOWLEDGE"
-        self.case_documents_dir = self.input_dir / "CASE_DOCUMENTS"
+        # Root input directory
+        self.input_dir = self.root / "data" 
         
-        # ALIASES (for backward compatibility with old code)
-        self.case_context_dir = self.case_documents_dir
-        self.disclosure_dir = self.case_documents_dir
+        # ================================================================
+        # ORGANISED FOLDER HIERARCHY (matches organisation script)
+        # ================================================================
         
-        # Knowledge management
+        # 1. Legal Knowledge - Foundation & Context
+        self.legal_knowledge_dir = self.input_dir / "1_LEGAL_KNOWLEDGE"
+        
+        # 2. Case Pleadings - Parties' Legal Arguments  
+        self.case_pleadings_dir = self.input_dir / "2_CASE_PLEADINGS"
+        
+        # 3. Witness Evidence - Witness Statements
+        self.witness_evidence_dir = self.input_dir / "3_WITNESS_EVIDENCE"
+        
+        # 4. Disclosure - RAW EVIDENCE (HIGHEST PRIORITY)
+        self.disclosure_dir = self.input_dir / "4_DISCLOSURE"
+        
+        # 5. Tribunal Orders - Procedural Rulings
+        self.tribunal_orders_dir = self.input_dir / "5_TRIBUNAL_ORDERS"
+        
+        # 6. Correspondence - Emails & Letters
+        self.correspondence_dir = self.input_dir / "6_CORRESPONDENCE"
+        
+        # 7. Disclosure Disputes - Shows What's Missing
+        self.disclosure_disputes_dir = self.input_dir / "7_DISCLOSURE_DISPUTES"
+        
+        # 8. Procedural Low Priority - Admin Documents
+        self.procedural_dir = self.input_dir / "8_PROCEDURAL_LOW_PRIORITY"
+        
+        # 9. Expert Instructions - Future Expert Evidence
+        self.expert_instructions_dir = self.input_dir / "9_EXPERT_INSTRUCTIONS"
+        
+        # ================================================================
+        # BACKWARD COMPATIBILITY ALIASES
+        # ================================================================
+        # (Keep old code working while we transition)
+        
+        self.case_context_dir = self.case_pleadings_dir  # Old name
+        self.case_documents_dir = self.case_pleadings_dir  # Old name
+        
+        # ================================================================
+        # PASS-SPECIFIC CONFIGURATIONS
+        # ================================================================
+        
+        # Pass 0: Foundation building sources
+        self.pass_0_sources = [
+            self.legal_knowledge_dir,      # Legal context & rules
+            self.case_pleadings_dir        # Parties' positions
+        ]
+        
+        # Pass 1: Primary target (where smoking guns hide)
+        self.pass_1_primary_target = self.disclosure_dir / "respondent_production"
+        
+        # Pass 1: Secondary targets (supporting evidence)
+        self.pass_1_secondary_targets = [
+            self.disclosure_dir / "claimant_production",  # Our disclosure
+            self.witness_evidence_dir,                     # Witness statements
+            self.correspondence_dir,                       # Email chains
+            self.disclosure_disputes_dir                   # Shows what's missing!
+        ]
+        
+        # Pass 1: Excluded folders (don't waste tokens)
+        self.pass_1_exclude = [
+            self.procedural_dir,           # Transcripts, bundles (low value)
+            self.tribunal_orders_dir       # Reference only
+        ]
+        
+        # ================================================================
+        # KNOWLEDGE MANAGEMENT PATHS
+        # ================================================================
+        
         self.knowledge_dir = self.root / "data" / "knowledge"
         self.graph_db_path = self.knowledge_dir / "graph.db"
         self.backups_dir = self.knowledge_dir / "backups"
         self.investigations_db_path = self.knowledge_dir / "investigations.db"
         
-        # Output paths
+        # ================================================================
+        # OUTPUT PATHS
+        # ================================================================
+        
         self.output_dir = self.root / "data" / "output"
         self.analysis_dir = self.output_dir / "analysis"
         self.investigations_dir = self.output_dir / "investigations"
         self.reports_dir = self.output_dir / "reports"
         
-        # Create directories if they don't exist
+        # ================================================================
+        # CREATE ALL DIRECTORIES
+        # ================================================================
+        
         for dir_path in [
-            self.input_dir, self.legal_knowledge_dir, self.case_documents_dir,
-            self.knowledge_dir, self.backups_dir,
-            self.output_dir, self.analysis_dir, self.investigations_dir,
+            # Input directories
+            self.input_dir,
+            self.legal_knowledge_dir,
+            self.case_pleadings_dir,
+            self.witness_evidence_dir,
+            self.disclosure_dir,
+            self.tribunal_orders_dir,
+            self.correspondence_dir,
+            self.disclosure_disputes_dir,
+            self.procedural_dir,
+            self.expert_instructions_dir,
+            # Knowledge management
+            self.knowledge_dir,
+            self.backups_dir,
+            # Output directories
+            self.output_dir,
+            self.analysis_dir,
+            self.investigations_dir,
             self.reports_dir
         ]:
             dir_path.mkdir(parents=True, exist_ok=True)
-    
+
+
     def _setup_models(self) -> None:
         """Model selection for maximum reasoning"""
         self.models = {

@@ -1,75 +1,20 @@
-﻿# Core AI/API
+﻿# Core AI
 anthropic>=0.39.0
 
 # Document Processing
 PyPDF2>=3.0.0
+PyMuPDF>=1.23.0
+pdfplumber>=0.10.0
 python-docx>=1.1.0
-openpyxl>=3.1.2
-python-pptx>=0.6.23
 chardet>=5.2.0
 
-# PDF Processing (ENHANCED)
-PyMuPDF>=1.23.0  # This is 'fitz'
-pdfplumber>=0.10.0
-
-# Environment & Configuration
+# Configuration & Security
 python-dotenv>=1.0.0
-
-# Data Processing
-pandas>=2.1.0
-numpy>=1.24.0
-
-# Security
 cryptography>=41.0.0
 
-# Progress & UI
+# Progress Bars
 tqdm>=4.66.0
-colorama>=0.4.6
-tabulate>=0.9.0
 
-# File Handling
-pathlib>=1.0.1
-watchdog>=3.0.0
-
-# JSON & Data Formats
-jsonschema>=4.20.0
-
-# Date & Time
-python-dateutil>=2.8.2
-
-# Testing (optional)
-pytest>=7.4.0
-pytest-asyncio>=0.21.0
-pytest-mock>=3.12.0
-
-# Code Quality (optional)
-black>=23.12.0
-pylint>=3.0.0
-mypy>=1.8.0
-
-# Performance Monitoring
-psutil>=5.9.0
-
-# Logging
-loguru>=0.7.2
-
-# Rate Limiting
-ratelimit>=2.2.1
-
-# Caching
-diskcache>=5.6.0
-
-# Security & encryption
-cryptography>=41.0.0
-
-# Memory System - NEW
+# Vector Store (Optional - enables semantic search)
 chromadb>=0.4.22
 sentence-transformers>=2.2.2
-
-# Optional but recommended for better performance
-faiss-cpu>=1.7.4  # Alternative to ChromaDB (faster)
-
-# Utilities
-requests>=2.31.0
-
-

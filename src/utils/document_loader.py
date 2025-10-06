@@ -139,10 +139,10 @@ class DocumentLoader:
     
     def load_document(self, file_path: Path) -> Optional[Dict]:
         """
-        Load single document with metadata extraction
+        Load single document with metadata extraction - ENHANCED with folder context
         
         Returns:
-            Document dictionary with content and metadata
+            Document dictionary with content, metadata, and folder context
         """
         
         if not file_path.exists():
@@ -174,6 +174,16 @@ class DocumentLoader:
         # Extract comprehensive metadata
         metadata = self._extract_metadata(file_path, content, extraction_metadata)
         
+        # NEW: Extract folder context (CRITICAL for Pass 1 prioritisation)
+        folder_context = self._extract_folder_context(file_path)
+        metadata['folder_context'] = folder_context
+        
+        # NEW: Add priority boost based on folder
+        metadata['folder_priority_boost'] = folder_context.get('priority_tier', 5)
+        metadata['document_source_type'] = folder_context.get('source_type', 'unknown')
+        metadata['is_raw_disclosure'] = folder_context.get('is_disclosure', False)
+        metadata['batch_date'] = folder_context.get('batch_date')
+        
         # Update stats
         ext = extension
         self.load_stats['by_type'][ext] = self.load_stats['by_type'].get(ext, 0) + 1
@@ -187,7 +197,7 @@ class DocumentLoader:
             'metadata': metadata
         }
         
-        # NEW: Add to memory tiers if enabled
+        # NEW: Add to memory tiers if enabled (with folder context)
         self._add_to_memory_tiers(file_path, document, extension)
         
         return document
@@ -198,6 +208,7 @@ class DocumentLoader:
         doc_id = document['id']
         content = document['content']
         metadata = document['metadata']
+        folder_context = metadata.get('folder_context', {})
         
         # TIER 2: Add to vector store (for semantic search)
         if self.vector_store and content:
@@ -213,6 +224,11 @@ class DocumentLoader:
                         'has_dates': metadata.get('has_dates', False),
                         'has_amounts': metadata.get('has_amounts', False),
                         'word_count': metadata.get('word_count', 0),
+                        'source_type': folder_context.get('source_type', 'unknown'),
+                        'priority_tier': folder_context.get('priority_tier', 5),
+                        'is_disclosure': folder_context.get('is_disclosure', False),
+                        'batch_date': folder_context.get('batch_date'),
+                        'party': folder_context.get('party'),
                         **metadata
                     }
                 )
@@ -543,6 +559,226 @@ class DocumentLoader:
         
         return 'general'
     
+    def _extract_folder_context(self, file_path: Path) -> Dict:
+        """
+        Extract context from folder structure - CRITICAL for intelligent prioritisation
+        
+        Args:
+            file_path: Path to document file
+            
+        Returns:
+            Dict with folder context metadata
+        """
+        
+        # Get folder hierarchy as string
+        folder_str = str(file_path.parent).lower()
+        parts = file_path.parts
+        
+        # Default context
+        context = {
+            'source_type': 'unknown',
+            'priority_tier': 5,  # Default medium priority
+            'is_disclosure': False,
+            'is_duplicate_risk': False,
+            'batch_date': None,
+            'folder_category': 'unknown'
+        }
+        
+        # ====================================================================
+        # TIER 10: RAW DISCLOSURE (HIGHEST PRIORITY - WHERE SMOKING GUNS HIDE)
+        # ====================================================================
+        
+        if '4_disclosure' in folder_str or 'disclosure' in folder_str:
+            context['source_type'] = 'raw_disclosure'
+            context['priority_tier'] = 10
+            context['is_disclosure'] = True
+            context['folder_category'] = 'disclosure'
+            
+            # Identify if respondent or claimant production
+            if 'respondent' in folder_str or 'phl' in folder_str:
+                context['party'] = 'respondent'
+                context['priority_tier'] = 10  # Respondent disclosure HIGHEST priority
+            elif 'claimant' in folder_str or 'lismore' in folder_str:
+                context['party'] = 'claimant'
+                context['priority_tier'] = 8  # Our own disclosure lower priority
+            
+            # Extract batch date if present
+            import re
+            date_patterns = [
+                r'(\d{1,2}[_\s][a-z]{3,}[_\s]\d{4})',  # "11_April_2025"
+                r'(\d{4}[-_]\d{2}[-_]\d{2})',           # "2025-04-11"
+                r'(\d{1,2}[_\s][a-z]{3,})',             # "11_April"
+            ]
+            
+            for pattern in date_patterns:
+                date_match = re.search(pattern, folder_str, re.IGNORECASE)
+                if date_match:
+                    context['batch_date'] = date_match.group(1).replace('_', ' ')
+                    break
+            
+            # Check if "complete sets" - highest quality disclosure
+            if 'complete' in folder_str:
+                context['priority_tier'] = 10
+                context['is_complete_set'] = True
+        
+        # ====================================================================
+        # TIER 9: WITNESS EVIDENCE (HIGH PRIORITY - DIRECT TESTIMONY)
+        # ====================================================================
+        
+        elif '3_witness' in folder_str or 'witness' in folder_str:
+            context['source_type'] = 'witness_statement'
+            context['priority_tier'] = 9
+            context['folder_category'] = 'witness_evidence'
+            
+            # Identify which witness
+            if 'cahill' in folder_str or 'bc' in folder_str:
+                context['witness'] = 'Brendan Cahill'
+                context['party'] = 'claimant'
+            elif 'taiga' in folder_str or 'isha' in folder_str:
+                context['witness'] = 'Isha Taiga'
+                context['party'] = 'respondent'
+        
+        # ====================================================================
+        # TIER 8: CORRESPONDENCE (MEDIUM-HIGH - EMAIL CHAINS, ADMISSIONS)
+        # ====================================================================
+        
+        elif '6_correspondence' in folder_str or 'email' in folder_str or 'correspondence' in folder_str:
+            context['source_type'] = 'correspondence'
+            context['priority_tier'] = 8
+            context['folder_category'] = 'correspondence'
+            
+            # Check if chronological email run (highest value correspondence)
+            if 'chronological' in folder_str or 'email_run' in folder_str:
+                context['priority_tier'] = 8
+                context['is_email_chain'] = True
+        
+        # ====================================================================
+        # TIER 7: DISCLOSURE DISPUTES (IMPORTANT - SHOWS WHAT'S MISSING)
+        # ====================================================================
+        
+        elif '7_disclosure_disputes' in folder_str or 'objection' in folder_str or 'stern' in folder_str:
+            context['source_type'] = 'disclosure_dispute'
+            context['priority_tier'] = 7
+            context['folder_category'] = 'disclosure_disputes'
+            
+            if 'objection' in folder_str:
+                context['dispute_type'] = 'objection'
+            elif 'stern' in folder_str:
+                context['dispute_type'] = 'stern_schedule'
+        
+        # ====================================================================
+        # TIER 6-7: PLEADINGS (MEDIUM - ALREADY SYNTHESISED ARGUMENTS)
+        # ====================================================================
+        
+        elif '2_case_pleadings' in folder_str or any(term in folder_str for term in ['claim', 'defence', 'reply', 'rejoinder', 'pleading']):
+            context['source_type'] = 'pleading'
+            context['folder_category'] = 'pleadings'
+            
+            # Identify document type
+            if 'statement_of_claim' in folder_str or 'claim' in folder_str:
+                context['pleading_type'] = 'statement_of_claim'
+                context['priority_tier'] = 7 if 'claimant' in folder_str else 6
+                context['party'] = 'claimant'
+            elif 'defence' in folder_str:
+                context['pleading_type'] = 'defence'
+                context['priority_tier'] = 7  # Know their position
+                context['party'] = 'respondent'
+            elif 'reply' in folder_str:
+                context['pleading_type'] = 'reply'
+                context['priority_tier'] = 6
+            elif 'application' in folder_str:
+                context['pleading_type'] = 'application'
+                context['priority_tier'] = 6
+        
+        # ====================================================================
+        # TIER 5-6: TRIBUNAL ORDERS (REFERENCE - PROCEDURAL CONTEXT)
+        # ====================================================================
+        
+        elif '5_tribunal_orders' in folder_str or 'tribunal' in folder_str or 'ruling' in folder_str:
+            context['source_type'] = 'tribunal_order'
+            context['priority_tier'] = 5
+            context['folder_category'] = 'tribunal_orders'
+            
+            if 'ruling' in folder_str:
+                context['priority_tier'] = 6  # Rulings slightly higher
+        
+        # ====================================================================
+        # TIER 4-5: LEGAL KNOWLEDGE (FOUNDATION - CONTEXT BUILDING)
+        # ====================================================================
+        
+        elif '1_legal_knowledge' in folder_str or 'legal_knowledge' in folder_str:
+            context['source_type'] = 'legal_knowledge'
+            context['priority_tier'] = 5
+            context['folder_category'] = 'legal_knowledge'
+            
+            # P&ID v Nigeria - related case
+            if 'p&id' in folder_str or 'nigeria' in folder_str:
+                context['source_type'] = 'related_case'
+                context['priority_tier'] = 4
+                context['related_case'] = 'P&ID v Nigeria'
+            
+            # LCIA Rules
+            elif 'lcia' in folder_str or 'rules' in folder_str:
+                context['source_type'] = 'arbitration_rules'
+                context['priority_tier'] = 5
+        
+        # ====================================================================
+        # TIER 2-4: PROCEDURAL LOW PRIORITY (SKIP IN PASS 1 OR METADATA ONLY)
+        # ====================================================================
+        
+        elif '8_procedural' in folder_str or any(term in folder_str for term in ['transcript', 'bundle', 'hearing', 'reading_list', 'index']):
+            context['folder_category'] = 'procedural'
+            
+            # Transcripts
+            if 'transcript' in folder_str:
+                context['source_type'] = 'transcript'
+                context['priority_tier'] = 3
+            
+            # Hearing bundles (DUPLICATE RISK)
+            elif 'bundle' in folder_str:
+                context['source_type'] = 'hearing_bundle'
+                context['priority_tier'] = 3
+                context['is_duplicate_risk'] = True  # Bundles often contain docs already in disclosure
+            
+            # Reading lists, indices
+            elif 'reading' in folder_str or 'index' in folder_str:
+                context['source_type'] = 'procedural_admin'
+                context['priority_tier'] = 2
+            
+            # Chronologies, dramatis personae
+            elif 'chronology' in folder_str or 'dramatis' in folder_str:
+                context['source_type'] = 'case_admin'
+                context['priority_tier'] = 4  # Slightly higher - useful reference
+            
+            # Default procedural
+            else:
+                context['source_type'] = 'procedural'
+                context['priority_tier'] = 3
+        
+        # ====================================================================
+        # TIER 6: EXPERT INSTRUCTIONS (FUTURE EVIDENCE)
+        # ====================================================================
+        
+        elif '9_expert' in folder_str or 'expert' in folder_str:
+            context['source_type'] = 'expert_instruction'
+            context['priority_tier'] = 6
+            context['folder_category'] = 'expert_instructions'
+        
+        # ====================================================================
+        # QUALITY FLAGS
+        # ====================================================================
+        
+        # Flag potential duplicates
+        if context['is_duplicate_risk']:
+            context['warning'] = 'Possible duplicate - check against disclosure'
+        
+        # Flag missing batch dates for disclosure
+        if context['is_disclosure'] and not context['batch_date']:
+            context['note'] = 'Disclosure batch date not identified from folder name'
+        
+        return context
+
+
     def get_statistics(self) -> Dict:
         """Get loading statistics"""
         

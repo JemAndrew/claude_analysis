@@ -11,6 +11,8 @@ from datetime import datetime
 from pathlib import Path
 import json
 import re
+import hashlib
+import time
 
 from core.investigation_queue import InvestigationQueue, Investigation
 
@@ -29,35 +31,101 @@ class PassExecutor:
     
     def execute_pass_1_triage(self) -> Dict:
         """
-        Pass 1: Quick triage of ALL documents
+        Pass 1: Intelligent triage with folder-aware prioritisation
         Uses Haiku for fast, cheap classification
         Returns: Top 500 priority documents
         """
         
         print("="*70)
-        print("PASS 1: TRIAGE & PRIORITISATION")
+        print("PASS 1: INTELLIGENT TRIAGE (FOLDER-AWARE)")
         print("="*70)
         
-        # Load ALL disclosure documents
-        all_documents = self._load_all_documents()
+        # ====================================================================
+        # STAGE 1: Load documents from PRIMARY TARGET (respondent disclosure)
+        # ====================================================================
+        
+        print("\n📁 STAGE 1: Loading PRIMARY target (respondent disclosure)...")
+        print(f"   Path: {self.config.pass_1_primary_target}")
+        
+        primary_docs = []
+        if self.config.pass_1_primary_target.exists():
+            primary_docs = self.orchestrator.document_loader.load_directory(
+                self.config.pass_1_primary_target,
+                doc_types=['.pdf', '.docx', '.txt', '.xlsx', '.msg', '.eml']
+            )
+            print(f"   ✅ Loaded {len(primary_docs)} documents from respondent disclosure")
+        else:
+            print(f"   ⚠️  Primary target not found: {self.config.pass_1_primary_target}")
+        
+        # ====================================================================
+        # STAGE 2: Load documents from SECONDARY TARGETS
+        # ====================================================================
+        
+        print("\n📁 STAGE 2: Loading SECONDARY targets (supporting evidence)...")
+        secondary_docs = []
+        
+        for target_path in self.config.pass_1_secondary_targets:
+            if target_path.exists():
+                print(f"   Loading: {target_path.name}...")
+                docs = self.orchestrator.document_loader.load_directory(
+                    target_path,
+                    doc_types=['.pdf', '.docx', '.txt', '.xlsx', '.msg', '.eml']
+                )
+                secondary_docs.extend(docs)
+                print(f"   ✅ Loaded {len(docs)} documents")
+            else:
+                print(f"   ⚠️  Target not found: {target_path}")
+        
+        print(f"   Total secondary: {len(secondary_docs)} documents")
+        
+        # ====================================================================
+        # STAGE 3: Combine and analyse folder distribution
+        # ====================================================================
+        
+        all_documents = primary_docs + secondary_docs
         
         if not all_documents:
-            raise Exception("No documents found in disclosure directory. Check config.disclosure_dir path.")
+            raise Exception("No documents found! Check your folder organisation completed successfully.")
         
-        print(f"  Total documents to triage: {len(all_documents)}")
+        print(f"\n📊 DOCUMENT DISTRIBUTION:")
+        print(f"   Total documents: {len(all_documents)}")
         
-        # Create batches for triage (100 docs per batch for Haiku)
+        # Analyse by source type
+        source_type_counts = {}
+        priority_distribution = {}
+        
+        for doc in all_documents:
+            folder_context = doc.get('metadata', {}).get('folder_context', {})
+            source_type = folder_context.get('source_type', 'unknown')
+            priority = folder_context.get('priority_tier', 5)
+            
+            source_type_counts[source_type] = source_type_counts.get(source_type, 0) + 1
+            priority_distribution[priority] = priority_distribution.get(priority, 0) + 1
+        
+        print(f"\n   By Source Type:")
+        for source_type, count in sorted(source_type_counts.items(), key=lambda x: x[1], reverse=True):
+            print(f"     {source_type}: {count}")
+        
+        print(f"\n   By Priority Tier:")
+        for tier in sorted(priority_distribution.keys(), reverse=True):
+            print(f"     Tier {tier}: {priority_distribution[tier]} documents")
+        
+        # ====================================================================
+        # STAGE 4: Run Haiku triage with folder-aware scoring
+        # ====================================================================
+        
+        print(f"\n🤖 STAGE 3: Running Haiku triage...")
+        
         batches = self._create_batches(all_documents, batch_size=100)
-        
-        print(f"  Processing in {len(batches)} batches")
+        print(f"   Processing {len(batches)} batches of ~100 documents each")
         
         priority_scores = []
         
         for i, batch in enumerate(batches):
             if i % 10 == 0:
-                print(f"    Triage progress: {i}/{len(batches)} batches")
+                print(f"   Batch {i+1}/{len(batches)}")
             
-            # Use triage prompt from autonomous prompts
+            # Generate triage prompt
             prompt = self.orchestrator.autonomous_prompts.triage_prompt(
                 documents=batch
             )
@@ -69,36 +137,113 @@ class PassExecutor:
                     model=self.config.models['secondary'],  # Haiku
                     task_type='triage',
                     phase='pass_1',
-                    use_extended_thinking=False
+                    temperature=0.3  # More consistent scoring
                 )
                 
-                # Extract priority scores from response
+                # Parse scores from response
                 scores = self._parse_triage_response(response, batch)
+                
+                # CRITICAL: Apply folder priority boost
+                for score_item in scores:
+                    doc = score_item['document']
+                    folder_context = doc.get('metadata', {}).get('folder_context', {})
+                    folder_tier = folder_context.get('priority_tier', 5)
+                    
+                    # Calculate boost: Tier 10 = +2, Tier 9 = +1.8, ..., Tier 1 = 0
+                    boost = (folder_tier - 5) * 0.4  # Scale: -2 to +2
+                    
+                    # Apply boost (clamped to 1-10)
+                    original_score = score_item['score']
+                    boosted_score = min(10, max(1, original_score + boost))
+                    
+                    score_item['score'] = boosted_score
+                    score_item['original_score'] = original_score
+                    score_item['folder_boost'] = boost
+                
                 priority_scores.extend(scores)
                 
             except Exception as e:
-                print(f"      ⚠️  Error in triage batch {i+1}: {str(e)[:100]}")
+                print(f"   ⚠️  Error in batch {i+1}: {str(e)[:100]}")
                 continue
         
-        # Sort by priority score (descending) and select top 500
+        # ====================================================================
+        # STAGE 5: Sort and select top 500
+        # ====================================================================
+        
+        print(f"\n🎯 STAGE 4: Selecting top 500 priority documents...")
+        
+        # Sort by boosted score (descending)
         priority_scores.sort(key=lambda x: x['score'], reverse=True)
         priority_documents = priority_scores[:500]
         
+        # ====================================================================
+        # STAGE 6: Quality checks
+        # ====================================================================
+        
+        print(f"\n✅ QUALITY CHECKS:")
+        
+        # Check disclosure percentage
+        disclosure_count = sum(
+            1 for d in priority_documents 
+            if d['document']['metadata'].get('folder_context', {}).get('is_disclosure', False)
+        )
+        disclosure_pct = disclosure_count / 500 * 100
+        
+        print(f"   Disclosure documents in top 500: {disclosure_count} ({disclosure_pct:.1f}%)")
+        
+        if disclosure_pct < 50:
+            print(f"   ⚠️  WARNING: Only {disclosure_pct:.1f}% disclosure in top 500")
+            print(f"       Expected >50%. Check folder organisation.")
+        else:
+            print(f"   ✅ Good disclosure percentage")
+        
+        # Check source type distribution in top 500
+        print(f"\n   Top 500 by source type:")
+        top_500_sources = {}
+        for d in priority_documents:
+            source = d['document']['metadata'].get('folder_context', {}).get('source_type', 'unknown')
+            top_500_sources[source] = top_500_sources.get(source, 0) + 1
+        
+        for source, count in sorted(top_500_sources.items(), key=lambda x: x[1], reverse=True):
+            print(f"     {source}: {count}")
+        
+        # Check average scores
+        avg_score = sum(d['score'] for d in priority_documents) / 500
+        avg_original = sum(d.get('original_score', d['score']) for d in priority_documents) / 500
+        
+        print(f"\n   Average scores:")
+        print(f"     Before folder boost: {avg_original:.2f}/10")
+        print(f"     After folder boost: {avg_score:.2f}/10")
+        
+        # ====================================================================
+        # STAGE 7: Build results
+        # ====================================================================
+        
         results = {
             'pass': '1',
-            'strategy': 'triage',
+            'strategy': 'folder_aware_triage',
             'total_documents': len(all_documents),
             'priority_documents': priority_documents,
             'priority_count': len(priority_documents),
+            'source_distribution': source_type_counts,
+            'quality_metrics': {
+                'disclosure_percentage': disclosure_pct,
+                'avg_score_original': avg_original,
+                'avg_score_boosted': avg_score,
+                'top_500_sources': top_500_sources
+            },
             'completed_at': datetime.now().isoformat()
         }
         
-        # Save priority list
+        # Save results
         self._save_pass_output('1', results)
         
-        print(f"  ✅ Triage complete: {len(priority_documents)} priority documents identified")
-        avg_score = sum(d['score'] for d in priority_documents) / len(priority_documents) if priority_documents else 0
-        print(f"     Average priority score: {avg_score:.1f}/10")
+        print(f"\n" + "="*70)
+        print(f"PASS 1 COMPLETE")
+        print(f"="*70)
+        print(f"Priority documents identified: {len(priority_documents)}")
+        print(f"Ready for Pass 2 deep analysis")
+        print(f"="*70)
         
         return results
     
@@ -120,11 +265,12 @@ class PassExecutor:
         print(f"  Analysing {len(priority_documents)} priority documents")
         
         # Create batches of priority documents
-        batches = self._create_batches(priority_documents, batch_size=25)
+        batches = self._create_batches(priority_documents, batch_size=30)
         
         confidence = 0.0
         iteration = 0
-        max_iterations = 20
+        max_iterations = 25
+        additional_docs_loaded = False
         
         results = {
             'pass': '2',
@@ -136,9 +282,42 @@ class PassExecutor:
         while confidence < 0.95 and iteration < max_iterations:
             print(f"\n  Iteration {iteration+1} (current confidence: {confidence:.2%})")
             
+            # ENHANCEMENT: Check if we need more documents
             if iteration >= len(batches):
-                print("    All document batches processed")
-                break
+                # If confidence is low and we haven't loaded additional docs yet
+                if confidence < 0.90 and not additional_docs_loaded and iteration >= 15:
+                    print(f"\n  ⚠️  Confidence plateaued at {confidence:.2%} - requesting more documents")
+                    print(f"  Loading next 100 priority documents from Pass 1 results...")
+                    
+                    # Load Pass 1 results
+                    pass_1_file = self.config.analysis_dir / "pass_1" / "pass_1_results.json"
+                    if pass_1_file.exists():
+                        import json
+                        with open(pass_1_file, 'r', encoding='utf-8') as f:
+                            pass_1_results = json.load(f)
+                        
+                        # Get documents ranked 501-600
+                        additional_priority_docs = pass_1_results.get('priority_documents', [])[500:600]
+                        
+                        if additional_priority_docs:
+                            print(f"  ✅ Loaded {len(additional_priority_docs)} additional documents")
+                            
+                            # Create new batches from additional docs
+                            new_batches = self._create_batches(additional_priority_docs, batch_size=30)
+                            batches.extend(new_batches)
+                            
+                            additional_docs_loaded = True
+                            print(f"  Continuing analysis with {len(new_batches)} additional batches...")
+                            continue
+                        else:
+                            print(f"  ⚠️  No additional documents available")
+                            break
+                    else:
+                        print(f"  ⚠️  Pass 1 results not found")
+                        break
+                else:
+                    print("    All document batches processed")
+                    break
             
             batch = batches[iteration]
             
@@ -209,7 +388,15 @@ class PassExecutor:
         
         results['final_confidence'] = confidence
         results['total_iterations'] = iteration
-        results['reason_stopped'] = 'confidence_reached' if confidence >= 0.95 else 'max_iterations'
+        results['additional_docs_loaded'] = additional_docs_loaded
+        if confidence >= 0.95:
+            results['reason_stopped'] = 'Reached target confidence of 95%'
+        elif iteration >= max_iterations:
+            results['reason_stopped'] = 'max_iterations'
+        elif confidence < 0.90 and iteration >= 15:
+            results['reason_stopped'] = 'confidence_plateau_no_more_docs'
+        else: 
+            results['reason_stopped'] = 'all_batches_processed'
         
         # Save results
         self._save_pass_output('2', results)
@@ -218,6 +405,13 @@ class PassExecutor:
         print(f"     Final confidence: {confidence:.2%}")
         print(f"     Investigations queued: {self.investigation_queue.queue.qsize()}")
         print(f"     Stopped because: {results['reason_stopped']}")
+
+        if results['reason_stopped'] == 'confidence_reached':
+            print(f"     ✅ Analysis complete - high confidence achieved")
+        elif results['reason_stopped'] == 'confidence_plateau_no_more_docs':
+            print(f"     ⚠️  Confidence plateaued - may need more evidence from other sources")
+        elif results['reason_stopped'] == 'max_iterations':
+            print(f"     ⚠️  Reached max iterations - case may be highly complex")
         
         return results
     
@@ -438,6 +632,25 @@ class PassExecutor:
         
         return documents
     
+    def _load_documents_from_paths(self, path: Path) -> List[Dict]:
+        """
+        Load documents from a specific path
+        
+        Args:
+            path: Path to load from
+            
+        Returns:
+            List of document dicts
+        """
+        if not path.exists():
+            print(f"   ⚠️  Path not found: {path}")
+            return []
+        
+        return self.orchestrator.document_loader.load_directory(
+            path,
+            doc_types=['.pdf', '.docx', '.txt', '.xlsx', '.msg', '.eml']
+        )
+    
     def _create_batches(self, documents: List[Dict], batch_size: int) -> List[List[Dict]]:
         """Create document batches"""
         batches = []
@@ -496,12 +709,17 @@ class PassExecutor:
                     category = 'other'
                 
                 if doc_idx < len(batch):
+                    folder_context = batch[doc_idx].get('metadata', {}).get('folder_context', {})
                     scores.append({
                         'document': batch[doc_idx],
                         'score': min(10, max(1, score)),  # Clamp to 1-10
                         'reason': reason,
                         'category': category,
-                        'doc_id': batch[doc_idx].get('metadata', {}).get('filename', f'doc_{doc_idx}')
+                        'doc_id': batch[doc_idx].get('metadata', {}).get('filename', f'doc_{doc_idx}'),
+                        'source_type': folder_context.get('source_type', 'unknown'),
+                        'priority_tier': folder_context.get('priority_tier', 5),
+                        'is_disclosure': folder_context.get('is_disclosure', False)
+                        
                     })
             except (ValueError, IndexError) as e:
                 print(f"      Warning: Failed to parse document score: {e}")
