@@ -58,18 +58,15 @@ class Config:
         
         # Token Configuration - ENHANCED
         self.token_config = {
-            'max_context_tokens': 200000, 
-             # Claude's full capacity
+            'max_context_tokens': 200000,              # ✅ KEEP (API limit)
+            'max_output_tokens': 16000,                # ✅ KEEP
+            'context_buffer': 10000,                   # ✅ KEEP
+            'extended_thinking_budget': 12000,         # ✅ FIX (was 150000)
             
-            'max_output_tokens': 16000,        # Increased for detailed outputs
-            'context_buffer': 10000,           # Safety margin
-            'extended_thinking_budget': 150000, # INCREASED from 20K
-            
-            # Context utilisation per component - ENHANCED
-            'accumulated_knowledge_limit': 150000,  # Up from 20K
-            'document_content_per_doc': 15000,      # Up from 3K
-            'pleadings_full_limit': 80000,          # Full pleadings
-            'intelligence_context_limit': 100000     # Full intelligence
+            'accumulated_knowledge_limit': 60000,      # ✅ FIX (was 150000)
+            'document_content_per_doc': 15000,         # ✅ KEEP (this is chars not tokens)
+            'pleadings_full_limit': 60000,             # ✅ FIX (was 80000)
+            'intelligence_context_limit': 60000        # ✅ FIX (was 100000)
         }
         
          # Deduplication Configuration
@@ -162,7 +159,7 @@ CRITICAL: Every factual claim must cite specific document IDs."""
         self.pass_2_config = {
             'model': self.sonnet_model,
             'use_extended_thinking': True,
-            'extended_thinking_budget': 100000,  # INCREASED from 20K
+            'extended_thinking_budget': 12000,  # INCREASED from 20K
             'max_iterations': 25,
             'batch_size': 30,
             'confidence_threshold': 0.95,
@@ -181,7 +178,7 @@ CRITICAL: Every factual claim must cite specific document IDs."""
         self.pass_3_config = {
             'model': self.sonnet_model,
             'use_extended_thinking': True,
-            'extended_thinking_budget': 100000,  # INCREASED
+            'extended_thinking_budget': 12000,  # INCREASED
             'max_investigations': 10,
             'max_recursion_depth': 5,
             'min_investigation_priority': 7

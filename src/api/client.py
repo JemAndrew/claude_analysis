@@ -214,7 +214,7 @@ class ClaudeClient:
                         'type': 'enabled',
                         'budget_tokens': self.config.token_config['extended_thinking_budget']
                     }
-                    api_params[temperature] = 1.0
+                    api_params['temperature'] = 1.0
                     print(f"  🧠 Extended Thinking: ENABLED ({self.config.token_config['extended_thinking_budget']:,} tokens)")
                 
                 # Make API call with caching
@@ -366,7 +366,7 @@ class ClaudeClient:
                         'type': 'enabled',
                         'budget_tokens': self.config.token_config['extended_thinking_budget']
                     }
-                    api_params[temperature] = 1.0
+                    api_params['temperature'] = 1.0
                     print(f"  🧠 Extended Thinking: ENABLED ({self.config.token_config['extended_thinking_budget']:,} tokens)")
                 
                 response = self.client.messages.create(**api_params)
