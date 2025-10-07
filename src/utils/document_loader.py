@@ -21,6 +21,11 @@ class DocumentLoader:
     
     SUPPORTED_FORMATS = ['.pdf', '.docx', '.doc', '.txt', '.json', '.html', '.md']
     
+    # File size protection (added by fix_large_files.py)
+    MAX_FILE_SIZE_MB = 500      # Skip files > 500 MB
+    MAX_PDF_PAGES = 100         # Only extract first 100 pages of huge PDFs
+    MAX_CHARS_EXTRACT = 100000  # Max 100K chars per document
+    
     def __init__(self, config):
         """
         Initialise document loader
@@ -111,59 +116,129 @@ class DocumentLoader:
         
         return documents
     
-    def load_document(self, file_path: Path, folder_metadata: Dict) -> Optional[Dict]:
+    
+    def load_document(self, file_path: Path, preview_only: bool = False) -> Dict:
         """
-        Load a single document
+        Load document with size protection
         
         Args:
             file_path: Path to document
-            folder_metadata: Metadata extracted from folder
+            preview_only: If True, only extract first page/preview
             
         Returns:
-            Document dictionary or None if failed
+            Document dictionary
         """
-        # Extract text based on file type
-        text = self._extract_text(file_path)
         
-        if not text or len(text.strip()) < 10:
-            return None  # Skip empty or near-empty files
+        # Check file size BEFORE loading
+        file_size_mb = file_path.stat().st_size / (1024 * 1024)
         
-        # Generate document ID
-        doc_id = self._generate_doc_id(file_path)
+        # Skip PST files (email archives - handle separately)
+        if file_path.suffix.lower() == '.pst':
+            return {
+                'filename': file_path.name,
+                'doc_id': self._generate_doc_id(file_path),
+                'content': f'[EMAIL ARCHIVE: {file_size_mb:.1f} MB - Extract to .msg files first]',
+                'preview': f'PST email archive ({file_size_mb:.1f} MB)',
+                'metadata': {
+                    'file_type': 'pst',
+                    'size_mb': file_size_mb,
+                    'skip_reason': 'Email archive - requires extraction'
+                }
+            }
         
-        # Build document dictionary
-        document = {
-            'id': doc_id,
-            'filename': file_path.name,
-            'filepath': str(file_path),
-            'file_extension': file_path.suffix.lower(),
-            'file_size_bytes': file_path.stat().st_size,
-            'modified_date': datetime.fromtimestamp(file_path.stat().st_mtime).isoformat(),
-            'text': text,
-            'text_length': len(text),
-            'preview': text[:300],  # First 300 chars for triage
-            
-            # Folder metadata
-            'folder_name': folder_metadata['folder_name'],
-            'folder_category': folder_metadata['category'],
-            'folder_priority': folder_metadata['priority'],
-            'folder_description': folder_metadata['description'],
-            
-            # Processing metadata
-            'loaded_at': datetime.now().isoformat(),
-            'processing_status': 'loaded'
-        }
+        # Skip extremely large files
+        if file_size_mb > self.MAX_FILE_SIZE_MB:
+            print(f"   ⚠️  SKIPPING: {file_path.name} ({file_size_mb:.1f} MB)")
+            return {
+                'filename': file_path.name,
+                'doc_id': self._generate_doc_id(file_path),
+                'content': f'[FILE TOO LARGE: {file_size_mb:.1f} MB - Skipped]',
+                'preview': f'Large file ({file_size_mb:.1f} MB) not analysed',
+                'metadata': {
+                    'size_mb': file_size_mb,
+                    'skip_reason': 'File exceeds size limit'
+                }
+            }
         
-        # Update format stats
-        ext = file_path.suffix.lower()
-        self.stats['by_format'][ext] = self.stats['by_format'].get(ext, 0) + 1
+        # Route to format-specific handler
+        suffix = file_path.suffix.lower()
         
-        # Update priority stats
-        priority = folder_metadata['priority']
-        self.stats['by_priority'][priority] = self.stats['by_priority'].get(priority, 0) + 1
-        
-        return document
+        if suffix == '.pdf':
+            return self._load_pdf_safe(file_path, file_size_mb)
+        elif suffix in ['.docx', '.doc']:
+            return self._load_word_document(file_path)
+        else:
+            return self._load_text_document(file_path)
     
+    def _load_pdf_safe(self, file_path: Path, file_size_mb: float) -> Dict:
+        """
+        Load PDF with size-based strategy
+        Small PDFs: Extract all
+        Large PDFs: Extract first 100 pages only
+        """
+        
+        try:
+            import pdfplumber
+            
+            # Determine extraction strategy
+            if file_size_mb > 100:
+                max_pages = self.MAX_PDF_PAGES
+                print(f"   📄 {file_path.name} ({file_size_mb:.1f} MB) - extracting first {max_pages} pages")
+            else:
+                max_pages = None
+            
+            text_parts = []
+            total_pages = 0
+            pages_extracted = 0
+            
+            with pdfplumber.open(file_path) as pdf:
+                total_pages = len(pdf.pages)
+                pages_to_extract = min(total_pages, max_pages) if max_pages else total_pages
+                
+                for i in range(pages_to_extract):
+                    try:
+                        page_text = pdf.pages[i].extract_text()
+                        if page_text:
+                            text_parts.append(page_text)
+                        pages_extracted += 1
+                        
+                        # Stop if we've extracted enough chars
+                        if len(''.join(text_parts)) > self.MAX_CHARS_EXTRACT:
+                            break
+                    except Exception as e:
+                        continue
+            
+            full_text = '\n\n'.join(text_parts)
+            
+            # Truncate if still too long
+            if len(full_text) > self.MAX_CHARS_EXTRACT:
+                full_text = full_text[:self.MAX_CHARS_EXTRACT]
+                full_text += f"\n\n[TRUNCATED - {total_pages} pages total, extracted {pages_extracted} pages]"
+            
+            return {
+                'filename': file_path.name,
+                'doc_id': self._generate_doc_id(file_path),
+                'content': full_text,
+                'preview': full_text[:300],
+                'metadata': {
+                    'file_type': 'pdf',
+                    'size_mb': file_size_mb,
+                    'total_pages': total_pages,
+                    'pages_extracted': pages_extracted,
+                    'truncated': pages_extracted < total_pages
+                }
+            }
+            
+        except Exception as e:
+            print(f"   ❌ Error loading PDF: {e}")
+            return {
+                'filename': file_path.name,
+                'doc_id': self._generate_doc_id(file_path),
+                'content': f'[ERROR LOADING PDF: {str(e)}]',
+                'preview': 'Error loading document',
+                'metadata': {'error': str(e)}
+            }
+
     def _extract_folder_metadata(self, folder_name: str) -> Dict:
         """
         Extract metadata for a folder from FolderMapping

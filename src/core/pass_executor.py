@@ -396,11 +396,15 @@ class PassExecutor:
                     phase_0_data = json.load(f)
                 
                 # Extract smoking gun patterns from Stage 3
-                stage_3 = phase_0_data.get('stage_3_summary', {})
-                smoking_gun_patterns = stage_3.get('smoking_gun_patterns', [])
+                phase_0_foundation = phase_0_data.get('pass_1_reference', {})
+
+                if phase_0_foundation and len(phase_0_foundation.get('document_patterns', [])) > 0:
                 
-                if smoking_gun_patterns:
-                    print(f"\n✅ Loaded {len(smoking_gun_patterns)} smoking gun patterns from Phase 0")
+                    print(f"\n✅ Loaded Phase 0 intelligence:")
+                    print(f"   • Allegations: {len(phase_0_foundation.get('allegations', []))}")
+                    print(f"   • Defences: {len(phase_0_foundation.get('defences', []))}")
+                    print(f"   • Key parties: {len(phase_0_foundation.get('key_parties', []))}")
+                    print(f"   • Document patterns: {len(phase_0_foundation.get('document_patterns', []))}")
                     print(f"   Using strategic intelligence for triage\n")
                     phase_0_used = True
                 else:
@@ -508,8 +512,9 @@ class PassExecutor:
         for batch_idx, batch in enumerate(tqdm(batches, desc="Triaging batches")):
             # Generate prompt WITH Phase 0 smoking guns
             prompt = self.autonomous_prompts.triage_prompt(
-                batch, 
-                smoking_gun_patterns=smoking_gun_patterns  # ← PHASE 0 INTEGRATION
+                documents = batch,
+                batch_num = batch_idx, 
+                phase_0_foundation=phase_0_foundation  # ← PHASE 0 INTEGRATION
             )
             
             try:

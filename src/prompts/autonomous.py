@@ -29,14 +29,14 @@ Find the triage_prompt() method and REPLACE it with this version
 def triage_prompt(self, 
                   documents: List[Dict], 
                   batch_num: int = 0,  # ← Keep this parameter
-                  smoking_gun_patterns: List[Dict] = None) -> str:  # ← ADD THIS
+                  phase_0_foundation: List[Dict] = None) -> str:  # ← ADD THIS
     """
     Pass 1 Triage Prompt WITH PHASE 0 INTELLIGENCE
     
     Args:
         documents: Batch of documents to triage
         batch_num: Current batch number (optional)
-        smoking_gun_patterns: Patterns from Phase 0 Stage 3 (NEW)
+        phase_0_foundation: Patterns from Phase 0 Stage 3 (NEW)
     
     Returns:
         Complete triage prompt with smoking gun intelligence
@@ -47,7 +47,7 @@ def triage_prompt(self,
     # ================================================================
     intelligence_section = ""
     
-    if smoking_gun_patterns and len(smoking_gun_patterns) > 0:
+    if phase_0_foundation and len(phase_0_foundation) > 0:
         intelligence_section = """
 <phase_0_intelligence>
 You have STRATEGIC INTELLIGENCE from Phase 0 case analysis.
@@ -65,7 +65,7 @@ SMOKING GUN PATTERNS:
         
         # Add top 20 patterns (sorted by priority)
         sorted_patterns = sorted(
-            smoking_gun_patterns, 
+            phase_0_foundation, 
             key=lambda p: p.get('score_if_found', p.get('priority_score', 5)), 
             reverse=True
         )[:20]
@@ -203,7 +203,7 @@ Category: correspondence
 </output_format>
 
 Score all {len(documents)} documents now.
-{"Use the Phase 0 smoking gun patterns above to identify critical documents." if smoking_gun_patterns else ""}
+{"Use the Phase 0 smoking gun patterns above to identify critical documents." if phase_0_foundation else ""}
 Be aggressive in scoring - if in doubt about relevance, score higher.
 Lismore is counting on you to find the smoking guns.
 """
