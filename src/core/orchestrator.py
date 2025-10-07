@@ -21,6 +21,7 @@ from prompts.autonomous import AutonomousPrompts
 from prompts.deliverables import DeliverablesPrompts
 from utils.document_loader import DocumentLoader
 from utils.document_retrieval import DocumentRetrieval
+from core.phase_0 import Phase0Executor 
 
 # ACTIVATED: Import HierarchicalMemory system
 from memory import HierarchicalMemory, MemoryQuery, MemoryResult
@@ -47,6 +48,7 @@ class LitigationOrchestrator:
         # Initialise core components
         self.knowledge_graph = KnowledgeGraph(self.config)
         self.api_client = ClaudeClient(self.config)
+        self.phase0_executor = Phase0Executor(self.config, self)
         
         # ====================================================================
         # HIERARCHICAL MEMORY SYSTEM - ACTIVATED
@@ -389,7 +391,60 @@ class LitigationOrchestrator:
     # ========================================================================
     # PASS EXECUTION METHODS
     # ========================================================================
-    
+    def execute_phase_0_foundation(self) -> Dict:
+        """
+        Execute Phase 0: Build Intelligent Case Foundation
+        
+        Analyses pleadings, tribunal rulings, and case admin documents
+        to build contextual understanding before Pass 1 triage.
+        
+        Returns:
+            Dict containing complete case foundation with metadata
+        """
+        print("\n" + "="*70)
+        print("PHASE 0: INTELLIGENT CASE FOUNDATION")
+        print("="*70)
+        print("Building contextual understanding for intelligent triage")
+        print("="*70 + "\n")
+        
+        # Check if Phase 0 already exists
+        foundation_file = self.config.analysis_dir / "phase_0" / "case_foundation.json"
+        
+        if foundation_file.exists():
+            print("⚠️  Phase 0 already completed!")
+            print(f"   Found: {foundation_file}")
+            
+            response = input("\nRe-run Phase 0? (costs £16-22) (yes/no): ").strip().lower()
+            if response != 'yes':
+                print("Loading existing case foundation...")
+                with open(foundation_file, 'r', encoding='utf-8') as f:
+                    return json.load(f)
+        
+        # Execute Phase 0
+        try:
+            case_foundation = self.phase_0_executor.execute()
+            
+            # Store in memory system if available
+            if self.memory_enabled:
+                try:
+                    self.memory_system.tier1.add_to_project_manifest({
+                        'filename': 'case_foundation.json',
+                        'content': json.dumps(case_foundation, indent=2),
+                        'category': 'case_context',
+                        'importance': 10
+                    })
+                    print("✓ Stored in memory system")
+                except Exception as e:
+                    print(f"⚠️  Memory storage error: {e}")
+            
+            return case_foundation
+            
+        except Exception as e:
+            print(f"\n❌ ERROR in Phase 0: {e}")
+            import traceback
+            traceback.print_exc()
+            raise
+
     def execute_full_analysis(self) -> Dict:
         """Execute complete 4-pass analysis"""
         
