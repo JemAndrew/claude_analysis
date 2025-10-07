@@ -354,7 +354,10 @@ class PassExecutor:
         
         return [doc_id for doc_id, score in ranked_docs[:top_k]]
     
-    # ========================================================================
+    
+     
+     def _load_case_foundation()
+  
     # PASS 1: TRIAGE
     # ========================================================================
     
@@ -399,7 +402,9 @@ class PassExecutor:
                 response, metadata = self.api_client.call_claude(
                     prompt=prompt,
                     task_type='document_triage',
-                    phase='pass_1'
+                    phase='pass_1',
+                    temperature=0.0,
+                    extended_thinking=True
                 )
                 
                 total_cost += metadata.get('cost_gbp', 0)
@@ -554,7 +559,8 @@ class PassExecutor:
                     prompt=prompt,
                     dynamic_context=json.dumps(context, indent=2)[:self.config.token_config['accumulated_knowledge_limit']],
                     task_type='deep_analysis',
-                    phase='pass_2'
+                    phase='pass_2',
+                    extended_thinking=True
                 )
                 
                 # Parse response
@@ -698,7 +704,8 @@ class PassExecutor:
                     response, metadata = self.api_client.call_claude(
                         prompt=prompt,
                         task_type='investigation',
-                        phase='pass_3'
+                        phase='pass_3',
+                        extended_thinking=True
                     )
                     
                     # Parse investigation result
@@ -799,7 +806,8 @@ class PassExecutor:
         response, metadata = self.api_client.call_claude(
             prompt=prompt,
             task_type='deliverables',
-            phase='pass_4'
+            phase='pass_4',
+            extended_thinking=True
         )
         
         # Parse deliverables (using XML tags for robustness)

@@ -35,10 +35,12 @@ class Config:
         
         # Token Configuration - ENHANCED
         self.token_config = {
-            'max_context_tokens': 200000,      # Claude's full capacity
+            'max_context_tokens': 200000, 
+             # Claude's full capacity
+            
             'max_output_tokens': 16000,        # Increased for detailed outputs
             'context_buffer': 10000,           # Safety margin
-            'extended_thinking_budget': 100000, # INCREASED from 20K
+            'extended_thinking_budget': 150000, # INCREASED from 20K
             
             # Context utilisation per component - ENHANCED
             'accumulated_knowledge_limit': 150000,  # Up from 20K
