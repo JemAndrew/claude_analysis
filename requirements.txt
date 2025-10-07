@@ -19,5 +19,8 @@ tqdm==4.66.1
 # Utilities
 python-dotenv==1.0.0
 requests==2.31.0
+chromadb==0.4.22
+sentence-transformers==2.4.0
+crytography==41.0.7
 
 # Note: sqlite3, pathlib, hashlib, json, re are built-in to Python

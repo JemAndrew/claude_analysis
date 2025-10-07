@@ -33,8 +33,12 @@ class Config:
     
     def __init__(self):
         # Project paths
-        self.project_root = Path(__file__).parent.parent
-        self.source_root = self.project_root / "data" / "LIS1.1"
+        self.project_root = Path(__file__).resolve().parent.parent.parent
+        
+        # Source data (SharePoint synced folder) - CORRECTED
+        self.source_root = Path(r"C:\Users\JemAndrew\Velitor\Communication site - Documents\LIS1.1")
+        
+        # Output folders (in project)
         self.output_dir = self.project_root / "data" / "output"
         self.analysis_dir = self.output_dir / "analysis"
         
@@ -48,9 +52,9 @@ class Config:
         }
         
         # Model Configuration
-        self.haiku_model = "claude-haiku-4-20250514"
-        self.sonnet_model = "claude-sonnet-4.5-20250929"
-        self.opus_model = "claude-opus-4-20250514"
+        self.haiku_model = "claude-3-5-haiku-20241022"      # ✅ Numbers come first
+        self.sonnet_model = "claude-sonnet-4-20250514"      # ✅ No "4.5", different date
+        self.opus_model = "claude-opus-4-20250514"          # ✅ Already correct
         
         # Token Configuration - ENHANCED
         self.token_config = {
@@ -80,6 +84,14 @@ class Config:
             'log_duplicates': True,
             'batch_dedup': True,
             'max_vectors_in_memory': 5000
+        }
+
+        self.vector_config = {
+            'collection_name': 'lismore_disclosure',
+            'embedding_model': 'all-MiniLM-L6-v2',  # Fast, good quality
+            'chunk_size': 500,  # Characters per chunk
+            'chunk_overlap': 50,
+            'top_k_results': 10
         }
 
         # Caching Configuration - ENHANCED

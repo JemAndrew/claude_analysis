@@ -95,7 +95,7 @@ Reply with ONLY a single number between 0 and 10. No explanation."""
 
         try:
             response = self.client.messages.create(
-                model="claude-haiku-4-20250514",  # Cheapest model (£0.25/1M input)
+                model="claude-haiku-3.5-20241022",  # Cheapest model (£0.25/1M input)
                 max_tokens=10,
                 temperature=0.0,  # Consistent scoring
                 messages=[{"role": "user", "content": prompt}]

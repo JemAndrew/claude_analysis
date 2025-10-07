@@ -53,6 +53,7 @@ class AnalysisCacheManager:
         
         # Cache database
         self.db_path = self.cache_path / "cache_metadata.db"
+        self.db_path.parent.mkdir(parents=True, exist_ok=True)
         self._init_database()
         
         # Cache expiry settings

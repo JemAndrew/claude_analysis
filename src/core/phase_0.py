@@ -172,11 +172,12 @@ class Phase0Executor:
         prompt = self.prompts.build_stage_1_prompt(pleadings_text)
         
         # Call Claude API
+        # AFTER (explicitly forces Sonnet 4):
         response, metadata = self.api_client.call_claude(
             prompt=prompt,
+            model=self.config.sonnet_model,  # ✅ FORCE Sonnet 4
             task_type='phase_0_stage_1_pleadings',
-            phase='phase_0',
-            extended_thinking=True
+            phase='phase_0'
         )
         
         # Parse response
@@ -242,9 +243,9 @@ class Phase0Executor:
         # Call Claude API
         response, metadata = self.api_client.call_claude(
             prompt=prompt,
+            model=self.config.sonnet_model,  # ✅ FORCE Sonnet 4
             task_type='phase_0_stage_2_tribunal',
             phase='phase_0',
-            extended_thinking=True
         )
         
         # Parse response
@@ -306,9 +307,9 @@ class Phase0Executor:
         # Call Claude API
         response, metadata = self.api_client.call_claude(
             prompt=prompt,
+            model=self.config.sonnet_model,  # ✅ FORCE Sonnet 4
             task_type='phase_0_stage_3_patterns',
             phase='phase_0',
-            extended_thinking=True
         )
         
         # Parse response

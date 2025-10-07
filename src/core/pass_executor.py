@@ -30,7 +30,7 @@ class PassExecutor:
         
         # Investigation queue
         from core.investigation_queue import InvestigationQueue
-        self.investigation_queue = InvestigationQueue(config)
+        self.investigation_queue = InvestigationQueue()
         
         # Evidence cross-reference tracking
         self.evidence_map = {}

@@ -58,7 +58,7 @@ class HierarchicalMemory:
             knowledge_graph: Existing KnowledgeGraph instance (Tier 3)
         """
         self.config = config
-        self.root = Path(config.root)
+        self.root = Path(config.project_root)
         
         # Set up logging
         self.logger = self._init_logging()
@@ -148,12 +148,19 @@ class HierarchicalMemory:
     def tier2(self):
         """Lazy load Tier 2: Vector Store"""
         if self._tier2 is None:
-            from memory.tier2_vector import VectorStoreManager
-            self._tier2 = VectorStoreManager(
-                store_path=self.tier_paths[2],
-                config=self.config
-            )
-            self.logger.info("Tier 2 (Vector Store) loaded")
+            try:
+                from memory.tier2_vector import VectorStoreManager
+                self._tier2 = VectorStoreManager(
+                    store_path=self.tier_paths[2],
+                    config=self.config
+                )
+                self.logger.info("Tier 2 (Vector Store) loaded")
+            except ImportError as e:
+                self.logger.warning(f"Tier 2 unavailable: {e}")
+                self._tier2 = None
+            except Exception as e:
+                self.logger.error(f"Tier 2 initialisation failed: {e}")
+                self._tier2 = None
         return self._tier2
     
     @property

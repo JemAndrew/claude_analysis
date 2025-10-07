@@ -332,7 +332,7 @@ class EnhancedGraphManager:
     
     def export_hot_entities(self) -> Path:
         """Export frequently accessed entities for review"""
-        export_path = Path(self.config.root) / "data" / "memory_tiers" / "tier3_hot_entities.json"
+        export_path = Path(self.config.project_root) / "data" / "memory_tiers" / "tier3_hot_entities.json"
         
         hot_entities = self._get_frequently_accessed_entities(top_k=50)
         

@@ -21,6 +21,8 @@ class KnowledgeGraph:
         """Initialise knowledge graph"""
         self.config = config
         self.db_path = config.output_dir / "knowledge_graph.db"
+        self.db_path.parent.mkdir(parents=True, exist_ok=True)
+        self.root = Path(config.project_root)
         self.backup_dir = config.output_dir / "graph_backups"
         self.backup_dir.mkdir(parents=True, exist_ok=True)
         
