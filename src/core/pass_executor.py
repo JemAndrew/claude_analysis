@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-COMPLETE ENHANCED Pass Executor - Replace src/core/pass_executor.py
-Adds: Checkpointing, Validation, Optimised Document Retrieval
+COMPLETE ENHANCED Pass Executor - src/core/pass_executor.py
+Adds: Phase 0 Integration, Deduplication, Checkpointing, Validation
 British English throughout - Lismore v Process Holdings
 """
 
@@ -14,10 +14,11 @@ from tqdm import tqdm
 import hashlib
 from collections import Counter
 import math
+from utils.deduplication import DocumentDeduplicator
 
 
 class PassExecutor:
-    """Executes all 4 passes with enhanced checkpointing and validation"""
+    """Executes all 4 passes with Phase 0 integration, deduplication, and validation"""
     
     def __init__(self, config, orchestrator):
         self.config = config
@@ -41,6 +42,16 @@ class PassExecutor:
         # Document index for optimised retrieval
         self.document_index = None
         
+        # Deduplication system for Pass 1
+        if config.deduplication_config['enabled']:
+            self.deduplicator = DocumentDeduplicator(
+                similarity_threshold=config.deduplication_config['similarity_threshold'],
+                prefix_chars=config.deduplication_config['prefix_chars'],
+                enable_semantic=config.deduplication_config['enable_semantic']
+            )
+        else:
+            self.deduplicator = None
+        
         # Load pleadings into API client for caching
         self._load_pleadings_for_caching()
     
@@ -52,20 +63,21 @@ class PassExecutor:
             "29- Claimant's Statement of Claim",
             "35- First Respondent's Statement of Defence",
             "30- Respondent's Reply",
-            "62- Second Respondent's Statement of Defence"
+            "62. First Respondent's Reply and Rejoinder"
         ]
         
         pleadings_text = ""
         for folder_name in pleadings_folders:
             folder_path = self.config.source_root / folder_name
             if folder_path.exists():
-                docs = self.document_loader.load_directory(folder_path)
+                docs = self.document_loader.load_folder(folder_path)
                 for doc in docs:
-                    pleadings_text += f"\n\n=== {doc['filename']} ===\n{doc['content'][:50000]}"
+                    pleadings_text += f"\n\n=== {doc['filename']} ===\n{doc.get('content', '')[:50000]}"
         
         if pleadings_text:
-            self.api_client.load_static_content(pleadings_text=pleadings_text)
-            print(f"  ✅ Loaded {len(pleadings_text):,} characters of pleadings")
+            if hasattr(self.api_client, 'load_static_content'):
+                self.api_client.load_static_content(pleadings_text=pleadings_text)
+                print(f"  ✅ Loaded {len(pleadings_text):,} characters of pleadings")
     
     # ========================================================================
     # CHECKPOINT SYSTEM
@@ -293,7 +305,7 @@ class PassExecutor:
         print(f"  ✅ Indexed {len(documents):,} documents, {len(index):,} unique terms")
     
     def _tokenize(self, text: str) -> List[str]:
-        """Simple tokenization for BM25"""
+        """Simple tokenisation for BM25"""
         # Lowercase and extract words
         text = text.lower()
         words = re.findall(r'\b[a-z]{3,}\b', text)
@@ -354,18 +366,15 @@ class PassExecutor:
         
         return [doc_id for doc_id, score in ranked_docs[:top_k]]
     
-    
-     
-     def _load_case_foundation()
-  
-    # PASS 1: TRIAGE
+    # ========================================================================
+    # PASS 1: TRIAGE WITH PHASE 0 INTELLIGENCE AND DEDUPLICATION
     # ========================================================================
     
     def execute_pass_1_triage(self) -> Dict:
-        """Pass 1: Triage & prioritisation"""
+        """Pass 1: Triage & prioritisation WITH PHASE 0 INTELLIGENCE AND DEDUPLICATION"""
         
         print("\n" + "="*70)
-        print("PASS 1: TRIAGE & PRIORITISATION")
+        print("PASS 1: INTELLIGENT TRIAGE & PRIORITISATION")
         print("="*70)
         
         # Check for checkpoint
@@ -374,15 +383,116 @@ class PassExecutor:
             print("📂 Resuming from checkpoint...")
             return checkpoint
         
-        # Load all documents
+        # ====================================================================
+        # LOAD PHASE 0 SMOKING GUN PATTERNS
+        # ====================================================================
+        phase_0_file = self.config.analysis_dir / "phase_0" / "case_foundation.json"
+        smoking_gun_patterns = []
+        phase_0_used = False
+        
+        if phase_0_file.exists():
+            try:
+                with open(phase_0_file, 'r', encoding='utf-8') as f:
+                    phase_0_data = json.load(f)
+                
+                # Extract smoking gun patterns from Stage 3
+                stage_3 = phase_0_data.get('stage_3_summary', {})
+                smoking_gun_patterns = stage_3.get('smoking_gun_patterns', [])
+                
+                if smoking_gun_patterns:
+                    print(f"\n✅ Loaded {len(smoking_gun_patterns)} smoking gun patterns from Phase 0")
+                    print(f"   Using strategic intelligence for triage\n")
+                    phase_0_used = True
+                else:
+                    print(f"\n⚠️  Phase 0 complete but no smoking gun patterns found")
+                    print(f"   Performing generic triage\n")
+                    
+            except Exception as e:
+                print(f"\n⚠️  Error loading Phase 0: {e}")
+                print(f"   Performing generic triage\n")
+        else:
+            print(f"\n⚠️  Phase 0 not completed")
+            print(f"   Performing generic triage without strategic intelligence")
+            print(f"   💡 Tip: Run 'python main.py phase0' first for better results\n")
+        
+        # ====================================================================
+        # LOAD ALL DOCUMENTS
+        # ====================================================================
         all_documents = []
         for folder_name in self.config.get_pass_1_folders():
             folder_path = self.config.source_root / folder_name
             if folder_path.exists():
-                docs = self.document_loader.load_directory(folder_path)
+                docs = self.document_loader.load_folder(folder_path)
                 all_documents.extend(docs)
         
-        print(f"\n📁 Loaded {len(all_documents):,} documents")
+        initial_doc_count = len(all_documents)
+        print(f"\n📁 Loaded {initial_doc_count:,} documents")
+        
+        # ====================================================================
+        # DEDUPLICATION STAGE
+        # ====================================================================
+        if self.deduplicator:
+            print(f"\n🔍 DEDUPLICATION STAGE")
+            print(f"{'='*70}")
+            print(f"Initial documents: {initial_doc_count:,}")
+            print(f"Checking for duplicates...")
+            
+            unique_docs = []
+            duplicate_log = []
+            
+            for idx, doc in enumerate(all_documents, 1):
+                if idx % 100 == 0:
+                    print(f"  Progress: {idx:,}/{initial_doc_count:,} ({idx/initial_doc_count:.1%})")
+                
+                content = doc.get('content', '') or doc.get('preview', '')
+                doc_id = doc.get('doc_id', '')
+                filename = doc.get('filename', '')
+                
+                is_dup, reason = self.deduplicator.is_duplicate(content, doc_id, filename)
+                
+                if not is_dup:
+                    unique_docs.append(doc)
+                else:
+                    duplicate_log.append({
+                        'doc_id': doc_id,
+                        'filename': filename,
+                        'duplicate_type': reason
+                    })
+            
+            # Update document list
+            all_documents = unique_docs
+            final_doc_count = len(all_documents)
+            
+            # Statistics
+            dedup_stats = self.deduplicator.get_statistics()
+            dedup_stats['initial_count'] = initial_doc_count
+            dedup_stats['final_count'] = final_doc_count
+            dedup_stats['removed'] = initial_doc_count - final_doc_count
+            
+            print(f"\n📊 Deduplication Results:")
+            print(f"   Unique documents: {final_doc_count:,} ({final_doc_count/initial_doc_count:.1%})")
+            print(f"   Removed: {initial_doc_count - final_doc_count:,}")
+            print(f"   - Exact duplicates: {dedup_stats['exact_duplicates']}")
+            print(f"   - Fuzzy duplicates: {dedup_stats['fuzzy_duplicates']}")
+            print(f"   - Semantic duplicates: {dedup_stats['semantic_duplicates']}")
+            print(f"{'='*70}\n")
+            
+            # Save duplicate log
+            if self.config.deduplication_config['log_duplicates']:
+                dup_log_file = self.config.analysis_dir / "pass_1" / "duplicate_log.json"
+                dup_log_file.parent.mkdir(parents=True, exist_ok=True)
+                
+                with open(dup_log_file, 'w', encoding='utf-8') as f:
+                    json.dump(duplicate_log, f, indent=2)
+                
+                print(f"💾 Duplicate log saved: {dup_log_file}\n")
+        else:
+            dedup_stats = {'initial_count': initial_doc_count, 'final_count': initial_doc_count, 'removed': 0}
+        
+        # ====================================================================
+        # TRIAGE BATCHES
+        # ====================================================================
+        print(f"📁 Triaging {len(all_documents):,} unique documents")
         
         # Create batches
         batch_size = 100
@@ -396,15 +506,18 @@ class PassExecutor:
         total_cost = 0.0
         
         for batch_idx, batch in enumerate(tqdm(batches, desc="Triaging batches")):
-            prompt = self.autonomous_prompts.triage_prompt(batch)
+            # Generate prompt WITH Phase 0 smoking guns
+            prompt = self.autonomous_prompts.triage_prompt(
+                batch, 
+                smoking_gun_patterns=smoking_gun_patterns  # ← PHASE 0 INTEGRATION
+            )
             
             try:
                 response, metadata = self.api_client.call_claude(
                     prompt=prompt,
                     task_type='document_triage',
                     phase='pass_1',
-                    temperature=0.0,
-                    extended_thinking=True
+                    temperature=0.0
                 )
                 
                 total_cost += metadata.get('cost_gbp', 0)
@@ -426,7 +539,7 @@ class PassExecutor:
                 continue
         
         # Sort and take top 500
-        scored_documents.sort(key=lambda x: x['priority_score'], reverse=True)
+        scored_documents.sort(key=lambda x: x.get('priority_score', 0), reverse=True)
         top_docs = scored_documents[:500]
         
         results = {
@@ -435,6 +548,8 @@ class PassExecutor:
             'priority_documents': top_docs,
             'priority_count': len(top_docs),
             'total_cost_gbp': total_cost,
+            'phase_0_used': phase_0_used,
+            'deduplication_stats': dedup_stats,
             'completed_at': datetime.now().isoformat()
         }
         
@@ -442,8 +557,13 @@ class PassExecutor:
         self._save_checkpoint('pass_1', results)
         
         print(f"\n✅ Pass 1 complete:")
-        print(f"   Top documents: 500/{len(all_documents)}")
+        if dedup_stats['removed'] > 0:
+            print(f"   Initial documents: {dedup_stats['initial_count']:,}")
+            print(f"   After deduplication: {dedup_stats['final_count']:,}")
+            print(f"   Duplicates removed: {dedup_stats['removed']:,}")
+        print(f"   Top priority documents: {len(top_docs)}/{len(all_documents)}")
         print(f"   Cost: £{total_cost:.2f}")
+        print(f"   Phase 0 intelligence: {'✅ USED' if phase_0_used else '❌ NOT USED'}")
         
         return results
     
@@ -498,43 +618,8 @@ class PassExecutor:
                 print(f"  ℹ️  No more documents")
                 break
             
-            # CHECK CACHE FIRST
-            cache_key = f"pass_2_iter_{iteration}_conf_{confidence:.2f}"
-            cached_result = self._check_cache_before_analysis(cache_key)
-            
-            if cached_result:
-                # Use cached result (FREE)
-                iteration_result = cached_result
-                iteration_result['iteration'] = iteration + 1
-                iteration_result['cost_gbp'] = 0.0
-                iteration_result['source'] = 'cache'
-                
-                self.knowledge_graph.integrate_analysis(iteration_result)
-                new_confidence = iteration_result.get('confidence', 0)
-                confidence = max(confidence, new_confidence)
-                
-                results['breaches'].extend(iteration_result.get('breaches', []))
-                results['contradictions'].extend(iteration_result.get('contradictions', []))
-                results['timeline_events'].extend(iteration_result.get('timeline_events', []))
-                results['novel_arguments'].extend(iteration_result.get('novel_arguments', []))
-                results['opponent_weaknesses'].extend(iteration_result.get('opponent_weaknesses', []))
-                results['iterations'].append(iteration_result)
-                
-                print(f"    Confidence: {confidence:.1%} (cached)")
-                print(f"    Cost: £0.00 (CACHE HIT)")
-                
-                if confidence >= confidence_threshold:
-                    print(f"\n  ✅ Confidence threshold reached")
-                    results['reason_stopped'] = 'confidence_reached'
-                    break
-                
-                continue
-            
-            # GET CONTEXT FROM MEMORY SYSTEM
-            context = self._get_context_from_memory(
-                query="breach patterns contradictions timeline evidence",
-                max_tokens=50000
-            )
+            # Get context from knowledge graph
+            context = self.knowledge_graph.get_context_for_analysis()
             
             # Determine phase
             if iteration == 0:
@@ -555,12 +640,10 @@ class PassExecutor:
             
             try:
                 # Call API
-                response, metadata = self.api_client.call_claude_with_cache(
+                response, metadata = self.api_client.call_claude(
                     prompt=prompt,
-                    dynamic_context=json.dumps(context, indent=2)[:self.config.token_config['accumulated_knowledge_limit']],
                     task_type='deep_analysis',
-                    phase='pass_2',
-                    extended_thinking=True
+                    phase='pass_2'
                 )
                 
                 # Parse response
@@ -580,13 +663,6 @@ class PassExecutor:
                 
                 # Integrate
                 self.knowledge_graph.integrate_analysis(iteration_result)
-                
-                # STORE IN CACHE
-                self._store_in_cache(
-                    query_key=cache_key,
-                    result=iteration_result,
-                    analysis_type='deep_analysis'
-                )
                 
                 # Update confidence
                 new_confidence = iteration_result.get('confidence', 0)
@@ -704,8 +780,7 @@ class PassExecutor:
                     response, metadata = self.api_client.call_claude(
                         prompt=prompt,
                         task_type='investigation',
-                        phase='pass_3',
-                        extended_thinking=True
+                        phase='pass_3'
                     )
                     
                     # Parse investigation result
@@ -806,8 +881,7 @@ class PassExecutor:
         response, metadata = self.api_client.call_claude(
             prompt=prompt,
             task_type='deliverables',
-            phase='pass_4',
-            extended_thinking=True
+            phase='pass_4'
         )
         
         # Parse deliverables (using XML tags for robustness)

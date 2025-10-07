@@ -232,58 +232,77 @@ def run_single_pass(orchestrator, pass_num: str):
 
 
 def run_phase_0(orchestrator):
-    """Run Phase 0: Knowledge foundation (legacy support)"""
+    """Run Phase 0: Intelligent Case Foundation"""
     
     print("\n" + "="*70)
-    print("PHASE 0: KNOWLEDGE FOUNDATION")
+    print("PHASE 0: INTELLIGENT CASE FOUNDATION")
     print("="*70)
     
-    print("\nThis phase builds the legal and case knowledge foundation.")
-    print("It reads documents from:")
-    print(f"  Legal knowledge: {orchestrator.config.legal_knowledge_dir}")
-    print(f"  Case documents: {orchestrator.config.case_documents_dir}")
+    print("\nThis phase analyses pleadings, tribunal rulings, and case admin")
+    print("to build smoking gun patterns for intelligent document triage.")
     
-    # Count documents
-    legal_count = len(list(orchestrator.config.legal_knowledge_dir.glob("**/*.pdf")))
-    case_count = len(list(orchestrator.config.case_documents_dir.glob("**/*.pdf")))
-    total_count = legal_count + case_count
+    print("\nPhase 0 Stages:")
+    print("  1. Analyse pleadings (core dispute understanding)")
+    print("  2. Analyse tribunal rulings (what tribunal cares about)")
+    print("  3. Build smoking gun patterns (what evidence to hunt for)")
     
-    print(f"\nDocuments to process:")
-    print(f"  Legal knowledge: {legal_count}")
-    print(f"  Case documents: {case_count}")
-    print(f"  Total: {total_count}")
+    # Check if already completed
+    phase_0_file = orchestrator.config.analysis_dir / "phase_0" / "case_foundation.json"
     
-    # Rough estimate
-    estimated_cost = total_count * 0.05  # Very rough
-    estimated_hours = total_count / 100  # Rough
+    if phase_0_file.exists():
+        print(f"\n⚠️  Phase 0 already completed!")
+        print(f"   Found: {phase_0_file}")
+        
+        response = input("\nRe-run Phase 0? (yes/no): ").strip().lower()
+        if response != 'yes':
+            print("Using existing Phase 0 results.")
+            return
+    
+    # Rough cost estimate
+    estimated_cost = 5.0  # ~£5 for 3 API calls with extended thinking
+    estimated_time = 0.25  # ~15 minutes
     
     print(f"\nEstimated cost: £{estimated_cost:.2f}")
-    print(f"Estimated time: {estimated_hours:.1f} hours")
+    print(f"Estimated time: {estimated_time:.1f} hours (~15 minutes)")
     
     response = input("\nProceed with Phase 0? (yes/no): ").strip().lower()
     if response != 'yes':
         print("Cancelled.")
         return
     
-    # Run Phase 0
+    # Run Phase 0 via the Phase0Executor
     try:
-        result = orchestrator.execute_phase_0_foundation()
+        print("\nStarting Phase 0 analysis...")
+        
+        # Access the Phase0Executor through the orchestrator
+        result = orchestrator.phase0_executor.execute()
         
         print("\n" + "="*70)
         print("PHASE 0 COMPLETE")
         print("="*70)
-        print(f"Documents processed: {result.get('documents_processed', 0)}")
-        print(f"Batches completed: {result.get('batches', 0)}")
         
-        if hasattr(orchestrator.api_client, 'print_usage_summary'):
-            orchestrator.api_client.print_usage_summary()
+        # Print summary
+        metadata = result.get('metadata', {})
+        print(f"\nCost: £{metadata.get('total_cost_gbp', 0):.2f}")
+        print(f"Time: {metadata.get('execution_time_seconds', 0):.0f} seconds")
         
-        print(f"\nKnowledge foundation built successfully.")
-        print(f"Output saved to: {orchestrator.config.analysis_dir / 'phase_0'}")
-        print("\nNext step: python main.py pass1")
+        print(f"\n📊 Case Foundation Built:")
+        print(f"   Lismore allegations: {len(result.get('lismore_allegations', []))}")
+        print(f"   PH defences: {len(result.get('ph_defences', []))}")
+        print(f"   Disputed clauses: {len(result.get('disputed_clauses', []))}")
+        print(f"   Tribunal signals: {len(result.get('tribunal_signals', []))}")
+        print(f"   Smoking gun patterns: {len(result.get('smoking_gun_patterns', []))}")
+        
+        print(f"\n💾 Output saved to: {orchestrator.config.analysis_dir / 'phase_0'}")
+        print(f"   Main file: case_foundation.json")
+        
+        print("\n🎯 Next Step:")
+        print("   Phase 0 smoking gun patterns are ready!")
+        print("   Run: python main.py pass1")
+        print("   Pass 1 will use these patterns for intelligent triage.")
         
     except Exception as e:
-        print(f"\nError in Phase 0: {e}")
+        print(f"\n❌ Error in Phase 0: {e}")
         import traceback
         traceback.print_exc()
         raise

@@ -49,6 +49,20 @@ class Config:
             'intelligence_context_limit': 100000     # Full intelligence
         }
         
+         # Deduplication Configuration
+        self.deduplication_config = {
+            'enabled': True,
+            'detect_exact': True,
+            'detect_fuzzy': True,
+            'prefix_chars': 10000,
+            'enable_semantic': True,
+            'similarity_threshold': 0.85,
+            'skip_duplicates': True,
+            'log_duplicates': True,
+            'batch_dedup': True,
+            'max_vectors_in_memory': 5000
+        }
+
         # Caching Configuration - ENHANCED
         self.caching_config = {
             'enabled': True,

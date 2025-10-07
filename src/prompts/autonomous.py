@@ -19,72 +19,196 @@ class AutonomousPrompts:
     def __init__(self, config):
         self.config = config
     
-    # ========================================================================
-    # PASS 1: TRIAGE PROMPT
-    # ========================================================================
+  #!/usr/bin/env python3
+"""
+UPDATE THIS METHOD in src/prompts/autonomous.py
+
+Find the triage_prompt() method and REPLACE it with this version
+"""
+
+def triage_prompt(self, 
+                  documents: List[Dict], 
+                  batch_num: int = 0,  # ← Keep this parameter
+                  smoking_gun_patterns: List[Dict] = None) -> str:  # ← ADD THIS
+    """
+    Pass 1 Triage Prompt WITH PHASE 0 INTELLIGENCE
     
-    def triage_prompt(self, documents: List[Dict]) -> str:
-        """Pass 1: Quick triage with examples"""
-        
-        doc_previews = []
-        for i, doc in enumerate(documents):
-            preview = doc.get('content', '')[:300]
-            metadata = doc.get('metadata', {})
-            
-            doc_previews.append(f"""
-[DOC_{i}]
-Filename: {metadata.get('filename', 'unknown')}
-Date: {metadata.get('date', 'unknown')}
-Type: {metadata.get('doc_type', 'unknown')}
-Preview: {preview}
----
-""")
-        
-        prompt = f"""<triage_mission>
-You are triaging disclosure documents for commercial litigation analysis.
+    Args:
+        documents: Batch of documents to triage
+        batch_num: Current batch number (optional)
+        smoking_gun_patterns: Patterns from Phase 0 Stage 3 (NEW)
+    
+    Returns:
+        Complete triage prompt with smoking gun intelligence
+    """
+    
+    # ================================================================
+    # BUILD SMOKING GUN INTELLIGENCE SECTION (NEW)
+    # ================================================================
+    intelligence_section = ""
+    
+    if smoking_gun_patterns and len(smoking_gun_patterns) > 0:
+        intelligence_section = """
+<phase_0_intelligence>
+You have STRATEGIC INTELLIGENCE from Phase 0 case analysis.
+Below are smoking gun patterns - specific document types we're hunting for.
 
-Goal: Quickly assess each document's priority for deep analysis.
+USE THIS INTELLIGENCE TO SCORE:
+- If document matches a pattern: Use the pattern's recommended score
+- If document contains pattern keywords: Boost score by +2
+- If document matches HIGH/CRITICAL priority pattern: Score 8-10
+- If document is routine/irrelevant: Score 1-4
 
-WE ARE ARGUING FOR LISMORE. Prioritise documents that:
-- Relate to contractual obligations and breaches
-- Show evidence of wrongdoing or misrepresentation  
-- Reference key parties, dates, or financial transactions
-- Are high-quality evidence (contracts, board minutes, witness statements)
-</triage_mission>
+SMOKING GUN PATTERNS:
 
-<documents>
-{''.join(doc_previews)}
-</documents>
-
-<scoring>
-For EACH document, provide:
-
-[DOC_X]
-Priority Score: [1-10]
-Reason: [One sentence - why this priority?]
-Category: [contract|financial|correspondence|witness|expert|other]
-
-Scoring guide:
-10: Smoking gun (direct breach evidence, admissions, critical contracts)
-8-9: High value (key agreements, board minutes, expert reports, financial records)
-6-7: Important (correspondence with key parties, meeting notes)
-4-5: Relevant (background information, peripheral documents)
-1-3: Low priority (administrative, duplicates, tangential)
-
-Examples:
-- "SPA_2021_Final.pdf" mentioning Lismore/PH → Score 9-10
-- "Board_Minutes_Disclosure_Decision.pdf" → Score 10
-- "Email_routine_admin.pdf" → Score 2
-- "Valuation_Report_2021.pdf" → Score 8
-
-Be decisive. Err on side of higher priority if uncertain.
-</scoring>
-
-Score all {len(documents)} documents now.
 """
         
-        return prompt
+        # Add top 20 patterns (sorted by priority)
+        sorted_patterns = sorted(
+            smoking_gun_patterns, 
+            key=lambda p: p.get('score_if_found', p.get('priority_score', 5)), 
+            reverse=True
+        )[:20]
+        
+        for idx, pattern in enumerate(sorted_patterns, 1):
+            name = pattern.get('name', f'Pattern {idx}')
+            description = pattern.get('description', 'No description')
+            characteristics = pattern.get('characteristics', {})
+            
+            # Extract key characteristics
+            keywords = characteristics.get('keywords', []) if isinstance(characteristics, dict) else []
+            key_people = characteristics.get('key_people', []) if isinstance(characteristics, dict) else []
+            doc_types = characteristics.get('doc_types', []) if isinstance(characteristics, dict) else []
+            
+            priority = pattern.get('priority_label', 'MEDIUM')
+            score_if_found = pattern.get('score_if_found', 7)
+            strategic_value = pattern.get('strategic_value', 'Important evidence')
+            
+            intelligence_section += f"""
+{idx}. {name.upper()} [{priority}]
+   Looking for: {description[:200]}
+   Keywords: {', '.join(keywords[:10]) if keywords else 'Any'}
+   Key people: {', '.join(key_people[:5]) if key_people else 'Any'}
+   Doc types: {', '.join(doc_types[:5]) if doc_types else 'Any'}
+   If found → Score: {score_if_found}/10
+   Why critical: {strategic_value[:150]}
+
+"""
+        
+        intelligence_section += "</phase_0_intelligence>\n\n"
     
+    # ================================================================
+    # BUILD DOCUMENT PREVIEW SECTION
+    # ================================================================
+    doc_preview = "<documents_to_triage>\n"
+    
+    for idx, doc in enumerate(documents):
+        doc_preview += f"""
+[DOC_{idx}]
+Filename: {doc.get('filename', 'Unknown')}
+Folder: {doc.get('folder_name', 'Unknown')}
+File type: {doc.get('file_type', 'Unknown')}
+Preview: {doc.get('preview', 'No preview available')[:300]}
+
+"""
+    
+    doc_preview += "</documents_to_triage>\n\n"
+    
+    # ================================================================
+    # BUILD COMPLETE PROMPT
+    # ================================================================
+    prompt = f"""<triage_mission>
+INTELLIGENT DOCUMENT TRIAGE - Batch {batch_num + 1}
+Lismore v Process Holdings LCIA Arbitration
+
+You are triaging {len(documents)} documents to identify high-priority evidence.
+
+WE ARE ACTING FOR LISMORE. 
+You are Lismore's strategic litigation counsel, not a neutral analyst.
+
+Every document must be assessed through the lens of:
+→ Does this help Lismore win?
+→ Does this damage PH's defence?
+→ Does this prove/disprove key allegations?
+</triage_mission>
+
+{intelligence_section}
+
+{doc_preview}
+
+<scoring_instructions>
+Score each document 1-10 based on strategic value:
+
+10 - NUCLEAR: Case-winning/losing evidence
+   - Emails showing PH knew about fraud risks before investment
+   - Admissions contradicting PH's defence
+   - Documents proving misrepresentation
+   - Smoking gun matches from Phase 0 intelligence above
+   
+9 - CRITICAL: Directly proves/disproves key allegations
+   - Due diligence reports mentioning corruption risks
+   - Board minutes discussing Lismore warranties
+   - Contracts with disputed clauses
+   - Pattern matches with HIGH priority
+   
+8 - HIGH: Strong supporting evidence
+   - Timeline-establishing documents
+   - Expert reports relevant to quantum
+   - Correspondence about key transactions
+   - Pattern matches with MEDIUM priority
+   
+7 - IMPORTANT: Contextual evidence
+   - Background to key events
+   - Supporting documentation for claims
+   
+5-6 - RELEVANT: May be useful
+   - Routine correspondence with some relevance
+   - Administrative documents
+   
+1-4 - LOW: Minimal/no relevance
+   - Routine administrative documents
+   - Duplicates or irrelevant content
+
+ALSO CATEGORISE:
+- contract: Contracts, agreements, terms
+- financial: Invoices, accounts, valuations
+- correspondence: Emails, letters, memos
+- witness: Witness statements, depositions
+- expert: Expert reports, opinions
+- other: Everything else
+</scoring_instructions>
+
+<output_format>
+For each document, provide:
+
+[DOC_X]
+Priority Score: Y
+Reason: [One sentence explaining why - cite smoking gun pattern if matched]
+Category: [contract/financial/correspondence/witness/expert/other]
+
+Example with smoking gun match:
+
+[DOC_0]
+Priority Score: 10
+Reason: Due diligence report from Sept 2017 - MATCHES PATTERN #3 "PH Pre-Deal Risk Awareness" - discusses Grace Taiga and corruption risks before PH investment
+Category: expert
+
+Example without pattern match:
+
+[DOC_1]
+Priority Score: 3
+Reason: Routine administrative correspondence with no strategic value
+Category: correspondence
+
+</output_format>
+
+Score all {len(documents)} documents now.
+{"Use the Phase 0 smoking gun patterns above to identify critical documents." if smoking_gun_patterns else ""}
+Be aggressive in scoring - if in doubt about relevance, score higher.
+Lismore is counting on you to find the smoking guns.
+"""
+    
+    return prompt
     # ========================================================================
     # PASS 2: DEEP ANALYSIS PROMPT (MAXIMUM QUALITY)
     # ========================================================================

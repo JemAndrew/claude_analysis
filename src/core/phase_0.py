@@ -13,6 +13,7 @@ import re
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 from datetime import datetime
+from utils.deduplication import DocumentDeduplicator
 
 
 class Phase0Executor:
@@ -44,6 +45,16 @@ class Phase0Executor:
         # Import prompts
         from prompts.phase_0_prompts import Phase0Prompts
         self.prompts = Phase0Prompts()
+        
+        # Deduplication system
+        if config.deduplication_config['enabled']:
+            self.deduplicator = DocumentDeduplicator(
+                similarity_threshold=config.deduplication_config['similarity_threshold'],
+                prefix_chars=config.deduplication_config['prefix_chars'],
+                enable_semantic=config.deduplication_config['enable_semantic']
+            )
+        else:
+            self.deduplicator = None
         
         # Track costs
         self.total_cost = 0.0
@@ -133,16 +144,22 @@ class Phase0Executor:
         """
         print("Loading pleadings from folders...")
         
-        # Define pleadings folders
+        # Define pleadings folders (YOUR ACTUAL FOLDER NAMES)
         pleadings_folders = [
+            "5- Request for Arbitration",
             "29- Claimant's Statement of Claim",
+            "72. Lismore's Submission (6 October 2025)",
+            "10- Claimant's Response to the First Respondent's Stay Application",
+            "13- Claimant's Response to Stay Application",
+            "28- Claimant's Response to the First Respondent's application for security for costs",
             "35- First Respondent's Statement of Defence",
+            "43. Statement of Defence Shared with Counsel",
             "30- Respondent's Reply",
             "62. First Respondent's Reply and Rejoinder",
-            "72. Lismore's Submission (6 October 2025)"
+            "63. PHL's Rejoinder to Lismore's Reply of 30 May 2025",
         ]
         
-        # Load documents
+        # Load documents WITH DEDUPLICATION
         pleadings_text = self._load_documents_from_folders(pleadings_folders)
         
         if not pleadings_text:
@@ -169,8 +186,8 @@ class Phase0Executor:
         result['tokens_output'] = metadata.get('output_tokens', 0)
         
         print(f"✓ Stage 1 complete (£{result['cost_gbp']:.2f})")
-        print(f"  • {len(result.get('claimant_allegations', []))} Lismore allegations identified")
-        print(f"  • {len(result.get('respondent_defences', []))} PH defences identified")
+        print(f"  • {len(result.get('lismore_allegations', []))} Lismore allegations identified")
+        print(f"  • {len(result.get('ph_defences', []))} PH defences identified")
         print(f"  • {len(result.get('disputed_clauses', []))} disputed clauses mapped")
         
         return result
@@ -191,16 +208,22 @@ class Phase0Executor:
         """
         print("Loading tribunal rulings from folders...")
         
-        # Define tribunal ruling folders
+        # Define tribunal ruling folders (YOUR ACTUAL FOLDER NAMES)
         tribunal_folders = [
+            "4- PO1",
+            "8- PO2",
+            "39- Procedural Order No. 2",
+            "42. Procedural Order No. 3",
             "22- Tribunal's Ruling on the Stay Application",
             "31- Tribunal's Ruling on Application for Security for Costs",
             "53- Tribunal's Decisions on Stern Schedules",
             "65. Tribunal's Ruling dated 31 July 2025",
-            "68. Tribunal's Ruling (2 September 2025)"
+            "68. Tribunal's Ruling (2 September 2025)",
+            "1- Application to Stay Arbitral Proceedings",
+            "27. Security for Costs Application",
         ]
         
-        # Load documents
+        # Load documents WITH DEDUPLICATION
         tribunal_text = self._load_documents_from_folders(tribunal_folders)
         
         if not tribunal_text:
@@ -253,13 +276,17 @@ class Phase0Executor:
         """
         print("Loading chronology and dramatis personae...")
         
-        # Define case admin folders
+        # Define case admin folders (YOUR ACTUAL FOLDER NAMES)
         admin_folders = [
             "20- Dramatis Personae",
-            "21- Chronology"
+            "21- Chronology",
+            "51. Hyperlinked Index",
+            "52- Hyperlinked Consolidated Index of the Claimant",
+            "3- Amended proposed timetable - LCIA Arbitration No. 215173",
+            "36- Chronological Email Run",
         ]
         
-        # Load documents
+        # Load documents WITH DEDUPLICATION
         admin_text = self._load_documents_from_folders(admin_folders)
         
         if not admin_text:
@@ -298,47 +325,115 @@ class Phase0Executor:
         return result
     
     # ========================================================================
-    # HELPER METHODS
+    # DOCUMENT LOADING WITH DEDUPLICATION
     # ========================================================================
     
     def _load_documents_from_folders(self, folder_names: List[str]) -> str:
         """
-        Load all documents from specified folders
+        Load all documents from specified folders WITH DEDUPLICATION
         
         Args:
             folder_names: List of folder name patterns
             
         Returns:
-            Combined text from all documents
+            Combined text from all unique documents
         """
         combined_text = ""
+        loaded_count = 0
+        total_docs = 0
+        unique_docs = 0
+        
+        print(f"\n  Deduplication: {'ENABLED ✅' if self.deduplicator else 'DISABLED'}")
         
         for folder_pattern in folder_names:
-            # Find matching folder
+            # Find matching folder - exact match first
             folder_path = None
-            for candidate in self.config.source_root.iterdir():
-                if candidate.is_dir() and folder_pattern in candidate.name:
-                    folder_path = candidate
-                    break
+            
+            # Try exact match
+            exact_path = self.config.source_root / folder_pattern
+            if exact_path.exists() and exact_path.is_dir():
+                folder_path = exact_path
+            else:
+                # Fallback: case-insensitive partial match
+                for candidate in self.config.source_root.iterdir():
+                    if candidate.is_dir() and folder_pattern.lower() in candidate.name.lower():
+                        folder_path = candidate
+                        break
             
             if not folder_path:
-                print(f"  ⚠️  Folder not found: {folder_pattern}")
+                print(f"  ⚠️  Not found: {folder_pattern}")
                 continue
             
             # Load documents from folder
             try:
+                print(f"  📂 Loading: {folder_path.name}")
                 docs = self.document_loader.load_folder(folder_path)
+                
+                if not docs:
+                    print(f"     (Empty folder)")
+                    continue
+                
+                total_docs += len(docs)
+                folder_unique = 0
+                folder_dups = 0
+                
                 for doc in docs:
+                    # Check for duplicates
+                    if self.deduplicator:
+                        content = doc.get('content', '') or doc.get('preview', '')
+                        doc_id = doc.get('doc_id', '')
+                        filename = doc.get('filename', '')
+                        
+                        is_dup, reason = self.deduplicator.is_duplicate(
+                            content, doc_id, filename
+                        )
+                        
+                        if is_dup:
+                            folder_dups += 1
+                            continue
+                    
+                    # Not a duplicate - include it
+                    unique_docs += 1
+                    folder_unique += 1
+                    
                     combined_text += f"\n\n{'='*70}\n"
                     combined_text += f"DOCUMENT: {doc['filename']}\n"
                     combined_text += f"FOLDER: {doc['folder_name']}\n"
                     combined_text += f"{'='*70}\n\n"
-                    combined_text += doc['content'][:100000]  # Limit per doc
+                    
+                    content = doc.get('content', '') or doc.get('preview', '')
+                    combined_text += content[:100000]  # Max 100K chars per doc
+                
+                loaded_count += 1
+                if folder_dups > 0:
+                    print(f"     ✅ Loaded {folder_unique}/{len(docs)} unique ({folder_dups} duplicates skipped)")
+                else:
+                    print(f"     ✅ Loaded {folder_unique} documents")
+                
             except Exception as e:
                 print(f"  ⚠️  Error loading {folder_pattern}: {e}")
                 continue
         
+        # Print deduplication summary
+        if self.deduplicator:
+            stats = self.deduplicator.get_statistics()
+            print(f"\n  📊 Deduplication Summary:")
+            print(f"     Total checked: {stats['total_checked']}")
+            print(f"     Unique: {stats['unique_documents']} ({stats['unique_rate']:.1%})")
+            print(f"     Exact duplicates: {stats['exact_duplicates']}")
+            print(f"     Fuzzy duplicates: {stats['fuzzy_duplicates']}")
+            print(f"     Semantic duplicates: {stats['semantic_duplicates']}")
+        
+        if not combined_text:
+            print(f"  ⚠️  WARNING: No unique documents loaded")
+            return ""
+        
+        print(f"\n  ✅ Summary: {unique_docs} unique documents from {loaded_count} folders")
         return combined_text
+    
+    # ========================================================================
+    # PARSING METHODS
+    # ========================================================================
     
     def _parse_stage_1_response(self, response: str) -> Dict:
         """Parse Stage 1 response into structured format"""
@@ -351,8 +446,8 @@ class Phase0Executor:
             # Fallback: manual parsing
             return {
                 'core_dispute': self._extract_section(response, 'core_dispute'),
-                'claimant_allegations': self._extract_list(response, 'claimant_allegations'),
-                'respondent_defences': self._extract_list(response, 'respondent_defences'),
+                'lismore_allegations': self._extract_list(response, 'lismore_allegations'),
+                'ph_defences': self._extract_list(response, 'ph_defences'),
                 'disputed_clauses': self._extract_list(response, 'disputed_clauses'),
                 'raw_response': response
             }
@@ -410,6 +505,10 @@ class Phase0Executor:
                 pass
         return []
     
+    # ========================================================================
+    # HELPER METHODS
+    # ========================================================================
+    
     def _build_case_foundation(self, 
                                stage_1: Dict, 
                                stage_2: Dict, 
@@ -426,20 +525,18 @@ class Phase0Executor:
             Complete case foundation dictionary
         """
         return {
+            'stage_1_summary': stage_1,
+            'stage_2_summary': stage_2,
+            'stage_3_summary': stage_3,
             'core_dispute': stage_1.get('core_dispute', ''),
-            'claimant_allegations': stage_1.get('claimant_allegations', []),
-            'respondent_defences': stage_1.get('respondent_defences', []),
+            'lismore_allegations': stage_1.get('lismore_allegations', []),
+            'ph_defences': stage_1.get('ph_defences', []),
             'disputed_clauses': stage_1.get('disputed_clauses', []),
             'tribunal_signals': stage_2.get('tribunal_signals', []),
             'procedural_priorities': stage_2.get('procedural_priorities', []),
             'smoking_gun_patterns': stage_3.get('smoking_gun_patterns', []),
             'key_entities': stage_3.get('key_entities', []),
-            'critical_timeline': stage_3.get('critical_timeline', []),
-            'stages': {
-                'stage_1': stage_1,
-                'stage_2': stage_2,
-                'stage_3': stage_3
-            }
+            'critical_timeline': stage_3.get('critical_timeline', [])
         }
     
     def _save_case_foundation(self, case_foundation: Dict):
@@ -467,9 +564,10 @@ class Phase0Executor:
     def _store_in_knowledge_graph(self, case_foundation: Dict):
         """Store case foundation in knowledge graph"""
         try:
-            # Store as case metadata
-            self.knowledge_graph.store_case_foundation(case_foundation)
-            print("✓ Stored in knowledge graph")
+            # Check if method exists
+            if hasattr(self.knowledge_graph, 'store_case_foundation'):
+                self.knowledge_graph.store_case_foundation(case_foundation)
+                print("✓ Stored in knowledge graph")
         except Exception as e:
             print(f"⚠️  Knowledge graph storage error: {e}")
     
@@ -478,13 +576,14 @@ class Phase0Executor:
         try:
             if hasattr(self.orchestrator, 'memory_enabled') and self.orchestrator.memory_enabled:
                 # Store in Tier 1 (Claude Projects - permanent)
-                self.orchestrator.memory_system.tier1.add_to_project_manifest({
-                    'filename': 'case_foundation.json',
-                    'content': json.dumps(case_foundation, indent=2),
-                    'category': 'case_context',
-                    'importance': 10
-                })
-                print("✓ Stored in memory system (Tier 1)")
+                if hasattr(self.orchestrator.memory_system, 'tier1'):
+                    self.orchestrator.memory_system.tier1.add_to_project_manifest({
+                        'filename': 'case_foundation.json',
+                        'content': json.dumps(case_foundation, indent=2),
+                        'category': 'case_context',
+                        'importance': 10
+                    })
+                    print("✓ Stored in memory system (Tier 1)")
         except Exception as e:
             print(f"⚠️  Memory system storage error: {e}")
     
@@ -499,18 +598,18 @@ class Phase0Executor:
         print(f"  • Execution time: {case_foundation['metadata']['execution_time_seconds']:.0f}s")
         
         print(f"\n📜 CASE UNDERSTANDING:")
-        print(f"  • Lismore allegations: {len(case_foundation['claimant_allegations'])}")
-        print(f"  • PH defences: {len(case_foundation['respondent_defences'])}")
-        print(f"  • Disputed clauses: {len(case_foundation['disputed_clauses'])}")
+        print(f"  • Lismore allegations: {len(case_foundation.get('lismore_allegations', []))}")
+        print(f"  • PH defences: {len(case_foundation.get('ph_defences', []))}")
+        print(f"  • Disputed clauses: {len(case_foundation.get('disputed_clauses', []))}")
         
         print(f"\n⚖️  TRIBUNAL INSIGHTS:")
-        print(f"  • Tribunal signals: {len(case_foundation['tribunal_signals'])}")
-        print(f"  • Procedural priorities: {len(case_foundation['procedural_priorities'])}")
+        print(f"  • Tribunal signals: {len(case_foundation.get('tribunal_signals', []))}")
+        print(f"  • Procedural priorities: {len(case_foundation.get('procedural_priorities', []))}")
         
         print(f"\n🎯 DISCOVERY GUIDANCE:")
-        print(f"  • Smoking gun patterns: {len(case_foundation['smoking_gun_patterns'])}")
-        print(f"  • Key entities: {len(case_foundation['key_entities'])}")
-        print(f"  • Critical dates: {len(case_foundation['critical_timeline'])}")
+        print(f"  • Smoking gun patterns: {len(case_foundation.get('smoking_gun_patterns', []))}")
+        print(f"  • Key entities: {len(case_foundation.get('key_entities', []))}")
+        print(f"  • Critical dates: {len(case_foundation.get('critical_timeline', []))}")
         
         print(f"\n💾 OUTPUT:")
         print(f"  • Location: {self.phase_0_dir}")
