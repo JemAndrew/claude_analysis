@@ -239,12 +239,12 @@ def run_phase_0(orchestrator):
     print("="*70)
     
     print("\nThis phase analyses pleadings, tribunal rulings, and case admin")
-    print("to build smoking gun patterns for intelligent document triage.")
+    print("to build comprehensive case understanding for intelligent document triage.")
     
     print("\nPhase 0 Stages:")
     print("  1. Analyse pleadings (core dispute understanding)")
-    print("  2. Analyse tribunal rulings (what tribunal cares about)")
-    print("  3. Build smoking gun patterns (what evidence to hunt for)")
+    print("  2. Analyse tribunal rulings (legal framework & tribunal priorities)")
+    print("  3. Map evidence landscape (entities, timelines, document patterns)")
     
     # Check if already completed
     phase_0_file = orchestrator.config.analysis_dir / "phase_0" / "case_foundation.json"
@@ -286,18 +286,44 @@ def run_phase_0(orchestrator):
         print(f"\nCost: £{metadata.get('total_cost_gbp', 0):.2f}")
         print(f"Time: {metadata.get('execution_time_seconds', 0):.0f} seconds")
         
+        # ================================================================
+        # FIXED: Read from correct nested structure
+        # ================================================================
         print(f"\n📊 Case Foundation Built:")
-        print(f"   Lismore allegations: {len(result.get('lismore_allegations', []))}")
-        print(f"   PH defences: {len(result.get('ph_defences', []))}")
-        print(f"   Disputed clauses: {len(result.get('disputed_clauses', []))}")
-        print(f"   Tribunal signals: {len(result.get('tribunal_signals', []))}")
-        print(f"   Smoking gun patterns: {len(result.get('smoking_gun_patterns', []))}")
+        
+        # Get the pass_1_reference (flat structure)
+        pass_1_ref = result.get('pass_1_reference', {})
+        
+        if pass_1_ref:
+            print(f"\n  PASS 1 REFERENCE (Flat structure for triage):")
+            print(f"     • Lismore allegations: {len(pass_1_ref.get('allegations', []))}")
+            print(f"     • PH defences: {len(pass_1_ref.get('defences', []))}")
+            print(f"     • Key parties: {len(pass_1_ref.get('key_parties', []))}")
+            print(f"     • Factual disputes: {len(pass_1_ref.get('factual_disputes', []))}")
+            print(f"     • Legal tests: {len(pass_1_ref.get('legal_tests', []))}")
+            print(f"     • Tribunal priorities: {len(pass_1_ref.get('tribunal_priorities', []))}")
+            print(f"     • Document patterns: {len(pass_1_ref.get('document_patterns', []))}")
+            print(f"     • Key entities: {len(pass_1_ref.get('key_entities', []))}")
+            print(f"     • Critical dates: {len(pass_1_ref.get('critical_timeline', []))}")
+        
+        # Also show stage-by-stage breakdown
+        stage_1 = result.get('stage_1_case_understanding', {})
+        stage_2 = result.get('stage_2_legal_framework', {})
+        stage_3 = result.get('stage_3_evidence_landscape', {})
+        
+        print(f"\n  DETAILED BREAKDOWN:")
+        print(f"     Stage 1: {len(stage_1.get('allegations', []))} allegations, {len(stage_1.get('timeline', []))} timeline events")
+        print(f"     Stage 2: {len(stage_2.get('case_strengths', []))} strengths, {len(stage_2.get('case_weaknesses', []))} weaknesses")
+        print(f"     Stage 3: {len(stage_3.get('evidence_categories', []))} evidence categories, {len(stage_3.get('evidence_gaps', []))} gaps identified")
         
         print(f"\n💾 Output saved to: {orchestrator.config.analysis_dir / 'phase_0'}")
         print(f"   Main file: case_foundation.json")
+        print(f"   Stage files: stage_1_case_understanding.json")
+        print(f"                stage_2_legal_framework.json")
+        print(f"                stage_3_evidence_landscape.json")
         
         print("\n🎯 Next Step:")
-        print("   Phase 0 smoking gun patterns are ready!")
+        print("   Case foundation with Pass 1 reference guide ready!")
         print("   Run: python main.py pass1")
         print("   Pass 1 will use these patterns for intelligent triage.")
         
@@ -306,7 +332,6 @@ def run_phase_0(orchestrator):
         import traceback
         traceback.print_exc()
         raise
-
 
 def show_cost_estimate(orchestrator):
     """Show detailed cost estimates"""

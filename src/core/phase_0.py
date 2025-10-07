@@ -360,6 +360,41 @@ class Phase0Executor:
             json.dump(stage_3, f, indent=2, ensure_ascii=False)
         print(f"💾 Stage 3 saved: {stage_3_file.name}\n")
         
+        print("\n" + "="*70)
+        print("📋 CONSOLIDATING PASS 1 REFERENCE GUIDE")
+        print("="*70)
+
+        # Create flat reference structure for Pass 1
+        pass_1_reference = {
+            'allegations': stage_1.get('allegations', []),
+            'defences': stage_1.get('defences', []),
+            'key_parties': stage_1.get('key_parties', []),
+            'factual_disputes': stage_1.get('factual_disputes', []),
+            'obligations': stage_1.get('obligations', []),
+            'timeline': stage_1.get('timeline', []),
+            'financial_claims': stage_1.get('financial_claims', []),
+            
+            'legal_tests': stage_2.get('legal_tests', []),
+            'proof_map': stage_2.get('proof_map', []),
+            'tribunal_priorities': stage_2.get('tribunal_priorities', []),
+            'case_strengths': stage_2.get('case_strengths', []),
+            'case_weaknesses': stage_2.get('case_weaknesses', []),
+            
+            'key_entities': stage_3.get('key_entities', []),
+            'critical_timeline': stage_3.get('critical_timeline', []),
+            'evidence_categories': stage_3.get('evidence_categories', []),
+            'document_patterns': stage_3.get('document_patterns', []),
+            
+            'usage_note': 'This is a flat reference for Pass 1. Full detail in stage_X files.'
+        }
+
+        print(f"✓ Flattened reference structure created")
+        print(f"  • {len(pass_1_reference.get('allegations', []))} allegations")
+        print(f"  • {len(pass_1_reference.get('defences', []))} defences")
+        print(f"  • {len(pass_1_reference.get('key_parties', []))} parties")
+        print(f"  • {len(pass_1_reference.get('document_patterns', []))} document patterns")
+
+
         # ====================================================================
         # COMPILE COMPLETE FOUNDATION
         # ====================================================================
@@ -375,6 +410,7 @@ class Phase0Executor:
             'stage_1_case_understanding': stage_1,
             'stage_2_legal_framework': stage_2,
             'stage_3_evidence_landscape': stage_3,
+            'pass_1_reference': pass_1_reference,
             
             'metadata': {
                 'model_used': self.config.sonnet_model,
