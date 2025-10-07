@@ -502,7 +502,7 @@ class LitigationOrchestrator:
         
         return results
     
-    def execute_single_pass(self, pass_num: str) -> Dict:
+    def execute_single_pass(self, pass_num: str, limit: int = None) -> Dict:
         """Execute single pass for testing"""
         
         print(f"\n{'='*70}")
@@ -512,7 +512,7 @@ class LitigationOrchestrator:
         self.state['current_pass'] = pass_num
         
         if pass_num == '1':
-            result = self.pass_executor.execute_pass_1_triage()
+            result = self.pass_executor.execute_pass_1_triage(limit=limit)  # PASS LIMIT HERE
         elif pass_num == '2':
             # Load priority docs from Pass 1
             pass_1_results = self._load_pass_results('1')
@@ -523,11 +523,10 @@ class LitigationOrchestrator:
             
             # Update memory after Pass 2
             if self.memory_enabled:
-                # Memory system handles this automatically
                 pass
             else:
                 self.update_memory_cache_fallback(result)
-            
+                
         elif pass_num == '3':
             result = self.pass_executor.execute_pass_3_investigations()
         elif pass_num == '4':

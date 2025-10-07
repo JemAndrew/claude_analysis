@@ -370,7 +370,7 @@ class PassExecutor:
     # PASS 1: TRIAGE WITH PHASE 0 INTELLIGENCE AND DEDUPLICATION
     # ========================================================================
     
-    def execute_pass_1_triage(self) -> Dict:
+    def execute_pass_1_triage(self, limit: int = None) -> Dict:
         """Pass 1: Triage & prioritisation WITH PHASE 0 INTELLIGENCE AND DEDUPLICATION"""
         
         print("\n" + "="*70)
@@ -422,16 +422,38 @@ class PassExecutor:
         # ====================================================================
         # LOAD ALL DOCUMENTS
         # ====================================================================
+       # ====================================================================
+# LOAD ALL DOCUMENTS
+        # ====================================================================
         all_documents = []
+
+        # Show test mode early
+        if limit is not None and limit > 0:
+            print(f"\n{'='*70}")
+            print(f"🔬 TEST MODE: Will stop after loading {limit} documents")
+            print(f"{'='*70}\n")
+
         for folder_name in self.config.get_pass_1_folders():
+            # Stop loading if we've hit the limit
+            if limit is not None and len(all_documents) >= limit:
+                print(f"\n✋ Limit reached - stopping folder scan")
+                break
+                
             folder_path = self.config.source_root / folder_name
             if folder_path.exists():
                 docs = self.document_loader.load_folder(folder_path)
-                all_documents.extend(docs)
-        
+                
+                # If adding these docs would exceed limit, only add what we need
+                if limit is not None and len(all_documents) + len(docs) > limit:
+                    remaining = limit - len(all_documents)
+                    all_documents.extend(docs[:remaining])
+                    print(f"\n✋ Limit reached - loaded {len(all_documents)} documents total")
+                    break
+                else:
+                    all_documents.extend(docs)
+
         initial_doc_count = len(all_documents)
         print(f"\n📁 Loaded {initial_doc_count:,} documents")
-        
         # ====================================================================
         # DEDUPLICATION STAGE
         # ====================================================================
@@ -510,11 +532,10 @@ class PassExecutor:
         total_cost = 0.0
         start_time = datetime.now()
 
-        # Enhanced progress bar with real-time cost tracking
+        # Enhanced progress bar with real-time # Enhanced progress bar with real-time cost tracking
         with tqdm(total=len(batches), 
-                desc="🔍 Pass 1 Triage",
-                bar_format='{l_bar}{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining}] Cost: £{postfix[cost]:.2f}',
-                postfix={'cost': 0.0}) as pbar:
+            desc="🔍 Pass 1 Triage",
+            unit=" batch") as pbar:
             
             for batch_idx, batch in enumerate(batches):
                 # Generate prompt WITH Phase 0 smoking guns
@@ -537,9 +558,12 @@ class PassExecutor:
                     batch_scores = self._parse_triage_response(response, batch)
                     scored_documents.extend(batch_scores)
                     
-                    # Update progress bar with current cost
-                    pbar.set_postfix(cost=total_cost)
+                    # Update progress bar - REMOVED set_postfix
                     pbar.update(1)
+                    
+                    # Show cost after each batch for small tests
+                    if len(batches) <= 5:
+                        print(f"  💰 Batch {batch_idx + 1}/{len(batches)} complete - Cost so far: £{total_cost:.2f}")
                     
                     # Save progress every 10 batches with detailed stats
                     if (batch_idx + 1) % 10 == 0:

@@ -69,7 +69,7 @@ Examples:
         if args.command == 'analyse':
             run_complete_analysis(orchestrator)
         elif args.command == 'pass1':
-            run_single_pass(orchestrator, '1')
+            run_single_pass(orchestrator, '1', limit=args.limit)
         elif args.command == 'pass2':
             run_single_pass(orchestrator, '2')
         elif args.command == 'pass3':
@@ -170,8 +170,7 @@ def run_complete_analysis(orchestrator):
     print("  2. Check tribunal documents and claims")
     print("  3. Review strategic recommendations")
 
-
-def run_single_pass(orchestrator, pass_num: str):
+def run_single_pass(orchestrator, pass_num: str, limit: int = None):
     """Run single pass for testing"""
     
     print("\n" + "="*70)
@@ -195,9 +194,9 @@ def run_single_pass(orchestrator, pass_num: str):
             print("Run: python main.py pass2")
             return
     
-    # Run the pass
+    # Run the pass WITH LIMIT
     try:
-        result = orchestrator.execute_single_pass(pass_num)
+        result = orchestrator.execute_single_pass(pass_num, limit=limit)
         
         print("\n" + "="*70)
         print(f"PASS {pass_num} COMPLETE")
@@ -229,10 +228,9 @@ def run_single_pass(orchestrator, pass_num: str):
             print("\nAnalysis complete! Review deliverables in pass_4 folder.")
         
     except Exception as e:
-        print(f"\nError in Pass {pass_num}: {e}")
+        print(f"\n❌ Error executing Pass {pass_num}: {e}")
         import traceback
         traceback.print_exc()
-        raise
 
 
 def run_phase_0(orchestrator):

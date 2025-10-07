@@ -25,77 +25,142 @@ UPDATE THIS METHOD in src/prompts/autonomous.py
 
 Find the triage_prompt() method and REPLACE it with this version
 """
-
 def triage_prompt(self, 
                   documents: List[Dict], 
-                  batch_num: int = 0,  # ← Keep this parameter
-                  phase_0_foundation: List[Dict] = None) -> str:  # ← ADD THIS
+                  batch_num: int = 0,
+                  phase_0_foundation: Dict = None) -> str:
     """
     Pass 1 Triage Prompt WITH PHASE 0 INTELLIGENCE
+    Uses strategic patterns from Phase 0 to identify smoking gun documents
+    British English throughout - Lismore-sided
     
     Args:
         documents: Batch of documents to triage
-        batch_num: Current batch number (optional)
-        phase_0_foundation: Patterns from Phase 0 Stage 3 (NEW)
+        batch_num: Current batch number
+        phase_0_foundation: Intelligence from Phase 0 analysis
     
     Returns:
-        Complete triage prompt with smoking gun intelligence
+        Complete triage prompt with strategic intelligence
     """
     
     # ================================================================
-    # BUILD SMOKING GUN INTELLIGENCE SECTION (NEW)
+    # BUILD PHASE 0 INTELLIGENCE SECTION
     # ================================================================
     intelligence_section = ""
     
-    if phase_0_foundation and len(phase_0_foundation) > 0:
-        intelligence_section = """
-<phase_0_intelligence>
-You have STRATEGIC INTELLIGENCE from Phase 0 case analysis.
-Below are smoking gun patterns - specific document types we're hunting for.
+    if phase_0_foundation and phase_0_foundation.get('document_patterns'):
+        patterns = phase_0_foundation.get('document_patterns', [])
+        allegations = phase_0_foundation.get('allegations', [])
+        defences = phase_0_foundation.get('defences', [])
+        key_parties = phase_0_foundation.get('key_parties', [])
+        
+        intelligence_section = f"""
+<phase_0_strategic_intelligence>
+🎯 LISMORE'S CASE STRATEGY
 
-USE THIS INTELLIGENCE TO SCORE:
-- If document matches a pattern: Use the pattern's recommended score
-- If document contains pattern keywords: Boost score by +2
-- If document matches HIGH/CRITICAL priority pattern: Score 8-10
-- If document is routine/irrelevant: Score 1-4
+You have strategic intelligence from Phase 0 deep case analysis.
+Below are smoking gun patterns - specific documents we're hunting for.
 
-SMOKING GUN PATTERNS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+KEY ALLEGATIONS (Lismore's Claims):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+"""
+        
+        for idx, allegation in enumerate(allegations[:5], 1):
+            intelligence_section += f"{idx}. {allegation}\n"
+        
+        intelligence_section += f"""
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+THEIR DEFENCES (What Process Holdings Claims):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+"""
+        
+        for idx, defence in enumerate(defences[:5], 1):
+            intelligence_section += f"{idx}. {defence}\n"
+        
+        intelligence_section += f"""
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+KEY PEOPLE TO WATCH:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+{', '.join(key_parties[:10])}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SMOKING GUN DOCUMENT PATTERNS (Top Priority):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+USE THIS INTELLIGENCE TO SCORE DOCUMENTS:
+✓ If document matches a pattern below → Use the recommended score
+✓ If document contains pattern keywords → Boost score by +2
+✓ If document mentions key people → Boost score by +1
+✓ If document contradicts their defence → Score 9-10 (smoking gun!)
+✓ If routine/irrelevant → Score 1-3
 
 """
         
-        # Add top 20 patterns (sorted by priority)
+        # Sort patterns by priority and take top 15
         sorted_patterns = sorted(
-            phase_0_foundation, 
-            key=lambda p: p.get('score_if_found', p.get('priority_score', 5)), 
+            patterns, 
+            key=lambda p: (
+                p.get('score_if_found', 5),
+                10 if p.get('priority_label') == 'CRITICAL' else 
+                8 if p.get('priority_label') == 'HIGH' else 5
+            ),
             reverse=True
-        )[:20]
+        )[:15]
         
         for idx, pattern in enumerate(sorted_patterns, 1):
             name = pattern.get('name', f'Pattern {idx}')
             description = pattern.get('description', 'No description')
             characteristics = pattern.get('characteristics', {})
             
-            # Extract key characteristics
+            # Extract characteristics
             keywords = characteristics.get('keywords', []) if isinstance(characteristics, dict) else []
-            key_people = characteristics.get('key_people', []) if isinstance(characteristics, dict) else []
+            key_people_pattern = characteristics.get('key_people', []) if isinstance(characteristics, dict) else []
             doc_types = characteristics.get('doc_types', []) if isinstance(characteristics, dict) else []
             
             priority = pattern.get('priority_label', 'MEDIUM')
             score_if_found = pattern.get('score_if_found', 7)
             strategic_value = pattern.get('strategic_value', 'Important evidence')
             
+            # Priority emoji
+            priority_emoji = "🔴" if priority == "CRITICAL" else "🟠" if priority == "HIGH" else "🟡"
+            
             intelligence_section += f"""
-{idx}. {name.upper()} [{priority}]
-   Looking for: {description[:200]}
-   Keywords: {', '.join(keywords[:10]) if keywords else 'Any'}
-   Key people: {', '.join(key_people[:5]) if key_people else 'Any'}
-   Doc types: {', '.join(doc_types[:5]) if doc_types else 'Any'}
-   If found → Score: {score_if_found}/10
-   Why critical: {strategic_value[:150]}
+{idx}. {priority_emoji} {name.upper()} [{priority} PRIORITY]
+   What to look for: {description[:250]}
+   Keywords: {', '.join(keywords[:10]) if keywords else 'Any relevant terms'}
+   Key people: {', '.join(key_people_pattern[:5]) if key_people_pattern else 'Any'}
+   Document types: {', '.join(doc_types[:5]) if doc_types else 'Any'}
+   
+   ➜ If found → Score: {score_if_found}/10
+   ➜ Strategic value: {strategic_value[:200]}
 
 """
         
-        intelligence_section += "</phase_0_intelligence>\n\n"
+        intelligence_section += """
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SCORING STRATEGY:
+• Documents matching 🔴 CRITICAL patterns → 9-10
+• Documents matching 🟠 HIGH patterns → 7-8
+• Documents with multiple pattern matches → +2 bonus
+• Documents contradicting their defences → Automatic 9-10
+• Documents supporting our allegations → 8-10
+• Generic background material → 3-5
+• Irrelevant documents → 1-2
+
+</phase_0_strategic_intelligence>
+
+"""
+    else:
+        # No Phase 0 intelligence available
+        intelligence_section = """
+<no_strategic_intelligence>
+⚠️ Phase 0 analysis not available - performing generic triage.
+💡 Run 'python main.py phase0' first for optimised triage using strategic patterns.
+</no_strategic_intelligence>
+
+"""
     
     # ================================================================
     # BUILD DOCUMENT PREVIEW SECTION
@@ -103,12 +168,19 @@ SMOKING GUN PATTERNS:
     doc_preview = "<documents_to_triage>\n"
     
     for idx, doc in enumerate(documents):
+        filename = doc.get('filename', 'Unknown')
+        folder = doc.get('folder_name', 'Unknown')
+        preview = doc.get('preview', 'No preview available')[:400]
+        file_type = doc.get('file_type', 'unknown')
+        
         doc_preview += f"""
 [DOC_{idx}]
-Filename: {doc.get('filename', 'Unknown')}
-Folder: {doc.get('folder_name', 'Unknown')}
-File type: {doc.get('file_type', 'Unknown')}
-Preview: {doc.get('preview', 'No preview available')[:300]}
+Filename: {filename}
+Folder: {folder}
+File type: {file_type}
+Preview:
+{preview}
+---
 
 """
     
@@ -118,94 +190,119 @@ Preview: {doc.get('preview', 'No preview available')[:300]}
     # BUILD COMPLETE PROMPT
     # ================================================================
     prompt = f"""<triage_mission>
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 INTELLIGENT DOCUMENT TRIAGE - Batch {batch_num + 1}
 Lismore v Process Holdings LCIA Arbitration
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-You are triaging {len(documents)} documents to identify high-priority evidence.
+⚖️ YOU ARE ACTING FOR LISMORE (THE CLAIMANT)
 
-WE ARE ACTING FOR LISMORE. 
-You are Lismore's strategic litigation counsel, not a neutral analyst.
+Your mission: Triage {len(documents)} documents to identify high-priority evidence.
 
-Every document must be assessed through the lens of:
-→ Does this help Lismore win?
-→ Does this damage PH's defence?
-→ Does this prove/disprove key allegations?
+🎯 WHAT LISMORE NEEDS TO WIN:
+1. Evidence of Process Holdings' misrepresentations/breaches
+2. Documents contradicting their defences
+3. Evidence of undisclosed liabilities
+4. Proof of causation (breach → damages)
+5. Evidence quantifying Lismore's losses
+
 </triage_mission>
 
 {intelligence_section}
 
 {doc_preview}
 
-<scoring_instructions>
-Score each document 1-10 based on strategic value:
+<scoring_rubric>
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PRIORITY SCORING SYSTEM (1-10)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-10 - NUCLEAR: Case-winning/losing evidence
-   - Emails showing PH knew about fraud risks before investment
-   - Admissions contradicting PH's defence
-   - Documents proving misrepresentation
-   - Smoking gun matches from Phase 0 intelligence above
-   
-9 - CRITICAL: Directly proves/disproves key allegations
-   - Due diligence reports mentioning corruption risks
-   - Board minutes discussing Lismore warranties
-   - Contracts with disputed clauses
-   - Pattern matches with HIGH priority
-   
-8 - HIGH: Strong supporting evidence
-   - Timeline-establishing documents
-   - Expert reports relevant to quantum
-   - Correspondence about key transactions
-   - Pattern matches with MEDIUM priority
-   
-7 - IMPORTANT: Contextual evidence
-   - Background to key events
-   - Supporting documentation for claims
-   
-5-6 - RELEVANT: May be useful
-   - Routine correspondence with some relevance
-   - Administrative documents
-   
-1-4 - LOW: Minimal/no relevance
-   - Routine administrative documents
-   - Duplicates or irrelevant content
+10 = SMOKING GUN 🎯
+     • Direct proof of breach/misrepresentation
+     • Document contradicting their sworn defence
+     • Undisclosed liability with quantifiable impact
+     • Internal admission of wrongdoing
+     
+9 = CRITICAL EVIDENCE ⚡
+    • Key contractual documents (SPA, warranties)
+    • Board minutes discussing disclosure
+    • Financial statements with material discrepancies
+    • Correspondence showing knowledge of issues
+    
+8 = STRONG SUPPORTING EVIDENCE 📋
+    • Expert reports supporting Lismore's position
+    • Witness statements corroborating breach
+    • Due diligence reports they ignored
+    • Transaction documents with red flags
+    
+7 = IMPORTANT EVIDENCE ✓
+    • Relevant correspondence with key parties
+    • Financial records showing impact
+    • Contemporaneous notes of meetings
+    • Documents establishing timeline
+    
+5-6 = RELEVANT BACKGROUND 📄
+      • General company information
+      • Standard procedural documents
+      • Context-setting materials
+      
+3-4 = MARGINAL RELEVANCE ~
+      • Tangentially related documents
+      • Background company information
+      
+1-2 = LOW/NO RELEVANCE ✗
+      • Clearly irrelevant documents
+      • Duplicate or superseded versions
+      • Administrative trivia
 
-ALSO CATEGORISE:
-- contract: Contracts, agreements, terms
-- financial: Invoices, accounts, valuations
-- correspondence: Emails, letters, memos
-- witness: Witness statements, depositions
-- expert: Expert reports, opinions
-- other: Everything else
-</scoring_instructions>
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DOCUMENT CATEGORIES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+contract     = Contracts, agreements, warranties, SPAs
+financial    = Financial statements, valuations, accounts
+correspondence = Emails, letters, meeting notes
+witness      = Witness statements, depositions, affidavits
+expert       = Expert reports, technical analyses
+other        = Everything else
+
+</scoring_rubric>
 
 <output_format>
-For each document, provide:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+REQUIRED OUTPUT FORMAT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-[DOC_X]
-Priority Score: Y
-Reason: [One sentence explaining why - cite smoking gun pattern if matched]
-Category: [contract/financial/correspondence/witness/expert/other]
-
-Example with smoking gun match:
+For EACH document, provide exactly this format:
 
 [DOC_0]
-Priority Score: 10
-Reason: Due diligence report from Sept 2017 - MATCHES PATTERN #3 "PH Pre-Deal Risk Awareness" - discusses Grace Taiga and corruption risks before PH investment
-Category: expert
-
-Example without pattern match:
+Priority Score: 8
+Reason: Contains SPA warranty on liability disclosure - directly supports Lismore's breach claim
+Category: contract
 
 [DOC_1]
-Priority Score: 3
-Reason: Routine administrative correspondence with no strategic value
+Priority Score: 10
+Reason: Email from PHL director admitting undisclosed liabilities - smoking gun contradicting their defence
 Category: correspondence
+
+[DOC_2]
+Priority Score: 6
+Reason: Financial statements showing disclosed liabilities - relevant for quantum analysis
+Category: financial
+
+... continue for ALL {len(documents)} documents ...
+
+CRITICAL RULES:
+✓ Score ALL documents (even if low priority)
+✓ Be specific in reasons (what makes it valuable to Lismore's case?)
+✓ Think adversarially - what does Lismore need to win?
+✓ Use the Phase 0 patterns above to guide scoring
+✓ When in doubt, score higher (better to review than miss evidence)
 
 </output_format>
 
-Score all {len(documents)} documents now.
-{"Use the Phase 0 smoking gun patterns above to identify critical documents." if phase_0_foundation else ""}
-Be aggressive in scoring - if in doubt about relevance, score higher.
-Lismore is counting on you to find the smoking guns.
+⚖️ REMEMBER: You are Lismore's litigation intelligence system.
+   Be aggressive in identifying evidence that helps Lismore win this arbitration.
 """
     
     return prompt
@@ -213,7 +310,7 @@ Lismore is counting on you to find the smoking guns.
     # PASS 2: DEEP ANALYSIS PROMPT (MAXIMUM QUALITY)
     # ========================================================================
     
-    def deep_analysis_prompt(self, 
+def deep_analysis_prompt(self, 
                             documents: List[Dict],
                             iteration: int,
                             accumulated_knowledge: Dict,
@@ -643,7 +740,7 @@ Be creative. Be adversarial. Win for Lismore.
     # PASS 3: RECURSIVE INVESTIGATION PROMPT
     # ========================================================================
     
-    def investigation_recursive_prompt(self,
+def investigation_recursive_prompt(self,
                                       investigation,
                                       relevant_documents: List[Dict],
                                       complete_intelligence: Dict) -> str:
@@ -767,7 +864,7 @@ Begin investigation now.
     # FORMATTING HELPER
     # ========================================================================
     
-    def _format_documents(self, documents: List[Dict], doc_type: str = "DISCLOSURE") -> str:
+def _format_documents(self, documents: List[Dict], doc_type: str = "DISCLOSURE") -> str:
         """Format documents with full content"""
         
         formatted = []

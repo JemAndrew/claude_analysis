@@ -172,10 +172,21 @@ class DocumentLoader:
     
     def _load_pdf_safe(self, file_path: Path, file_size_mb: float) -> Dict:
         """
-        Load PDF with size-based strategy
-        Small PDFs: Extract all
-        Large PDFs: Extract first 100 pages only
+        Load PDF with comprehensive error handling and progress tracking
+        Handles: corrupted PDFs, None errors, timeouts, large files
+        
+        Args:
+            file_path: Path to PDF file
+            file_size_mb: File size in megabytes
+            
+        Returns:
+            Document dictionary with extracted content
         """
+        
+        import time
+        start_time = time.time()
+        
+        print(f"   📄 PROGRESS: Loading {file_path.name} ({file_size_mb:.1f} MB)...", end='', flush=True)
         
         try:
             import pdfplumber
@@ -183,7 +194,6 @@ class DocumentLoader:
             # Determine extraction strategy
             if file_size_mb > 100:
                 max_pages = self.MAX_PDF_PAGES
-                print(f"   📄 {file_path.name} ({file_size_mb:.1f} MB) - extracting first {max_pages} pages")
             else:
                 max_pages = None
             
@@ -191,29 +201,141 @@ class DocumentLoader:
             total_pages = 0
             pages_extracted = 0
             
-            with pdfplumber.open(file_path) as pdf:
-                total_pages = len(pdf.pages)
-                pages_to_extract = min(total_pages, max_pages) if max_pages else total_pages
+            # Open PDF with error handling
+            try:
+                pdf = pdfplumber.open(file_path)
+            except Exception as open_error:
+                print(f" ❌ FAILED (cannot open)")
+                return {
+                    'filename': file_path.name,
+                    'doc_id': self._generate_doc_id(file_path),
+                    'content': f'[CANNOT OPEN PDF: {str(open_error)[:100]}]',
+                    'preview': f'Failed to open PDF: {str(open_error)[:100]}',
+                    'metadata': {
+                        'file_type': 'pdf',
+                        'size_mb': file_size_mb,
+                        'error': f'Cannot open: {str(open_error)}'
+                    }
+                }
+            
+            try:
+                # CRITICAL: Check if pages exist and is not None
+                if not hasattr(pdf, 'pages') or pdf.pages is None:
+                    pdf.close()
+                    print(f" ❌ FAILED (no pages)")
+                    return {
+                        'filename': file_path.name,
+                        'doc_id': self._generate_doc_id(file_path),
+                        'content': '[CORRUPTED PDF: No pages found]',
+                        'preview': 'PDF appears corrupted - no readable pages',
+                        'metadata': {
+                            'file_type': 'pdf',
+                            'size_mb': file_size_mb,
+                            'error': 'No pages attribute or pages is None'
+                        }
+                    }
                 
+                total_pages = len(pdf.pages)
+                
+                # CRITICAL: Handle None or 0 pages
+                if total_pages is None or total_pages == 0:
+                    pdf.close()
+                    print(f" ❌ FAILED (0 pages)")
+                    return {
+                        'filename': file_path.name,
+                        'doc_id': self._generate_doc_id(file_path),
+                        'content': '[EMPTY PDF: 0 pages]',
+                        'preview': 'PDF has no readable pages',
+                        'metadata': {
+                            'file_type': 'pdf',
+                            'size_mb': file_size_mb,
+                            'total_pages': 0,
+                            'error': 'Empty PDF'
+                        }
+                    }
+                
+                # Calculate pages to extract
+                if max_pages is not None:
+                    pages_to_extract = min(total_pages, max_pages)
+                else:
+                    pages_to_extract = total_pages
+                
+                print(f" extracting {pages_to_extract}/{total_pages} pages...", end='', flush=True)
+                
+                # Extract text from pages with timeout protection
                 for i in range(pages_to_extract):
+                    # Check if taking too long (5 minutes per file max)
+                    if time.time() - start_time > 300:
+                        print(f" ⚠️ TIMEOUT after {pages_extracted} pages")
+                        break
+                    
                     try:
                         page_text = pdf.pages[i].extract_text()
                         if page_text:
                             text_parts.append(page_text)
                         pages_extracted += 1
                         
+                        # Progress indicator for large files
+                        if pages_extracted % 20 == 0 and file_size_mb > 50:
+                            print(f" [{pages_extracted}/{pages_to_extract}]", end='', flush=True)
+                        
                         # Stop if we've extracted enough chars
                         if len(''.join(text_parts)) > self.MAX_CHARS_EXTRACT:
                             break
-                    except Exception as e:
+                            
+                    except Exception as page_error:
+                        # Skip problematic pages but continue
                         continue
+                
+                pdf.close()
+                
+            except Exception as extract_error:
+                if 'pdf' in locals():
+                    try:
+                        pdf.close()
+                    except:
+                        pass
+                print(f" ❌ FAILED (extraction error)")
+                return {
+                    'filename': file_path.name,
+                    'doc_id': self._generate_doc_id(file_path),
+                    'content': f'[PDF EXTRACTION ERROR: {str(extract_error)[:100]}]',
+                    'preview': f'Error during extraction: {str(extract_error)[:100]}',
+                    'metadata': {
+                        'file_type': 'pdf',
+                        'size_mb': file_size_mb,
+                        'error': str(extract_error)[:200]
+                    }
+                }
             
+            # Combine extracted text
             full_text = '\n\n'.join(text_parts)
+            
+            # Handle case where no text was extracted
+            if not full_text or len(full_text.strip()) == 0:
+                elapsed = time.time() - start_time
+                print(f" ⚠️ NO TEXT ({elapsed:.1f}s)")
+                return {
+                    'filename': file_path.name,
+                    'doc_id': self._generate_doc_id(file_path),
+                    'content': '[NO TEXT EXTRACTED: PDF may be scanned images]',
+                    'preview': 'No text could be extracted from PDF',
+                    'metadata': {
+                        'file_type': 'pdf',
+                        'size_mb': file_size_mb,
+                        'total_pages': total_pages,
+                        'pages_extracted': pages_extracted,
+                        'warning': 'No text extracted - possibly scanned images'
+                    }
+                }
             
             # Truncate if still too long
             if len(full_text) > self.MAX_CHARS_EXTRACT:
                 full_text = full_text[:self.MAX_CHARS_EXTRACT]
                 full_text += f"\n\n[TRUNCATED - {total_pages} pages total, extracted {pages_extracted} pages]"
+            
+            elapsed = time.time() - start_time
+            print(f" ✅ OK ({elapsed:.1f}s, {len(full_text):,} chars)")
             
             return {
                 'filename': file_path.name,
@@ -225,20 +347,26 @@ class DocumentLoader:
                     'size_mb': file_size_mb,
                     'total_pages': total_pages,
                     'pages_extracted': pages_extracted,
-                    'truncated': pages_extracted < total_pages
+                    'truncated': pages_extracted < total_pages,
+                    'extraction_time_seconds': round(elapsed, 1)
                 }
             }
             
         except Exception as e:
-            print(f"   ❌ Error loading PDF: {e}")
+            print(f" ❌ FAILED ({str(e)[:50]})")
             return {
                 'filename': file_path.name,
                 'doc_id': self._generate_doc_id(file_path),
-                'content': f'[ERROR LOADING PDF: {str(e)}]',
+                'content': f'[ERROR LOADING PDF: {str(e)[:200]}]',
                 'preview': 'Error loading document',
-                'metadata': {'error': str(e)}
+                'metadata': {
+                    'error': str(e)[:500],
+                    'file_type': 'pdf',
+                    'size_mb': file_size_mb
+                }
             }
 
+    
     def _load_word_document(self, file_path: Path) -> Dict:
         """
         Load Word document (.docx, .doc)
