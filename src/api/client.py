@@ -7,10 +7,38 @@ Enhanced Claude API Client with FIXED Prompt Caching
 British English throughout
 """
 
+# ============================================================================
+# CRITICAL: Import os FIRST, then load .env
+# ============================================================================
+import os
+from pathlib import Path
+from dotenv import load_dotenv
+
+# Search for .env file going up directories
+current_dir = Path(__file__).resolve().parent
+for _ in range(5):
+    env_path = current_dir / ".env"
+    if env_path.exists():
+        load_dotenv(dotenv_path=env_path)
+        print(f"✅ API Client loaded .env from: {env_path}")
+        break
+    current_dir = current_dir.parent
+
+# Verify API key immediately (AFTER importing os!)
+api_key = os.getenv('ANTHROPIC_API_KEY')
+if not api_key:
+    raise ValueError(
+        "❌ ANTHROPIC_API_KEY not found in environment.\n"
+        f"   Searched for .env starting from: {Path(__file__).resolve().parent}\n"
+        "   Get your key from: https://console.anthropic.com/settings/keys\n"
+        "   Add to .env file: ANTHROPIC_API_KEY=sk-ant-api03-your-key"
+    )
+
+# Now import everything else
 import time
 import json
+import anthropic
 from typing import Dict, List, Optional, Any, Tuple
-from anthropic import Anthropic
 from datetime import datetime
 import hashlib
 
@@ -19,8 +47,16 @@ class ClaudeClient:
     """API client with optimised caching and extended thinking"""
     
     def __init__(self, config):
+        """Initialise Claude API client"""
         self.config = config
-        self.client = Anthropic(api_key=config.api_config['api_key'])
+        
+        # Get API key from environment
+        self.api_key = os.getenv('ANTHROPIC_API_KEY')
+        if not self.api_key:
+            raise ValueError("ANTHROPIC_API_KEY not set in environment")
+        
+        # Initialize Anthropic client
+        self.client = anthropic.Anthropic(api_key=self.api_key)
         
         # Static content for caching (loaded once)
         self.pleadings_text = None

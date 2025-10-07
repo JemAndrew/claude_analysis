@@ -3,8 +3,27 @@
 Enhanced Configuration with Increased Context Utilisation
 British English throughout - Lismore v Process Holdings
 """
-
+from dotenv import load_dotenv
+import os 
 from pathlib import Path
+root_dir = Path(__file__).resolve().parent.parent.parent  # Go up 3 levels!
+env_path = root_dir / ".env"
+
+print(f"🔍 Looking for .env at: {env_path}")
+print(f"   .env exists: {env_path.exists()}")
+
+load_dotenv(dotenv_path=env_path)
+
+# Verify API key is loaded
+api_key = os.getenv('ANTHROPIC_API_KEY')
+if not api_key:
+    print(f"⚠️  WARNING: ANTHROPIC_API_KEY not found in environment")
+    if env_path.exists():
+        print(f"   .env file exists but key not loaded!")
+        print(f"   Check .env format (should be: ANTHROPIC_API_KEY=sk-ant-...)")
+else:
+    print(f"✅ API key loaded: {api_key[:20]}...")
+
 from typing import Dict, List
 from core.folder_mapping import FolderMapping
 

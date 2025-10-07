@@ -45,14 +45,31 @@ class LitigationOrchestrator:
             for key, value in config_override.items():
                 setattr(self.config, key, value)
         
-        # Initialise core components
+        # ================================================================
+        # STEP 1: Initialize base components (no dependencies)
+        # ================================================================
         self.knowledge_graph = KnowledgeGraph(self.config)
         self.api_client = ClaudeClient(self.config)
+        
+        # ================================================================
+        # STEP 2: Initialize utilities (needed by Phase0 and PassExecutor)
+        # ================================================================
+        self.document_loader = DocumentLoader(self.config)
+        self.autonomous_prompts = AutonomousPrompts(self.config)
+        self.deliverables_prompts = DeliverablesPrompts(self.config)
+        
+        # Document retrieval system (BM25)
+        self.retrieval_system = None
+        print("✅ BM25 Document Retrieval ready (builds index on first use)")
+        
+        # ================================================================
+        # STEP 3: Now Phase0 can be created (needs document_loader)
+        # ================================================================
         self.phase0_executor = Phase0Executor(self.config, self)
         
-        # ====================================================================
-        # HIERARCHICAL MEMORY SYSTEM - ACTIVATED
-        # ====================================================================
+        # ================================================================
+        # STEP 4: Hierarchical Memory System
+        # ================================================================
         print("\n" + "="*70)
         print("INITIALISING HIERARCHICAL MEMORY SYSTEM")
         print("="*70)
@@ -71,7 +88,7 @@ class LitigationOrchestrator:
             print("✅ Tier 5: Analysis Cache (fast retrieval)")
             print("\n🚀 HierarchicalMemory ACTIVE")
             
-        except ImportError as e:
+        except Exception as e:
             print(f"\n⚠️  HierarchicalMemory unavailable: {e}")
             print("   Missing dependencies? Install:")
             print("   pip install chromadb sentence-transformers")
@@ -89,17 +106,14 @@ class LitigationOrchestrator:
                 'investigation_cache': {}
             }
         
-        # Initialise remaining components
+        # ================================================================
+        # STEP 5: PassExecutor (needs everything above)
+        # ================================================================
         self.pass_executor = PassExecutor(self.config, self)
-        self.autonomous_prompts = AutonomousPrompts(self.config)
-        self.deliverables_prompts = DeliverablesPrompts(self.config)
-        self.document_loader = DocumentLoader(self.config)
         
-        # Document retrieval (BM25)
-        self.retrieval_system = None
-        print("✅ BM25 Document Retrieval ready (builds index on first use)")
-        
-        # State tracking
+        # ================================================================
+        # STEP 6: State tracking
+        # ================================================================
         self.state = {
             'passes_completed': [],
             'current_pass': None,
@@ -115,10 +129,7 @@ class LitigationOrchestrator:
         self.checkpoint_dir.mkdir(parents=True, exist_ok=True)
         
         print("="*70)
-    
-    # ========================================================================
-    # MEMORY SYSTEM INTERFACE
-    # ========================================================================
+
     
     def retrieve_memory_context(self, 
                                query_text: str, 
