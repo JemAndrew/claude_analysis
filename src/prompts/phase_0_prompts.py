@@ -209,7 +209,7 @@ class Phase0Prompts:
         """
         
         # Extract key context from Stage 1
-        case_summary = stage_1_summary.get('case_summary', 'Unknown case')[:500]
+        case_summary = stage_1_summary.get('case_summary', 'Unknown case')[:800]
         allegations = stage_1_summary.get('allegations', [])
         allegation_summary = f"Lismore alleges {len(allegations)} breaches" if allegations else "Allegations unclear"
         

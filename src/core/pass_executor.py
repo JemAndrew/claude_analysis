@@ -53,7 +53,7 @@ class PassExecutor:
             self.deduplicator = None
         
         # Load pleadings into API client for caching
-        self._load_pleadings_for_caching()
+       # self._load_pleadings_for_caching()
     
     def _load_pleadings_for_caching(self):
         """Load pleadings once for caching across all API calls"""
@@ -494,58 +494,81 @@ class PassExecutor:
             dedup_stats = {'initial_count': initial_doc_count, 'final_count': initial_doc_count, 'removed': 0}
         
         # ====================================================================
-        # TRIAGE BATCHES
+        # TRIAGE BATCHES WITH ENHANCED PROGRESS BAR
         # ====================================================================
         print(f"📁 Triaging {len(all_documents):,} unique documents")
-        
+
         # Create batches
         batch_size = 100
         batches = []
         for i in range(0, len(all_documents), batch_size):
             batches.append(all_documents[i:i+batch_size])
-        
-        print(f"📦 Processing in {len(batches)} batches")
-        
+
+        print(f"📦 Processing in {len(batches)} batches\n")
+
         scored_documents = []
         total_cost = 0.0
-        
-        for batch_idx, batch in enumerate(tqdm(batches, desc="Triaging batches")):
-            # Generate prompt WITH Phase 0 smoking guns
-            prompt = self.autonomous_prompts.triage_prompt(
-                documents = batch,
-                batch_num = batch_idx, 
-                phase_0_foundation=phase_0_foundation  # ← PHASE 0 INTEGRATION
-            )
+        start_time = datetime.now()
+
+        # Enhanced progress bar with real-time cost tracking
+        with tqdm(total=len(batches), 
+                desc="🔍 Pass 1 Triage",
+                bar_format='{l_bar}{bar}| {n_fmt}/{total_fmt} [{elapsed}<{remaining}] Cost: £{postfix[cost]:.2f}',
+                postfix={'cost': 0.0}) as pbar:
             
-            try:
-                response, metadata = self.api_client.call_claude(
-                    prompt=prompt,
-                    task_type='document_triage',
-                    phase='pass_1',
-                    temperature=0.0
+            for batch_idx, batch in enumerate(batches):
+                # Generate prompt WITH Phase 0 smoking guns
+                prompt = self.autonomous_prompts.triage_prompt(
+                    documents=batch,
+                    batch_num=batch_idx, 
+                    phase_0_foundation=phase_0_foundation  # ← PHASE 0 INTEGRATION
                 )
                 
-                total_cost += metadata.get('cost_gbp', 0)
-                
-                batch_scores = self._parse_triage_response(response, batch)
-                scored_documents.extend(batch_scores)
-                
-                # Save progress every 10 batches
-                if (batch_idx + 1) % 10 == 0:
-                    self._save_mini_checkpoint('pass_1', {
-                        'scored_documents': scored_documents,
-                        'batch_progress': batch_idx + 1,
-                        'total_batches': len(batches),
-                        'cost_so_far': total_cost
-                    })
-                
-            except Exception as e:
-                print(f"\n⚠️  Error in batch {batch_idx + 1}: {str(e)[:100]}")
-                continue
-        
-        # Sort and take top 500
+                try:
+                    response, metadata = self.api_client.call_claude(
+                        prompt=prompt,
+                        task_type='document_triage',
+                        phase='pass_1',
+                        temperature=0.0
+                    )
+                    
+                    total_cost += metadata.get('cost_gbp', 0)
+                    
+                    batch_scores = self._parse_triage_response(response, batch)
+                    scored_documents.extend(batch_scores)
+                    
+                    # Update progress bar with current cost
+                    pbar.set_postfix(cost=total_cost)
+                    pbar.update(1)
+                    
+                    # Save progress every 10 batches with detailed stats
+                    if (batch_idx + 1) % 10 == 0:
+                        self._save_mini_checkpoint('pass_1', {
+                            'scored_documents': scored_documents,
+                            'batch_progress': batch_idx + 1,
+                            'total_batches': len(batches),
+                            'cost_so_far': total_cost
+                        })
+                        
+                        # Calculate and display detailed progress
+                        elapsed = (datetime.now() - start_time).total_seconds()
+                        rate = (batch_idx + 1) / elapsed if elapsed > 0 else 0
+                        eta_seconds = (len(batches) - (batch_idx + 1)) / rate if rate > 0 else 0
+                        eta_hours = eta_seconds / 3600
+                        
+                        print(f"\n  ✓ Checkpoint {batch_idx + 1}/{len(batches)}")
+                        print(f"    Documents scored: {len(scored_documents):,}")
+                        print(f"    Cost so far: £{total_cost:.2f}")
+                        print(f"    ETA: {eta_hours:.1f} hours\n")
+                    
+                except Exception as e:
+                    print(f"\n  ⚠️  Error in batch {batch_idx + 1}: {str(e)[:100]}")
+                    pbar.update(1)
+                    continue
+
+        # Sort and take top 800 (FIXED!)
         scored_documents.sort(key=lambda x: x.get('priority_score', 0), reverse=True)
-        top_docs = scored_documents[:500]
+        top_docs = scored_documents[:self.config.pass_1_config['target_priority_docs']]
         
         results = {
             'pass': '1',

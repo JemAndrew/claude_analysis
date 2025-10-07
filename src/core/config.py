@@ -140,7 +140,7 @@ CRITICAL: Every factual claim must cite specific document IDs."""
             'model': self.haiku_model,
             'batch_size': 100,
             'use_batch_api': False,  # Set to True for 50% cost reduction
-            'target_priority_docs': 500,
+            'target_priority_docs': 800,
             'folders': self.folder_mapping.get_pass_1_folders(),
             'priority_boost': {
                 10: 2.0,

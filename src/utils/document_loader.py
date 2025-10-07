@@ -239,6 +239,105 @@ class DocumentLoader:
                 'metadata': {'error': str(e)}
             }
 
+    def _load_word_document(self, file_path: Path) -> Dict:
+        """
+        Load Word document (.docx, .doc)
+        
+        Args:
+            file_path: Path to Word document
+            
+        Returns:
+            Document dictionary with extracted text
+        """
+        try:
+            # Use the existing _extract_docx_text method
+            text = self._extract_docx_text(file_path)
+            
+            if not text or len(text) < 10:
+                return {
+                    'filename': file_path.name,
+                    'doc_id': self._generate_doc_id(file_path),
+                    'content': '[EMPTY DOCUMENT]',
+                    'preview': 'Empty or unreadable Word document',
+                    'metadata': {
+                        'file_type': 'docx',
+                        'error': 'No text extracted'
+                    }
+                }
+            
+            # Truncate if too long
+            if len(text) > self.MAX_CHARS_EXTRACT:
+                text = text[:self.MAX_CHARS_EXTRACT]
+                text += "\n\n[TRUNCATED - document continues]"
+            
+            return {
+                'filename': file_path.name,
+                'doc_id': self._generate_doc_id(file_path),
+                'content': text,
+                'preview': text[:300],
+                'metadata': {
+                    'file_type': 'docx',
+                    'text_length': len(text)
+                }
+            }
+            
+        except Exception as e:
+            print(f"   ❌ Error loading Word doc: {file_path.name} - {str(e)}")
+            return {
+                'filename': file_path.name,
+                'doc_id': self._generate_doc_id(file_path),
+                'content': f'[ERROR LOADING WORD DOC: {str(e)}]',
+                'preview': 'Error loading document',
+                'metadata': {'error': str(e)}
+            }
+    
+    def _load_text_document(self, file_path: Path) -> Dict:
+        """
+        Load plain text document (.txt, .md, etc.)
+        
+        Args:
+            file_path: Path to text file
+            
+        Returns:
+            Document dictionary with text content
+        """
+        try:
+            text = self._extract_text_file(file_path)
+            
+            if not text:
+                return {
+                    'filename': file_path.name,
+                    'doc_id': self._generate_doc_id(file_path),
+                    'content': '[EMPTY FILE]',
+                    'preview': 'Empty text file',
+                    'metadata': {'file_type': 'text'}
+                }
+            
+            # Truncate if too long
+            if len(text) > self.MAX_CHARS_EXTRACT:
+                text = text[:self.MAX_CHARS_EXTRACT]
+                text += "\n\n[TRUNCATED - file continues]"
+            
+            return {
+                'filename': file_path.name,
+                'doc_id': self._generate_doc_id(file_path),
+                'content': text,
+                'preview': text[:300],
+                'metadata': {
+                    'file_type': 'text',
+                    'text_length': len(text)
+                }
+            }
+            
+        except Exception as e:
+            return {
+                'filename': file_path.name,
+                'doc_id': self._generate_doc_id(file_path),
+                'content': f'[ERROR LOADING TEXT: {str(e)}]',
+                'preview': 'Error loading document',
+                'metadata': {'error': str(e)}
+            }
+        
     def _extract_folder_metadata(self, folder_name: str) -> Dict:
         """
         Extract metadata for a folder from FolderMapping

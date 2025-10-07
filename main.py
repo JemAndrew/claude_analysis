@@ -10,6 +10,10 @@ import argparse
 from pathlib import Path
 from typing import Dict
 
+# Add src directory to Python path
+src_path = Path(__file__).parent / 'src'
+sys.path.insert(0, str(src_path))
+
 from core.orchestrator import LitigationOrchestrator
 from core.config import Config
 
