@@ -1,43 +1,290 @@
 #!/usr/bin/env python3
 """
 Phase 0: Deep Case Understanding & Knowledge Base Construction
-Builds comprehensive case intelligence that powers all subsequent passes
-British English throughout - Lismore v Process Holdings
+ULTIMATE SMART FILTERING - Maximum efficiency, minimum noise
+British English throughout - Acting for Lismore (Claimant)
+
+Location: src/core/phase_0.py
+
+🛡️ Multi-Layer Protection System:
+1. Skip drafts/working copies/temp files
+2. Prioritise master/final/signed versions (load best first)
+3. Cap per folder (max 30 docs per folder)
+4. Stricter deduplication (80% similarity - filters out MORE)
+5. Size limits (max 500k chars total, 15k per doc)
+6. Fuzzy folder name matching
+
+Result: 2,199 docs → ~120 docs (4 folders × 30 docs)
 """
 
 import json
 import re
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 from datetime import datetime
-
-from src.prompts.phase_0_prompts import Phase0Prompts
-from src.utils.document_loader import DocumentLoader
+from difflib import SequenceMatcher
 
 
 class Phase0Executor:
     """
     Executes Phase 0: Deep Case Understanding
     
-    Creates comprehensive knowledge base across 3 stages:
-    1. Case Understanding (narratives, parties, facts)
-    2. Legal Framework (proof requirements, tribunal signals)
-    3. Evidence Strategy (document patterns, priorities)
+    Purpose: Learn and understand the case completely
+    Builds comprehensive knowledge foundation for all future analysis.
     """
     
-    def __init__(self, config, api_client, memory_system=None, deduplicator=None):
+    # ========================================================================
+    # SMART FILTERING RULES
+    # ========================================================================
+    
+    # Skip documents with these patterns in filename (case-insensitive)
+    SKIP_PATTERNS = [
+        r'\bdraft\b',
+        r'\bworking\b',
+        r'\btemp\b',
+        r'\bcopy\b',
+        r'\(1\)',        # Windows duplicate markers
+        r'\(2\)',
+        r'\(3\)',
+        r'\(4\)',
+        r'\s+copy\b',
+        r'version\s*\d+',
+        r'\bv\d+\b',
+        r'\bredline\b',
+        r'track\s*change',
+        r'\bcomment\b',
+        r'\breview\b',
+        r'\.tmp\b',
+        r'~\$',          # Microsoft temp files
+        r'^\.',          # Hidden files
+        r'\bwip\b',      # Work in progress
+    ]
+    
+    # Prioritise documents with these patterns (higher score = loaded first)
+    PRIORITY_PATTERNS = [
+        (r'\bmaster\b', 100),
+        (r'\bfinal\b', 90),
+        (r'\bsigned\b', 85),
+        (r'\bconsolidated\b', 80),
+        (r'\bexecution\b', 75),
+        (r'\bamended\b', 70),
+        (r'\bofficial\b', 65),
+        (r'\bcertified\b', 60),
+        (r'\bapproved\b', 55),
+    ]
+    
+    # Limits to avoid 413 errors
+    MAX_TOTAL_CHARS = 500_000        # 500k chars total (~125k tokens) - HARD STOP
+    MAX_CHARS_PER_DOC = 15_000       # 15k chars per doc (~3.75k tokens)
+    MAX_DOCS_PER_FOLDER = 30         # Max 30 docs per folder (prevents folder overload)
+    DEDUP_THRESHOLD = 0.80           # 80% similarity (STRICTER - filters out MORE)
+    
+    def __init__(self, config, orchestrator):
+        """
+        Initialise Phase 0 Executor
+        
+        Args:
+            config: System configuration object
+            orchestrator: LitigationOrchestrator instance (provides dependencies)
+        """
         self.config = config
-        self.api_client = api_client
-        self.memory_system = memory_system
-        self.deduplicator = deduplicator
+        self.orchestrator = orchestrator
+        
+        # Get dependencies from orchestrator
+        self.api_client = orchestrator.api_client
+        self.memory_system = getattr(orchestrator, 'memory_system', None)
+        self.deduplicator = getattr(orchestrator, 'deduplicator', None)
+        
+        # Import Phase0Prompts
+        from prompts.phase_0_prompts import Phase0Prompts
         self.prompts = Phase0Prompts(config)
-        self.doc_loader = DocumentLoader(config, deduplicator)
+        
+        # Import DocumentLoader - use orchestrator's loader
+        self.doc_loader = orchestrator.document_loader
         
         # Output structure
         self.phase_0_dir = config.analysis_dir / "phase_0"
         self.knowledge_dir = self.phase_0_dir / "knowledge_base"
         self.phase_0_dir.mkdir(parents=True, exist_ok=True)
         self.knowledge_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Cache available folders for fuzzy matching
+        self._available_folders = self._scan_available_folders()
+        
+        # Configure stricter deduplication if available
+        if self.deduplicator:
+            self.deduplicator.similarity_threshold = self.DEDUP_THRESHOLD
+            print(f"  🔍 Deduplication threshold: {self.DEDUP_THRESHOLD:.0%} (stricter)")
+    
+    def _scan_available_folders(self) -> List[Path]:
+        """
+        Scan source root and cache all available folders
+        
+        Returns:
+            List of folder paths
+        """
+        if not self.config.source_root.exists():
+            print("⚠️  WARNING: source_root doesn't exist!")
+            return []
+        
+        folders = [f for f in self.config.source_root.iterdir() if f.is_dir()]
+        return sorted(folders)
+    
+    # ========================================================================
+    # SMART DOCUMENT FILTERING
+    # ========================================================================
+    
+    def _should_skip_document(self, filename: str) -> Tuple[bool, str]:
+        """
+        Check if document should be skipped based on filename
+        
+        Args:
+            filename: Document filename
+            
+        Returns:
+            (should_skip: bool, reason: str)
+        """
+        filename_lower = filename.lower()
+        
+        # Check skip patterns
+        for pattern in self.SKIP_PATTERNS:
+            if re.search(pattern, filename_lower):
+                return True, f"matched_skip_pattern:{pattern}"
+        
+        return False, "ok"
+    
+    def _calculate_document_priority(self, filename: str) -> int:
+        """
+        Calculate priority score for document (higher = more important)
+        
+        Args:
+            filename: Document filename
+            
+        Returns:
+            Priority score (0-100)
+        """
+        filename_lower = filename.lower()
+        priority = 0
+        
+        # Check priority patterns
+        for pattern, score in self.PRIORITY_PATTERNS:
+            if re.search(pattern, filename_lower):
+                priority = max(priority, score)
+        
+        return priority
+    
+    def _prioritise_documents(self, docs: List[Dict]) -> List[Dict]:
+        """
+        Sort documents by priority (high priority first)
+        
+        Args:
+            docs: List of document dictionaries
+            
+        Returns:
+            Sorted list (high priority first)
+        """
+        for doc in docs:
+            filename = doc.get('filename', '')
+            doc['_priority'] = self._calculate_document_priority(filename)
+        
+        # Sort by priority (descending)
+        return sorted(docs, key=lambda d: d.get('_priority', 0), reverse=True)
+    
+    # ========================================================================
+    # FUZZY FOLDER MATCHING (Built-in)
+    # ========================================================================
+    
+    def _find_folder_fuzzy(self, pattern: str, similarity_threshold: float = 0.75) -> Tuple[Optional[Path], float, str]:
+        """
+        Find folder matching pattern using fuzzy logic
+        
+        Handles: typos, case differences, punctuation, plurals
+        
+        Args:
+            pattern: Folder name pattern to search for
+            similarity_threshold: Minimum similarity (0.0-1.0) to consider a match
+            
+        Returns:
+            (matched_folder_path, similarity_score, match_type)
+        """
+        if not self._available_folders:
+            return None, 0.0, 'no_folders_available'
+        
+        # Stage 1: Try exact match first (fastest)
+        for folder in self._available_folders:
+            if folder.name == pattern:
+                return folder, 1.0, 'exact'
+        
+        # Stage 2: Try case-insensitive exact match
+        pattern_lower = pattern.lower()
+        for folder in self._available_folders:
+            if folder.name.lower() == pattern_lower:
+                return folder, 0.99, 'case_insensitive'
+        
+        # Stage 3: Try normalised match (remove punctuation/numbers)
+        pattern_normalised = self._normalise_folder_name(pattern)
+        best_match = None
+        best_score = 0.0
+        
+        for folder in self._available_folders:
+            folder_normalised = self._normalise_folder_name(folder.name)
+            
+            # Check if normalised names match exactly
+            if folder_normalised == pattern_normalised:
+                return folder, 0.95, 'normalised'
+            
+            # Calculate fuzzy similarity
+            similarity = SequenceMatcher(None, pattern_normalised, folder_normalised).ratio()
+            
+            if similarity > best_score:
+                best_score = similarity
+                best_match = folder
+        
+        # Stage 4: Return best fuzzy match if above threshold
+        if best_match and best_score >= similarity_threshold:
+            return best_match, best_score, 'fuzzy'
+        
+        # No good match found
+        return None, 0.0, 'not_found'
+    
+    def _normalise_folder_name(self, name: str) -> str:
+        """
+        Normalise folder name for comparison
+        
+        Removes: numbers, punctuation, extra whitespace, possessives
+        Handles: plurals (converts to singular)
+        
+        Examples:
+        "29- Claimant's Statement of Claim" → "claimant statement claim"
+        "First Respondent's Defence" → "first respondent defence"
+        "5- Procedural Orders" → "procedural order"
+        """
+        # Convert to lowercase
+        name = name.lower()
+        
+        # Remove leading numbers and separators (e.g., "29-", "5.", "42 -")
+        name = re.sub(r'^\d+[\s\-\.]*', '', name)
+        
+        # Remove possessives ('s, s')
+        name = re.sub(r"'s\b", '', name)
+        name = re.sub(r"s'\b", '', name)
+        
+        # Remove all punctuation except spaces
+        name = re.sub(r'[^\w\s]', ' ', name)
+        
+        # Handle common plurals → singular
+        name = re.sub(r'\borders\b', 'order', name)
+        name = re.sub(r'\bstatements\b', 'statement', name)
+        name = re.sub(r'\bdefences\b', 'defence', name)
+        name = re.sub(r'\bclaims\b', 'claim', name)
+        name = re.sub(r'\breplies\b', 'reply', name)
+        name = re.sub(r'\bapplications\b', 'application', name)
+        name = re.sub(r'\brulings\b', 'ruling', name)
+        
+        # Collapse multiple spaces
+        name = re.sub(r'\s+', ' ', name)
+        
+        return name.strip()
     
     # ========================================================================
     # MAIN EXECUTION
@@ -51,108 +298,149 @@ class Phase0Executor:
             Complete case foundation dictionary
         """
         print("\n" + "="*70)
-        print("📜 STAGE 1: Building Case Understanding")
-        print("-"*70)
+        print("PHASE 0: BUILDING CASE FOUNDATION")
+        print("Acting for: LISMORE (Claimant)")
+        print("Purpose: Deep case understanding and knowledge retention")
+        print("="*70)
+        print(f"\n🛡️  Smart Filtering: ENABLED")
+        print(f"   • Skip drafts/working copies")
+        print(f"   • Prioritise master/final/signed")
+        print(f"   • Max {self.MAX_DOCS_PER_FOLDER} docs per folder")
+        print(f"   • Deduplication: {self.DEDUP_THRESHOLD:.0%} similarity (stricter)")
+        print(f"   • Total limit: {self.MAX_TOTAL_CHARS:,} chars")
         
         start_time = datetime.now()
         total_cost = 0.0
         
-        # Stage 1: Deep case understanding from pleadings
-        stage_1 = self._execute_stage_1_understanding()
+        # ====================================================================
+        # STAGE 1: CASE UNDERSTANDING
+        # ====================================================================
+        print("\n" + "="*70)
+        print("📜 STAGE 1: Building Case Understanding")
+        print("="*70)
+        
+        stage_1 = self._execute_stage_1_case_understanding()
         total_cost += stage_1.get('cost_gbp', 0)
         
-        # Save Stage 1 to knowledge base
-        self._save_stage_knowledge(1, stage_1, "case_understanding")
+        # Save Stage 1
+        stage_1_file = self.knowledge_dir / "stage_1_case_understanding.json"
+        with open(stage_1_file, 'w', encoding='utf-8') as f:
+            json.dump(stage_1, f, indent=2, ensure_ascii=False)
+        print(f"💾 Stage 1 saved: {stage_1_file.name}\n")
         
+        # ====================================================================
+        # STAGE 2: LEGAL FRAMEWORK
+        # ====================================================================
         print("\n" + "="*70)
-        print("⚖️  STAGE 2: Analysing Legal Framework & Proof Requirements")
-        print("-"*70)
+        print("⚖️  STAGE 2: Analysing Legal Framework")
+        print("="*70)
         
-        # Stage 2: Legal framework and tribunal signals
         stage_2 = self._execute_stage_2_legal_framework(stage_1)
         total_cost += stage_2.get('cost_gbp', 0)
         
-        # Save Stage 2 to knowledge base
-        self._save_stage_knowledge(2, stage_2, "legal_framework")
+        # Save Stage 2
+        stage_2_file = self.knowledge_dir / "stage_2_legal_framework.json"
+        with open(stage_2_file, 'w', encoding='utf-8') as f:
+            json.dump(stage_2, f, indent=2, ensure_ascii=False)
+        print(f"💾 Stage 2 saved: {stage_2_file.name}\n")
         
+        # ====================================================================
+        # STAGE 3: EVIDENCE LANDSCAPE
+        # ====================================================================
         print("\n" + "="*70)
-        print("🎯 STAGE 3: Building Evidence Strategy & Discovery Intelligence")
-        print("-"*70)
+        print("🗺️  STAGE 3: Mapping Evidence Landscape")
+        print("="*70)
         
-        # Stage 3: Evidence strategy with chronology/dramatis
-        stage_3 = self._execute_stage_3_evidence_strategy(stage_1, stage_2)
+        stage_3 = self._execute_stage_3_evidence_landscape(stage_1, stage_2)
         total_cost += stage_3.get('cost_gbp', 0)
         
-        # Save Stage 3 to knowledge base
-        self._save_stage_knowledge(3, stage_3, "evidence_strategy")
+        # Save Stage 3
+        stage_3_file = self.knowledge_dir / "stage_3_evidence_landscape.json"
+        with open(stage_3_file, 'w', encoding='utf-8') as f:
+            json.dump(stage_3, f, indent=2, ensure_ascii=False)
+        print(f"💾 Stage 3 saved: {stage_3_file.name}\n")
         
-        # Build comprehensive case foundation
-        case_foundation = self._build_comprehensive_foundation(stage_1, stage_2, stage_3)
-        
-        # Add metadata
+        # ====================================================================
+        # COMPILE COMPLETE FOUNDATION
+        # ====================================================================
         execution_time = (datetime.now() - start_time).total_seconds()
-        case_foundation['metadata'] = {
-            'total_cost_gbp': total_cost,
-            'execution_time_seconds': int(execution_time),
-            'completed_at': datetime.now().isoformat(),
+        
+        complete_foundation = {
             'phase': 'phase_0',
-            'version': '2.0_understanding_focused'
+            'purpose': 'comprehensive_case_learning',
+            'execution_time_seconds': execution_time,
+            'total_cost_gbp': total_cost,
+            'completed_at': datetime.now().isoformat(),
+            
+            'stage_1_case_understanding': stage_1,
+            'stage_2_legal_framework': stage_2,
+            'stage_3_evidence_landscape': stage_3,
+            
+            'metadata': {
+                'model_used': self.config.sonnet_model,
+                'extended_thinking': True,
+                'fuzzy_folder_matching': True,
+                'smart_filtering': True,
+                'deduplication_threshold': self.DEDUP_THRESHOLD,
+                'max_docs_per_folder': self.MAX_DOCS_PER_FOLDER,
+                'max_total_chars': self.MAX_TOTAL_CHARS,
+                'deduplication_enabled': self.deduplicator is not None,
+                'memory_system_active': self.memory_system is not None,
+                'approach': 'pure_learning_no_searching'
+            }
         }
         
         # Save complete foundation
-        self._save_case_foundation(case_foundation)
+        foundation_file = self.phase_0_dir / "case_foundation.json"
+        with open(foundation_file, 'w', encoding='utf-8') as f:
+            json.dump(complete_foundation, f, indent=2, ensure_ascii=False)
         
-        # Store in memory system
-        self._store_in_memory(case_foundation)
+        print("\n" + "="*70)
+        print("✅ PHASE 0 COMPLETE - CASE FOUNDATION ESTABLISHED")
+        print("="*70)
+        print(f"Total cost: £{total_cost:.2f}")
+        print(f"Execution time: {execution_time:.1f}s")
+        print(f"\nFoundation saved: {foundation_file}")
+        print("\n🧠 Comprehensive case knowledge ready for Pass 1-4 analysis")
+        print("="*70 + "\n")
         
-        # Print summary
-        self._print_summary(case_foundation)
-        
-        return case_foundation
+        return complete_foundation
     
     # ========================================================================
     # STAGE 1: CASE UNDERSTANDING
     # ========================================================================
     
-    def _execute_stage_1_understanding(self) -> Dict:
+    def _execute_stage_1_case_understanding(self) -> Dict:
         """
-        Stage 1: Build deep understanding of case narratives and facts
+        Stage 1: Deep case understanding from pleadings
         
         Returns:
-            Dict with comprehensive case understanding
+            Dict with case understanding results
         """
-        print("Loading pleadings from folders...")
+        print("Loading pleadings documents...")
         
-        # Define pleading folders (your actual folder names)
+        # Define pleadings folders
         pleadings_folders = [
-            "5- Request for Arbitration",
             "29- Claimant's Statement of Claim",
-            "72. Lismore's Submission (6 October 2025)",
-            "10- Claimant's Response to the First Respondent's Stay Application",
-            "13- Claimant's Response to Stay Application",
-            "28- Claimant's Response to the First Respondent's application for security for costs",
             "35- First Respondent's Statement of Defence",
-            "43. Statement of Defence Shared with Counsel",
             "30- Respondent's Reply",
-            "62. First Respondent's Reply and Rejoinder",
-            "63. PHL's Rejoinder to Lismore's Reply of 30 May 2025",
+            "62. First Respondent's Reply and Rejoinder"
         ]
         
-        # Load documents with deduplication
+        # Load documents with SMART FILTERING
         pleadings_text = self._load_documents_from_folders(pleadings_folders)
         
         if not pleadings_text:
-            raise ValueError("No pleadings found. Check folder names.")
+            raise RuntimeError("❌ Failed to load pleadings. Check folder paths!")
         
         print(f"✓ Loaded {len(pleadings_text):,} characters from pleadings")
         
-        # Build prompt for deep understanding
-        print("Analysing pleadings for deep case understanding...")
-        print("  🧠 Extended Thinking: ENABLED (12,000 tokens)")
+        # Build prompt for case understanding
+        print("Analysing case narratives and legal positions...")
         
         prompt = self.prompts.build_stage_1_prompt(pleadings_text)
         
-        # Call Claude API with extended thinking
+        # Call Claude API (extended thinking auto-enabled by client)
         response, metadata = self.api_client.call_claude(
             prompt=prompt,
             model=self.config.sonnet_model,
@@ -160,7 +448,7 @@ class Phase0Executor:
             phase='phase_0'
         )
         
-        # Print thinking tokens used
+        # Print thinking tokens
         thinking_tokens = metadata.get('thinking_tokens', 0)
         if thinking_tokens > 0:
             print(f"  💭 Thinking: {thinking_tokens:,} tokens")
@@ -172,13 +460,11 @@ class Phase0Executor:
         result['tokens_output'] = metadata.get('output_tokens', 0)
         result['thinking_tokens'] = thinking_tokens
         
-        # Print what was extracted
         print(f"✓ Stage 1 complete (£{result['cost_gbp']:.2f})")
-        print(f"  • Case narrative understood: {len(result.get('case_summary', ''))//100} paragraphs")
-        print(f"  • Key parties identified: {len(result.get('key_parties', []))}")
-        print(f"  • Factual disputes mapped: {len(result.get('factual_disputes', []))}")
-        print(f"  • Obligations catalogued: {len(result.get('obligations', []))}")
-        print(f"  • Timeline events: {len(result.get('timeline', []))}")
+        print(f"  • Case summary: {len(result.get('case_summary', ''))//100} paragraphs")
+        print(f"  • Parties identified: {len(result.get('key_parties', []))}")
+        print(f"  • Allegations: {len(result.get('allegations', []))}")
+        print(f"  • Defences analysed: {len(result.get('defences', []))}")
         
         return result
     
@@ -194,26 +480,20 @@ class Phase0Executor:
             stage_1: Results from Stage 1
             
         Returns:
-            Dict with legal framework analysis
+            Dict with legal framework results
         """
-        print("Loading tribunal rulings from folders...")
+        print("Loading tribunal rulings and procedural orders...")
         
-        # Define tribunal ruling folders (your actual folder names)
+        # Define tribunal folders
         tribunal_folders = [
-            "4- PO1",
-            "8- PO2",
-            "39- Procedural Order No. 2",
-            "42. Procedural Order No. 3",
-            "22- Tribunal's Ruling on the Stay Application",
-            "31- Tribunal's Ruling on Application for Security for Costs",
-            "53- Tribunal's Decisions on Stern Schedules",
-            "65. Tribunal's Ruling dated 31 July 2025",
+            "5- Procedural Orders",
+            "42- Tribunal's Ruling dated 31 July 2025",
             "68. Tribunal's Ruling (2 September 2025)",
             "1- Application to Stay Arbitral Proceedings",
-            "27. Security for Costs Application",
+            "27. Security for Costs Application"
         ]
         
-        # Load documents with deduplication
+        # Load documents with SMART FILTERING
         tribunal_text = self._load_documents_from_folders(tribunal_folders)
         
         if not tribunal_text:
@@ -224,14 +504,13 @@ class Phase0Executor:
         
         # Build prompt for legal framework
         print("Analysing legal framework and proof requirements...")
-        print("  🧠 Extended Thinking: ENABLED (12,000 tokens)")
         
         prompt = self.prompts.build_stage_2_prompt(
             stage_1_summary=stage_1,
             tribunal_text=tribunal_text
         )
         
-        # Call Claude API
+        # Call Claude API (extended thinking auto-enabled by client)
         response, metadata = self.api_client.call_claude(
             prompt=prompt,
             model=self.config.sonnet_model,
@@ -253,40 +532,40 @@ class Phase0Executor:
         
         print(f"✓ Stage 2 complete (£{result['cost_gbp']:.2f})")
         print(f"  • Legal tests analysed: {len(result.get('legal_tests', []))}")
-        print(f"  • Proof elements mapped: {sum(len(test.get('elements_required', [])) for test in result.get('legal_tests', []))}")
-        print(f"  • Case strengths identified: {len(result.get('case_strengths', []))}")
-        print(f"  • Case weaknesses identified: {len(result.get('case_weaknesses', []))}")
+        print(f"  • Proof elements: {sum(len(str(test).split('|')) for test in result.get('legal_tests', []))}")
+        print(f"  • Case strengths: {len(result.get('case_strengths', []))}")
+        print(f"  • Case weaknesses: {len(result.get('case_weaknesses', []))}")
         
         return result
     
     # ========================================================================
-    # STAGE 3: EVIDENCE STRATEGY
+    # STAGE 3: EVIDENCE LANDSCAPE
     # ========================================================================
     
-    def _execute_stage_3_evidence_strategy(self, stage_1: Dict, stage_2: Dict) -> Dict:
+    def _execute_stage_3_evidence_landscape(self, stage_1: Dict, stage_2: Dict) -> Dict:
         """
-        Stage 3: Build evidence strategy and discovery patterns
+        Stage 3: Map the evidence landscape
         
         Args:
             stage_1: Results from Stage 1
             stage_2: Results from Stage 2
             
         Returns:
-            Dict with evidence strategy
+            Dict with evidence landscape understanding
         """
         print("Loading chronology and dramatis personae...")
         
-        # Define case admin folders (your actual folder names)
+        # Define case admin folders
         admin_folders = [
             "20- Dramatis Personae",
             "21- Chronology",
             "51. Hyperlinked Index",
             "52- Hyperlinked Consolidated Index of the Claimant",
             "3- Amended proposed timetable - LCIA Arbitration No. 215173",
-            "36- Chronological Email Run",
+            "36- Chronological Email Run"
         ]
         
-        # Load documents with deduplication
+        # Load documents with SMART FILTERING
         admin_text = self._load_documents_from_folders(admin_folders)
         
         if not admin_text:
@@ -295,9 +574,8 @@ class Phase0Executor:
         else:
             print(f"✓ Loaded {len(admin_text):,} characters from case admin")
         
-        # Build prompt for evidence strategy
-        print("Building evidence strategy and discovery patterns...")
-        print("  🧠 Extended Thinking: ENABLED (12,000 tokens)")
+        # Build prompt for evidence landscape
+        print("Mapping evidence landscape and entity relationships...")
         
         prompt = self.prompts.build_stage_3_prompt(
             stage_1_summary=stage_1,
@@ -305,7 +583,7 @@ class Phase0Executor:
             admin_text=admin_text
         )
         
-        # Call Claude API
+        # Call Claude API (extended thinking auto-enabled by client)
         response, metadata = self.api_client.call_claude(
             prompt=prompt,
             model=self.config.sonnet_model,
@@ -326,20 +604,26 @@ class Phase0Executor:
         result['thinking_tokens'] = thinking_tokens
         
         print(f"✓ Stage 3 complete (£{result['cost_gbp']:.2f})")
-        print(f"  • Key entities refined: {len(result.get('key_entities', []))}")
-        print(f"  • Evidence categories identified: {len(result.get('evidence_categories', []))}")
-        print(f"  • Document patterns created: {len(result.get('document_patterns', []))}")
-        print(f"  • Evidence gaps identified: {len(result.get('evidence_gaps', []))}")
+        print(f"  • Key entities: {len(result.get('key_entities', []))}")
+        print(f"  • Evidence categories: {len(result.get('evidence_categories', []))}")
+        print(f"  • Document types understood: {len(result.get('document_patterns', []))}")
         
         return result
     
     # ========================================================================
-    # DOCUMENT LOADING WITH DEDUPLICATION
+    # DOCUMENT LOADING WITH SMART FILTERING
     # ========================================================================
     
     def _load_documents_from_folders(self, folder_patterns: List[str]) -> str:
         """
-        Load and combine documents from multiple folders with deduplication
+        Load and combine documents from multiple folders
+        
+        Features:
+        - Fuzzy folder name matching (handles typos, case, punctuation)
+        - Smart filtering (skip drafts, prioritise master/final)
+        - Per-folder cap (max 30 docs per folder)
+        - Document content deduplication (80% similarity)
+        - Total size limit (500k chars max)
         
         Args:
             folder_patterns: List of folder names/patterns to load
@@ -348,485 +632,270 @@ class Phase0Executor:
             Combined text from all unique documents
         """
         combined_text = []
+        total_chars = 0
         unique_docs = 0
-        loaded_count = 0
+        total_docs_processed = 0
+        folders_found = 0
         
-        print(f"\n  Deduplication: {'ENABLED ✅' if self.deduplicator else 'DISABLED'}")
+        stats = {
+            'skipped_drafts': 0,
+            'skipped_duplicates': 0,
+            'skipped_size_limit': 0,
+            'loaded_priority': 0,
+            'loaded_normal': 0
+        }
         
-        for folder_pattern in folder_patterns:
+        print(f"\n  📂 Fuzzy Folder Matching: ENABLED")
+        print(f"  🔍 Deduplication: {'ENABLED (80% stricter)' if self.deduplicator else 'DISABLED'}")
+        print(f"  🛡️  Per-folder cap: {self.MAX_DOCS_PER_FOLDER} documents")
+        print(f"  📏 Total limit: {self.MAX_TOTAL_CHARS:,} chars\n")
+        
+        for pattern in folder_patterns:
             try:
-                # Load documents
-                docs = self.doc_loader.load_from_folder(folder_pattern)
+                # Check if we've hit total size limit
+                if total_chars >= self.MAX_TOTAL_CHARS:
+                    print(f"  ⚠️  TOTAL SIZE LIMIT REACHED ({self.MAX_TOTAL_CHARS:,} chars)")
+                    print(f"     Skipping remaining folders")
+                    break
                 
-                if not docs:
-                    print(f"  ⚠️  Not found: {folder_pattern}")
+                # ✅ USE FUZZY MATCHING to find folder
+                folder_path, similarity, match_type = self._find_folder_fuzzy(pattern)
+                
+                if not folder_path:
+                    print(f"  ❌ NOT FOUND: '{pattern}'")
                     continue
                 
-                loaded_count += 1
-                folder_unique = 0
-                folder_dups = 0
+                # Print match details
+                if match_type == 'exact':
+                    print(f"  ✅ EXACT: {folder_path.name}")
+                elif match_type == 'case_insensitive':
+                    print(f"  ✅ CASE: {folder_path.name}")
+                elif match_type == 'normalised':
+                    print(f"  ✅ NORM: {folder_path.name}")
+                elif match_type == 'fuzzy':
+                    print(f"  ✅ FUZZY ({similarity:.0%}): {folder_path.name}")
                 
-                print(f"  📂 Loading: {folder_pattern}")
+                folders_found += 1
                 
-                # Process each document
+                # Load documents using DocumentLoader
+                docs = self.doc_loader.load_folder(folder_path)
+                
+                if not docs:
+                    print(f"     ⚠️  Empty folder")
+                    continue
+                
+                print(f"     Found: {len(docs)} documents")
+                
+                # ✅ PRIORITISE documents (master/final first)
+                docs = self._prioritise_documents(docs)
+                
+                folder_loaded = 0
+                folder_skipped_draft = 0
+                folder_skipped_dup = 0
+                
+                # Process each document (up to MAX_DOCS_PER_FOLDER)
                 for doc in docs:
-                    content = doc.get('content', '')
+                    total_docs_processed += 1
                     
+                    # ✅ CHECK: Folder cap
+                    if folder_loaded >= self.MAX_DOCS_PER_FOLDER:
+                        break
+                    
+                    # ✅ CHECK: Total size limit
+                    if total_chars >= self.MAX_TOTAL_CHARS:
+                        stats['skipped_size_limit'] += 1
+                        break
+                    
+                    filename = doc.get('filename', '')
+                    
+                    # ✅ CHECK: Should skip (draft/working copy)?
+                    should_skip, skip_reason = self._should_skip_document(filename)
+                    if should_skip:
+                        folder_skipped_draft += 1
+                        stats['skipped_drafts'] += 1
+                        continue
+                    
+                    # Get content
+                    content = doc.get('text', '') or doc.get('preview', '')
+                    
+                    if not content or len(content) < 100:
+                        continue
+                    
+                    # ✅ CHECK: Deduplication
                     if self.deduplicator:
-                        # Check for duplicates
-                        is_unique = self.deduplicator.is_unique(content, doc.get('metadata', {}))
+                        doc_id = doc.get('id', '')
+                        is_dup, reason = self.deduplicator.is_duplicate(content, doc_id, filename)
                         
-                        if is_unique:
-                            combined_text.append(content)
-                            folder_unique += 1
-                            unique_docs += 1
-                        else:
-                            folder_dups += 1
+                        if is_dup:
+                            folder_skipped_dup += 1
+                            stats['skipped_duplicates'] += 1
+                            continue
+                    
+                    # ✅ LOAD: Truncate to max chars per doc
+                    content_truncated = content[:self.MAX_CHARS_PER_DOC]
+                    
+                    # Add to combined text
+                    doc_header = f"\n\n=== {filename} ===\n"
+                    combined_text.append(doc_header + content_truncated)
+                    
+                    # Update counters
+                    total_chars += len(doc_header) + len(content_truncated)
+                    folder_loaded += 1
+                    unique_docs += 1
+                    
+                    # Track if priority doc
+                    if doc.get('_priority', 0) > 0:
+                        stats['loaded_priority'] += 1
                     else:
-                        # No deduplication
-                        combined_text.append(content)
-                        folder_unique += 1
-                        unique_docs += 1
+                        stats['loaded_normal'] += 1
                 
                 # Print folder results
-                if self.deduplicator and folder_dups > 0:
-                    print(f"     ✅ Loaded {folder_unique}/{len(docs)} unique ({folder_dups} duplicates skipped)")
-                else:
-                    print(f"     ✅ Loaded {folder_unique} documents")
+                print(f"     Loaded: {folder_loaded} docs ({stats['loaded_priority']} priority)")
+                if folder_skipped_draft > 0:
+                    print(f"     Skipped: {folder_skipped_draft} drafts, {folder_skipped_dup} duplicates")
                 
             except Exception as e:
-                print(f"  ⚠️  Error loading {folder_pattern}: {e}")
+                print(f"  ⚠️  Error with '{pattern}': {str(e)[:100]}")
                 continue
         
-        # Print deduplication summary
-        if self.deduplicator:
-            stats = self.deduplicator.get_statistics()
-            print(f"\n  📊 Deduplication Summary:")
-            print(f"     Total checked: {stats['total_checked']}")
-            print(f"     Unique: {stats['unique_documents']} ({stats['unique_rate']:.1%})")
-            print(f"     Exact duplicates: {stats['exact_duplicates']}")
-            print(f"     Fuzzy duplicates: {stats['fuzzy_duplicates']}")
-            print(f"     Semantic duplicates: {stats['semantic_duplicates']}")
+        # Print summary
+        print(f"\n  📊 FILTERING SUMMARY:")
+        print(f"     Folders found: {folders_found}/{len(folder_patterns)}")
+        print(f"     Documents processed: {total_docs_processed}")
+        print(f"     Documents loaded: {unique_docs} ({stats['loaded_priority']} priority)")
+        print(f"     Skipped drafts: {stats['skipped_drafts']}")
+        print(f"     Skipped duplicates: {stats['skipped_duplicates']}")
+        print(f"     Total characters: {total_chars:,} / {self.MAX_TOTAL_CHARS:,}")
+        print(f"     Reduction: {100 - (total_chars/max(1, total_docs_processed*10000))*100:.1f}%")
         
         if not combined_text:
-            print(f"  ⚠️  WARNING: No unique documents loaded")
+            print(f"  ⚠️  WARNING: No documents loaded after filtering")
             return ""
         
-        print(f"\n  ✅ Summary: {unique_docs} unique documents from {loaded_count} folders")
-        return "\n\n".join(combined_text)
+        return "".join(combined_text)
     
     # ========================================================================
-    # PARSING METHODS (Improved for new structure)
+    # RESPONSE PARSING - DELIMITER-BASED
     # ========================================================================
     
     def _parse_stage_1_response(self, response: str) -> Dict:
-        """Parse Stage 1 response with robust JSON extraction"""
-        try:
-            # Method 1: Extract JSON from markdown code blocks
-            json_match = re.search(r'```(?:json)?\s*(\{.*?\})\s*```', response, re.DOTALL)
-            if json_match:
-                return json.loads(json_match.group(1))
-            
-            # Method 2: Find largest valid JSON object
-            potential_jsons = list(re.finditer(r'\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}', response, re.DOTALL))
-            for match in sorted(potential_jsons, key=lambda m: len(m.group()), reverse=True):
-                try:
-                    return json.loads(match.group())
-                except json.JSONDecodeError:
-                    continue
-            
-            # Method 3: Fallback extraction
-            print("⚠️  JSON parsing failed, using fallback extraction")
-            return {
-                'case_summary': self._extract_section(response, 'case_summary') or 
-                               self._extract_text_block(response, 300),
-                'lismore_narrative': self._extract_object(response, 'lismore_narrative'),
-                'ph_narrative': self._extract_object(response, 'ph_narrative'),
-                'factual_disputes': self._extract_array(response, 'factual_disputes'),
-                'agreed_facts': self._extract_simple_array(response, 'agreed_facts'),
-                'key_parties': self._extract_array(response, 'key_parties'),
-                'obligations': self._extract_array(response, 'obligations'),
-                'lismore_allegations': self._extract_array(response, 'lismore_allegations'),
-                'ph_defences': self._extract_array(response, 'ph_defences'),
-                'timeline': self._extract_array(response, 'timeline'),
-                'core_tensions': self._extract_array(response, 'core_tensions'),
-                'raw_response': response[:3000]
-            }
-        except Exception as e:
-            print(f"⚠️  Stage 1 parse error: {e}")
-            return {'raw_response': response[:3000], 'parse_error': str(e)}
+        """Parse Stage 1 response using SECTION_START/END delimiters"""
+        result = {
+            'case_summary': '',
+            'lismore_narrative': '',
+            'ph_narrative': '',
+            'key_parties': [],
+            'factual_disputes': [],
+            'agreed_facts': [],
+            'obligations': [],
+            'allegations': [],
+            'defences': [],
+            'timeline': [],
+            'financial_claims': []
+        }
+        
+        # Extract text sections
+        result['case_summary'] = self._extract_section(response, 'CASE_SUMMARY')
+        result['lismore_narrative'] = self._extract_section(response, 'LISMORE_NARRATIVE')
+        result['ph_narrative'] = self._extract_section(response, 'PH_NARRATIVE')
+        
+        # Extract structured list sections
+        result['key_parties'] = self._extract_structured_list(response, 'KEY_PARTIES')
+        result['factual_disputes'] = self._extract_structured_list(response, 'FACTUAL_DISPUTES')
+        result['agreed_facts'] = self._extract_simple_list(response, 'AGREED_FACTS')
+        result['obligations'] = self._extract_structured_list(response, 'OBLIGATIONS')
+        result['allegations'] = self._extract_structured_list(response, 'ALLEGATIONS')
+        result['defences'] = self._extract_structured_list(response, 'DEFENCES')
+        result['timeline'] = self._extract_structured_list(response, 'TIMELINE')
+        result['financial_claims'] = self._extract_structured_list(response, 'FINANCIAL_CLAIMS')
+        
+        return result
     
     def _parse_stage_2_response(self, response: str) -> Dict:
-        """Parse Stage 2 response with robust JSON extraction"""
-        try:
-            # Try same methods as Stage 1
-            json_match = re.search(r'```(?:json)?\s*(\{.*?\})\s*```', response, re.DOTALL)
-            if json_match:
-                return json.loads(json_match.group(1))
-            
-            potential_jsons = list(re.finditer(r'\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}', response, re.DOTALL))
-            for match in sorted(potential_jsons, key=lambda m: len(m.group()), reverse=True):
-                try:
-                    return json.loads(match.group())
-                except json.JSONDecodeError:
-                    continue
-            
-            # Fallback
-            print("⚠️  JSON parsing failed, using fallback extraction")
-            return {
-                'legal_tests': self._extract_array(response, 'legal_tests'),
-                'ph_defences_analysis': self._extract_array(response, 'ph_defences_analysis'),
-                'tribunal_priorities': self._extract_object(response, 'tribunal_priorities'),
-                'proof_map': self._extract_array(response, 'proof_map'),
-                'case_strengths': self._extract_array(response, 'case_strengths'),
-                'case_weaknesses': self._extract_array(response, 'case_weaknesses'),
-                'strategic_insights': self._extract_simple_array(response, 'strategic_insights'),
-                'raw_response': response[:3000]
-            }
-        except Exception as e:
-            print(f"⚠️  Stage 2 parse error: {e}")
-            return {'raw_response': response[:3000], 'parse_error': str(e)}
+        """Parse Stage 2 response using SECTION_START/END delimiters"""
+        result = {
+            'legal_tests': [],
+            'proof_map': [],
+            'ph_defences_legal': [],
+            'tribunal_priorities': [],
+            'case_strengths': [],
+            'case_weaknesses': []
+        }
+        
+        result['legal_tests'] = self._extract_structured_list(response, 'LEGAL_TESTS')
+        result['proof_map'] = self._extract_structured_list(response, 'PROOF_MAP')
+        result['ph_defences_legal'] = self._extract_structured_list(response, 'PH_DEFENCES_LEGAL')
+        result['tribunal_priorities'] = self._extract_structured_list(response, 'TRIBUNAL_PRIORITIES')
+        result['case_strengths'] = self._extract_simple_list(response, 'CASE_STRENGTHS')
+        result['case_weaknesses'] = self._extract_simple_list(response, 'CASE_WEAKNESSES')
+        
+        return result
     
     def _parse_stage_3_response(self, response: str) -> Dict:
-        """Parse Stage 3 response with robust JSON extraction"""
-        try:
-            # Try same methods
-            json_match = re.search(r'```(?:json)?\s*(\{.*?\})\s*```', response, re.DOTALL)
-            if json_match:
-                return json.loads(json_match.group(1))
-            
-            potential_jsons = list(re.finditer(r'\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}', response, re.DOTALL))
-            for match in sorted(potential_jsons, key=lambda m: len(m.group()), reverse=True):
-                try:
-                    return json.loads(match.group())
-                except json.JSONDecodeError:
-                    continue
-            
-            # Fallback
-            print("⚠️  JSON parsing failed, using fallback extraction")
-            return {
-                'key_entities': self._extract_array(response, 'key_entities'),
-                'critical_timeline': self._extract_array(response, 'critical_timeline'),
-                'evidence_categories': self._extract_array(response, 'evidence_categories'),
-                'document_patterns': self._extract_array(response, 'document_patterns'),
-                'evidence_gaps': self._extract_array(response, 'evidence_gaps'),
-                'discovery_priorities': self._extract_object(response, 'discovery_priorities'),
-                'scoring_guidance': self._extract_object(response, 'scoring_guidance'),
-                'raw_response': response[:3000]
-            }
-        except Exception as e:
-            print(f"⚠️  Stage 3 parse error: {e}")
-            return {'raw_response': response[:3000], 'parse_error': str(e)}
-    
-    # ========================================================================
-    # EXTRACTION HELPER METHODS
-    # ========================================================================
-    
-    def _extract_section(self, text: str, section_name: str) -> str:
-        """Extract a text section"""
-        patterns = [
-            f'"{section_name}"\\s*:\\s*"([^"]*)"',
-            f'"{section_name}"\\s*:\\s*`([^`]*)`',
-            f'{section_name}[:\\s]+(.*?)(?=\\n\\n|\\n[A-Z]|$)'
-        ]
+        """Parse Stage 3 response - evidence landscape understanding"""
+        result = {
+            'key_entities': [],
+            'critical_timeline': [],
+            'evidence_categories': [],
+            'document_patterns': [],
+            'evidence_gaps': []
+        }
         
-        for pattern in patterns:
-            match = re.search(pattern, text, re.IGNORECASE | re.DOTALL)
-            if match:
-                return match.group(1).strip()
+        result['key_entities'] = self._extract_structured_list(response, 'KEY_ENTITIES')
+        result['critical_timeline'] = self._extract_structured_list(response, 'CRITICAL_TIMELINE')
+        result['evidence_categories'] = self._extract_structured_list(response, 'EVIDENCE_CATEGORIES')
+        result['document_patterns'] = self._extract_structured_list(response, 'DOCUMENT_PATTERNS')
+        result['evidence_gaps'] = self._extract_simple_list(response, 'EVIDENCE_GAPS')
+        
+        return result
+    
+    # ========================================================================
+    # PARSING HELPER METHODS
+    # ========================================================================
+    
+    def _extract_section(self, response: str, section_name: str) -> str:
+        """Extract text between SECTION_NAME_START and SECTION_NAME_END"""
+        pattern = f'{section_name}_START(.*?){section_name}_END'
+        match = re.search(pattern, response, re.DOTALL | re.IGNORECASE)
+        if match:
+            return match.group(1).strip()
         return ""
     
-    def _extract_array(self, text: str, array_name: str) -> List[Dict]:
-        """Extract array of objects"""
-        # Look for JSON array
-        pattern = f'"{array_name}"\\s*:\\s*\\[(.*?)\\]'
-        match = re.search(pattern, text, re.DOTALL)
+    def _extract_simple_list(self, response: str, section_name: str) -> List[str]:
+        """Extract simple bullet list from a section"""
+        section_text = self._extract_section(response, section_name)
+        if not section_text:
+            return []
         
-        if match:
-            try:
-                return json.loads(f'[{match.group(1)}]')
-            except:
-                pass
+        items = []
+        for line in section_text.split('\n'):
+            line = line.strip()
+            if re.match(r'^[-•\*]\s+', line):
+                item = re.sub(r'^[-•\*]\s+', '', line)
+                if len(item) > 5:
+                    items.append(item)
         
-        return []
+        return items
     
-    def _extract_simple_array(self, text: str, array_name: str) -> List[str]:
-        """Extract array of strings"""
-        pattern = f'"{array_name}"\\s*:\\s*\\[(.*?)\\]'
-        match = re.search(pattern, text, re.DOTALL)
+    def _extract_structured_list(self, response: str, section_name: str) -> List[str]:
+        """Extract structured list with pipe-delimited fields"""
+        section_text = self._extract_section(response, section_name)
+        if not section_text:
+            return []
         
-        if match:
-            try:
-                return json.loads(f'[{match.group(1)}]')
-            except:
-                pass
+        items = []
+        for line in section_text.split('\n'):
+            line = line.strip()
+            if re.match(r'^[-•\*]\s+', line) and '|' in line:
+                item = re.sub(r'^[-•\*]\s+', '', line)
+                if len(item) > 10:
+                    items.append(item)
         
-        return []
-    
-    def _extract_object(self, text: str, object_name: str) -> Dict:
-        """Extract nested object"""
-        pattern = f'"{object_name}"\\s*:\\s*\\{{(.*?)\\}}'
-        match = re.search(pattern, text, re.DOTALL)
-        
-        if match:
-            try:
-                return json.loads(f'{{{match.group(1)}}}')
-            except:
-                pass
-        
-        return {}
-    
-    def _extract_text_block(self, text: str, max_length: int = 500) -> str:
-        """Extract coherent text block (fallback)"""
-        clean_text = re.sub(r'<[^>]+>', '', text)
-        clean_text = re.sub(r'\n{3,}', '\n\n', clean_text)
-        return clean_text.strip()[:max_length]
-    
-    # ========================================================================
-    # KNOWLEDGE BASE MANAGEMENT
-    # ========================================================================
-    
-    def _build_comprehensive_foundation(self, stage_1: Dict, stage_2: Dict, stage_3: Dict) -> Dict:
-        """
-        Combine all stages into comprehensive, structured knowledge base
-        
-        This structure is optimised for:
-        - Pass 1: Uses document_patterns and scoring_guidance
-        - Pass 2: Uses legal_tests and proof_map
-        - Pass 3: Uses evidence_gaps and investigation_priorities
-        - Pass 4: Uses complete case_understanding for synthesis
-        """
-        
-        return {
-            # ============================================================
-            # CASE UNDERSTANDING (Stage 1)
-            # ============================================================
-            'case_understanding': {
-                'executive_summary': stage_1.get('case_summary', ''),
-                
-                'narratives': {
-                    'lismore': stage_1.get('lismore_narrative', {}),
-                    'ph': stage_1.get('ph_narrative', {})
-                },
-                
-                'factual_landscape': {
-                    'disputes': stage_1.get('factual_disputes', []),
-                    'agreed_facts': stage_1.get('agreed_facts', []),
-                    'core_tensions': stage_1.get('core_tensions', [])
-                },
-                
-                'parties_and_context': {
-                    'key_parties': stage_1.get('key_parties', []),
-                    'transaction_context': stage_1.get('transaction_context', {}),
-                    'financial_picture': stage_1.get('financial_picture', {})
-                },
-                
-                'timeline': stage_1.get('timeline', []),
-                
-                'obligations': stage_1.get('obligations', []),
-                
-                'allegations_and_defences': {
-                    'lismore_allegations': stage_1.get('lismore_allegations', []),
-                    'ph_defences': stage_1.get('ph_defences', [])
-                }
-            },
-            
-            # ============================================================
-            # LEGAL FRAMEWORK (Stage 2)
-            # ============================================================
-            'legal_framework': {
-                'legal_tests': stage_2.get('legal_tests', []),
-                'proof_map': stage_2.get('proof_map', []),
-                
-                'tribunal_intelligence': {
-                    'priorities': stage_2.get('tribunal_priorities', {}),
-                    'signals': stage_2.get('tribunal_priorities', {}).get('key_concerns', [])
-                },
-                
-                'strategic_assessment': {
-                    'strengths': stage_2.get('case_strengths', []),
-                    'weaknesses': stage_2.get('case_weaknesses', []),
-                    'ph_defences_analysis': stage_2.get('ph_defences_analysis', [])
-                },
-                
-                'insights': stage_2.get('strategic_insights', [])
-            },
-            
-            # ============================================================
-            # EVIDENCE STRATEGY (Stage 3)
-            # ============================================================
-            'evidence_strategy': {
-                'key_entities': stage_3.get('key_entities', []),
-                'refined_timeline': stage_3.get('critical_timeline', []),
-                
-                'evidence_requirements': {
-                    'categories': stage_3.get('evidence_categories', []),
-                    'gaps': stage_3.get('evidence_gaps', [])
-                },
-                
-                'document_patterns': stage_3.get('document_patterns', []),
-                
-                'discovery_priorities': stage_3.get('discovery_priorities', {}),
-                
-                'scoring_guidance': stage_3.get('scoring_guidance', {})
-            },
-            
-            # ============================================================
-            # RAW STAGE OUTPUTS (for debugging/reference)
-            # ============================================================
-            'raw_stages': {
-                'stage_1': stage_1,
-                'stage_2': stage_2,
-                'stage_3': stage_3
-            }
-        }
-    
-    def _save_case_foundation(self, case_foundation: Dict):
-        """Save complete case foundation to JSON"""
-        output_file = self.phase_0_dir / "case_foundation.json"
-        
-        with open(output_file, 'w', encoding='utf-8') as f:
-            json.dump(case_foundation, f, indent=2, ensure_ascii=False)
-        
-        print(f"\n💾 Case foundation saved: {output_file}")
-    
-    def _save_stage_knowledge(self, stage_num: int, stage_data: Dict, knowledge_type: str):
-        """
-        Save individual stage knowledge to separate files for easy access
-        
-        Args:
-            stage_num: Stage number (1, 2, or 3)
-            stage_data: Stage results dictionary
-            knowledge_type: Type of knowledge (case_understanding, legal_framework, evidence_strategy)
-        """
-        # Save to knowledge_base subdirectory
-        stage_file = self.knowledge_dir / f"stage_{stage_num}_{knowledge_type}.json"
-        
-        with open(stage_file, 'w', encoding='utf-8') as f:
-            json.dump(stage_data, f, indent=2, ensure_ascii=False)
-        
-        # Also save human-readable markdown summary
-        md_file = self.knowledge_dir / f"stage_{stage_num}_{knowledge_type}.md"
-        
-        with open(md_file, 'w', encoding='utf-8') as f:
-            f.write(f"# Stage {stage_num}: {knowledge_type.replace('_', ' ').title()}\n\n")
-            f.write(f"Generated: {datetime.now().isoformat()}\n\n")
-            f.write("## Summary\n\n")
-            f.write(self._generate_markdown_summary(stage_data, knowledge_type))
-    
-    def _generate_markdown_summary(self, stage_data: Dict, knowledge_type: str) -> str:
-        """Generate human-readable markdown summary of stage"""
-        lines = []
-        
-        if knowledge_type == 'case_understanding':
-            lines.append(f"**Case Summary**: {stage_data.get('case_summary', 'N/A')[:500]}...\n\n")
-            lines.append(f"**Key Parties**: {len(stage_data.get('key_parties', []))}\n")
-            lines.append(f"**Factual Disputes**: {len(stage_data.get('factual_disputes', []))}\n")
-            lines.append(f"**Obligations**: {len(stage_data.get('obligations', []))}\n")
-            lines.append(f"**Timeline Events**: {len(stage_data.get('timeline', []))}\n\n")
-            
-        elif knowledge_type == 'legal_framework':
-            lines.append(f"**Legal Tests**: {len(stage_data.get('legal_tests', []))}\n")
-            lines.append(f"**Proof Elements**: {sum(len(t.get('elements_required', [])) for t in stage_data.get('legal_tests', []))}\n")
-            lines.append(f"**Case Strengths**: {len(stage_data.get('case_strengths', []))}\n")
-            lines.append(f"**Case Weaknesses**: {len(stage_data.get('case_weaknesses', []))}\n\n")
-            
-        elif knowledge_type == 'evidence_strategy':
-            lines.append(f"**Document Patterns**: {len(stage_data.get('document_patterns', []))}\n")
-            lines.append(f"**Key Entities**: {len(stage_data.get('key_entities', []))}\n")
-            lines.append(f"**Evidence Categories**: {len(stage_data.get('evidence_categories', []))}\n")
-            lines.append(f"**Evidence Gaps**: {len(stage_data.get('evidence_gaps', []))}\n\n")
-        
-        return ''.join(lines)
-    
-    def _store_in_memory(self, case_foundation: Dict):
-        """Store case foundation in memory system for Tier 1 retrieval"""
-        if not self.memory_system:
-            return
-        
-        try:
-            # Store executive summary
-            self.memory_system.store({
-                'type': 'case_summary',
-                'content': case_foundation.get('case_understanding', {}).get('executive_summary', ''),
-                'tier': 1,
-                'phase': 'phase_0'
-            })
-            
-            # Store document patterns for Pass 1
-            for pattern in case_foundation.get('evidence_strategy', {}).get('document_patterns', []):
-                self.memory_system.store({
-                    'type': 'document_pattern',
-                    'content': json.dumps(pattern),
-                    'tier': 1,
-                    'phase': 'phase_0'
-                })
-            
-            # Store legal tests for Pass 2
-            for test in case_foundation.get('legal_framework', {}).get('legal_tests', []):
-                self.memory_system.store({
-                    'type': 'legal_test',
-                    'content': json.dumps(test),
-                    'tier': 1,
-                    'phase': 'phase_0'
-                })
-            
-            print("✓ Stored in memory system (Tier 1)")
-            
-        except Exception as e:
-            print(f"⚠️  Memory system storage error: {e}")
-    
-    def _print_summary(self, case_foundation: Dict):
-        """Print comprehensive summary of Phase 0 results"""
-        print("\n" + "="*70)
-        print("✅ PHASE 0 COMPLETE: COMPREHENSIVE KNOWLEDGE BASE BUILT")
-        print("="*70)
-        
-        metadata = case_foundation.get('metadata', {})
-        
-        print(f"\n📊 EXECUTION SUMMARY:")
-        print(f"  • Total cost: £{metadata.get('total_cost_gbp', 0):.2f}")
-        print(f"  • Execution time: {metadata.get('execution_time_seconds', 0)}s")
-        
-        # Stage 1 stats
-        cu = case_foundation.get('case_understanding', {})
-        print(f"\n📜 CASE UNDERSTANDING (Stage 1):")
-        print(f"  • Executive summary: {len(cu.get('executive_summary', ''))//100} paragraphs")
-        print(f"  • Key parties: {len(cu.get('parties_and_context', {}).get('key_parties', []))}")
-        print(f"  • Factual disputes: {len(cu.get('factual_landscape', {}).get('disputes', []))}")
-        print(f"  • Obligations: {len(cu.get('obligations', []))}")
-        print(f"  • Timeline events: {len(cu.get('timeline', []))}")
-        
-        # Stage 2 stats
-        lf = case_foundation.get('legal_framework', {})
-        print(f"\n⚖️  LEGAL FRAMEWORK (Stage 2):")
-        print(f"  • Legal tests: {len(lf.get('legal_tests', []))}")
-        print(f"  • Proof elements: {sum(len(t.get('elements_required', [])) for t in lf.get('legal_tests', []))}")
-        print(f"  • Case strengths: {len(lf.get('strategic_assessment', {}).get('strengths', []))}")
-        print(f"  • Case weaknesses: {len(lf.get('strategic_assessment', {}).get('weaknesses', []))}")
-        
-        # Stage 3 stats
-        es = case_foundation.get('evidence_strategy', {})
-        print(f"\n🎯 EVIDENCE STRATEGY (Stage 3):")
-        print(f"  • Document patterns: {len(es.get('document_patterns', []))}")
-        print(f"  • Key entities: {len(es.get('key_entities', []))}")
-        print(f"  • Evidence categories: {len(es.get('evidence_requirements', {}).get('categories', []))}")
-        print(f"  • Evidence gaps: {len(es.get('evidence_requirements', {}).get('gaps', []))}")
-        
-        print(f"\n💾 OUTPUT:")
-        print(f"  • Main file: {self.phase_0_dir / 'case_foundation.json'}")
-        print(f"  • Knowledge base: {self.knowledge_dir}/")
-        print(f"    - stage_1_case_understanding.json")
-        print(f"    - stage_2_legal_framework.json")
-        print(f"    - stage_3_evidence_strategy.json")
-        print(f"    - (+ markdown summaries)")
-        
-        print(f"\n🚀 NEXT STEPS:")
-        print(f"  • Phase 0 knowledge base is ready")
-        print(f"  • Pass 1 will use document_patterns for intelligent triage")
-        print(f"  • Pass 2 will use legal_tests and proof_map for deep analysis")
-        print(f"  • Pass 3 will use evidence_gaps for targeted investigations")
-        print(f"  • Pass 4 will use complete understanding for synthesis")
-        print(f"  • Run: python main.py pass1")
-        
-        print("="*70 + "\n")
+        return items
+
+
+if __name__ == "__main__":
+    """Test Phase 0 executor"""
+    print("Phase 0 Executor - Ultimate Smart Filtering Version")
+    print("This module requires full system initialisation")
+    print("Run from main.py with: python main.py phase0")

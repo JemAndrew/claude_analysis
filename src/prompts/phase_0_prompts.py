@@ -1,8 +1,15 @@
 #!/usr/bin/env python3
 """
-Phase 0 Prompts - Deep Understanding Philosophy
-Builds comprehensive case knowledge before tactical evidence hunting
-British English throughout - Lismore v Process Holdings
+Phase 0 Prompts - Production-Ready with Robust Parsing
+British English throughout - Acting for Lismore v Process Holdings
+
+Location: src/prompts/phase_0_prompts.py
+
+Philosophy:
+- Understand → Analyse → Strategise
+- Extract what EXISTS (no hallucinations)
+- Simple output format for reliable parsing
+- Knowledge retention for all subsequent passes
 """
 
 import json
@@ -13,677 +20,448 @@ class Phase0Prompts:
     """Phase 0: Build comprehensive case understanding for AI memory"""
     
     def __init__(self, config):
+        """
+        Initialise Phase 0 prompts
+        
+        Args:
+            config: Config object with system settings
+        """
         self.config = config
     
     def build_stage_1_prompt(self, pleadings_text: str) -> str:
         """
-        Stage 1: DEEP CASE UNDERSTANDING
-        Goal: Comprehend the factual narrative, parties' positions, and context
+        Stage 1: Deep case understanding from pleadings
+        Returns: Case narrative, parties, disputes, obligations, timeline
+        
+        Args:
+            pleadings_text: Combined text from all pleadings documents
+            
+        Returns:
+            Formatted prompt string for Stage 1 analysis
         """
         
-        return f"""<stage_1_mission>
-STAGE 1: COMPREHENSIVE CASE UNDERSTANDING
+        return f"""You are strategic litigation counsel for Lismore in LCIA arbitration against Process Holdings (PH).
 
-You are strategic litigation counsel for Lismore in arbitration against Process Holdings (PH).
+**YOUR MISSION: Build comprehensive case understanding from pleadings**
 
-Your task: Build a complete, nuanced understanding of this case that will inform ALL subsequent analysis phases.
+This understanding will power all subsequent analysis passes (1-4).
 
-DO NOT think about evidence or documents yet. Just understand:
-- What is the story each side tells?
-- What are the competing factual narratives?
-- What are the key events and their sequence?
-- Who are the important actors and what roles did they play?
-- What obligations existed and what allegedly went wrong?
+**ANTI-HALLUCINATION RULES:**
+- Extract ONLY what is ACTUALLY PRESENT in the documents
+- If 3 parties mentioned → list 3. If 50 mentioned → list 50
+- DO NOT invent facts to meet quotas
+- If uncertain → say "Not clearly established in pleadings"
+- Quality over quantity: 3 accurate > 20 guessed
 
-This understanding will be the foundation for 4 subsequent analysis passes.
-</stage_1_mission>
+---
 
-<pleadings_text>
+<pleadings>
 {pleadings_text}
-</pleadings_text>
+</pleadings>
 
-<analysis_framework>
-Build comprehensive understanding across these dimensions:
+---
 
-1. THE STORY (Factual Narrative)
-   
-   Tell me the story from BOTH perspectives:
-   
-   A. LISMORE'S NARRATIVE
-   - What does Lismore say happened? (chronological story)
-   - What was Lismore expecting/entitled to?
-   - What went wrong from Lismore's perspective?
-   - What damages/harm resulted?
-   
-   B. PH'S NARRATIVE  
-   - What does PH say happened? (their version)
-   - How does PH justify its actions/position?
-   - What does PH say Lismore got wrong?
-   - What alternative explanation does PH offer?
-   
-   C. POINTS OF FACTUAL AGREEMENT
-   - What facts do both sides agree on?
-   - What is undisputed?
-   
-   D. POINTS OF FACTUAL DISPUTE
-   - Where do their stories diverge?
-   - What specific facts are contested?
+**ANALYSE THE CASE ACROSS THESE DIMENSIONS:**
 
-2. THE TRANSACTION/RELATIONSHIP
-   
-   What is the commercial context?
-   - What type of transaction/relationship is this?
-   - What was the business purpose?
-   - What did each party hope to achieve?
-   - What was the timeline of the relationship?
-   - What money/value was involved?
+## 1. CASE SUMMARY (2-3 paragraphs)
+Executive summary: What is this dispute about? What does each side want?
 
-3. THE PARTIES & KEY ACTORS
-   
-   Who are the important people and entities?
-   - Corporate entities involved and their relationships
-   - Key individuals and their roles
-   - Decision-makers on each side
-   - Advisers, consultants, third parties
-   - Why does each person/entity matter to the story?
+## 2. LISMORE'S NARRATIVE
+Tell Lismore's story chronologically:
+- What transaction/relationship is this?
+- What did Lismore expect/receive?
+- What went wrong?
+- What harm resulted?
 
-4. THE OBLIGATIONS & EXPECTATIONS
-   
-   What obligations existed (legal and commercial)?
-   - Contractual obligations (from SPAs, agreements, etc.)
-   - Warranties and representations given
-   - Covenants and undertakings
-   - Implied obligations or duties
-   - What did each party expect from the other?
+## 3. PH'S NARRATIVE
+Tell PH's version:
+- How does PH characterise the relationship?
+- What does PH say Lismore got wrong?
+- What justifications does PH offer?
 
-5. THE ALLEGED PROBLEMS
-   
-   What does Lismore say went wrong?
-   For each allegation:
-   - What obligation/expectation was breached?
-   - What specifically happened (or didn't happen)?
-   - When did this occur?
-   - Why does Lismore say this matters?
-   - What harm/damage resulted?
-   
-   Rate each allegation's centrality (1-10)
+## 4. KEY PARTIES & ENTITIES
+List ONLY parties ACTUALLY MENTIONED and their roles:
+- Name
+- Role (e.g. "Claimant", "Target company", "Financial adviser")  
+- Why they matter
 
-6. THE DEFENCES & COUNTER-ARGUMENTS
-   
-   How does PH respond?
-   For each defence:
-   - What is PH's position?
-   - What legal or factual basis do they cite?
-   - What alternative interpretation do they offer?
-   - How strong does this defence appear?
-   
-   Rate each defence's strength (1-10)
+## 5. FACTUAL DISPUTES
+What specific facts are contested between the parties?
+- Disputed fact
+- Lismore's position
+- PH's position
+- Why this matters
 
-7. THE TIMELINE
-   
-   What is the chronology of key events?
-   - Pre-transaction events
-   - Transaction completion
-   - Post-transaction events
-   - When problems emerged
-   - Key dates both sides reference
-   
-   For each: date, what happened, why it matters
+## 6. AGREED FACTS
+What facts are undisputed?
 
-8. THE FINANCIAL DIMENSION
-   
-   What are the economic stakes?
-   - Transaction value/purchase price
-   - Amounts in dispute
-   - Categories of claimed damages
-   - Financial relationships
-   - Economic context
+## 7. OBLIGATIONS & DUTIES
+What obligations existed (list ONLY those discussed)?
+- Obligation description
+- Source (contract clause, statute, etc.)
+- Whether disputed or accepted
 
-9. THE LEGAL LANDSCAPE
-   
-   What legal issues are in play?
-   - Types of claims
-   - Legal tests that will apply
-   - Burdens of proof
-   - Remedies sought
-   - Governing law
+## 8. LISMORE'S ALLEGATIONS
+What specific wrongdoing does Lismore allege?
+- Allegation description
+- Which obligation allegedly breached
+- Evidence cited (if any)
 
-10. THE CORE TENSIONS
-    
-    What are the fundamental disagreements?
-    - Knowledge vs. ignorance (who knew what when?)
-    - Interpretation disputes
-    - Causation disputes
-    - Valuation disputes
-    - Conduct disputes
-</analysis_framework>
+## 9. PH'S DEFENCES
+How does PH respond?
+- Defence type (denial, justification, legal defence)
+- PH's argument
+- Strength (strong/moderate/weak based on pleadings)
 
-<critical_instructions>
-- Use Extended Thinking extensively - take time to truly understand
-- Think like a barrister getting briefed on a new case
-- Focus on UNDERSTANDING not ADVOCATING (yet)
-- Be precise about what is alleged vs. what is proven
-- Note ambiguities and gaps in pleadings
-- Build a mental model of how this case works
-- Think: "If I had to explain this case to a colleague in 10 minutes, what would I say?"
-</critical_instructions>
+## 10. TIMELINE
+Key events in chronological order (ONLY events mentioned):
+- Date (YYYY-MM-DD or "Month YYYY")
+- Event description
+- Significance
 
-<output_format>
-**Output valid JSON with this structure:**
+## 11. FINANCIAL CLAIMS
+- What amounts are claimed?
+- How are they calculated?
+- What does PH say about quantum?
 
-{{
-  "case_summary": "2-3 paragraph executive summary of what this case is fundamentally about",
-  
-  "lismore_narrative": {{
-    "story": "Lismore's version of what happened (500 words)",
-    "key_contentions": ["contention 1", "contention 2"],
-    "desired_outcome": "What Lismore wants"
-  }},
-  
-  "ph_narrative": {{
-    "story": "PH's version of what happened (500 words)",
-    "key_contentions": ["contention 1", "contention 2"],
-    "desired_outcome": "What PH wants"
-  }},
-  
-  "factual_disputes": [
-    {{
-      "dispute": "What is disputed",
-      "lismore_position": "What Lismore says",
-      "ph_position": "What PH says",
-      "importance": 8
-    }}
-  ],
-  
-  "agreed_facts": ["fact 1", "fact 2"],
-  
-  "transaction_context": {{
-    "type": "Type of transaction",
-    "purpose": "Commercial purpose",
-    "value": "Financial value",
-    "timeline": "When this occurred"
-  }},
-  
-  "key_parties": [
-    {{
-      "name": "Entity/person name",
-      "role": "Their role",
-      "significance": "Why they matter",
-      "importance": 9
-    }}
-  ],
-  
-  "obligations": [
-    {{
-      "obligation": "Description",
-      "source": "Contract clause or legal duty",
-      "owed_by": "Who owed this",
-      "owed_to": "Who it was owed to",
-      "importance": 8
-    }}
-  ],
-  
-  "lismore_allegations": [
-    {{
-      "allegation": "What Lismore alleges",
-      "obligation_breached": "What obligation was breached",
-      "facts_alleged": "Key facts supporting this",
-      "harm_claimed": "Damage that resulted",
-      "centrality": 9
-    }}
-  ],
-  
-  "ph_defences": [
-    {{
-      "defence": "PH's defence",
-      "legal_basis": "Legal principle",
-      "factual_basis": "Facts PH relies on",
-      "strength_assessment": 7
-    }}
-  ],
-  
-  "timeline": [
-    {{
-      "date": "YYYY-MM-DD",
-      "event": "What happened",
-      "significance": "Why this matters"
-    }}
-  ],
-  
-  "financial_picture": {{
-    "transaction_value": "Amount",
-    "amounts_in_dispute": ["amount 1", "amount 2"],
-    "damage_categories": ["category 1", "category 2"]
-  }},
-  
-  "legal_framework": {{
-    "claim_types": ["breach of contract", "misrepresentation"],
-    "legal_tests": ["test 1", "test 2"],
-    "remedies_sought": ["remedy 1", "remedy 2"],
-    "governing_law": "Jurisdiction"
-  }},
-  
-  "core_tensions": [
-    {{
-      "tension": "Description of fundamental disagreement",
-      "why_it_matters": "Why this is central"
-    }}
-  ]
-}}
+---
 
-**Output ONLY valid JSON. Do not include any text before or after the JSON object.**
-</output_format>
+**OUTPUT FORMAT:**
 
-Begin your deep analysis now. Use Extended Thinking extensively.
-Take your time to truly understand this case before analysing it.
-"""
+Provide your analysis in this EXACT structure for reliable parsing:
+
+```
+CASE_SUMMARY_START
+[Your 2-3 paragraph executive summary]
+CASE_SUMMARY_END
+
+LISMORE_NARRATIVE_START
+[Lismore's story - 3-5 paragraphs]
+LISMORE_NARRATIVE_END
+
+PH_NARRATIVE_START
+[PH's story - 3-5 paragraphs]
+PH_NARRATIVE_END
+
+KEY_PARTIES_START
+- Entity: [Name] | Role: [Role] | Significance: [Why they matter]
+- Entity: [Name] | Role: [Role] | Significance: [Why they matter]
+[Continue for all parties ACTUALLY mentioned]
+KEY_PARTIES_END
+
+FACTUAL_DISPUTES_START
+- Dispute: [Description] | Lismore says: [Position] | PH says: [Position] | Significance: [Why it matters]
+[Continue for all disputes identified]
+FACTUAL_DISPUTES_END
+
+AGREED_FACTS_START
+- [Undisputed fact 1]
+- [Undisputed fact 2]
+[Continue]
+AGREED_FACTS_END
+
+OBLIGATIONS_START
+- Obligation: [Description] | Source: [Contract clause/statute] | Status: [Disputed/Accepted]
+[Continue for obligations ACTUALLY mentioned]
+OBLIGATIONS_END
+
+ALLEGATIONS_START
+- Allegation: [What PH allegedly did wrong] | Obligation breached: [Which duty] | Evidence: [Documents cited if any]
+[Continue for allegations identified]
+ALLEGATIONS_END
+
+DEFENCES_START
+- Defence: [PH's response] | Type: [Denial/Justification/Legal] | Strength: [Strong/Moderate/Weak]
+[Continue for defences identified]
+DEFENCES_END
+
+TIMELINE_START
+- Date: [YYYY-MM-DD] | Event: [What happened] | Significance: [Why it matters]
+[Continue chronologically]
+TIMELINE_END
+
+FINANCIAL_CLAIMS_START
+- Claim: [Description] | Amount: [£X] | Calculation: [How derived] | PH response: [PH's position]
+[Continue for all financial claims]
+FINANCIAL_CLAIMS_END
+```
+
+**CRITICAL:** Use the exact delimiters (CASE_SUMMARY_START, etc.) for reliable parsing.
+
+Begin your analysis now."""
 
     def build_stage_2_prompt(self, stage_1_summary: Dict, tribunal_text: str) -> str:
         """
-        Stage 2: LEGAL FRAMEWORK & PROOF REQUIREMENTS
-        Goal: Understand what must be proven and what legal tests apply
+        Stage 2: Legal framework and proof requirements
+        Returns: Legal tests, proof elements, tribunal priorities, case strengths/weaknesses
+        
+        Args:
+            stage_1_summary: Parsed results from Stage 1 analysis
+            tribunal_text: Combined text from tribunal rulings
+            
+        Returns:
+            Formatted prompt string for Stage 2 analysis
         """
         
-        # Extract context safely
-        case_summary = stage_1_summary.get('case_summary', 'Unknown')[:400]
-        claim_types = stage_1_summary.get('legal_framework', {}).get('claim_types', [])
+        # Extract key context from Stage 1
+        case_summary = stage_1_summary.get('case_summary', 'Unknown case')[:500]
+        allegations = stage_1_summary.get('allegations', [])
+        allegation_summary = f"Lismore alleges {len(allegations)} breaches" if allegations else "Allegations unclear"
         
-        return f"""<stage_2_mission>
-STAGE 2: LEGAL FRAMEWORK & PROOF REQUIREMENTS
+        return f"""You are strategic litigation counsel for Lismore in LCIA arbitration against Process Holdings.
 
-You now understand the case narrative (Stage 1). Now understand the legal framework.
+**YOUR MISSION: Analyse the legal framework and proof requirements**
 
-Your task: Analyse what must be PROVEN to succeed, and what the tribunal cares about.
+You now understand the case narrative (Stage 1). Now determine:
+- What legal tests apply?
+- What must Lismore PROVE to succeed?
+- What does the tribunal prioritise?
+- Where is the case strong/weak?
 
-This is about understanding:
-- What legal elements must Lismore establish?
-- What burden of proof applies?
-- What defences are available to PH?
-- What does the tribunal prioritise based on their rulings?
-</stage_2_mission>
+---
 
-<case_foundation>
-CASE SUMMARY:
+**STAGE 1 CONTEXT:**
+
 {case_summary}
 
-CLAIM TYPES:
-{json.dumps(claim_types, indent=2)}
-</case_foundation>
+Summary: {allegation_summary}
 
-<tribunal_rulings>
+---
+
+**TRIBUNAL RULINGS:**
+
 {tribunal_text}
-</tribunal_rulings>
 
-<analysis_framework>
-Build understanding of the legal framework:
+---
 
-1. LEGAL TESTS & ELEMENTS
-   
-   For each type of claim Lismore brings:
-   
-   A. What are the ELEMENTS that must be proven?
-      (e.g., for breach of contract: contract exists, obligation defined, breach occurred, causation, damages)
-   
-   B. What is the BURDEN OF PROOF?
-      (balance of probabilities, clear evidence, etc.)
-   
-   C. What EVIDENCE would typically establish each element?
-      (not specific documents yet - categories of evidence)
-   
-   D. Where is Lismore's case STRONGEST?
-      (which elements are easy to prove?)
-   
-   E. Where is Lismore's case WEAKEST?
-      (which elements might be challenged?)
+**ANALYSE ACROSS THESE DIMENSIONS:**
 
-2. PH'S DEFENCES - LEGAL ANALYSIS
-   
-   For each defence PH raises:
-   
-   A. What must PH prove to succeed with this defence?
-   B. What is the legal test for this defence?
-   C. What would defeat this defence?
-   D. How strong is this defence legally? (1-10)
+## 1. CLAIM TYPES & LEGAL TESTS
+For EACH type of claim Lismore brings (e.g. breach of contract, misrepresentation, breach of warranty):
 
-3. TRIBUNAL PRIORITIES (from rulings)
-   
-   Read the tribunal's rulings strategically:
-   
-   A. WHAT ISSUES did the tribunal emphasise?
-   - What did they spend time analysing?
-   - What did they gloss over?
-   - What concerns did they express?
-   
-   B. EVIDENTIARY STANDARDS
-   - What materiality thresholds did they articulate?
-   - What types of evidence did they find persuasive?
-   - What did they order produced vs. refuse?
-   
-   C. PROCEDURAL SIGNALS
-   - Did they favour one party's applications?
-   - Did they express scepticism about anyone's position?
-   - Did they impose costs or conditions?
-   
-   D. WHAT THIS TELLS US
-   - What does the tribunal seem to care about?
-   - Are there signs of which way they're leaning?
-   - What priorities should this create for us?
+- Claim type
+- Elements required to prove this claim
+- Burden of proof
+- Evidence categories typically needed for each element
 
-4. PROOF REQUIREMENTS ANALYSIS
-   
-   Create a "proof map" for Lismore's case:
-   
-   For each major allegation:
-   - Element 1: [What must be proven] → [Strength: X/10] → [Evidence category needed]
-   - Element 2: [What must be proven] → [Strength: X/10] → [Evidence category needed]
-   - Element 3: [What must be proven] → [Strength: X/10] → [Evidence category needed]
-   
-   Identify:
-   - "Slam dunk" elements (easy to prove)
-   - "Battle ground" elements (contested but provable)
-   - "Vulnerable" elements (hard to prove)
+## 2. PROOF MAP
+For Lismore's key allegations, map what must be proven:
 
-5. GAPS & WEAKNESSES
-   
-   Based on legal framework:
-   - Where are gaps in Lismore's pleaded case?
-   - Where might PH successfully defend?
-   - What facts would Lismore struggle to prove?
-   - What alternative legal characterisations exist?
+- Allegation
+- Legal element it relates to
+- What evidence would establish this
+- Current strength (based on pleadings: Strong/Moderate/Weak/Uncertain)
 
-6. STRATEGIC LEGAL INSIGHTS
-   
-   High-level strategic observations:
-   - What is the strongest legal theory for Lismore?
-   - What is the weakest part of Lismore's case legally?
-   - Where is PH most vulnerable legally?
-   - What legal pivots or alternative arguments exist?
-</analysis_framework>
+## 3. PH'S DEFENCES - LEGAL ANALYSIS
+For each defence PH raises:
 
-<critical_instructions>
-- Think like a legal analyst, not an advocate
-- Be honest about Lismore's weaknesses
-- Understand the legal tests precisely
-- Consider what tribunal's rulings reveal
-- Think about proof and evidence in CATEGORIES not specific documents
-- Use Extended Thinking to reason through legal requirements
-</critical_instructions>
+- Defence type
+- What PH must prove
+- What would defeat this defence
+- Strength assessment
 
-<output_format>
-**Output valid JSON:**
+## 4. TRIBUNAL PRIORITIES (from rulings)
+What does the tribunal care about based on their orders?
 
-{{
-  "legal_tests": [
-    {{
-      "claim_type": "Breach of contract",
-      "elements_required": [
-        {{
-          "element": "Contract exists",
-          "proof_required": "What must be shown",
-          "strength": 10,
-          "evidence_category": "Type of evidence needed"
-        }}
-      ],
-      "burden_of_proof": "Standard that applies",
-      "overall_strength": 8
-    }}
-  ],
-  
-  "ph_defences_analysis": [
-    {{
-      "defence": "Defence name",
-      "legal_test": "What PH must prove",
-      "how_to_defeat": "What would defeat this",
-      "strength": 6
-    }}
-  ],
-  
-  "tribunal_priorities": {{
-    "key_concerns": ["concern 1", "concern 2"],
-    "evidentiary_preferences": ["preference 1", "preference 2"],
-    "procedural_signals": ["signal 1", "signal 2"],
-    "apparent_lean": "Neutral/Towards Lismore/Towards PH"
-  }},
-  
-  "proof_map": [
-    {{
-      "allegation": "Allegation description",
-      "elements": [
-        {{
-          "element": "What must be proven",
-          "current_strength": 8,
-          "evidence_category": "Type of evidence needed",
-          "difficulty": "Easy/Moderate/Hard"
-        }}
-      ]
-    }}
-  ],
-  
-  "case_strengths": [
-    {{
-      "strength": "Description",
-      "why": "Why this is strong"
-    }}
-  ],
-  
-  "case_weaknesses": [
-    {{
-      "weakness": "Description",
-      "why": "Why this is weak",
-      "mitigation": "How to address this"
-    }}
-  ],
-  
-  "strategic_insights": [
-    "Insight 1",
-    "Insight 2"
-  ]
-}}
+- Issues emphasised
+- Evidentiary standards mentioned
+- Procedural signals (any party favoured?)
+- Cost orders or conditions imposed
 
-**Output ONLY valid JSON.**
-</output_format>
+## 5. CASE STRENGTHS (for Lismore)
+Where is Lismore's case strongest?
 
-Begin your legal analysis now. Use Extended Thinking extensively.
-"""
+- Strong element
+- Why it's strong
+- Supporting factors
+
+## 6. CASE WEAKNESSES (for Lismore)
+Where is Lismore vulnerable?
+
+- Weak element
+- Why it's problematic
+- How to mitigate
+
+---
+
+**OUTPUT FORMAT:**
+
+Use this EXACT structure for reliable parsing:
+
+```
+LEGAL_TESTS_START
+Claim: [Type] | Elements: [Element 1, Element 2, Element 3] | Burden: [Standard] | Evidence needed: [Categories]
+[Continue for each claim type]
+LEGAL_TESTS_END
+
+PROOF_MAP_START
+Allegation: [Description] | Legal element: [Which element] | Evidence required: [What would prove this] | Current strength: [Strong/Moderate/Weak]
+[Continue for key allegations]
+PROOF_MAP_END
+
+PH_DEFENCES_LEGAL_START
+Defence: [Type] | PH must prove: [Requirements] | Defeat by: [Counter-strategy] | Strength: [Assessment]
+[Continue for each defence]
+PH_DEFENCES_LEGAL_END
+
+TRIBUNAL_PRIORITIES_START
+Priority: [Issue] | Why: [Tribunal's stated concern] | Impact: [What this means for strategy]
+[Continue for priorities identified]
+TRIBUNAL_PRIORITIES_END
+
+CASE_STRENGTHS_START
+- Strength: [Element/issue] | Why: [Explanation] | Support: [Factors]
+[Continue]
+CASE_STRENGTHS_END
+
+CASE_WEAKNESSES_START
+- Weakness: [Element/issue] | Why: [Problem] | Mitigation: [How to address]
+[Continue]
+CASE_WEAKNESSES_END
+```
+
+**CRITICAL:** Use exact delimiters for reliable parsing.
+
+Begin your legal framework analysis now."""
 
     def build_stage_3_prompt(self, stage_1_summary: Dict, stage_2_summary: Dict, admin_text: str) -> str:
         """
-        Stage 3: EVIDENCE STRATEGY & DISCOVERY PRIORITIES
-        Goal: NOW think about what evidence is needed and how to find it
+        Stage 3: Evidence strategy and document patterns
+        Returns: Key entities, critical dates, document patterns, evidence priorities
+        
+        Args:
+            stage_1_summary: Parsed results from Stage 1 analysis
+            stage_2_summary: Parsed results from Stage 2 analysis
+            admin_text: Combined text from chronology and dramatis personae
+            
+        Returns:
+            Formatted prompt string for Stage 3 analysis
         """
         
         # Extract context
-        case_summary = stage_1_summary.get('case_summary', '')[:300]
-        proof_map = stage_2_summary.get('proof_map', [])[:3]
+        case_summary = stage_1_summary.get('case_summary', 'Unknown')[:400]
+        num_allegations = len(stage_1_summary.get('allegations', []))
+        num_legal_tests = len(stage_2_summary.get('legal_tests', []))
         
-        return f"""<stage_3_mission>
-STAGE 3: EVIDENCE STRATEGY & DISCOVERY INTELLIGENCE
+        return f"""You are strategic litigation counsel for Lismore in LCIA arbitration against Process Holdings.
+
+**YOUR MISSION: Build evidence strategy and document discovery intelligence**
 
 You now have:
-✓ Stage 1: Deep case understanding (narratives, parties, timeline)
-✓ Stage 2: Legal framework (what must be proven, tribunal priorities)
+✓ Stage 1: Case understanding (narrative, parties, disputes)
+✓ Stage 2: Legal framework ({num_legal_tests} legal tests, proof requirements)
 
-Now build the EVIDENCE STRATEGY:
-- What categories of evidence are needed?
-- What discovery priorities should guide Pass 1-4?
-- What patterns should we look for in documents?
+Now create the EVIDENCE STRATEGY to guide document analysis in Passes 1-4.
 
-This creates the "search intelligence" for subsequent analysis passes.
-</stage_3_mission>
+---
 
-<case_foundation>
-CASE SUMMARY:
+**CASE FOUNDATION:**
+
 {case_summary}
 
-PROOF MAP (Sample):
-{json.dumps(proof_map, indent=2)[:800]}
-</case_foundation>
+Lismore alleges: {num_allegations} breaches
+Legal tests to satisfy: {num_legal_tests}
 
-<case_administration>
+---
+
+**CASE ADMINISTRATION (Chronology/Dramatis Personae):**
+
 {admin_text}
-</case_administration>
 
-<analysis_framework>
-Build comprehensive evidence strategy:
+---
 
-1. KEY ENTITIES & ACTORS (Refined with Chronology/Dramatis)
-   
-   From chronology + dramatis personae:
-   - Who are the 15-20 most critical people?
-   - What companies/entities are involved?
-   - What are their relationships?
-   - Why does each entity matter?
-   - What documents would they appear in?
+**BUILD EVIDENCE STRATEGY:**
 
-2. CRITICAL TIMELINE (Refined)
-   
-   Build definitive timeline with chronology:
-   - Key dates in YYYY-MM-DD format
-   - What happened on each date
-   - Why this date matters
-   - What evidence relates to this date
-   
-   Identify gaps: dates where evidence might be missing but needed
+## 1. KEY ENTITIES & PEOPLE
+From chronology/dramatis, who are the MOST IMPORTANT entities?
 
-3. EVIDENCE CATEGORIES NEEDED
-   
-   For each major issue in the case:
-   
-   A. What TYPES of evidence would address this?
-   B. What TIME PERIOD is relevant?
-   C. Who would have CREATED/RECEIVED these documents?
-   D. What TOPICS/KEYWORDS would these documents discuss?
-   E. How CRITICAL is this category? (1-10)
+For each key entity:
+- Name
+- Role in the case
+- Why they matter (what would their documents show?)
+- Priority for document search (1-10)
 
-4. DOCUMENT PATTERNS TO LOOK FOR
-   
-   Based on case understanding + legal requirements:
-   
-   Create 20-30 "document patterns" that describe categories of useful evidence.
-   
-   Each pattern should specify:
-   - Pattern name (memorable)
-   - What this pattern covers
-   - Why this category matters (links to allegations/defences/elements)
-   - Document characteristics:
-     * Likely time period
-     * Likely authors/recipients
-     * Likely keywords/topics
-     * Likely document types
-     * Likely file locations
-   - What this would prove/disprove
-   - Priority (1-10)
+## 2. CRITICAL TIMELINE
+Key dates that evidence should cluster around:
 
-5. EVIDENCE GAPS & UNKNOWNS
-   
-   What evidence might be missing or hard to get?
-   - What documents might not exist?
-   - What might have been verbal?
-   - What might PH withhold?
-   - What alternative evidence could fill gaps?
+- Date (YYYY-MM-DD)
+- Event
+- Why documents from this period matter
+- Priority (1-10)
 
-6. DISCOVERY PRIORITIES
-   
-   Strategic guidance for Passes 1-4:
-   
-   A. TIER 1 PRIORITIES (Must find)
-   B. TIER 2 PRIORITIES (Very important)
-   C. TIER 3 PRIORITIES (Nice to have)
+## 3. EVIDENCE CATEGORIES NEEDED
+For major issues, what categories of evidence are required?
 
-7. PATTERN MATCHING GUIDANCE
-   
-   How should Pass 1 (triage) score documents?
-   - What combinations indicate high relevance?
-   - What red flags indicate critical documents?
-   - What should be prioritised vs. deprioritised?
-</analysis_framework>
+- Issue/allegation
+- Evidence category needed (e.g. "board minutes", "financial statements", "correspondence with advisers")
+- Time period relevant
+- Likely creators/recipients
+- What this would prove
+- Priority (1-10)
 
-<critical_instructions>
-- Now you can think tactically about evidence
-- Keep it at the PATTERN level, not specific documents
-- Think: "What TYPES of documents would matter?"
-- Create intelligence that Pass 1-4 can use for smart triage
-- Be specific about characteristics but broad about categories
-- Use chronology/dramatis to identify actual names and dates
-- Priority reflects: relevance + likely to exist + likely to help Lismore
-</critical_instructions>
+## 4. DOCUMENT PATTERNS (for Pass 1 scoring)
+Create document patterns that describe high-value evidence categories.
 
-<output_format>
-**Output valid JSON:**
+Each pattern should specify:
+- Pattern name (memorable, e.g. "Grace Taiga corruption concerns")
+- Why this matters (links to which allegation/defence/element)
+- Document characteristics:
+  * Likely keywords/topics
+  * Likely authors/recipients
+  * Likely time period
+  * Likely document types
+- What this would prove/disprove
+- Priority score (1-10)
 
-{{
-  "key_entities": [
-    {{
-      "name": "Entity name",
-      "role": "Their role",
-      "importance": 9,
-      "why_matters": "Why critical",
-      "document_types": ["email", "board_minutes"]
-    }}
-  ],
-  
-  "critical_timeline": [
-    {{
-      "date": "YYYY-MM-DD",
-      "event": "What happened",
-      "significance": "Why matters",
-      "evidence_types": ["Type 1", "Type 2"]
-    }}
-  ],
-  
-  "evidence_categories": [
-    {{
-      "category": "Category name",
-      "description": "What this covers",
-      "relevance": "What issue this addresses",
-      "time_period": "When created",
-      "key_people": ["Person 1", "Person 2"],
-      "priority": 9
-    }}
-  ],
-  
-  "document_patterns": [
-    {{
-      "pattern_name": "Memorable name",
-      "description": "What we're looking for",
-      "why_matters": "Link to case issues",
-      "characteristics": {{
-        "date_range": "Time period",
-        "authors_recipients": ["Role 1", "Person 1"],
-        "keywords": ["keyword 1", "keyword 2"],
-        "document_types": ["email", "board_minutes"],
-        "file_types": [".msg", ".pdf"],
-        "likely_folders": ["Folder 1", "Folder 2"]
-      }},
-      "proves_disproves": "What this establishes",
-      "priority": 8
-    }}
-  ],
-  
-  "evidence_gaps": [
-    {{
-      "gap": "What might be missing",
-      "why_problematic": "Why this matters",
-      "alternative_evidence": "What could fill the gap"
-    }}
-  ],
-  
-  "discovery_priorities": {{
-    "tier_1": ["Critical pattern 1", "Critical pattern 2"],
-    "tier_2": ["Important pattern 1", "Important pattern 2"],
-    "tier_3": ["Useful pattern 1", "Useful pattern 2"]
-  }},
-  
-  "scoring_guidance": {{
-    "high_priority_indicators": ["indicator 1", "indicator 2"],
-    "red_flags": ["red flag 1", "red flag 2"],
-    "prioritise": ["factor 1", "factor 2"],
-    "deprioritise": ["factor 1", "factor 2"]
-  }}
-}}
+**GUIDANCE:** Create patterns that are:
+- Specific enough to identify relevant documents
+- Broad enough to catch variants
+- Tied to specific legal elements or allegations
+- Based on ACTUAL case issues (not generic)
 
-**Output ONLY valid JSON.**
-</output_format>
+## 5. EVIDENCE GAPS & RISKS
+What evidence might be missing or problematic?
 
-Begin your evidence strategy analysis now. Use Extended Thinking extensively.
-"""
+- Gap description
+- Why this is problematic
+- Alternative evidence that could fill this gap
+- Risk level (High/Medium/Low)
+
+---
+
+**OUTPUT FORMAT:**
+
+Use this EXACT structure:
+
+```
+KEY_ENTITIES_START
+- Name: [Entity name] | Role: [Their role] | Significance: [Why their documents matter] | Priority: [1-10]
+[Continue for all key entities identified]
+KEY_ENTITIES_END
+
+CRITICAL_TIMELINE_START
+- Date: [YYYY-MM-DD] | Event: [What happened] | Why: [Why documents matter here] | Priority: [1-10]
+[Continue chronologically]
+CRITICAL_TIMELINE_END
+
+EVIDENCE_CATEGORIES_START
+- Issue: [Allegation/element] | Category: [Type of evidence] | Period: [Timeframe] | Creators: [Who made these] | Proves: [What it establishes] | Priority: [1-10]
+[Continue]
+EVIDENCE_CATEGORIES_END
+
+DOCUMENT_PATTERNS_START
+- Pattern: [Name] | Matters because: [Links to case element] | Keywords: [Topic words] | Likely authors: [People] | Time period: [Dates] | Doc types: [Types] | Would prove: [What] | Priority: [1-10]
+[Continue for all patterns - create as many as are ACTUALLY relevant based on case issues]
+DOCUMENT_PATTERNS_END
+
+EVIDENCE_GAPS_START
+- Gap: [Missing evidence] | Problematic because: [Why] | Alternatives: [Other evidence] | Risk: [High/Medium/Low]
+[Continue]
+EVIDENCE_GAPS_END
+```
+
+**CRITICAL:** Use exact delimiters. Create patterns based on ACTUAL case issues, not generic categories.
+
+**NO HALLUCINATION:** If chronology is sparse, that's fine - extract what's there. Don't invent dates/events.
+
+Begin your evidence strategy analysis now."""
