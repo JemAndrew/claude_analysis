@@ -146,6 +146,20 @@ class DocumentLoader:
                 }
             }
         
+        # Skip MSG files (individual emails - handle in Phase 5)
+        if file_path.suffix.lower() == '.msg':
+            return {
+                'filename': file_path.name,
+                'doc_id': self._generate_doc_id(file_path),
+                'content': f'[EMAIL MESSAGE: {file_size_mb:.1f} MB - Process in Phase 5]',
+                'preview': f'Outlook email message ({file_size_mb:.1f} MB)',
+                'metadata': {
+                    'file_type': 'msg',
+                    'size_mb': file_size_mb,
+                    'skip_reason': 'Email message - process in Phase 5 email analysis'
+                }
+            }
+        
         # Skip extremely large files
         if file_size_mb > self.MAX_FILE_SIZE_MB:
             print(f"   ⚠️  SKIPPING: {file_path.name} ({file_size_mb:.1f} MB)")
