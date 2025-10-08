@@ -537,58 +537,116 @@ class PassExecutor:
             desc="🔍 Pass 1 Triage",
             unit=" batch") as pbar:
             
-            for batch_idx, batch in enumerate(batches):
-                # Generate prompt WITH Phase 0 smoking guns
-                prompt = self.autonomous_prompts.triage_prompt(
-                    documents=batch,
-                    batch_num=batch_idx, 
-                    phase_0_foundation=phase_0_foundation  # ← PHASE 0 INTEGRATION
+           for batch_idx, batch in enumerate(batches):
+    
+            lite_batch = []
+            for idx, doc in enumerate(batch):
+                # Extract ONLY what's needed, with hard limits
+                filename = str(doc.get('filename', 'Unknown'))[:80]  # Max 80 chars
+                folder = str(doc.get('folder_name', 'Unknown'))[:60]  # Max 60 chars
+                file_type = str(doc.get('file_type', 'unknown'))[:20]  # Max 20 chars
+                
+                # Get preview - try multiple fields, limit to 180 chars
+                preview_raw = (
+                    doc.get('preview', '') or 
+                    doc.get('text', '')[:180] or 
+                    doc.get('content', '')[:180] or 
+                    'No preview available'
+                )
+                preview = str(preview_raw)[:180]  # HARD LIMIT: 180 chars
+                
+                lite_doc = {
+                    'filename': filename,
+                    'folder_name': folder,
+                    'file_type': file_type,
+                    'preview': preview,
+                    # Keep index for merging scores back
+                    '_batch_index': idx
+                }
+                lite_batch.append(lite_doc)
+            
+            prompt = self.autonomous_prompts.triage_prompt(
+                documents=lite_batch,  # ← Use lite_batch instead of batch!
+                batch_num=batch_idx, 
+                phase_0_foundation=phase_0_foundation
+            )
+            
+            # SAFETY CHECK: Estimate token count
+           
+            estimated_tokens = len(prompt) / 4
+            if estimated_tokens > 150000:
+                print(f"\n  ⚠️  WARNING: Prompt very large ({estimated_tokens:.0f} tokens)")
+                print(f"      Haiku limit: 200,000 tokens")
+            
+            # ===== DEBUG PRINTS =====
+            print(f"\n  🐛 DEBUG Batch {batch_idx + 1}:")
+            print(f"     Original batch size: {len(batch)}")
+            print(f"     Lite batch size: {len(lite_batch)}")
+            print(f"     Prompt length: {len(prompt):,} chars")
+            print(f"     Estimated tokens: {estimated_tokens:.0f}")
+            if lite_batch:
+                print(f"     First doc: {lite_batch[0]['filename'][:40]}")
+            print(f"     About to call API...")
+            # ===== END DEBUG =====
+            
+            try:
+                response, metadata = self.api_client.call_claude(
+                    prompt=prompt,
+                    task_type='document_triage',
+                    phase='pass_1',
+                    temperature=0.0
                 )
                 
-                try:
-                    response, metadata = self.api_client.call_claude(
-                        prompt=prompt,
-                        task_type='document_triage',
-                        phase='pass_1',
-                        temperature=0.0
-                    )
+                print(f"     ✅ API returned! Response: {len(response):,} chars")
+                print(f"     Cost: £{metadata.get('cost_gbp', 0):.4f}")
                     
-                    total_cost += metadata.get('cost_gbp', 0)
+                    # ===== DEBUG: Show Claude's response =====
+                print(f"\n     📄 CLAUDE'S RESPONSE:")
+                print("     " + "="*60)
+                print(response[:1000])  # First 1000 chars
+                print("     " + "="*60)
+                # ===== END DEBUG =====
+                
+                total_cost += metadata.get('cost_gbp', 0)
+                
+                total_cost += metadata.get('cost_gbp', 0)
+                
+                batch_scores = self._parse_triage_response(response, batch)
+                scored_documents.extend(batch_scores)
+                
+                print(f"     📊 Parsed {len(batch_scores)} scores")
+                
+                pbar.update(1)
+                
+                if len(batches) <= 5:
+                    print(f"  💰 Batch {batch_idx + 1}/{len(batches)} complete - Cost so far: £{total_cost:.2f}")
+                
+                if (batch_idx + 1) % 10 == 0:
+                    self._save_mini_checkpoint('pass_1', {
+                        'scored_documents': scored_documents,
+                        'batch_progress': batch_idx + 1,
+                        'total_batches': len(batches),
+                        'cost_so_far': total_cost
+                    })
                     
-                    batch_scores = self._parse_triage_response(response, batch)
-                    scored_documents.extend(batch_scores)
+                    elapsed = (datetime.now() - start_time).total_seconds()
+                    rate = (batch_idx + 1) / elapsed if elapsed > 0 else 0
+                    eta_seconds = (len(batches) - (batch_idx + 1)) / rate if rate > 0 else 0
+                    eta_hours = eta_seconds / 3600
                     
-                    # Update progress bar - REMOVED set_postfix
-                    pbar.update(1)
-                    
-                    # Show cost after each batch for small tests
-                    if len(batches) <= 5:
-                        print(f"  💰 Batch {batch_idx + 1}/{len(batches)} complete - Cost so far: £{total_cost:.2f}")
-                    
-                    # Save progress every 10 batches with detailed stats
-                    if (batch_idx + 1) % 10 == 0:
-                        self._save_mini_checkpoint('pass_1', {
-                            'scored_documents': scored_documents,
-                            'batch_progress': batch_idx + 1,
-                            'total_batches': len(batches),
-                            'cost_so_far': total_cost
-                        })
-                        
-                        # Calculate and display detailed progress
-                        elapsed = (datetime.now() - start_time).total_seconds()
-                        rate = (batch_idx + 1) / elapsed if elapsed > 0 else 0
-                        eta_seconds = (len(batches) - (batch_idx + 1)) / rate if rate > 0 else 0
-                        eta_hours = eta_seconds / 3600
-                        
-                        print(f"\n  ✓ Checkpoint {batch_idx + 1}/{len(batches)}")
-                        print(f"    Documents scored: {len(scored_documents):,}")
-                        print(f"    Cost so far: £{total_cost:.2f}")
-                        print(f"    ETA: {eta_hours:.1f} hours\n")
-                    
-                except Exception as e:
-                    print(f"\n  ⚠️  Error in batch {batch_idx + 1}: {str(e)[:100]}")
-                    pbar.update(1)
-                    continue
+                    print(f"\n  ✓ Checkpoint {batch_idx + 1}/{len(batches)}")
+                    print(f"    Documents scored: {len(scored_documents):,}")
+                    print(f"    Cost so far: £{total_cost:.2f}")
+                    print(f"    ETA: {eta_hours:.1f} hours\n")
+                
+            except Exception as e:
+                print(f"\n  ❌ EXCEPTION in batch {batch_idx + 1}:")
+                print(f"     Error: {str(e)}")
+                print(f"     Type: {type(e).__name__}")
+                import traceback
+                traceback.print_exc()
+                pbar.update(1)
+                continue
 
         # Sort and take top 800 (FIXED!)
         scored_documents.sort(key=lambda x: x.get('priority_score', 0), reverse=True)
@@ -969,7 +1027,7 @@ class PassExecutor:
         VALID_CATEGORIES = {'contract', 'financial', 'correspondence', 'witness', 'expert', 'other'}
         
         scored_docs = []
-        pattern = r'\[DOC_(\d+)\]\s*Priority Score:\s*(\d+)\s*Reason:\s*(.+?)\s*Category:\s*(\w+)'
+        pattern = r'\[DOC_(\d+)\][^\n]*\n\s*Priority Score:\s*(\d+)\s*Reason:\s*(.+?)\s*Category:\s*(\w+)'
         
         matches = re.finditer(pattern, response, re.DOTALL)
         

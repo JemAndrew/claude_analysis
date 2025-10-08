@@ -331,6 +331,11 @@ class ClaudeClient:
         
         if max_tokens is None:
             max_tokens = self.config.token_config['max_output_tokens']
+            
+            # CRITICAL: Haiku has lower output limit
+            if 'haiku' in model.lower():
+                max_tokens = min(max_tokens, 8192)  # Haiku max is 8192
+                print(f"  🔧 Adjusted max_tokens to {max_tokens} for Haiku")
         
         self._apply_rate_limit()
         

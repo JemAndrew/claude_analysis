@@ -546,17 +546,46 @@ class LitigationOrchestrator:
     # ========================================================================
     
     def _load_state(self):
-        """Load orchestrator state"""
-        state_file = self.config.output_dir / "orchestrator_state.json"
-        if state_file.exists():
-            with open(state_file, 'r') as f:
-                self.state = json.load(f)
-    
+            """Load orchestrator state with safe defaults"""
+            state_file = self.config.output_dir / "orchestrator_state.json"
+            
+            # Define default state structure
+            default_state = {
+                'passes_completed': [],
+                'current_pass': None,
+                'total_cost_gbp': 0.0,
+                'total_findings': 0,
+                'memory_efficiency': 0.0
+            }
+            
+            if state_file.exists():
+                try:
+                    with open(state_file, 'r') as f:
+                        loaded_state = json.load(f)
+                    
+                    # Merge loaded state with defaults (preserves missing keys)
+                    for key, default_value in default_state.items():
+                        if key not in loaded_state:
+                            loaded_state[key] = default_value
+                    
+                    self.state = loaded_state
+                    print(f"📂 Loaded state: {len(self.state.get('passes_completed', []))} passes completed")
+                    
+                except Exception as e:
+                    print(f"⚠️  Error loading state: {e}")
+                    print(f"   Using default state")
+                    self.state = default_state
+            else:
+                # No state file exists - use defaults
+                self.state = default_state
+        
     def _save_state(self):
-        """Save orchestrator state"""
-        state_file = self.config.output_dir / "orchestrator_state.json"
-        with open(state_file, 'w') as f:
-            json.dump(self.state, f, indent=2)
+                """Save orchestrator state"""
+                state_file = self.config.output_dir / "orchestrator_state.json"
+                state_file.parent.mkdir(parents=True, exist_ok=True)
+                
+                with open(state_file, 'w') as f:
+                    json.dump(self.state, f, indent=2)
     
     def _load_pass_results(self, pass_num: str) -> Dict:
         """Load results from a specific pass"""
