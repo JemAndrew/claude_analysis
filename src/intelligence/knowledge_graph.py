@@ -143,6 +143,20 @@ class KnowledgeGraph:
         cursor.execute("CREATE INDEX IF NOT EXISTS idx_discovery_importance ON discovery_log(importance)")
         
         conn.commit()
+
+        try:
+            cursor.execute("ALTER TABLE discovery_log ADD COLUMN entities TEXT")
+            cursor.execute("ALTER TABLE discovery_log ADD COLUMN dates TEXT")
+            cursor.execute("ALTER TABLE discovery_log ADD COLUMN topics TEXT")
+            cursor.execute("ALTER TABLE discovery_log ADD COLUMN summary TEXT")
+            cursor.execute("ALTER TABLE discovery_log ADD COLUMN relevance TEXT")
+            cursor.execute("ALTER TABLE discovery_log ADD COLUMN red_flags TEXT")
+            conn.commit()
+            print("✅ Enhanced metadata columns added to discovery_log")
+        except sqlite3.OperationalError:
+            # Columns already exist
+            pass
+
         conn.close()
     
     def _get_connection(self):
@@ -681,6 +695,76 @@ class KnowledgeGraph:
         hash_obj = hashlib.md5(hash_input.encode())
         return f"{prefix}_{hash_obj.hexdigest()[:8]}"
     
+    def add_document_metadata(self, doc_id: str, metadata: Dict):
+        """
+        Add enhanced document metadata to knowledge graph
+        Called by Enhanced Pass 1 triage parsing
+        
+        Stores: entities, dates, topics, summary, relevance, red_flags
+        """
+        conn = self._get_connection()
+        cursor = conn.cursor()
+        
+        try:
+            # First check if document exists in discovery_log
+            cursor.execute("SELECT doc_id FROM discovery_log WHERE doc_id = ?", (doc_id,))
+            exists = cursor.fetchone()
+            
+            if exists:
+                # Update existing document with enhanced metadata
+                cursor.execute("""
+                    UPDATE discovery_log
+                    SET triage_score = ?,
+                        category = ?,
+                        entities = ?,
+                        dates = ?,
+                        topics = ?,
+                        summary = ?,
+                        relevance = ?,
+                        red_flags = ?,
+                        indexed_date = ?
+                    WHERE doc_id = ?
+                """, (
+                    metadata.get('priority_score', 5),
+                    metadata.get('category', 'other'),
+                    json.dumps(metadata.get('entities', [])),
+                    json.dumps(metadata.get('dates', [])),
+                    json.dumps(metadata.get('topics', [])),
+                    metadata.get('summary', ''),
+                    metadata.get('relevance', ''),
+                    metadata.get('red_flags', ''),
+                    datetime.now().isoformat(),
+                    doc_id
+                ))
+            else:
+                # Insert new document with enhanced metadata
+                cursor.execute("""
+                    INSERT INTO discovery_log
+                    (doc_id, filename, triage_score, category, entities, dates, 
+                     topics, summary, relevance, red_flags, indexed_date)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """, (
+                    doc_id,
+                    metadata.get('filename', 'Unknown'),
+                    metadata.get('priority_score', 5),
+                    metadata.get('category', 'other'),
+                    json.dumps(metadata.get('entities', [])),
+                    json.dumps(metadata.get('dates', [])),
+                    json.dumps(metadata.get('topics', [])),
+                    metadata.get('summary', ''),
+                    metadata.get('relevance', ''),
+                    metadata.get('red_flags', ''),
+                    datetime.now().isoformat()
+                ))
+            
+            conn.commit()
+            
+        except sqlite3.Error as e:
+            print(f"   ⚠️  Error storing metadata for {doc_id}: {e}")
+        finally:
+            conn.close()
+
+
     def _get_context_from_memory(self, query: str, max_tokens: int = 50000) -> Dict:
         """
         Get context from HierarchicalMemory system

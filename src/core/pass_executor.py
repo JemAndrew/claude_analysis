@@ -451,6 +451,15 @@ class PassExecutor:
                     break
                 else:
                     all_documents.extend(docs)
+                
+                # If adding these docs would exceed limit, only add what we need
+                if limit is not None and len(all_documents) + len(docs) > limit:
+                    remaining = limit - len(all_documents)
+                    all_documents.extend(docs[:remaining])
+                    print(f"\n✋ Limit reached - loaded {len(all_documents)} documents total")
+                    break
+                else:
+                    all_documents.extend(docs)
 
         initial_doc_count = len(all_documents)
         print(f"\n📁 Loaded {initial_doc_count:,} documents")
@@ -1023,37 +1032,192 @@ class PassExecutor:
     # ========================================================================
     
     def _parse_triage_response(self, response: str, batch: List[Dict]) -> List[Dict]:
-        """Parse triage response with category validation"""
+        """
+        Parse ENHANCED triage response with rich metadata extraction
+        
+        Extracts:
+        - Priority Score (1-10)
+        - Category
+        - Key Entities (people, companies, locations)
+        - Key Dates
+        - Key Topics
+        - Summary (50-100 words)
+        - Relevance (to allegations/defences)
+        - Red Flags
+        - Reason
+        
+        Returns: List of documents with full metadata for search
+        """
         VALID_CATEGORIES = {'contract', 'financial', 'correspondence', 'witness', 'expert', 'other'}
         
         scored_docs = []
-        pattern = r'\[DOC_(\d+)\][^\n]*\n\s*Priority Score:\s*(\d+)\s*Reason:\s*(.+?)\s*Category:\s*(\w+)'
         
-        matches = re.finditer(pattern, response, re.DOTALL)
+        # Enhanced regex pattern to capture ALL fields
+        pattern = r'\[DOC_(\d+)\]\s*' \
+                r'Priority Score:\s*(\d+)\s*' \
+                r'Category:\s*(\w+)\s*' \
+                r'Key Entities:\s*(.+?)\s*' \
+                r'Key Dates:\s*(.+?)\s*' \
+                r'Key Topics:\s*(.+?)\s*' \
+                r'Summary:\s*(.+?)\s*' \
+                r'Relevance:\s*(.+?)\s*' \
+                r'Red Flags:\s*(.+?)\s*' \
+                r'Reason:\s*(.+?)(?=\[DOC_|\Z)'
+        
+        matches = list(re.finditer(pattern, response, re.DOTALL | re.MULTILINE))
+        
+        if not matches:
+            print(f"   ⚠️  Enhanced parsing failed - no matches found!")
+            print(f"   First 500 chars of response:\n{response[:500]}")
+            # Fallback to basic parsing
+            return self._parse_triage_response_basic(response, batch)
         
         for match in matches:
-            idx = int(match.group(1))
-            score = int(match.group(2))
-            reason = match.group(3).strip()
-            category = match.group(4).strip().lower()
+            try:
+                doc_idx = int(match.group(1))
+                score = int(match.group(2))
+                category = match.group(3).strip().lower()
+                
+                # Extract rich metadata fields
+                entities_str = match.group(4).strip()
+                dates_str = match.group(5).strip()
+                topics_str = match.group(6).strip()
+                summary = match.group(7).strip()
+                relevance = match.group(8).strip()
+                red_flags = match.group(9).strip()
+                reason = match.group(10).strip()
+                
+                # Validate category
+                if category not in VALID_CATEGORIES:
+                    print(f"   ⚠️  Invalid category '{category}' for DOC_{doc_idx}, defaulting to 'other'")
+                    category = 'other'
+                
+                # Validate score range
+                if not (1 <= score <= 10):
+                    print(f"   ⚠️  Invalid score {score} for DOC_{doc_idx}, clamping to range")
+                    score = max(1, min(10, score))
+                
+                # Parse entities (comma-separated)
+                entities = [e.strip() for e in entities_str.split(',') if e.strip()]
+                if not entities or entities == ['None']:
+                    entities = []
+                
+                # Parse dates (comma-separated)
+                dates = [d.strip() for d in dates_str.split(',') if d.strip()]
+                if not dates or dates == ['None']:
+                    dates = []
+                
+                # Parse topics (comma-separated)
+                topics = [t.strip() for t in topics_str.split(',') if t.strip()]
+                if not topics or topics == ['None']:
+                    topics = []
+                
+                # Handle "None" cases
+                if relevance.lower() == 'none':
+                    relevance = None
+                if red_flags.lower() == 'none':
+                    red_flags = None
+                
+                # Get original document
+                if doc_idx < len(batch):
+                    doc = batch[doc_idx].copy()
+                    
+                    # Add ALL extracted metadata
+                    doc['priority_score'] = score
+                    doc['category'] = category
+                    doc['key_entities'] = entities
+                    doc['key_dates'] = dates
+                    doc['key_topics'] = topics
+                    doc['summary'] = summary
+                    doc['relevance'] = relevance
+                    doc['red_flags'] = red_flags
+                    doc['triage_reason'] = reason
+                    
+                    # Add to knowledge graph for search
+                    self.knowledge_graph.add_document_metadata(
+                        doc_id=doc.get('doc_id'),
+                        metadata={
+                            'priority_score': score,
+                            'category': category,
+                            'entities': entities,
+                            'dates': dates,
+                            'topics': topics,
+                            'summary': summary,
+                            'relevance': relevance,
+                            'red_flags': red_flags,
+                            'reason': reason
+                        }
+                    )
+                    
+                    scored_docs.append(doc)
+                else:
+                    print(f"   ⚠️  DOC_{doc_idx} index out of range (batch size: {len(batch)})")
+                    
+            except Exception as e:
+                print(f"   ⚠️  Error parsing DOC_{doc_idx}: {e}")
+                continue
+        
+        print(f"   ✅ Parsed {len(scored_docs)} documents with enhanced metadata")
+        
+        # Log some stats
+        if scored_docs:
+            avg_entities = sum(len(d.get('key_entities', [])) for d in scored_docs) / len(scored_docs)
+            avg_dates = sum(len(d.get('key_dates', [])) for d in scored_docs) / len(scored_docs)
+            avg_topics = sum(len(d.get('key_topics', [])) for d in scored_docs) / len(scored_docs)
+            has_red_flags = sum(1 for d in scored_docs if d.get('red_flags'))
             
-            # Validate category
-            if category not in VALID_CATEGORIES:
-                category = 'other'
-            
-            # Clamp score
-            score = max(1, min(10, score))
-            
-            if idx < len(batch):
-                scored_docs.append({
-                    **batch[idx],
-                    'priority_score': score,
-                    'triage_reason': reason,
-                    'category': category
-                })
+            print(f"   📊 Metadata quality:")
+            print(f"      Avg entities per doc: {avg_entities:.1f}")
+            print(f"      Avg dates per doc: {avg_dates:.1f}")
+            print(f"      Avg topics per doc: {avg_topics:.1f}")
+            print(f"      Documents with red flags: {has_red_flags}")
         
         return scored_docs
     
+    def _parse_triage_response_basic(self, response: str, batch: List[Dict]) -> List[Dict]:
+        """
+        FALLBACK: Basic parsing if enhanced parsing fails
+        Falls back to old format: Score, Reason, Category only
+        """
+        VALID_CATEGORIES = {'contract', 'financial', 'correspondence', 'witness', 'expert', 'other'}
+        
+        print(f"   ⚠️  Using fallback basic parsing")
+        
+        scored_docs = []
+        pattern = r'\[DOC_(\d+)\][^\n]*\n\s*Priority Score:\s*(\d+)\s*.*?Reason:\s*(.+?)\s*Category:\s*(\w+)'
+        
+        matches = list(re.finditer(pattern, response, re.DOTALL))
+        
+        for match in matches:
+            try:
+                doc_idx = int(match.group(1))
+                score = int(match.group(2))
+                reason = match.group(3).strip()
+                category = match.group(4).strip().lower()
+                
+                if category not in VALID_CATEGORIES:
+                    category = 'other'
+                
+                if doc_idx < len(batch):
+                    doc = batch[doc_idx].copy()
+                    doc['priority_score'] = score
+                    doc['category'] = category
+                    doc['triage_reason'] = reason
+                    doc['key_entities'] = []  # Empty for basic parsing
+                    doc['key_dates'] = []
+                    doc['key_topics'] = []
+                    doc['summary'] = reason  # Use reason as summary
+                    doc['relevance'] = None
+                    doc['red_flags'] = None
+                    
+                    scored_docs.append(doc)
+                    
+            except Exception as e:
+                print(f"   ⚠️  Error in basic parsing DOC_{doc_idx}: {e}")
+                continue
+        
+        return scored_docs
+
     def _parse_deep_analysis_response(self, response: str) -> Dict:
         """Parse Pass 2 response with structured extraction + fallback"""
         result = {

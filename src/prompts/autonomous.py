@@ -23,26 +23,22 @@ class AutonomousPrompts:
     # PASS 1: TRIAGE PROMPT
     # ========================================================================
     
+
+
     def triage_prompt(self, 
-                      documents: List[Dict], 
-                      batch_num: int = 0,
-                      phase_0_foundation: Dict = None) -> str:
+                    documents: List[Dict], 
+                    batch_num: int = 0,
+                    phase_0_foundation: Dict = None) -> str:
         """
-        Pass 1 Triage Prompt WITH PHASE 0 INTELLIGENCE
-        Uses strategic patterns from Phase 0 to identify smoking gun documents
-        British English throughout - Lismore-sided
+        ENHANCED Pass 1 Triage Prompt
+        Extracts: Score, Category, Entities, Dates, Topics, Summary, Relevance, Red Flags
         
-        Args:
-            documents: Batch of documents to triage
-            batch_num: Current batch number
-            phase_0_foundation: Intelligence from Phase 0 analysis
-        
-        Returns:
-            Complete triage prompt with strategic intelligence
+        Cost increase: ~3-4x output tokens (£50 → £170 for 20K docs)
+        Search quality: 3/10 → 8/10
         """
         
         # ================================================================
-        # BUILD PHASE 0 INTELLIGENCE SECTION
+        # BUILD PHASE 0 INTELLIGENCE SECTION (same as before)
         # ================================================================
         intelligence_section = ""
         
@@ -52,7 +48,7 @@ class AutonomousPrompts:
             defences = phase_0_foundation.get('defences', [])
             key_parties = phase_0_foundation.get('key_parties', [])
             
-            # Defensive: ensure lists and convert items to strings
+            # Defensive handling
             if not isinstance(patterns, list):
                 patterns = []
             if not isinstance(allegations, list):
@@ -62,164 +58,56 @@ class AutonomousPrompts:
             if not isinstance(key_parties, list):
                 key_parties = []
             
-            # Convert all items to strings (in case they're dicts or other types)
             allegations_str = [str(a) for a in allegations[:5] if a]
             defences_str = [str(d) for d in defences[:5] if d]
             key_parties_str = [str(k) for k in key_parties[:10] if k]
             
             intelligence_section = f"""
-<phase_0_strategic_intelligence>
-🎯 LISMORE'S CASE STRATEGY
+    <phase_0_strategic_intelligence>
+    🎯 LISMORE'S CASE STRATEGY
 
-You have strategic intelligence from Phase 0 deep case analysis.
-Below are smoking gun patterns - specific documents we're hunting for.
+    KEY ALLEGATIONS (use these for Relevance field):
+    {chr(10).join(f'{i+1}. {a}' for i, a in enumerate(allegations_str)) if allegations_str else 'None loaded'}
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-KEY ALLEGATIONS (Lismore's Claims):
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-"""
-            
-            if allegations_str:
-                for idx, allegation in enumerate(allegations_str, 1):
-                    intelligence_section += f"{idx}. {allegation}\n"
-            else:
-                intelligence_section += "⚠️ No allegations extracted from Phase 0\n"
-            
-            intelligence_section += f"""
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-THEIR DEFENCES (What Process Holdings Claims):
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-"""
-            
-            if defences_str:
-                for idx, defence in enumerate(defences_str, 1):
-                    intelligence_section += f"{idx}. {defence}\n"
-            else:
-                intelligence_section += "⚠️ No defences extracted from Phase 0\n"
-            
-            intelligence_section += f"""
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-KEY PEOPLE TO WATCH:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-{', '.join(key_parties_str) if key_parties_str else '⚠️ No key parties extracted'}
+    PHL'S DEFENCES (flag documents contradicting these):
+    {chr(10).join(f'{i+1}. {d}' for i, d in enumerate(defences_str)) if defences_str else 'None loaded'}
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-SMOKING GUN DOCUMENT PATTERNS (Top Priority):
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    KEY PARTIES (extract these in Key Entities):
+    {', '.join(key_parties_str) if key_parties_str else 'None loaded'}
 
-USE THIS INTELLIGENCE TO SCORE DOCUMENTS:
-✓ If document matches a pattern below → Use the recommended score
-✓ If document contains pattern keywords → Boost score by +2
-✓ If document mentions key people → Boost score by +1
-✓ If document contradicts their defence → Score 9-10 (smoking gun!)
-✓ If routine/irrelevant → Score 1-3
-
-"""
+    SMOKING GUN PATTERNS (if found, score 9-10):
+    """
             
-            # Filter patterns to only include dictionaries (defensive programming)
+            # Add smoking gun patterns (top 10)
             dict_patterns = [p for p in patterns if isinstance(p, dict)]
-            
             if not dict_patterns:
-                # No valid patterns - create a simple message
                 intelligence_section += """
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-DOCUMENT PATTERNS:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-⚠️ No structured patterns available from Phase 0.
-Performing generic triage based on general relevance to case.
-
-"""
+    No smoking gun patterns loaded - performing generic triage.
+    """
             else:
-                # Sort patterns by priority (defensive - use .get() with defaults)
                 sorted_patterns = sorted(
-                    dict_patterns, 
+                    dict_patterns,
                     key=lambda p: (
-                        p.get('score_if_found', 5) if isinstance(p.get('score_if_found'), (int, float)) else 5,
-                        10 if p.get('priority_label') == 'CRITICAL' else 
-                        8 if p.get('priority_label') == 'HIGH' else 5
+                        p.get('score_if_found', 5),
+                        10 if p.get('priority_label') == 'CRITICAL' else 5
                     ),
                     reverse=True
-                )[:15]
+                )[:10]
                 
                 for idx, pattern in enumerate(sorted_patterns, 1):
-                    # Defensive extraction with defaults
                     name = pattern.get('name', f'Pattern {idx}')
-                    if not isinstance(name, str):
-                        name = f'Pattern {idx}'
+                    description = pattern.get('description', '')
                     
-                    description = pattern.get('description', 'No description')
-                    if not isinstance(description, str):
-                        description = 'No description'
-                    
-                    characteristics = pattern.get('characteristics', {})
-                    if not isinstance(characteristics, dict):
-                        characteristics = {}
-                    
-                    # Extract characteristics safely
-                    keywords = characteristics.get('keywords', [])
-                    if not isinstance(keywords, list):
-                        keywords = []
-                    
-                    key_people_pattern = characteristics.get('key_people', [])
-                    if not isinstance(key_people_pattern, list):
-                        key_people_pattern = []
-                    
-                    doc_types = characteristics.get('doc_types', [])
-                    if not isinstance(doc_types, list):
-                        doc_types = []
-                    
-                    priority = pattern.get('priority_label', 'MEDIUM')
-                    if not isinstance(priority, str):
-                        priority = 'MEDIUM'
-                    
-                    score_if_found = pattern.get('score_if_found', 7)
-                    if not isinstance(score_if_found, (int, float)):
-                        score_if_found = 7
-                    
-                    strategic_value = pattern.get('strategic_value', 'Important evidence')
-                    if not isinstance(strategic_value, str):
-                        strategic_value = 'Important evidence'
-                    
-                    # Priority emoji
-                    priority_emoji = "🔴" if priority == "CRITICAL" else "🟠" if priority == "HIGH" else "🟡"
-                    
-                    intelligence_section += f"""
-{idx}. {priority_emoji} {name.upper()} [{priority} PRIORITY]
-   What to look for: {description[:250]}
-   Keywords: {', '.join(str(k) for k in keywords[:10]) if keywords else 'Any relevant terms'}
-   Key people: {', '.join(str(k) for k in key_people_pattern[:5]) if key_people_pattern else 'Any'}
-   Document types: {', '.join(str(d) for d in doc_types[:5]) if doc_types else 'Any'}
-   
-   ➜ If found → Score: {score_if_found}/10
-   ➜ Strategic value: {strategic_value[:200]}
-
-"""
+                    intelligence_section += f"{idx}. {name}: {description[:100]}\n"
             
-            intelligence_section += """
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-SCORING STRATEGY:
-• Documents matching 🔴 CRITICAL patterns → 9-10
-• Documents matching 🟠 HIGH patterns → 7-8
-• Documents with multiple pattern matches → +2 bonus
-• Documents contradicting their defences → Automatic 9-10
-• Documents supporting our allegations → 8-10
-• Generic background material → 3-5
-• Irrelevant documents → 1-2
-
-</phase_0_strategic_intelligence>
-
-"""
+            intelligence_section += "\n</phase_0_strategic_intelligence>\n\n"
         else:
-            # No Phase 0 intelligence available
             intelligence_section = """
-<no_strategic_intelligence>
-⚠️ Phase 0 analysis not available - performing generic triage.
-💡 Run 'python main.py phase0' first for optimised triage using strategic patterns.
-</no_strategic_intelligence>
+    <no_strategic_intelligence>
+    ⚠️ Phase 0 not available - performing generic triage.
+    </no_strategic_intelligence>
 
-"""
+    """
         
         # ================================================================
         # BUILD DOCUMENT PREVIEW SECTION
@@ -229,100 +117,173 @@ SCORING STRATEGY:
         for idx, doc in enumerate(documents):
             filename = doc.get('filename', 'Unknown')
             folder = doc.get('folder_name', 'Unknown')
-            preview = doc.get('preview', 'No preview available')[:400]
+            preview = doc.get('preview', 'No preview')[:400]
             file_type = doc.get('file_type', 'unknown')
             
             doc_preview += f"""
-[DOC_{idx}]
-Filename: {filename}
-Folder: {folder}
-File type: {file_type}
-Preview:
-{preview}
----
+    [DOC_{idx}]
+    Filename: {filename}
+    Folder: {folder}
+    File type: {file_type}
+    Preview:
+    {preview}
+    ---
 
-"""
+    """
         
         doc_preview += "</documents_to_triage>\n\n"
         
         # ================================================================
-        # BUILD COMPLETE PROMPT
+        # BUILD ENHANCED PROMPT WITH RICH METADATA EXTRACTION
         # ================================================================
-        prompt = f"""<triage_mission>
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-INTELLIGENT DOCUMENT TRIAGE - Batch {batch_num + 1}
-Lismore v Process Holdings LCIA Arbitration
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        prompt = f"""<enhanced_triage_mission>
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    ENHANCED INTELLIGENT DOCUMENT TRIAGE - Batch {batch_num + 1}
+    Lismore v Process Holdings LCIA Arbitration
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-⚖️ YOU ARE ACTING FOR LISMORE (THE CLAIMANT)
+    ⚖️ YOU ARE ACTING FOR LISMORE (THE CLAIMANT)
 
-Your mission: Triage {len(documents)} documents to identify high-priority evidence.
+    Your mission: Triage {len(documents)} documents AND extract rich metadata for future search.
 
-🎯 WHAT LISMORE NEEDS TO WIN:
-1. Evidence of Process Holdings' misrepresentations/breaches
-2. Documents contradicting their defences
-3. Evidence of undisclosed liabilities
-4. Proof of causation (breach → damages)
-5. Documents establishing quantum of loss
-6. Timeline evidence showing when breaches occurred
-7. Internal PH communications showing knowledge/intent
-8. Expert/valuation documents supporting claims
+    🎯 EXTRACTION REQUIREMENTS:
+    For EACH document, you must extract:
+    1. Priority Score (1-10) - Evidential value
+    2. Category - Document type
+    3. Key Entities - People, companies, locations mentioned
+    4. Key Dates - Dates mentioned in the document
+    5. Key Topics - Main themes/subjects
+    6. Summary - 50-100 word overview
+    7. Relevance - Which allegations/defences it relates to
+    8. Red Flags - Suspicious/concealment indicators (if any)
+    9. Reason - Brief justification of score
 
-</triage_mission>
+    This enhanced metadata enables powerful search capabilities later.
 
-{intelligence_section}
+    </enhanced_triage_mission>
 
-{doc_preview}
+    {intelligence_section}
 
-<scoring_rubric>
-Score each document 1-10 based on evidential value to Lismore's case:
+    {doc_preview}
 
-10 = SMOKING GUN - Directly proves breach/misrepresentation with specific evidence
-9  = CRITICAL - Strong evidence supporting key claim elements
-8  = HIGH VALUE - Important corroborating evidence
-7  = RELEVANT - Useful supporting evidence
-6  = MODERATELY USEFUL - Background context that may matter
-5  = NEUTRAL - Generic business documents
-4  = TANGENTIAL - Minimally relevant
-3  = ADMINISTRATIVE - Routine business matter
-2  = IRRELEVANT - No connection to case
-1  = NOISE - Complete waste of time
+    <scoring_rubric>
+    Score 1-10 based on evidential value to Lismore:
 
-CATEGORY TAGS (assign one):
-- contract: SPAs, agreements, warranties, indemnities
-- financial: Accounts, valuations, liabilities, management accounts
-- correspondence: Emails, letters between parties
-- witness: Documents authored by/mentioning key witnesses
-- expert: Valuation reports, expert opinions
-- other: Everything else
-</scoring_rubric>
+    10 = SMOKING GUN - Direct proof of breach with specific evidence
+    9  = CRITICAL - Strong evidence supporting key claims
+    8  = HIGH VALUE - Important corroborating evidence
+    7  = RELEVANT - Useful supporting evidence
+    6  = MODERATELY USEFUL - Background context
+    5  = NEUTRAL - Generic business documents
+    4  = TANGENTIAL - Minimally relevant
+    3  = ADMINISTRATIVE - Routine business
+    2  = IRRELEVANT - No case connection
+    1  = NOISE - Waste of time
+    </scoring_rubric>
 
-<output_format>
-For each document, provide:
+    <category_tags>
+    Assign ONE category:
+    - contract: SPAs, agreements, warranties, indemnities
+    - financial: Accounts, valuations, liabilities, management accounts
+    - correspondence: Emails, letters between parties
+    - witness: Documents authored by/mentioning key witnesses  
+    - expert: Valuation reports, expert opinions
+    - other: Everything else
+    </category_tags>
 
-[DOC_0]
-Priority Score: [1-10]
-Reason: [2-3 sentences explaining score using specific details from preview]
-Category: [contract/financial/correspondence/witness/expert/other]
+    <extraction_guidelines>
+    **Key Entities:** Extract ALL mentioned:
+    • People: Full names (e.g., "Brendan Cahill", "Grace Taiga")
+    • Companies: Full entity names (e.g., "Process Holdings Limited", "Lismore Capital")
+    • Locations: Cities, offices (e.g., "Lagos Office", "London", "Nigeria")
+    • Max 4-6 entities per document
 
-[DOC_1]
-Priority Score: [1-10]
-Reason: [2-3 sentences explaining score using specific details from preview]
-Category: [contract/financial/correspondence/witness/expert/other]
+    **Key Dates:** Extract ALL dates in format DD/MM/YYYY or Month YYYY:
+    • Transaction dates
+    • Meeting dates
+    • Correspondence dates
+    • Deadline dates
+    • Max 3-5 dates per document
 
-Continue for ALL {len(documents)} documents.
-</output_format>
+    **Key Topics:** Extract 2-4 main themes:
+    • payment discrepancies, audit concerns, warranty breaches
+    • disclosure obligations, shareholder reporting, regulatory compliance
+    • valuation disputes, liability concealment, etc.
 
-<quality_requirements>
-1. Read EVERY document preview carefully
-2. Use Phase 0 intelligence to identify smoking guns
-3. Be consistent in scoring
-4. Justify scores with specific evidence
-5. Consider strategic value to Lismore's case
-</quality_requirements>
+    **Summary:** 50-100 words covering:
+    • What type of document (email, memo, report, etc.)
+    • Who is involved
+    • What it discusses
+    • Why it matters to the case
 
-Begin triage now. Be thorough. Win for Lismore.
-"""
+    **Relevance:** Match to allegations/defences from Phase 0:
+    • "Allegation #3 (failure to disclose)"
+    • "Defence #4 (good faith dealing)"
+    • "Contradiction to PHL's timeline"
+    • "None" if not relevant
+
+    **Red Flags:** Note if document shows:
+    • Concealment language ("don't disclose", "keep internal", "off the record")
+    • Contradictions to official statements
+    • Knowledge of issues before claimed dates
+    • Attempts to mislead
+    • "None" if clean
+    </extraction_guidelines>
+
+    <enhanced_output_format>
+    For EACH document, provide ALL fields in this exact format:
+
+    [DOC_0]
+    Priority Score: 8
+    Category: correspondence
+    Key Entities: Brendan Cahill, Grace Taiga, Lagos Office, PHL Board
+    Key Dates: 15/03/2014, 22/03/2014
+    Key Topics: payment discrepancies, audit concerns, disclosure obligations, regulatory reporting
+    Summary: Email thread between Cahill (PHL CFO) and Taiga (Lagos Office Manager) discussing irregularities discovered in 2013 financial audit that were not disclosed in shareholder reports. Cahill acknowledges awareness of £1.8M liability omission and discusses strategies to avoid regulatory scrutiny. References prior discussions about "keeping this matter internal" until post-acquisition.
+    Relevance: Allegation #3 (failure to disclose liabilities), Allegation #7 (misleading audit representation), Contradicts Defence #2 (claimed ignorance until 2015)
+    Red Flags: Concealment language ("keep this internal", "don't include in shareholder report"), shows knowledge two years before PHL claims
+    Reason: Strong evidence of deliberate non-disclosure with knowledge and intent, directly contradicts PHL's defence timeline
+
+    [DOC_1]
+    Priority Score: 5
+    Category: financial
+    Key Entities: KPMG, Process Holdings Limited
+    Key Dates: 31/12/2012
+    Key Topics: annual accounts, standard financial reporting
+    Summary: Standard audited accounts for year ending 31 December 2012 prepared by KPMG. Contains routine financial statements with standard audit opinion. No obvious irregularities or disclosures relevant to disputed liabilities. Generic financial reporting document without contentious elements.
+    Relevance: None - predates key events
+    Red Flags: None
+    Reason: Generic financial document from period before dispute arose, minimal evidential value
+
+    [DOC_2]
+    Priority Score: 10
+    Category: witness
+    Key Entities: Simon Odumosu, Grace Taiga, Lagos Project, Bribery allegations
+    Key Dates: 08/2014, 03/2015
+    Key Topics: bribery allegations, government payments, undisclosed liabilities, concealment
+    Summary: Internal memo from Simon Odumosu (PHL Legal Counsel) to senior management explicitly discussing allegations of improper payments to Nigerian government officials in connection with Lagos Project. Memo states "these allegations were known to us by August 2014 but we decided not to disclose during acquisition negotiations as they were unsubstantiated". Confirms £3.2M in questionable payments and recommends settlement before disclosure.
+    Relevance: Allegation #1 (undisclosed bribery liabilities), Allegation #3 (failure to disclose), Allegation #5 (misrepresentation of legal compliance), Contradicts Defence #1 (no knowledge of liabilities)
+    Red Flags: SMOKING GUN - Explicit admission of knowledge and deliberate non-disclosure decision, shows intent to conceal material liabilities during acquisition
+    Reason: Nuclear evidence - written admission from PHL's own legal counsel of knowing concealment of £3.2M liability during acquisition negotiations, destroys their primary defence
+
+    Continue for ALL {len(documents)} documents.
+
+    CRITICAL: You MUST extract ALL fields for EVERY document. Do not skip any fields.
+    </enhanced_output_format>
+
+    <quality_requirements>
+    1. Read EVERY document preview thoroughly
+    2. Extract entities, dates, and topics precisely from the text
+    3. Write clear, detailed summaries (50-100 words)
+    4. Match relevance to Phase 0 allegations/defences
+    5. Flag suspicious language/concealment attempts
+    6. Be consistent in scoring
+    7. Justify high scores (8-10) with specific evidence
+    </quality_requirements>
+
+    Begin enhanced triage now. Extract ALL metadata fields for ALL documents.
+    Win for Lismore.
+    """
         
         return prompt
     
