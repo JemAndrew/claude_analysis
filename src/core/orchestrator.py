@@ -8,6 +8,7 @@ This version USES your sophisticated 5-tier memory system
 """
 
 import json
+from logging import config
 import time
 from pathlib import Path
 from typing import Dict, List, Optional
@@ -39,27 +40,40 @@ class LitigationOrchestrator:
     """
     
     def __init__(self, config_override: Dict = None):
-        """Initialise orchestrator with all components"""
-         if config is None:
+
+    
+    # ================================================================
+    # STEP 1: Handle config parameter
+    # ================================================================
+        if config_override is None:
+            # Default: create standard Config
             from core.config import Config
             self.config = Config()
-        else:
-        self.config = config
-        
-        self.config = Config()
-        if config_override:
+            print("📋 Using default Config")
+            
+        elif hasattr(config_override, '__class__') and config_override.__class__.__name__ in ['Config', 'Folder69Config']:
+            # If it's a Config object (or subclass like Folder69Config), use it directly
+            self.config = config_override
+            print(f"📋 Using {config_override.__class__.__name__} object")
+            
+        elif isinstance(config_override, dict):
+            # If it's a dict, create Config and apply overrides
+            from core.config import Config
+            self.config = Config()
             for key, value in config_override.items():
                 setattr(self.config, key, value)
+            print(f"📋 Using default Config with {len(config_override)} overrides")
+            
+        else:
+            # Unknown type, try to use it anyway
+            self.config = config_override
+            print(f"⚠️  Using config of type {type(config_override)}")
         
-        # ================================================================
-        # STEP 1: Initialize base components (no dependencies)
-        # ================================================================
+
         self.knowledge_graph = KnowledgeGraph(self.config)
         self.api_client = ClaudeClient(self.config)
         
-        # ================================================================
-        # STEP 2: Initialize utilities (needed by Phase0 and PassExecutor)
-        # ================================================================
+
         self.document_loader = DocumentLoader(self.config)
         self.autonomous_prompts = AutonomousPrompts(self.config)
         self.deliverables_prompts = DeliverablesPrompts(self.config)
@@ -67,20 +81,19 @@ class LitigationOrchestrator:
         # Document retrieval system (BM25)
         self.retrieval_system = None
         print("✅ BM25 Document Retrieval ready (builds index on first use)")
-        
-        # ================================================================
-        # STEP 3: Now Phase0 can be created (needs document_loader)
-        # ================================================================
+
         self.phase0_executor = Phase0Executor(self.config, self)
         
         # ================================================================
-        # STEP 4: Hierarchical Memory System
+        # STEP 5: Hierarchical Memory System
         # ================================================================
         print("\n" + "="*70)
         print("INITIALISING HIERARCHICAL MEMORY SYSTEM")
         print("="*70)
         
         try:
+            from memory import HierarchicalMemory
+            
             self.memory_system = HierarchicalMemory(
                 config=self.config,
                 knowledge_graph=self.knowledge_graph
@@ -96,8 +109,7 @@ class LitigationOrchestrator:
             
         except Exception as e:
             print(f"\n⚠️  HierarchicalMemory unavailable: {e}")
-            print("   Missing dependencies? Install:")
-            print("   pip install chromadb sentence-transformers")
+            print("   Missing dependencies? (Install: pip install chromadb sentence-transformers)")
             print("\n   Falling back to simple memory cache...")
             
             self.memory_system = None
@@ -113,12 +125,12 @@ class LitigationOrchestrator:
             }
         
         # ================================================================
-        # STEP 5: PassExecutor (needs everything above)
+        # STEP 6: PassExecutor (needs everything above)
         # ================================================================
         self.pass_executor = PassExecutor(self.config, self)
         
         # ================================================================
-        # STEP 6: State tracking
+        # STEP 7: State tracking
         # ================================================================
         self.state = {
             'passes_completed': [],
@@ -134,6 +146,8 @@ class LitigationOrchestrator:
         self.checkpoint_dir = self.config.output_dir / "checkpoints"
         self.checkpoint_dir.mkdir(parents=True, exist_ok=True)
         
+        print("="*70)
+        print("✅ ORCHESTRATOR READY")
         print("="*70)
 
     

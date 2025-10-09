@@ -386,7 +386,7 @@ class PassExecutor:
         # ====================================================================
         # LOAD PHASE 0 SMOKING GUN PATTERNS
         # ====================================================================
-        phase_0_file = self.config.analysis_dir / "phase_0" / "case_foundation.json"
+        phase_0_file = self.config.phase_0_dir / "case_foundation.json"
         smoking_gun_patterns = []
         phase_0_used = False
         
@@ -770,7 +770,7 @@ class PassExecutor:
                 iteration_result['iteration'] = iteration + 1
                 iteration_result['cost_gbp'] = metadata.get('cost_gbp', 0)
                 iteration_result['source'] = 'api'
-                
+                iteration_result['raw_response'] = response
                 # Validate
                 if self.config.validation_config['enabled']:
                     validation_result = self._validate_analysis_output(iteration_result)
@@ -1219,7 +1219,9 @@ class PassExecutor:
         return scored_docs
 
     def _parse_deep_analysis_response(self, response: str) -> Dict:
-        """Parse Pass 2 response with structured extraction + fallback"""
+        """
+        Parse Pass 2 response - FLEXIBLE to match Claude's actual format
+        """
         result = {
             'breaches': [],
             'contradictions': [],
@@ -1230,39 +1232,111 @@ class PassExecutor:
             'confidence': 0.0
         }
         
-        # Extract structured breaches
-        breach_pattern = r'BREACH_START\s*Description:\s*(.+?)\s*Clause/Obligation:\s*(.+?)\s*Evidence:\s*(\[.+?\])\s*Confidence:\s*(0?\.\d+|1\.0)\s*Causation:\s*(.+?)\s*Quantum:\s*(.+?)\s*BREACH_END'
+        # =================================================================
+        # FIX: Extract BREACHES - Very flexible pattern
+        # =================================================================
+        # Claude uses: **BREACH_START** ... any content ... **BREACH_END**
+        
+        breach_pattern = r'\*\*BREACH_START\*\*(.*?)\*\*BREACH_END\*\*'
         
         for match in re.finditer(breach_pattern, response, re.DOTALL):
             try:
-                evidence_str = match.group(3).strip()
-                evidence = json.loads(evidence_str)
-            except:
-                evidence = []
-            
-            breach = {
-                'description': match.group(1).strip(),
-                'clause': match.group(2).strip(),
-                'evidence': evidence,
-                'confidence': float(match.group(4)),
-                'causation': match.group(5).strip(),
-                'quantum': match.group(6).strip()
-            }
-            result['breaches'].append(breach)
+                breach_text = match.group(1).strip()
+                
+                # Extract whatever we can find
+                # Look for BREACH: or description at the start
+                desc_match = re.search(r'\*\*BREACH:\s*(.+?)\*\*', breach_text)
+                if desc_match:
+                    description = desc_match.group(1).strip()
+                else:
+                    # Take first line as description
+                    description = breach_text.split('\n')[0].strip('*').strip()
+                
+                # Extract confidence
+                conf_match = re.search(r'\*\*Confidence:\s*(0?\.\d+|1\.0|\d+%)\*\*', breach_text)
+                if conf_match:
+                    conf_val = conf_match.group(1)
+                    if '%' in conf_val:
+                        confidence = float(conf_val.strip('%')) / 100
+                    else:
+                        confidence = float(conf_val)
+                else:
+                    confidence = 0.75  # Default
+                
+                # Extract DOC_IDs from entire text
+                doc_ids = re.findall(r'DOC_\d+', breach_text)
+                
+                breach = {
+                    'description': description[:200],  # Limit length
+                    'clause': description[:100],  # Use as clause too
+                    'evidence': list(set(doc_ids)),  # Unique DOC_IDs
+                    'confidence': confidence,
+                    'causation': '',
+                    'quantum': '',
+                    'full_text': breach_text[:500]  # Save excerpt
+                }
+                result['breaches'].append(breach)
+                
+            except Exception as e:
+                print(f"   ⚠️  Error parsing breach: {e}")
+                continue
         
-        # Extract confidence
+        # =================================================================
+        # Extract CONTRADICTIONS - Flexible
+        # =================================================================
+        
+        contradiction_pattern = r'\*\*CONTRADICTION_START\*\*(.*?)\*\*CONTRADICTION_END\*\*'
+        
+        for match in re.finditer(contradiction_pattern, response, re.DOTALL):
+            try:
+                contr_text = match.group(1).strip()
+                
+                # Extract whatever we can
+                phl_claim = re.search(r'\*\*(?:PHL|Respondent) (?:Claim|Position):\*\*\s*(.+?)(?:\n\*\*|$)', contr_text, re.DOTALL)
+                doc_evidence = re.search(r'\*\*Document (?:Evidence|Shows|Proves):\*\*\s*(.+?)(?:\n\*\*|$)', contr_text, re.DOTALL)
+                
+                phl_claimed = phl_claim.group(1).strip() if phl_claim else contr_text.split('\n')[0]
+                document_proves = doc_evidence.group(1).strip() if doc_evidence else ''
+                
+                # Extract DOC_IDs
+                doc_ids = re.findall(r'DOC_\d+', contr_text)
+                
+                contradiction = {
+                    'phl_claimed': phl_claimed[:200],
+                    'document_proves': document_proves[:200],
+                    'evidence': list(set(doc_ids)),
+                    'severity': 'HIGH',
+                    'destroys_defence': ''
+                }
+                result['contradictions'].append(contradiction)
+                
+            except Exception as e:
+                print(f"   ⚠️  Error parsing contradiction: {e}")
+                continue
+        
+        # =================================================================
+        # Extract CONFIDENCE - Multiple patterns
+        # =================================================================
+        
         confidence_patterns = [
+            r'\*\*CONFIDENCE_START\*\*.*?\*\*Overall Confidence:\*\*\s*(\d+)%',
+            r'(?:Overall )?(?:CONFIDENCE|Confidence):\s*(\d+)%',
             r'(?:CONFIDENCE|Confidence):\s*(0?\.\d+|1\.0)',
             r'(\d{1,3})%\s*confident',
-            r'confidence.*?(?:is|of)\s*(0?\.\d+|1\.0)'
         ]
         
         for pattern in confidence_patterns:
-            match = re.search(pattern, response, re.IGNORECASE)
-            if match:
-                val = float(match.group(1))
-                result['confidence'] = val / 100 if val > 1 else val
-                break
+            matches = re.findall(pattern, response, re.IGNORECASE | re.DOTALL)
+            if matches:
+                val = matches[-1]
+                try:
+                    confidence = float(val)
+                    if confidence > 1:
+                        confidence = confidence / 100
+                    result['confidence'] = confidence
+                    break
+                except:
+                    continue
         
         return result
     

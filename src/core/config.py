@@ -159,29 +159,38 @@ CRITICAL: Every factual claim must cite specific document IDs."""
         self.pass_2_config = {
             'model': self.sonnet_model,
             'use_extended_thinking': True,
-            'extended_thinking_budget': 12000,  # INCREASED from 20K
-            'max_iterations': 25,
-            'batch_size': 30,
-            'confidence_threshold': 0.95,
+            'extended_thinking_budget': 20000,  # MAXIMUM thinking (was 12000)
+            'max_iterations': 50,  # MORE iterations (was 25)
+            'batch_size': 20,  # SMALLER batches = more thorough (was 30)
+            'confidence_threshold': 0.90,  # LOWER threshold = more iterations (was 0.95)
             'adaptive_loading': True,
             'adaptive_trigger_iteration': 15,
-            'adaptive_confidence_threshold': 0.90,
-            'adaptive_additional_docs': 100,
+            'adaptive_confidence_threshold': 0.85,  # Lower threshold
+            'adaptive_additional_docs': 150,  # More docs when needed
             
             # Enhanced context usage
-            'use_full_documents': True,          # NEW
-            'documents_per_iteration': 30,       # NEW
-            'include_full_pleadings': True       # NEW
+            'use_full_documents': True,
+            'documents_per_iteration': 20,  # Analyse more per iteration
+            'include_full_pleadings': True,
+            
+            # Cross-referencing
+            'enable_cross_reference': True,
+            'use_bm25_retrieval': True,
         }
-        
-        # Pass 3: Autonomous Investigations Configuration
+
+        # Pass 3: Investigations - MORE THOROUGH
         self.pass_3_config = {
             'model': self.sonnet_model,
             'use_extended_thinking': True,
-            'extended_thinking_budget': 12000,  # INCREASED
-            'max_investigations': 10,
+            'extended_thinking_budget': 20000,  # MAXIMUM (was 12000)
+            'max_investigations': 50,  # MORE investigations (was 10)
             'max_recursion_depth': 5,
-            'min_investigation_priority': 7
+            'spawn_child_investigations': True,
+            'confidence_threshold': 0.75,  # Lower = more investigations spawn
+            
+            # Cross-referencing for investigations
+            'use_bm25_retrieval': True,
+            'docs_per_investigation': 30,
         }
         
         # Pass 4: Deliverables Configuration - ENHANCED
