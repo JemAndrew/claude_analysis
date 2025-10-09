@@ -570,7 +570,7 @@ class DocumentLoader:
         
         # Method 3: PyPDF2 - fallback
         try:
-            with open(file_path, 'rb') as f:
+            with open(file_path, 'rb', encoding = 'utf-8') as f:
                 pdf_reader = PyPDF2.PdfReader(f)
                 text = ""
                 for page in pdf_reader.pages:

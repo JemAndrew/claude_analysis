@@ -1,0 +1,513 @@
+"""
+PST Extraction with Outlook Restart After Each PST
+This prevents Outlook session exhaustion
+"""
+
+import json
+import win32com.client
+from pathlib import Path
+from datetime import datetime
+from typing import List, Dict, Optional
+from tqdm import tqdm
+import hashlib
+import time
+import logging
+import sys
+import shutil
+
+
+class RestartingPSTExtractor:
+    """Extract PSTs with Outlook restart after each one"""
+    
+    def __init__(self, pst_folder: Path, output_folder: Path, root_folder: Path = None):
+        self.pst_folder = pst_folder
+        self.output_folder = output_folder
+        self.root_folder = root_folder
+        
+        # Local temp for one PST
+        self.local_temp = Path(r"C:\PST_Local_Temp")
+        self.local_temp.mkdir(parents=True, exist_ok=True)
+        
+        self.output_folder.mkdir(parents=True, exist_ok=True)
+        
+        self.setup_logging()
+        
+        self.stats = {
+            'pst_files_processed': 0,
+            'pst_files_total': 0,
+            'msg_files_processed': 0,
+            'total_emails_extracted': 0,
+            'duplicates_skipped': 0,
+            'errors': 0,
+            'failed_psts': [],
+            'start_time': datetime.now().isoformat(),
+            'completed_psts': []
+        }
+        
+        self.seen_message_ids = set()
+        self.all_emails = []
+        
+        # DON'T keep Outlook open - will restart for each PST
+        self.outlook = None
+        self.namespace = None
+    
+    def setup_logging(self):
+        """Configure logging"""
+        log_file = self.output_folder / "extraction_log.txt"
+        
+        self.logger = logging.getLogger('PSTExtractor')
+        self.logger.setLevel(logging.INFO)
+        
+        file_handler = logging.FileHandler(log_file, encoding='utf-8')
+        file_handler.setLevel(logging.DEBUG)
+        file_formatter = logging.Formatter('%(asctime)s | %(levelname)s | %(message)s')
+        file_handler.setFormatter(file_formatter)
+        
+        console_handler = logging.StreamHandler(sys.stdout)
+        console_handler.setLevel(logging.INFO)
+        console_formatter = logging.Formatter('%(message)s')
+        console_handler.setFormatter(console_formatter)
+        
+        self.logger.addHandler(file_handler)
+        self.logger.addHandler(console_handler)
+        
+        self.logger.info("="*70)
+        self.logger.info("PST Extraction with Outlook Restarts - Logging initialised")
+        self.logger.info("="*70)
+    
+    def connect_outlook(self) -> bool:
+        """Connect to Outlook"""
+        self.logger.info("📧 Connecting to Microsoft Outlook...")
+        
+        try:
+            self.outlook = win32com.client.Dispatch("Outlook.Application")
+            self.namespace = self.outlook.GetNamespace("MAPI")
+            
+            store_count = self.namespace.Stores.Count
+            self.logger.info(f"✅ Connected successfully ({store_count} stores)")
+            return True
+            
+        except Exception as e:
+            self.logger.error(f"❌ Failed to connect: {e}")
+            return False
+    
+    def disconnect_outlook(self):
+        """Fully disconnect and close Outlook"""
+        self.logger.info("🔒 Closing Outlook...")
+        try:
+            if self.outlook:
+                self.outlook.Quit()
+                self.outlook = None
+                self.namespace = None
+                
+                # Wait for Outlook to fully close
+                time.sleep(10)
+                
+                # Force garbage collection
+                import gc
+                gc.collect()
+                
+                self.logger.info("   ✅ Outlook closed")
+        except Exception as e:
+            self.logger.warning(f"   ⚠️  Close warning: {e}")
+    
+    def load_checkpoint(self) -> bool:
+        """Load checkpoint"""
+        checkpoint_file = self.output_folder / "extraction_checkpoint.json"
+        
+        if not checkpoint_file.exists():
+            return False
+        
+        try:
+            with open(checkpoint_file, 'r', encoding='utf-8') as f:
+                checkpoint = json.load(f)
+            
+            self.stats = checkpoint.get('stats', self.stats)
+            self.stats['completed_psts'] = checkpoint.get('completed_psts', [])
+            
+            seen_ids_file = self.output_folder / "seen_message_ids.json"
+            if seen_ids_file.exists():
+                with open(seen_ids_file, 'r', encoding='utf-8') as f:
+                    self.seen_message_ids = set(json.load(f))
+            
+            self.logger.info(f"\n📂 RESUMING FROM CHECKPOINT")
+            self.logger.info(f"   PSTs processed: {self.stats['pst_files_processed']}")
+            self.logger.info(f"   Emails extracted: {self.stats['total_emails_extracted']:,}")
+            
+            return True
+        except Exception as e:
+            self.logger.warning(f"⚠️  Could not load checkpoint: {e}")
+            return False
+    
+    def save_checkpoint(self):
+        """Save checkpoint"""
+        checkpoint_file = self.output_folder / "extraction_checkpoint.json"
+        temp_checkpoint = self.output_folder / "extraction_checkpoint.tmp"
+        
+        try:
+            checkpoint_data = {
+                'stats': self.stats,
+                'completed_psts': self.stats['completed_psts'],
+                'last_updated': datetime.now().isoformat()
+            }
+            
+            with open(temp_checkpoint, 'w', encoding='utf-8') as f:
+                json.dump(checkpoint_data, f, indent=2)
+            
+            if temp_checkpoint.exists():
+                if checkpoint_file.exists():
+                    checkpoint_file.unlink()
+                temp_checkpoint.rename(checkpoint_file)
+            
+            seen_ids_file = self.output_folder / "seen_message_ids.json"
+            with open(seen_ids_file, 'w', encoding='utf-8') as f:
+                json.dump(list(self.seen_message_ids), f)
+            
+            self.logger.debug(f"      💾 Checkpoint saved")
+            
+        except Exception as e:
+            self.logger.error(f"      ❌ Checkpoint save failed: {e}")
+    
+    def extract_email_metadata(self, mail_item) -> Optional[Dict]:
+        """Extract email metadata"""
+        try:
+            subject = ""
+            try:
+                subject = str(mail_item.Subject) if mail_item.Subject else "(No Subject)"
+            except:
+                subject = "(No Subject)"
+            
+            sender = ""
+            sender_email = ""
+            try:
+                sender = str(mail_item.SenderName) if mail_item.SenderName else "Unknown"
+                sender_email = str(mail_item.SenderEmailAddress) if mail_item.SenderEmailAddress else ""
+            except:
+                sender = "Unknown"
+            
+            recipients = ""
+            try:
+                recipients = str(mail_item.To) if mail_item.To else ""
+            except:
+                pass
+            
+            received_time = ""
+            sent_time = ""
+            try:
+                if hasattr(mail_item, 'ReceivedTime') and mail_item.ReceivedTime:
+                    received_time = str(mail_item.ReceivedTime)
+                if hasattr(mail_item, 'SentOn') and mail_item.SentOn:
+                    sent_time = str(mail_item.SentOn)
+            except:
+                pass
+            
+            body_preview = ""
+            try:
+                body = str(mail_item.Body) if mail_item.Body else ""
+                body_preview = body[:500]
+            except:
+                pass
+            
+            unique_string = f"{sender_email}|{subject}|{sent_time}|{body_preview[:200]}"
+            message_id = hashlib.md5(unique_string.encode()).hexdigest()
+            
+            if message_id in self.seen_message_ids:
+                self.stats['duplicates_skipped'] += 1
+                return None
+            
+            self.seen_message_ids.add(message_id)
+            
+            email_data = {
+                'message_id': message_id,
+                'subject': subject,
+                'sender_name': sender,
+                'sender_email': sender_email,
+                'recipients': recipients,
+                'received_time': received_time,
+                'sent_time': sent_time,
+                'body_preview': body_preview,
+                'has_attachments': mail_item.Attachments.Count > 0 if hasattr(mail_item, 'Attachments') else False,
+                'importance': str(mail_item.Importance) if hasattr(mail_item, 'Importance') else "Normal",
+                'size_kb': round(mail_item.Size / 1024, 2) if hasattr(mail_item, 'Size') else 0
+            }
+            
+            return email_data
+            
+        except Exception as e:
+            self.logger.debug(f"      Email extraction error: {e}")
+            return None
+    
+    def process_folder_recursive(self, folder, emails: List[Dict], pbar: tqdm):
+        """Process folders recursively"""
+        try:
+            items = folder.Items
+            
+            for item in items:
+                pbar.update(1)
+                
+                if hasattr(item, 'Class') and item.Class == 43:
+                    email_data = self.extract_email_metadata(item)
+                    if email_data:
+                        emails.append(email_data)
+            
+            for subfolder in folder.Folders:
+                self.process_folder_recursive(subfolder, emails, pbar)
+                
+        except Exception as e:
+            self.logger.debug(f"      Folder processing error: {e}")
+            self.stats['errors'] += 1
+    
+    def count_items_recursive(self, folder) -> int:
+        """Count items in folder"""
+        try:
+            count = folder.Items.Count
+            for subfolder in folder.Folders:
+                count += self.count_items_recursive(subfolder)
+            return count
+        except:
+            return 0
+    
+    def extract_single_pst_complete_cycle(self, source_pst: Path) -> List[Dict]:
+        """
+        Complete cycle: Copy → Connect Outlook → Extract → Disconnect Outlook → Delete
+        """
+        
+        self.logger.info(f"\n{'='*70}")
+        self.logger.info(f"📧 PST: {source_pst.name}")
+        self.logger.info(f"   Size: {source_pst.stat().st_size / 1e9:.2f} GB")
+        
+        if source_pst.name in self.stats['completed_psts']:
+            self.logger.info(f"   ⏭️  Already processed")
+            return []
+        
+        emails = []
+        local_pst = self.local_temp / source_pst.name
+        
+        try:
+            # STEP 1: Copy to local
+            self.logger.info(f"   📋 Copying to local temp...")
+            shutil.copy2(source_pst, local_pst)
+            self.logger.info(f"   ✅ Copy complete")
+            
+            # STEP 2: Connect to Outlook (FRESH connection for this PST)
+            if not self.connect_outlook():
+                raise Exception("Could not connect to Outlook")
+            
+            # STEP 3: Load PST
+            self.logger.info(f"   📥 Loading PST into Outlook...")
+            self.namespace.AddStore(str(local_pst))
+            time.sleep(5)
+            self.logger.info(f"   ✅ PST loaded")
+            
+            # STEP 4: Find folder
+            root_folder = None
+            for folder in self.namespace.Folders:
+                if local_pst.stem.lower() in str(folder.Name).lower():
+                    root_folder = folder
+                    break
+            
+            if not root_folder:
+                root_folder = self.namespace.Folders.GetLast()
+            
+            self.logger.info(f"   📂 Root folder: {root_folder.Name}")
+            
+            # STEP 5: Count
+            self.logger.info(f"   📊 Counting emails...")
+            total_items = self.count_items_recursive(root_folder)
+            self.logger.info(f"   Found ~{total_items:,} items")
+            
+            # STEP 6: Extract
+            self.logger.info(f"   📥 Extracting...")
+            with tqdm(total=total_items, desc="   Progress", unit="email", ncols=70) as pbar:
+                self.process_folder_recursive(root_folder, emails, pbar)
+            
+            # STEP 7: Remove from Outlook
+            self.logger.info(f"   🗑️  Removing PST from Outlook...")
+            try:
+                self.namespace.RemoveStore(root_folder)
+                self.logger.info(f"      ✅ Removed")
+            except Exception as e:
+                self.logger.warning(f"      ⚠️  RemoveStore warning: {e}")
+            
+            self.logger.info(f"   ✅ Extracted {len(emails):,} unique emails")
+            
+            # STEP 8: CRITICAL - Disconnect Outlook completely
+            self.disconnect_outlook()
+            
+            # STEP 9: Delete local copy
+            self.logger.info(f"   🗑️  Deleting local temp copy...")
+            try:
+                local_pst.unlink()
+                self.logger.info(f"      ✅ Deleted")
+            except Exception as e:
+                self.logger.warning(f"      ⚠️  Could not delete: {e}")
+            
+            # Add to collection
+            self.all_emails.extend(emails)
+            
+            # Mark complete
+            self.stats['completed_psts'].append(source_pst.name)
+            self.stats['pst_files_processed'] += 1
+            self.stats['total_emails_extracted'] = len(self.all_emails)
+            
+        except Exception as e:
+            self.logger.error(f"   ❌ Error: {e}")
+            self.stats['errors'] += 1
+            self.stats['failed_psts'].append({
+                'file': source_pst.name,
+                'error': str(e),
+                'timestamp': datetime.now().isoformat()
+            })
+            
+            # Always disconnect and clean up
+            self.disconnect_outlook()
+            
+            if local_pst.exists():
+                try:
+                    local_pst.unlink()
+                except:
+                    pass
+            
+            # Mark as processed
+            if source_pst.name not in self.stats['completed_psts']:
+                self.stats['completed_psts'].append(source_pst.name)
+                self.stats['pst_files_processed'] += 1
+        
+        return emails
+    
+    def extract_all_pst_files(self) -> List[Dict]:
+        """Extract all PSTs with Outlook restart between each"""
+        
+        pst_files = sorted(list(self.pst_folder.glob("*.pst")))
+        
+        if not pst_files:
+            self.logger.error(f"❌ No PST files found")
+            return []
+        
+        self.stats['pst_files_total'] = len(pst_files)
+        
+        self.load_checkpoint()
+        
+        remaining_psts = [p for p in pst_files if p.name not in self.stats['completed_psts']]
+        
+        if not remaining_psts:
+            self.logger.info("\n✅ All PSTs already processed!")
+            return self.all_emails
+        
+        total_size_gb = sum(p.stat().st_size for p in pst_files) / 1e9
+        remaining_size_gb = sum(p.stat().st_size for p in remaining_psts) / 1e9
+        
+        self.logger.info("\n" + "="*70)
+        self.logger.info("📧 PST EXTRACTION WITH OUTLOOK RESTARTS")
+        self.logger.info("="*70)
+        self.logger.info(f"Total PSTs: {len(pst_files)} ({total_size_gb:.1f} GB)")
+        self.logger.info(f"Remaining: {len(remaining_psts)} ({remaining_size_gb:.1f} GB)")
+        self.logger.info(f"Method: Copy → Extract → Restart Outlook → Repeat")
+        self.logger.info("="*70)
+        
+        # Process each PST
+        for idx, pst_path in enumerate(remaining_psts, 1):
+            self.logger.info(f"\n{'='*70}")
+            self.logger.info(f"PST {self.stats['pst_files_processed'] + 1}/{len(pst_files)}")
+            self.logger.info(f"Remaining: {len(remaining_psts) - idx}")
+            self.logger.info(f"{'='*70}")
+            
+            # Extract with complete connect/disconnect cycle
+            self.extract_single_pst_complete_cycle(pst_path)
+            
+            # Save checkpoint
+            self.save_checkpoint()
+            
+            # Progress
+            self.logger.info(f"\n📈 Cumulative Progress:")
+            self.logger.info(f"   PSTs: {self.stats['pst_files_processed']}/{len(pst_files)}")
+            self.logger.info(f"   Emails: {self.stats['total_emails_extracted']:,}")
+            self.logger.info(f"   Duplicates: {self.stats['duplicates_skipped']:,}")
+            self.logger.info(f"   Errors: {self.stats['errors']}")
+        
+        return self.all_emails
+    
+    def save_final_results(self):
+        """Save results"""
+        
+        output_file = self.output_folder / "emails_extracted.json"
+        self.logger.info(f"\n💾 Saving final results...")
+        self.logger.info(f"   Total emails: {len(self.all_emails):,}")
+        
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(self.all_emails, f, indent=2, ensure_ascii=False)
+        
+        actual_size_mb = output_file.stat().st_size / 1024 / 1024
+        
+        self.stats['end_time'] = datetime.now().isoformat()
+        self.stats['final_email_count'] = len(self.all_emails)
+        
+        start = datetime.fromisoformat(self.stats['start_time'])
+        end = datetime.fromisoformat(self.stats['end_time'])
+        duration = (end - start).total_seconds() / 3600
+        self.stats['duration_hours'] = round(duration, 2)
+        
+        stats_file = self.output_folder / "extraction_stats.json"
+        with open(stats_file, 'w', encoding='utf-8') as f:
+            json.dump(self.stats, f, indent=2)
+        
+        self.logger.info("\n" + "="*70)
+        self.logger.info("🎉 EXTRACTION COMPLETE!")
+        self.logger.info("="*70)
+        self.logger.info(f"PSTs processed:     {self.stats['pst_files_processed']}/{self.stats['pst_files_total']}")
+        self.logger.info(f"Total emails:       {len(self.all_emails):,}")
+        self.logger.info(f"Duplicates skipped: {self.stats['duplicates_skipped']:,}")
+        self.logger.info(f"Errors:             {self.stats['errors']}")
+        self.logger.info(f"Duration:           {self.stats['duration_hours']:.2f} hours")
+        
+        if self.stats['failed_psts']:
+            self.logger.warning(f"\n⚠️  Failed PSTs: {len(self.stats['failed_psts'])}")
+            for failed in self.stats['failed_psts']:
+                self.logger.warning(f"   - {failed['file']}: {failed['error']}")
+        
+        self.logger.info(f"\n✅ Output file: {output_file}")
+        self.logger.info(f"   Size: {actual_size_mb:.0f} MB")
+
+
+def main():
+    """Main execution"""
+    
+    PST_FOLDER = Path(r"C:\Users\JemAndrew\Velitor\Communication site - Documents\LIS1.1\36- Chronological Email Run")
+    ROOT_FOLDER = Path(r"C:\Users\JemAndrew\Velitor\Communication site - Documents\LIS1.1")
+    OUTPUT_FOLDER = Path(r"C:\Users\JemAndrew\OneDrive - Velitor\EmailExtraction")
+    
+    print("="*70)
+    print("🌙 PST EXTRACTION WITH OUTLOOK RESTARTS")
+    print("="*70)
+    print(f"Method: Fresh Outlook connection for EACH PST")
+    print("="*70)
+    
+    import shutil
+    free_gb = shutil.disk_usage("C:\\").free / (1024**3)
+    print(f"\n💾 Current free space: {free_gb:.1f} GB")
+    
+    if not PST_FOLDER.exists():
+        print(f"\n❌ PST folder not found")
+        return
+    
+    extractor = RestartingPSTExtractor(
+        PST_FOLDER, 
+        OUTPUT_FOLDER, 
+        ROOT_FOLDER
+    )
+    
+    print("\n" + "="*70)
+    print("STEP 1: PST EXTRACTION")
+    print("="*70)
+    
+    extractor.extract_all_pst_files()
+    
+    if extractor.all_emails:
+        extractor.save_final_results()
+        print("\n🎉 Complete!")
+    else:
+        print("\n❌ No emails extracted")
+
+
+if __name__ == "__main__":
+    main()

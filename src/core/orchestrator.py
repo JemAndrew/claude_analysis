@@ -593,7 +593,7 @@ class LitigationOrchestrator:
         if not result_file.exists():
             return {}
         
-        with open(result_file, 'r') as f:
+        with open(result_file, 'r', encoding='utf-8') as f:
             return json.load(f)
     
     def get_status(self) -> Dict:
