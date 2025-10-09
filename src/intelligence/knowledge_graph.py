@@ -431,9 +431,9 @@ class KnowledgeGraph:
         for row in cursor.fetchall():
             context['contradictions'].append({
                 'id': row[0],
-                'statement_a': row[1][:200],
-                'statement_b': row[2][:200],
-                'severity': row[3]
+                'statement_a': row[1][:200] if row[1] else 'N/A',  # ← NULL-SAFE
+                'statement_b': row[2][:200] if row[2] else 'N/A',  # ← NULL-SAFE
+                'severity': row[3] if row[3] else 5   
             })
         
         # Get timeline events
@@ -604,16 +604,16 @@ class KnowledgeGraph:
         
         for row in cursor.fetchall():
             try:
-                supporting_docs = json.loads(row[5])
+                supporting_docs = json.loads(row[5]) if row[5] else []
             except:
                 supporting_docs = []
             
             intelligence['timeline_events'].append({
                 'id': row[0],
-                'date': row[1],
-                'description': row[2],
-                'type': row[3],
-                'significance': row[4],
+                'date': row[1] if row[1] else 'Unknown',                    # ← NULL-SAFE
+                'description': row[2] if row[2] else 'N/A',                 # ← NULL-SAFE
+                'type': row[3] if row[3] else 'general',                    # ← NULL-SAFE
+                'significance': row[4] if row[4] is not None else 5,        # ← NULL-SAFE
                 'supporting_docs': supporting_docs
             })
         
@@ -626,12 +626,12 @@ class KnowledgeGraph:
         
         for row in cursor.fetchall():
             intelligence['investigations'].append({
-                'id': row[0],
-                'topic': row[1],
-                'conclusion': row[2],
-                'confidence': row[3],
-                'depth': row[4]
-            })
+            'id': row[0],
+            'topic': row[1] if row[1] else 'Unknown',                   # ← NULL-SAFE
+            'conclusion': row[2] if row[2] else 'N/A',                  # ← NULL-SAFE
+            'confidence': row[3] if row[3] is not None else 0.0,        # ← NULL-SAFE
+            'depth': row[4] if row[4] is not None else 0                # ← NULL-SAFE
+        })
         
         # Add statistics
         intelligence['statistics'] = {

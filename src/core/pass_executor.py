@@ -1220,61 +1220,57 @@ class PassExecutor:
 
     def _parse_deep_analysis_response(self, response: str) -> Dict:
         """
-        Parse Pass 2 response - FLEXIBLE to match Claude's actual format
+        Parse Pass 2 deep analysis response
+        NOW HANDLES: Claude's markdown-heavy responses with ###, **, etc.
         """
         result = {
             'breaches': [],
             'contradictions': [],
             'timeline_events': [],
             'novel_arguments': [],
-            'opponent_weaknesses': [],
+            'confidence': 0.0,
+            'investigations_to_queue': [],
             'critical_findings': [],
-            'confidence': 0.0
+            'opponent_weaknesses': [],
+            'validation_issues': []
         }
         
         # =================================================================
-        # FIX: Extract BREACHES - Very flexible pattern
+        # BREACH EXTRACTION - FLEXIBLE MARKDOWN PATTERN
         # =================================================================
-        # Claude uses: **BREACH_START** ... any content ... **BREACH_END**
         
-        breach_pattern = r'\*\*BREACH_START\*\*(.*?)\*\*BREACH_END\*\*'
+        # Pattern that handles markdown formatting
+        breach_pattern = r'(?:###\s*)?BREACH_START\s*\n?(.*?)(?:\*\*)?BREACH_END'
         
-        for match in re.finditer(breach_pattern, response, re.DOTALL):
+        for match in re.finditer(breach_pattern, response, re.DOTALL | re.IGNORECASE):
             try:
                 breach_text = match.group(1).strip()
                 
-                # Extract whatever we can find
-                # Look for BREACH: or description at the start
-                desc_match = re.search(r'\*\*BREACH:\s*(.+?)\*\*', breach_text)
-                if desc_match:
-                    description = desc_match.group(1).strip()
-                else:
-                    # Take first line as description
-                    description = breach_text.split('\n')[0].strip('*').strip()
+                # Extract fields with flexible patterns that handle markdown
+                desc_match = re.search(r'\*\*BREACH[_\s]*\d+:?\s*(.+?)\*\*', breach_text)
+                if not desc_match:
+                    desc_match = re.search(r'Description:\s*(.+?)(?:\n|$)', breach_text)
                 
-                # Extract confidence
-                conf_match = re.search(r'\*\*Confidence:\s*(0?\.\d+|1\.0|\d+%)\*\*', breach_text)
-                if conf_match:
-                    conf_val = conf_match.group(1)
-                    if '%' in conf_val:
-                        confidence = float(conf_val.strip('%')) / 100
-                    else:
-                        confidence = float(conf_val)
-                else:
-                    confidence = 0.75  # Default
+                conf_match = re.search(r'\*\*Confidence:\s*(\d+)%\*\*', breach_text)
+                if not conf_match:
+                    conf_match = re.search(r'Confidence:\s*(\d+)%', breach_text)
                 
-                # Extract DOC_IDs from entire text
+                # Extract DOC_IDs from anywhere in the breach text
                 doc_ids = re.findall(r'DOC_\d+', breach_text)
                 
+                # Extract legal implications
+                legal_match = re.search(r'\*\*Legal Implications\*\*:\s*(.+?)(?:\n\*\*|\n###|$)', breach_text, re.DOTALL)
+                
+                # Build breach object
                 breach = {
-                    'description': description[:200],  # Limit length
-                    'clause': description[:100],  # Use as clause too
-                    'evidence': list(set(doc_ids)),  # Unique DOC_IDs
-                    'confidence': confidence,
-                    'causation': '',
-                    'quantum': '',
-                    'full_text': breach_text[:500]  # Save excerpt
+                    'description': desc_match.group(1).strip() if desc_match else breach_text[:200],
+                    'confidence': float(conf_match.group(1)) / 100 if conf_match else 0.85,
+                    'evidence': list(set(doc_ids)),
+                    'clause': self._extract_clause_reference(breach_text),
+                    'causation': self._extract_legal_implications(breach_text) if legal_match else '',
+                    'quantum': ''  # Often not specified
                 }
+                
                 result['breaches'].append(breach)
                 
             except Exception as e:
@@ -1282,54 +1278,77 @@ class PassExecutor:
                 continue
         
         # =================================================================
-        # Extract CONTRADICTIONS - Flexible
+        # CONTRADICTION EXTRACTION - FLEXIBLE MARKDOWN PATTERN
         # =================================================================
         
-        contradiction_pattern = r'\*\*CONTRADICTION_START\*\*(.*?)\*\*CONTRADICTION_END\*\*'
+        contradiction_pattern = r'(?:###\s*)?CONTRADICTION_START\s*\n?(.*?)(?:\*\*)?CONTRADICTION_END'
         
-        for match in re.finditer(contradiction_pattern, response, re.DOTALL):
+        for match in re.finditer(contradiction_pattern, response, re.DOTALL | re.IGNORECASE):
             try:
-                contr_text = match.group(1).strip()
+                contra_text = match.group(1).strip()
                 
-                # Extract whatever we can
-                phl_claim = re.search(r'\*\*(?:PHL|Respondent) (?:Claim|Position):\*\*\s*(.+?)(?:\n\*\*|$)', contr_text, re.DOTALL)
-                doc_evidence = re.search(r'\*\*Document (?:Evidence|Shows|Proves):\*\*\s*(.+?)(?:\n\*\*|$)', contr_text, re.DOTALL)
+                # Extract statements with flexible patterns
+                stmt_a_match = re.search(r'\*\*Statement A\*\*:\s*(.+?)(?:\n\*\*Statement B|$)', contra_text, re.DOTALL)
+                stmt_b_match = re.search(r'\*\*Statement B\*\*:\s*(.+?)(?:\n\*\*|$)', contra_text, re.DOTALL)
                 
-                phl_claimed = phl_claim.group(1).strip() if phl_claim else contr_text.split('\n')[0]
-                document_proves = doc_evidence.group(1).strip() if doc_evidence else ''
+                # Alternative patterns if not found
+                if not stmt_a_match:
+                    stmt_a_match = re.search(r'PHL (?:claims?|states?):\s*(.+?)(?:\n|$)', contra_text, re.DOTALL)
+                if not stmt_b_match:
+                    stmt_b_match = re.search(r'Document (?:shows?|proves?):\s*(.+?)(?:\n|$)', contra_text, re.DOTALL)
+                
+                # Extract severity
+                severity_match = re.search(r'Severity:\s*(\d+)', contra_text)
                 
                 # Extract DOC_IDs
-                doc_ids = re.findall(r'DOC_\d+', contr_text)
+                doc_ids = re.findall(r'DOC_\d+', contra_text)
                 
-                contradiction = {
-                    'phl_claimed': phl_claimed[:200],
-                    'document_proves': document_proves[:200],
-                    'evidence': list(set(doc_ids)),
-                    'severity': 'HIGH',
-                    'destroys_defence': ''
-                }
-                result['contradictions'].append(contradiction)
-                
+                if stmt_a_match and stmt_b_match:
+                    contradiction = {
+                        'statement_a': stmt_a_match.group(1).strip()[:200],
+                        'statement_b': stmt_b_match.group(1).strip()[:200],
+                        'severity': int(severity_match.group(1)) if severity_match else 8,
+                        'documents': list(set(doc_ids)),
+                        'explanation': contra_text[:300]
+                    }
+                    result['contradictions'].append(contradiction)
+                else:
+                    result['validation_issues'].append(f"Contradiction missing statements")
+                    
             except Exception as e:
                 print(f"   ⚠️  Error parsing contradiction: {e}")
                 continue
         
         # =================================================================
-        # Extract CONFIDENCE - Multiple patterns
+        # CONFIDENCE EXTRACTION - MULTIPLE PATTERNS
         # =================================================================
         
         confidence_patterns = [
-            r'\*\*CONFIDENCE_START\*\*.*?\*\*Overall Confidence:\*\*\s*(\d+)%',
-            r'(?:Overall )?(?:CONFIDENCE|Confidence):\s*(\d+)%',
-            r'(?:CONFIDENCE|Confidence):\s*(0?\.\d+|1\.0)',
-            r'(\d{1,3})%\s*confident',
+            # NEW: Catch **OVERALL CONFIDENCE**: 92% (what Claude actually writes!)
+            r'\*\*OVERALL CONFIDENCE\*\*:\s*(\d+)%',
+            
+            # Also catch **CURRENT_CONFIDENCE**: 95%
+            r'\*\*CURRENT_CONFIDENCE:\*\*\s*(\d+)%',
+            
+            # Catch CONFIDENCE_START blocks
+            r'CONFIDENCE_START.*?\*\*(?:Overall )?Confidence Level:\s*(\d+)%\*\*',
+            
+            # Catch standalone confidence statements
+            r'\*\*(?:Overall )?Confidence:\s*(\d+)%\*\*',
+            r'(?:Overall )?Confidence:\s*(\d+)%',
+            r'Confidence Level:\s*(\d+)%',
+            
+            # Catch in-text mentions
+            r'(\d+)%\s*confident',
         ]
+
         
         for pattern in confidence_patterns:
             matches = re.findall(pattern, response, re.IGNORECASE | re.DOTALL)
             if matches:
-                val = matches[-1]
                 try:
+                    # Take the last confidence mentioned (usually the overall one)
+                    val = matches[-1]
                     confidence = float(val)
                     if confidence > 1:
                         confidence = confidence / 100
@@ -1338,7 +1357,47 @@ class PassExecutor:
                 except:
                     continue
         
+        # =================================================================
+        # VALIDATION
+        # =================================================================
+        
+        if result['confidence'] == 0.0:
+            result['validation_issues'].append("Overall confidence not extracted from response")
+        
+        for i, contra in enumerate(result['contradictions']):
+            if not contra.get('statement_a') or not contra.get('statement_b'):
+                result['validation_issues'].append(f"Contradiction {i+1}: Missing statements")
+            if len(contra.get('documents', [])) < 2:
+                result['validation_issues'].append(f"Contradiction {i+1}: Need at least 2 documents")
+        
         return result
+
+# =============================================================================
+# HELPER METHODS (ADD THESE TOO)
+# =============================================================================
+
+    def _extract_clause_reference(self, text: str) -> str:
+        """Extract clause/obligation reference from breach text"""
+        patterns = [
+            r'(?:Clause|Section|Article)\s+[\d\.]+',
+            r'SPA\s+[\d\.]+',
+            r'(?:warranty|representation|obligation)\s+[\d\.]+',
+        ]
+        
+        for pattern in patterns:
+            match = re.search(pattern, text, re.IGNORECASE)
+            if match:
+                return match.group(0)
+        
+        return ''
+
+    def _extract_legal_implications(self, text: str) -> str:
+        """Extract legal implications/causation from breach text"""
+        match = re.search(r'\*\*Legal Implications\*\*:\s*(.+?)(?:\n\*\*|\n###|BREACH_END|$)', 
+                        text, re.DOTALL)
+        if match:
+            return match.group(1).strip()[:300]
+        return ''
     
     def _parse_investigation_response(self, response: str, investigation) -> Dict:
         """Parse investigation response"""
