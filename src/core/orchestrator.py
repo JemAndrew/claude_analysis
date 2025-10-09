@@ -40,6 +40,12 @@ class LitigationOrchestrator:
     
     def __init__(self, config_override: Dict = None):
         """Initialise orchestrator with all components"""
+         if config is None:
+            from core.config import Config
+            self.config = Config()
+        else:
+        self.config = config
+        
         self.config = Config()
         if config_override:
             for key, value in config_override.items():

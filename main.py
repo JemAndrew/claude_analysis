@@ -211,7 +211,18 @@ def run_single_pass(orchestrator, pass_num: str, limit: int = None):
         elif pass_num == '2':
             print(f"\nIterations completed: {result['total_iterations']}")
             print(f"Final confidence: {result['final_confidence']:.2%}")
-            print(f"Investigations queued: {len(result.get('iterations', [])[-1].get('investigations_spawned', 0)) if result.get('iterations') else 0}")
+            # Get investigations count safely
+            investigations_count = 0
+            if result.get('iterations') and len(result['iterations']) > 0:
+                last_iter = result['iterations'][-1]
+                spawned = last_iter.get('investigations_spawned', [])
+                # Handle both list and int
+                if isinstance(spawned, list):
+                    investigations_count = len(spawned)
+                elif isinstance(spawned, (int, float)):
+                    investigations_count = int(spawned)
+            
+            print(f"Investigations queued: {investigations_count}")
             print(f"Output saved to: {orchestrator.config.analysis_dir / 'pass_2'}")
             print("\nNext step: python main.py pass3")
         
